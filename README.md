@@ -34,7 +34,7 @@ git submodule update --init --recursive
 # Update all projects to latest
 git submodule update --remote
 
-# Work on FarmSense
+# Work on Irrig8
 cd projects/farmsense
 # ... make changes ...
 git push origin main
@@ -47,7 +47,7 @@ git commit -m "Update farmsense to latest"
 
 | Project | Repo | Description | Language |
 |---------|------|-------------|----------|
-| **FarmSense** | [farmsense-main](https://github.com/bxthre3inc/farmsense-main) | Deterministic farming OS | Python/TypeScript |
+| **Irrig8** | [farmsense-main](https://github.com/bxthre3inc/farmsense-main) | Deterministic farming OS | Python/TypeScript |
 | **Zoe** | [zoe](https://github.com/bxthre3inc/zoe) | Living digital assistant | TypeScript/Bun |
 
 ## Version Control Everything
