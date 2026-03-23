@@ -1,0 +1,8 @@
+[submodule "projects/zoe"]
+	path = projects/zoe
+	url = https://github.com/bxthre3inc/zoe.git
+	branch = main
+[submodule "projects/farmsense"]
+	path = projects/farmsense
+	url = https://github.com/bxthre3inc/farmsense-main.git
+	branch = main
