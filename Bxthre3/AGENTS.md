@@ -21,13 +21,25 @@
 
 | Project | Path |
 |---|---|
-| **Irrig8** (primary) | `Bxthre3/projects/the-irrig8-project/` |
+| **Irrig8** (primary — was FarmSense) | `Bxthre3/projects/the-irrig8-project/` |
 | **AgentOS / Zoe** | `Bxthre3/projects/the-agentos-project/` |
+| **The Zoe Project** | `Bxthre3/projects/the-zoe-project/` |
 | **Valley Players Club** | `Bxthre3/projects/the-valleyplayersclub-project/` |
+| **The ARD Project** (was Oferta) | `Bxthre3/projects/the-ard-project/` |
+| **The Rain Project** | `Bxthre3/projects/the-rain-project/` |
 | **The Starting 5** | `Bxthre3/the-starting5-project/` |
-| **AgentOS working** | `Bxthre3/projects/zoe/` |
-| **Irrig8 code** | `/home/workspace/farmsense-code/` |
 | **Zo Space** | `zo.space` (managed, not filesystem) |
+
+## Repo Structure
+
+- **Meta-repo:** `bxthre3inc/bxthre3` — parent repo tracking all projects as submodules
+- **6 Submodules (all on GitHub):**
+  - `Bxthre3/projects/the-irrig8-project` → `bxthre3inc/irrig8`
+  - `Bxthre3/projects/the-agentos-project` → `bxthre3inc/the-agentos-project`
+  - `Bxthre3/projects/the-zoe-project` → `bxthre3inc/the-zoe-project`
+  - `Bxthre3/projects/the-ard-project` → `bxthre3inc/the-ard-project`
+  - `Bxthre3/projects/the-rain-project` → `bxthre3inc/the-rain-project`
+  - `Bxthre3/projects/the-valleyplayersclub-project` → `bxthre3inc/the-valleyplayersclub-project`
 
 ---
 
@@ -46,7 +58,9 @@ Routine status             → Agent INBOX only (no alert)
 
 ## Naming Conventions
 
-- **Product name:** `Irrig8` (NOT FarmSense — that name is retired)
+- **Product name:** `Irrig8` (NOT FarmSense — that name is retired as of 2026-03-23)
+- **AI assistant name:** `Zoe` (sounds like Joey) — NOT "Zoe the AI" or similar
+- **ARD name:** `ARD` — not "Oferta" (Oferta was the 802 Morton St deal brand, now absorbed into ARD)
 - **Firmware version:** `v2.1` (current)
 - **Device codenames:** LRZ1, LRZ2, VFA, PMT, DHU, CSA (see `GLOSSARY.md`)
 - **Agent codenames:** Maya, Raj, Casey, Drew, Theo, Taylor, Sam, Iris, Sentinel, Zoe
@@ -59,4 +73,4 @@ See: `/home/.z/employee-status/EMPLOYEE_ROSTER.md`
 
 ---
 
-*This file is a routing index. For behavioral identity, see `Bxthre3/projects/zoe/SOUL.md`.*
+*This file is a routing index. For behavioral identity, see `Bxthre3/projects/the-zoe-project/SOUL.md`.*
