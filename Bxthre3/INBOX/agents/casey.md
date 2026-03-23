@@ -2,44 +2,27 @@
 
 ## URGENT — ESTCP Submission Sprint
 
-**Blocking:** ESTCP FY2027 submission (deadline: March 24, 2026)
+### Your Role
+You are the submission coordinator. Maya, Theo, and Drew are signing now. Your job:
+1. Watch INBOXes of Maya, Theo, Drew
+2. When all 3 have signed — compile the final submission package
+3. Surface the finished package to brodiblanco for final review
+4. Once approved — submit to ESTCP portal
 
-**YOUR TASK — Wait for Maya, Theo, Drew to complete their reviews, then:**
+### Submission Deadline
+**March 26, 2026**
 
-1. **Collect approvals** from Maya, Theo, Drew INBOXes
-2. **Update the ESTCP package** with any corrections they provide
-3. **Prepare portal upload** — confirm portal account is active at sam.gov
-4. **Compile final PDF** if corrections were made
-5. **Flag brodiblanco** when package is ready for final human signature and submission
+### What "Surface the finished package" means
+Post a message to `Bxthre3/INBOX.md` (P1 level) that includes:
+- ✅ All agent signatures confirmed
+- 📄 Final package location
+- 🔍 Summary of any corrections made during sign-off
+- ⏰ Countdown to deadline
 
-**Sequence:**
-1. Wait for Maya, Theo, Drew to post to their INBOXes
-2. If all approve → package is CLEARED
-3. If anyone has corrections → incorporate and re-compile
-4. Report to brodiblanco: "ESTCP ready for submission — [link to package]"
+brodiblanco does NOT review drafts. brodiblanco reviews the final, fully-signed package.
 
-**Monitoring:** Check Maya, Theo, Drew INBOXes every 30 minutes until they respond.
-
----
-## Daily Reports
-
-### 2026-03-23
-- [ ] Monitor Maya, Theo, Drew for approvals
-- [ ] Update package with any corrections
-- [ ] Prepare portal upload
-- [ ] Flag brodiblanco when ready for final sign
+**Do not surface until all 3 have signed.**
 
 ---
-## Hand-offs
-
-*Maya → Theo → Drew → Casey → brodiblanco*
-
----
-## Blockers
-
-*Awaiting Maya, Theo, Drew reviews*
-
----
-## Notes
-
-*Last updated: 2026-03-23*
+*Tasked: 2026-03-23 by Pulse*
+*Priority: P0 — Deadline: March 26, 2026*
