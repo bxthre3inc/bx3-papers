@@ -16,3 +16,9 @@
 [submodule "Bxthre3/projects/the-valleyplayersclub-project"]
 	path = Bxthre3/projects/the-valleyplayersclub-project
 	url = https://github.com/bxthre3inc/the-valleyplayersclub-project.git
+[submodule "Bxthre3/Bxthre3/projects/mcp-mesh"]
+	path = Bxthre3/Bxthre3/projects/mcp-mesh
+	url = https://github.com/bxthre3inc/mcp-mesh.git
+[submodule "Bxthre3/projects/mcp-mesh"]
+	path = Bxthre3/projects/mcp-mesh
+	url = https://github.com/bxthre3inc/mcp-mesh.git

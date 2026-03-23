@@ -29,11 +29,13 @@
 | **The Rain Project** | `Bxthre3/projects/the-rain-project/` |
 | **The Starting 5** | `Bxthre3/the-starting5-project/` |
 | **Zo Space** | `zo.space` (managed, not filesystem) |
+| **MCP Mesh** | `Bxthre3/projects/mcp-mesh/` |
 
 ## Repo Structure
 
 - **Meta-repo:** `bxthre3inc/bxthre3` — parent repo tracking all projects as submodules
-- **6 Submodules (all on GitHub):**
+- **7 Submodules (all on GitHub):**
+  - `Bxthre3/projects/mcp-mesh` → `bxthre3inc/mcp-mesh`
   - `Bxthre3/projects/the-irrig8-project` → `bxthre3inc/irrig8`
   - `Bxthre3/projects/the-agentos-project` → `bxthre3inc/the-agentos-project`
   - `Bxthre3/projects/the-zoe-project` → `bxthre3inc/the-zoe-project`
