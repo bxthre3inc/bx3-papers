@@ -1,0 +1,20 @@
+{
+  "employee": "pulse",
+  "timestamp": "2026-03-23T04:00:00Z",
+  "status": "down",
+  "service": "unified_app",
+  "http_status": 0,
+  "message": "Connection refused on port 8000",
+  "services_checked": 1,
+  "services_up": 0,
+  "services_down": 1,
+  "active_alerts": [
+    {
+      "service": "unified_app",
+      "status": "down",
+      "issue": "Connection refused - service not running",
+      "detected_at": "2026-03-23T04:00:00Z"
+    }
+  ],
+  "mood": "alert"
+}

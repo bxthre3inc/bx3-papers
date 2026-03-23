@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-03-23T04:58:41.297Z",
+  "status": "running",
+  "version": "3.1.0",
+  "employees": {
+    "total": 24,
+    "active": 24,
+    "cofounders": [
+      "Vance",
+      "Maya",
+      "Drew",
+      "Jordan",
+      "Alex"
+    ],
+    "departments": [
+      "Engineering",
+      "Operations",
+      "Revenue",
+      "Strategy"
+    ]
+  },
+  "scheduler": {
+    "active": true,
+    "tasks": [
+      "12h-briefing",
+      "daily-check",
+      "health-check"
+    ]
+  },
+  "integrations": [
+    "gmail",
+    "calendar",
+    "tasks",
+    "github",
+    "drive",
+    "supermemory",
+    "sms"
+  ]
+}
