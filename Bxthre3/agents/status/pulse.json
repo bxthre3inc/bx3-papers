@@ -1,20 +1,14 @@
 {
   "employee": "pulse",
-  "timestamp": "2026-03-23T04:00:00Z",
+  "timestamp": "2026-03-23T05:05:00Z",
   "status": "down",
   "service": "unified_app",
   "http_status": 0,
-  "message": "Connection refused on port 8000",
+  "message": "Service intentionally offline (per INBOX.md 2026-03-23)",
   "services_checked": 1,
   "services_up": 0,
   "services_down": 1,
-  "active_alerts": [
-    {
-      "service": "unified_app",
-      "status": "down",
-      "issue": "Connection refused - service not running",
-      "detected_at": "2026-03-23T04:00:00Z"
-    }
-  ],
-  "mood": "alert"
+  "active_alerts": [],
+  "mood": "idle",
+  "note": "Intentional shutdown - no alert needed"
 }

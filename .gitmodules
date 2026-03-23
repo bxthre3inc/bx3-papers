@@ -2,7 +2,23 @@
 	path = Bxthre3/projects/zoe
 	url = https://github.com/bxthre3inc/zoe.git
 	branch = main
-[submodule "Bxthre3/projects/farmsense"]
-	path = Bxthre3/projects/farmsense
-	url = https://github.com/bxthre3inc/farmsense-main.git
+[submodule "Bxthre3/projects/the-irrig8-project"]
+	path = Bxthre3/projects/the-irrig8-project
+	url = https://github.com/bxthre3inc/irrig8.git
+	branch = main
+[submodule "Bxthre3/projects/the-agentos-project"]
+	path = Bxthre3/projects/the-agentos-project
+	url = https://github.com/bxthre3inc/the-agentos-project.git
+	branch = main
+[submodule "Bxthre3/projects/the-ard-project"]
+	path = Bxthre3/projects/the-ard-project
+	url = https://github.com/bxthre3inc/the-ard-project.git
+	branch = main
+[submodule "Bxthre3/projects/the-rain-project"]
+	path = Bxthre3/projects/the-rain-project
+	url = https://github.com/bxthre3inc/the-rain-project.git
+	branch = main
+[submodule "Bxthre3/projects/the-valleyplayersclub-project"]
+	path = Bxthre3/projects/the-valleyplayersclub-project
+	url = https://github.com/bxthre3inc/the-valleyplayersclub-project.git
 	branch = main
