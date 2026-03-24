@@ -1,14 +1,18 @@
 {
-  "employee": "pulse",
-  "timestamp": "2026-03-23T05:05:00Z",
-  "status": "down",
-  "service": "unified_app",
-  "http_status": 0,
-  "message": "Service intentionally offline (per INBOX.md 2026-03-23)",
+  "agent_id": "31d09c5b-692f-42fa-bf96-67603322ffe8",
+  "name": "Pulse",
+  "role": "System Health Monitor",
+  "last_run": "2026-03-24T02:35:00Z",
+  "status": "up",
+  "services": {
+    "unified_app": {
+      "port": 3099,
+      "health_endpoint": "/health",
+      "http_status": 200,
+      "state": "up"
+    }
+  },
   "services_checked": 1,
-  "services_up": 0,
-  "services_down": 1,
-  "active_alerts": [],
-  "mood": "idle",
-  "note": "Intentional shutdown - no alert needed"
+  "services_up": 1,
+  "services_down": 0
 }

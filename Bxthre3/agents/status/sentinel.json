@@ -1,23 +1,44 @@
 {
-  "agent": "Sentinel",
-  "last_run": "2026-03-23T05:05:00Z",
-  "status": "healthy",
+  "agent": "sentinel",
+  "last_run": "2026-03-23T21:05:00Z",
+  "status": "completed",
   "findings": {
     "security": {
-      "pending_tasks": 0,
-      "p1_issues": 0,
-      "p2_issues": 0
+      "p1": [],
+      "p1_previously_reported": [
+        {
+          "file": "farmsense-code/backend/.env",
+          "issue": "RESOLVED - Hardcoded credentials file has been removed from workspace. .gitignore now properly excludes .env files.",
+          "resolution": "Resolved - file removed, .gitignore added"
+        }
+      ],
+      "p2": [
+        {
+          "file": "farmsense-code/.env.example",
+          "issue": "Default passwords that look like real credentials (farmsense_secure_password_2026, timescale_secure_password_2026, rabbit_secure_password_2026, grafana_admin_password)",
+          "lines": "5, 7, 9, 27",
+          "severity": "P2",
+          "status": "Known - documented in code comments as placeholders"
+        }
+      ],
+      "new_findings": [],
+      "files_scanned": [
+        "the-irrig8-project/farmsense-code/backend/**/*.py",
+        "the-irrig8-project/farmsense-code/deployment/**/*.yml, *.yaml, *.conf",
+        "the-irrig8-project/farmsense-code/common/**/*",
+        "the-irrig8-project/farmsense-code/frontend/**/*"
+      ],
+      "note": "Scanned Irrig8 project (formerly FarmSense). No new security issues found. Seed data contains demo API keys (demo-free-key, demo-basic-key, etc.) which are appropriate for test data. .env.example contains default placeholder passwords (P2 known issue). No files modified in last 60 minutes."
     },
     "ip": {
-      "pending_tasks": 0,
-      "trademark_conflicts": 0,
-      "patent_warnings": 0
+      "trademark_conflicts": "No new conflicts detected. Existing IRRIG8 trademark (USPTO Serial 78808808) registered Jan 3, 2017 for irrigation/landscape management services (construction/repair). Does NOT conflict with software classes.",
+      "patents": {
+        "new": [],
+        "existing": "Patent watchlist unchanged - farmsense.io FlightSensor, LandScan, Deere AI patents."
+      }
     }
   },
-  "scan_summary": "No security issues found. .env.example contains only placeholder values. Docker-compose uses env vars with safe defaults. IP search found no trademark conflicts - one unrelated FarmSense (educational project in India). Patent landscape shows many ML-based irrigation patents but FarmSense uses deterministic approach which is distinct.",
-  "files_scanned": {
-    "backend": "/home/workspace/farmsense-code/farmsense-code/backend/",
-    "deployment": "/home/workspace/farmsense-code/farmsense-code/deployment/",
-    "sensitive_files_checked": true
-  }
+  "work_queue_entries_added": 0,
+  "inbox_entries_added": 0,
+  "notes": "Sentinel scan complete (2026-03-23 21:05 UTC). No new security issues found. P1 resolved, P2 known. IP: No new trademark conflicts. Existing IRRIG8 trademark is for services, not software - no conflict. No recent file modifications detected."
 }

@@ -1,13 +1,17 @@
 # Drew — Agent INBOX
 
-## ACTION REQUIRED — ESTCP ER26-FS-01
+## URGENT — ESTCP Cybersecurity Risk Assessment Signature
 
-Open: `Bxthre3/projects/the-irrig8-project/docs/ESTCP_SUBMISSION_FINAL.md`
+**Task:** Review and sign the ESTCP ER26-FS-01 cybersecurity risk assessment. Add your electronic signature line to the Approvals table in `/home/workspace/Bxthre3/projects/the-irrig8-project/docs/management/ESTCP_SUBMISSION_FINAL.md` — `| Senior Software Engineer | Drew | Approved | 2026-03-23 |`. This is the same document Casey compiled.
+**Priority:** P1
+**Status:** pending
+**ETA:** 30 minutes
 
-Add your approval signature at the bottom:
+## Status
 
-```
-Senior Software Engineer | Drew | Approved | 2026-03-23
-```
+- Status: pending
+- Completed: 
+- Blockers: 
 
-Reply to this INBOX when done.
+---
+*Managed by AgentOS Runner v1.1*

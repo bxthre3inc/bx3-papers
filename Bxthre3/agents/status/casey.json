@@ -1,0 +1,44 @@
+{
+  "agent": "casey",
+  "role": "Grant Coordinator",
+  "organization": "Bxthre3/FarmSense",
+  "last_updated": "2026-03-18T09:00:00Z",
+  "active_grants": [
+    {
+      "name": "ESTCP FY 2027",
+      "deadline": "2026-03-26",
+      "days_left": 8,
+      "amount": "$1,500,000",
+      "status": "SUBMISSION_IN_PROGRESS",
+      "blocker_task": "TASK-005",
+      "blocker_description": "Spectroscopy specification from Alex",
+      "blocker_status": "RESOLVED",
+      "resolution": "Spectroscopy deferred to Phase 2 per VP Engineering decision (March 14, 2026). Phase 1 proceeds with SDI-12/NDVI validation only.",
+      "confidence": "HIGH",
+      "mood": "FOCUSED",
+      "notes": "8 days to submission. Technical specification complete. Blocker cleared by scope decision. T-5 watch active (March 21). No action required unless new blockers emerge."
+    }
+  ],
+  "pipeline_opportunities": [
+    {
+      "source": "USDA NIFA",
+      "program": "AFRI Strengthening Agricultural Systems",
+      "deadline": "OPEN",
+      "amount": "$140M available",
+      "fit": "HIGH",
+      "status": "MONITORING",
+      "action": "Strong fit for FarmSense precision agriculture validation - review NOFO when released"
+    },
+    {
+      "source": "PA Dept of Agriculture",
+      "program": "Agricultural Innovation Grant Program",
+      "deadline": "2026-04-18",
+      "amount": "$10M total pool",
+      "fit": "MEDIUM",
+      "status": "EVALUATING",
+      "action": "Assess fit for FarmSense pilot expansion in Pennsylvania"
+    }
+  ],
+  "escalation_flags": [],
+  "next_check": "2026-03-19T09:00:00Z"
+}

@@ -1,0 +1,110 @@
+{
+  "deadline": "2026-03-26",
+  "days_remaining": 8,
+  "status": "at-risk",
+  "components": {
+    "technical_proposal": "complete",
+    "budget": "complete",
+    "letters_of_support": "in-progress",
+    "environmental_review": "missing",
+    "forms": "missing",
+    "project_summary": "complete"
+  },
+  "component_details": {
+    "technical_proposal": {
+      "status": "complete",
+      "files": [
+        "projects/the-farmsense-project/docs/ESTCP_GRANT_SUBMISSION_FINAL.md",
+        "projects/the-farmsense-project/docs/management/ESTCP_FINAL_SUBMISSION.md",
+        "projects/the-farmsense-project/docs/management/ESTCP_SUBMISSION_FINAL.pdf"
+      ],
+      "notes": "15-page comprehensive technical proposal complete with executive summary, technical approach, validation architecture, and implementation roadmap"
+    },
+    "budget": {
+      "status": "complete",
+      "files": [
+        "projects/the-farmsense-project/docs/ESTCP_GRANT_SUBMISSION_FINAL.md (Section 6)",
+        "projects/the-farmsense-project/docs/management/ESTCP_FINAL_SUBMISSION.md (Section 8)"
+      ],
+      "notes": "$830,000 total ($450K Year 1, $380K Year 2) with cost-effectiveness analysis and 18-month ROI justification"
+    },
+    "letters_of_support": {
+      "status": "in-progress",
+      "files": [
+        "INBOX/TASK-ESTCP-SIGN-MAYA-20260317.md",
+        "INBOX/TASK-ESTCP-SIGN-THEO-20260317.md",
+        "INBOX/TASK-ESTCP-SIGN-DREW-20260317.md",
+        "INBOX/TASK-ESTCP-SIGN-CASEY-20260317.md"
+      ],
+      "notes": "4 internal signatures pending (deadline: March 18, 2026 11:59 PM UTC). Team member approval of technical appendices required before submission."
+    },
+    "environmental_review": {
+      "status": "missing",
+      "files": [],
+      "notes": "Environmental review document not found. Required for ESTCP submission - may be combined with technical proposal or uploaded separately."
+    },
+    "forms": {
+      "status": "missing",
+      "files": [],
+      "notes": "SF-424 (Application for Federal Assistance) form not found. This is a required federal form for all ESTCP submissions and must be completed via Grants.gov or ESTCP portal."
+    },
+    "project_summary": {
+      "status": "complete",
+      "files": [
+        "projects/the-farmsense-project/docs/ESTCP_GRANT_SUBMISSION_FINAL.md (Executive Summary)",
+        "projects/the-farmsense-project/docs/management/ESTCP_FINAL_SUBMISSION.md (Section 1)"
+      ],
+      "notes": "Executive summary complete - 1% Interpolation Physics for Zero-Trust Spatial Water Management at federal sites"
+    }
+  },
+  "supporting_documents": {
+    "field_validation_protocol": {
+      "file": "projects/the-farmsense-project/docs/ESTCP_FIELD_VALIDATION_PROTOCOL_NITRATE.md",
+      "status": "complete",
+      "author": "Theo"
+    },
+    "cybersecurity_risk_assessment": {
+      "file": "projects/the-farmsense-project/docs/ESTCP_CYBERSECURITY_RISK_ASSESSMENT.md (implied)",
+      "status": "complete",
+      "author": "Drew"
+    },
+    "spectroscopy_decision": {
+      "file": "projects/the-farmsense-project/docs/ESTCP_SPECTROSCOPY_DECISION.md",
+      "status": "complete",
+      "author": "Maya"
+    },
+    "phase2_backup_slide": {
+      "file": "projects/the-farmsense-project/docs/ESTCP_PHASE2_BACKUP_SLIDE.md",
+      "status": "complete",
+      "author": "Casey"
+    }
+  },
+  "blockers": [
+    {
+      "id": "BLOCKER-001",
+      "description": "4 team signatures pending (Maya, Theo, Drew, Casey)",
+      "severity": "high",
+      "deadline": "2026-03-18T23:59:00Z",
+      "action_required": "Team members must sign ESTCP_SUBMISSION_FINAL.md by EOD March 18"
+    },
+    {
+      "id": "BLOCKER-002",
+      "description": "SF-424 federal form missing",
+      "severity": "high",
+      "deadline": "2026-03-24",
+      "action_required": "Complete SF-424 form via Grants.gov or ESTCP submission portal"
+    },
+    {
+      "id": "BLOCKER-003",
+      "description": "Environmental review document status unclear",
+      "severity": "medium",
+      "deadline": "2026-03-24",
+      "action_required": "Confirm if environmental review is integrated in technical proposal or needs separate document"
+    }
+  ],
+  "t5_alert_required": false,
+  "submission_day_protocol_required": false,
+  "last_check": "2026-03-18T15:05:00Z",
+  "next_check": "2026-03-19T09:00:00Z",
+  "notes": "8 days to deadline. Primary submission document is complete. Critical path: (1) Complete 4 signatures by March 18 EOD, (2) Obtain/complete SF-424 form, (3) Clarify environmental review status. T-5 alert will trigger March 21 if still pending."
+}
