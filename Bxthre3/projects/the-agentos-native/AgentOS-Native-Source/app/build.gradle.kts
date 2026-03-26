@@ -7,14 +7,14 @@ plugins {
 }
 
 android {
-    namespace = "com.agentosnative"
+    namespace = "com.bxthre3.agentos"
     compileSdk = 34
     defaultConfig {
-        applicationId = "com.agentosnative"
+        applicationId = "com.bxthre3.agentos"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "5.0.1"
+        versionCode = 6000000
+        versionName = "6.0.0"
         vectorDrawables { useSupportLibrary = true }
         buildConfigField("String", "API_BASE_URL", "\"https://brodiblanco.zo.space/api/agentos/\"")
     }

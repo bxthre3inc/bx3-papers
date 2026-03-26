@@ -1,15 +1,16 @@
 {
   "agent": "pulse",
-  "last_run": "2026-03-26T05:20:00Z",
+  "last_check": "2026-03-26T05:25:00Z",
   "status": "UP",
   "service": "Unified App",
   "port": 3001,
-  "uptime_streak": 117,
-  "health_endpoint": "/health",
-  "http_status": 200,
-  "response": {
+  "endpoint": "/health",
+  "response_code": 200,
+  "response_body": {
     "status": "alive",
-    "version": "4.1.0"
+    "version": "4.1.0",
+    "timestamp": "2026-03-26T05:25:51.546Z"
   },
-  "next_scheduled": "2026-03-26T06:20:00Z"
+  "previous_status": "UP",
+  "state_change": false
 }
