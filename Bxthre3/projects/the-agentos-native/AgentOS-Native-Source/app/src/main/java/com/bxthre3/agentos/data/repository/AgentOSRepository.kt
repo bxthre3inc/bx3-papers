@@ -19,7 +19,7 @@ class AgentOSRepository @Inject constructor() {
         }
     }
 
-    fun getStatus(): Flow<Result<com.agentosnative.data.api.StatusResponse>> = flow {
+    fun getStatus(): Flow<Result<com.bxthre3.agentos.data.api.StatusResponse>> = flow {
         try {
             emit(Result.success(api.getStatus()))
         } catch (e: Exception) {

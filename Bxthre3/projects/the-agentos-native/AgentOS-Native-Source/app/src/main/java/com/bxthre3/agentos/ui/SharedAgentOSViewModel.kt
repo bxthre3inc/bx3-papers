@@ -35,9 +35,9 @@ class SharedAgentOSViewModel @Inject constructor(
                 activeAgents = sh.activeAgents,
                 avgCompletionRate = ags.takeIf { it.isNotEmpty() }?.map { it.completionRate }?.average()?.toFloat() ?: 0f,
                 totalTasks = b.tasks.size,
-                completedToday = b.tasks.count { it.status == com.agentosnative.domain.model.TaskStatus.DONE },
-                blockedTasks = b.tasks.count { it.status == com.agentosnative.domain.model.TaskStatus.BLOCKED },
-                openP1s = b.tasks.count { it.priority == com.agentosnative.domain.model.TaskPriority.P0 || it.priority == com.agentosnative.domain.model.TaskPriority.P1 }
+                completedToday = b.tasks.count { it.status == com.bxthre3.agentos.domain.model.TaskStatus.DONE },
+                blockedTasks = b.tasks.count { it.status == com.bxthre3.agentos.domain.model.TaskStatus.BLOCKED },
+                openP1s = b.tasks.count { it.priority == com.bxthre3.agentos.domain.model.TaskPriority.P0 || it.priority == com.bxthre3.agentos.domain.model.TaskPriority.P1 }
             )
         }
     }.stateIn(viewModelScope, SharingStarted.Lazily, null)

@@ -151,3 +151,33 @@ Key issues:
 
 *All agent INBOXes: `Bxthre3/INBOX/agents/`*
 *All department INBOXes: `Bxthre3/INBOX/departments/`*
+
+## ✅ Workspace Audit Complete — 2026-03-26
+
+### Actions Completed
+| Action | Result |
+|--------|--------|
+| Deleted phantom agents | 24 removed |
+| Updated surviving agents | 10 fixed (FarmSense→Irrig8, n8n webhooks) |
+| Merged conflicting rules | 1 deleted, 1 updated |
+| Cleaned orphan INBOX files | 21 ghost files deleted |
+| Created agent INBOX files | 9 new (atlas, vance, dev, rain, irrig8, vpc, trenchbabys, source, insight) |
+| Verified engineering skill | ✅ working |
+| Installed n8n | ✅ running at public URL |
+| Created skill registry | SKILL_ASSIGNMENTS.md |
+
+### Phantom Engineers (To Resurrect if Needed)
+- Blueprint (PCB), Current (Power), Spark (RF), Ground (Mechanical), Flux (Embedded)
+- All assigned: `engineering-analysis` skill
+
+### Active Deadlines < 7 Days
+- **Bxthre3 holding company filings** — vance — Due: 2026-04-01 (6 days)
+- **ESTCP Phase 2 field sensors** — dev — Due: 2026-04-01 (6 days)
+
+### n8n Next Steps
+Webhooks need manual configuration in n8n UI:
+1. /webhook/grant-deadline → SMS/email to casey
+2. /webhook/backup-complete → log confirmation  
+3. /webhook/agentos-down → P1 alert to brodiblanco
+
+---
