@@ -1,0 +1,31 @@
+id,venture,entity,deal_type,counterparty,stage,amount,amount_type,status,priority,last_action,last_action_date,next_step,next_step_due,owner,pass_reason,notes
+INV-001,Irrig8,Irrig8 Seed Round,Equity (Seed),AgTech VCs,Sourced,$3,500,000,Target,Active,P1,Business plan drafting,2026-03-27,Q2 2026 fundraise,Drew,,Seed round use of funds: $1.5M hardware, $1M eng, $0.5M field ops, $0.5M WC
+INV-002,Irrig8,AgTech Angels,Angel (Pre-Seed/Seed),FarmTech Angels,Sourced,$250,000,Target,Active,P2,List building,2026-03-27,Warm intro outreach,Drew,,Pre-qualified list building
+INV-003,Irrig8,FarmTech Angels,Angel,Angel investors,Sourced,$250,000-$1,000,000,Target,Active,P2,Pre-qualified list,2026-03-27,Outreach,Drew,,Identified as warm leads
+INV-004,Irrig8,AgTech VC (Seed),VC (Seed),TBD AgTech VC,Sourced,$1,000,000-$5,000,000,Target,Active,P2,Not in market,2026-03-27,Q2 2026 target,Drew,,AgTech VC pipeline not yet in market
+VPC-CP-001,VPC,Sage (Founding Cash Partner),Cash Partnership (1% min equity),Sage,Term Sheet,2.5% equity + $2,500,Deal,🔴 P1,Active,Legal docs submitted,2026-03-24,Sage delivers mark-up,2026-03-27,Drew,,"2.5% equity, $2,500, 10% take rate. Docs submitted 2026-03-24. ETA 2026-03-27."
+VPC-CP-002,VPC,TBD Cash Partner #2,Cash Partnership,TBD,Researched,$2,500,Min,🟡 Pending,P2,Not identified,2026-03-27,Prospect identification,2026-03-31,Drew,,"2+ additional founding-era partners needed"
+VPC-CP-003,VPC,TBD Cash Partner #3,Cash Partnership,TBD,Researched,$2,500,Min,🟡 Pending,P2,Not identified,2026-03-27,Prospect identification,2026-03-31,Drew,,Same structure as VPC-CP-001
+IRR-DIST-001,Irrig8,Valley Irrigation,Distribution (Pivot Manufacturer),Valley Irrigation,Researched,,,Active,P1,Identified,2026-03-27,Intro call with dealer network,Drew,,Valley Irrigation = #1 pivot manufacturer
+IRR-DIST-002,Irrig8,Reinke,Distribution (Pivot Manufacturer),Reinke,Researched,,,Active,P1,Identified,2026-03-27,Intro call with dealer network,Drew,,Top-3 pivot manufacturer
+IRR-DIST-003,Irrig8,Wilbur-Ellis,Distribution (Ag Retailer),Wilbur-Ellis,Sourced,,,Active,P2,Identified,2026-03-27,SLV retail footprint check,Drew,,
+IRR-DIST-004,Irrig8,Nutrien,Distribution (Ag Retailer),Nutrien,Sourced,,,Active,P2,Identified,2026-03-27,National footprint + co-op check,Drew,,National footprint
+IRR-DIST-005,Irrig8,CHS,Distribution (Ag Retailer/Co-op),CHS,Sourced,,,Active,P2,Identified,2026-03-27,Co-op relationship assessment,Drew,,Farmer-owned co-op model
+IRR-DIST-006,Irrig8,Planet Labs,Data/Satellite Partnership,Planet Labs,Sourced,,,Active,P2,Identified,2026-03-27,Request dev API access,Drew,,Satellite imagery for Irrig8 OS
+IRR-DIST-007,Irrig8,USDA NRCS,Government,USDA NRCS,Sourced,,,🔴 P1,Active,Identified,2026-03-27,Grant pathway + credibility,Drew,,EQIP vendor enrollment pathway
+IRR-DIST-008,Irrig8,Colorado State University,Research,CSU Cooperative Extension,Sourced,,,Active,P2,Identified,2026-03-27,Pilot credibility + research,Drew,,SLV extension office connection
+IRR-FARM-001,Irrig8,Maverick Potato Co,Customer (Pilot),Maverick Potato Co,Targeted,,,🔴 P1,Active,Identified,2026-03-25,Intro outreach,Drew,,"2,500+ acres. 100% organic. Technology adopter candidate."
+IRR-FARM-002,Irrig8,Skyline Potato Co,Customer (Pilot),Skyline Potato Co,Targeted,,,🔴 P1,Active,Identified,2026-03-25,Intro outreach,Drew,,"3,000+ acres. 3 facilities in SLV. Established 1991."
+IRR-FARM-003,Irrig8,Mix Farms,Customer (Pilot),Mix Farms,Research,,,🟡 P2,Active,Research,2026-03-25,Qualifying call,Drew,,"800+ acres. 3 generations. Certified Potato Seed Grower."
+IRR-FARM-004,Irrig8,Proximity Malt Colorado,Customer/Partner,Proximity Malt Colorado,Research,,,🟡 P2,Active,Research,2026-03-25,Qualifying call + partnership explore,Drew,,"First full-scale malthouse in SLV. Works with local barley growers."
+IRR-FARM-005,Irrig8,Subdistrict 1 / RGWCD,Customer (Aggregated),Subdistrict 1 Members,Research,,,🟡 P2,Active,Research,2026-03-25,Intro outreach,Drew,,"500+ acres. 3,000+ wells in Subdistrict 1."
+IRR-FARM-006,Irrig8,Burris Farms,Customer,Burris Farms,Research,,,🟡 P2,Active,Research,2026-03-25,Intro outreach,Drew,,"President of Subdistrict 1 board. Natural outreach champion."
+IRR-FARM-007,Irrig8,Jessica Bradshaw / CPAC,Industry Org (Gateway),CPAC,Contacted,,,🔴 P1,Active,Contacted,2026-03-25,Verify email + intro call,2026-03-30,Drew,,"CPAC Area 2 Asst Director. 52,000 collective acres. Gatekeeper to SLV potato community."
+IRR-FARM-008,Irrig8,Quintana Farm,Customer (Historical),Quintana Farm,Pass,,,⚫ Archived,N/A,Operation sold,2026-03-25,N/A,Drew,Operation sold,"4,565 acre operation. 21 center pivots. Research only — sold."
+GRANT-001,Irrig8,ESTCP Phase II,Grant (Federal),DoD ESTCP,WRITING,$1,500,000,Active,Active,P1,Field validation protocol,2026-03-23,Deadline,2026-04-15,Maya,,"Note: ESTCP deadline was March 26 — needs status confirmation. Pipeline may need update."
+GRANT-002,Irrig8,USDA SBIR Phase I,Grant (Federal),USDA NIFA,PROSPECT,$125,000,Active,Active,P2,Awaiting GFS refinement,2026-03-20,Deadline,2026-04-30,Maya,,
+GRANT-003,RAIN,NSF SBIR Phase I,Grant (Federal),NSF,PROSPECT,$256,000,Active,Active,P2,Aligns with sensor fusion research,2026-03-18,Deadline,2026-05-15,Maya,,
+GRANT-004,AgentOS,NSF SBIR Phase I,Grant (Federal),NSF,PROSPECT,$256,000,Active,Active,P2,Strategic Breakthrough Awards,2026-03-22,Deadline,2026-06-01,Maya,,
+GRANT-005,Starting5,NSF SBIR Phase I,Grant (Federal),NSF,PROSPECT,$256,000,Active,Active,P3,Startup competition prep,2026-03-15,Deadline,2026-06-15,Maya,,
+GRANT-006,RAIN,D.E. Shaw Outreach,Strategic Investment (Beta Customer),D.E. Shaw,OUTREACH,$50,000,Active,Active,P2,Beta customer outreach,2026-03-23,Follow up,Drew,,"Systematic trading compliance needs"
+GRANT-007,RAIN,Man Group Outreach,Strategic Investment (Beta Customer),Man Group,OUTREACH,$75,000,Active,Active,P2,Beta customer outreach,2026-03-23,Follow up,Drew,,"Systematic trading compliance needs"
