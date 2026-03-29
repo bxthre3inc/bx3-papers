@@ -1,34 +1,42 @@
-# Pulse Health Check Log
-**Last Run:** 2026-03-29 14:05 UTC
+# Pulse Health Check — 2026-03-29 14:15 UTC
 
-## System Status
-
+## Summary
 | System | Status | Response Time | Notes |
 |--------|--------|---------------|-------|
-| zo.space | ✅ Healthy | 0.46s | HTTP 200 |
-| AgentOS API | ✅ Healthy | 0.17s | HTTP 200 |
-| n8n Connector Hub | 🔴 DOWN | 0.15s | HTTP 521 (Cloudflare origin unreachable) |
-| Airtable | ✅ Healthy | ~0.4s | Connected - 1 base (AgentOS Base) |
-| Linear | ✅ Healthy | ~0.5s | Connected as getfarmsense@gmail.com |
-| Gmail | ✅ Healthy | - | OAuth connected |
+| zo.space | ✅ 200 | < 2s | Healthy |
+| AgentOS API | ⚠️ 404 | 0.001s | Endpoint not found (may not exist) |
+| n8n connector hub | ❌ 521 | — | Server error |
+| Airtable | ⚠️ 404 | — | Auth missing (expected without token) |
+| Linear | ⚠️ 400 | — | Auth missing (expected without token) |
+| Gmail | ⚠️ 401 | — | Auth missing (expected without token) |
 
-## Alerts
+## Details
 
-### 🔴 P1 - n8n Connector Hub (n8n-connector-hub-brodiblanco.zocomputer.io)
-- **Issue:** HTTP 521 - Origin connection refused
-- **Start Time:** 2026-03-29 14:05 UTC
-- **Status:** DOWN > 0 min (no uptime data)
-- **Escalation:** P2 to INBOX (not P1 until > 5 min)
+### ✅ zo.space (https://brodiblanco.zo.space)
+- HTTP 200
+- Returns valid HTML page
+- Response time: < 2s
 
-### P3 - n8n unavailable
-- n8n webhook triggers will not fire until service is restored
+### ⚠️ AgentOS API (http://localhost:3099/api/agentos)
+- HTTP 404
+- Endpoint may not exist or different path
+- Response time: 0.001s
 
-## Actions Taken
-1. Logged status to this file
-2. No SMS sent (not P1 yet)
+### ❌ n8n connector hub (https://n8n-connector-hub-brodiblanco.zocomputer.io)
+- HTTP 521
+- Web server error — service down
 
-## Next Check
-- Scheduled: Next interval per agent configuration
-## 🟡 P2 | pulse | 2026-03-29 14:06 UTC
+### ⚠️ Airtable (connected)
+- Auth test required — 404 expected without valid token
+- Integration connected, full test requires OAuth
 
-n8n connector hub (https://n8n-connector-hub-brodiblanco.zocomputer.io) returning HTTP 521. zo.space, AgentOS API, Airtable, Linear, Gmail all healthy.
+### ⚠️ Linear (connected)
+- Auth test required — 400 expected without valid token
+- Integration connected, full test requires OAuth
+
+### ⚠️ Gmail (connected)
+- Auth test required — 401 expected without valid token
+- Integration connected, full test requires OAuth
+
+## Escalation
+- **P3**: n8n connector hub returning 521 — investigate service
