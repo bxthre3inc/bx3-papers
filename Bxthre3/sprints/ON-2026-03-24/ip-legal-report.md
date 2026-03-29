@@ -24,7 +24,7 @@ IP-Legal focused on patent architecture review and trademark monitoring. Water C
 | Task | Status | Notes |
 |------|--------|-------|
 | Patent Calendar Review | ✅ COMPLETE | April 23 deadline confirmed |
-| Trademark Monitoring | ✅ COMPLETE | farmsense.io competitor activity noted |
+| Trademark Monitoring | ✅ COMPLETE | irrig8.io competitor activity noted |
 | VPC Legal Docs Review | ✅ COMPLETE | 4 docs ready for attorney engagement |
 | Water Court Gaps Analysis | ✅ COMPLETE | Evidence gaps documented |
 | IP Asset Inventory | ✅ COMPLETE | All IP assets cataloged |
