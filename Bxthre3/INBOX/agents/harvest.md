@@ -41,13 +41,13 @@
 
 | Blocker | Owner | Due | Status |
 |---------|-------|-----|--------|
-| VPC affiliate target list | Reseller (Channel) | 2026-03-31 | OVERDUE |
-| Affiliate compliance requirements | VPC Agent | 2026-03-31 | OVERDUE |
+| ~~VPC affiliate target list~~ | ~~Reseller (Channel)~~ | ~~2026-03-31~~ | ✅ **RESOLVED — scope clarified, Harvest owns affiliate managers, Reseller owns casino aggregators** |
+| VPC affiliate compliance requirements | VPC Agent | 2026-03-31 | **OVERDUE — chasing today** |
 
 ---
 
 ## Status: ACTIVE
 
 *Daily standup: 8:15 AM MT*
-*Last standup: 2026-03-31*
-*Next standup: 2026-04-01 8:15 AM MT*
+*Last standup: 2026-04-03*
+*Next standup: 2026-04-06 8:15 AM MT*

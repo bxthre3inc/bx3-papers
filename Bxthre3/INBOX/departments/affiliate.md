@@ -64,8 +64,8 @@
 ## Partner Pipeline
 
 **VPC:**
-- Affiliate managers — Awaiting targets from Reseller (Channel)
-- Casino aggregators — Awaiting targets from Reseller (Channel)
+- Affiliate managers — **5 targets identified** (2026-04-03). Types: sweepstakes affiliate managers, CPA networks, content/editorial affiliates, social casino streamers.
+- Casino aggregators — Reseller scope
 
 **Irrig8:**
 - Valley Irrigation — Identified
@@ -90,6 +90,15 @@
 ## Status
 
 🟡 **ACTIVE — Pipeline Development**
+🟢 **VPC: 5 affiliate manager targets identified** (2026-04-03)
 
 *Daily standup: 8:15 AM MT*
-*Last standup: 2026-03-31*
+*Last standup: 2026-04-03*
+*Next standup: 2026-04-06 8:15 AM MT*
+
+## Key Updates — 2026-04-03
+
+- **VPC affiliate manager research:** 5 targets identified via market scan of sweepstakes/iGaming affiliate landscape. Sources: AffPapa, RichAds, GammaStack, SweepsKings, xlWin Media.
+- **VPC scope resolved:** Harvest owns affiliate managers. Reseller owns casino aggregators. Commission structure (30%/25% rev share) confirmed.
+- **Outstanding:** VPC Agent compliance requirements (overdue since 2026-03-31). Escalated via INBOX routing today.
+- **Next:** Begin outreach to affiliate manager targets; build recruitment workflow; draft Tier 1/2 affiliate agreement template.
