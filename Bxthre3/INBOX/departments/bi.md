@@ -70,3 +70,25 @@
 
 *BI & Analytics Department*
 *Lead: Trace*
+
+## 🟡 P2 | sam | 2026-04-01 20:47 UTC
+
+Phase 2 Subtask: Agent performance data pipeline. SQL queries for completion rates, time-to-completion stats, trend analysis. Output: rating_engine/analytics.py
+
+## 🟡 P2 | sam | 2026-04-01 22:18 UTC
+
+Phase 6b: Desktop build config. Compose Desktop packaging with rating UI. Gradle build for Linux .deb.
+
+## 🟡 P2 | insight | 2026-04-02 09:11 UTC
+
+Insight Wednesday cycle complete — VPC CI blocking production analytics, Grants pipeline empty, Irrig8 and AgentOS frameworks ready but no live data
+
+## 🟡 P2 | insight | 2026-04-05 03:10 UTC
+
+**Insight Friday cycle complete.** Key findings:
+- **Irrig8 SLV sim:** 20 high-confidence correlations validated (R² > 0.80). Moisture+EC pair R²=0.9991 for VMC. T2 calibration risks flagged (>100% degradation). soil-variability-mapper P1 active.
+- **VPC:** Schema production-ready. 8 test transactions. CI failures still blocking.
+- **RAIN/Grants:** `pipeline_300plus.duckdb` present (268KB). Maya's latest grants not yet ingested — query for Zero Foodprint Restore coverage (deadline April 7).
+- **Starting5/AgentOS:** No schema defined for AI co-founder metrics. Telemetry not flowing.
+
+**No P0/P1 escalations this cycle.**
