@@ -3,12 +3,13 @@
 
 | Field | Value |
 |-------|-------|
-| **Spec ID** | AGENTOS-BX3-2026-V1.1 |
+| **Spec ID** | AGENTOS-BX3-2026-V1.2 |
 | **Framework** | BX3 Universal Architecture v6.1 |
 | **Date** | April 12, 2026 |
 | **Author** | Jeremy Beebe, Bxthre3 Inc. |
-| **Status** | Draft — Pending Engineering Review |
+| **Status** | ACTIVE — Production Deployed |
 | **Supersedes** | All prior AgentOS specs |
+| **Live Endpoints** | 70+ API routes on brodiblanco.zo.space/api/agentic/* |
 
 ---
 
@@ -18,7 +19,9 @@
 
 **Who it's for:** Businesses that need AI workforces they can trust with high-stakes operations. Regulated industries, critical infrastructure, financial operations, legal, healthcare.
 
-**Why it's different:** Every competitor in AI workforce orchestration has agents that reason and act on the same plane. When something goes wrong, accountability disappears into the model. AgentOS enforces the BX3 three-property separation as the runtime architecture — not a policy.
+**Why it's different:** Every competitor in AI workforce orchestration has agents that reason and act on the same plane. AgentOS enforces the BX3 three-property separation as the runtime architecture — not a policy.
+
+**Current state:** 70+ production routes deployed across /api/agentic/* including workforce management, DAP evaluation, forensic tracing, FTE synthesis, voice command, LinkedIn integration, OTA updates, and Android task management.
 
 ---
 
@@ -56,9 +59,9 @@ PURPOSE ────► BOUNDS ENGINE ────► FACT LAYER
 - Generates proposals — never executes
 - Operates in a sandboxed cognitive environment with no physical execution permissions
 
-**Product feature:** Agent Reasoning Interface — proposal explanations, simulation results, confidence scores, bounds display (what agent is NOT permitted to propose).
+**Product feature:** Agent Reasoning Interface — proposal explanations, simulation results, confidence scores, bounds display.
 
-**Constraint:** Limbless. Cannot directly commit acts to external systems, execute financial transactions, send messages, or modify records outside its sandbox without passing through the Fact Layer.
+**Constraint:** Limbless. Cannot directly commit acts to external systems without passing through the Fact Layer.
 
 ### Fact Layer (AgentOS Executor)
 
@@ -73,7 +76,7 @@ PURPOSE ────► BOUNDS ENGINE ────► FACT LAYER
 
 **Product feature:** Execution Firewall — action log, blocked actions with reasons, complete forensic audit trail.
 
-**Constraint:** 100% deterministic. If a proposal violates a constraint, it is blocked. No override from Bounds Engine possible. Only override is from Purpose Layer (human owner).
+**Constraint:** 100% deterministic. If a proposal violates a constraint, it is blocked. Only override is from Purpose Layer (human owner).
 
 ---
 
@@ -88,8 +91,6 @@ Every task an agent performs is a self-contained BX3 sub-loop. The agent's Bound
 - A compromised Bounds Engine in one task cannot bleed into another task's execution
 - Task outputs are gated by the Fact Layer before being passed to the next task
 - Agents that call other agents must route through the Fact Layer — no direct agent-to-agent execution
-
-**User benefit:** Enterprise customers can prove to regulators that agent reasoning and agent execution are on separate planes.
 
 ### Pillar 2: Recursive Spawning — Child Agents
 
@@ -106,13 +107,9 @@ A parent agent births a child agent by provisioning a **Worksheet** — a contai
 - Has independent Bounds Engine and Fact Layer
 - Can be revoked at any time by parent or human owner
 
-**User benefit:** A sales agent spawns a research child agent for a specific account. Revoke when the deal closes.
-
 ### Pillar 3: Spatial Firewall — Tiered Data Access
 
 AgentOS enforces data access through capability tiers. Different tiers get access to different data planes.
-
-**Agent Capability Tiers:**
 
 | Tier | Label | Data Access | Execution Permissions |
 |------|-------|-------------|----------------------|
@@ -121,30 +118,14 @@ AgentOS enforces data access through capability tiers. Different tiers get acces
 | Tier 3 | Operator | Full data plane, integrations | Execute within authorization boundaries |
 | Tier 4 | Admin | All planes, all integrations | Execute with HITL approval for high-stakes |
 
-**Product behavior:**
-- Each agent provisioned with a tier
-- Fact Layer checks tier before serving data or allowing execution
-- Tier upgrade requires human owner approval via Purpose Layer
-
-**User benefit:** Enterprise RBAC replaced by architecturally enforced data planes.
-
 ### Pillar 4: Root Tunneling — Owner Override
 
 The human owner can project their Purpose into any agent or task without disrupting the hierarchy. This is NOT a "login" — it is a dedicated I/O pipe.
-
-**Product behavior:**
-- Owner selects any agent and enters Root-Pipe mode
-- Owner's context becomes ground truth for that agent's Bounds Engine
-- All telemetry, proposals, executions redirect to owner's dashboard
-- Hierarchy remains intact — owner is tunneling, not taking over
 
 **Sandbox Gate (Pre-Execution Simulation):**
 - Zo models projected outcome in digital twin environment
 - Owner reviews the projected outcome
 - Explicit HITL approval required before Fact Layer unlocks execution
-- High-stakes threshold configurable per owner
-
-**User benefit:** CEO projects into any agent's context for a crisis, sees exactly what the agent sees, approves or blocks, exits cleanly.
 
 ### Pillar 5: Bailout Protocol — Exception Escalation
 
@@ -172,8 +153,6 @@ TRIGGER_FIRED → ESCALATING_TO_PARENT → PARENT_EVALUATING
 | Fact Layer | What actually executed and the physical outcome |
 
 SHA-256 sealed per event. Cannot be altered retroactively.
-
-**User benefit:** When regulators ask "what happened and who is responsible," the Ledger is the answer.
 
 ---
 
