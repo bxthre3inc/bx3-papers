@@ -1,0 +1,26 @@
+# Valley Players Club Project
+
+## Overview
+A Skills-and-Slots competitor with:
+- Aggregator layer for third-party sweepstakes apps
+- Proprietary game development studio
+- Cash-in-person partner network
+
+## Build Context
+- **Engine:** Antigravity II
+- **Location:** `/home/workspace/Bxthre3/the-valleyplayersclub-project/`
+- **Spec:** `docs/gaming-platform-spec.md` (in root docs folder)
+
+## Status
+Awaiting initial upload from developer.
+
+## Key Files to Expect
+- Game builds
+- Asset bundles
+- Configuration files
+- Documentation
+
+## Notes for Future Me
+- Check spec at `docs/gaming-platform-spec.md` for architecture reference
+- Plain text version at `docs/gaming-platform-spec.txt`
+- Cash partner model is core differentiator

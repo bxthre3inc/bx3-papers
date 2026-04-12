@@ -1,0 +1,28 @@
+{
+    "profileName": "vip",
+    "minBet": 100,
+    "maxBet": 100000,
+    "paytable": {
+        "TRIDENT": {
+            "3": 12,
+            "4": 60,
+            "5": 240
+        },
+        "PEARL": {
+            "3": 6,
+            "4": 24,
+            "5": 120
+        },
+        "SHELL": {
+            "3": 3,
+            "4": 15,
+            "5": 60
+        },
+        "SHARK": {
+            "3": 2,
+            "4": 7,
+            "5": 30
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

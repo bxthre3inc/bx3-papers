@@ -1,0 +1,60 @@
+{
+    "name": "Pharaoh's Gold",
+    "theme": "egypt",
+    "category": "slots",
+    "evaluatorType": "slots-scatter",
+    "reels": [
+        [
+            "PYRAMID",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "WILD",
+            "PYRAMID",
+            "ANKH",
+            "EYE"
+        ],
+        [
+            "PYRAMID",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "WILD",
+            "PYRAMID",
+            "ANKH",
+            "EYE"
+        ],
+        [
+            "PYRAMID",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "WILD",
+            "PYRAMID",
+            "ANKH",
+            "EYE"
+        ],
+        [
+            "PYRAMID",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "WILD",
+            "PYRAMID",
+            "ANKH",
+            "EYE"
+        ],
+        [
+            "PYRAMID",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "WILD",
+            "PYRAMID",
+            "ANKH",
+            "EYE"
+        ]
+    ],
+    "rows": 4,
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

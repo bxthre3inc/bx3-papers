@@ -1,0 +1,91 @@
+
+[GENERATION COMMANDS] space-hunter-space-20260407-100346
+Style: deep space, nebula, sci-fi panels, metallic, cosmic lighting
+
+# target_00 (targets)
+# Prompt: shooter targets asset: target_00, boss quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_00.png
+
+# target_01 (targets)
+# Prompt: shooter targets asset: target_01, boss quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_01.png
+
+# target_02 (targets)
+# Prompt: shooter targets asset: target_02, boss quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_02.png
+
+# target_03 (targets)
+# Prompt: shooter targets asset: target_03, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_03.png
+
+# target_04 (targets)
+# Prompt: shooter targets asset: target_04, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_04.png
+
+# target_05 (targets)
+# Prompt: shooter targets asset: target_05, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_05.png
+
+# target_06 (targets)
+# Prompt: shooter targets asset: target_06, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_06.png
+
+# target_07 (targets)
+# Prompt: shooter targets asset: target_07, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_07.png
+
+# target_08 (targets)
+# Prompt: shooter targets asset: target_08, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_08.png
+
+# target_09 (targets)
+# Prompt: shooter targets asset: target_09, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_09.png
+
+# target_10 (targets)
+# Prompt: shooter targets asset: target_10, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_10.png
+
+# target_11 (targets)
+# Prompt: shooter targets asset: target_11, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_11.png
+
+# target_12 (targets)
+# Prompt: shooter targets asset: target_12, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_12.png
+
+# target_13 (targets)
+# Prompt: shooter targets asset: target_13, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_13.png
+
+# target_14 (targets)
+# Prompt: shooter targets asset: target_14, common quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/target_14.png
+
+# cannon_0 (cannons)
+# Prompt: shooter cannons asset: cannon_0, standard quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/cannon_0.png
+
+# cannon_1 (cannons)
+# Prompt: shooter cannons asset: cannon_1, standard quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/cannon_1.png
+
+# cannon_2 (cannons)
+# Prompt: shooter cannons asset: cannon_2, standard quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/cannon_2.png
+
+# cannon_3 (cannons)
+# Prompt: shooter cannons asset: cannon_3, standard quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/cannon_3.png
+
+# bg_scene (backgrounds)
+# Prompt: shooter backgrounds asset: bg_scene, standard quality, deep space, nebula, sci-fi panels, metallic, cosmic lighting, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/space-hunter-space-20260407-100346/Textures/bg_scene.png
+
+Traceback (most recent call last):
+  File "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/Skills/vpc-engine/engine.py", line 196, in <module>
+    main()
+  File "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/Skills/vpc-engine/engine.py", line 176, in main
+    prompt = f"{spec['game_type']} {cat} asset: {item['id']}, {item.get('rarity', 'standard')} quality, {spec['style_anchor']}, game asset quality, transparent background"
+                                                 ~~~~^^^^^^
+TypeError: string indices must be integers, not 'str'

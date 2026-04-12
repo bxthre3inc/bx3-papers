@@ -1,0 +1,403 @@
+{
+  "metadata": {
+    "pack_id": "neon-crypto-slots-crypto-20260407-094105",
+    "theme": "crypto",
+    "style_anchor": "",
+    "palette": [],
+    "total_count": 31
+  },
+  "symbols": [
+    {
+      "id": "symbol_00",
+      "type": "symbol",
+      "rarity": "low",
+      "filename": "symbol_00.png",
+      "path": "Textures/Symbols/symbol_00.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 0, low rarity, basic symbol, simple design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_01",
+      "type": "symbol",
+      "rarity": "low",
+      "filename": "symbol_01.png",
+      "path": "Textures/Symbols/symbol_01.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 1, low rarity, basic symbol, simple design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_02",
+      "type": "symbol",
+      "rarity": "low",
+      "filename": "symbol_02.png",
+      "path": "Textures/Symbols/symbol_02.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 2, low rarity, basic symbol, simple design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_03",
+      "type": "symbol",
+      "rarity": "low",
+      "filename": "symbol_03.png",
+      "path": "Textures/Symbols/symbol_03.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 3, low rarity, basic symbol, simple design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_04",
+      "type": "symbol",
+      "rarity": "low",
+      "filename": "symbol_04.png",
+      "path": "Textures/Symbols/symbol_04.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 4, low rarity, basic symbol, simple design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_05",
+      "type": "symbol",
+      "rarity": "low",
+      "filename": "symbol_05.png",
+      "path": "Textures/Symbols/symbol_05.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 5, low rarity, basic symbol, simple design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_06",
+      "type": "symbol",
+      "rarity": "medium",
+      "filename": "symbol_06.png",
+      "path": "Textures/Symbols/symbol_06.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 6, medium rarity, valuable symbol, detailed design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_07",
+      "type": "symbol",
+      "rarity": "medium",
+      "filename": "symbol_07.png",
+      "path": "Textures/Symbols/symbol_07.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 7, medium rarity, valuable symbol, detailed design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_08",
+      "type": "symbol",
+      "rarity": "medium",
+      "filename": "symbol_08.png",
+      "path": "Textures/Symbols/symbol_08.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 8, medium rarity, valuable symbol, detailed design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_09",
+      "type": "symbol",
+      "rarity": "medium",
+      "filename": "symbol_09.png",
+      "path": "Textures/Symbols/symbol_09.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 9, medium rarity, valuable symbol, detailed design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_10",
+      "type": "symbol",
+      "rarity": "high",
+      "filename": "symbol_10.png",
+      "path": "Textures/Symbols/symbol_10.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 10, high rarity, premium symbol, intricate ornate design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_11",
+      "type": "symbol",
+      "rarity": "high",
+      "filename": "symbol_11.png",
+      "path": "Textures/Symbols/symbol_11.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 11, high rarity, premium symbol, intricate ornate design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_12",
+      "type": "symbol",
+      "rarity": "high",
+      "filename": "symbol_12.png",
+      "path": "Textures/Symbols/symbol_12.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 12, high rarity, premium symbol, intricate ornate design, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_13",
+      "type": "symbol",
+      "rarity": "special",
+      "filename": "symbol_13.png",
+      "path": "Textures/Symbols/symbol_13.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 13, special rarity, WILD symbol, shimmering magical, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "symbol_14",
+      "type": "symbol",
+      "rarity": "bonus",
+      "filename": "symbol_14.png",
+      "path": "Textures/Symbols/symbol_14.png",
+      "size": [
+        128,
+        128
+      ],
+      "prompt": "slot symbol 14, bonus rarity, BONUS scatter, explosive glowing, , transparent background, casino game asset, crisp 2D",
+      "aspect_ratio": "1:1"
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "bg_main",
+      "type": "background",
+      "filename": "bg_main.png",
+      "path": "Textures/Backgrounds/bg_main.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "prompt": "game background, main scene, , immersive environment, no UI elements, game background art, 16:9 composition",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "bg_bonus",
+      "type": "background",
+      "filename": "bg_bonus.png",
+      "path": "Textures/Backgrounds/bg_bonus.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "prompt": "game background, bonus round scene, , special event atmosphere, glowing effects, no UI elements, 16:9 composition",
+      "aspect_ratio": "16:9"
+    }
+  ],
+  "ui": [
+    {
+      "id": "btn_spin",
+      "type": "ui",
+      "filename": "btn_spin.png",
+      "path": "Textures/UI/btn_spin.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "SPIN button, round, main action button, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "btn_max_bet",
+      "type": "ui",
+      "filename": "btn_max_bet.png",
+      "path": "Textures/UI/btn_max_bet.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "MAX BET button, high stakes, aggressive, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "btn_auto",
+      "type": "ui",
+      "filename": "btn_auto.png",
+      "path": "Textures/UI/btn_auto.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "AUTO PLAY button, continuous, flowing, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "btn_bet_up",
+      "type": "ui",
+      "filename": "btn_bet_up.png",
+      "path": "Textures/UI/btn_bet_up.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "BET UP arrow, increase, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "btn_bet_down",
+      "type": "ui",
+      "filename": "btn_bet_down.png",
+      "path": "Textures/UI/btn_bet_down.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "BET DOWN arrow, decrease, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "btn_settings",
+      "type": "ui",
+      "filename": "btn_settings.png",
+      "path": "Textures/UI/btn_settings.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "SETTINGS gear icon, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "btn_home",
+      "type": "ui",
+      "filename": "btn_home.png",
+      "path": "Textures/UI/btn_home.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "HOME house icon, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "panel_frame",
+      "type": "ui",
+      "filename": "panel_frame.png",
+      "path": "Textures/UI/panel_frame.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "game frame border, decorative edge, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "panel_menu",
+      "type": "ui",
+      "filename": "panel_menu.png",
+      "path": "Textures/UI/panel_menu.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "menu panel, clean background, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "icon_coin",
+      "type": "ui",
+      "filename": "icon_coin.png",
+      "path": "Textures/UI/icon_coin.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "coin/credit icon, currency, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "icon_win",
+      "type": "ui",
+      "filename": "icon_win.png",
+      "path": "Textures/UI/icon_win.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "win amount display, celebration, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "icon_info",
+      "type": "ui",
+      "filename": "icon_info.png",
+      "path": "Textures/UI/icon_info.png",
+      "size": [
+        256,
+        256
+      ],
+      "prompt": "information icon, help, , casino UI element, transparent background, game asset",
+      "aspect_ratio": "1:1"
+    }
+  ],
+  "spine": [
+    {
+      "id": "char_dealer",
+      "name": "Game Dealer/Host",
+      "type": "spine_character",
+      "prompt": "casino dealer character, animated, , friendly expression, game host",
+      "animations": [
+        "idle",
+        "celebrate",
+        "announce"
+      ]
+    },
+    {
+      "id": "char_mascot",
+      "name": "Lucky Mascot",
+      "type": "spine_character",
+      "prompt": "lucky mascot character, cute, , bouncy, celebratory",
+      "animations": [
+        "idle",
+        "dance",
+        "win"
+      ]
+    }
+  ],
+  "audio": []
+}

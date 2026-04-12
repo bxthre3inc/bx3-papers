@@ -1,0 +1,244 @@
+[
+  {
+    "id": "symbol_00",
+    "type": "symbol",
+    "category": "low",
+    "filename": "symbol_00.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 0, low rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_01",
+    "type": "symbol",
+    "category": "low",
+    "filename": "symbol_01.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 1, low rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_02",
+    "type": "symbol",
+    "category": "low",
+    "filename": "symbol_02.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 2, low rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_03",
+    "type": "symbol",
+    "category": "medium",
+    "filename": "symbol_03.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 3, medium rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_04",
+    "type": "symbol",
+    "category": "medium",
+    "filename": "symbol_04.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 4, medium rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_05",
+    "type": "symbol",
+    "category": "medium",
+    "filename": "symbol_05.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 5, medium rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_06",
+    "type": "symbol",
+    "category": "high",
+    "filename": "symbol_06.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 6, high rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_07",
+    "type": "symbol",
+    "category": "high",
+    "filename": "symbol_07.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 7, high rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_08",
+    "type": "symbol",
+    "category": "special",
+    "filename": "symbol_08.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 8, special rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_09",
+    "type": "symbol",
+    "category": "special",
+    "filename": "symbol_09.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 9, special rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_10",
+    "type": "symbol",
+    "category": "scatter",
+    "filename": "symbol_10.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 10, scatter rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "symbol_11",
+    "type": "symbol",
+    "category": "wild",
+    "filename": "symbol_11.png",
+    "size": [
+      128,
+      128
+    ],
+    "prompt": "slot symbol 11, wild rarity, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, casino game asset, crisp 2D"
+  },
+  {
+    "id": "bg_main",
+    "type": "background",
+    "filename": "bg_main.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "prompt": "game background main, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, atmospheric, 16:9 composition, no UI elements"
+  },
+  {
+    "id": "bg_bonus",
+    "type": "background",
+    "filename": "bg_bonus.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "prompt": "game background bonus, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, atmospheric, 16:9 composition, no UI elements"
+  },
+  {
+    "id": "ui_spin",
+    "type": "ui",
+    "filename": "ui_spin.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino spin button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "ui_max_bet",
+    "type": "ui",
+    "filename": "ui_max_bet.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino max_bet button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "ui_auto",
+    "type": "ui",
+    "filename": "ui_auto.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino auto button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "ui_settings",
+    "type": "ui",
+    "filename": "ui_settings.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino settings button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "ui_paytable",
+    "type": "ui",
+    "filename": "ui_paytable.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino paytable button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "ui_plus",
+    "type": "ui",
+    "filename": "ui_plus.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino plus button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "ui_minus",
+    "type": "ui",
+    "filename": "ui_minus.png",
+    "size": [
+      128,
+      64
+    ],
+    "prompt": "casino minus button, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, transparent background, UI element"
+  },
+  {
+    "id": "cover_store_hero",
+    "type": "cover",
+    "filename": "cover_store_hero.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "prompt": "game store_hero promotional art, Gold Rush Slots, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, eye-catching, bold composition"
+  },
+  {
+    "id": "cover_thumbnail",
+    "type": "cover",
+    "filename": "cover_thumbnail.png",
+    "size": [
+      1024,
+      768
+    ],
+    "prompt": "game thumbnail promotional art, Gold Rush Slots, wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, eye-catching, bold composition"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "pack_id": "western-20260407-050303",
+  "status": "approved",
+  "theme": "western",
+  "prompt": "wild west gold rush with cowboys and saloons",
+  "style_anchor": "wild west, dusty desert, warm gold/brown, aged leather textures",
+  "palette": [
+    "#D4AF37",
+    "#8B4513",
+    "#F4E4C1",
+    "#CD853F",
+    "#2F1810"
+  ],
+  "assets": {
+    "symbols": [
+      "symbol_00",
+      "symbol_01",
+      "symbol_02",
+      "symbol_03",
+      "symbol_04",
+      "symbol_05",
+      "symbol_06",
+      "symbol_07",
+      "symbol_08",
+      "symbol_09",
+      "symbol_10",
+      "symbol_11"
+    ],
+    "backgrounds": [
+      "bg_main",
+      "bg_lobby"
+    ],
+    "ui": [
+      "btn_spin",
+      "btn_maxbet",
+      "btn_bet_up",
+      "btn_bet_down",
+      "panel_frame",
+      "icon_coin",
+      "icon_wallet"
+    ],
+    "cover": [
+      "game_cover",
+      "app_icon"
+    ],
+    "spine": [
+      "character_00",
+      "character_01",
+      "character_02"
+    ]
+  },
+  "total": 26
+}

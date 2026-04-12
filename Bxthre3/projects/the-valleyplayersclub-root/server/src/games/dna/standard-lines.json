@@ -1,0 +1,211 @@
+{
+    "evaluatorType": "slots-lines",
+    "rows": 3,
+    "reels": [
+        [
+            "S1",
+            "BLANK",
+            "S2",
+            "BLANK",
+            "S3",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "S4",
+            "BLANK",
+            "S5"
+        ],
+        [
+            "S1",
+            "BLANK",
+            "S2",
+            "BLANK",
+            "S3",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "S4",
+            "BLANK",
+            "S5"
+        ],
+        [
+            "S1",
+            "BLANK",
+            "S2",
+            "BLANK",
+            "S3",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "S4",
+            "BLANK",
+            "S5"
+        ],
+        [
+            "S1",
+            "BLANK",
+            "S2",
+            "BLANK",
+            "S3",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "S4",
+            "BLANK",
+            "S5"
+        ],
+        [
+            "S1",
+            "BLANK",
+            "S2",
+            "BLANK",
+            "S3",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "S4",
+            "BLANK",
+            "S5"
+        ]
+    ],
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "paytable": {
+        "S1": {
+            "3": 5,
+            "4": 20,
+            "5": 100
+        },
+        "S2": {
+            "3": 2,
+            "4": 10,
+            "5": 50
+        },
+        "S3": {
+            "3": 1,
+            "4": 5,
+            "5": 20
+        },
+        "S4": {
+            "3": 0.5,
+            "4": 2,
+            "5": 10
+        },
+        "S5": {
+            "3": 0.2,
+            "4": 1,
+            "5": 5
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

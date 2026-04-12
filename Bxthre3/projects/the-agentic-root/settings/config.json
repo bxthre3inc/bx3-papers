@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "safety": {
+    "trainingWheelsMode": true,
+    "dryRunMode": true,
+    "maxAutoRiskScore": 15,
+    "requireApprovalAboveLines": 50,
+    "requireApprovalIfDeletes": true,
+    "requireApprovalIfModifies": [
+      ".env",
+      "*.secret.*",
+      "*config*",
+      "*production*",
+      "deploy*",
+      "*.key",
+      "*.pem"
+    ]
+  },
+  "proposals": {
+    "autoCreateForRiskBelow": 15,
+    "autoApproveIfRiskBelow": 5,
+    "expireAfterHours": 48,
+    "maxPendingProposals": 20
+  },
+  "criticality": {
+    "levels": {
+      "CRITICAL": 80,
+      "HIGH": 60,
+      "MEDIUM": 40,
+      "LOW": 20,
+      "SAFE": 0
+    },
+    "rules": [
+      { "pattern": "*.secret.*", "level": "CRITICAL", "reason": "Secret file" },
+      { "pattern": "*.key", "level": "CRITICAL", "reason": "Cryptographic key" },
+      { "pattern": "*.pem", "level": "CRITICAL", "reason": "Certificate" },
+      { "pattern": ".env*", "level": "CRITICAL", "reason": "Environment config" },
+      { "pattern": "deploy*", "level": "HIGH", "reason": "Deployment script" },
+      { "pattern": "*production*", "level": "HIGH", "reason": "Production code" },
+      { "pattern": "*test*", "level": "SAFE", "reason": "Test file" },
+      { "pattern": "*.md", "level": "SAFE", "reason": "Documentation" },
+      { "pattern": "docs/*", "level": "LOW", "reason": "Documentation folder" }
+    ]
+  },
+  "notifications": {
+    "onProposalCreated": true,
+    "onProposalApproved": true,
+    "onProposalRejected": true,
+    "onAutoExecution": true,
+    "onSafetyViolation": true
+  },
+  "audit": {
+    "logAllActions": true,
+    "logDryRuns": true,
+    "retentionDays": 90,
+    "includeDiffs": true
+  }
+}

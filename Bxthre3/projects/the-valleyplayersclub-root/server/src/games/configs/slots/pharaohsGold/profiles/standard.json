@@ -1,0 +1,28 @@
+{
+    "profileName": "Standard Egypt 95% RTP",
+    "minBet": 20,
+    "maxBet": 2000,
+    "paytable": {
+        "PYRAMID": {
+            "8": 1,
+            "10": 5,
+            "12": 50
+        },
+        "ANKH": {
+            "8": 0.5,
+            "10": 2.5,
+            "12": 15
+        },
+        "EYE": {
+            "8": 0.25,
+            "10": 1,
+            "12": 5
+        },
+        "SCARAB": {
+            "8": 0.1,
+            "10": 0.5,
+            "12": 2
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

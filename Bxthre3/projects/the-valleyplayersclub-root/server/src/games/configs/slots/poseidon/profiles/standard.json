@@ -1,0 +1,28 @@
+{
+    "profileName": "standard",
+    "minBet": 10,
+    "maxBet": 5000,
+    "paytable": {
+        "TRIDENT": {
+            "3": 10,
+            "4": 50,
+            "5": 200
+        },
+        "PEARL": {
+            "3": 5,
+            "4": 20,
+            "5": 100
+        },
+        "SHELL": {
+            "3": 2,
+            "4": 10,
+            "5": 50
+        },
+        "SHARK": {
+            "3": 1,
+            "4": 5,
+            "5": 20
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

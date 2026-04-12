@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    .header {
+      background: linear-gradient(90deg, #1a1a2e, #16213e);
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+    }
+    .header h1 { font-size: 1.25rem; color: #fff; }
+    .header .status { 
+      display: inline-block; 
+      width: 8px; height: 8px; 
+      background: #4ade80; 
+      border-radius: 50%; 
+      margin-left: 0.5rem;
+    }
+    .container { padding: 1rem; max-width: 1200px; margin: 0 auto; }
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    .card {
+      background: #1a1a2e;
+      border-radius: 8px;
+      padding: 1rem;
+      border: 1px solid #333;
+    }
+    .card h2 { font-size: 0.875rem; color: #94a3b8; margin-bottom: 0.5rem; }
+    .metric { font-size: 2rem; font-weight: bold; color: #fff; }
+    .metric.small { font-size: 1.25rem; }
+    .list { list-style: none; }
+    .list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+    }
+    .list li:last-child { border-bottom: none; }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge.active { background: #4ade80; color: #000; }
+    .badge.blocked { background: #f87171; color: #fff; }
+    .badge.warning { background: #fbbf24; color: #000; }
+    .btn {
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .btn:hover { background: #2563eb; }
+    .emergency { background: #dc2626; }
+    .nav {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: #1a1a2e;
+      overflow-x: auto;
+    }
+    .nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      white-space: nowrap;
+      padding: 0.5rem;
+    }
+    .nav a.active { color: #fff; border-bottom: 2px solid #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Agentic <span class="status"></span></h1>
+    <div style="color: #94a3b8; font-size: 0.875rem;">bxthre3 holding system</div>
+  </div>
+  
+  <nav class="nav">
+    <a href="#" class="active">Overview</a>
+    <a href="#agents">Agents</a>
+    <a href="#projects">Projects</a>
+    <a href="#deadlines">Deadlines</a>
+    <a href="#costs">Costs</a>
+    <a href="#emergency" class="emergency">Emergency</a>
+  </nav>
+
+  <div class="container">
+    <!-- Critical Alerts -->
+    <div class="card" style="margin-bottom: 1rem; border-color: #f87171;">
+      <h2>⚠️ Active Alerts</h2>
+      <div id="alerts">Loading...</div>
+    </div>
+
+    <div class="grid">
+      <!-- Agent Status -->
+      <div class="card">
+        <h2>Agents</h2>
+        <div class="metric" id="agentCount">-</div>
+        <ul class="list" id="agentList">
+          <li>Loading...</li>
+        </ul>
+      </div>
+
+      <!-- Blockers -->
+      <div class="card">
+        <h2>Active Blockers</h2>
+        <div class="metric" id="blockerCount" style="color: #f87171;">-</div>
+        <ul class="list" id="blockerList">
+          <li>Loading...</li>
+        </ul>
+      </div>
+
+      <!-- Budget -->
+      <div class="card">
+        <h2>Monthly Cost</h2>
+        <div class="metric small" id="monthlyCost">$-</div>
+        <div style="margin-top: 0.5rem;">
+          <div style="background: #333; height: 8px; border-radius: 4px;">
+            <div id="budgetBar" style="background: #4ade80; height: 100%; width: 0%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.25rem;">
+            <span id="budgetPercent">0%</span> of $2,000 budget
+          </div>
+        </div>
+      </div>
+
+      <!-- ESTCP Deadline -->
+      <div class="card" style="border-color: #fbbf24;">
+        <h2>ESTCP Deadline</h2>
+        <div class="metric small" id="estcpDays">- days</div>
+        <div style="font-size: 0.875rem; color: #fbbf24; margin-top: 0.5rem;">
+          Due: March 26, 2026
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card" style="grid-column: span 2;">
+        <h2>Quick Actions</h2>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          <button class="btn" onclick="refreshData()">Refresh</button>
+          <button class="btn" onclick="pauseAll()">Pause All</button>
+          <button class="btn" onclick="forceStandup()">Force Standup</button>
+          <button class="btn emergency" onclick="emergencyStop()">EMERGENCY STOP</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mock data - would connect to Agentic API
+    const mockData = {
+      agents: { total: 20, active: 18, blocked: 2 },
+      blockers: [
+        { id: 'b1', agent: 'jordan-fundraising', severity: 'p1', desc: 'Waiting on investor callback' },
+        { id: 'b2', agent: 'casey', severity: 'p2', desc: 'ESTCP section needs review' }
+      ],
+      monthlyCost: 1247.50,
+      budget: 2000,
+      estcpDays: 9
+    };
+
+    function render() {
+      document.getElementById('agentCount').textContent = mockData.agents.total;
+      document.getElementById('blockerCount').textContent = mockData.blockers.length;
+      document.getElementById('monthlyCost').textContent = '$' + mockData.monthlyCost.toFixed(2);
+      document.getElementById('estcpDays').textContent = mockData.estcpDays + ' days';
+      
+      const budgetPercent = (mockData.monthlyCost / mockData.budget) * 100;
+      document.getElementById('budgetPercent').textContent = budgetPercent.toFixed(1) + '%';
+      document.getElementById('budgetBar').style.width = Math.min(budgetPercent, 100) + '%';
+      
+      // Color based on budget
+      if (budgetPercent > 80) {
+        document.getElementById('budgetBar').style.background = '#f87171';
+      } else if (budgetPercent > 50) {
+        document.getElementById('budgetBar').style.background = '#fbbf24';
+      }
+      
+      // Agent list
+      const agentList = document.getElementById('agentList');
+      agentList.innerHTML = `
+        <li><span>Active</span><span class="badge active">${mockData.agents.active}</span></li>
+        <li><span>Blocked</span><span class="badge blocked">${mockData.agents.blocked}</span></li>
+        <li><span>Working</span><span class="badge warning">${mockData.agents.total - mockData.agents.active - mockData.agents.blocked}</span></li>
+      `;
+      
+      // Blocker list
+      const blockerList = document.getElementById('blockerList');
+      blockerList.innerHTML = mockData.blockers.map(b => 
+        `<li><span>${b.agent}</span><span class="badge ${b.severity === 'p0' || b.severity === 'p1' ? 'blocked' : 'warning'}">${b.severity}</span></li>`
+      ).join('');
+      
+      // Alerts
+      document.getElementById('alerts').innerHTML = mockData.blockers.length > 0 
+        ? `<span style="color: #f87171;">⚠️ ${mockData.blockers.length} agents blocked • ESTCP due in ${mockData.estcpDays} days</span>`
+        : '<span style="color: #4ade80;">✓ All systems operational</span>';
+    }
+
+    function refreshData() { render(); alert('Data refreshed'); }
+    function pauseAll() { alert('All agents paused'); }
+    function forceStandup() { alert('Standup triggered'); }
+    function emergencyStop() { 
+      if (confirm('EMERGENCY STOP: This will halt ALL agents immediately. Confirm?')) {
+        alert('EMERGENCY STOP activated. All agents halted.');
+      }
+    }
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>

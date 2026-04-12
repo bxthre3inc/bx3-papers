@@ -1,0 +1,67 @@
+
+[GENERATION COMMANDS] jungle-jewels-jungle-20260407-100346
+Style: mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical
+
+# gem_00 (gems)
+# Prompt: match3 gems asset: gem_00, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_00.png
+
+# gem_01 (gems)
+# Prompt: match3 gems asset: gem_01, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_01.png
+
+# gem_02 (gems)
+# Prompt: match3 gems asset: gem_02, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_02.png
+
+# gem_03 (gems)
+# Prompt: match3 gems asset: gem_03, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_03.png
+
+# gem_04 (gems)
+# Prompt: match3 gems asset: gem_04, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_04.png
+
+# gem_05 (gems)
+# Prompt: match3 gems asset: gem_05, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_05.png
+
+# gem_06 (gems)
+# Prompt: match3 gems asset: gem_06, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_06.png
+
+# gem_07 (gems)
+# Prompt: match3 gems asset: gem_07, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/gem_07.png
+
+# fx_0 (effects)
+# Prompt: match3 effects asset: fx_0, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/fx_0.png
+
+# fx_1 (effects)
+# Prompt: match3 effects asset: fx_1, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/fx_1.png
+
+# fx_2 (effects)
+# Prompt: match3 effects asset: fx_2, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/fx_2.png
+
+# fx_3 (effects)
+# Prompt: match3 effects asset: fx_3, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/fx_3.png
+
+# fx_4 (effects)
+# Prompt: match3 effects asset: fx_4, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/fx_4.png
+
+# bg_board (backgrounds)
+# Prompt: match3 backgrounds asset: bg_board, standard quality, mayan temples, vine-covered ruins, emerald green canopy, golden idols, tropical, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/jungle-jewels-jungle-20260407-100346/Textures/bg_board.png
+
+Traceback (most recent call last):
+  File "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/Skills/vpc-engine/engine.py", line 196, in <module>
+    main()
+  File "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/Skills/vpc-engine/engine.py", line 176, in main
+    prompt = f"{spec['game_type']} {cat} asset: {item['id']}, {item.get('rarity', 'standard')} quality, {spec['style_anchor']}, game asset quality, transparent background"
+                                                 ~~~~^^^^^^
+TypeError: string indices must be integers, not 'str'

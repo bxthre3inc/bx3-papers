@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: aos-mesh-worker
+    runtime: bun
+    buildCommand: bun install
+    startCommand: bun run workers/render-worker.ts
+    envVars:
+      - key: CONTROL_PLANE
+        value: https://agentic-brodiblanco.zocomputer.io
+      - key: MESH_SECRET
+        generateValue: true
+      - key: NODE_ID
+        value: render-worker-1
+      - key: REGION
+        value: us-east

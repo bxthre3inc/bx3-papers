@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPC Investor Portal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #1a1a2e;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #374151;
+    }
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.2s;
+    }
+    input:focus {
+      outline: none;
+      border-color: #4f46e5;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #4338ca; }
+    button:disabled { background: #9ca3af; cursor: not-allowed; }
+    .status {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: none;
+    }
+    .status.success {
+      display: block;
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .status.error {
+      display: block;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .investor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #1a1a2e;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .info-box {
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 24px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="investor-badge">⭐ FRIEND INVESTOR</div>
+    <h1>Investor Portal</h1>
+    <p class="subtitle">Verify your phone to access VPC investment updates</p>
+
+    <form id="verifyForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" required placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="+1234567890">
+      </div>
+      <div class="form-group">
+        <label for="code">Verification Code</label>
+        <input type="text" id="code" required placeholder="123456" maxlength="6">
+      </div>
+      <button type="submit" id="verifyBtn">Verify & Subscribe</button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <div class="info-box">
+      <strong>What happens next:</strong><br>
+      1. Verify your phone with the code you receive<br>
+      2. Subscribe to investment update alerts<br>
+      3. Ask questions anytime about VPC progress<br>
+      4. Get first look at future investment opportunities
+    </div>
+  </div>
+
+  <script>
+    const phoneInput = document.getElementById('phone');
+    const codeInput = document.getElementById('code');
+    const verifyBtn = document.getElementById('verifyBtn');
+    const status = document.getElementById('status');
+
+    // Simple phone formatting
+    phoneInput.addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 10) v = v.slice(0, 10);
+      if (v.length >= 6) v = `(${v.slice(0,3)}) ${v.slice(3,6)}-${v.slice(6)}`;
+      else if (v.length >= 3) v = `(${v.slice(0,3)}) ${v.slice(3)}`;
+      e.target.value = v;
+    });
+
+    document.getElementById('verifyForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      verifyBtn.disabled = true;
+      verifyBtn.textContent = 'Verifying...';
+
+      const name = document.getElementById('name').value;
+      const phone = phoneInput.value.replace(/\D/g, '');
+      const code = codeInput.value;
+
+      try {
+        // Simulated verification (in production, use Twilio/Vonage)
+        if (code === '123456' || code.length === 6) {
+          status.className = 'status success';
+          status.innerHTML = `<strong>Welcome, ${name}!</strong><br>You're verified as a VPC Friend Investor.<br><br>You'll receive investment updates via SMS.<br><br><em>Full Twilio integration coming soon.</em>`;
+          verifyBtn.textContent = 'Verified ✓';
+        } else {
+          throw new Error('Invalid code. Try 123456 for demo.');
+        }
+      } catch (err) {
+        status.className = 'status error';
+        status.textContent = err.message;
+        verifyBtn.disabled = false;
+        verifyBtn.textContent = 'Verify & Subscribe';
+      }
+    });
+  </script>
+</body>
+</html>

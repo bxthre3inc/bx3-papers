@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPC — Cash Partnership</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f0f1a; color: #fff; overflow: hidden; }
+  .deck { width: 100vw; height: 100vh; position: relative; }
+  .slide {
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 60px; opacity: 0; pointer-events: none; transition: opacity 0.5s;
+  }
+  .slide.active { opacity: 1; pointer-events: all; }
+  .slide-bg-1 { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+  .slide-bg-2 { background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); }
+  .slide-bg-3 { background: linear-gradient(135deg, #1a1a2e 0%, #2d132c 100%); }
+  .slide-bg-4 { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); }
+  h1 { font-size: 4em; font-weight: 900; background: linear-gradient(90deg, #00d4ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+  h2 { font-size: 2.5em; color: #00d4ff; margin-bottom: 40px; }
+  p, li { font-size: 1.5em; line-height: 1.8; color: #ccc; }
+  ul { list-style: none; text-align: left; }
+  li { padding: 8px 0; }
+  li::before { content: "→ "; color: #00ff88; }
+  .highlight { color: #00ff88; font-weight: bold; }
+  .big-num { font-size: 6em; font-weight: 900; color: #00ff88; }
+  .med-num { font-size: 3em; font-weight: 700; color: #ffcc00; }
+  .tag { background: #00d4ff22; border: 1px solid #00d4ff; color: #00d4ff; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin: 5px; }
+  .card { background: #ffffff08; border: 1px solid #ffffff15; border-radius: 20px; padding: 40px; backdrop-filter: blur(10px); }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 900px; }
+  .card h3 { color: #00d4ff; font-size: 1.3em; margin-bottom: 10px; }
+  .card .val { font-size: 2.5em; color: #00ff88; font-weight: 700; }
+  table { border-collapse: collapse; width: 100%; max-width: 700px; }
+  th, td { padding: 20px; text-align: left; border-bottom: 1px solid #ffffff15; }
+  th { color: #00d4ff; font-size: 1.1em; }
+  td { font-size: 1.2em; }
+  .nav { position: fixed; bottom: 30px; right: 30px; display: flex; gap: 10px; z-index: 100; }
+  .nav button { background: #00d4ff22; border: 1px solid #00d4ff; color: #00d4ff; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 1em; transition: all 0.2s; }
+  .nav button:hover { background: #00d4ff; color: #0f0f1a; }
+  .slide-num { position: fixed; bottom: 30px; left: 30px; color: #ffffff30; font-size: 0.9em; z-index: 100; }
+  .flow { display: flex; align-items: center; gap: 30px; font-size: 1.3em; }
+  .flow-box { background: #ffffff10; border: 2px solid #00d4ff; border-radius: 12px; padding: 20px 30px; text-align: center; }
+  .flow-arrow { color: #00ff88; font-size: 2em; }
+  .cta-btn { background: linear-gradient(90deg, #00d4ff, #00ff88); color: #0f0f1a; padding: 20px 50px; border-radius: 50px; font-size: 1.4em; font-weight: 700; text-decoration: none; display: inline-block; margin-top: 30px; }
+  .qr { width: 150px; height: 150px; background: #fff; padding: 10px; border-radius: 10px; }
+  .two-col { display: flex; gap: 60px; align-items: center; }
+  .split-left { flex: 1; }
+  .split-right { flex: 0 0 200px; text-align: center; }
+  .coins { display: flex; gap: 15px; margin: 20px 0; }
+  .coin { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8em; }
+  .coin-gold { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #1a1a2e; }
+  .coin-silver { background: linear-gradient(135deg, #e0e0e0, #a0a0a0); color: #1a1a2e; }
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide slide-bg-1 active" id="slide-1">
+  <h1>Valley Players Club</h1>
+  <h2>Cash Partnership Investment Opportunity</h2>
+  <p>The sweepstakes gaming platform with a <span class="highlight">local cash network</span></p>
+  <div class="tag">Sweepstakes Gaming</div><div class="tag">Fintech</div><div class="tag">B2B Network</div>
+</div>
+
+<!-- SLIDE 2: THE PROBLEM -->
+<div class="slide slide-bg-2" id="slide-2">
+  <h2>The Problem</h2>
+  <div class="big-num">40%</div>
+  <p>of Americans are unbanked or underbanked</p>
+  <ul style="margin-top: 40px;">
+    <li>Cannot use credit cards for online gaming</li>
+    <li>Blocked from platforms like Chumba & LuckyLand</li>
+    <li>Cash deposits = impossible gap</li>
+  </ul>
+</div>
+
+<!-- SLIDE 3: THE SOLUTION -->
+<div class="slide slide-bg-1" id="slide-3">
+  <h2>Our Solution: Cash Partner Network</h2>
+  <p>Players deposit and withdraw cash through local cash partners</p>
+  <div class="flow" style="margin-top: 40px;">
+    <div class="flow-box"><strong>Player</strong><br>Gives Cash</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box"><strong>Cash Partner</strong><br>Issues Gold Coins</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box"><strong>Player Wins</strong><br>Redeems Cash</div>
+  </div>
+  <p style="margin-top: 30px;">Result: <span class="highlight">0% chargeback risk</span> for VPC</p>
+</div>
+
+<!-- SLIDE 4: UNIT ECONOMICS -->
+<div class="slide slide-bg-3" id="slide-4">
+  <h2>Unit Economics</h2>
+  <p style="margin-bottom: 30px;">Per <strong>$20 player deposit</strong></p>
+  <table>
+    <tr><th>Metric</th><th>Amount</th></tr>
+    <tr><td>Player Deposits</td><td>$20.00</td></tr>
+    <tr><td>Stripe Fee</td><td>−$0.88</td></tr>
+    <tr><td>VPC Revenue</td><td>$19.12</td></tr>
+    <tr><td>House Edge + Consumables</td><td>+$5.72</td></tr>
+    <tr><td style="color:#00ff88;"><strong>VPC Net Profit</strong></td><td style="color:#00ff88;"><strong>$20.25</strong></td></tr>
+  </table>
+  <p class="med-num" style="margin-top:30px;">101% Net Margin</p>
+</div>
+
+<!-- SLIDE 5: THE DEAL -->
+<div class="slide slide-bg-2" id="slide-5">
+  <h2>The Deal: One Founding Cash Partner</h2>
+  <div class="card-grid" style="margin-top: 20px;">
+    <div class="card"><h3>Your Investment</h3><div class="val">$2,500</div></div>
+    <div class="card"><h3>Your Equity</h3><div class="val">2.5%</div></div>
+    <div class="card"><h3>Cash Partnership Rate</h3><div class="val">10% flat</div></div>
+    <div class="card"><h3>Guaranteed Return</h3><div class="val">2× in 6mo</div></div>
+  </div>
+  <p style="margin-top: 30px;">You are the <span class="highlight">only cash partner</span> with this rate</p>
+</div>
+
+<!-- SLIDE 6: WHY UNIQUE -->
+<div class="slide slide-bg-1" id="slide-6">
+  <h2>Why This Deal is Unique</h2>
+  <ul style="max-width: 700px;">
+    <li><span class="highlight">First & only cash partner</span> — you set the standard for all future partners</li>
+    <li><span class="highlight">10% flat rate locked forever</span> — future partners pay 15–20%</li>
+    <li><span class="highlight">2× return in 6 months</span> — founder-backed guarantee</li>
+    <li><span class="highlight">2.5% equity</span> — long-term alignment with VPC's success</li>
+  </ul>
+</div>
+
+<!-- SLIDE 7: YOUR ROLE -->
+<div class="slide slide-bg-4" id="slide-7">
+  <h2>Your Role: Cash Partner Node</h2>
+  <p>You enable players to deposit and withdraw cash in your area</p>
+  <div class="card" style="max-width: 700px; margin-top: 30px;">
+    <div class="coins">
+      <div class="coin coin-gold">GC</div>
+      <div class="coin coin-gold">GC</div>
+      <div class="coin coin-silver">$C</div>
+      <div class="coin coin-silver">$C</div>
+    </div>
+    <p>Earn <span class="highlight">10% flat take</span> on all cash through your node</p>
+    <p>No chargeback risk — cash is physical</p>
+    <p>Scale with platform — more players = more earnings</p>
+  </div>
+  <p style="margin-top: 20px;">You are the <span class="highlight">local face of VPC</span></p>
+</div>
+
+<!-- SLIDE 8: TRACTION -->
+<div class="slide slide-bg-2" id="slide-8">
+  <h2>Traction</h2>
+  <ul style="max-width: 600px;">
+    <li>Platform <span class="highlight">fully built and operational</span></li>
+    <li>Dual currency model legally vetted</li>
+    <li>Secured cash partner architecture</li>
+    <li>Collateral-backed risk management</li>
+  </ul>
+  <p class="med-num" style="margin-top: 40px;">Ready to Launch</p>
+</div>
+
+<!-- SLIDE 9: TEAM -->
+<div class="slide slide-bg-1" id="slide-9">
+  <h2>The Team</h2>
+  <div class="two-col" style="max-width: 900px; margin-top: 30px;">
+    <div class="split-left">
+      <div class="card" style="margin-bottom: 20px;">
+        <h3>Founder / CTO</h3>
+        <p>Built entire platform stack, 20+ AI agents running</p>
+      </div>
+      <div class="card">
+        <h3>You</h3>
+        <p>Founding cash partner, local operations & network</p>
+      </div>
+    </div>
+    <div class="split-right">
+      <p style="font-size: 1.2em; color: #00ff88;">Together we have<br>complimentary skills<br>& aligned incentives</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: CONTACT -->
+<div class="slide slide-bg-3" id="slide-10">
+  <h2>Let's Talk</h2>
+  <p style="font-size: 1.8em; margin-bottom: 30px;">Join as Founding Cash Partner</p>
+  <p style="font-size: 1.4em; color: #00d4ff;">getfarmsense@gmail.com</p>
+  <p style="font-size: 1.4em; color: #00d4ff; margin-bottom: 30px;">+1 (719) 490-9228</p>
+  <img src="/VPC-Cash-Partner-Investment.pdf" alt="QR" class="qr" style="margin-bottom: 20px;">
+  <p>Scan for the full one-pager</p>
+</div>
+
+</div>
+
+<div class="slide-num"><span id="cur">1</span> / 10</div>
+<div class="nav">
+  <button onclick="prev()">← Prev</button>
+  <button onclick="next()">Next →</button>
+</div>
+
+<script>
+let cur = 0;
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+
+function show(n) {
+  slides[cur].classList.remove('active');
+  cur = (n + total) % total;
+  slides[cur].classList.add('active');
+  document.getElementById('cur').textContent = cur + 1;
+}
+function next() { show(cur + 1); }
+function prev() { show(cur - 1); }
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') next();
+  if (e.key === 'ArrowLeft') prev();
+});
+</script>
+</body>
+</html>

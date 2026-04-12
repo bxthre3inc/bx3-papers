@@ -1,0 +1,17 @@
+{
+    "name": "Florence Flow",
+    "theme": "co",
+    "dnaId": "standard-scatter",
+    "symbolMap": {
+        "WILD": "WILD",
+        "BLANK": "BLANK",
+        "S1": "SKI",
+        "S2": "COLUMBINE",
+        "S3": "BIKE",
+        "S4": "BEER",
+        "S5": "GOLD"
+    },
+    "minBet": 10,
+    "maxBet": 5000,
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

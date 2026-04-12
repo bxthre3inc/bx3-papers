@@ -1,0 +1,216 @@
+// Bxthre3 Inc — R&D Studio + Holdings Company
+// Department Structure for Venture Studio Model
+
+import { org } from '../hierarchy/org.js';
+import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
+
+export interface ProjectLifecycle {
+  id: string;
+  name: string;
+  stage: 'ideation' | 'research' | 'build' | 'portfolio' | 'spinoff' | 'sold' | 'archived';
+  department: string;
+  health: 'green' | 'yellow' | 'red';
+  metrics: {
+    marketSize: number; // TAM in $M
+    technicalRisk: number; // 0-100
+    teamReadiness: number; // 0-100
+    timeToRevenue: number; // months
+  };
+  spinoffReadiness: number; // 0-100
+  subsidiaryId?: string; // If spun off
+}
+
+class Bxthre3Departments {
+  private projects: Map<string, ProjectLifecycle> = new Map();
+  
+  // 1. IDEATION LAB — Generate and validate concepts
+  readonly ideationLab = {
+    name: 'Ideation Lab',
+    function: 'Generate, validate, and prioritize new concepts',
+    process: [
+      'Weekly concept pitches (anyone can submit)',
+      '72h rapid validation (market size, technical feasibility)',
+      'Go/no-go gate: needs TAM >$100M + solvable technical risk'
+    ],
+    employees: ['alex', 'research-analyst-1', 'research-analyst-2'],
+    output: 'Validated concepts ready for Deep Research',
+    metrics: {
+      conceptsGenerated: 0,
+      validationRate: 0, // % that pass 72h gate
+      avgTimeToValidation: 72 // hours
+    }
+  };
+  
+  // 2. DEEP RESEARCH — Technical and market validation
+  readonly deepResearch = {
+    name: 'Deep Research',
+    function: 'Technical deep-dive and market validation (2-4 weeks)',
+    process: [
+      'Technical feasibility assessment',
+      'Competitive landscape analysis',
+      'Customer discovery (20+ interviews)',
+      'IP landscape search',
+      'Go/no-go gate: needs clear path to MVP in <6 months'
+    ],
+    employees: ['alex', 'casey', 'ip-specialist'],
+    output: 'Research report + go/no-go recommendation',
+    metrics: {
+      projectsInResearch: 0,
+      avgResearchDuration: 21, // days
+      goRate: 0.4 // 40% pass to build
+    }
+  };
+  
+  // 3. BUILD STUDIO — MVP development and prototyping
+  readonly buildStudio = {
+    name: 'Build Studio',
+    function: 'Rapid MVP development and pilot execution',
+    process: [
+      '6-month sprint to working MVP',
+      'Early pilot with 3-5 design partners',
+      'Iterate based on feedback',
+      'Go/no-go gate: needs product-market fit signals + pilot revenue or LOIs'
+    ],
+    employees: ['maya', 'builder-1', 'builder-2', 'builder-3'],
+    output: 'Working MVP + pilot results + business case',
+    metrics: {
+      projectsInBuild: 0,
+      avgBuildDuration: 180, // days
+      pmfRate: 0.6 // 60% show PMF signals
+    }
+  };
+  
+  // 4. PORTFOLIO OPS — Manage active holdings
+  readonly portfolioOps = {
+    name: 'Portfolio Operations',
+    function: 'Manage active projects, track spin-off readiness',
+    process: [
+      'Quarterly portfolio review',
+      'Spin-off readiness assessment (team, revenue, systems)',
+      'Resource allocation across portfolio',
+      'Decision: spin off, sell, or archive'
+    ],
+    employees: ['drew', 'portfolio-manager', 'finance-analyst'],
+    output: 'Portfolio dashboard + spin-off recommendations',
+    metrics: {
+      activeHoldings: 0,
+      spinoffReady: 0,
+      avgTimeInPortfolio: 12 // months
+    }
+  };
+  
+  // 5. COMMERCIALIZATION — Prepare for spin-off or sale
+  readonly commercialization = {
+    name: 'Commercialization',
+    function: 'Package projects for spin-off or strategic sale',
+    process: [
+      'Subsidiary entity formation (if spinning off)',
+      'Team transition planning',
+      'IP transfer and licensing',
+      'Investor materials (if raising for spin-off)',
+      'Strategic buyer identification (if selling)'
+    ],
+    employees: ['drew', 'jordan', 'legal-counsel'],
+    output: 'Spin-off ready entity or sale package',
+    metrics: {
+      projectsInCommercialization: 0,
+      spinoffsCompleted: 0,
+      strategicSales: 0
+    }
+  };
+  
+  // 6. ARCHIVE — Graceful wind-down
+  readonly archive = {
+    name: 'Archive',
+    function: 'Graceful wind-down and knowledge capture',
+    process: [
+      'Capture learnings and IP',
+      'Secure data and systems',
+      'Team reassignment or exit',
+      'Public post-mortem (what we learned)'
+    ],
+    employees: ['drew', 'knowledge-manager'],
+    output: 'Archived project + lessons learned',
+    metrics: {
+      archivedProjects: 0,
+      lessonsDocumented: 0
+    }
+  };
+  
+  // Project flow through departments
+  moveProject(projectId: string, toStage: ProjectLifecycle['stage']): void {
+    const project = this.projects.get(projectId);
+    if (!project) return;
+    
+    const fromStage = project.stage;
+    project.stage = toStage;
+    
+    // Update department mapping
+    const deptMap: Record<string, string> = {
+      'ideation': 'Ideation Lab',
+      'research': 'Deep Research',
+      'build': 'Build Studio',
+      'portfolio': 'Portfolio Ops',
+      'spinoff': 'Commercialization',
+      'sold': 'Commercialization',
+      'archived': 'Archive'
+    };
+    project.department = deptMap[toStage];
+    
+    eventBus.publish(BXTHRE3_EVENTS.PROJECT_STAGE_CHANGE, 'departments', {
+      projectId,
+      from: fromStage,
+      to: toStage,
+      department: project.department
+    }, 'normal');
+    
+    console.log(`[DEPT] ${projectId}: ${fromStage} → ${toStage}`);
+  }
+  
+  // Health check all projects
+  assessHealth(): Array<{
+    projectId: string;
+    stage: string;
+    health: string;
+    action: string;
+  }> {
+    return Array.from(this.projects.values()).map(p => {
+      let action = 'continue';
+      
+      // Red flags
+      if (p.metrics.timeToRevenue > 18) action = 'review';
+      if (p.metrics.technicalRisk > 80) action = 'reassess';
+      if (p.metrics.marketSize < 50 && p.stage !== 'archived') action = 'consider-archive';
+      
+      return {
+        projectId: p.id,
+        stage: p.stage,
+        health: p.health,
+        action
+      };
+    });
+  }
+  
+  getPortfolioSummary(): {
+    byStage: Record<string, number>;
+    totalValue: number;
+    spinoffReady: number;
+    healthDistribution: Record<string, number>;
+  } {
+    const byStage: Record<string, number> = {};
+    const healthDistribution: Record<string, number> = { green: 0, yellow: 0, red: 0 };
+    let totalValue = 0;
+    let spinoffReady = 0;
+    
+    for (const project of this.projects.values()) {
+      byStage[project.stage] = (byStage[project.stage] || 0) + 1;
+      healthDistribution[project.health]++;
+      totalValue += project.metrics.marketSize;
+      if (project.spinoffReadiness > 80) spinoffReady++;
+    }
+    
+    return { byStage, totalValue, spinoffReady, healthDistribution };
+  }
+}
+
+export const bxthre3Depts = new Bxthre3Departments();

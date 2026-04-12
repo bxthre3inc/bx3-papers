@@ -1,0 +1,209 @@
+{
+  "pack_id": "western-20260407-042721",
+  "status": "pending",
+  "created": "2026-04-07T04:27:21.729221",
+  "theme": "western",
+  "style_anchor": "ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance",
+  "color_palette": [
+    "#FFD700",
+    "#C0C0C0",
+    "#800080",
+    "#4169E1",
+    "#FF4500"
+  ],
+  "assets": {
+    "symbols": {
+      "count": 10,
+      "items": [
+        {
+          "rarity": "high",
+          "name": "jackpot",
+          "description": "jackpot symbol, glowing, premium feel",
+          "prompt": "jackpot symbol, glowing, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, casino game symbol, transparent background, isolated, game asset quality",
+          "filename": "symbol_jackpot.png",
+          "size": "512x512"
+        },
+        {
+          "rarity": "medium",
+          "name": "bonus",
+          "description": "bonus trigger symbol, exciting",
+          "prompt": "bonus trigger symbol, exciting, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, casino game symbol, transparent background, isolated, game asset quality",
+          "filename": "symbol_bonus.png",
+          "size": "512x512"
+        },
+        {
+          "rarity": "low",
+          "name": "basic",
+          "description": "basic symbol, simple design",
+          "prompt": "basic symbol, simple design, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, casino game symbol, transparent background, isolated, game asset quality",
+          "filename": "symbol_basic.png",
+          "size": "512x512"
+        }
+      ],
+      "output_dir": "Symbols"
+    },
+    "backgrounds": {
+      "count": 1,
+      "items": [
+        {
+          "name": "main",
+          "prompt": "mythology themed background, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, game background art, 16:9 composition, no UI elements",
+          "filename": "bg_main.png",
+          "resolution": "1920x1080"
+        }
+      ],
+      "output_dir": "Backgrounds"
+    },
+    "ui_kit": {
+      "items": {
+        "buttons": {
+          "spin": {
+            "prompt": "SPIN button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+            "filename": "btn_spin.png",
+            "states": [
+              "normal",
+              "hover",
+              "pressed",
+              "disabled"
+            ]
+          },
+          "max_bet": {
+            "prompt": "MAX_BET button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+            "filename": "btn_max_bet.png",
+            "states": [
+              "normal",
+              "hover",
+              "pressed",
+              "disabled"
+            ]
+          },
+          "auto": {
+            "prompt": "AUTO button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+            "filename": "btn_auto.png",
+            "states": [
+              "normal",
+              "hover",
+              "pressed",
+              "disabled"
+            ]
+          },
+          "cash_out": {
+            "prompt": "CASH_OUT button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+            "filename": "btn_cash_out.png",
+            "states": [
+              "normal",
+              "hover",
+              "pressed",
+              "disabled"
+            ]
+          },
+          "bet_up": {
+            "prompt": "BET_UP button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+            "filename": "btn_bet_up.png",
+            "states": [
+              "normal",
+              "hover",
+              "pressed",
+              "disabled"
+            ]
+          },
+          "bet_down": {
+            "prompt": "BET_DOWN button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+            "filename": "btn_bet_down.png",
+            "states": [
+              "normal",
+              "hover",
+              "pressed",
+              "disabled"
+            ]
+          }
+        },
+        "frames": {
+          "main": {
+            "prompt": "game frame border, casino frame, elegant, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent center",
+            "filename": "frame_main.png",
+            "nine_slice": true
+          }
+        },
+        "panels": {
+          "lobby": {
+            "prompt": "lobby background panel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, seamless texture",
+            "filename": "panel_lobby.png"
+          }
+        },
+        "icons": {
+          "coin": {
+            "prompt": "coin icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+            "filename": "icon_coin.png"
+          },
+          "settings": {
+            "prompt": "settings icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+            "filename": "icon_settings.png"
+          },
+          "sound_on": {
+            "prompt": "sound on icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+            "filename": "icon_sound_on.png"
+          },
+          "sound_off": {
+            "prompt": "sound off icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+            "filename": "icon_sound_off.png"
+          },
+          "back": {
+            "prompt": "back icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+            "filename": "icon_back.png"
+          },
+          "info": {
+            "prompt": "info icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+            "filename": "icon_info.png"
+          }
+        }
+      },
+      "output_dir": "UI"
+    },
+    "spine_chars": {
+      "count": 2,
+      "items": [
+        {
+          "name": "mascot",
+          "prompt": "game mascot character, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, full body character, transparent background",
+          "filename": "spine_mascot.png",
+          "animations": [
+            "idle",
+            "win",
+            "lose",
+            "celebrate"
+          ]
+        }
+      ],
+      "output_dir": "Spine/Characters"
+    },
+    "audio": {
+      "count": 8,
+      "items": {
+        "bgm": {
+          "lobby": "epic_orchestral_lobby_loop_120bpm",
+          "game": "epic_orchestral_gameplay_loop_140bpm",
+          "bonus": "epic_orchestral_bonus_intense_160bpm"
+        },
+        "sfx": {
+          "spin": "mechanical_reel_click.wav",
+          "win_small": "coin_drop_3.wav",
+          "win_big": "jackpot_cascade.wav",
+          "button": "ui_click_brass.wav",
+          "bonus_trigger": "alarm_ding_ding.wav"
+        }
+      },
+      "output_dir": "Audio"
+    },
+    "cover": {
+      "items": {},
+      "output_dir": "Cover"
+    }
+  },
+  "unity_import": {
+    "import_path": "Assets/Resources/Generated/western-20260407-042721",
+    "texture_type": "Sprite (2D and UI)",
+    "pivot": "Center",
+    "pixels_per_unit": 100
+  }
+}

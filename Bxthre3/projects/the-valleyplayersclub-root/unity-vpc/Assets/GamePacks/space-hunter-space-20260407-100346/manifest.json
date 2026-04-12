@@ -1,0 +1,169 @@
+{
+  "targets": [
+    {
+      "id": "target_00",
+      "rarity": "boss",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_01",
+      "rarity": "boss",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_02",
+      "rarity": "boss",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_03",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_04",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_05",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_06",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_07",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_08",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_09",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_10",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_11",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_12",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_13",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "target_14",
+      "rarity": "common",
+      "size": [
+        256,
+        256
+      ]
+    }
+  ],
+  "cannons": [
+    {
+      "id": "cannon_0",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "cannon_1",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "cannon_2",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "cannon_3",
+      "size": [
+        128,
+        128
+      ]
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "bg_scene",
+      "size": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "ui": [
+    "btn_fire",
+    "btn_weapon",
+    "panel_ammo",
+    "panel_score"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "space",
+  "name": "Cosmic Casino",
+  "style_anchor": "deep space void, stellar nebula backgrounds, sci-fi tech panels, metallic titanium sheen, cosmic lighting, zero gravity floating, crystalline formations, alien artifacts, warp speed effects",
+  "palette": ["#0B1026", "#7B68EE", "#00BFFF", "#FFD700", "#E0E0E0", "#FF6B6B", "#4ECDC4"],
+  "mood": "awe-inspiring, mysterious, epic",
+  "era": "future",
+  "region": "interstellar",
+  "inspirations": ["Star Trek", "2001 Space Odyssey", "Interstellar"]
+}

@@ -1,0 +1,354 @@
+{
+    "name": "Luxury Life",
+    "theme": "mythology",
+    "category": "slots",
+    "evaluatorType": "slots-lines",
+    "reels": [
+        [
+            "TRIDENT",
+            "BLANK",
+            "PEARL",
+            "PEARL",
+            "ANKH",
+            "TRIDENT",
+            "SCARAB",
+            "PEARL",
+            "SHELL",
+            "BLANK",
+            "SCARAB",
+            "SHELL",
+            "PEARL",
+            "SCARAB",
+            "ANKH",
+            "PEARL",
+            "ANKH",
+            "PEARL"
+        ],
+        [
+            "PEARL",
+            "WILD",
+            "SHELL",
+            "ANKH",
+            "WILD",
+            "SCARAB",
+            "BLANK",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "ANKH",
+            "TRIDENT",
+            "WILD",
+            "ANKH",
+            "PEARL",
+            "SHELL",
+            "SCARAB",
+            "SHELL"
+        ],
+        [
+            "WILD",
+            "EYE",
+            "PEARL",
+            "SCARAB",
+            "EYE",
+            "ANKH",
+            "SHELL",
+            "WILD",
+            "ANKH",
+            "WILD",
+            "SCARAB",
+            "BLANK",
+            "PEARL",
+            "WILD",
+            "PEARL",
+            "ANKH",
+            "BLANK",
+            "TRIDENT"
+        ],
+        [
+            "SHELL",
+            "TRIDENT",
+            "TRIDENT",
+            "EYE",
+            "SHELL",
+            "WILD",
+            "SCARAB",
+            "PEARL",
+            "SHELL",
+            "ANKH",
+            "WILD",
+            "SCARAB",
+            "SHELL",
+            "BLANK",
+            "BLANK",
+            "TRIDENT",
+            "SHELL",
+            "SHELL"
+        ],
+        [
+            "BLANK",
+            "ANKH",
+            "EYE",
+            "BLANK",
+            "BLANK",
+            "BLANK",
+            "SCARAB",
+            "ANKH",
+            "PEARL",
+            "EYE",
+            "BLANK",
+            "TRIDENT",
+            "WILD",
+            "BLANK",
+            "SCARAB",
+            "TRIDENT",
+            "TRIDENT",
+            "SHELL"
+        ]
+    ],
+    "rows": 3,
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

@@ -1,0 +1,157 @@
+{
+  "pack_id": "pharaohs-gold-egypt-20260407-100347",
+  "name": "Pharaohs Gold",
+  "game_type": "slots",
+  "theme": "egypt",
+  "style_anchor": "ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat",
+  "params": {
+    "reels": 6,
+    "rows": 4,
+    "symbols": 14,
+    "cannons": 4,
+    "bosses": 3,
+    "waves": 5,
+    "grid": 8,
+    "special": 6,
+    "pegs": 16,
+    "buckets": 9
+  },
+  "status": "approved",
+  "created": "2026-04-07T10:03:47.106104",
+  "assets": {
+    "symbols": [
+      {
+        "id": "sym_00",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_01",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_02",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_03",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_04",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_05",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_06",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_07",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_08",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_09",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_10",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_11",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_12",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_13",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "bg_main",
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "ui": [
+      "btn_spin",
+      "btn_max_bet",
+      "btn_auto",
+      "panel_balance",
+      "panel_win",
+      "frame_reels"
+    ]
+  },
+  "outputs": {
+    "pack_dir": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347"
+  }
+}

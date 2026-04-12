@@ -1,0 +1,72 @@
+[
+  {
+    "file": "common_fish_01",
+    "rarity": "common",
+    "description": "small clownfish, orange with white stripes",
+    "prompt": "Game asset: common fish for sweepstakes fish table game, small clownfish, orange with white stripes, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/common_fish_01.png"
+  },
+  {
+    "file": "common_fish_02",
+    "rarity": "common",
+    "description": "blue tang fish, bright blue oval body",
+    "prompt": "Game asset: common fish for sweepstakes fish table game, blue tang fish, bright blue oval body, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/common_fish_02.png"
+  },
+  {
+    "file": "rare_fish_01",
+    "rarity": "rare",
+    "description": "angelfish, silver with black stripes, triangular fins",
+    "prompt": "Game asset: rare fish for sweepstakes fish table game, angelfish, silver with black stripes, triangular fins, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/rare_fish_01.png"
+  },
+  {
+    "file": "rare_fish_02",
+    "rarity": "rare",
+    "description": "lionfish, red and white stripes, flowing fins",
+    "prompt": "Game asset: rare fish for sweepstakes fish table game, lionfish, red and white stripes, flowing fins, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/rare_fish_02.png"
+  },
+  {
+    "file": "epic_fish_01",
+    "rarity": "epic",
+    "description": "golden shark, metallic gold body, aggressive pose",
+    "prompt": "Game asset: epic fish for sweepstakes fish table game, golden shark, metallic gold body, aggressive pose, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, slight glow effect, magical aura, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/epic_fish_01.png"
+  },
+  {
+    "file": "epic_fish_02",
+    "rarity": "epic",
+    "description": "crystal jellyfish, glowing blue, translucent",
+    "prompt": "Game asset: epic fish for sweepstakes fish table game, crystal jellyfish, glowing blue, translucent, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, slight glow effect, magical aura, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/epic_fish_02.png"
+  },
+  {
+    "file": "boss_fish_01",
+    "rarity": "boss",
+    "description": "ancient sea dragon, blue scales, glowing eyes, massive",
+    "prompt": "Game asset: boss fish for sweepstakes fish table game, ancient sea dragon, blue scales, glowing eyes, massive, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, intense glowing eyes, dramatic lighting, particle effects, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/boss_fish_01.png"
+  },
+  {
+    "file": "boss_fish_02",
+    "rarity": "boss",
+    "description": "kraken, dark purple, multiple tentacles, terrifying",
+    "prompt": "Game asset: boss fish for sweepstakes fish table game, kraken, dark purple, multiple tentacles, terrifying, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, intense glowing eyes, dramatic lighting, particle effects, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/boss_fish_02.png"
+  },
+  {
+    "file": "mini_fish_01",
+    "rarity": "mini",
+    "description": "treasure chest with bubbles, gold coins visible",
+    "prompt": "Game asset: mini fish for sweepstakes fish table game, treasure chest with bubbles, gold coins visible, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/mini_fish_01.png"
+  },
+  {
+    "file": "mini_fish_02",
+    "rarity": "mini",
+    "description": "spinning wheel bonus, casino wheel icon",
+    "prompt": "Game asset: mini fish for sweepstakes fish table game, spinning wheel bonus, casino wheel icon, side profile view facing left, swimming pose, vibrant colors, stylized casino game art style, completely transparent background, isolated game sprite, high contrast, 2D mobile game art quality, single entity only, no text, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Fish/mini_fish_02.png"
+  }
+]

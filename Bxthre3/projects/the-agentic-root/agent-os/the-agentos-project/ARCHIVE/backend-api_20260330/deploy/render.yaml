@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: agentic-mesh-worker
+    runtime: bun
+    buildCommand: "bun install"
+    startCommand: "bun run render-worker.ts"
+    envVars:
+      - key: CONTROL_PLANE
+        value: https://brodiblanco.zo.space/api/mesh
+      - key: MESH_SECRET
+        sync: false
+      - key: NODE_ID
+        generateValue: true
+      - key: REGION
+        value: us-east
+    plan: free

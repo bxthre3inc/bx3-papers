@@ -1,0 +1,11 @@
+{
+    "profileName": "standard",
+    "minBet": 1,
+    "maxBet": 1000,
+    "paytable": {
+        "match": {
+            "1": 2
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

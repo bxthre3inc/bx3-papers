@@ -1,0 +1,189 @@
+{
+  "pack_id": "western-20260407-050303",
+  "theme": "western",
+  "style": "wild west, dusty desert, warm gold/brown, aged leather textures",
+  "assets": [
+    {
+      "type": "symbol",
+      "name": "symbol_00",
+      "prompt": "symbol 00 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_00.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_01",
+      "prompt": "symbol 01 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_01.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_02",
+      "prompt": "symbol 02 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_02.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_03",
+      "prompt": "symbol 03 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_03.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_04",
+      "prompt": "symbol 04 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_04.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_05",
+      "prompt": "symbol 05 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_05.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_06",
+      "prompt": "symbol 06 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_06.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_07",
+      "prompt": "symbol 07 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_07.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_08",
+      "prompt": "symbol 08 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_08.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_09",
+      "prompt": "symbol 09 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_09.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_10",
+      "prompt": "symbol 10 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_10.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "symbol",
+      "name": "symbol_11",
+      "prompt": "symbol 11 casino game symbol, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game asset",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Symbols/symbol_11.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "background",
+      "name": "bg_main",
+      "prompt": "bg_main game background, wild west, dusty desert, warm gold/brown, aged leather textures, no UI elements, atmospheric",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Backgrounds/bg_main.png",
+      "aspect": "16:9"
+    },
+    {
+      "type": "background",
+      "name": "bg_lobby",
+      "prompt": "bg_lobby game background, wild west, dusty desert, warm gold/brown, aged leather textures, no UI elements, atmospheric",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Backgrounds/bg_lobby.png",
+      "aspect": "16:9"
+    },
+    {
+      "type": "ui",
+      "name": "btn_spin",
+      "prompt": "btn_spin casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/btn_spin.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "ui",
+      "name": "btn_maxbet",
+      "prompt": "btn_maxbet casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/btn_maxbet.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "ui",
+      "name": "btn_bet_up",
+      "prompt": "btn_bet_up casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/btn_bet_up.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "ui",
+      "name": "btn_bet_down",
+      "prompt": "btn_bet_down casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/btn_bet_down.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "ui",
+      "name": "panel_frame",
+      "prompt": "panel_frame casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/panel_frame.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "ui",
+      "name": "icon_coin",
+      "prompt": "icon_coin casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/icon_coin.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "ui",
+      "name": "icon_wallet",
+      "prompt": "icon_wallet casino UI element, wild west, dusty desert, warm gold/brown, aged leather textures, transparent background, game interface",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/UI/icon_wallet.png",
+      "aspect": "1:1"
+    },
+    {
+      "type": "cover",
+      "name": "game_cover",
+      "prompt": "game_cover app store cover art, wild west, dusty desert, warm gold/brown, aged leather textures, professional marketing, high quality",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Cover/game_cover.png",
+      "aspect": "3:2"
+    },
+    {
+      "type": "cover",
+      "name": "app_icon",
+      "prompt": "app_icon app store cover art, wild west, dusty desert, warm gold/brown, aged leather textures, professional marketing, high quality",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Cover/app_icon.png",
+      "aspect": "3:2"
+    },
+    {
+      "type": "spine",
+      "name": "character_00",
+      "prompt": "character_00 game character, wild west, dusty desert, warm gold/brown, aged leather textures, character design, full body, T-pose",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Spine/character_00.png",
+      "aspect": "3:4"
+    },
+    {
+      "type": "spine",
+      "name": "character_01",
+      "prompt": "character_01 game character, wild west, dusty desert, warm gold/brown, aged leather textures, character design, full body, T-pose",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Spine/character_01.png",
+      "aspect": "3:4"
+    },
+    {
+      "type": "spine",
+      "name": "character_02",
+      "prompt": "character_02 game character, wild west, dusty desert, warm gold/brown, aged leather textures, character design, full body, T-pose",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/western-20260407-050303/Spine/character_02.png",
+      "aspect": "3:4"
+    }
+  ]
+}

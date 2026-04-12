@@ -1,0 +1,354 @@
+{
+    "name": "Mayan Gold",
+    "theme": "mythology",
+    "category": "slots",
+    "evaluatorType": "slots-lines",
+    "reels": [
+        [
+            "EYE",
+            "SCARAB",
+            "SHELL",
+            "SCARAB",
+            "TRIDENT",
+            "BLANK",
+            "ANKH",
+            "BLANK",
+            "WILD",
+            "TRIDENT",
+            "SCARAB",
+            "SCARAB",
+            "SHELL",
+            "SHELL",
+            "SCARAB",
+            "EYE",
+            "SHELL",
+            "ANKH"
+        ],
+        [
+            "ANKH",
+            "EYE",
+            "PEARL",
+            "ANKH",
+            "BLANK",
+            "EYE",
+            "WILD",
+            "WILD",
+            "EYE",
+            "SHELL",
+            "SHELL",
+            "SHELL",
+            "SHELL",
+            "SHELL",
+            "ANKH",
+            "SHELL",
+            "TRIDENT",
+            "BLANK"
+        ],
+        [
+            "SHELL",
+            "PEARL",
+            "EYE",
+            "BLANK",
+            "TRIDENT",
+            "PEARL",
+            "EYE",
+            "TRIDENT",
+            "EYE",
+            "ANKH",
+            "SCARAB",
+            "EYE",
+            "SCARAB",
+            "WILD",
+            "SHELL",
+            "SHELL",
+            "BLANK",
+            "SCARAB"
+        ],
+        [
+            "TRIDENT",
+            "PEARL",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "SCARAB",
+            "ANKH",
+            "BLANK",
+            "PEARL",
+            "SCARAB",
+            "WILD",
+            "ANKH",
+            "EYE",
+            "SHELL",
+            "WILD",
+            "BLANK",
+            "WILD",
+            "BLANK"
+        ],
+        [
+            "WILD",
+            "SCARAB",
+            "SHELL",
+            "SCARAB",
+            "ANKH",
+            "SHELL",
+            "ANKH",
+            "SCARAB",
+            "SHELL",
+            "BLANK",
+            "SHELL",
+            "EYE",
+            "PEARL",
+            "SCARAB",
+            "SHELL",
+            "EYE",
+            "ANKH",
+            "SHELL"
+        ]
+    ],
+    "rows": 3,
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

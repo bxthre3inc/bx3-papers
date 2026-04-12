@@ -1,0 +1,237 @@
+{
+  "pack_id": "crypto-drop-crypto-20260407-100347",
+  "name": "Crypto Drop",
+  "game_type": "plinko",
+  "theme": "crypto",
+  "style_anchor": "neon digital, circuit patterns, cyberpunk, holographic, blockchain aesthetics",
+  "params": {
+    "reels": 5,
+    "rows": 3,
+    "symbols": 10,
+    "cannons": 4,
+    "bosses": 3,
+    "waves": 5,
+    "grid": 8,
+    "special": 6,
+    "pegs": 16,
+    "buckets": 9
+  },
+  "status": "approved",
+  "created": "2026-04-07T10:03:47.052748",
+  "assets": {
+    "ball": [
+      {
+        "id": "ball",
+        "size": [
+          64,
+          64
+        ]
+      }
+    ],
+    "pegs": [
+      {
+        "id": "peg_0",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_1",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_2",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_3",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_4",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_5",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_6",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_7",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_8",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_9",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_10",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_11",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_12",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_13",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_14",
+        "size": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "peg_15",
+        "size": [
+          32,
+          32
+        ]
+      }
+    ],
+    "buckets": [
+      {
+        "id": "bucket_0",
+        "multiplier": 1,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_1",
+        "multiplier": 2,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_2",
+        "multiplier": 3,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_3",
+        "multiplier": 4,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_4",
+        "multiplier": 5,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_5",
+        "multiplier": 6,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_6",
+        "multiplier": 7,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_7",
+        "multiplier": 8,
+        "size": [
+          128,
+          64
+        ]
+      },
+      {
+        "id": "bucket_8",
+        "multiplier": 9,
+        "size": [
+          128,
+          64
+        ]
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "bg_board",
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    ],
+    "ui": [
+      "btn_drop",
+      "panel_winnings",
+      "panel_history"
+    ]
+  },
+  "outputs": {
+    "pack_dir": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/crypto-drop-crypto-20260407-100347"
+  }
+}

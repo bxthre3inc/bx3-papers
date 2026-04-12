@@ -1,0 +1,10 @@
+{
+  "id": "underwater",
+  "name": "Deep Ocean",
+  "style_anchor": "deep ocean blues, bioluminescent glow, bubble particles, coral reef atmosphere, aquatic shimmer, sunken treasures, sea creatures, submarine lighting, kelp forests, marine mysteries",
+  "palette": ["#006994", "#00CED1", "#40E0D0", "#FFD700", "#FF6B6B", "#8A2BE2", "#20B2AA"],
+  "mood": "mysterious, serene, aquatic",
+  "era": "timeless",
+  "region": "ocean depths",
+  "inspirations": ["Subnautica", "Finding Nemo", "Atlantis"]
+}

@@ -1,0 +1,71 @@
+
+[GENERATION COMMANDS] pharaohs-gold-egypt-20260407-100347
+Style: ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat
+
+# sym_00 (symbols)
+# Prompt: slots symbols asset: sym_00, high quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_00.png
+
+# sym_01 (symbols)
+# Prompt: slots symbols asset: sym_01, high quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_01.png
+
+# sym_02 (symbols)
+# Prompt: slots symbols asset: sym_02, high quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_02.png
+
+# sym_03 (symbols)
+# Prompt: slots symbols asset: sym_03, medium quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_03.png
+
+# sym_04 (symbols)
+# Prompt: slots symbols asset: sym_04, medium quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_04.png
+
+# sym_05 (symbols)
+# Prompt: slots symbols asset: sym_05, medium quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_05.png
+
+# sym_06 (symbols)
+# Prompt: slots symbols asset: sym_06, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_06.png
+
+# sym_07 (symbols)
+# Prompt: slots symbols asset: sym_07, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_07.png
+
+# sym_08 (symbols)
+# Prompt: slots symbols asset: sym_08, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_08.png
+
+# sym_09 (symbols)
+# Prompt: slots symbols asset: sym_09, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_09.png
+
+# sym_10 (symbols)
+# Prompt: slots symbols asset: sym_10, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_10.png
+
+# sym_11 (symbols)
+# Prompt: slots symbols asset: sym_11, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_11.png
+
+# sym_12 (symbols)
+# Prompt: slots symbols asset: sym_12, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_12.png
+
+# sym_13 (symbols)
+# Prompt: slots symbols asset: sym_13, low quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/sym_13.png
+
+# bg_main (backgrounds)
+# Prompt: slots backgrounds asset: bg_main, standard quality, ancient pyramids, golden pharaoh treasures, scarab beetles, hieroglyphics, desert heat, game asset quality, transparent background
+# Output: /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/pharaohs-gold-egypt-20260407-100347/Textures/bg_main.png
+
+Traceback (most recent call last):
+  File "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/Skills/vpc-engine/engine.py", line 196, in <module>
+    main()
+  File "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/Skills/vpc-engine/engine.py", line 176, in main
+    prompt = f"{spec['game_type']} {cat} asset: {item['id']}, {item.get('rarity', 'standard')} quality, {spec['style_anchor']}, game asset quality, transparent background"
+                                                 ~~~~^^^^^^
+TypeError: string indices must be integers, not 'str'

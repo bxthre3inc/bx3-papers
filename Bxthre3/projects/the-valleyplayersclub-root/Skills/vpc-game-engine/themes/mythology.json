@@ -1,0 +1,10 @@
+{
+  "id": "mythology",
+  "name": "Divine Legends",
+  "style_anchor": "ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, temple architecture, lightning effects, ancient runes, heavenly clouds, mythological creatures",
+  "palette": ["#FFD700", "#C0C0C0", "#4169E1", "#9932CC", "#FF4500", "#FFFFFF", "#8B8000"],
+  "mood": "epic, magical, timeless",
+  "era": "ancient",
+  "region": "Olympus/Asgard/Mt. Othrys",
+  "inspirations": ["Greek mythology", "Norse gods", "Egyptian pantheon"]
+}

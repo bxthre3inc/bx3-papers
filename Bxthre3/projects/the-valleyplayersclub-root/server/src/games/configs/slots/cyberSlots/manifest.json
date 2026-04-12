@@ -1,0 +1,176 @@
+{
+    "name": "Cyber Slots",
+    "theme": "cyberpunk",
+    "reels": [
+        [
+            "CHERRY",
+            "BLANK",
+            "BAR",
+            "BLANK",
+            "7",
+            "BLANK",
+            "LEMON",
+            "BLANK",
+            "WILD"
+        ],
+        [
+            "CHERRY",
+            "BLANK",
+            "LEMON",
+            "BLANK",
+            "BAR",
+            "BLANK",
+            "7",
+            "BLANK",
+            "CHERRY"
+        ],
+        [
+            "BAR",
+            "BLANK",
+            "CHERRY",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "LEMON",
+            "BLANK",
+            "7"
+        ],
+        [
+            "7",
+            "BLANK",
+            "BAR",
+            "BLANK",
+            "CHERRY",
+            "BLANK",
+            "LEMON",
+            "BLANK",
+            "WILD"
+        ],
+        [
+            "WILD",
+            "LEMON",
+            "CHERRY",
+            "BLANK",
+            "BAR",
+            "BLANK",
+            "7",
+            "BLANK",
+            "CHERRY"
+        ]
+    ],
+    "rows": 3,
+    "evaluatorType": "slots-lines",
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

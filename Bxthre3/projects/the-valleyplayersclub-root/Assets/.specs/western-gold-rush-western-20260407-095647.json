@@ -1,0 +1,134 @@
+{
+  "pack_id": "western-gold-rush-western-20260407-095647",
+  "name": "Western Gold Rush",
+  "game_type": "slots",
+  "theme": "western",
+  "style_anchor": "wild west, dusty desert, warm gold/brown, aged leather, 1800s vintage",
+  "params": {
+    "reels": 5,
+    "rows": 3,
+    "symbols": 12
+  },
+  "status": "approved",
+  "created": "2026-04-07T09:56:47.513338",
+  "assets": {
+    "symbols": [
+      {
+        "id": "sym_00",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_01",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_02",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_03",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_04",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_05",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_06",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_07",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_08",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_09",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_10",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_11",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "bg_main",
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "ui": [
+      "btn_spin",
+      "btn_max_bet",
+      "btn_auto",
+      "panel_balance",
+      "panel_win",
+      "frame_reels"
+    ]
+  },
+  "outputs": {
+    "pack_dir": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/western-gold-rush-western-20260407-095647"
+  }
+}

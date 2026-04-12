@@ -1,0 +1,7 @@
+{
+    "name": "Rocket Crash",
+    "theme": "space",
+    "category": "crash",
+    "evaluatorType": "crash-standard",
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

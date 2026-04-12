@@ -1,0 +1,10 @@
+{
+  "id": "western",
+  "name": "Wild West",
+  "style_anchor": "wild west, dusty desert atmosphere, warm gold and brown tones, aged leather textures, vintage 1800s aesthetic, weathered wood, saloon architecture, tumbleweed frontier, sunset desert lighting",
+  "palette": ["#D4AF37", "#8B4513", "#F4E4C1", "#CD853F", "#2F1810", "#FFD700", "#A0522D"],
+  "mood": "rugged, adventurous, nostalgic",
+  "era": "1800s",
+  "region": "American frontier",
+  "inspirations": ["Gold Rush", "Cowboys", "Saloon culture"]
+}

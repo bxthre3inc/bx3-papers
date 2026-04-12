@@ -1,0 +1,354 @@
+{
+    "name": "Magic Carpet",
+    "theme": "fantasy",
+    "category": "slots",
+    "evaluatorType": "slots-lines",
+    "reels": [
+        [
+            "DRAGON",
+            "BLANK",
+            "WAND",
+            "SCROLL",
+            "POTION",
+            "POTION",
+            "SWORD",
+            "SCROLL",
+            "POTION",
+            "DRAGON",
+            "DRAGON",
+            "SWORD",
+            "SCROLL",
+            "POTION",
+            "SCROLL",
+            "WAND",
+            "SHIELD",
+            "DRAGON"
+        ],
+        [
+            "WILD",
+            "SWORD",
+            "DRAGON",
+            "WAND",
+            "SCROLL",
+            "SCROLL",
+            "DRAGON",
+            "POTION",
+            "SWORD",
+            "SCROLL",
+            "DRAGON",
+            "DRAGON",
+            "POTION",
+            "WILD",
+            "BLANK",
+            "BLANK",
+            "SHIELD",
+            "DRAGON"
+        ],
+        [
+            "WAND",
+            "SCROLL",
+            "BLANK",
+            "SHIELD",
+            "DRAGON",
+            "WILD",
+            "WAND",
+            "SCROLL",
+            "WAND",
+            "SHIELD",
+            "DRAGON",
+            "SCROLL",
+            "WAND",
+            "SHIELD",
+            "SHIELD",
+            "SWORD",
+            "BLANK",
+            "WILD"
+        ],
+        [
+            "BLANK",
+            "WILD",
+            "WILD",
+            "DRAGON",
+            "WAND",
+            "BLANK",
+            "SHIELD",
+            "SCROLL",
+            "BLANK",
+            "BLANK",
+            "POTION",
+            "SHIELD",
+            "WILD",
+            "SCROLL",
+            "SCROLL",
+            "DRAGON",
+            "SCROLL",
+            "WILD"
+        ],
+        [
+            "SCROLL",
+            "SCROLL",
+            "WILD",
+            "POTION",
+            "WAND",
+            "DRAGON",
+            "WILD",
+            "DRAGON",
+            "POTION",
+            "SCROLL",
+            "DRAGON",
+            "POTION",
+            "SWORD",
+            "POTION",
+            "BLANK",
+            "BLANK",
+            "WAND",
+            "DRAGON"
+        ]
+    ],
+    "rows": 3,
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

@@ -1,0 +1,323 @@
+// Financial Autonomy Engine
+// AgentOS decides when to raise, how much, from whom
+
+export class FinancialAutonomy {
+  private thresholds = {
+    critical: 3,    // months — immediate action required
+    warning: 6,     // months — start fundraising conversations
+    healthy: 12     // months — maintain, optimize
+  };
+  
+  // Main decision loop — runs continuously
+  assessAndAct(): FinancialAction[] {
+    const actions: FinancialAction[] = [];
+    
+    // Get current financial state
+    const runway = this.calculateRunway();
+    const grants = this.getActiveGrants();
+    const investors = this.getInvestorPipeline();
+    
+    // Decision tree
+    if (runway.consolidated < this.thresholds.critical) {
+      // CRITICAL: Emergency mode
+      actions.push({
+        type: 'emergency_bridge',
+        urgency: 'critical',
+        description: 'Runway below 3 months. Activate emergency protocols.',
+        steps: [
+          'Vance notifies brodiblanco immediately',
+          'Taylor contacts committed investors for bridge',
+          'Alex prepares emergency financial memo',
+          'Drew reviews cost reduction options',
+          'Maya freezes non-essential hiring'
+        ],
+        targetAmount: 500000,
+        timeline: '2 weeks'
+      });
+    } 
+    else if (runway.consolidated < this.thresholds.warning) {
+      // WARNING: Start fundraising process
+      actions.push({
+        type: 'initiate_fundraising',
+        urgency: 'high',
+        description: 'Runway 3-6 months. Begin formal fundraising.',
+        steps: [
+          'Alex prepares Series A deck',
+          'Taylor warms up investor pipeline',
+          'Jordan identifies strategic partners',
+          'Vance schedules investor demo days',
+          'Maya ensures product milestones hit'
+        ],
+        targetAmount: this.calculateOptimalRaise(),
+        timeline: '6-8 weeks to first close'
+      });
+    }
+    else if (runway.consolidated < this.thresholds.healthy) {
+      // MAINTENANCE: Keep conversations warm
+      actions.push({
+        type: 'warm_relationships',
+        urgency: 'normal',
+        description: 'Runway 6-12 months. Maintain investor relationships.',
+        steps: [
+          'Taylor sends monthly investor updates',
+          'Alex schedules quarterly strategy sessions',
+          'Vance monitors for any signals'
+        ],
+        targetAmount: 0,
+        timeline: 'ongoing'
+      });
+    }
+    
+    // Grant opportunity detection
+    const openGrants = grants.filter(g => g.deadlineDays > 7 && g.deadlineDays < 45);
+    if (openGrants.length > 0) {
+      actions.push({
+        type: 'pursue_grants',
+        urgency: openGrants.some(g => g.deadlineDays < 14) ? 'high' : 'normal',
+        description: `${openGrants.length} grants approaching deadline`,
+        steps: openGrants.map(g => 
+          `Casey prepares ${g.program} submission (due ${g.deadlineDays} days)`
+        ),
+        targetAmount: openGrants.reduce((sum, g) => sum + (g.amountMax || 0), 0),
+        timeline: 'varies by deadline'
+      });
+    }
+    
+    // Execute actions
+    for (const action of actions) {
+      this.dispatchAction(action);
+    }
+    
+    return actions;
+  }
+  
+  // Generate investor-ready materials automatically
+  generateInvestorMaterials(): InvestorMaterials {
+    const financials = this.getConsolidatedFinancials();
+    
+    return {
+      deck: {
+        version: `v${Date.now()}`,
+        sections: [
+          'Vision: AI-native operating system for startups',
+          'Traction: 24 AI employees, multiple revenue streams',
+          'Market: $100B+ AI workforce market',
+          'Product: AgentOS platform + vertical applications',
+          'Team: 4 human leaders + 24 AI employees',
+          'Financials: ' + this.summarizeRunway(financials),
+          'Ask: ' + this.calculateOptimalRaise()
+        ],
+        generatedBy: 'Alex + Nico',
+        lastUpdated: new Date().toISOString()
+      },
+      
+      financialModel: {
+        revenue: this.projectRevenue(),
+        burn: financials.consolidated.monthlyBurn,
+        runway: financials.consolidated.combinedRunway,
+        unitEconomics: this.calculateUnitEconomics(),
+        scenarios: this.generateScenarios()
+      },
+      
+      demo: {
+        type: 'live_dashboard',
+        url: 'https://brodiblanco.zo.space/aos',
+        description: 'Investors can see all 24 employees working in real-time'
+      },
+      
+      dataRoom: {
+        documents: [
+          'Incorporation docs',
+          'IP portfolio (patents pending)',
+          'Customer contracts (Irrig8 pilots)',
+          'Employee AI performance logs',
+          'Technical architecture docs'
+        ],
+        access: 'controlled_by_taylor'
+      }
+    };
+  }
+  
+  // Auto-generate and send investor updates
+  sendInvestorUpdate(): void {
+    const materials = this.generateInvestorMaterials();
+    const update = `
+Subject: Bxthre3 / AgentOS Monthly Update — ${new Date().toLocaleString('default', { month: 'long' })}
+
+Team,
+
+Quick update on our progress:
+
+📊 **Financial Position**
+- Runway: ${materials.financialModel.runway} months
+- Monthly burn: $${materials.financialModel.burn.toLocaleString()}
+- Revenue trajectory: ${materials.financialModel.revenue.status}
+
+🚀 **Key Milestones**
+${this.getRecentMilestones().map(m => `- ${m}`).join('\n')}
+
+👥 **Team**
+- 24 AI employees operational
+- 4 human leaders (founder + 3 co-founders)
+- Hiring: ${this.getOpenRoles().join(', ') || 'None currently'}
+
+📈 **Metrics**
+- AgentOS: Active 24/7, processing tasks
+- Irrig8: Pilot deployment in progress
+- Irrig8: Field validation ongoing
+
+🔮 **Coming Up**
+${this.getUpcomingMilestones().map(m => `- ${m}`).join('\n')}
+
+Questions or want to dive deeper? Taylor is scheduling sessions.
+
+Best,
+Taylor Chen
+Head of Investor Relations, Bxthre3 Inc
+`;
+
+    // Would send via email integration
+    console.log('[FinancialAutonomy] Investor update generated and queued');
+    console.log(update);
+  }
+  
+  // Private helpers
+  private calculateRunway(): RunwayData {
+    // Stub — would pull from funding allocator
+    return {
+      consolidated: 8,
+      byEntity: {
+        agentos: 6,
+        bxthre3: 9,
+        irrig8: 7
+      }
+    };
+  }
+  
+  private getActiveGrants(): Grant[] {
+    // Stub — would pull from grant manager
+    return [
+      { program: 'ESTCP FY 2027', deadlineDays: 7, amountMax: 1500000 },
+      { program: 'NSF SBIR', deadlineDays: 45, amountMax: 275000 }
+    ];
+  }
+  
+  private getInvestorPipeline(): Investor[] {
+    // Stub — would pull from investment manager
+    return [];
+  }
+  
+  private calculateOptimalRaise(): number {
+    const runway = this.calculateRunway();
+    const monthlyBurn = 45000;
+    const targetMonths = 18;
+    const buffer = 1.3; // 30% buffer
+    
+    return Math.floor(monthlyBurn * targetMonths * buffer);
+  }
+  
+  private getConsolidatedFinancials() {
+    return {
+      consolidated: {
+        monthlyBurn: 45000,
+        combinedRunway: 8
+      }
+    };
+  }
+  
+  private dispatchAction(action: FinancialAction): void {
+    // Would dispatch to employees via work queue
+    console.log(`[FinancialAutonomy] Action dispatched: ${action.type} (${action.urgency})`);
+  }
+  
+  private projectRevenue() {
+    return { status: 'growing', twelveMonth: 120000 };
+  }
+  
+  private calculateUnitEconomics() {
+    return { cac: 0, ltv: 'infinite', payback: 'immediate' };
+  }
+  
+  private generateScenarios() {
+    return { base: 18, upside: 24, downside: 12 };
+  }
+  
+  private summarizeRunway(financials: any) {
+    return `${financials.consolidated.combinedRunway} months runway, $${financials.consolidated.monthlyBurn.toLocaleString()}/mo burn`;
+  }
+  
+  private getRecentMilestones(): string[] {
+    return [
+      'AgentOS v3.0 deployed with 24 employees',
+      'Mobile-responsive dashboard launched',
+      'Grant application system operational'
+    ];
+  }
+  
+  private getUpcomingMilestones(): string[] {
+    return [
+      'Irrig8 pilot results (April 2026)',
+      'AgentOS first paying customers (Q2 2026)',
+      'Series A close (target Q3 2026)'
+    ];
+  }
+  
+  private getOpenRoles(): string[] {
+    return []; // All positions filled by AI employees
+  }
+}
+
+export const financialAutonomy = new FinancialAutonomy();
+
+// Types
+interface FinancialAction {
+  type: string;
+  urgency: 'critical' | 'high' | 'normal' | 'low';
+  description: string;
+  steps: string[];
+  targetAmount: number;
+  timeline: string;
+}
+
+interface RunwayData {
+  consolidated: number;
+  byEntity: Record<string, number>;
+}
+
+interface Grant {
+  program: string;
+  deadlineDays: number;
+  amountMax: number;
+}
+
+interface Investor {
+  id: string;
+  name: string;
+  firm: string;
+  stage: string;
+}
+
+interface InvestorMaterials {
+  deck: {
+    version: string;
+    sections: string[];
+    generatedBy: string;
+    lastUpdated: string;
+  };
+  financialModel: {
+    revenue: any;
+    burn: number;
+    runway: number;
+    unitEconomics: any;
+    scenarios: any;
+  };
+  demo: {
+    type: string;
+    url: string;
+    description: string;
+  };
+  dataRoom: {
+    documents: string[];
+    access: string;
+  };
+}

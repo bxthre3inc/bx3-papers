@@ -1,0 +1,29 @@
+{
+    "evaluatorType": "slots-lines",
+    "rows": 3,
+    "reels": [
+        ["S1", "BLANK", "BLANK", "S2", "BLANK", "BLANK", "S3", "BLANK", "WILD", "BLANK", "S4", "BLANK", "S5", "BLANK"],
+        ["S1", "BLANK", "BLANK", "S2", "BLANK", "BLANK", "S3", "BLANK", "WILD", "BLANK", "S4", "BLANK", "S5", "BLANK"],
+        ["S1", "BLANK", "BLANK", "S2", "BLANK", "BLANK", "S3", "BLANK", "WILD", "BLANK", "S4", "BLANK", "S5", "BLANK"],
+        ["S1", "BLANK", "BLANK", "S2", "BLANK", "BLANK", "S3", "BLANK", "WILD", "BLANK", "S4", "BLANK", "S5", "BLANK"],
+        ["S1", "BLANK", "BLANK", "S2", "BLANK", "BLANK", "S3", "BLANK", "WILD", "BLANK", "S4", "BLANK", "S5", "BLANK"]
+    ],
+    "paylines": [
+        [{"row": 1, "col": 0}, {"row": 1, "col": 1}, {"row": 1, "col": 2}, {"row": 1, "col": 3}, {"row": 1, "col": 4}],
+        [{"row": 0, "col": 0}, {"row": 0, "col": 1}, {"row": 0, "col": 2}, {"row": 0, "col": 3}, {"row": 0, "col": 4}],
+        [{"row": 2, "col": 0}, {"row": 2, "col": 1}, {"row": 2, "col": 2}, {"row": 2, "col": 3}, {"row": 2, "col": 4}],
+        [{"row": 0, "col": 0}, {"row": 1, "col": 1}, {"row": 2, "col": 2}, {"row": 1, "col": 3}, {"row": 0, "col": 4}],
+        [{"row": 2, "col": 0}, {"row": 1, "col": 1}, {"row": 0, "col": 2}, {"row": 1, "col": 3}, {"row": 2, "col": 4}]
+    ],
+    "paytable": {
+        "S1": { "3": 10, "4": 50, "5": 500 },
+        "S2": { "3": 5, "4": 25, "5": 100 },
+        "S3": { "3": 2, "4": 10, "5": 40 },
+        "S4": { "3": 1, "4": 4, "5": 20 },
+        "S5": { "3": 0.5, "4": 2, "5": 10 }
+    },
+    "extraConfig": {
+        "volatility": "high"
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

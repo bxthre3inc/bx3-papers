@@ -1,0 +1,33 @@
+{
+  "pack_id": "neon-crypto-slots-crypto-20260407-094105",
+  "version": "2.0.0",
+  "status": "approved",
+  "created": "2026-04-07T09:41:05.180967",
+  "name": "Neon Crypto Slots",
+  "game_type": "slots",
+  "theme": "crypto",
+  "theme_config": {
+    "error": "Theme crypto not found"
+  },
+  "params": {
+    "symbols": 15,
+    "audio": true,
+    "reels": 6,
+    "rows": 4,
+    "paylines": 25
+  },
+  "modules": [
+    "assets",
+    "grid",
+    "engine",
+    "audio"
+  ],
+  "validation": {
+    "status": "pending",
+    "errors": [],
+    "warnings": []
+  },
+  "outputs": {
+    "pack_dir": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/GamePacks/neon-crypto-slots-crypto-20260407-094105"
+  }
+}

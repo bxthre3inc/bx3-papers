@@ -1,0 +1,159 @@
+{
+  "pack_id": "crypto-20260407-042545",
+  "theme": "crypto",
+  "style_anchor": "ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance",
+  "batches": [
+    {
+      "batch": 1,
+      "type": "symbol",
+      "name": "jackpot",
+      "prompt": "jackpot symbol, glowing, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, casino game symbol, transparent background, isolated, game asset quality",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/Symbols/symbol_jackpot.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 1,
+      "type": "symbol",
+      "name": "bonus",
+      "prompt": "bonus trigger symbol, exciting, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, casino game symbol, transparent background, isolated, game asset quality",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/Symbols/symbol_bonus.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 1,
+      "type": "symbol",
+      "name": "basic",
+      "prompt": "basic symbol, simple design, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, casino game symbol, transparent background, isolated, game asset quality",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/Symbols/symbol_basic.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 2,
+      "type": "background",
+      "name": "main",
+      "prompt": "mythology themed background, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, game background art, 16:9 composition, no UI elements",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/Backgrounds/bg_main.png",
+      "aspect": "16:9"
+    },
+    {
+      "batch": 3,
+      "type": "ui_buttons",
+      "name": "spin",
+      "prompt": "SPIN button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/buttons/btn_spin.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_buttons",
+      "name": "max_bet",
+      "prompt": "MAX_BET button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/buttons/btn_max_bet.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_buttons",
+      "name": "auto",
+      "prompt": "AUTO button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/buttons/btn_auto.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_buttons",
+      "name": "cash_out",
+      "prompt": "CASH_OUT button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/buttons/btn_cash_out.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_buttons",
+      "name": "bet_up",
+      "prompt": "BET_UP button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/buttons/btn_bet_up.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_buttons",
+      "name": "bet_down",
+      "prompt": "BET_DOWN button, casino button, premium feel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/buttons/btn_bet_down.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_frames",
+      "name": "main",
+      "prompt": "game frame border, casino frame, elegant, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, transparent center",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/frames/frame_main.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_panels",
+      "name": "lobby",
+      "prompt": "lobby background panel, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, seamless texture",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/panels/panel_lobby.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_icons",
+      "name": "coin",
+      "prompt": "coin icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/icons/icon_coin.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_icons",
+      "name": "settings",
+      "prompt": "settings icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/icons/icon_settings.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_icons",
+      "name": "sound_on",
+      "prompt": "sound on icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/icons/icon_sound_on.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_icons",
+      "name": "sound_off",
+      "prompt": "sound off icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/icons/icon_sound_off.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_icons",
+      "name": "back",
+      "prompt": "back icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/icons/icon_back.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 3,
+      "type": "ui_icons",
+      "name": "info",
+      "prompt": "info icon, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, simple design, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/UI/icons/icon_info.png",
+      "aspect": "1:1"
+    },
+    {
+      "batch": 4,
+      "type": "spine",
+      "name": "mascot",
+      "prompt": "game mascot character, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, ancient divine glow, marble and gold, ethereal mist, legendary artifacts, godlike radiance, full body character, transparent background",
+      "output": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/crypto-20260407-042545/Spine/spine_mascot.png",
+      "aspect": "2:3"
+    }
+  ]
+}

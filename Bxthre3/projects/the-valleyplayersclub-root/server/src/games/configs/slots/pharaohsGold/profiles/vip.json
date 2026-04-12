@@ -1,0 +1,28 @@
+{
+    "profileName": "VIP Egypt 101% RTP",
+    "minBet": 200,
+    "maxBet": 20000,
+    "paytable": {
+        "PYRAMID": {
+            "8": 2,
+            "10": 10,
+            "12": 100
+        },
+        "ANKH": {
+            "8": 1,
+            "10": 5,
+            "12": 25
+        },
+        "EYE": {
+            "8": 0.5,
+            "10": 2,
+            "12": 10
+        },
+        "SCARAB": {
+            "8": 0.2,
+            "10": 1,
+            "12": 4
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

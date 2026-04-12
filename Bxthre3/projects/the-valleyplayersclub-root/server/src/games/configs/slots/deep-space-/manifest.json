@@ -1,0 +1,354 @@
+{
+    "name": "Deep Space 9",
+    "theme": "scifi",
+    "category": "slots",
+    "evaluatorType": "slots-lines",
+    "reels": [
+        [
+            "WILD",
+            "CHIP",
+            "CHIP",
+            "LASER",
+            "CORE",
+            "LASER",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "NEON",
+            "LASER",
+            "NEON",
+            "CORE",
+            "CORE",
+            "BLANK",
+            "WILD",
+            "DRONE",
+            "NEON"
+        ],
+        [
+            "WILD",
+            "WILD",
+            "CHIP",
+            "DRONE",
+            "LASER",
+            "CORE",
+            "CHIP",
+            "DRONE",
+            "CHIP",
+            "CORE",
+            "CHIP",
+            "CHIP",
+            "WILD",
+            "DRONE",
+            "CHIP",
+            "NEON",
+            "PLASMA",
+            "BLANK"
+        ],
+        [
+            "CORE",
+            "LASER",
+            "DRONE",
+            "WILD",
+            "DRONE",
+            "CORE",
+            "PLASMA",
+            "LASER",
+            "CHIP",
+            "NEON",
+            "LASER",
+            "WILD",
+            "DRONE",
+            "DRONE",
+            "NEON",
+            "DRONE",
+            "DRONE",
+            "LASER"
+        ],
+        [
+            "PLASMA",
+            "LASER",
+            "WILD",
+            "PLASMA",
+            "WILD",
+            "DRONE",
+            "DRONE",
+            "BLANK",
+            "LASER",
+            "LASER",
+            "LASER",
+            "WILD",
+            "NEON",
+            "BLANK",
+            "NEON",
+            "CORE",
+            "CORE",
+            "CORE"
+        ],
+        [
+            "NEON",
+            "LASER",
+            "CORE",
+            "DRONE",
+            "WILD",
+            "DRONE",
+            "LASER",
+            "DRONE",
+            "DRONE",
+            "BLANK",
+            "NEON",
+            "LASER",
+            "LASER",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "CHIP",
+            "LASER"
+        ]
+    ],
+    "rows": 3,
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

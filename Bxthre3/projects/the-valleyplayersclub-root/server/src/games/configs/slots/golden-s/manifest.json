@@ -1,0 +1,354 @@
+{
+    "name": "Golden 7s",
+    "theme": "classic",
+    "category": "slots",
+    "evaluatorType": "slots-lines",
+    "reels": [
+        [
+            "BAR",
+            "DIAMOND",
+            "CHERRY",
+            "BAR",
+            "DIAMOND",
+            "BAR",
+            "CHERRY",
+            "CHERRY",
+            "BELL",
+            "BELL",
+            "DIAMOND",
+            "LEMON",
+            "DIAMOND",
+            "WILD",
+            "CHERRY",
+            "LEMON",
+            "LEMON",
+            "WILD"
+        ],
+        [
+            "7",
+            "DIAMOND",
+            "LEMON",
+            "BLANK",
+            "DIAMOND",
+            "LEMON",
+            "BAR",
+            "CHERRY",
+            "DIAMOND",
+            "BAR",
+            "LEMON",
+            "WILD",
+            "7",
+            "BAR",
+            "WILD",
+            "CHERRY",
+            "CHERRY",
+            "BAR"
+        ],
+        [
+            "WILD",
+            "BELL",
+            "CHERRY",
+            "WILD",
+            "DIAMOND",
+            "7",
+            "DIAMOND",
+            "DIAMOND",
+            "CHERRY",
+            "BAR",
+            "BLANK",
+            "CHERRY",
+            "WILD",
+            "BLANK",
+            "BAR",
+            "CHERRY",
+            "BELL",
+            "LEMON"
+        ],
+        [
+            "DIAMOND",
+            "LEMON",
+            "CHERRY",
+            "WILD",
+            "DIAMOND",
+            "DIAMOND",
+            "BELL",
+            "LEMON",
+            "LEMON",
+            "LEMON",
+            "WILD",
+            "LEMON",
+            "7",
+            "CHERRY",
+            "BAR",
+            "DIAMOND",
+            "BELL",
+            "DIAMOND"
+        ],
+        [
+            "BLANK",
+            "LEMON",
+            "DIAMOND",
+            "BELL",
+            "WILD",
+            "CHERRY",
+            "BELL",
+            "BAR",
+            "WILD",
+            "BELL",
+            "BLANK",
+            "BLANK",
+            "BELL",
+            "BLANK",
+            "7",
+            "WILD",
+            "DIAMOND",
+            "BELL"
+        ]
+    ],
+    "rows": 3,
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

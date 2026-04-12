@@ -1,0 +1,33 @@
+{
+    "profileName": "Cyber Slots - Standard 94% RTP",
+    "minBet": 1,
+    "maxBet": 100,
+    "paytable": {
+        "7": {
+            "3": 25,
+            "4": 100,
+            "5": 500
+        },
+        "WILD": {
+            "3": 10,
+            "4": 50,
+            "5": 250
+        },
+        "BAR": {
+            "3": 5,
+            "4": 20,
+            "5": 50
+        },
+        "CHERRY": {
+            "3": 1,
+            "4": 5,
+            "5": 10
+        },
+        "LEMON": {
+            "3": 1,
+            "4": 2,
+            "5": 5
+        }
+    },
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

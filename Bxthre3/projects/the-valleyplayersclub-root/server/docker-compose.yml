@@ -1,0 +1,37 @@
+services:
+  vpc-platform:
+    build: .
+    container_name: vpc-edge-server
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - DB_PATH=data/vpc.db
+      - JWT_SECRET=${JWT_SECRET}
+      - WSS_DOMAIN=${WSS_DOMAIN}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - PERSONA_API_KEY=${PERSONA_API_KEY}
+      - PERSONA_TEMPLATE_ID=${PERSONA_TEMPLATE_ID}
+      - MAXMIND_ACCOUNT_ID=${MAXMIND_ACCOUNT_ID}
+      - MAXMIND_LICENSE_KEY=${MAXMIND_LICENSE_KEY}
+      - CRYPTO_PROVIDER_API_KEY=${CRYPTO_PROVIDER_API_KEY}
+      - BTC_MASTER_ADDRESS=${BTC_MASTER_ADDRESS}
+      - CASHAPP_CASHTAG=${CASHAPP_CASHTAG}
+      - OLLAMA_HOST=${OLLAMA_HOST:-http://host.docker.internal:11434}
+    volumes:
+      - ./server/data:/app/server/data
+      - ./server/backups:/app/server/backups
+      - ./server/uploads:/app/server/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: always
+
+networks:
+  default:
+    name: vpc-network

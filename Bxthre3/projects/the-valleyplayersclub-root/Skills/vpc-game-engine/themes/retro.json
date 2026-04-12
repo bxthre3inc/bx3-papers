@@ -1,0 +1,10 @@
+{
+  "id": "retro",
+  "name": "Arcade Classic",
+  "style_anchor": "8-bit pixel art, CRT scanlines, neon arcade lights, synthwave aesthetics, geometric shapes, vintage gaming cabinets, joystick nostalgia, chiptune vibes, electric blue and hot pink, grid backgrounds",
+  "palette": ["#FF00FF", "#00FFFF", "#FFFF00", "#000000", "#FF3333", "#33FF33", "#3333FF"],
+  "mood": "nostalgic, energetic, playful",
+  "era": "1980s-90s",
+  "region": "arcade halls",
+  "inspirations": ["Pac-Man", "Tron", "Synthwave", "Vaporwave"]
+}

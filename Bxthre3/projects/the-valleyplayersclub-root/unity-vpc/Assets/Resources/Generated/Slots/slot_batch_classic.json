@@ -1,0 +1,130 @@
+[
+  {
+    "file": "symbol_red_seven",
+    "name": "red seven",
+    "theme": "classic",
+    "description": "classic casino red 7, glossy chrome finish, gold trim",
+    "prompt": "Casino slot machine symbol: red seven, classic casino red 7, glossy chrome finish, gold trim, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_red_seven.png"
+  },
+  {
+    "file": "symbol_triple_seven",
+    "name": "triple seven",
+    "theme": "classic",
+    "description": "three 7s stacked, jackpot symbol, glowing gold",
+    "prompt": "Casino slot machine symbol: triple seven, three 7s stacked, jackpot symbol, glowing gold, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_triple_seven.png"
+  },
+  {
+    "file": "symbol_cherry",
+    "name": "cherry",
+    "theme": "classic",
+    "description": "red cherries, stem with leaf, vibrant",
+    "prompt": "Casino slot machine symbol: cherry, red cherries, stem with leaf, vibrant, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_cherry.png"
+  },
+  {
+    "file": "symbol_bar",
+    "name": "bar",
+    "theme": "classic",
+    "description": "single silver bar, engraved, metallic",
+    "prompt": "Casino slot machine symbol: bar, single silver bar, engraved, metallic, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_bar.png"
+  },
+  {
+    "file": "symbol_double_bar",
+    "name": "double bar",
+    "theme": "classic",
+    "description": "two silver bars stacked",
+    "prompt": "Casino slot machine symbol: double bar, two silver bars stacked, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_double_bar.png"
+  },
+  {
+    "file": "symbol_triple_bar",
+    "name": "triple bar",
+    "theme": "classic",
+    "description": "three gold bars stacked, shiny",
+    "prompt": "Casino slot machine symbol: triple bar, three gold bars stacked, shiny, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_triple_bar.png"
+  },
+  {
+    "file": "symbol_diamond",
+    "name": "diamond",
+    "theme": "classic",
+    "description": "brilliant cut diamond, sparkling, luxury",
+    "prompt": "Casino slot machine symbol: diamond, brilliant cut diamond, sparkling, luxury, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_diamond.png"
+  },
+  {
+    "file": "symbol_bell",
+    "name": "bell",
+    "theme": "classic",
+    "description": "golden liberty bell, classic slot symbol",
+    "prompt": "Casino slot machine symbol: bell, golden liberty bell, classic slot symbol, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_bell.png"
+  },
+  {
+    "file": "symbol_horseshoe",
+    "name": "horseshoe",
+    "theme": "classic",
+    "description": "golden horseshoe, lucky charm",
+    "prompt": "Casino slot machine symbol: horseshoe, golden horseshoe, lucky charm, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_horseshoe.png"
+  },
+  {
+    "file": "symbol_watermelon",
+    "name": "watermelon",
+    "theme": "classic",
+    "description": "watermelon slice, green rind, red fruit, seeds",
+    "prompt": "Casino slot machine symbol: watermelon, watermelon slice, green rind, red fruit, seeds, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_watermelon.png"
+  },
+  {
+    "file": "symbol_lemon",
+    "name": "lemon",
+    "theme": "classic",
+    "description": "yellow lemon, citrus, bright",
+    "prompt": "Casino slot machine symbol: lemon, yellow lemon, citrus, bright, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_lemon.png"
+  },
+  {
+    "file": "symbol_plum",
+    "name": "plum",
+    "theme": "classic",
+    "description": "purple plum, round, smooth",
+    "prompt": "Casino slot machine symbol: plum, purple plum, round, smooth, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_plum.png"
+  },
+  {
+    "file": "symbol_grape",
+    "name": "grape",
+    "theme": "classic",
+    "description": "bunch of purple grapes, cluster",
+    "prompt": "Casino slot machine symbol: grape, bunch of purple grapes, cluster, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_grape.png"
+  },
+  {
+    "file": "symbol_orange",
+    "name": "orange",
+    "theme": "classic",
+    "description": "orange fruit, citrus, textured peel",
+    "prompt": "Casino slot machine symbol: orange, orange fruit, citrus, textured peel, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_orange.png"
+  },
+  {
+    "file": "symbol_wild",
+    "name": "wild",
+    "theme": "classic",
+    "description": "WILD text, fire background, explosive, special symbol",
+    "prompt": "Casino slot machine symbol: wild, WILD text, fire background, explosive, special symbol, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_wild.png"
+  },
+  {
+    "file": "symbol_scatter",
+    "name": "scatter",
+    "theme": "classic",
+    "description": "SCATTER text, stars around, bonus symbol",
+    "prompt": "Casino slot machine symbol: scatter, SCATTER text, stars around, bonus symbol, classic Vegas slot machine, chrome and gold, glossy 3D rendered style, glossy 3D rendered appearance, gold and metallic accents, completely transparent background, perfect square composition, game asset, isolated on transparent, high quality, no text outside symbol, no watermark, clean edges",
+    "output_path": "/home/workspace/Bxthre3/projects/the-valleyplayersclub-project/unity-vpc/Assets/Resources/Generated/Slots/symbol_scatter.png"
+  }
+]

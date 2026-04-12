@@ -1,0 +1,17 @@
+{
+    "name": "The Barley Barrel",
+    "theme": "slv",
+    "dnaId": "standard-lines",
+    "symbolMap": {
+        "WILD": "WILD",
+        "BLANK": "BLANK",
+        "S1": "CRANE",
+        "S2": "POTATO",
+        "S3": "DUNES",
+        "S4": "MOUNTAIN",
+        "S5": "UFO"
+    },
+    "minBet": 1,
+    "maxBet": 5000,
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

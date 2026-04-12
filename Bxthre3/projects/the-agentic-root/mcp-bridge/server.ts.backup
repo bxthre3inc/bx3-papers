@@ -1,0 +1,107 @@
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { randomUUID } from "crypto";
+
+const PORT = parseInt(process.env.BRIDGE_PORT || "8888");
+const ZO_API = process.env.ZO_API_ENDPOINT || "http://localhost:3099";
+const AGENTOS_API = process.env.AGENTOS_API_ENDPOINT || "http://localhost:9999";
+
+interface Event { id: string; type: string; source: string; payload: any; timestamp: number; }
+interface DelegationTask { taskId: string; from: string; to: string; type: string; payload: any; status: string; result?: any; error?: string; createdAt: number; }
+
+const eventBuffer: Event[] = [];
+const subscribers = new Map<string, any>();
+const delegationTasks = new Map<string, DelegationTask>();
+
+function broadcastEvent(event: Event) {
+  eventBuffer.push(event);
+  if (eventBuffer.length > 10000) eventBuffer.shift();
+  const msg = JSON.stringify(event);
+  for (const [id, sub] of subscribers) {
+    try { if (sub.readyState === 1) sub.send(msg); } catch { subscribers.delete(id); }
+  }
+}
+
+const app = new Hono();
+app.use("*", cors());
+
+// Core
+app.get("/health", () => new Response("OK"));
+app.get("/version", () => Response.json({ version: "3.0.0", phases: ["1","2","3","5"], features: ["tool-calls","event-streaming","agent-delegation","file-sync"] }));
+app.get("/stats", () => Response.json({ events: eventBuffer.length, subscribers: subscribers.size, tasks: delegationTasks.size }));
+
+// Phase 2: Events
+app.post("/events/publish", async (c) => {
+  const body = await c.req.json();
+  const event: Event = { id: randomUUID(), type: body.type, source: body.source || "bridge", payload: body.payload, timestamp: Date.now() };
+  broadcastEvent(event);
+  return c.json({ published: true, eventId: event.id });
+});
+app.get("/events/recent", (c) => c.json({ events: eventBuffer.slice(-100) }));
+
+// Phase 3: Delegation
+app.post("/delegate", async (c) => {
+  const b = await c.req.json();
+  const task: DelegationTask = { taskId: randomUUID(), from: b.from, to: b.to, type: b.type, payload: b.payload, status: "pending", createdAt: Date.now() };
+  delegationTasks.set(task.taskId, task);
+  // Execute
+  task.status = "running";
+  try {
+    const target = task.to === "zo" ? ZO_API : AGENTOS_API;
+    const res = await fetch(target + (task.to === "zo" ? "/zo/ask" : "/tasks/submit"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(task.to === "zo" ? { input: task.type } : { type: task.type, payload: task.payload })
+    });
+    task.result = await res.json();
+    task.status = "completed";
+  } catch (e: any) { task.error = e.message; task.status = "failed"; }
+  return c.json({ taskId: task.taskId, status: task.status });
+});
+app.get("/delegate/:taskId", (c) => {
+  const t = delegationTasks.get(c.req.param("taskId"));
+  return t ? c.json(t) : c.json({ error: "Not found" }, 404);
+});
+
+// Phase 5: File sync
+app.get("/files/read", async (c) => {
+  const fs = await import("fs/promises");
+  const p = c.req.query("path");
+  if (!p) return c.json({ error: "Missing path" }, 400);
+  try { return c.json({ content: await fs.readFile("/home/workspace/" + p, "utf-8"), path: p }); }
+  catch (e: any) { return c.json({ error: e.message }, 500); }
+});
+app.post("/files/write", async (c) => {
+  const fs = await import("fs/promises");
+  const { path, content } = await c.req.json();
+  try { await fs.writeFile("/home/workspace/" + path, content, "utf-8"); return c.json({ written: true }); }
+  catch (e: any) { return c.json({ error: e.message }, 500); }
+});
+app.get("/files/list", async (c) => {
+  const fs = await import("fs/promises");
+  const d = c.req.query("dir") || ".";
+  try { 
+    const entries = await fs.readdir("/home/workspace/" + d, { withFileTypes: true });
+    return c.json({ files: entries.filter(e => e.isFile()).map(e => e.name), dirs: entries.filter(e => e.isDirectory()).map(e => e.name) });
+  } catch (e: any) { return c.json({ error: e.message }, 500); }
+});
+
+// Bun server
+Bun.serve({
+  port: PORT,
+  fetch(req, server) {
+    if (req.url.endsWith("/events/ws")) {
+      const id = randomUUID();
+      if (server.upgrade(req, { data: { id } })) return undefined;
+      return new Response("WS failed", { status: 400 });
+    }
+    return app.fetch(req, server);
+  },
+  websocket: {
+    message(ws: any, msg: string) { subscribers.set(ws.data.id, ws); ws.send(JSON.stringify({ type: "ack", id: ws.data.id })); },
+    open(ws: any) { ws.send(JSON.stringify({ type: "connected" })); },
+    close(ws: any) { subscribers.delete(ws.data.id); }
+  }
+});
+
+console.log(`[Bridge] v3.0.0 on :${PORT}`);

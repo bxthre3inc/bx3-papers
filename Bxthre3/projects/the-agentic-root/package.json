@@ -1,0 +1,29 @@
+{
+  "name": "agentic",
+  "version": "4.0.0",
+  "description": "Agentic — Self-Contained AI Workforce Operating System",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "bun run src/server.ts",
+    "build": "bun build src/server.ts --outdir=dist --target=bun",
+    "start": "bun run dist/server.js",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.0.0",
+    "@octokit/rest": "^22.0.1",
+    "@solana/web3.js": "^1.90.0",
+    "googleapis": "^140.0.0",
+    "hono": "^4.0.0",
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  }
+}

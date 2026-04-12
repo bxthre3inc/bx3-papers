@@ -1,0 +1,362 @@
+{
+  "pack_id": "neon-crypto-crypto-20260407-105119",
+  "name": "Neon Crypto",
+  "game_type": "slots",
+  "theme": "crypto",
+  "style_anchor": "neon digital, circuit patterns, cyberpunk, holographic, blockchain aesthetics",
+  "params": {
+    "reels": 6,
+    "rows": 3,
+    "symbols": 15,
+    "cannons": 4,
+    "bosses": 3,
+    "waves": 5,
+    "grid": 8,
+    "special": 4
+  },
+  "status": "approved",
+  "created": "2026-04-07T10:51:19.004420",
+  "assets_2d": {
+    "symbols": [
+      {
+        "id": "sym_00",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_01",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_02",
+        "rarity": "high",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_03",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_04",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_05",
+        "rarity": "medium",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_06",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_07",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_08",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_09",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_10",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_11",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_12",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_13",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      },
+      {
+        "id": "sym_14",
+        "rarity": "low",
+        "size": [
+          128,
+          128
+        ]
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "bg_main",
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "ui": [
+      "btn_spin",
+      "btn_max_bet",
+      "btn_auto",
+      "panel_balance",
+      "panel_win",
+      "frame_reels"
+    ]
+  },
+  "assets_3d": {
+    "version": "1.0",
+    "theme": "crypto",
+    "game_type": "slots",
+    "characters": [
+      {
+        "id": "dealer_avatar",
+        "name": "crypto_dealer",
+        "type": "avatar",
+        "poly_count": "5k-10k",
+        "rig": "humanoid",
+        "animations": [
+          "idle",
+          "celebrate",
+          "present"
+        ],
+        "format": "FBX",
+        "textures": [
+          "diffuse",
+          "normal",
+          "emissive"
+        ],
+        "description": "Dealer/host character for crypto theme"
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_casino_booth",
+        "name": "crypto_casino_booth",
+        "type": "environment",
+        "poly_count": "5k-15k",
+        "components": [
+          "floor",
+          "walls",
+          "props",
+          "lighting_rig"
+        ],
+        "format": "FBX",
+        "description": "3D casino_booth environment for crypto theme"
+      }
+    ],
+    "props": [
+      {
+        "id": "prop_0",
+        "name": "crypto_gpu_miner",
+        "type": "prop",
+        "poly_count": "500-2k",
+        "format": "FBX",
+        "description": "gpu_miner prop for crypto theme"
+      },
+      {
+        "id": "prop_1",
+        "name": "crypto_hologram_display",
+        "type": "prop",
+        "poly_count": "500-2k",
+        "format": "FBX",
+        "description": "hologram_display prop for crypto theme"
+      },
+      {
+        "id": "prop_2",
+        "name": "crypto_cable_bundle",
+        "type": "prop",
+        "poly_count": "500-2k",
+        "format": "FBX",
+        "description": "cable_bundle prop for crypto theme"
+      },
+      {
+        "id": "prop_3",
+        "name": "crypto_server_rack",
+        "type": "prop",
+        "poly_count": "500-2k",
+        "format": "FBX",
+        "description": "server_rack prop for crypto theme"
+      }
+    ],
+    "total_poly_budget": "100k-200k",
+    "format": "FBX 2018",
+    "target_platform": "Android/iOS/WebGL",
+    "lod_levels": 3
+  },
+  "audio": {
+    "version": "1.0",
+    "theme": "crypto",
+    "game_type": "slots",
+    "sfx": [
+      {
+        "id": "sfx_spin",
+        "filename": "spin.wav",
+        "type": "sfx",
+        "event": "spin",
+        "description": "spin sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_stop",
+        "filename": "stop.wav",
+        "type": "sfx",
+        "event": "stop",
+        "description": "stop sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_win_small",
+        "filename": "win_small.wav",
+        "type": "sfx",
+        "event": "win_small",
+        "description": "win_small sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_win_medium",
+        "filename": "win_medium.wav",
+        "type": "sfx",
+        "event": "win_medium",
+        "description": "win_medium sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_win_big",
+        "filename": "win_big.wav",
+        "type": "sfx",
+        "event": "win_big",
+        "description": "win_big sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_win_jackpot",
+        "filename": "win_jackpot.wav",
+        "type": "sfx",
+        "event": "win_jackpot",
+        "description": "win_jackpot sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_button_click",
+        "filename": "button_click.wav",
+        "type": "sfx",
+        "event": "button_click",
+        "description": "button_click sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      },
+      {
+        "id": "sfx_error",
+        "filename": "error.wav",
+        "type": "sfx",
+        "event": "error",
+        "description": "error sound effect - digital glitch, electronic blips, futuristic synth, cyberpunk bass",
+        "duration": "0.5-2s",
+        "format": "WAV 44.1kHz 16bit"
+      }
+    ],
+    "music": [
+      {
+        "id": "bgm_lobby",
+        "filename": "lobby_music.wav",
+        "type": "music",
+        "context": "lobby",
+        "description": "Lobby ambient - synthwave, electronic ambient, cyber lounge, loopable, 60-90 BPM",
+        "duration": "60-120s",
+        "loop": true,
+        "bpm": 75
+      },
+      {
+        "id": "bgm_gameplay",
+        "filename": "gameplay_music.wav",
+        "type": "music",
+        "context": "gameplay",
+        "description": "Gameplay intensity - synthwave, electronic ambient, cyber lounge, loopable, 100-130 BPM",
+        "duration": "60-120s",
+        "loop": true,
+        "bpm": 110
+      },
+      {
+        "id": "bgm_bonus",
+        "filename": "bonus_music.wav",
+        "type": "music",
+        "context": "bonus",
+        "description": "Bonus round excitement - synthwave, electronic ambient, cyber lounge, build-up, 120-140 BPM",
+        "duration": "30-60s",
+        "loop": false,
+        "bpm": 130
+      }
+    ],
+    "total_assets": 11,
+    "unity_integration": {
+      "audio_mixer": "Mixers/crypto_Mixer.mixer",
+      "audio_groups": [
+        "SFX",
+        "Music",
+        "UI",
+        "Ambient"
+      ]
+    }
+  },
+  "outputs": {}
+}

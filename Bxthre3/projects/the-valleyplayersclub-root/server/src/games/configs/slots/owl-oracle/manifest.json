@@ -1,0 +1,354 @@
+{
+    "name": "Owl Oracle",
+    "theme": "mythology",
+    "category": "slots",
+    "evaluatorType": "slots-lines",
+    "reels": [
+        [
+            "SHELL",
+            "PEARL",
+            "WILD",
+            "BLANK",
+            "BLANK",
+            "EYE",
+            "SHELL",
+            "EYE",
+            "TRIDENT",
+            "EYE",
+            "ANKH",
+            "SCARAB",
+            "TRIDENT",
+            "SCARAB",
+            "ANKH",
+            "EYE",
+            "EYE",
+            "TRIDENT"
+        ],
+        [
+            "BLANK",
+            "SCARAB",
+            "EYE",
+            "PEARL",
+            "WILD",
+            "WILD",
+            "ANKH",
+            "WILD",
+            "TRIDENT",
+            "PEARL",
+            "EYE",
+            "WILD",
+            "TRIDENT",
+            "PEARL",
+            "WILD",
+            "PEARL",
+            "ANKH",
+            "SCARAB"
+        ],
+        [
+            "TRIDENT",
+            "SCARAB",
+            "PEARL",
+            "WILD",
+            "EYE",
+            "BLANK",
+            "SCARAB",
+            "EYE",
+            "ANKH",
+            "EYE",
+            "ANKH",
+            "WILD",
+            "EYE",
+            "BLANK",
+            "WILD",
+            "BLANK",
+            "PEARL",
+            "EYE"
+        ],
+        [
+            "ANKH",
+            "TRIDENT",
+            "ANKH",
+            "SCARAB",
+            "WILD",
+            "ANKH",
+            "ANKH",
+            "ANKH",
+            "TRIDENT",
+            "TRIDENT",
+            "SHELL",
+            "WILD",
+            "SCARAB",
+            "BLANK",
+            "WILD",
+            "SCARAB",
+            "SHELL",
+            "EYE"
+        ],
+        [
+            "WILD",
+            "SCARAB",
+            "BLANK",
+            "EYE",
+            "BLANK",
+            "TRIDENT",
+            "EYE",
+            "WILD",
+            "ANKH",
+            "PEARL",
+            "ANKH",
+            "ANKH",
+            "WILD",
+            "SCARAB",
+            "ANKH",
+            "EYE",
+            "SCARAB",
+            "BLANK"
+        ]
+    ],
+    "rows": 3,
+    "paylines": [
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 1,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 0,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 0,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0
+            },
+            {
+                "row": 2,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 2,
+                "col": 3
+            },
+            {
+                "row": 1,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 0,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 0,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 0,
+                "col": 4
+            }
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0
+            },
+            {
+                "row": 1,
+                "col": 1
+            },
+            {
+                "row": 2,
+                "col": 2
+            },
+            {
+                "row": 1,
+                "col": 3
+            },
+            {
+                "row": 2,
+                "col": 4
+            }
+        ]
+    ],
+    "dap": "MODULAR DAP > Module: D-DAP"
+}

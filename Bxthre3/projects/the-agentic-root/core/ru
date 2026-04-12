@@ -1,0 +1,37 @@
+// Continuous Work Daemon
+import { workQueue } from '../automation/work-queue';
+import { autoAssignment } from '../automation/auto-assignment';
+import { progressCascade } from '../automation/progress-cascade';
+import { externalWork } from '../automation/external-work';
+
+export const daemon = {
+  async start(): Promise<void> {
+    console.log('[DAEMON] Starting continuous work automation...');
+    
+    // Phase 1: Scan for external work every 2 minutes
+    setInterval(() => externalWork.scanAll(), 2 * 60 * 1000);
+    
+    // Phase 2: Auto-assign queued work every 5 minutes
+    setInterval(() => autoAssignment.processQueue(), 5 * 60 * 1000);
+    
+    // Phase 3: Cascade progress updates every 10 minutes
+    setInterval(() => progressCascade.checkAll(), 10 * 60 * 1000);
+    
+    // Phase 4: Generate recurring work every hour
+    setInterval(() => workQueue.generateRecurring(), 60 * 60 * 1000);
+    
+    console.log('[DAEMON] All automation loops active');
+    console.log('- External scan: every 2 min');
+    console.log('- Auto-assign: every 5 min');
+    console.log('- Progress cascade: every 10 min');
+    console.log('- Recurring tasks: every hour');
+  },
+  
+  stop(): void {
+    console.log('[DAEMON] Stopping all automation...');
+  }
+};
+
+if (import.meta.main) {
+  daemon.start();
+}

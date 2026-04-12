@@ -1,0 +1,120 @@
+{
+  "gems": [
+    {
+      "id": "gem_00",
+      "type": "special",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_01",
+      "type": "special",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_02",
+      "type": "special",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_03",
+      "type": "special",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_04",
+      "type": "special",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_05",
+      "type": "special",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_06",
+      "type": "normal",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "gem_07",
+      "type": "normal",
+      "size": [
+        64,
+        64
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "fx_0",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "fx_1",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "fx_2",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "fx_3",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "fx_4",
+      "size": [
+        128,
+        128
+      ]
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "bg_board",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "ui": [
+    "btn_shuffle",
+    "btn_hint",
+    "panel_moves",
+    "panel_score"
+  ]
+}

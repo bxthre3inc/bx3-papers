@@ -1,0 +1,117 @@
+{
+  "symbols": [
+    {
+      "id": "sym_00",
+      "rarity": "high",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_01",
+      "rarity": "high",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_02",
+      "rarity": "high",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_03",
+      "rarity": "medium",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_04",
+      "rarity": "medium",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_05",
+      "rarity": "medium",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_06",
+      "rarity": "low",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_07",
+      "rarity": "low",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_08",
+      "rarity": "low",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_09",
+      "rarity": "low",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_10",
+      "rarity": "low",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "sym_11",
+      "rarity": "low",
+      "size": [
+        128,
+        128
+      ]
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "bg_main",
+      "size": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "ui": [
+    "btn_spin",
+    "btn_max_bet",
+    "btn_auto",
+    "panel_balance",
+    "panel_win",
+    "frame_reels"
+  ]
+}
