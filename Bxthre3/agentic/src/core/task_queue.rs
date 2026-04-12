@@ -5,7 +5,7 @@
 //!
 //! Priority: P0 | P1 | P2 | P3
 
-use crate::types::{Task, TaskStatus, Priority};
+use crate::types::{Task, TaskStatus};
 
 pub struct TaskQueue {
     tasks: Vec<Task>,

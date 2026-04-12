@@ -31,7 +31,7 @@ impl Database {
 
 /// Seed the canonical 19-agent roster into the database.
 pub async fn seed_agents(db: &Database) -> Result<()> {
-    use crate::types::{Agent, AgentStatus};
+    use crate::types::Agent;
     let agents = Agent::canonical_roster();
     let conn = db.conn().await;
     for agent in agents {

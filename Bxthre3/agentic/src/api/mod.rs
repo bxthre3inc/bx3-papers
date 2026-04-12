@@ -7,8 +7,7 @@ use crate::core::{AgentRegistry, DapEngine, EventBus, TaskQueue};
 use crate::types::*;
 use crate::db::Database;
 use axum::{
-    extract::{Path, Query, State},
-    http::StatusCode,
+    extract::{Path, State},
     response::Json,
     routing::{get, post},
     Router,
@@ -86,7 +85,7 @@ pub async fn get_integrations() -> Json<Vec<Integration>> {
 
 // POST /api/agentic/events/ingest
 pub async fn ingest_event(
-    State(state): State<Arc<AppState>>,
+    State(_state): State<Arc<AppState>>,
     Json(payload): Json<serde_json::Value>,
 ) -> Json<serde_json::Value> {
     // Parse event vector from payload
