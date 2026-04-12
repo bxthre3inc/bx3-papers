@@ -1,5 +1,5 @@
 # Pipeline Department — INBOX
-**Agent:** Pipeline (Deal Flow Manager — Bxthre3 Inc / AgentOS Finance Division)
+**Agent:** Pipeline (Deal Flow Manager — Bxthre3 Inc / Agentic Finance Division)
 **Reports to:** Reach (VP Investor Outreach)
 **Last Updated:** 2026-04-01 15:10 UTC
 

@@ -25,7 +25,7 @@ Engineering team focused on service recovery analysis and infrastructure hardeni
 |------|--------|-------|
 | Service Dependency Analysis | ✅ COMPLETE | Mapped critical dependencies for Irrig8 |
 | Recovery Playbook Draft | ✅ COMPLETE | Created draft recovery procedure |
-| AgentOS API Health Check | ✅ COMPLETE | All 6 endpoints responding |
+| Agentic API Health Check | ✅ COMPLETE | All 6 endpoints responding |
 | Infrastructure Audit | 🔄 PARTIAL | 60% complete, deferred to next sprint |
 
 **Total Tasks Completed:** 4

@@ -16,7 +16,7 @@
 ### Backup Integrity
 | Backup File | Size | Status |
 |---|---|---|
-| agentos-20260327.tar.gz | 12,281 KB | ✅ Valid gzip |
+| agentic-20260327.tar.gz | 12,281 KB | ✅ Valid gzip |
 | db-20260318-090336.dump | 0 KB | ⚠️ **EMPTY** |
 | db-20260318-090402.dump | 0 KB | ⚠️ **EMPTY** |
 | vpc-20260327.db | 36,864 KB | ✅ Valid SQLite (9 pages, 4 tables) |

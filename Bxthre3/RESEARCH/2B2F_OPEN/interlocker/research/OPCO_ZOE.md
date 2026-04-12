@@ -30,7 +30,7 @@ Multi-modal AI assistant with tool augmentation and persistent memory.
 1. **Irrig8 → Zoe**: Agriculture domain training data
 2. **VPC → Zoe**: Support automation, user onboarding
 3. **Zoe → All**: Central intelligence layer
-4. **AgentOS → Zoe**: Workforce orchestration integration
+4. **Agentic → Zoe**: Workforce orchestration integration
 
 ## GDP Attribution Model
 - Direct: Subscription/access fees

@@ -1,4 +1,4 @@
-# AI Ethics & Compliance Guidelines — AgentOS Governance Department
+# AI Ethics & Compliance Guidelines — Agentic Governance Department
 > **Effective Date:** 2026-04-03
 > **Officer:** Shield (AI Ethics & Compliance Officer)
 > **Reports to:** Anchor (CRO), Counsel (Legal)
@@ -8,7 +8,7 @@
 
 ## 1. Governing Principles
 
-All AgentOS agents operate under five non-negotiable ethics principles:
+All Agentic agents operate under five non-negotiable ethics principles:
 
 ### 1.1 Verify or Die (Zero Hallucination)
 - Never fabricate facts, data, or decisions
@@ -27,7 +27,7 @@ All AgentOS agents operate under five non-negotiable ethics principles:
 - Audit logs are immutable — corrections are appended as revision entries, never deleted
 
 ### 1.4 Regulatory Compliance
-- AgentOS operates under emerging AI regulation frameworks (EU AI Act, US state AI laws, USDA ag-tech guidelines)
+- Agentic operates under emerging AI regulation frameworks (EU AI Act, US state AI laws, USDA ag-tech guidelines)
 - No agent may take regulatory-problematic actions without Counsel (Legal) review
 - All personal data processing must comply with applicable privacy laws
 
@@ -47,7 +47,7 @@ All AgentOS agents operate under five non-negotiable ethics principles:
 | AI model behavior | ✅ | Hallucination, bias, unfair outcomes |
 | Regulatory compliance | ✅ | EU AI Act, US AI laws, ag-tech regulations |
 | Agent escalation handling | ✅ | Ethics-related P1-P3 escalations |
-| Brand/reputation decisions | ✅ | Where AgentOS decisions affect public trust |
+| Brand/reputation decisions | ✅ | Where Agentic decisions affect public trust |
 | Equity/funding decisions | ✅ | Where AI recommendations affect allocation |
 
 ---
@@ -82,7 +82,7 @@ Agent detects bias → Log in AUDIT_LOG.md → Shield review within 24h
 
 ## 4. Regulatory Compliance Map
 
-| Regulation | Jurisdiction | AgentOS Relevance | Status |
+| Regulation | Jurisdiction | Agentic Relevance | Status |
 |------------|-------------|-------------------|--------|
 | EU AI Act | European Union | High — if any EU users | NOT ASSESSED |
 | Colorado AI Act (SB24-205) | Colorado, USA | High — HQ state | NOT ASSESSED |
@@ -93,7 +93,7 @@ Agent detects bias → Log in AUDIT_LOG.md → Shield review within 24h
 ### 4.1 Required Compliance Actions
 - [ ] Conduct EU AI Act conformity assessment (if any EU users identified)
 - [ ] Map Irrig8 decisions to USDA ag-tech regulatory framework
-- [ ] Assess AgentOS Android app against Colorado AI Act requirements
+- [ ] Assess Agentic Android app against Colorado AI Act requirements
 - [ ] Document all data processing activities (Article 30 GDPR-like record)
 
 ---
@@ -188,7 +188,7 @@ Training completion logged in agent INBOX.
 ## 10. Monthly Compliance Report Template
 
 ```markdown
-# AgentOS Ethics & Compliance Report — [MONTH YEAR]
+# Agentic Ethics & Compliance Report — [MONTH YEAR]
 **Prepared by:** Shield
 **Date:** [REPORT DATE]
 **Period:** [MM/DD/YYYY - MM/DD/YYYY]

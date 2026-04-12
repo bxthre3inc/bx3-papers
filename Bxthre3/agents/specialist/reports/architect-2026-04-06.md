@@ -1,4 +1,4 @@
-# AgentOS Architecture Status Report
+# Agentic Architecture Status Report
 
 **Date:** 2026-04-06
 **Role:** Architect-Director
@@ -22,13 +22,13 @@
 
 | Item | Status | Source |
 |------|--------|--------|
-| `docs/design/` directory | ✅ EXISTS | `file 'Bxthre3/projects/agentic/the-agentos-project/docs/design/'` |
+| `docs/design/` directory | ✅ EXISTS | `file 'Bxthre3/projects/agentic/the-agentic-project/docs/design/'` |
 | `ADR-001-AMP-Binary-Protocol.md` | ✅ APPROVED | Binary AMP for v6.3, 6-phase plan |
 | `AGENTOS_ARCHITECTURE_v6.2.md` | ❌ NOT FOUND | Canonical v6.2 not in `docs/` |
 | `AMP_PROTOCOL.md` | ✅ EXISTS | `docs/AMP_PROTOCOL.md` |
 | `AMP_RFC.md` | ✅ EXISTS | `docs/AMP_RFC.md` |
 
-**Note:** `AGENTOS_ARCHITECTURE_v6.2.md` resides at `the-agentos-project/AGENTOS_ARCHITECTURE_v6.2.md` (project root), not in `docs/`. This is where it has always been located per prior reports.
+**Note:** `AGENTOS_ARCHITECTURE_v6.2.md` resides at `the-agentic-project/AGENTOS_ARCHITECTURE_v6.2.md` (project root), not in `docs/`. This is where it has always been located per prior reports.
 
 ---
 
@@ -136,7 +136,7 @@ ec965ee auto-sync: 20260331_080937 from brodiblanco
 ## Appendix: Directory Structure Verified
 
 ```
-Bxthre3/projects/agentic/the-agentos-project/
+Bxthre3/projects/agentic/the-agentic-project/
 ├── AGENTOS_ARCHITECTURE_v6.2.md              ✅ (project root, not docs/)
 ├── AGENTOS_ARCHITECTURE_v6.2_REVISED.md      ⚠️ UNRECONCILED
 ├── AGENTOS_GUARD_RAILS_v6.2.md               ✅
@@ -163,5 +163,5 @@ Bxthre3/projects/agentic/the-agentos-project/
 
 ---
 
-*Architect-Director — AgentOS Architecture Lead*
+*Architect-Director — Agentic Architecture Lead*
 *Verify or Die: No fabricated claims. All findings trace to source files.*

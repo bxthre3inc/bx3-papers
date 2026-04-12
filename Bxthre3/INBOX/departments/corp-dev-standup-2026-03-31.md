@@ -10,7 +10,7 @@
 | **Irrig8** | 1 - Flagship | 🟢 STRONG | Water Court Jun 29 — 90 days out. Evidence prep ongoing. Post-hearing partner outreach plan ready if favorable. |
 | **Valley Players Club** | 2 - Growth | 🟢 SCALING | Cash partner deal with Sage in legal review. 1% minimum equity set for future cash partners. |
 | **The Starting 5** | 2 - Growth | 🟡 ACTIVE | No Corp Dev action needed — development stage |
-| **AgentOS / Zoe** | 3 - Emerging | 🟢 PROMISING | Evaluating spinout potential — standalone valuation TBD |
+| **Agentic / Zoe** | 3 - Emerging | 🟢 PROMISING | Evaluating spinout potential — standalone valuation TBD |
 | **ARD / Oferta** | 4 - Incubation | 🟡 MONITOR | 802 Morton St — structure as owner-financed RE automation service agreement |
 | **The Rain Project** | 4 - Incubation | 🟡 MONITOR | IP defensibility 8/10 — 2 points to complete before external deal |
 | **Trenchbabys** | 4 - Incubation | 🔴 AT RISK | **Decision needed EOW: sunset, new owner, or structured sale** |
@@ -40,7 +40,7 @@
 
 | Signal | Opportunity | Next Step |
 |---|---|---|
-| AgentOS Tier upgrade candidate | Spinout valuation evaluation | Review metrics — revenue, users, MRR if available |
+| Agentic Tier upgrade candidate | Spinout valuation evaluation | Review metrics — revenue, users, MRR if available |
 | VPC cash partner outreach ready | 1% minimum equity for cash partners | Build prospect list once Sage deal closes |
 | Rain IP score 8/10 | Complete fortification before external licensing | Raj + RAIN to finish 2 remaining points |
 | Irrig8 distribution pipeline | 8 partners identified (Valley Irrigation, Reinke, etc.) | Draft pivot manufacturer one-pager |
@@ -51,9 +51,9 @@
 
 | Source | Destination | Deal Type | Status |
 |---|---|---|---|
-| AgentOS | All ventures | Workforce orchestration license | Internal — external pricing TBD |
-| Irrig8 | AgentOS | Field ops proof-of-concept | Production demo for distribution sales |
-| VPC | AgentOS | Integration testing sandbox | Active |
+| Agentic | All ventures | Workforce orchestration license | Internal — external pricing TBD |
+| Irrig8 | Agentic | Field ops proof-of-concept | Production demo for distribution sales |
+| VPC | Agentic | Integration testing sandbox | Active |
 | RAIN | All ventures | Regulatory intelligence | Shared across portfolio |
 
 ---

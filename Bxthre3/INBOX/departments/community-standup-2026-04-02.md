@@ -30,7 +30,7 @@
 
 ### 4. Developer Documentation
 - Coordinate with Frame on existing dev docs state
-- Identify gaps: Irrig8 API docs, Zoe OSS docs, AgentOS docs
+- Identify gaps: Irrig8 API docs, Zoe OSS docs, Agentic docs
 
 ### 5. Metrics Framework
 - Define DAU, post volume, event attendance tracking

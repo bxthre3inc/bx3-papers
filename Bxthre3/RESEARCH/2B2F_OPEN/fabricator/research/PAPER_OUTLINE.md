@@ -12,7 +12,7 @@
 
 Traditional venture capital operates on probabilistic bets, accepting 90% failure rates in exchange for outlier returns. This paper proposes a deterministic alternative: a structured 120-month execution framework that systematically de-risks venture scaling through multi-entity architecture, shared infrastructure, and phased capital deployment.
 
-Drawing on data from Bxthre3 Inc's simultaneous development of Irrig8 (precision agriculture), Valley Players Club (gaming), and AgentOS (AI orchestration), we demonstrate how ecosystem-level coordination can reduce failure probability while maintaining return potential.
+Drawing on data from Bxthre3 Inc's simultaneous development of Irrig8 (precision agriculture), Valley Players Club (gaming), and Agentic (AI orchestration), we demonstrate how ecosystem-level coordination can reduce failure probability while maintaining return potential.
 
 Key findings: (1) Shared services reduce OpCo operating costs by 35-40% versus standalone entities; (2) Cross-OpCo data sharing improves AI model performance by 10x through compound training sets; (3) Portfolio-level diversification reduces catastrophic loss probability from 90% to <20% without capping upside.
 
@@ -97,7 +97,7 @@ This research challenges the "spray and pray" venture model, offering instead a 
 ## 4. Methodology (1,500 words)
 
 ### 4.1 Case Study: Bxthre3 Inc
-- Entity description (Irrig8, VPC, AgentOS)
+- Entity description (Irrig8, VPC, Agentic)
 - Timeline and milestones
 - Data collection methods
 

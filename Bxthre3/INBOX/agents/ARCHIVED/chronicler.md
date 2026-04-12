@@ -26,7 +26,7 @@
 
 **Active Ventures Tracked:**
 - **Irrig8** (primary, was FarmSense) — P0, standby awaiting funding
-- **AgentOS / Zoe** — P0, active internal ops
+- **Agentic / Zoe** — P0, active internal ops
 - **Valley Players Club** — P1, planning
 - **The Starting 5** — P2, not started
 - **The ARD Project** — status unknown, needs review

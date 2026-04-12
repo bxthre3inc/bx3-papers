@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "businessName": "China Garden",
+    "slug": "china-garden-alamosa",
+    "tagline": "Authentic Chinese Cuisine",
+    "template": "modern-minimal",
+    "colors": { "primary": "#D32F2F", "secondary": "#FFC107", "accent": "#FFFFFF", "background": "#FFEBEE", "text": "#B71C1C", "dark": false }
+  }
+}

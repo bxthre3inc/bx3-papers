@@ -146,7 +146,7 @@ def create_workflow(db_path, template_name, task_id):
 
 
 if __name__ == "__main__":
-    db = "/home/workspace/Bxthre3/projects/agent-os/orchestration/data/workflows.db"
+    db = "/home/workspace/Bxthre3/projects/agentic/orchestration/data/workflows.db"
     import json
     # Seed templates
     for name, spec in TEMPLATES.items():

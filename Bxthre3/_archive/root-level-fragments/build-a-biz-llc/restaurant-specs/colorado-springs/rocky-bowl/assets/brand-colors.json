@@ -1,0 +1,13 @@
+{
+  "restaurant": "Rocky Bowl Bistro",
+  "colors": {
+    "primary": "#E85A4F",
+    "secondary": "#F5F5F5",
+    "accent": "#4A4A4A",
+    "text_dark": "#333333",
+    "background": "#FFFFFF"
+  },
+  "extraction_source": "logo_image_analysis",
+  "collected_date": "2026-04-01",
+  "notes": "Asian fusion brand with warm red-orange tones and clean modern aesthetic"
+}

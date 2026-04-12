@@ -75,3 +75,36 @@
 - [2026-04-05] **[BUILDBZ]**: Decide `technical_requirements.fulfillment_engine` @brodiblanco
 
 ---
+
+[2026-04-06] **AMBIENT_CAPTURE**: STATUS_SCAN | 9_DRAFTS | 113_TBDS_AWAITING_DECISIONS @brodiblanco
+
+### AGEAAS1 (AgEaaS — Agriculture Equipment-as-a-Service)
+- [2026-04-05] **[AGEAAS1]**: Decide `problem_statement` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `solution_hypothesis` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `target_users` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `success_metrics` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `estimated_scope` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `business_model.pricing_structure` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `business_model.fleet_financing` @brodiblanco
+- [2026-04-05] **[AGEAAS1]**: Decide `technical_requirements.scheduling_system` @brodiblanco
+
+### BUILDAG (Build-A-Biz Ag — Farm Venture Studio)
+- [2026-04-05] **[BUILDAG]**: Decide `equity.stake` @brodiblanco
+- [2026-04-05] **[BUILDAG]**: Decide `pilot.ventures` @brodiblanco
+- [2026-04-05] **[BUILDAG]**: Decide `mentorship.model` @brodiblanco
+
+### BUILDBZ (Valley Build-A-Biz LLC)
+- [2026-04-05] **[BUILDBZ]**: Decide `problem_statement` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `solution_hypothesis` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `target_users` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `success_metrics` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `estimated_scope` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `business_model.equity_split` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `technical_requirements.sales_engine` @brodiblanco
+- [2026-04-05] **[BUILDBZ]**: Decide `technical_requirements.fulfillment_engine` @brodiblanco
+
+[2026-04-07] **ESTCP**: Decide `deployment_confirmation` — Were ESTCP sensors deployed offline? YES/NO? @brodiblanco
+
+---
+
+[2026-04-06] **AMBIENT_CAPTURE**: STATUS_SCAN | 9_DRAFTS | 111_TBDS_AWAITING_DECISIONS @brodiblanco

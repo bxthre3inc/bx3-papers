@@ -1,6 +1,6 @@
 ---
 name: grants-prospector
-description: Identifies grant opportunities for Bxthre3 ventures (Irrig8, RAIN, AgentOS, Starting5) across federal, state, and private funders. Run before grants-hq to populate the pipeline. Use after reviewing the opportunity landscape.
+description: Identifies grant opportunities for Bxthre3 ventures (Irrig8, RAIN, Agentic, Starting5) across federal, state, and private funders. Run before grants-hq to populate the pipeline. Use after reviewing the opportunity landscape.
 compatibility: Created for Zo Computer
 metadata:
   author: brodiblanco.zo.computer
@@ -16,7 +16,7 @@ Identifies grant opportunities for Bxthre3 ventures.
 |---------|----------|
 | Irrig8 | irrigation, precision agriculture, water conservation, smart farming, USDA, NSF SBIR, DOE SBIR |
 | RAIN | regulatory arbitrage, fintech, compliance automation, CDFI, state licensing |
-| AgentOS | AI agents, autonomous systems, open source AI, NSF SBIR, DARPA |
+| Agentic | AI agents, autonomous systems, open source AI, NSF SBIR, DARPA |
 | Starting5 | sports tech, athlete empowerment, NBA, WNBA, NSF, DOC |
 
 ## Commands
@@ -24,7 +24,7 @@ Identifies grant opportunities for Bxthre3 ventures.
 Run via: `python3 /home/workspace/Skills/grants-prospector/scripts/scan.py <venture> [limit]`
 
 Arguments:
-- `venture` — irrig8, rain, agentos, starting5 (or `all`)
+- `venture` — irrig8, rain, agentic, starting5 (or `all`)
 - `limit` — max results to return (default: 20)
 
 Output: list of prospective grants with funder, program name, estimated range, deadline, and match score.

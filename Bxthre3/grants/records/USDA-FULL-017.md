@@ -86,7 +86,7 @@
 |---|---|
 | strategic_fit_overall | 4 |
 | fit_irrig8 | 3 |
-| fit_agentos | 2 |
+| fit_agentic | 2 |
 | fit_valley_players | 1 |
 | priority | P3 |
 | priority_rationale | Fit score 4/10 — Indirect (broadband enables IoT) |

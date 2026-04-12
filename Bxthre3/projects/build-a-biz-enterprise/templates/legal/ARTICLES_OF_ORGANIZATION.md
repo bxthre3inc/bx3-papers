@@ -13,5 +13,5 @@
 **Effective Date:** Upon filing
 
 ---
-Prepared by: Bxthre3 AgentOS
+Prepared by: Bxthre3 Agentic
 Date: 2026-03-29

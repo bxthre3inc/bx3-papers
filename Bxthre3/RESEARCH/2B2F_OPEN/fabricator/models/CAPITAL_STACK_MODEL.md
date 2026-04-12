@@ -30,9 +30,9 @@ Bxthre3 Inc (Delaware C-Corp)
     │   ├── VPC IP LLC
     │   └── VPC Cash Services LLC
     │
-    └── AgentOS Holdings LLC (10% of OpCo value)
-        ├── AgentOS Platform LLC
-        └── AgentOS Licensing LLC
+    └── Agentic Holdings LLC (10% of OpCo value)
+        ├── Agentic Platform LLC
+        └── Agentic Licensing LLC
 ```
 
 ---
@@ -47,7 +47,7 @@ Bxthre3 Inc (Delaware C-Corp)
 | Bxthre3 Inc | Friends & Family | $350K | Convertible | Prototype development |
 | IRRIG8CO | Bxthre3 Inc | $500K | Intercompany | M1-6 operations |
 | VPC | Bxthre3 Inc | $300K | Intercompany | M1-6 operations |
-| AgentOS | Bxthre3 Inc | $200K | Intercompany | Platform development |
+| Agentic | Bxthre3 Inc | $200K | Intercompany | Platform development |
 | **Total Phase 1** | — | **$1.5M** | — | — |
 
 ### Phase 2: Seed (M12-18)
@@ -81,7 +81,7 @@ Bxthre3 Inc (Delaware C-Corp)
 
 ## Fully Diluted Cap Table (M48 Projection)
 
-| Stakeholder | Bxthre3 Inc | IRRIG8CO | VPC | AgentOS | Effective % |
+| Stakeholder | Bxthre3 Inc | IRRIG8CO | VPC | Agentic | Effective % |
 |-------------|-------------|----------|-----|---------|-------------|
 | Founders | 35% | 40% | 42% | 60% | 38% |
 | Seed Investors | 15% | 18% | 20% | 15% | 17% |
@@ -112,10 +112,10 @@ OpCo Subsidiaries
 
 | Service | Provider | Consumer | Pricing |
 |---------|----------|----------|---------|
-| AgentOS Platform | AgentOS LLC | IRRIG8CO, VPC | $50K/year base + $1/user |
+| Agentic Platform | Agentic LLC | IRRIG8CO, VPC | $50K/year base + $1/user |
 | Legal/Compliance | Bxthre3 Inc | All OpCos | $200K/year allocated |
 | Accounting/Finance | Bxthre3 Inc | All OpCos | $150K/year allocated |
-| Engineering | IRRIG8CO | VPC, AgentOS | Cost + 15% |
+| Engineering | IRRIG8CO | VPC, Agentic | Cost + 15% |
 | Data Infrastructure | IRRIG8CO Data | All OpCos | $0.01/API call |
 
 ---
@@ -165,7 +165,7 @@ OpCo Subsidiaries
 
 ### Liability Isolation
 
-| Risk Type | IRRIG8CO | VPC | AgentOS |
+| Risk Type | IRRIG8CO | VPC | Agentic |
 |-----------|----------|-----|---------|
 | Product Liability | Product insurance: $5M | Gaming bond: $750K | E&O: $2M |
 | Regulatory Fines | N/A | State bonds: $500K | N/A |
@@ -183,7 +183,7 @@ OpCo Subsidiaries
 | Bxthre3 Inc | $500K | $1M | $500K | $2M |
 | IRRIG8CO | $1M | $2M | $1M | $4M |
 | VPC | $750K | $1.5M | $750K | $3M |
-| AgentOS | $250K | $500K | $250K | $1M |
+| Agentic | $250K | $500K | $250K | $1M |
 
 ### Undrawn Credit Facilities
 
@@ -204,7 +204,7 @@ OpCo Subsidiaries
 | Bxthre3 Inc Founder Equity | Sweat + cash | 35% | $17.5B @ $50B exit |
 | IRRIG8CO Founder Equity | Sweat | 40% → 20% via holdco | $2.0B |
 | VPC Founder Equity | Sweat | 42% → 15% via holdco | $1.5B |
-| AgentOS Founder Equity | Sweat | 60% → 10% via holdco | $500M |
+| Agentic Founder Equity | Sweat | 60% → 10% via holdco | $500M |
 | **Total Effective** | — | — | **$21.5B** |
 
 ---

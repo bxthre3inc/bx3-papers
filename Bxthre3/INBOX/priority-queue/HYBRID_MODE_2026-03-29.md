@@ -21,7 +21,7 @@
 ### Automation #1: Grant Status Tracker (Auto-daily)
 - Pulls from grants.gov API
 - Matches against Bxthre3 ventures (Irrig8, RAIN, VPC)
-- Auto-creates task in AgentOS for deadlines < 14 days
+- Auto-creates task in Agentic for deadlines < 14 days
 - No manual parsing
 
 ### Automation #2: Investor Portal Lead Triage (Auto-hourly)

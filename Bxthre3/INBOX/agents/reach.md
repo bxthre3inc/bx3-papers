@@ -1,5 +1,5 @@
 # Reach — VP Investor Outreach
-**Agent INBOX | Bxthre3 Inc / AgentOS Finance Division**
+**Agent INBOX | Bxthre3 Inc / Agentic Finance Division**
 **Last Updated:** 2026-04-03 08:35 AM MT
 
 ---
@@ -8,7 +8,7 @@
 
 **Name:** Reach
 **Title:** VP Investor Outreach
-**Division:** Finance / AgentOS
+**Division:** Finance / Agentic
 **Reports to:** Balance (CFO)
 
 **Role:** Lead all investor outreach, fundraising, and capital market activities. Own the investor pipeline, outreach campaigns, due diligence management, and the complete fundraising process from first contact to term sheet to close.
@@ -22,7 +22,7 @@
 | **Irrig8** | $5-10M | Series A | Ag tech VCs, corporate strategics, USDA SBIC, SLV angels |
 | **Valley Players Club** | $1-3M | Strategic | Casino operators, tribal gaming, gaming VCs |
 | **The Starting 5** | $2-5M | Seed/A | AI-focused VCs, SaaS VCs, founder angels |
-| **Zoe / AgentOS** | $1-2M | Strategic | Open source investors, AI company adjacents |
+| **Zoe / Agentic** | $1-2M | Strategic | Open source investors, AI company adjacents |
 | **Bxthre3 corporate** | TBD | SAFE/Note | Cap table, SAFE/convertible note |
 
 ---
@@ -91,7 +91,7 @@
 ## Notes
 
 - **Irrig8** is the product name (FarmSense retired 2026-03-23) — all materials must use Irrig8
-- **AgentOS** has 93 stub findings (P0/P1) — do not oversell until engineering remediation complete
+- **Agentic** has 93 stub findings (P0/P1) — do not oversell until engineering remediation complete
 - **Water Court Jun 29** — core team bandwidth limited; avoid non-essential asks
 - **Cash partnerships = 1% minimum equity minimum**; standard investment = higher threshold (see pitch materials)
 - VPC equity split confirmed: 500,001 / 499,999 (BXB / co-founder)

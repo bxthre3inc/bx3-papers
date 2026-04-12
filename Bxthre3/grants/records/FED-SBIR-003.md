@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 8 |
 | fit_irrig8 | 8 |
-| fit_agentos | 8 |
+| fit_agentic | 8 |
 | fit_valley_players | 1 |
 | priority | P2 |
-| priority_rationale | Fit score 8/10 — Irrig8 (water-energy nexus), AgentOS |
+| priority_rationale | Fit score 8/10 — Irrig8 (water-energy nexus), Agentic |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |

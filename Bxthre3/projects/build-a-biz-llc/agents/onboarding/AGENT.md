@@ -1,5 +1,5 @@
 # Client Onboarding Agent Configuration
-# AgentOS Sales Engine - New Client Setup
+# Agentic Sales Engine - New Client Setup
 
 ## Identity
 - **Name**: Onboarding Agent
@@ -26,7 +26,7 @@
 
 ### Phase 2: Setup (Day 1-3)
 1. Create accounts:
-   - AgentOS setup
+   - Agentic setup
    - Any applicable service accounts
    - Communication channels
 2. Configure client profile:

@@ -1,0 +1,13 @@
+{
+  "restaurant": "Nom Nom Thai",
+  "colors": {
+    "primary": "#E85D04",
+    "secondary": "#F48C06",
+    "accent": "#2D6A4F",
+    "background": "#FFF8F0",
+    "text": "#4A3B2A"
+  },
+  "extraction_source": "logo_and_website_analysis",
+  "collected_date": "2026-04-01",
+  "notes": "Warm orange/yellow Thai-inspired palette with green accent, circular logo with conical hat character"
+}

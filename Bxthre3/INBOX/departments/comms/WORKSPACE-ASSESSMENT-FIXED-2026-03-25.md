@@ -14,7 +14,7 @@
 | # | Category | Score | Trend | Notes |
 |---|---|---|---|---|
 | 1 | zo.space Routes | 7/10 | 🟡→🟢 | 5 dead routes corrected; 1 redirect (/ard) is intentional; 5 other pages fully built |
-| 2 | AgentOS Code Quality | 4/10 | 🔴 | ApiService.kt still 100% mock — P2 engineering fix |
+| 2 | Agentic Code Quality | 4/10 | 🔴 | ApiService.kt still 100% mock — P2 engineering fix |
 | 3 | VPC Platform Readiness | 5/10 | 🟡 | Share math correct; /api/grants and /api/tasks need wiring |
 | 4 | INBOX System Integrity | 6/10 | 🟡→🟢 | Backup agent fixed; duplicate P1 alert deleted; KNOWN_AGENTS updated |
 | 5 | Zo Space Home + Branding | 7/10 | 🟢 | Home page live and functional |
@@ -51,7 +51,7 @@
 ### P2 — This Week
 | Item | Category | Owner |
 |---|---|---|
-| Wire `ApiService.kt` to real zo.space endpoints | AgentOS | Engineering |
+| Wire `ApiService.kt` to real zo.space endpoints | Agentic | Engineering |
 | Fix `/api/grants` and `/api/tasks` endpoints | VPC | Engineering |
 | Run VPC investor portal end-to-end test | VPC | Engineering |
 
@@ -62,7 +62,7 @@
 | Grant pipeline tracker — visible status dashboard |
 | Irrig8 live product page (not just /projects/irrig8 redirect) |
 | Irrig8 code review for transferable IP assets |
-| AgentOS Android APK — verify build state + real endpoint wiring |
+| Agentic Android APK — verify build state + real endpoint wiring |
 
 ---
 

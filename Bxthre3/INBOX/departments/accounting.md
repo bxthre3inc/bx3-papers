@@ -1,5 +1,5 @@
 # Accounting Department — INBOX
-**Bxthre3 Inc / AgentOS Finance Division**
+**Bxthre3 Inc / Agentic Finance Division**
 
 ---
 

@@ -1,5 +1,5 @@
 # MUTUAL NON-DISCLOSURE AGREEMENT
-## AgentOS Business Builder
+## Agentic Business Builder
 
 **Version:** 1.0 | **Date:** [DATE]
 
@@ -16,7 +16,7 @@
 
 ## 1. PURPOSE
 
-The parties wish to explore a business relationship regarding **AgentOS Business Builder** services. In connection with this, each party may disclose confidential information to the other.
+The parties wish to explore a business relationship regarding **Agentic Business Builder** services. In connection with this, each party may disclose confidential information to the other.
 
 ---
 

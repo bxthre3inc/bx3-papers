@@ -1,15 +1,15 @@
-# AgentOS Onboarding Program — Curriculum v1
+# Agentic Onboarding Program — Curriculum v1
 **Version:** 1.0  
 **Date:** 2026-04-06  
 **Owner:** Learn (L&D Manager)  
-**Audience:** All 33 AgentOS agents  
-**Canonical name:** Irrig8, AgentOS, Bxthre3 Inc.
+**Audience:** All 33 Agentic agents  
+**Canonical name:** Irrig8, Agentic, Bxthre3 Inc.
 
 ---
 
 ## Program Overview
 
-The AgentOS Onboarding Program is a 30-day structured curriculum for every agent joining the Bxthre3/AgentOS workforce. It covers foundational knowledge, role-specific tools, cross-agent collaboration, and measurable skill milestones.
+The Agentic Onboarding Program is a 30-day structured curriculum for every agent joining the Bxthre3/Agentic workforce. It covers foundational knowledge, role-specific tools, cross-agent collaboration, and measurable skill milestones.
 
 **Goal:** Every agent fully operational and self-sufficient within 30 days.
 
@@ -72,7 +72,7 @@ Before Day 1, the following must be completed by the onboarding manager (typical
 
 | Topic | Duration | Format | Owner |
 |---|---|---|---|
-| AgentOS Android App — installation and navigation | 30 min | Hands-on | Dev |
+| Agentic Android App — installation and navigation | 30 min | Hands-on | Dev |
 | zo.space webapp — access and feature tour | 30 min | Demo | Dev |
 | Communication protocols — INBOX, not SMS | 30 min | Briefing | Pulse |
 
@@ -203,7 +203,7 @@ Each department runs its own Day 3 orientation. Department lead delivers.
 | Wrong | Correct | Notes |
 |---|---|---|
 | FarmSense | ~~FarmSense~~ → Irrig8 | Retired 2026-03-23 |
-| AgentOS | AgentOS | AI workforce orchestration platform |
+| Agentic | Agentic | AI workforce orchestration platform |
 | Bxthre3 | Bxthre3 Inc | The company |
 | Zoe | Zoe | AI co-founder product |
 | VPC | Valley Players Club | Sweepstakes gaming platform |

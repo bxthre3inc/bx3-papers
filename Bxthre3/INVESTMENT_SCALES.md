@@ -364,7 +364,7 @@ Every Build-A-Biz created company:
 ```
 Year 1-5: COLORADO FOUNDATION
 ├── San Luis Valley dominance (Irrig8)
-├── Denver metro (AgentOS, Build-A-Biz)
+├── Denver metro (Agentic, Build-A-Biz)
 ├── State regulatory capture (water rights, gaming)
 └── Proof of protocol-layer concept
 

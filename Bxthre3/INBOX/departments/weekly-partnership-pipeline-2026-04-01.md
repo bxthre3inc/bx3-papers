@@ -12,7 +12,7 @@
 |---------|-----------------|-------------------|-------|
 | **Irrig8** | 7 | Valley Irrigation, Reinke | Prospecting |
 | **Valley Players Club** | 4 | Game Studios, Payment Processor | Build target list |
-| **AgentOS** | 2 | AgTech VCs | Build target list |
+| **Agentic** | 2 | AgTech VCs | Build target list |
 | **TOTAL** | **13** | **4 P1** | — |
 
 ---
@@ -68,7 +68,7 @@
 
 ---
 
-## AgentOS — Strategic Investors
+## Agentic — Strategic Investors
 
 | Category | Target Profile | Priority |
 |----------|---------------|----------|
@@ -93,7 +93,7 @@
 |------|---------|------------|
 | Valley Irrigation OEM timeline | Irrig8 | Start with dealer channel, OEM later |
 | FL/NY bond approval delay | VPC | Parallel pursue alternative payment partners |
-| AgTech VC market timing | AgentOS | Lead with Irrig8 traction narrative |
+| AgTech VC market timing | Agentic | Lead with Irrig8 traction narrative |
 
 ---
 

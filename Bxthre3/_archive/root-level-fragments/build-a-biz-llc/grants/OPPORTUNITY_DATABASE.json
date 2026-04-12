@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "project": "Build-A-Biz SLV Opportunity Mapping",
+    "version": "1.0",
+    "created": "2026-03-31",
+    "target": "100 niches across SLV",
+    "status": "active_reconnaissance"
+  },
+  "summary": {
+    "towns_mapped": 4,
+    "total_opportunities": 80,
+    "grant_programs_tracked": 15,
+    "avg_startup_cost": "$45,000",
+    "avg_annual_potential": "$125,000",
+    "total_grant_opportunity": "$2,500,000+"
+  },
+  "towns": {
+    "monte_vista": {
+      "population": 4500,
+      "median_income": 38000,
+      "primary_industries": ["agriculture", "government", "healthcare"],
+      "opportunity_count": 20,
+      "top_grants": ["Amber Grant", "REAP", "NASE", "Advanced Industries"],
+      "file": "towns/MONTE_VISTA.md"
+    },
+    "alamosa": {
+      "population": 9500,
+      "median_income": 42000,
+      "primary_industries": ["education", "healthcare", "retail"],
+      "opportunity_count": 20,
+      "top_grants": ["Amber Grant", "SBIR", "Advanced Industries", "CO Startup Loan"],
+      "file": "towns/ALAMOSA.md"
+    },
+    "center": {
+      "population": 2000,
+      "median_income": 35000,
+      "primary_industries": ["agriculture", "transportation", "retail"],
+      "opportunity_count": 20,
+      "top_grants": ["Amber Grant", "REAP", "NASE", "Rural Development"],
+      "file": "towns/CENTER.md"
+    },
+    "antonito": {
+      "population": 750,
+      "median_income": 28000,
+      "primary_industries": ["tourism", "retail", "services"],
+      "opportunity_count": 20,
+      "top_grants": ["Amber Grant", "Tourism Grants", "NASE", "Arts/Culture"],
+      "file": "towns/ANTONITO.md"
+    }
+  },
+  "niche_categories": {
+    "agriculture_food": {
+      "count": 20,
+      "grant_density": "high",
+      "startup_range": "$5K-$200K",
+      "examples": ["precision_ag", "drone_services", "organic_cert", "food_processing", "farm_distribution"]
+    },
+    "rural_technology": {
+      "count": 10,
+      "grant_density": "very_high",
+      "startup_range": "$5K-$50K",
+      "examples": ["solar_install", "it_support", "internet_install", "cybersecurity", "web_dev"]
+    },
+    "health_wellness": {
+      "count": 15,
+      "grant_density": "high",
+      "startup_range": "$2K-$100K",
+      "examples": ["mobile_health", "mental_health", "fitness", "senior_care", "childcare"]
+    },
+    "construction_trades": {
+      "count": 15,
+      "grant_density": "medium",
+      "startup_range": "$10K-$75K",
+      "examples": ["hvac", "solar", "welding", "handyman", "fire_mitigation"]
+    },
+    "creative_media": {
+      "count": 10,
+      "grant_density": "medium",
+      "startup_range": "$2K-$30K",
+      "examples": ["content_creation", "video_production", "marketing", "design", "podcast"]
+    },
+    "transportation_logistics": {
+      "count": 8,
+      "grant_density": "low",
+      "startup_range": "$10K-$100K",
+      "examples": ["trucking", "delivery", "mechanic", "towing", "dispatch"]
+    },
+    "retail_food_service": {
+      "count": 15,
+      "grant_density": "medium",
+      "startup_range": "$15K-$150K",
+      "examples": ["food_truck", "catering", "coffee", "specialty_retail", "farmers_market"]
+    },
+    "professional_services": {
+      "count": 12,
+      "grant_density": "low",
+      "startup_range": "$1K-$25K",
+      "examples": ["bookkeeping", "grant_writing", "consulting", "legal_prep", "hr"]
+    },
+    "outdoor_recreation": {
+      "count": 12,
+      "grant_density": "high",
+      "startup_range": "$10K-$75K",
+      "examples": ["tour_guide", "gear_rental", "outfitter", "ski_service", "camping"]
+    },
+    "hospitality_tourism": {
+      "count": 13,
+      "grant_density": "high",
+      "startup_range": "$20K-$500K",
+      "examples": ["airbnb_mgmt", "event_venue", "wedding_planning", "shuttle", "restaurant"]
+    }
+  },
+  "grant_programs": {
+    "amber_grant": {
+      "name": "Amber Grant Foundation",
+      "amount": "$10,000/month",
+      "eligibility": "Women-owned businesses",
+      "deadline": "Monthly rolling",
+      "winners_per_year": 12,
+      "slv_applications": 0,
+      "success_rate": "~1%",
+      "url": "womensnet.org/amber-grant",
+      "action": "Create monthly application template"
+    },
+    "nase_growth": {
+      "name": "NASE Growth Grants",
+      "amount": "$4,000/quarter",
+      "eligibility": "NASE members",
+      "deadline": "Quarterly",
+      "winners_per_year": 16,
+      "slv_applications": 0,
+      "success_rate": "~2%",
+      "url": "nase.org",
+      "action": "Bulk purchase NASE memberships for clients"
+    },
+    "usda_reap": {
+      "name": "USDA Rural Energy for America Program",
+      "amount": "$20,000-$1,000,000",
+      "eligibility": "Rural small businesses and farms",
+      "deadline": "Rolling + annual cycles",
+      "slv_applications": 5,
+      "success_rate": "~60% for eligible projects",
+      "url": "rd.usda.gov/reap",
+      "action": "Create solar installer track"
+    },
+    "usda_rbdg": {
+      "name": "USDA Rural Business Development Grants",
+      "amount": "$10,000-$500,000",
+      "eligibility": "Rural public entities, tribes, non-profits",
+      "deadline": "Annual",
+      "slv_applications": 2,
+      "success_rate": "~30%",
+      "url": "rd.usda.gov/rbdg",
+      "action": "Partner with Rio Grande County Economic Dev"
+    },
+    "co_advanced_industries": {
+      "name": "Colorado Advanced Industries",
+      "amount": "$50,000-$250,000",
+      "eligibility": "Advanced manufacturing, tech, aerospace, etc.",
+      "deadline": "Annual RFP",
+      "slv_applications": 0,
+      "success_rate": "~15%",
+      "url": "oedit.colorado.gov",
+      "action": "Focus on ag tech, renewable energy"
+    },
+    "co_startup_loan": {
+      "name": "Colorado Startup Loan Fund",
+      "amount": "$5,000-$500,000",
+      "eligibility": "Colorado businesses",
+      "deadline": "Rolling",
+      "slv_applications": 3,
+      "success_rate": "~40%",
+      "url": "oedit.colorado.gov",
+      "action": "Pre-qualify clients for loan applications"
+    },
+    "galaxy_of_stars": {
+      "name": "Galaxy of Stars + Skip",
+      "amount": "$5,000",
+      "eligibility": "Minority and women-owned businesses",
+      "deadline": "Quarterly",
+      "slv_applications": 0,
+      "success_rate": "~3%",
+      "url": "galaxyofstars.org",
+      "action": "Create quarterly application workflow"
+    },
+    "amazon_small_biz": {
+      "name": "Amazon Business Small Business Grants",
+      "amount": "$5,000-$25,000",
+      "eligibility": "Amazon Business customers",
+      "deadline": "Annual",
+      "slv_applications": 0,
+      "success_rate": "~1%",
+      "url": "business.amazon.com",
+      "action": "Set up clients with Amazon Business accounts"
+    },
+    "block_advisors": {
+      "name": "Fund Her Future (H&R Block)",
+      "amount": "$100,000 total pool",
+      "eligibility": "Female entrepreneurs",
+      "deadline": "Annual",
+      "slv_applications": 0,
+      "success_rate": "~5%",
+      "url": "blockadvisors.com",
+      "action": "Add to annual grant calendar"
+    },
+    "faire_retail": {
+      "name": "Faire Small Business Grant",
+      "amount": "$5,000",
+      "eligibility": "New retail businesses",
+      "deadline": "Rolling",
+      "slv_applications": 0,
+      "success_rate": "~2%",
+      "url": "faire.com/small-business-grant",
+      "action": "Priority for retail clients"
+    }
+  },
+  "active_pipeline": [],
+  "metrics": {
+    "opportunities_identified": 80,
+    "opportunities_target": 100,
+    "grant_programs_verified": 15,
+    "potential_client_revenue_year_1": "$5,000,000",
+    "bxthre3_share_30_percent": "$1,500,000",
+    "avg_client_setup_fee": "$997",
+    "avg_client_monthly": "$97",
+    "clients_needed_for_100k_month": "103 clients @ $97/mo"
+  }
+}

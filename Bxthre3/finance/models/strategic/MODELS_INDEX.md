@@ -1,5 +1,5 @@
 # Financial Models — Strategic Index
-**FP&A | Bxthre3 Inc / AgentOS Finance Division**
+**FP&A | Bxthre3 Inc / Agentic Finance Division**
 **Owner:** Model (Strategic Finance Analyst)
 **Last Updated:** 2026-04-06
 

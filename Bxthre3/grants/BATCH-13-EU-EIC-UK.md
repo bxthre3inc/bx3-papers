@@ -17,7 +17,7 @@
 | Deadline | **2026-05-12** |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS (AI, autonomous systems) |
+| Portfolio Fit | Agentic (AI, autonomous systems) |
 | Status | Active — €166M for Open Call |
 | Next Action | Submit through EU Funding portal; requires EU partner or presence |
 | Notes | €262M total EIC budget 2026. 2,087 proposals received in 2025. Highly competitive. |
@@ -63,7 +63,7 @@
 | Deadline | **2026-10-28** |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS (AI reasoning systems) |
+| Portfolio Fit | Agentic (AI reasoning systems) |
 | Status | Active — €96M for Challenges |
 | Next Action | Engage EU partner for DeepRAP challenge application |
 
@@ -78,7 +78,7 @@
 | Deadline | Rolling (multiple cutoffs) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | AgentOS (scale funding for Zoe) |
+| Portfolio Fit | Agentic (scale funding for Zoe) |
 | Status | Active — €630M total EIC Accelerator pool 2026 |
 | Next Action | Apply through EU Funding portal; requires EU market presence |
 | Notes | Biggest EU program for deep tech scale-ups. Previously covered (UK-006) but listed here with full detail. |
@@ -94,7 +94,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
 | Next Action | Fast Track from Pathfinder to Accelerator for rapid scale |
 
@@ -111,7 +111,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | AgentOS, Irrig8 |
+| Portfolio Fit | Agentic, Irrig8 |
 | Status | Active |
 | Next Action | Explore BBSRC for AI in agriculture research partnerships |
 
@@ -156,7 +156,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 5/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
 | Next Action | Not priority unless UK research presence |
 
@@ -278,7 +278,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
 | Next Action | Explore Digital Europe Programme for AI/digital infrastructure |
 

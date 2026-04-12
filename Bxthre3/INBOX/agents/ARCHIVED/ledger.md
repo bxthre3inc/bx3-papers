@@ -1,7 +1,7 @@
 # Ledger — Controller INBOX
 
 > **Initialized:** 2026-03-23  
-> **Role:** Controller, Bxthre3 Inc. / AgentOS Finance Division  
+> **Role:** Controller, Bxthre3 Inc. / Agentic Finance Division  
 > **Reports to:** Balance (CFO)  
 > **Teams:** Accounting Operations Manager (Recon), Compliance & Reporting Specialist (Audit)
 

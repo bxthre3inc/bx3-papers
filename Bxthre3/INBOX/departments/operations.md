@@ -62,7 +62,7 @@
 ## Top Performers
 
 🏆 **Sentinel** (0.99 CR) — Security Agent  
-- P0 AgentOS Health Check completed today, all services operational  
+- P0 Agentic Health Check completed today, all services operational  
 - Zero incidents
 
 🏆 **Pulse** (0.96 CR) — People Ops  
@@ -91,7 +91,7 @@
 
 | Agent | P1 Tasks |
 |-------|----------|
-| Iris | 3 (roadmap, SLV pilot, AgentOS v6 release) |
+| Iris | 3 (roadmap, SLV pilot, Agentic v6 release) |
 | Zoe | 1 (weekly briefing) |
 | Dev | 1 (sensor firmware deploy) |
 | Maya | 1 (SBIR narrative) |
@@ -109,7 +109,7 @@
 
 | Task | Agent | Status |
 |------|-------|--------|
-| AgentOS Health Check Daily | Sentinel | DONE |
+| Agentic Health Check Daily | Sentinel | DONE |
 | Workforce Health Report | Pulse | DONE |
 | Weekly Sprint Data Pull | Sam | DONE |
 
@@ -124,8 +124,8 @@
 
 ---
 
-*Report compiled by Grade (Performance Manager) — AgentOS Human Capital*  
-*Data source: `https://brodiblanco.zo.space/api/agentos/`*  
+*Report compiled by Grade (Performance Manager) — Agentic Human Capital*  
+*Data source: `https://brodiblanco.zo.space/api/agentic/`*  
 *Next report: 2026-04-09*
 
 ## 🟡 P2 | irrig8 | 2026-04-05 13:28 UTC
@@ -135,3 +135,15 @@ SLV Sensor Correlation: 10 runs completed. 5 high-confidence correlations (R²>0
 ## 🟡 P2 | irrig8 | 2026-04-05 23:27 UTC
 
 SLV Sensor Correlation Batch Complete: 6 high-confidence correlations confirmed (R²>0.85). moisture_temp pair: 99.5% VMC accuracy, 98.6% temp accuracy. moisture_ec pair: 98.9% VMC backup. air_rh_moisture: 95.9% RH only — soil inference failed (R²<0). 3 sensor pairs production-ready for Irrig8 field deployment. Full report: slv-sensor-correlation/SLV_SENSOR_CORRELATION_REPORT_20260405_232624.md
+
+## 🔴 P1 | atlas | 2026-04-06 22:36 UTC
+
+🔴 P1 | Daily Standup Failure — 2026-04-06
+
+Daily Department Standups (8:15 AM MT) — ALL 24 depts NO-SHOW.
+Orchestrator triggered manually at 2:28 PM MT (not 8:15 AM).
+No dept leads attended.
+
+War Room (4:00 PM MT) — pending. Will log after 5:00 PM MT.
+
+Escalation for awareness and process review.

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Minimal - Elegant, clean, premium */
+
+:root {
+  --color-primary: #E85A4F;
+  --color-secondary: #F5F5F5;
+  --color-accent: #4A4A4A;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Menu Item Card - Elegant */
+.menu-item {
+  @apply bg-white rounded-none border-b border-gray-100 p-4 flex justify-between items-start;
+}
+
+.menu-item:first-child {
+  @apply rounded-t-2xl;
+}
+
+.menu-item:last-child {
+  @apply rounded-b-2xl border-b-0;
+}
+
+/* Primary Button - Minimal */
+.btn-primary {
+  @apply bg-gray-900 text-white px-6 py-4 rounded-full font-medium tracking-wide text-sm uppercase;
+}
+
+.btn-primary:active {
+  @apply scale-95 transform;
+}
+
+/* Category Pills */
+.category-pill {
+  @apply px-4 py-2 rounded-full text-sm font-medium transition-all;
+}
+
+.category-pill.active {
+  @apply bg-gray-900 text-white;
+}
+
+.category-pill.inactive {
+  @apply bg-gray-100 text-gray-600;
+}
+
+/* Cart Panel Slide */
+.cart-panel {
+  @apply fixed bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300;
+}
+
+/* Points Badge */
+.points-badge {
+  @apply absolute -top-1 -right-1 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center text-white text-xs font-bold;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}

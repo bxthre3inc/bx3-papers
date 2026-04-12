@@ -12,7 +12,7 @@
 
 ### Status: OPERATIONAL
 - No P1 escalation required
-- All mesh infrastructure in place at `the-agentos-project/mcp-mesh/`
+- All mesh infrastructure in place at `the-agentic-project/mcp-mesh/`
 - Ready for Android ↔ Server integration
 
 ### Notifications Sent

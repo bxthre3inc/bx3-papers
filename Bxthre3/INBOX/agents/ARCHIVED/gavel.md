@@ -1,6 +1,6 @@
 # Gavel — Regulatory Affairs Lead INBOX
 **Agent:** Gavel
-**Role:** Regulatory Affairs Lead — AgentOS Compliance Department
+**Role:** Regulatory Affairs Lead — Agentic Compliance Department
 **Reports to:** Counsel (Legal), Anchor (CRO)
 **Meeting Cadence:** Daily standup 8:15 AM
 **Initialized:** 2026-03-25

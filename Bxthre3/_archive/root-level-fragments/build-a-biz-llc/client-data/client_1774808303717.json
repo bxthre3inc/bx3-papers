@@ -1,0 +1,8 @@
+{
+  "name": "Test",
+  "email": "test@test.com",
+  "phone": "555-1234",
+  "ownership": "70",
+  "story": "Test story",
+  "signature": "Test Signature"
+}

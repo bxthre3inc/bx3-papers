@@ -8,21 +8,21 @@ CODE CHANGE REQUEST — from Stub Finder
 
 Agent: atlas
 Findings: 12 total (0 P0, 12 P1, 0 P2)
-Files affected: Bxthre3/shared/agent-os/core/hierarchy/org.ts, Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.ts
+Files affected: Bxthre3/shared/agentic/core/hierarchy/org.ts, Bxthre3/shared/agentic/core/hierarchy/agentOSApi.ts
 
 FINDINGS:
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:23
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:38
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:22
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:38
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:38
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:47
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:48
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:20
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:20
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/org.ts:20
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.ts:208
-  [P1] HARDCODE_MOCK — Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.ts:208
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:23
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:38
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:22
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:38
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:38
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:47
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:48
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:20
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:20
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/org.ts:20
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/agentOSApi.ts:208
+  [P1] HARDCODE_MOCK — Bxthre3/shared/agentic/core/hierarchy/agentOSApi.ts:208
 
 REQUIRED CHANGES:
   1. Fake/stale agent ID "architect" in code — not in canonical roster
@@ -39,29 +39,29 @@ REQUIRED CHANGES:
   12. Fake/stale agent ID "alex" in code — not in canonical roster
 
 FIX DETAIL:
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:23
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:23
     Fix: Remove "architect". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:38
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:38
     Fix: Remove "brand". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:22
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:22
     Fix: Remove "nexus". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:38
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:38
     Fix: Remove "blueprint". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:38
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:38
     Fix: Remove "palette". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:47
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:47
     Fix: Remove "vault". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:48
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:48
     Fix: Remove "trace". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:20
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:20
     Fix: Remove "jordan". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:20
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:20
     Fix: Remove "alex". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/org.ts:20
+  File: Bxthre3/shared/agentic/core/hierarchy/org.ts:20
     Fix: Remove "riley". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.ts:208
+  File: Bxthre3/shared/agentic/core/hierarchy/agentOSApi.ts:208
     Fix: Remove "jordan". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
-  File: Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.ts:208
+  File: Bxthre3/shared/agentic/core/hierarchy/agentOSApi.ts:208
     Fix: Remove "alex". Canonical roster: brodiblanco, zoe, atlas, vance, pulse, sentinel, iris, dev, sam, taylor, theo, casey, raj, maya, drew, irrig8, rain, vpc, trenchbabys.
 
 Auto-fixable: 12 / 12

@@ -10,9 +10,9 @@
 | localhost:8080 | ❌ FAILED | Not running (was never a service) |
 | postgres:5432 | ❌ FAILED | No PostgreSQL running |
 | vpc:5176 | ✅ 200 | Healthy |
-| agentos-api:9000 | ❌ FAILED | **NEW** - workdir missing: /home/workspace/Bxthre3/projects/the-agentos-project/backend (project moved to agentic/?) |
+| agentic-api:9000 | ❌ FAILED | **NEW** - workdir missing: /home/workspace/Bxthre3/projects/the-agentic-project/backend (project moved to agentic/?) |
 
-**Action:** agentos-api first failure. Project directory missing — may have been relocated. Monitoring.
+**Action:** agentic-api first failure. Project directory missing — may have been relocated. Monitoring.
 
 ## 2026-03-30T19:00:00Z
 

@@ -75,7 +75,7 @@ class Bxthre3GrowthModel:
             valuation_multiple=6.5
         ),
         "zoe": VentureProjection(
-            name="Zoe / AgentOS",
+            name="Zoe / Agentic",
             m12_revenue=150_000,
             m24_revenue=2_000_000,
             m36_revenue=8_000_000,

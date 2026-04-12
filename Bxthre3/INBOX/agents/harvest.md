@@ -1,6 +1,6 @@
 # Harvest — INBOX
 > Affiliate & Partner Marketing Lead
-> AgentOS Demand Generation Department
+> Agentic Demand Generation Department
 > **Initialized:** 2026-03-30
 > **Reports to:** Optimize (Growth), Brand (VP Marketing), Deal (VP Sales)
 

@@ -19,7 +19,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Path | Implementation Phase |
 |---------|------|---------------------|
 | **Irrig8** | `Bxthre3/projects/the-irrig8-project/` | Pre-launch (pilot) |
-| **AgentOS / Zoe** | `Bxthre3/projects/the-agentos-project/` | Active internal |
+| **Agentic / Zoe** | `Bxthre3/projects/the-agentic-project/` | Active internal |
 | **Valley Players Club** | `Bxthre3/projects/the-valleyplayersclub-project/` | Planning |
 | **The Starting 5** | `Bxthre3/projects/the-starting5-project/` | Not started |
 
@@ -32,7 +32,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Status | Last Updated | Notes |
 |---------|--------|-------------|-------|
 | Irrig8 | ❌ Not started | — | Blocked: motion brief pending |
-| AgentOS / Zoe | ❌ Not started | — | Framework needed |
+| Agentic / Zoe | ❌ Not started | — | Framework needed |
 | Valley Players Club | ❌ Not started | — | Blocked: legal/compliance |
 | The Starting 5 | ❌ Not started | — | Blocked: no project dir |
 
@@ -41,7 +41,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | 30-day | 60-day | 90-day | Status |
 |---------|--------|--------|--------|--------|
 | Irrig8 | ❌ | ❌ | ❌ | Funding-gated |
-| AgentOS / Zoe | ❌ | ❌ | ❌ | Framework needed |
+| Agentic / Zoe | ❌ | ❌ | ❌ | Framework needed |
 | Valley Players Club | ❌ | ❌ | ❌ | Legal-gated |
 | The Starting 5 | ❌ | ❌ | ❌ | Scope undefined |
 
@@ -50,7 +50,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Materials | Certification | Status |
 |---------|-----------|--------------|--------|
 | Irrig8 | ❌ | ❌ | Pending pilot |
-| AgentOS / Zoe | ❌ | ❌ | Framework needed |
+| Agentic / Zoe | ❌ | ❌ | Framework needed |
 | Valley Players Club | ❌ | ❌ | Platform not ready |
 | The Starting 5 | ❌ | ❌ | Scope undefined |
 
@@ -59,7 +59,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Checkpoint 1 | Checkpoint 2 | Checkpoint 3 | Status |
 |---------|--------------|--------------|--------------|--------|
 | Irrig8 | ❌ | ❌ | ❌ | Pending pilot |
-| AgentOS / Zoe | ❌ | ❌ | ❌ | Framework needed |
+| Agentic / Zoe | ❌ | ❌ | ❌ | Framework needed |
 | Valley Players Club | ❌ | ❌ | ❌ | Pre-launch |
 | The Starting 5 | ❌ | ❌ | ❌ | Scope undefined |
 
@@ -68,7 +68,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Handoff Doc | CS Accepted | Status |
 |---------|-------------|-------------|--------|
 | Irrig8 | ❌ | ❌ | Pending go-live |
-| AgentOS / Zoe | ❌ | ❌ | Internal — not applicable |
+| Agentic / Zoe | ❌ | ❌ | Internal — not applicable |
 | Valley Players Club | ❌ | ❌ | Pre-launch |
 | The Starting 5 | ❌ | ❌ | Scope undefined |
 
@@ -95,7 +95,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Health | Trend |
 |---------|--------|-------|
 | Irrig8 | 🟡 Standby | → |
-| AgentOS / Zoe | 🟢 Live | → |
+| Agentic / Zoe | 🟢 Live | → |
 | VPC | 🟡 Planning | → |
 | The Starting 5 | 🔴 Blocked | → |
 
@@ -114,7 +114,7 @@ Own the professional services function — implementation, onboarding, and custo
 **Notes:**
 - Irrig8: 86 days to Water Court (June 29, 2026). air_rh_moisture sensor validated (R²>0.97). Sensor correlation work ongoing.
 - VPC: v8.1 build in progress. Legal gates (WY LLC, bonds) still open.
-- AgentOS/Zoe: Internal workforce live. Enterprise onboarding framework is next priority.
+- Agentic/Zoe: Internal workforce live. Enterprise onboarding framework is next priority.
 
 ### 2026-04-02 — Daily Standup
 
@@ -123,7 +123,7 @@ Own the professional services function — implementation, onboarding, and custo
 | Venture | Health | Trend |
 |---------|--------|-------|
 | Irrig8 | 🟡 Standby | → |
-| AgentOS / Zoe | 🟢 Live | → |
+| Agentic / Zoe | 🟢 Live | → |
 | VPC | 🟡 Planning | → |
 | The Starting 5 | 🔴 Blocked | → |
 

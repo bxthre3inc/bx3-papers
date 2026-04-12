@@ -1,4 +1,4 @@
-# AgentOS Business Builder Playbook
+# Agentic Business Builder Playbook
 
 ## Getting Started Guide
 
@@ -11,7 +11,7 @@ Follow this playbook in order. Each phase builds on the previous.
 ## Phase 1: Foundation (Week 1)
 
 ### Day 1-2: Account Setup
-1. Activate AgentOS workspace
+1. Activate Agentic workspace
 2. Connect primary email
 3. Connect calendar (Google or Outlook)
 4. Verify integrations

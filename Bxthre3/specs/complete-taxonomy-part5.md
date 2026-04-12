@@ -106,12 +106,12 @@
 
 | Rule | Platform (AOS-*) | Products |
 |------|------------------|----------|
-| **Location** | `the-agentos-project/` | `projects/{name}/` |
+| **Location** | `the-agentic-project/` | `projects/{name}/` |
 | **Users** | Internal only | External customers |
 | **Breaking** | All agents affected | One venture |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Lead/Founder |
-| **Docs for** | AgentOS runs | Customer value |
+| **Docs for** | Agentic runs | Customer value |
 | **Revenue** | Indirect (enables) | Direct (customers) |
 
 ---
@@ -133,7 +133,7 @@ DRAFT → REVIEW → APPROVED → DEPRECATED → ARCHIVED
 
 | Category | Count | Key Types |
 |----------|-------|-----------|
-| AgentOS Platform | 15 | AOS-ARCH, SEC, API, AGENT-DEF |
+| Agentic Platform | 15 | AOS-ARCH, SEC, API, AGENT-DEF |
 | Business & Finance | 18 | BIZ, GTM, FIN, PITCH, CAC-LTV |
 | Collaboration | 15 | MTG, EM, ADR, RFC, RETRO |
 | Compliance & Regulation | 15 | HIPAA, SOX, FDA, WATER-RIGHTS |

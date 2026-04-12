@@ -18,7 +18,7 @@
 | Pop-up space secured | ☐ | |
 | Inventory ordered | ☐ | |
 | Square POS running | ☐ | |
-| AgentOS configured | ☐ | |
+| Agentic configured | ☐ | |
 | Social accounts active | ☐ | |
 | Chito Ranas deal signed | ☐ | |
 | Barber/friend confirmed | ☐ | |

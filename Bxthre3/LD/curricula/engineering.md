@@ -20,10 +20,10 @@
 
 ## Required Training Modules
 
-### Module E1 — AgentOS Architecture (All Engineers)
+### Module E1 — Agentic Architecture (All Engineers)
 **Duration:** 2 hours  
 **Format:** Self-paced + quiz  
-**File:** `the-agentos-project/AGENTOS_ARCHITECTURE_v6.2.md`
+**File:** `the-agentic-project/AGENTOS_ARCHITECTURE_v6.2.md`
 
 | Topic | Depth |
 |---|---|
@@ -40,7 +40,7 @@
 ### Module E2 — Android Integration (dev, iris)
 **Duration:** 4 hours  
 **Prerequisites:** E1  
-**File:** `the-agentos-project/mobile/`
+**File:** `the-agentic-project/mobile/`
 
 | Topic | Depth |
 |---|---|
@@ -57,7 +57,7 @@
 ### Module E3 — Backend & Mesh Server (All Backend)
 **Duration:** 3 hours  
 **Prerequisites:** E1  
-**File:** `the-agentos-project/server/`
+**File:** `the-agentic-project/server/`
 
 | Topic | Depth |
 |---|---|

@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "businessName": "Nom Nom Thai",
+    "slug": "nom-nom-thai",
+    "tagline": "Authentic Thai Cuisine in Colorado Springs",
+    "template": "modern-minimal",
+    "colors": { "primary": "#E85D04", "secondary": "#F48C06", "accent": "#2D6A4F", "background": "#FFF8F0", "text": "#4A3B2A", "dark": false }
+  }
+}

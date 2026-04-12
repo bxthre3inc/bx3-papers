@@ -89,7 +89,7 @@ A: Apply for $20K (fits current scale), mention capacity to scale to $100K.
 
 ### MCP Mesh Transport Status: ✅ READY
 
-**Mesh location:** `Bxthre3/projects/the-agentos-project/mcp-mesh/`
+**Mesh location:** `Bxthre3/projects/the-agentic-project/mcp-mesh/`
 
 **Backend integration points:**
 - Health: `GET /mesh/health`

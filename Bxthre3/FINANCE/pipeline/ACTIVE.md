@@ -49,7 +49,7 @@
 | Emergence Capital | SaaS VC | Equity | Sourced | High | Cold | Add to pipeline tracker | Network |
 | GitHub Fund | Open Source | Strategic | Sourced | High | Cold | Add to pipeline tracker | Network |
 
-### Zoe / AgentOS — Strategic ($1-2M)
+### Zoe / Agentic — Strategic ($1-2M)
 
 | Deal | Investor/Partner | Type | Stage | Score | Status | Next Action | Owner |
 |------|-----------------|------|-------|-------|--------|-------------|-------|
@@ -66,7 +66,7 @@
 | Irrig8 | 3 | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 |
 | VPC | 2 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 6 |
 | Starting 5 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 4 |
-| Zoe/AgentOS | 1 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
+| Zoe/Agentic | 1 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 |
 | **TOTAL** | **10** | **12** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **22** |
 
 ---
@@ -78,7 +78,7 @@
 | USDA SBIR Grant | Deadline Apr 5 (2 days) | Submit immediately | Maya |
 | Valley Irrigation | No dealer contact list | Research S. Luis Valley dealers | Reach |
 | VPC Cash network | Complex compliance | Drew to research alternatives | Drew |
-| Zoe/AgentOS | 93 stub findings active | Don't oversell until remediated | Iris |
+| Zoe/Agentic | 93 stub findings active | Don't oversell until remediated | Iris |
 | All outreach | Pitch deck v1 missing | Pitch + brodiblanco to align by Apr 4 | Pitch |
 
 ---
@@ -162,5 +162,5 @@ TOTAL         : 22
 
 ---
 
-*Pipeline — Deal Flow Manager | Bxthre3 Inc / AgentOS Finance Division*
+*Pipeline — Deal Flow Manager | Bxthre3 Inc / Agentic Finance Division*
 *Next update: 2026-04-04 8:15 AM (daily standup)*

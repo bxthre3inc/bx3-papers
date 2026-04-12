@@ -49,12 +49,12 @@ python3 orchestration/coherence_engine.py
 
 | Feature | Best Source |
 |--------|------------|
-| IER Router | agent-os/orchestration |
-| Phase Gates | agent-os/orchestration |
+| IER Router | agentic/orchestration |
+| Phase Gates | agentic/orchestration |
 | Workforce Registry | ABE agents/workforce_registry.py |
 | Secrets Vault | ABE sync_engine/secrets_vault.py |
 | Performance Profiles | ABE kernel/resource_monitor.py |
-| Reasoning Stream | agent-os/orchestration |
+| Reasoning Stream | agentic/orchestration |
 | SME WorkSheet Protocol | ABE tenants/irrig8/worksheet.py |
 | Tier Resolution Funnel | ABE tenants/irrig8/tier_resolution.py |
 | Pricing Funnel | ABE tenants/irrig8/pricing_funnel.py |

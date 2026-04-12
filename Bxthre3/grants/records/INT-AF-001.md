@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 7 |
 | fit_irrig8 | 7 |
-| fit_agentos | 7 |
+| fit_agentic | 7 |
 | fit_valley_players | 1 |
 | priority | P2 |
-| priority_rationale | Fit score 7/10 — AgentOS / Irrig8 (if Africa ops established) |
+| priority_rationale | Fit score 7/10 — Agentic / Irrig8 (if Africa ops established) |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |
@@ -112,7 +112,7 @@
 
 ## SECTION 8: HOW TO WIN
 
-**Notes:** UNDP Africa AgriTech incubation. First cohort starts May 2026. Could be AgentOS entry point to African market.
+**Notes:** UNDP Africa AgriTech incubation. First cohort starts May 2026. Could be Agentic entry point to African market.
 
 **Next Action:** Apply for incubation; establish Africa partner entity to qualify
 

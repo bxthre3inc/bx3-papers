@@ -9,7 +9,7 @@
 
 | Asset | Status | Evidence |
 |-------|--------|----------|
-| AgentOS (Prototype) | LIVE — Built on Zo | Active zo.space routes, APIs, agents |
+| Agentic (Prototype) | LIVE — Built on Zo | Active zo.space routes, APIs, agents |
 | MCP Mesh | Functional | Port 7779/7778 operational |
 | VPC Codebase | Built (planning) | Server running, entity NOT formed |
 | Irrig8 Codebase | Built (unfunded) | Software complete, NO field deployment |

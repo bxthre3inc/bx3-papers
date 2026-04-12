@@ -28,7 +28,7 @@ Precision agriculture OS for center-pivot irrigation in Colorado's San Luis Vall
 
 ## Synergy Vectors
 1. **Data → Zoe**: Field telemetry trains agriculture domain model
-2. **AI ← AgentOS**: Use multi-agent orchestration for complex decisions
+2. **AI ← Agentic**: Use multi-agent orchestration for complex decisions
 3. **Distribution → VPC**: Shared Valley retail presence
 
 ## GDP Attribution Model

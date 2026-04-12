@@ -1,5 +1,5 @@
 # INBOX — Claim (Tax Manager)
-**Bxthre3 Inc / AgentOS Finance Division**
+**Bxthre3 Inc / Agentic Finance Division**
 **Updated:** 2026-04-03 17:50 UTC
 
 ---
@@ -31,7 +31,7 @@
 
 **Scope Now Limited To:**
 - **Bxthre3 Inc only** (parent C-Corp)
-- **Revenue streams:** AgentOS, Irrig8 contracts, advisory
+- **Revenue streams:** Agentic, Irrig8 contracts, advisory
 - **VPC excluded:** Until formation/operations commence
 
 **Question for brodiblanco:**

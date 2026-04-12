@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Artisan Bakery - Coffee culture, pastries, beans */
+
+:root {
+  --color-primary: #92400E;
+  --color-secondary: #78350F;
+  --color-cream: #FDF6E3;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Source Sans 3', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-cream);
+}
+
+/* AM/PM menu switching */
+.am-menu { @apply block; }
+.pm-menu { @apply hidden; }
+
+[data-time="afternoon"] .am-menu { @apply hidden; }
+[data-time="afternoon"] .pm-menu { @apply block; }
+
+/* Pastry case */
+.pastry-card {
+  @apply bg-white rounded-lg shadow-sm border border-amber-100 p-3;
+}
+
+.pastry-card.sold-out {
+  @apply opacity-50 grayscale;
+}
+
+.pastry-card.sold-out::after {
+  content: 'Sold Out';
+  @apply absolute inset-0 flex items-center justify-center font-serif text-amber-700 font-bold;
+}
+
+/* Coffee bean subscription */
+.bean-sub {
+  @apply bg-gradient-to-br from-amber-800 to-amber-900 text-amber-50 p-4 rounded-xl mt-4;
+}
+
+.btn-primary {
+  @apply bg-amber-700 text-amber-50 px-8 py-4 rounded-full font-serif font-semibold shadow-lg;
+}

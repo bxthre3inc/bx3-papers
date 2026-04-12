@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "businessName": "El Pampano Foods",
+    "slug": "el-pampano",
+    "tagline": "Best Chilaquiles in Southern Colorado",
+    "template": "casual-diner",
+    "colors": { "primary": "#FDD835", "secondary": "#2E7D32", "accent": "#D32F2F", "background": "#FFFDE7", "text": "#1B5E20", "dark": false }
+  }
+}

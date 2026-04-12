@@ -34,7 +34,7 @@
 |------|------------------|----------|---------------|
 | Irrig8 | Predictive alerts | High | Rule-based fallback |
 | VPC | Customer support | Medium | Human escalation |
-| AgentOS | Task routing | Critical | Static routing table |
+| Agentic | Task routing | Critical | Static routing table |
 
 **Mitigation:**
 1. Graceful degradation protocols
@@ -52,9 +52,9 @@
 
 ---
 
-### IC-02: AgentOS Orchestration Failure
+### IC-02: Agentic Orchestration Failure
 
-**Description:** AgentOS task routing system fails, leaving OpCos operating in isolation.
+**Description:** Agentic task routing system fails, leaving OpCos operating in isolation.
 
 **Trigger Conditions:**
 - Task queue depth > 10,000
@@ -99,7 +99,7 @@
 | Irrig8 | Field telemetry ingestion | 500+ farms offline |
 | VPC | Gaming platform | All users disconnected |
 | Zoe | AI reasoning API | All assistants down |
-| AgentOS | Task orchestration | All automation stops |
+| Agentic | Task orchestration | All automation stops |
 
 **Mitigation:**
 1. Multi-AZ deployment (3+ availability zones)
@@ -135,7 +135,7 @@
 |-----------|--------------|-------------------|
 | Irrig8 farm data | High (PII) | CCPA, state privacy laws |
 | VPC customer data | Critical (financial) | Gaming regulations |
-| AgentOS operational data | Medium | Internal only |
+| Agentic operational data | Medium | Internal only |
 
 **Mitigation:**
 1. Row-level security enforcement
@@ -170,7 +170,7 @@
 | Time | Event | OpCo Affected | Recovery Action |
 |------|-------|---------------|-----------------|
 | T+0 | Ransomware detonates | All | Activate incident response |
-| T+5 min | Data lake encrypted | Irrig8, Zoe, AgentOS | Isolate affected systems |
+| T+5 min | Data lake encrypted | Irrig8, Zoe, Agentic | Isolate affected systems |
 | T+15 min | Backups detected | All | Verify immutable backup integrity |
 | T+1 hr | Ransom demand received | Executive | Engage legal/forensics |
 | T+4 hrs | Decision point: pay vs. restore | Leadership | Activate disaster recovery |
@@ -183,7 +183,7 @@
 | Irrig8 | Farm telemetry, prescriptions | $85K (crop risk) | P0 |
 | VPC | Player balances, transaction logs | $180K (regulatory) | P0 |
 | Zoe | User conversations, agent state | $45K (reputation) | P1 |
-| AgentOS | Task queues, agent assignments | $25K (operational) | P1 |
+| Agentic | Task queues, agent assignments | $25K (operational) | P1 |
 | Trenchbabys | Inventory, POS transactions | $60K (revenue loss) | P1 |
 | **Total** | — | **$395K** | — |
 

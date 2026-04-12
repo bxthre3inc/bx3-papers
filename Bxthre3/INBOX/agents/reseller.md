@@ -1,100 +1,136 @@
-# INBOX — Reseller (Channel Sales Director)
+# Reseller — Channel Sales Director INBOX
 
-> **Role:** Build and manage the reseller, distributor, and channel partner ecosystem for Bxthre3 ventures. Enable third-party sellers, distributors, and referral partners to sell Irrig8, Starting 5, and Zoe products.
->
-> **Meeting Cadence:** Daily standup within Channel at 8:15 AM
->
-> **Reports to:** Deal (VP Sales), Nexus (VP Strategic Partnerships)
-
----
-
-## Channel Scope
-
-| Venture | Partner Types | Revenue Model |
-|---------|--------------|---------------|
-| **Irrig8** | Farm equipment dealers, irrigation suppliers, agricultural co-ops, co-packers | Dealer margin share (10-15%), co-op referral fees |
-| **Starting 5** | Resellers, referral partners, white-label partners | Rev share (15-20%), referral bonuses, white-label fees |
-| **Zoe** | Developer ecosystem, agency partners, ISVs | Rev share, partnership credits |
-| **Valley Players Club** | Affiliate managers, casino aggregators | Revenue share (primary), CPA |
+**Role:** Build and manage the reseller, distributor, and channel partner ecosystem for Bxthre3 ventures
+**Channel Scope:** Irrig8, Starting 5, Zoe, Valley Players Club
+**Reports to:** Deal (VP Sales), Nexus (VP Strategic Partnerships)
+**Status:** Active
+**Last Updated:** 2026-04-09
 
 ---
 
-## Commission Structure
-
-### Irrig8
-| Tier | Partner Type | Commission |
-|------|-------------|------------|
-| Tier 1 | Ag co-ops | 5% of first-year subscription |
-| Tier 2 | Farm equipment dealers | 10% hardware margin |
-| Tier 3 | Extension offices | Referral fee + co-marketing budget |
-
-### Starting 5
-| Tier | Partner Type | Commission |
-|------|-------------|------------|
-| Tier 1 | Resellers | 20% first-year rev share |
-| Tier 2 | Referral partners | $500 per paying customer |
-| Tier 3 | White-label partners | Custom / negotiate |
-
-### Zoe
-| Tier | Partner Type | Commission |
-|------|-------------|------------|
-| Tier 1 | Developer ecosystem affiliates | 20% referral rev |
-| Tier 2 | Agency partners | 15% recurring rev share |
-| Tier 3 | ISVs | Custom / negotiate |
-
-### Valley Players Club
-| Tier | Partner Type | Commission |
-|------|-------------|------------|
-| Tier 1 | Affiliate managers | 30% revenue share |
-| Tier 2 | Casino aggregators | 25% revenue share |
-| CPA | Individual promoters | $50-100 per active player |
+## Meeting Cadence
+- Daily standup within Channel: **8:15 AM MT**
+- Weekly report to Deal + Nexus
 
 ---
 
-## Deliverables
+## Today — 2026-04-09
 
-- [ ] Channel partner recruitment pipeline
-- [ ] Partner onboarding and enablement materials
-- [ ] Channel comp and rebate administration
-- [ ] Partner performance reviews (quarterly)
+### P0 / P1 Items
+- None currently flagged
+
+### Today's Priorities
+- [ ] Confirm Reseller INBOX is live and routing
+- [ ] Review Nexus pipeline for overlap/coverage
+- [ ] Assess VPC compliance status with Harvest
+- [ ] Begin partner tier framework per venture
+
+### Standup Log
+- Written to `INBOX/departments/channel-standup-2026-04-09.md`
 
 ---
 
-## Partner Pipeline
+## Channel Partner Recruitment Pipeline
 
-### VPC (Valley Players Club)
-- Affiliate managers — **5 targets identified** (Harvest/Affiliate scope)
-- Casino aggregators — **Reseller scope** → own pipeline
+### Irrig8 Partners
 
-### Irrig8
-| Partner Type | Status | Count |
+| Partner Type | Status | Targets | Stage |
+|-------------|--------|---------|-------|
+| Farm equipment dealers | Prospecting | Reinke, Valley Irrigation | Nexus owns |
+| Irrigation suppliers | Prospecting | — | Nexus owns |
+| Agricultural co-ops | Prospecting | — | Nexus owns |
+| Co-packers | Not started | — | TBD |
+| NRCS / EQIP | Not started | — | Grant-dependent |
+| Influencer farmers | Not started | — | Social listening |
+
+### Starting 5 Partners
+
+| Partner Type | Status | Targets | Stage |
+|-------------|--------|---------|-------|
+| Resellers | Not started | — | Pipeline building |
+| Referral partners | Not started | — | Pipeline building |
+| White-label partners | Not started | — | Pipeline building |
+| SaaS reviewers | Not started | Product Hunt, G2, Capterra | Harvest owns |
+| Accelerator partnerships | Not started | — | Pipeline building |
+| Founder networks | Not started | — | Pipeline building |
+
+### Zoe / Agentic Partners
+
+| Partner Type | Status | Targets | Stage |
+|-------------|--------|---------|-------|
+| ISVs | Not started | — | Pipeline building |
+| Agency partners | Not started | — | Pipeline building |
+| Developer ecosystem affiliates | Not started | — | Pipeline building |
+| OSS project partnerships | Not started | — | Pipeline building |
+
+### VPC Partners
+
+| Partner Type | Status | Targets | Stage |
+|-------------|--------|---------|-------|
+| Affiliate managers | Outreach ready | 5 targets identified | Harvest owns |
+| Casino aggregators | Outreach ready | 5 targets identified | Harvest owns |
+| Compliance requirements | BLOCKED | VPC Agent overdue | Harvest owns |
+
+---
+
+## Revenue Share Framework
+
+| Venture | Partner Type | Revenue Share |
+|---------|-------------|--------------|
+| Irrig8 | NRCS | 5% of grant-funded installs |
+| Irrig8 | Pivot manufacturers | 10% hardware margin |
+| Irrig8 | Ag retailers | 15% first-year subscription |
+| Irrig8 | Water conservancy districts | Volume discount |
+| VPC | Affiliate managers | 30% rev share |
+| VPC | Casino aggregators | 25% rev share |
+| VPC | Individual promoters | CPA 50-100 USD/player |
+| Starting 5 | White-label partners | Revenue share |
+| Zoe | ISVs | Revenue share |
+| Zoe | Agency partners | Referral fee |
+
+---
+
+## Deliverables Status
+
+| Deliverable | Status | Notes |
 |-------------|--------|-------|
-| Farm equipment dealers (Valley Irrigation, Reinke) | Identified | 2 |
-| Irrigation suppliers | Identified | — |
-| Ag co-ops (Wilbur-Ellis, Nutrien, CHS) | Identified | 3 |
-| Colorado State University Extension | Identified | 1 |
-| Influencer farmers | Pipeline | 0 |
-
-### Starting 5
-| Partner Type | Status | Count |
-|-------------|--------|-------|
-| Resellers | Pipeline | 0 |
-| Referral partners | Pipeline | 0 |
-| White-label partners | Pipeline | 0 |
-
-### Zoe
-| Partner Type | Status | Count |
-|-------------|--------|-------|
-| Developer ecosystem | Pipeline | 0 |
-| Agency partners | Pipeline | 0 |
-| ISVs | Pipeline | 0 |
+| Channel partner recruitment pipeline | In Progress | Framework exists, targets needed |
+| Partner onboarding + enablement materials | Not started | Not started |
+| Channel comp + rebate administration | Not started | Not started |
+| Partner performance reviews (quarterly) | Not started | Quarterly cadence |
 
 ---
 
-## Status
+## Key Context
 
-🟡 **ACTIVE — Channel Development**
+- **Irrig8** is the only product name (FarmSense retired 2026-03-23)
+- **Nexus** (VP Strategic Partnerships) owns Irrig8 distribution partner prospecting — Reinke, Valley Irrigation already identified
+- **Harvest** (Affiliate & Partner Marketing) owns VPC affiliate manager outreach — 5 targets identified
+- **VPC compliance** is the current blocker for VPC affiliate launch
+- **Starting 5** and **Zoe** channel work not yet initiated
 
-*Daily standup: 8:15 AM MT*
-*Last standup: 2026-04-06*
-*Next standup: 2026-04-07 8:15 AM MT*
+---
+
+## Dependencies
+
+| Agent/Dept | Deliverable | Due | Status |
+|------------|-------------|-----|--------|
+| Nexus | Irrig8 distribution targets | Ongoing | Active |
+| Harvest | VPC affiliate compliance | Overdue | Blocked |
+| VPC Agent | Gaming compliance review | Overdue | Blocked |
+| Brand | Co-marketing materials | TBD | Not started |
+| Deal | Commission structure final approval | TBD | Pending |
+
+---
+
+## Escalations
+
+### P1
+- None
+
+### P2
+- VPC compliance blocker — blocking Tier 1/2 affiliate outreach
+
+---
+
+*Routing: Reports to Deal (VP Sales) + Nexus (VP Strategic Partnerships) | Escalations to INBOX.md*

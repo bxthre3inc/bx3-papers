@@ -13,7 +13,7 @@
 | Venture | Phase | Health | Trend |
 |---------|-------|--------|-------|
 | **Irrig8** | Pre-launch (pilot) | 🟡 Standby | → |
-| **AgentOS / Zoe** | Active internal | 🟢 Live | → |
+| **Agentic / Zoe** | Active internal | 🟢 Live | → |
 | **Valley Players Club** | Planning | 🟡 Planning | → |
 | **The Starting 5** | Not started | 🔴 Blocked | → |
 
@@ -37,7 +37,7 @@
 | 1 | Confirm Starting 5 scope with brodiblanco | brodiblanco | 🔴 P1 |
 | 2 | Request Irrig8 motion design brief | brodiblanco | 🟡 P2 |
 | 3 | Monitor VPC legal/compliance progress | Raj | 🟡 P2 |
-| 4 | Begin drafting AgentOS onboarding framework | Deliver | 🟡 P2 |
+| 4 | Begin drafting Agentic onboarding framework | Deliver | 🟡 P2 |
 
 ---
 

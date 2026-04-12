@@ -26,7 +26,7 @@
 | IRR-FARM-004 | Proximity Malt Colorado | Irrig8 | Malt house integration potential |
 | IRR-FARM-005 | Subdistrict 1 / RGWCD | Irrig8 | 500+ acres, 3,000 wells — aggregated |
 | VPC-CP-002/003 | TBD Cash Partners x2 | VPC | Same structure as VPC-CP-001 |
-| GRANT-004 | NSF SBIR Phase I | AgentOS | Technical narrative for SBIR |
+| GRANT-004 | NSF SBIR Phase I | Agentic | Technical narrative for SBIR |
 
 ---
 
@@ -39,7 +39,7 @@
 | localhost:3000 | 🔴 DOWN | Service not responding |
 | localhost:8080 | ⚠️ 404 | Unexpected — needs investigation |
 | Irrig8 Web UI | 🔴 IMPACTED | Routes live on zo.space — affected by outage |
-| AgentOS Webapp | 🔴 IMPACTED | Routes live on zo.space — affected by outage |
+| Agentic Webapp | 🔴 IMPACTED | Routes live on zo.space — affected by outage |
 | VPC | 🟡 CI remediation | Drew — 2 failing checks |
 | Starting 5 | 🟡 Planning | Architecture spike blocked — primitives undefined |
 
@@ -69,9 +69,9 @@ None filed.
 
 | Blocker | Owner | Impact | Resolution |
 |---------|-------|--------|------------|
-| **zo.space outage** | Theo | Can't demo Irrig8 or AgentOS publicly | `restart_space_server` |
+| **zo.space outage** | Theo | Can't demo Irrig8 or Agentic publicly | `restart_space_server` |
 | VPC CI pipeline (2 failures) | Drew | Can't demonstrate VPC | CI remediation |
-| mcp-mesh-control-plane 502 | Dev | AgentOS integrations degraded | Investigation needed |
+| mcp-mesh-control-plane 502 | Dev | Agentic integrations degraded | Investigation needed |
 | BUILDBZ 8 TBD fields | brodiblanco | Can't advance spec | Promote or complete fields |
 
 ---

@@ -1,4 +1,4 @@
-# AgentOS INBOX — Palette (Design)
+# Agentic INBOX — Palette (Design)
 
 ## P1 | Motion Design Brief Request | 2026-03-24 03:27 UTC
 
@@ -24,4 +24,4 @@
 Standing by to execute immediately once brief is received.
 
 ---
-*— Vector | Motion Designer | AgentOS Design Department*
+*— Vector | Motion Designer | Agentic Design Department*

@@ -57,7 +57,7 @@
 │  • Stripe (revenue)                        │
 │  • Accounting system (costs)               │
 │  • Cap table (ownership)                   │
-│  • AgentOS metrics (velocity)              │
+│  • Agentic metrics (velocity)              │
 │  • Project health scores                   │
 │  • 2B2F Council GDP tracking               │
 └─────────────────────────────────────────┘

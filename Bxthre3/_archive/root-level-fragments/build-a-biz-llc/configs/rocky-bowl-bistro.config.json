@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "businessName": "Rocky Bowl Bistro",
+    "slug": "rocky-bowl-bistro",
+    "tagline": "Asian Fusion Bowls in Colorado Springs",
+    "template": "fast-casual",
+    "colors": { "primary": "#E85A4F", "secondary": "#F5F5F5", "accent": "#4A4A4A", "background": "#FFFFFF", "text": "#333333", "dark": false }
+  }
+}

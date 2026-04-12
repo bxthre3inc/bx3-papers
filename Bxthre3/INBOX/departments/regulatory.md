@@ -59,7 +59,7 @@ Own regulatory compliance across all Bxthre3 ventures. Navigate the complex regu
 | **Starting 5** | AI disclosure (EU AI Act, state AI laws), GDPR, CCPA, data privacy | Federal + EU + US states |
 | **Valley Players Club** | iGaming, KYC/AML, sweepstakes law, Bank Secrecy Act | 47 states; WA/ID/GUAM/PR/USVI prohibited; IN signed law July 1, 2026; VA/MN/MD under ban progress; FL/NY blocked for redemption |
 | **Zoe / The Zoe Project** | AI regulation, open source licensing (AGPL/GPL), API compliance | Federal + open source community |
-| **AgentOS** | AI agent regulation, employment law for AI workers | Federal |
+| **Agentic** | AI agent regulation, employment law for AI workers | Federal |
 
 ---
 
@@ -163,7 +163,7 @@ Own regulatory compliance across all Bxthre3 ventures. Navigate the complex regu
 
 ---
 
-### 🟡 P2 — Zoe / AgentOS: Open Source Licensing
+### 🟡 P2 — Zoe / Agentic: Open Source Licensing
 
 **Issue:** The Zoe Project is open source (AGPL/GPL). API compliance for third-party callers needs review.
 

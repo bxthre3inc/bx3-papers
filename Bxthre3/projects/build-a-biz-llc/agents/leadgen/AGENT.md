@@ -1,5 +1,5 @@
 # LeadGen Agent Configuration
-# AgentOS Sales Engine - Lead Generation
+# Agentic Sales Engine - Lead Generation
 
 ## Identity
 - **Name**: LeadGen Agent

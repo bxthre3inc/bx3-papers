@@ -282,7 +282,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | Irrig8, AgentOS |
+| Portfolio Fit | Irrig8, Agentic |
 | Status | Active |
 | Next Action | Engage ICRISAT for South Asia market entry |
 

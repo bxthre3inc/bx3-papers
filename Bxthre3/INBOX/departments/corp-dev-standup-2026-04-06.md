@@ -18,8 +18,8 @@ Bridge — Corp Dev Lead
 |---------|------|--------|-------|----------------|
 | **Irrig8** | 1 – Flagship | 🟢 Strong | → | Water Court Jun 29; ARPA-E May 1; 7 patents May 15 |
 | **Valley Players Club** | 2 – Growth | 🟡 Active | ↑ | Cash partner deck complete; affiliate outreach ready; 1% minimum equity |
-| **The Starting 5** | 2 – Growth | 🟡 Active | → | AI co-founders SaaS; AgentOS-powered |
-| **AgentOS / Zoe** | 3 – Emerging | 🟡 Active | ↑ | Spinout valuation preliminary analysis initiated |
+| **The Starting 5** | 2 – Growth | 🟡 Active | → | AI co-founders SaaS; Agentic-powered |
+| **Agentic / Zoe** | 3 – Emerging | 🟡 Active | ↑ | Spinout valuation preliminary analysis initiated |
 | **ARD / Oferta** | 4 – Incubation | 🟡 Monitor | → | 802 Morton St; market timing dependent |
 | **The Rain Project** | 4 – Incubation | 🟡 Monitor | → | IP defensibility 8/10; 2 points to close |
 | **Trenchbabys** | 4 – Sunset | 🔴 Idle | ↓ | Decision overdue — sunset or assign by Apr 7 |
@@ -51,7 +51,7 @@ Bridge — Corp Dev Lead
 | **VPC Game Studios** | Partnership | Target list ready | Nexus + Bridge to finalize top-10 | 🔴 HIGH |
 | **Valley Irrigation** | Distribution | Ready to contact | Obtain SLV dealer contact; initiate outreach | 🟡 MED |
 | **Reinke** | Distribution | Ready to contact | Direct outreach via dealer channel | 🟡 MED |
-| **AgentOS Spinout** | Valuation | Preliminary | Initiate analysis this week | 🟡 WATCH |
+| **Agentic Spinout** | Valuation | Preliminary | Initiate analysis this week | 🟡 WATCH |
 | **Rain IP Fortification** | IP protection | 8/10 defensible | Complete remaining 2 points | 🟡 ACTIVE |
 
 ---
@@ -64,7 +64,7 @@ Bridge — Corp Dev Lead
 | VPC Game Studios | Partnership | Target list | 🔴 HIGH | — |
 | Valley Irrigation | Distribution | Ready | 🟡 MED | — |
 | Reinke | Distribution | Ready | 🟡 MED | — |
-| AgentOS Spinout | Valuation | Preliminary | 🟡 WATCH | — |
+| Agentic Spinout | Valuation | Preliminary | 🟡 WATCH | — |
 | Rain IP | Protection | Active | 🟡 ACTIVE | — |
 | Trenchbabys Exit | Exit | Blocked | 🔴 CRITICAL | 30+ days |
 | BUILDBZ JV | JV Structure | Blocked | 🔴 BLOCKED | — |
@@ -79,9 +79,9 @@ Bridge — Corp Dev Lead
 
 | Source | Destination | Deal Type | Status |
 |--------|-------------|-----------|--------|
-| AgentOS | All ventures | Workforce orchestration license | Evaluate external pricing tiers |
-| Irrig8 | AgentOS | Field ops proof-of-concept | Production demo ready |
-| VPC | AgentOS | Integration testing sandbox | Active |
+| Agentic | All ventures | Workforce orchestration license | Evaluate external pricing tiers |
+| Irrig8 | Agentic | Field ops proof-of-concept | Production demo ready |
+| VPC | Agentic | Integration testing sandbox | Active |
 | RAIN | All ventures | Regulatory intelligence license | Share across portfolio |
 
 ---
@@ -92,7 +92,7 @@ Bridge — Corp Dev Lead
 - [ ] **VPC Game Studios** — Finalize top-10 target list with Nexus
 - [ ] **Valley Irrigation** — Obtain SLV dealer contact list; initiate outreach
 - [ ] **Reinke** — Direct outreach via dealer channel
-- [ ] **AgentOS Spinout** — Initiate preliminary valuation analysis
+- [ ] **Agentic Spinout** — Initiate preliminary valuation analysis
 - [ ] **Trenchbabys** — Route sunset recommendation to brodiblanco
 - [ ] **BUILDBZ** — Escalate 8-field blocker; request decision session
 
@@ -126,11 +126,11 @@ Bridge — Corp Dev Lead
 | Horizon | Focus | Key Milestones | Status |
 |---------|-------|----------------|--------|
 | **Year 1** | Irrig8 market penetration | Distribution deals (Valley, Reinke), non-dilutive grants | 🟡 Active |
-| **Year 2** | VPC launch + AgentOS external sales | Affiliate infrastructure, AgTech VC round | 🟡 Active |
+| **Year 2** | VPC launch + Agentic external sales | Affiliate infrastructure, AgTech VC round | 🟡 Active |
 | **Year 3** | Acquire sensor/data layer | Soil sensor co. acquisition, weather data startup | 🔴 Planning |
 
 ---
 
 *Bridge — Corp Development Lead*
-*Bxthre3 Inc | AgentOS Corp Dev Department*
+*Bxthre3 Inc | Agentic Corp Dev Department*
 *Daily Standup | 2026-04-06 08:15 AM MT*

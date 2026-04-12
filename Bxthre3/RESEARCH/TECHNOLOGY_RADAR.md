@@ -27,7 +27,7 @@
 | Technology | Signal | Bxthre3 Relevance | Status |
 |---|---|---|---|
 | **OpenClaw** | 210K GitHub stars; inside OpenAI ecosystem; wearable StepClaw launched; enterprise gate holds | Commoditization risk for horizontal tooling; moat is vertical depth + deterministic data | Positioning doc needed before AgentCon May 4 |
-| **Agency Agents** | 35K stars; 51 AI specialists across 9 departments | Proof that multi-agent company models work; AgentOS already has more | Monitor |
+| **Agency Agents** | 35K stars; 51 AI specialists across 9 departments | Proof that multi-agent company models work; Agentic already has more | Monitor |
 | **Self-Evolving Agents (Meta)** | Data-free agent adaptation via HRPO; matches supervised agents | Could reduce Irrig8 vertical expansion costs; long-term watch | Research phase |
 
 ### 🟢 HOLD
@@ -35,8 +35,8 @@
 | Technology | Signal | Rationale |
 |---|---|---|
 | **Claude Opus 4.6** | Still leads SWE-bench coding; no major update this cycle | No change; monitor for Claude 5.x |
-| **CrewAI** | Growing enterprise adoption; multi-agent orchestration | AgentOS already operational with more agents |
-| **LangChain** | Developer framework, wide adoption | Zo/AgentOS = higher abstraction |
+| **CrewAI** | Growing enterprise adoption; multi-agent orchestration | Agentic already operational with more agents |
+| **LangChain** | Developer framework, wide adoption | Zo/Agentic = higher abstraction |
 | **AutoGPT** | Consumer agentic AI, broad awareness | No domain depth; not Bxthre3 moat |
 
 ### ⚫ ARCHIVED
@@ -73,14 +73,14 @@
 
 | Technology | Signal | Bxthre3 Relevance | Status |
 |---|---|---|---|
-| **Lightpanda** | Headless browser built for agents; 11x faster, 9x less memory than Chromium | Monitor for AgentOS browser automation needs | Monitoring |
+| **Lightpanda** | Headless browser built for agents; 11x faster, 9x less memory than Chromium | Monitor for Agentic browser automation needs | Monitoring |
 | **llmfit** | Hardware benchmarking CLI; benchmarks every model against your hardware | Useful for Engineering toolchain decisions | Monitoring |
 
 ### 🟢 HOLD
 
 | Technology | Signal | Rationale |
 |---|---|---|
-| **Nvidia NeMoClaw** | Enterprise on-prem agent deployment | Monitor for AgentOS enterprise tier需求 | Future |
+| **Nvidia NeMoClaw** | Enterprise on-prem agent deployment | Monitor for Agentic enterprise tier需求 | Future |
 
 ---
 
@@ -90,14 +90,14 @@
 
 | Trend | Signal | Bxthre3 Relevance | Status |
 |---|---|---|---|
-| **AI Agent Scaling Gap** | 78% pilot, 14% production (March 2026, 650 enterprises) | VALIDATION: gap is operational, not technical. AgentOS has deterministic UX + sensor data + operational structure | Messaging asset for sales/marketing |
+| **AI Agent Scaling Gap** | 78% pilot, 14% production (March 2026, 650 enterprises) | VALIDATION: gap is operational, not technical. Agentic has deterministic UX + sensor data + operational structure | Messaging asset for sales/marketing |
 
 ### 🟡 EVALUATE
 
 | Trend | Signal | Bxthre3 Relevance | Status |
 |---|---|---|---|
 | **AI-SPM (AI Security Posture Management)** | New category; MCP CVE tracking active | Sentinel/Vault should evaluate tooling | Engagement pending |
-| **Multi-Agent LLM Academic Codification** | IGI Global research chapter published; patterns now mainstream | Position AgentOS in academic framing; potential research dataset from Irrig8 energy data | Long-term |
+| **Multi-Agent LLM Academic Codification** | IGI Global research chapter published; patterns now mainstream | Position Agentic in academic framing; potential research dataset from Irrig8 energy data | Long-term |
 
 ---
 

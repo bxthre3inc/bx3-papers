@@ -5,7 +5,7 @@
 **Date:** 2026-04-02
 
 ## Critical Finding
-- `ORG-CHART.md` missing at expected path: `/home/workspace/Bxthre3/agent-os-v2/ORG-CHART.md`
+- `ORG-CHART.md` missing at expected path: `/home/workspace/Bxthre3/agentic-v2/ORG-CHART.md`
 - `meeting-helpers.py` found at alternate path: `/home/workspace/Bxthre3/workspace/Skills/meeting-orchestrator/scripts/meeting-helpers.py`
 - Used AGENTS.md department roster data instead
 
@@ -54,8 +54,8 @@ Sync Agent scheduled for 8:15 AM MT but triggered ~14:20 MT (6+ hours late). Lik
 3. **All 24 depts** — Hold makeup standups 2026-04-03 8:15 AM
 
 ## Active P0s (from INBOX.md)
-- AgentOS `/api/agentos/data/aggregated` route broken (import errors)
-- AgentOS `agentos` service down (symlink/workdir issue)
+- Agentic `/api/agentic/data/aggregated` route broken (import errors)
+- Agentic `agentic` service down (symlink/workdir issue)
 
 ## SMS Sent
 - 🔴 SMS to brodiblanco: Critical infrastructure issues + standup delay

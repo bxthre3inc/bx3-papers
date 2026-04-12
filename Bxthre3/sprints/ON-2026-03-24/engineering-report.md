@@ -24,7 +24,7 @@ Overnight sprint executed with focus on grant pipeline audit, unified dashboard,
 |------|--------|-------|
 | Grant Pipeline Audit | ✅ COMPLETE | All 7 batches reviewed, audit report created |
 | Unified Dashboard | ✅ COMPLETE | Created `Bxthre3/DASHBOARD.md` with venture + service status |
-| System Dependency Map | 🔄 PARTIAL | Dependencies documented for Irrig8 and AgentOS projects |
+| System Dependency Map | 🔄 PARTIAL | Dependencies documented for Irrig8 and Agentic projects |
 | Service Health Review | ✅ COMPLETE | Confirmed degraded state, no new failures |
 
 **Total Tasks Completed:** 4

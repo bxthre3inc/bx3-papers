@@ -1,4 +1,4 @@
-# Build-A-Biz LLC - AgentOS Sales Engine
+# Build-A-Biz LLC - Agentic Sales Engine
 # Master Agent Configuration Directory
 
 ## Overview

@@ -27,8 +27,8 @@
 | FED-US-003 | CIG Colorado LOI | $500K | 2026-04-28 | DRAFTING | In progress — submit to Casey by EOD |
 | STA-CO-002 | CO Climate Resilience | $125K | 2026-04-28 | QUEUED | Start after CIG |
 | FED-US-008 | WaterSMART | $2M | 2026-11-15 | QUEUED | Large app, start research phase now |
-| FED-SBIR-001 | USDA SBIR (AgentOS) | $175K | 2026-07-02 | QUEUED | Use GFS narrative |
-| AGENT-001 | NSF SBIR (AgentOS) | $256K | 2026-06-01 | QUEUED | AI workforce angle |
+| FED-SBIR-001 | USDA SBIR (Agentic) | $175K | 2026-07-02 | QUEUED | Use GFS narrative |
+| AGENT-001 | NSF SBIR (Agentic) | $256K | 2026-06-01 | QUEUED | AI workforce angle |
 
 ---
 
@@ -42,7 +42,7 @@
 | Executive Summary | `docs/html/executive-summary.html` |
 | Team Bios | `docs/html/team-leadership.html` |
 | VPC One Pager | `projects/the-valleyplayersclub-project/docs/VPC_ONE_PAGER.md` |
-| AgentOS Architecture | `projects/the-agentos-project/ARCHITECTURE.md` |
+| Agentic Architecture | `projects/the-agentic-project/ARCHITECTURE.md` |
 
 ---
 

@@ -50,12 +50,12 @@
 **Why it surfaced:** Regulatory Radar + Competitive Silence  
 **Competitors:** BASF Circalo (Corn Belt only), Verity/CIBO (general), incite.ag (general ethanol CI)  
 **Revenue model:** License to ethanol plants (POET, Green Plains, Valero) — $50-200K/plant/year  
-**AgentOS build estimate:** 6-8 weeks for MVP  
+**Agentic build estimate:** 6-8 weeks for MVP  
 **Human involvement:** ~40% (legal, BD, plant relationships)  
 **Sources:** BASF Circalo launch Feb 2026; EPA/GREET methodology documentation; Ethanol RFA farm-level CI report May 2024
 
 **Scanner verdict:** PASS — fails automation gate. Requires patent attorney + ethanol plant LOIs + ongoing relationship management. Not 100% automatable.  
-**Your call:** Override? If you grade B or above, AgentOS will build it with human-assisted BD layer.
+**Your call:** Override? If you grade B or above, Agentic will build it with human-assisted BD layer.
 
 ---
 
@@ -85,22 +85,22 @@
 | G1: Blue Ocean | ❌ Fail | Crowded market — MicroMVP, Co-Founder AI, MicroCorp, tons of vertical AI agents |
 | G2: Automation | ✅ Pass | 100% self-serve, Stripe, no human needed |
 | G3: Speed | ✅ Pass | Landing page + Stripe = 2-3 weeks to first revenue |
-| G4: Bxthre3 Fit | ✅ Pass | AgentOS can build and run it |
+| G4: Bxthre3 Fit | ✅ Pass | Agentic can build and run it |
 
 **Why it surfaced:** Forum Mining (HN, Reddit complaints about expensive human co-founders)  
 **Competitors:** MicroMVP, Co-Founder AI, MicroCorp, MicroAcquire, StartupSesh — all active  
 **Revenue model:** $49/mo subscription via Stripe, self-serve checkout  
-**AgentOS build estimate:** 2-3 weeks  
+**Agentic build estimate:** 2-3 weeks  
 **Human involvement:** ~5% (approve copy + pricing)  
 **Sources:** Y Combinator 2025 cohort data; AngelList AI co-founder listings
 
 **Scanner verdict:** PASS — not blue ocean. Red ocean micro-SaaS. But generates cash fast.  
-**Your call:** Override? If you grade B or above, AgentOS builds it as a cash-generating side product.
+**Your call:** Override? If you grade B or above, Agentic builds it as a cash-generating side product.
 
 ---
 
 ### O-003: Irrig8 Water Court Evidence Automation
-**One-liner:** AgentOS-powered automated evidence package generator for Colorado Water Court — compiles satellite imagery, sensor data, neighboring system data, and historical patterns into court-ready documentation for irrigation water rights.
+**One-liner:** Agentic-powered automated evidence package generator for Colorado Water Court — compiles satellite imagery, sensor data, neighboring system data, and historical patterns into court-ready documentation for irrigation water rights.
 
 **Gates:** G1(Pass) | G2(Pass) | G3(Fail) | G4(Pass)  
 **Scanner score:** 3.7/5.0  
@@ -123,19 +123,19 @@
 | Gate | Status | Notes |
 |---|---|---|
 | G1: Blue Ocean | ✅ Pass | No product exists that automates Water Court evidence for irrigation rights |
-| G2: Automation | ✅ Pass | 100% AgentOS-buildable, automated report generation |
+| G2: Automation | ✅ Pass | 100% Agentic-buildable, automated report generation |
 | G3: Speed | ❌ Fail | Water Court hearing June 2026 — timeline is 3 months, tight |
 | G4: Bxthre3 Fit | ✅ Pass | Direct fit with Irrig8 data pipeline and Water Court prep |
 
 **Why it surfaced:** Regulatory Radar (Colorado Water Court rules) + Competitive Silence (no incumbents doing this)  
 **Competitors:** None identified — manual law firm process dominant  
 **Revenue model:** Direct service to Irrig8 pilot farmers + potential referral to water rights attorneys  
-**AgentOS build estimate:** 4-6 weeks  
+**Agentic build estimate:** 4-6 weeks  
 **Human involvement:** ~15% (you reviewing final evidence package before filing)  
 **Sources:** Colorado Water Court Division 3 (San Luis Valley) procedures; existing Water Court evidence requirements
 
 **Scanner verdict:** PASS — true blue ocean, passes automation. But timeline is tight for June 2026 hearing.  
-**Your call:** If you grade B+, AgentOS builds it for the June hearing. If you grade C, it parks until after Water Court.
+**Your call:** If you grade B+, Agentic builds it for the June hearing. If you grade C, it parks until after Water Court.
 
 ---
 

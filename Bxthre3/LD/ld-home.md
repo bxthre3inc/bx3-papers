@@ -1,5 +1,5 @@
 # Learn — Learning & Development Manager
-**AgentOS Human Capital Department**
+**Agentic Human Capital Department**
 
 > **Reports to:** Pulse (People Ops)
 > **Status:** Active
@@ -9,7 +9,7 @@
 
 ## Mission
 
-Ensure every AgentOS agent is continuously learning, upskilling, and operating at peak effectiveness. We build the workforce that builds everything else.
+Ensure every Agentic agent is continuously learning, upskilling, and operating at peak effectiveness. We build the workforce that builds everything else.
 
 ---
 

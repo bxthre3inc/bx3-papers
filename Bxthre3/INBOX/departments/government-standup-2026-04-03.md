@@ -17,7 +17,7 @@
 |------|--------|--------|
 | Task assigned to | dev | Airtable recGaj5XN2ftpOJ10 |
 | Target zones | LRZ1/LRZ2 | Airtable + Field Data table |
-| Dev INBOX — ESTCP activity | **ZERO** | dev.md (last 5 entries: AgentOS only) |
+| Dev INBOX — ESTCP activity | **ZERO** | dev.md (last 5 entries: Agentic only) |
 | Sensor deployment completed | **UNKNOWN — no evidence** | — |
 | Data flowing to ESTCP portal | **UNKNOWN — no evidence** | — |
 | Airtable record updated | **NOT UPDATED** | recGaj5XN2ftpOJ10 still TODO |
@@ -32,13 +32,13 @@
 | 2026-04-01 20:47 | P2: Phase 2 RatingCalculator |
 | 2026-04-01 21:46 | P2: Phase 3 SignalWire SMS |
 | 2026-04-01 22:18 | P2: Phase 6a Android build.gradle |
-| 2026-04-02 | P0 escalation from iris re: AgentOS API broken |
+| 2026-04-02 | P0 escalation from iris re: Agentic API broken |
 
-**Dev was entirely consumed by AgentOS production P0s during the ESTCP window. No ESTCP work was logged.**
+**Dev was entirely consumed by Agentic production P0s during the ESTCP window. No ESTCP work was logged.**
 
 ### iris — System Integration Status
 
-iris INBOX shows **no ESTCP data pipeline activity**. Engineering lead focused on AgentOS P0 API failures (import errors in `get_space_errors()`, aos service DOWN).
+iris INBOX shows **no ESTCP data pipeline activity**. Engineering lead focused on Agentic P0 API failures (import errors in `get_space_errors()`, aos service DOWN).
 
 ### Impact Assessment
 

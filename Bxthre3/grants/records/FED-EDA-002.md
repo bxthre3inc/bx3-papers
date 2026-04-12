@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 7 |
 | fit_irrig8 | 3 |
-| fit_agentos | 7 |
+| fit_agentic | 7 |
 | fit_valley_players | 1 |
 | priority | P2 |
-| priority_rationale | Fit score 7/10 — AgentOS (AI tech hub designation), ARD |
+| priority_rationale | Fit score 7/10 — Agentic (AI tech hub designation), ARD |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |

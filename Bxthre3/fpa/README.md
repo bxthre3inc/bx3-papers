@@ -1,5 +1,5 @@
 # FP&A — Financial Planning & Analysis
-**Bxthre3 Inc / AgentOS Finance Division**
+**Bxthre3 Inc / Agentic Finance Division**
 
 ---
 

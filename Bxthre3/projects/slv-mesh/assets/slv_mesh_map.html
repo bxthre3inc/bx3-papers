@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_41575b090ab70ef66473ff0db198aa8d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 30px; left: 30px; z-index: 1000; 
+     background: white; padding: 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+     font-family: Arial, sans-serif; font-size: 12px;">
+<b>SLV Mesh — Node Locations</b><br>
+<span style="color:#922b21;">●</span> Hub (Alamosa, MV)<br>
+<span style="color:#154360;">●</span> Town Node<br>
+<span style="color:#a04000;">●</span> Relay Node<br>
+<span style="color:#27ae60;">- -</span> N-S Backbone<br>
+<span style="color:#8e44ad;">- -</span> Branch routes<br>
+<span style="color:#888;">⭘</span> Tolerance zone (click node)
+</div>
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000;
+     background: white; padding: 8px 16px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+     font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;">
+SLV Mesh Network — San Luis Valley, Colorado
+</div>
+    
+            <div class="folium-map" id="map_41575b090ab70ef66473ff0db198aa8d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_41575b090ab70ef66473ff0db198aa8d = L.map(
+                "map_41575b090ab70ef66473ff0db198aa8d",
+                {
+                    center: [37.55, -106.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c7335e7b816097396873f98faffcf61c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c7335e7b816097396873f98faffcf61c.addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var tile_layer_e086c9b6b6920ad71e0611ccd5223c0a = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e086c9b6b6920ad71e0611ccd5223c0a.addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var tile_layer_9ee6c7a775be181138ff93a81c5f13a6 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9ee6c7a775be181138ff93a81c5f13a6.addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var circle_065d689a210c64a098851cad4fe6fd3f = L.circle(
+                [37.089, -106.01],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a5276", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2500.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_64e224a7432ddbcd64c39676361db96d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d2e434a81a4c78f3aa70e5e59d50d72e = $(`<div id="html_d2e434a81a4c78f3aa70e5e59d50d72e" style="width: 100.0%; height: 100.0%;"><b>A: Antonito</b><br>Type: Town<br>Tolerance: 2.5km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_64e224a7432ddbcd64c39676361db96d.setContent(html_d2e434a81a4c78f3aa70e5e59d50d72e);
+            
+        
+
+        circle_065d689a210c64a098851cad4fe6fd3f.bindPopup(popup_64e224a7432ddbcd64c39676361db96d)
+        ;
+
+        
+    
+    
+            var circle_fde5f1da60dccfb8b87941141a215bdb = L.circle(
+                [37.089, -106.01],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#154360", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2500.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_c148f02feb07518c200d57bdaed85689 = L.marker(
+                [37.089, -106.01],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_5e97ae37db7a1a0211e47a07d539dc66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "154360",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a275650cb4a61a0700f1ef2ac7ad8621 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3679ef6100f8178edea05de4a3a2f194 = $(`<div id="html_3679ef6100f8178edea05de4a3a2f194" style="width: 100.0%; height: 100.0%;"><b>A: Antonito</b><br>Type: Town<br>GPS: 37.089, -106.01<br>Tolerance: 2.5km radius</div>`)[0];
+                popup_a275650cb4a61a0700f1ef2ac7ad8621.setContent(html_3679ef6100f8178edea05de4a3a2f194);
+            
+        
+
+        marker_c148f02feb07518c200d57bdaed85689.bindPopup(popup_a275650cb4a61a0700f1ef2ac7ad8621)
+        ;
+
+        
+    
+    
+                marker_c148f02feb07518c200d57bdaed85689.setIcon(icon_5e97ae37db7a1a0211e47a07d539dc66);
+            
+    
+            var marker_cdc3dbaf9e74b97882041aee93a1d454 = L.marker(
+                [37.089, -106.01],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_11e439326e79e2a3eeb38e3334bb6697 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#154360; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eA \u2014 Antonito\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_cdc3dbaf9e74b97882041aee93a1d454.setIcon(div_icon_11e439326e79e2a3eeb38e3334bb6697);
+            
+    
+            var circle_d337cd59aeeffad7f46905b47c1ae326 = L.circle(
+                [37.288, -106.075],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a5276", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2500.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_672db5a303e5bae01d26f619c2806845 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9f0e0e0d2946d32f37455a52f182b830 = $(`<div id="html_9f0e0e0d2946d32f37455a52f182b830" style="width: 100.0%; height: 100.0%;"><b>B: La Jara</b><br>Type: Town<br>Tolerance: 2.5km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_672db5a303e5bae01d26f619c2806845.setContent(html_9f0e0e0d2946d32f37455a52f182b830);
+            
+        
+
+        circle_d337cd59aeeffad7f46905b47c1ae326.bindPopup(popup_672db5a303e5bae01d26f619c2806845)
+        ;
+
+        
+    
+    
+            var circle_03c2a9ab59cb0c0e783a082403222f31 = L.circle(
+                [37.288, -106.075],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#154360", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2500.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_94a102ff3eca2cedb03cd12f2358f4f8 = L.marker(
+                [37.288, -106.075],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_40e8fe791947815e047d83f752169f99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "154360",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a33708dacea2888ec7738e7ea50be75 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aa06908d120fa854d5843a6021702932 = $(`<div id="html_aa06908d120fa854d5843a6021702932" style="width: 100.0%; height: 100.0%;"><b>B: La Jara</b><br>Type: Town<br>GPS: 37.288, -106.075<br>Tolerance: 2.5km radius</div>`)[0];
+                popup_6a33708dacea2888ec7738e7ea50be75.setContent(html_aa06908d120fa854d5843a6021702932);
+            
+        
+
+        marker_94a102ff3eca2cedb03cd12f2358f4f8.bindPopup(popup_6a33708dacea2888ec7738e7ea50be75)
+        ;
+
+        
+    
+    
+                marker_94a102ff3eca2cedb03cd12f2358f4f8.setIcon(icon_40e8fe791947815e047d83f752169f99);
+            
+    
+            var marker_d440b2073f4b3cf47a4f6a9122fa9e7b = L.marker(
+                [37.288, -106.075],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_71a82b9de350cd91324d01793898de18 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#154360; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eB \u2014 La Jara\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_d440b2073f4b3cf47a4f6a9122fa9e7b.setIcon(div_icon_71a82b9de350cd91324d01793898de18);
+            
+    
+            var circle_344561576e1104df1de64d8b8ac24c3e = L.circle(
+                [37.452, -105.78],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a04000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_759a02fb1238738e51935a80a8d8bb7a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dbd5d8a80348990ed24d56c775f1b23b = $(`<div id="html_dbd5d8a80348990ed24d56c775f1b23b" style="width: 100.0%; height: 100.0%;"><b>R1: Alamosa N Rural</b><br>Type: Relay<br>Tolerance: 3.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_759a02fb1238738e51935a80a8d8bb7a.setContent(html_dbd5d8a80348990ed24d56c775f1b23b);
+            
+        
+
+        circle_344561576e1104df1de64d8b8ac24c3e.bindPopup(popup_759a02fb1238738e51935a80a8d8bb7a)
+        ;
+
+        
+    
+    
+            var circle_ae04d48eb177a30ed884964bc7e18bef = L.circle(
+                [37.452, -105.78],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#6e2f00", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 3000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_b87b14250cfe455b2abed458d19e64dc = L.marker(
+                [37.452, -105.78],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_e01db8efb6218d9725a4e640e8628675 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "6e2f00",
+  "iconColor": "white",
+  "icon": "arrow-right",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_425bc48973399a70adbe3a21931c90cd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_30b13c2ad6253093eafd8e7263a5039e = $(`<div id="html_30b13c2ad6253093eafd8e7263a5039e" style="width: 100.0%; height: 100.0%;"><b>R1: Alamosa N Rural</b><br>Type: Relay<br>GPS: 37.452, -105.78<br>Tolerance: 3.0km radius</div>`)[0];
+                popup_425bc48973399a70adbe3a21931c90cd.setContent(html_30b13c2ad6253093eafd8e7263a5039e);
+            
+        
+
+        marker_b87b14250cfe455b2abed458d19e64dc.bindPopup(popup_425bc48973399a70adbe3a21931c90cd)
+        ;
+
+        
+    
+    
+                marker_b87b14250cfe455b2abed458d19e64dc.setIcon(icon_e01db8efb6218d9725a4e640e8628675);
+            
+    
+            var marker_dcf120c9403154d6f888f23350f18fcb = L.marker(
+                [37.452, -105.78],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_7c8f0e8b4ff03ec1aa1d4f8876c52a34 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#6e2f00; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eR1 \u2014 Alamosa N Rural\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_dcf120c9403154d6f888f23350f18fcb.setIcon(div_icon_7c8f0e8b4ff03ec1aa1d4f8876c52a34);
+            
+    
+            var circle_a5691ff17eee42694fabacfb26e6ea78 = L.circle(
+                [37.47, -105.87],
+                {"bubblingMouseEvents": true, "color": "#922b21", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_0d3b80a157eece2c9b2727f9e96ba225 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_49c4579ceab50dbbf469e53e27449965 = $(`<div id="html_49c4579ceab50dbbf469e53e27449965" style="width: 100.0%; height: 100.0%;"><b>C: Alamosa (HUB)</b><br>Type: Hub<br>Tolerance: 3.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_0d3b80a157eece2c9b2727f9e96ba225.setContent(html_49c4579ceab50dbbf469e53e27449965);
+            
+        
+
+        circle_a5691ff17eee42694fabacfb26e6ea78.bindPopup(popup_0d3b80a157eece2c9b2727f9e96ba225)
+        ;
+
+        
+    
+    
+            var circle_b4298ff98714b6fc3e6312a86290758a = L.circle(
+                [37.47, -105.87],
+                {"bubblingMouseEvents": true, "color": "#922b21", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#922b21", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 3000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_4be5f4a76eff021569005a851bc5d379 = L.marker(
+                [37.47, -105.87],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_d687a41f3b70ac72c29fd34f3b635bf1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "922b21",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a76fd51d7ef4f2ba22d45d401533ddf9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cf19e011465b5bcfb1563a21934035d0 = $(`<div id="html_cf19e011465b5bcfb1563a21934035d0" style="width: 100.0%; height: 100.0%;"><b>C: Alamosa (HUB)</b><br>Type: Hub<br>GPS: 37.47, -105.87<br>Tolerance: 3.0km radius</div>`)[0];
+                popup_a76fd51d7ef4f2ba22d45d401533ddf9.setContent(html_cf19e011465b5bcfb1563a21934035d0);
+            
+        
+
+        marker_4be5f4a76eff021569005a851bc5d379.bindPopup(popup_a76fd51d7ef4f2ba22d45d401533ddf9)
+        ;
+
+        
+    
+    
+                marker_4be5f4a76eff021569005a851bc5d379.setIcon(icon_d687a41f3b70ac72c29fd34f3b635bf1);
+            
+    
+            var marker_c6aae7945fdd5e667d91f659820a8b1e = L.marker(
+                [37.47, -105.87],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_ab36e0915bd8e8c1a4558ccdeecf68ce = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#922b21; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eC \u2014 Alamosa (HUB)\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_c6aae7945fdd5e667d91f659820a8b1e.setIcon(div_icon_ab36e0915bd8e8c1a4558ccdeecf68ce);
+            
+    
+            var circle_aa04ae9a251fd639acfbc00d018d8955 = L.circle(
+                [37.53, -105.86],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a04000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_7173f58531c001fd721b2cbcb2800690 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fad29f1804772a172e307f9f4173f6db = $(`<div id="html_fad29f1804772a172e307f9f4173f6db" style="width: 100.0%; height: 100.0%;"><b>R2: MV/Alamosa Gap</b><br>Type: Relay<br>Tolerance: 3.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_7173f58531c001fd721b2cbcb2800690.setContent(html_fad29f1804772a172e307f9f4173f6db);
+            
+        
+
+        circle_aa04ae9a251fd639acfbc00d018d8955.bindPopup(popup_7173f58531c001fd721b2cbcb2800690)
+        ;
+
+        
+    
+    
+            var circle_92b841fe9ab8e56227d3c8a6234c8306 = L.circle(
+                [37.53, -105.86],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#6e2f00", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 3000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_ca11d080eb7a77ce345da35f14568c92 = L.marker(
+                [37.53, -105.86],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_b2af1766db6a8ce27851aa9bbbd4432d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "6e2f00",
+  "iconColor": "white",
+  "icon": "arrow-right",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f95ad30b730453fc3872bcb91783ce89 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a9ee63e7cb9589f17ef8983e717e3b73 = $(`<div id="html_a9ee63e7cb9589f17ef8983e717e3b73" style="width: 100.0%; height: 100.0%;"><b>R2: MV/Alamosa Gap</b><br>Type: Relay<br>GPS: 37.53, -105.86<br>Tolerance: 3.0km radius</div>`)[0];
+                popup_f95ad30b730453fc3872bcb91783ce89.setContent(html_a9ee63e7cb9589f17ef8983e717e3b73);
+            
+        
+
+        marker_ca11d080eb7a77ce345da35f14568c92.bindPopup(popup_f95ad30b730453fc3872bcb91783ce89)
+        ;
+
+        
+    
+    
+                marker_ca11d080eb7a77ce345da35f14568c92.setIcon(icon_b2af1766db6a8ce27851aa9bbbd4432d);
+            
+    
+            var marker_b324ad411e0703ee1181ba708c84f9d1 = L.marker(
+                [37.53, -105.86],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_2ae13aa995a47e29ca6875b74d83c517 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#6e2f00; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eR2 \u2014 MV/Alamosa Gap\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_b324ad411e0703ee1181ba708c84f9d1.setIcon(div_icon_2ae13aa995a47e29ca6875b74d83c517);
+            
+    
+            var circle_ab181150d0299575a720b7df2e336a28 = L.circle(
+                [37.617, -106.148],
+                {"bubblingMouseEvents": true, "color": "#922b21", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_f25effc7584a5f82eae0bf3d352201d3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_77b117810e4dcda78bd52519e350d2f6 = $(`<div id="html_77b117810e4dcda78bd52519e350d2f6" style="width: 100.0%; height: 100.0%;"><b>D: Monte Vista (MVP)</b><br>Type: Hub<br>Tolerance: 3.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_f25effc7584a5f82eae0bf3d352201d3.setContent(html_77b117810e4dcda78bd52519e350d2f6);
+            
+        
+
+        circle_ab181150d0299575a720b7df2e336a28.bindPopup(popup_f25effc7584a5f82eae0bf3d352201d3)
+        ;
+
+        
+    
+    
+            var circle_56ff7dd01e1cadb61758c152f1f2266e = L.circle(
+                [37.617, -106.148],
+                {"bubblingMouseEvents": true, "color": "#922b21", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#922b21", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 3000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_6305e5d5136bdf43f335682629108045 = L.marker(
+                [37.617, -106.148],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_d5c1a11cd5c57102fdea4f4da921606c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "922b21",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffdbead1cb6652d7f881d1fa78e4e93e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3af60596ae43627254edf2305b835a6b = $(`<div id="html_3af60596ae43627254edf2305b835a6b" style="width: 100.0%; height: 100.0%;"><b>D: Monte Vista (MVP)</b><br>Type: Hub<br>GPS: 37.617, -106.148<br>Tolerance: 3.0km radius</div>`)[0];
+                popup_ffdbead1cb6652d7f881d1fa78e4e93e.setContent(html_3af60596ae43627254edf2305b835a6b);
+            
+        
+
+        marker_6305e5d5136bdf43f335682629108045.bindPopup(popup_ffdbead1cb6652d7f881d1fa78e4e93e)
+        ;
+
+        
+    
+    
+                marker_6305e5d5136bdf43f335682629108045.setIcon(icon_d5c1a11cd5c57102fdea4f4da921606c);
+            
+    
+            var marker_224e21d9301919c23da3c29c2cf421a6 = L.marker(
+                [37.617, -106.148],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_774f9fc9a9827ec4fa7ba79f4370eed7 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#922b21; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eD \u2014 Monte Vista (MVP)\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_224e21d9301919c23da3c29c2cf421a6.setIcon(div_icon_774f9fc9a9827ec4fa7ba79f4370eed7);
+            
+    
+            var circle_5f6c3a1f23acd19c8552b250d49ac6c1 = L.circle(
+                [37.635, -106.05],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a04000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_52f233828d8df7d970cc8602c9abb0ad = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6b522aeb8be5784056f5202fd128dd3f = $(`<div id="html_6b522aeb8be5784056f5202fd128dd3f" style="width: 100.0%; height: 100.0%;"><b>R3: E-W Cross</b><br>Type: Relay<br>Tolerance: 2.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_52f233828d8df7d970cc8602c9abb0ad.setContent(html_6b522aeb8be5784056f5202fd128dd3f);
+            
+        
+
+        circle_5f6c3a1f23acd19c8552b250d49ac6c1.bindPopup(popup_52f233828d8df7d970cc8602c9abb0ad)
+        ;
+
+        
+    
+    
+            var circle_47fbc356f0c47878dc8c33c34dc932d4 = L.circle(
+                [37.635, -106.05],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#6e2f00", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_b44955e10a48b04609a4dc46e4e9c20f = L.marker(
+                [37.635, -106.05],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_35ef91d80169ba5cbabff912e0bc8765 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "6e2f00",
+  "iconColor": "white",
+  "icon": "arrow-right",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b04c09690c2558a3ea5e3d9c51a28b3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_73e925604956e1d248b0ed44d834df63 = $(`<div id="html_73e925604956e1d248b0ed44d834df63" style="width: 100.0%; height: 100.0%;"><b>R3: E-W Cross</b><br>Type: Relay<br>GPS: 37.635, -106.05<br>Tolerance: 2.0km radius</div>`)[0];
+                popup_6b04c09690c2558a3ea5e3d9c51a28b3.setContent(html_73e925604956e1d248b0ed44d834df63);
+            
+        
+
+        marker_b44955e10a48b04609a4dc46e4e9c20f.bindPopup(popup_6b04c09690c2558a3ea5e3d9c51a28b3)
+        ;
+
+        
+    
+    
+                marker_b44955e10a48b04609a4dc46e4e9c20f.setIcon(icon_35ef91d80169ba5cbabff912e0bc8765);
+            
+    
+            var marker_30f48eff300166055514aa9ed0dafe8e = L.marker(
+                [37.635, -106.05],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_aeb957c4650e766530ecf8aa9527aa36 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#6e2f00; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eR3 \u2014 E-W Cross\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_30f48eff300166055514aa9ed0dafe8e.setIcon(div_icon_aeb957c4650e766530ecf8aa9527aa36);
+            
+    
+            var circle_ee790961d62f8d39dbcb805442f8b560 = L.circle(
+                [37.635, -106.36],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a5276", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_513946756a27a3040a49c3875abd8ff0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_49a6ebfaf081f5d71b0304d9dd58dc2c = $(`<div id="html_49a6ebfaf081f5d71b0304d9dd58dc2c" style="width: 100.0%; height: 100.0%;"><b>G: Sargent</b><br>Type: Town<br>Tolerance: 2.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_513946756a27a3040a49c3875abd8ff0.setContent(html_49a6ebfaf081f5d71b0304d9dd58dc2c);
+            
+        
+
+        circle_ee790961d62f8d39dbcb805442f8b560.bindPopup(popup_513946756a27a3040a49c3875abd8ff0)
+        ;
+
+        
+    
+    
+            var circle_75fc1b01b897a5193aaa4a492cea64a0 = L.circle(
+                [37.635, -106.36],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#154360", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_d2b8bf1b0aae75f670d1a70533976194 = L.marker(
+                [37.635, -106.36],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_6dfcaaebe97d3477b1286e59b37ffe99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "154360",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d12fb64a60a17494dc88e48c119d4af8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ed2779a91b0ca5decc05e7aad619dec3 = $(`<div id="html_ed2779a91b0ca5decc05e7aad619dec3" style="width: 100.0%; height: 100.0%;"><b>G: Sargent</b><br>Type: Town<br>GPS: 37.635, -106.36<br>Tolerance: 2.0km radius</div>`)[0];
+                popup_d12fb64a60a17494dc88e48c119d4af8.setContent(html_ed2779a91b0ca5decc05e7aad619dec3);
+            
+        
+
+        marker_d2b8bf1b0aae75f670d1a70533976194.bindPopup(popup_d12fb64a60a17494dc88e48c119d4af8)
+        ;
+
+        
+    
+    
+                marker_d2b8bf1b0aae75f670d1a70533976194.setIcon(icon_6dfcaaebe97d3477b1286e59b37ffe99);
+            
+    
+            var marker_0252ccc973e8d5f04ea17468090eb819 = L.marker(
+                [37.635, -106.36],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_22004b1ac7398ae24b2dbeb7cce3010a = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#154360; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eG \u2014 Sargent\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_0252ccc973e8d5f04ea17468090eb819.setIcon(div_icon_22004b1ac7398ae24b2dbeb7cce3010a);
+            
+    
+            var circle_23f27a9b94322e80de6b10e2d9282caa = L.circle(
+                [37.55, -106.2],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a04000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_be8da65ccdf0043ace5421acb3473e60 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a1b93b9479dc260528b8828b7e801e23 = $(`<div id="html_a1b93b9479dc260528b8828b7e801e23" style="width: 100.0%; height: 100.0%;"><b>R4: Alamosa-Sarg Gap</b><br>Type: Relay<br>Tolerance: 2.0km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_be8da65ccdf0043ace5421acb3473e60.setContent(html_a1b93b9479dc260528b8828b7e801e23);
+            
+        
+
+        circle_23f27a9b94322e80de6b10e2d9282caa.bindPopup(popup_be8da65ccdf0043ace5421acb3473e60)
+        ;
+
+        
+    
+    
+            var circle_c78e8f3b4a8f1e9117ed84a7222f2c93 = L.circle(
+                [37.55, -106.2],
+                {"bubblingMouseEvents": true, "color": "#6e2f00", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#6e2f00", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2000.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_132cc31708846b131283fc1fcf6e5bf9 = L.marker(
+                [37.55, -106.2],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_4d0f37d7846da42732cdbfddbe4c75f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "6e2f00",
+  "iconColor": "white",
+  "icon": "arrow-right",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f952ee1302dca725da7b849bd2ff5f8c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2724ea09750a257acb2c3cb2fe94007c = $(`<div id="html_2724ea09750a257acb2c3cb2fe94007c" style="width: 100.0%; height: 100.0%;"><b>R4: Alamosa-Sarg Gap</b><br>Type: Relay<br>GPS: 37.55, -106.2<br>Tolerance: 2.0km radius</div>`)[0];
+                popup_f952ee1302dca725da7b849bd2ff5f8c.setContent(html_2724ea09750a257acb2c3cb2fe94007c);
+            
+        
+
+        marker_132cc31708846b131283fc1fcf6e5bf9.bindPopup(popup_f952ee1302dca725da7b849bd2ff5f8c)
+        ;
+
+        
+    
+    
+                marker_132cc31708846b131283fc1fcf6e5bf9.setIcon(icon_4d0f37d7846da42732cdbfddbe4c75f0);
+            
+    
+            var marker_2ab35a887724ae0313ed6a8537fbda95 = L.marker(
+                [37.55, -106.2],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_e8d5011853ac6c1b28ea7ffb0cdbb182 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#6e2f00; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eR4 \u2014 Alamosa-Sarg Gap\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_2ab35a887724ae0313ed6a8537fbda95.setIcon(div_icon_e8d5011853ac6c1b28ea7ffb0cdbb182);
+            
+    
+            var circle_4ec10e680ab5b6f80122b8494138bff3 = L.circle(
+                [37.68, -106.35],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a5276", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2500.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_f96bba8292a39a24317251e0a3631d7c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eb9238840f12c54ef2b1d2ea904b0ff7 = $(`<div id="html_eb9238840f12c54ef2b1d2ea904b0ff7" style="width: 100.0%; height: 100.0%;"><b>E: Del Norte</b><br>Type: Town<br>Tolerance: 2.5km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_f96bba8292a39a24317251e0a3631d7c.setContent(html_eb9238840f12c54ef2b1d2ea904b0ff7);
+            
+        
+
+        circle_4ec10e680ab5b6f80122b8494138bff3.bindPopup(popup_f96bba8292a39a24317251e0a3631d7c)
+        ;
+
+        
+    
+    
+            var circle_a87c4c79722f01d2e996fbff27e66c2b = L.circle(
+                [37.68, -106.35],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#154360", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2500.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_73e902ff4004daa09a7ad353d871db1a = L.marker(
+                [37.68, -106.35],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_43e05de49bc68555a7f86c69f37aec97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "154360",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38f693b036e928c2282862ef99184463 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b0ce9c26773f0aa25847331e84213ffe = $(`<div id="html_b0ce9c26773f0aa25847331e84213ffe" style="width: 100.0%; height: 100.0%;"><b>E: Del Norte</b><br>Type: Town<br>GPS: 37.68, -106.35<br>Tolerance: 2.5km radius</div>`)[0];
+                popup_38f693b036e928c2282862ef99184463.setContent(html_b0ce9c26773f0aa25847331e84213ffe);
+            
+        
+
+        marker_73e902ff4004daa09a7ad353d871db1a.bindPopup(popup_38f693b036e928c2282862ef99184463)
+        ;
+
+        
+    
+    
+                marker_73e902ff4004daa09a7ad353d871db1a.setIcon(icon_43e05de49bc68555a7f86c69f37aec97);
+            
+    
+            var marker_320cdae82aa77777e50f3ff6f2857cd9 = L.marker(
+                [37.68, -106.35],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_d32e417a5a487d87abfbe3836f19e995 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#154360; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eE \u2014 Del Norte\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_320cdae82aa77777e50f3ff6f2857cd9.setIcon(div_icon_d32e417a5a487d87abfbe3836f19e995);
+            
+    
+            var circle_993a812f112b07af2410f8024cf2378c = L.circle(
+                [37.67, -106.64],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a5276", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2500.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_e351ced15e5a0be2878639633968b91f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2d2a64b5f9aac3921186af4bcd1ac44a = $(`<div id="html_2d2a64b5f9aac3921186af4bcd1ac44a" style="width: 100.0%; height: 100.0%;"><b>F: South Fork</b><br>Type: Town<br>Tolerance: 2.5km radius<br>Target area: anywhere within dashed circle</div>`)[0];
+                popup_e351ced15e5a0be2878639633968b91f.setContent(html_2d2a64b5f9aac3921186af4bcd1ac44a);
+            
+        
+
+        circle_993a812f112b07af2410f8024cf2378c.bindPopup(popup_e351ced15e5a0be2878639633968b91f)
+        ;
+
+        
+    
+    
+            var circle_5c71a64871223d59bb0a3d0769247c76 = L.circle(
+                [37.67, -106.64],
+                {"bubblingMouseEvents": true, "color": "#154360", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "#154360", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 2500.0, "stroke": true, "weight": 1}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var marker_b6fa64e498010067cfd042f5c94c1c65 = L.marker(
+                [37.67, -106.64],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var icon_4f1ff10010c85c6f0120a66533b7f501 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "154360",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd999286a357d786b769943f59f33147 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_db5b802309b765025a2443d16b758e8f = $(`<div id="html_db5b802309b765025a2443d16b758e8f" style="width: 100.0%; height: 100.0%;"><b>F: South Fork</b><br>Type: Town<br>GPS: 37.67, -106.64<br>Tolerance: 2.5km radius</div>`)[0];
+                popup_bd999286a357d786b769943f59f33147.setContent(html_db5b802309b765025a2443d16b758e8f);
+            
+        
+
+        marker_b6fa64e498010067cfd042f5c94c1c65.bindPopup(popup_bd999286a357d786b769943f59f33147)
+        ;
+
+        
+    
+    
+                marker_b6fa64e498010067cfd042f5c94c1c65.setIcon(icon_4f1ff10010c85c6f0120a66533b7f501);
+            
+    
+            var marker_b5df607b7693edc5bad8ead7b595e910 = L.marker(
+                [37.67, -106.64],
+                {
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var div_icon_33a3194b6b70b8dbadffeeb7e9f94b24 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size:11px; font-weight:bold; color:#154360; text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;\u0027 \u003eF \u2014 South Fork\u003c/div\u003e",
+  "iconSize": [80, 20],
+  "iconAnchor": [40, -15],
+  "className": "empty",
+});
+        
+    
+                marker_b5df607b7693edc5bad8ead7b595e910.setIcon(div_icon_33a3194b6b70b8dbadffeeb7e9f94b24);
+            
+    
+            var poly_line_d42b6e3b784b17b0a04c0af064195fe8 = L.polyline(
+                [[37.089, -106.01], [37.288, -106.075], [37.452, -105.78], [37.47, -105.87], [37.53, -105.86], [37.617, -106.148], [37.635, -106.05], [37.68, -106.35], [37.67, -106.64]],
+                {"bubblingMouseEvents": true, "color": "#27ae60", "dashArray": "10, 5", "dashOffset": null, "fill": false, "fillColor": "#27ae60", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_0e4f3fc53c4a8765830675d5f6bd5777 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf72709a77c8266fff0e057077a55a4c = $(`<div id="html_bf72709a77c8266fff0e057077a55a4c" style="width: 100.0%; height: 100.0%;">N-S Backbone</div>`)[0];
+                popup_0e4f3fc53c4a8765830675d5f6bd5777.setContent(html_bf72709a77c8266fff0e057077a55a4c);
+            
+        
+
+        poly_line_d42b6e3b784b17b0a04c0af064195fe8.bindPopup(popup_0e4f3fc53c4a8765830675d5f6bd5777)
+        ;
+
+        
+    
+    
+            var poly_line_5efdfb67496805dab37c61358e6f7a06 = L.polyline(
+                [[37.617, -106.148], [37.55, -106.2], [37.635, -106.36]],
+                {"bubblingMouseEvents": true, "color": "#8e44ad", "dashArray": "8, 4", "dashOffset": null, "fill": false, "fillColor": "#8e44ad", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+        var popup_5fa670801ba36d7e48e99ecc93b22728 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_933b342fb47b089d16b0202c7392d2a5 = $(`<div id="html_933b342fb47b089d16b0202c7392d2a5" style="width: 100.0%; height: 100.0%;">Sargent Branch</div>`)[0];
+                popup_5fa670801ba36d7e48e99ecc93b22728.setContent(html_933b342fb47b089d16b0202c7392d2a5);
+            
+        
+
+        poly_line_5efdfb67496805dab37c61358e6f7a06.bindPopup(popup_5fa670801ba36d7e48e99ecc93b22728)
+        ;
+
+        
+    
+    
+            var poly_line_af474f6ca7754824fda4dd8b6c13c88d = L.polyline(
+                [[37.635, -106.05], [37.68, -106.35]],
+                {"bubblingMouseEvents": true, "color": "#8e44ad", "dashArray": "8, 4", "dashOffset": null, "fill": false, "fillColor": "#8e44ad", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+        
+    
+            var layer_control_aec973f4334d0b24d8147be22b9a795e_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_c7335e7b816097396873f98faffcf61c,
+                    "Terrain" : tile_layer_e086c9b6b6920ad71e0611ccd5223c0a,
+                    "Satellite" : tile_layer_9ee6c7a775be181138ff93a81c5f13a6,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_aec973f4334d0b24d8147be22b9a795e = L.control.layers(
+                layer_control_aec973f4334d0b24d8147be22b9a795e_layers.base_layers,
+                layer_control_aec973f4334d0b24d8147be22b9a795e_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_41575b090ab70ef66473ff0db198aa8d);
+
+        
+</script>
+</html>

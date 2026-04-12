@@ -1,5 +1,5 @@
 # Bxthre3 Document Standards v2.0
-**Owner:** brodiblanco | **Maintained by:** AgentOS  
+**Owner:** brodiblanco | **Maintained by:** Agentic  
 **Effective:** 2026-04-02  
 **Reference:** Principle #5 (Zero Hallucination)
 
@@ -7,22 +7,22 @@
 
 # PART I: UNIVERSAL STANDARDS
 
-## AgentOS Positioning — Internal Infrastructure
+## Agentic Positioning — Internal Infrastructure
 
-> **AgentOS is not a product.** It is the internal force multiplier that builds and runs products.  
+> **Agentic is not a product.** It is the internal force multiplier that builds and runs products.  
 > **Analogy:** IBM Watson — demonstrated capability, competitive advantage, but NOT a standalone SKU.
 
-### What AgentOS Is
+### What Agentic Is
 - **Internal AI workforce orchestration** — for Bxthre3 only
 - **Enables ventures** — indirect value, not standalone revenue
 - **Proprietary moat** — not sold, not licensed, not SaaS
 
 ### External Positioning (Clout/Investment ONLY)
 **Say:**
-> "AgentOS gives us 24/7 execution with 18 AI agents. Internal capability = speed-to-market advantage."
+> "Agentic gives us 24/7 execution with 18 AI agents. Internal capability = speed-to-market advantage."
 
 **Never say:**
-- ❌ "AgentOS is our next product"
+- ❌ "Agentic is our next product"
 - ❌ "We're building it to sell"
 - ❌ "It's a standalone business unit"
 
@@ -129,7 +129,7 @@ Before ANY document ships:
 
 | Rule | Platform (AOS-*) | Products |
 |------|------------------|----------|
-| **Location** | `the-agentos-project/` | `projects/{name}/` |
+| **Location** | `the-agentic-project/` | `projects/{name}/` |
 | **Users** | Internal only | External (customers) |
 | **Breaking** | All agents affected | One venture |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |

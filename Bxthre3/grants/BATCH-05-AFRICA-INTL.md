@@ -15,10 +15,10 @@
 | Deadline | 2026-05-01 (First cohort begins May 2026) |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS / Irrig8 (if Africa ops established) |
+| Portfolio Fit | Agentic / Irrig8 (if Africa ops established) |
 | Status | Rolling admissions — first cohort May 2026 |
 | Next Action | Apply for incubation; establish Africa partner entity to qualify |
-| Notes | UNDP Africa AgriTech incubation. First cohort starts May 2026. Could be AgentOS entry point to African market. |
+| Notes | UNDP Africa AgriTech incubation. First cohort starts May 2026. Could be Agentic entry point to African market. |
 
 ---
 
@@ -68,7 +68,7 @@
 | Deadline | 2026-03-31 (Closing soon) |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active — closing March 31 |
 | Next Action | Too late for 2026 cohort; monitor for 2027 |
 | Notes | Agritech & climate tech accelerator. Not directly applicable unless Africa entity established. |
@@ -227,10 +227,10 @@
 | Deadline | 2026-04-30 (Summit events) |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS / Irrig8 |
+| Portfolio Fit | Agentic / Irrig8 |
 | Status | Active |
 | Next Action | Attend/sponsor AI Farming Summit 2026 India; explore as market entry |
-| Notes | India's AI Farming Summit 2026. Growing precision farming market. Could be AgentOS/Irrig8 entry into South Asian market. |
+| Notes | India's AI Farming Summit 2026. Growing precision farming market. Could be Agentic/Irrig8 entry into South Asian market. |
 
 ---
 

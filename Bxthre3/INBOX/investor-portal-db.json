@@ -1,0 +1,11 @@
+{
+  "investors": {
+    "7195551234": {
+      "name": "Test Investor",
+      "phone": "7195551234",
+      "code": "623947",
+      "codeExpires": 1774490240582,
+      "subscriptions": []
+    }
+  }
+}

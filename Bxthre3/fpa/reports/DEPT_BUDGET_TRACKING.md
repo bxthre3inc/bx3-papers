@@ -1,5 +1,5 @@
 # Department Budget vs. Actual Tracking
-**FP&A — Bxthre3 Inc / AgentOS Finance Division**
+**FP&A — Bxthre3 Inc / Agentic Finance Division**
 **Version:** 1.0 | **Date:** 2026-04-06 | **Status:** Framework Only
 
 ---

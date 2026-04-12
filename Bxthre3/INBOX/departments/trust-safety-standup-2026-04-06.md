@@ -63,17 +63,17 @@
 | AMP event bus — no persistence (tasks lost on restart) | 🔴 P1 | **OPEN — UNCHANGED** | Mesh-Engineer | Immediate |
 | mcp-mesh/src/core/ not implemented | 🔴 P1 | **OPEN — UNCHANGED** | Mesh-Engineer | Immediate |
 | No test suite (mcp-mesh, mcp-bridge, Android, AMP) | 🔴 P1 | **OPEN — UNCHANGED** | Iris/Dev | Immediate |
-| `aos` (9999) + `mcp-mesh-control-plane` (7777) workdirs ENOENT | 🔴 P1 | **OPEN — per AgentOS-PM** | DevOps | Immediate |
+| `aos` (9999) + `mcp-mesh-control-plane` (7777) workdirs ENOENT | 🔴 P1 | **OPEN — per Agentic-PM** | DevOps | Immediate |
 | Mobile shell `mobile_CORRUPTED_20260401_0241/` unrestored | 🔴 P1 | **OPEN — per Android-Lead** | Android-Lead | Immediate |
-| **NEW — AgentOS API was DOWN (FATAL state)** | 🔴 P1 | **RESOLVED** | DevOps | 2026-04-06 ✅ |
+| **NEW — Agentic API was DOWN (FATAL state)** | 🔴 P1 | **RESOLVED** | DevOps | 2026-04-06 ✅ |
 | Bias detection monitoring | 🟡 P2 | NOT ACTIVE | Sentinel | TBD |
 | Shield coordination | 🟡 P2 | NOT ACTIVE | Sentinel | TBD |
 
 **Critical Safety Risk:** Kill-switch stubs returning `{ approved: true }` bypass all safety guards. Any production traffic through these paths has zero actual approval enforcement. **Status: UNCHANGED — 6 days toward resolution (first flagged 2026-03-31).**
 
-**NEW this cycle:** AgentOS API FATAL state incident — cause was incorrect workdir in service config. Fix applied, service restored. Workdir corrected to `/home/workspace/Bxthre3/projects/agentic/the-agentos-project/backend`.
+**NEW this cycle:** Agentic API FATAL state incident — cause was incorrect workdir in service config. Fix applied, service restored. Workdir corrected to `/home/workspace/Bxthre3/projects/agentic/the-agentic-project/backend`.
 
-**Assessment:** AgentOS production is in an unreleasable state. 8+ P1 items open across stack. Risk: **CRITICAL**.
+**Assessment:** Agentic production is in an unreleasable state. 8+ P1 items open across stack. Risk: **CRITICAL**.
 
 ---
 
@@ -117,7 +117,7 @@
 | Service | Status |
 |---------|--------|
 | PostgreSQL (localhost:5432) | ✅ RESTORED (per Sentinel 2026-04-06) |
-| AgentOS API (fatal state) | ✅ RESTORED — workdir corrected |
+| Agentic API (fatal state) | ✅ RESTORED — workdir corrected |
 
 **Current infrastructure status:**
 - zo.space (brodiblanco.zo.space): ✅ 200 OK
@@ -137,12 +137,12 @@
 |---------|---------|-------|--------------|
 | Irrig8 | 3 (water court) | → | 🔴 HIGH |
 | Valley Players Club | 6 (4 regulatory + 2 legal overdue/unconfirmed) | → | 🔴 CRITICAL |
-| AgentOS | 8 (stubs + infra — 1 infra resolved this cycle) | ↓ | 🔴 CRITICAL |
+| Agentic | 8 (stubs + infra — 1 infra resolved this cycle) | ↓ | 🔴 CRITICAL |
 | Zoe | 0 | → | 🟡 MEDIUM |
 | Starting 5 | 0 | → | 🟡 MEDIUM |
-| Infrastructure | 0 (PostgreSQL + AgentOS API resolved) | ↓ | 🟢 MEDIUM |
+| Infrastructure | 0 (PostgreSQL + Agentic API resolved) | ↓ | 🟢 MEDIUM |
 
-**Overall T&S Risk Posture:** 🔴 **CRITICAL** — unchanged from 2026-04-03. VPC legal items remain overdue/unconfirmed. AgentOS infrastructure resolved but application-layer P1s persist. Irrig8 water court gap unchanged at T-9 days.
+**Overall T&S Risk Posture:** 🔴 **CRITICAL** — unchanged from 2026-04-03. VPC legal items remain overdue/unconfirmed. Agentic infrastructure resolved but application-layer P1s persist. Irrig8 water court gap unchanged at T-9 days.
 
 ---
 
@@ -153,7 +153,7 @@
 | 1 | brodiblanco | Water Court 3 Critical Gaps — T-9 days | 🔴 P1 | INBOX.md + SMS | No — ongoing |
 | 2 | brodiblanco | VPC Gaming Tax OVERDUE + 2 Legal Items Due 2026-04-03 (unconfirmed resolution) | 🔴 P1 | INBOX.md | No — ongoing |
 | 3 | Raj | Colorado sales tax nexus + foreign contractor — resolution status [VERIFY] | 🔴 P1 | raj.md | **VERIFY** |
-| 4 | Iris | 100+ AgentOS stub CCRs — production safety gap | 🔴 P1 | iris.md | No — ongoing |
+| 4 | Iris | 100+ Agentic stub CCRs — production safety gap | 🔴 P1 | iris.md | No — ongoing |
 | 5 | Rain/VPC | FL/NY gaming tax compliance OVERDUE | 🔴 P1 | rain.md / vpc.md | No — ongoing |
 | 6 | Mesh-Engineer | AMP event bus no persistence + mcp-mesh/core not implemented | 🔴 P1 | iris.md | No — ongoing |
 
@@ -170,7 +170,7 @@
 | **This week** | Sentinel: complete VPC KYC end-to-end audit | Sentinel | 2026-04-07 |
 | **This week** | Sentinel: complete VPC age verification + problem gambling audit | Sentinel | 2026-04-07 |
 | **This week** | Rain: confirm SLV sensor telemetry coverage status | Rain | 2026-04-07 |
-| **Next sprint** | Standing: AgentOS bias detection + Shield activation | Sentinel | TBD |
+| **Next sprint** | Standing: Agentic bias detection + Shield activation | Sentinel | TBD |
 
 ---
 

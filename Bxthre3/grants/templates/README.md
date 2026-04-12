@@ -15,7 +15,7 @@
 | Venture | Template |
 |---------|----------|
 | Irrig8 (irrig8) | `template-farmsense.md` |
-| AgentOS | `template-agentos.md` |
+| Agentic | `template-agentic.md` |
 | Valley Players Club | `template-vpc.md` |
 | The Starting 5 | `template-starting5.md` |
 

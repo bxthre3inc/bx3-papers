@@ -8,7 +8,7 @@
 
 | Metric | This Week | Notes |
 |--------|-----------|-------|
-| Active deals in pipeline | 11 | Equipment, retail, VPC, AgentOS, grants |
+| Active deals in pipeline | 11 | Equipment, retail, VPC, Agentic, grants |
 | Deals contacted | 0 | Outreach not yet initiated |
 | Meetings held | 0 | Awaiting first responses |
 | Deals passed | 0 | None this week |
@@ -84,13 +84,13 @@
 
 ---
 
-## Deal Detail — AgentOS Strategic Investors
+## Deal Detail — Agentic Strategic Investors
 
 | Target | Score | Stage | Next Action | Owner |
 |--------|-------|-------|-------------|-------|
 | AgTech VCs | — | Researched | Finalize top 20 with contacts | Reach |
 
-**Notes:** AgentOS IP currently at risk (93 stub findings). Narrative to investors should lead with Irrig8 traction. Delay outreach until IP remediation complete.
+**Notes:** Agentic IP currently at risk (93 stub findings). Narrative to investors should lead with Irrig8 traction. Delay outreach until IP remediation complete.
 
 ---
 

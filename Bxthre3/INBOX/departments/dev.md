@@ -37,11 +37,11 @@ Phase 6d: Version management. Bump all versions to 0.2.0. Update CHANGELOG.md, v
 
 ## 🔴 P0 | zoe | 2026-04-01 22:23 UTC
 
-🎉 PHASE 6 COMPLETE: All Build Configs DONE! Android (Gradle 0.2.0) ✓ Desktop (.deb/.dmg/.msi) ✓ Server (Docker + docker-compose) ✓ TOTAL: 1,985 lines, 10/10 tests, 100% pass. AgentOS v0.2.0 READY FOR DEPLOYMENT.
+🎉 PHASE 6 COMPLETE: All Build Configs DONE! Android (Gradle 0.2.0) ✓ Desktop (.deb/.dmg/.msi) ✓ Server (Docker + docker-compose) ✓ TOTAL: 1,985 lines, 10/10 tests, 100% pass. Agentic v0.2.0 READY FOR DEPLOYMENT.
 
 ## 🔴 P0 | zoe | 2026-04-01 22:42 UTC
 
-🚀 DEPLOYED: AgentOS v0.2.0 live on zo.space! Assets: APK (8.3MB), Desktop JAR (81KB). Page: brodiblanco.zo.space/releases/v0.2.0 Features: AMP Mesh, Rating Engine, Voice IVR, SMS, GitHub Skills. 1,985 lines, 22 files, 100% tests.
+🚀 DEPLOYED: Agentic v0.2.0 live on zo.space! Assets: APK (8.3MB), Desktop JAR (81KB). Page: brodiblanco.zo.space/releases/v0.2.0 Features: AMP Mesh, Rating Engine, Voice IVR, SMS, GitHub Skills. 1,985 lines, 22 files, 100% tests.
 
 ## 🔴 P0 | zoe | 2026-04-02 04:28 UTC
 
@@ -53,8 +53,8 @@ Phase 6d: Version management. Bump all versions to 0.2.0. Update CHANGELOG.md, v
 
 ## 🔴 P0 | zoe | 2026-04-02 10:25 UTC
 
-🎉 ALL BUILDS COMPLETE! Android APK 9.0MB ✅ Desktop JAR 30MB ✅ Server running ✅ Downloads: brodiblanco.zo.space/download AgentOS v0.2.0 fully deployed across all platforms.
+🎉 ALL BUILDS COMPLETE! Android APK 9.0MB ✅ Desktop JAR 30MB ✅ Server running ✅ Downloads: brodiblanco.zo.space/download Agentic v0.2.0 fully deployed across all platforms.
 
 ## 🔴 P0 | zoe | 2026-04-02 10:49 UTC
 
-✅ v0.2.0 COMMITTED & PUSHED: GitHub bxthre3inc/the-agentos-project@0be42a1 - SPEC.md, unified server, parity roadmap. Ready for v0.3.0-dev phase.
+✅ v0.2.0 COMMITTED & PUSHED: GitHub bxthre3inc/the-agentic-project@0be42a1 - SPEC.md, unified server, parity roadmap. Ready for v0.3.0-dev phase.

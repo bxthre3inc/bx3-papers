@@ -1,11 +1,11 @@
-# SOP Master Index — Bxthre3 Inc & AgentOS
+# SOP Master Index — Bxthre3 Inc & Agentic
 **Version:** 1.0.0 | **Total SOPs Required:** 252
 
 ---
 
 ## Required SOP List
 
-### AgentOS System SOPs (5)
+### Agentic System SOPs (5)
 | SOP | Status | Assigned | Due |
 |-----|--------|----------|-----|
 | AGENT_LIFECYCLE_SOP.md | T-010 | zoe_orchestrator | 2026-03-30 |

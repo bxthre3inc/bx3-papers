@@ -436,7 +436,7 @@ async function fetchVerificationMetrics() {
 ### Week 2 (Days 8-14): Dashboard UI
 
 - [ ] Day 8: Draft `/investor.tsx` route (static mock data)
-- [ ] Day 9: Style with Tailwind (dark theme, match AgentOS branding)
+- [ ] Day 9: Style with Tailwind (dark theme, match Agentic branding)
 - [ ] Day 10: Add interactivity (source links, verify buttons)
 - [ ] Day 11: Connect to API (real data)
 - [ ] Day 12: Add CSV export endpoint `/api/investor/audit.csv`

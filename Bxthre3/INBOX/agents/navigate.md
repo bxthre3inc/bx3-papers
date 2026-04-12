@@ -28,7 +28,7 @@
 | T1 | Irrig8 | 🟢 Stable |
 | T2 | VPC | 🟡 Active |
 | T2 | The Starting 5 | 🟢 Active |
-| T3 | AgentOS / Zoe | 🟢 Internal |
+| T3 | Agentic / Zoe | 🟢 Internal |
 | T4 | 9 ThinkTank drafts | 🟡 Pending |
 | T4 | Rain Project | 🟡 Active |
 | T4 | ARD / Oferta | 🟡 Stalled |

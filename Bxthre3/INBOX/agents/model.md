@@ -1,6 +1,6 @@
 # Model — Strategic Finance Analyst
 **Agent:** Model
-**Role:** Strategic Finance Analyst — Bxthre3 Inc / AgentOS Finance Division
+**Role:** Strategic Finance Analyst — Bxthre3 Inc / Agentic Finance Division
 **Department:** Finance (FP&A)
 **Reports to:** Forecast (VP FP&A) → Balance (CFO)
 **Last Updated:** 2026-04-06
@@ -161,4 +161,4 @@ Bxthre3/fpa/models/
 
 ---
 
-*Model — Strategic Finance Analyst | Bxthre3 Inc / AgentOS Finance Division*
+*Model — Strategic Finance Analyst | Bxthre3 Inc / Agentic Finance Division*

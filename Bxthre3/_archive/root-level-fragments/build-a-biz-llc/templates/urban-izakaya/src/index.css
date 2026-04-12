@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Urban Izakaya - Dynamic, Japanese-inspired, bar-focused */
+
+:root {
+  --color-primary: #7C3AED;
+  --color-accent: #EC4899;
+  --color-night: #1E1B4B;
+  --font-heading: 'Noto Sans JP', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* Late night mode */
+.late-night {
+  @apply bg-indigo-950 text-indigo-100;
+}
+
+/* Sake pairing indicator */
+.sake-pair {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-xs font-medium;
+}
+
+/* Dynamic menu items that change based on time */
+.time-limited {
+  @apply border-2 border-pink-400 relative overflow-hidden;
+}
+
+.time-limited::before {
+  content: 'Limited';
+  @apply absolute top-0 right-0 bg-pink-500 text-white text-xs px-2 py-0.5;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-4 rounded-full font-bold shadow-lg;
+}
+
+/* Tab navigation */
+.izakaya-tabs {
+  @apply flex gap-4 overflow-x-auto py-2;
+}
+
+.izakaya-tabs button {
+  @apply px-4 py-2 text-sm font-medium text-indigo-300 whitespace-nowrap;
+}
+
+.izakaya-tabs button.active {
+  @apply text-white border-b-2 border-pink-400;
+}

@@ -8,7 +8,7 @@ echo "Finding best source files..."
 
 # Source locations
 ABE=/home/workspace/Bxthre3/ALTS-TBD/AgenticBusinessEmpire/AgenticBusinessEmpire
-AGOS=/home/workspace/Bxthre3/projects/agent-os
+AGOS=/home/workspace/Bxthre3/projects/agentic
 DEST=/home/workspace/Bxthre3/agentic
 mkdir -p $DEST
 

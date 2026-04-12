@@ -2,7 +2,7 @@
 
 **Classification:** IP Document — Trade Secret  
 **Date:** 2026-04-05  
-**Author:** AgentOS Architect + BX3  
+**Author:** Agentic Architect + BX3  
 
 ---
 
@@ -14,7 +14,7 @@
 |--------|--------|----------|
 | Component Coverage | ⭐⭐⭐☆☆ | 5 components (Button, Card, TextField, Spinner, Theme) |
 | Visual Polish | ⭐⭐⭐⭐☆ | Vector icons, gradient backgrounds, elevation shadows |
-| Theming System | ⭐⭐⭐⭐⭐ | 4 adaptive variants (AgentOS, Zo Space, VPC, Irrig8) |
+| Theming System | ⭐⭐⭐⭐⭐ | 4 adaptive variants (Agentic, Zo Space, VPC, Irrig8) |
 | Documentation | ⭐⭐⭐⭐☆ | README, IP_PROTECTION.md, inline KDoc |
 | Accessibility | ⭐⭐☆☆☆ | Basic colors, no screen reader optimization |
 | Animation | ⭐⭐☆☆☆ | Simple haptics, no motion design language |

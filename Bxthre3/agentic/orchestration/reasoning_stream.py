@@ -3,7 +3,7 @@ Agentic Reasoning Stream
 Replaces ChatDev Memory Stream — Structured Reasoning with Citations
 
 Module: reasoning_stream.py
-Location: Bxthre3/projects/agent-os/orchestration/reasoning_stream.py
+Location: Bxthre3/projects/agentic/orchestration/reasoning_stream.py
 Status: IMPLEMENTED
 
 Every agent decision is logged with:

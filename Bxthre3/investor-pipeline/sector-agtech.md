@@ -19,7 +19,7 @@ Use this as the system of record for all outreach, stage, and relationship data.
 | **Irrig8** | Series A | $5-10M | Ag tech VCs, corporate strategics, government |
 | **Valley Players Club** | Strategic | $1-3M | Casino operators, tribal gaming |
 | **The Starting 5** | Seed/A | $2-5M | AI VCs, SaaS VCs, founder angels |
-| **Zoe / AgentOS** | Strategic | $1-2M | Open source, AI adjacents, enterprise |
+| **Zoe / Agentic** | Strategic | $1-2M | Open source, AI adjacents, enterprise |
 | **Bxthre3 corporate** | SAFE/Note | TBD | Cap table, SAFE notes |
 
 ---

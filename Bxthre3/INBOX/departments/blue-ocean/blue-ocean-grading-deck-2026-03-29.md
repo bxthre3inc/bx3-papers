@@ -122,7 +122,7 @@
 | Criterion | Score (1–5) | Weight | Weighted | AI Reasoning |
 |---|---|---|---|---|
 | Uniqueness | 4.5 | 30% | 1.35 | True blue ocean — no vendor offers deterministic, physics-model-based pivot control combining satellite + sensor + neighbor data. Market gap is verified by forum mining. |
-| Automation level | 5.0 | 25% | 1.25 | Fully automatable — sensor ingestion, physics model computation, actuator control, reporting. AgentOS can build/sell/support without human intervention at scale. |
+| Automation level | 5.0 | 25% | 1.25 | Fully automatable — sensor ingestion, physics model computation, actuator control, reporting. Agentic can build/sell/support without human intervention at scale. |
 | Time to cash | 4.0 | 20% | 0.80 | 60-90 days to operational MVP. Architecture exists in Irrig8; incremental build on proven stack. Revenue possible within current growing season if farmer pilots launch. |
 | Competitive defensibility | 4.0 | 15% | 0.60 | Deterministic physics model + multi-source data fusion is a 12+ month moat. Incumbents (Valley, Lindsay, John Deere) are hardware-first — not software-first. Data network effects accumulate with each farm. |
 | Bxthre3 fit | 5.0 | 10% | 0.50 | Perfect fit — this IS Irrig8's stated vision. Satellite + sensor + neighbor data fusion is the core architecture. No extrapolation needed. |
@@ -218,7 +218,7 @@
 | Criterion | Score (1–5) | Weight | Weighted | AI Reasoning |
 |---|---|---|---|---|
 | Uniqueness | 4.0 | 30% | 1.20 | Moderate blue ocean — profit-optimized water + nitrogen input is novel. Most tools optimize yield; few optimize profit. University of Idaho research validates the approach. |
-| Automation level | 4.0 | 25% | 1.00 | Highly automatable — crop modeling, input optimization, and profit tracking can be fully automated. AgentOS can deliver recommendations without human intervention. |
+| Automation level | 4.0 | 25% | 1.00 | Highly automatable — crop modeling, input optimization, and profit tracking can be fully automated. Agentic can deliver recommendations without human intervention. |
 | Time to cash | 3.5 | 20% | 0.70 | 60-90 days to MVP as Irrig8 module. Financial layer builds on existing water/soil data. University of Idaho research accelerates development. |
 | Competitive defensibility | 3.5 | 15% | 0.53 | Moderate moat — profit-per-acre data network effects accumulate with each farm. Solugen ($50M) validates market but focuses on nitrogen; water + profit combination is differentiated. |
 | Bxthre3 fit | 4.5 | 10% | 0.45 | Strong fit — adds financial optimization layer to existing water/soil data. Natural Irrig8 module expansion. No architecture extrapolation needed. |

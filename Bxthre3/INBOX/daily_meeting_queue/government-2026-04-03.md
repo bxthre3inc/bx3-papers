@@ -13,7 +13,7 @@
 | Sensor data to ESTCP portal | UNKNOWN |
 | brodiblanco confirmation | **NEEDED IMMEDIATELY** |
 
-**Dev was on AgentOS P0s during ESTCP window.** Confirm: was physical deployment done offline?
+**Dev was on Agentic P0s during ESTCP window.** Confirm: was physical deployment done offline?
 
 ---
 

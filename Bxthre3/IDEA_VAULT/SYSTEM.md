@@ -39,7 +39,7 @@ idea_id: uuid-v4
 captured_at: 2026-03-30T14:32:15Z
 captured_by: agent-id (zoe, raj_defensibility_01, etc.)
 source_conversation: conv-{id} | email-{id} | in-person
-domain: irrig8 | vpc | agentos | rain | trenchbabys | general
+domain: irrig8 | vpc | agentic | rain | trenchbabys | general
 defensibility_score: NULL | 1-5
 status: ACTIVE | ARCHIVED | REPURPOSED | DEPLOYED
 original_context: "You said..."
@@ -59,7 +59,7 @@ original_context: "You said..."
 ## Cross-Domain Potential
 - [ ] irrig8
 - [ ] vpc
-- [ ] agentos
+- [ ] agentic
 - [ ] rain
 - [ ] trenchbabys
 
@@ -96,7 +96,7 @@ Subject: IDEA_VAULT Weekly — 3 matches found
 
 This Week's Repurposing Opportunities:
 
-1. [Idea-234] Agriculture sensor mesh → AgentOS AMP protocol
+1. [Idea-234] Agriculture sensor mesh → Agentic AMP protocol
    Match: 87% similarity in connectivity patterns
    Suggested Action: Adapt mesh protocol center-pivot → general compute
    
@@ -149,7 +149,7 @@ Triggered when:
 
 ## EXAMPLES
 
-### Example 1: Agriculture Mesh → AgentOS
+### Example 1: Agriculture Mesh → Agentic
 
 **Original Idea (2026-03-15):**
 - Domain: Irrig8
@@ -158,12 +158,12 @@ Triggered when:
 - Status: ARCHIVED — pivoting to cellular
 
 **Match Detected (2026-03-28):**
-- New Problem: AgentOS needs federated compute
+- New Problem: Agentic needs federated compute
 - Similarity: 91% (mesh topology, peer discovery, failover)
 
 **Repurposing:**
 - `file 'IDEA_VAULT/repurposed/from-irrig8/idea-{uuid}.md'`
-- Action: Generalize irrigation mesh protocol → AgentOS AMP
+- Action: Generalize irrigation mesh protocol → Agentic AMP
 - Result: AMPDiscovery.kt created
 
 ### Example 2: Gaming KYC → Water Rights

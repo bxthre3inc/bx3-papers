@@ -21,8 +21,8 @@ Pre-built, customizable mobile and web applications for local businesses at $500
 ## Products
 
 - **Build-A-Biz Template** — Business-in-a-box model (owner 70%, Bxthre3 30%)
-- **AgentOS-powered sales engine**
-- **AgentOS-powered fulfillment engine**
+- **Agentic-powered sales engine**
+- **Agentic-powered fulfillment engine**
 
 ## Target Market
 

@@ -3,7 +3,7 @@
 ## Components
 - IMPACT_FRAMEWORK.md - Net employment calculus
 - WORKFORCE_FOUNDATION.md - 501c3 nonprofit entity
-- AI_ETHICS_GUIDELINES.md - AgentOS ethics principles, bias monitoring, regulatory compliance
+- AI_ETHICS_GUIDELINES.md - Agentic ethics principles, bias monitoring, regulatory compliance
 - BIAS_MONITOR.md - Bias detection tracking and escalation records
 - AUDIT_LOG.md - All agent decision audits with regulatory and bias check fields
 - Projects/*/IMPACT.md - Per-project impact tracking

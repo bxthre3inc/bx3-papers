@@ -19,8 +19,8 @@
 
 **API endpoint unreachable**
 
-Android configured for `https://agentos-api-brodiblanco.zocomputer.io/` — domain does not exist.  
-Live API at `https://brodiblanco.zo.space/api/agentos/` returns 404 due to backend import path failure.
+Android configured for `https://agentic-api-brodiblanco.zocomputer.io/` — domain does not exist.  
+Live API at `https://brodiblanco.zo.space/api/agentic/` returns 404 due to backend import path failure.
 
 **P1 filed to INBOX.md. SMS sent to brodiblanco.**
 
@@ -56,7 +56,7 @@ Live API at `https://brodiblanco.zo.space/api/agentos/` returns 404 due to backe
 | System | Status |
 |--------|--------|
 | Zo Space Routes | ✅ Healthy (0 errors, 130+ routes) |
-| agentos-api (v7.0.0) | ✅ Healthy |
+| agentic-api (v7.0.0) | ✅ Healthy |
 | VPC service | ✅ Healthy |
 | Server Resources | ✅ CPU 0.00, Memory 31GB free, Disk 81% |
 | CI/CD | ✅ Workflow configured (GitHub Actions) |
@@ -64,9 +64,9 @@ Live API at `https://brodiblanco.zo.space/api/agentos/` returns 404 due to backe
 ### Findings
 | Priority | Item | Owner |
 |----------|------|-------|
-| P2 | Android source tree `the-agentos-native/` missing — APKs are v0.2.0 | Engineering |
+| P2 | Android source tree `the-agentic-native/` missing — APKs are v0.2.0 | Engineering |
 | P2 | No recent Gradle build — APK not refreshed | Engineering |
-| P3 | agentos-api reports v6.0.0 in /status but service is v7.0.0 | Engineering |
+| P3 | agentic-api reports v6.0.0 in /status but service is v7.0.0 | Engineering |
 
 **No production services down. No escalations required.**
 
@@ -134,7 +134,7 @@ No P1. All critical paths operational.
 
 **Full report:** `Bxthre3/agents/specialist/reports/backend-2026-04-04.md`
 
-## QA Report — AgentOS | 2026-04-04
+## QA Report — Agentic | 2026-04-04
 
 **Status:** ✅ ALL SYSTEMS OPERATIONAL
 
@@ -161,11 +161,11 @@ No P1. All critical paths operational.
 | API | Status |
 |-----|--------|
 | Mesh APIs | ✅ Operational |
-| AgentOS APIs | 🔴 Degraded (18 routes failing) |
+| Agentic APIs | 🔴 Degraded (18 routes failing) |
 | Android App | 🔴 At Risk |
 
 ### Critical Finding
-18 `/api/agentos/*` routes failing due to missing shared module `agentOSApi.js`. Root cause: import path `/home/workspace/Bxthre3/shared/agent-os/` not resolvable from zo.space context.
+18 `/api/agentic/*` routes failing due to missing shared module `agentOSApi.js`. Root cause: import path `/home/workspace/Bxthre3/shared/agentic/` not resolvable from zo.space context.
 
 ### No P1 Escalation
 Core mesh engine (MCP Mesh v2.0.0) is fully operational. Tests 5/5 passing. Event bus functional.

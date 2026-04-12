@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-04-07T02:00:31.116646",
+  "sources": {
+    "execution_metrics": {
+      "file": "/home/workspace/Bxthre3/projects/investor-protector/data/execution_metrics.json",
+      "hash": "7c4af86dd6292b56",
+      "size_bytes": 16603
+    },
+    "github_metrics": {
+      "file": "/home/workspace/Bxthre3/projects/investor-protector/data/github_metrics.json",
+      "hash": "e8393417bcb37e87",
+      "size_bytes": 869
+    },
+    "productivity_metrics": {
+      "file": "/home/workspace/Bxthre3/projects/investor-protector/data/productivity_metrics.json",
+      "hash": "c6b0857cecc5e34b",
+      "size_bytes": 11835
+    },
+    "cost_metrics": {
+      "file": "/home/workspace/Bxthre3/projects/investor-protector/data/cost_metrics.json",
+      "hash": "0f6ce027d5d44a02",
+      "size_bytes": 285
+    },
+    "audit_trail": {
+      "file": "/home/workspace/Bxthre3/projects/investor-protector/data/audit_trail.json",
+      "hash": "09cd0d7a23c99da3",
+      "size_bytes": 1221
+    },
+    "artifact_metrics": {
+      "file": "/home/workspace/Bxthre3/projects/investor-protector/data/artifact_metrics.json",
+      "hash": "281e3bf963d6675d",
+      "size_bytes": 614
+    }
+  },
+  "integrity_hash": "0c2c1f6a55c38087"
+}

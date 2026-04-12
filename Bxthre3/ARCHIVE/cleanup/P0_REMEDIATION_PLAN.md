@@ -23,8 +23,8 @@ grep -c "zoe-project" /home/workspace/Bxthre3/README.md
 ### Execute
 Overwrite `Bxthre3/README.md` with the corrected version (see file end for full content). Key changes:
 - Replace all `Irrig8` → `Irrig8`
-- Remove `zoe` as standalone project (absorbed into AgentOS — pending merge decision)
-- Remove `Android-Native IDE` (renamed to AgentOS Native)
+- Remove `zoe` as standalone project (absorbed into Agentic — pending merge decision)
+- Remove `Android-Native IDE` (renamed to Agentic Native)
 - Remove `ADM Standard` (never shipped)
 - Add all 11 current projects to the table
 - Remove all old submodule references
@@ -89,17 +89,17 @@ git submodule status | grep "Bxthre3/Bxthre3"
 
 ### Pre-step verification
 ```bash
-ls -lh /home/workspace/AgentOS-Native.apk
+ls -lh /home/workspace/Agentic-Native.apk
 ls -lh /home/workspace/VPC-Native.apk
-ls /home/workspace/Bxthre3/projects/the-agentos-native/ | grep apk
+ls /home/workspace/Bxthre3/projects/the-agentic-native/ | grep apk
 ls /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/android-native/ | grep apk
 ```
 
 ### Execute
 
-**3a — Move AgentOS APK:**
+**3a — Move Agentic APK:**
 ```bash
-mv /home/workspace/AgentOS-Native.apk /home/workspace/Bxthre3/projects/the-agentos-native/AgentOS-Native.apk
+mv /home/workspace/Agentic-Native.apk /home/workspace/Bxthre3/projects/the-agentic-native/Agentic-Native.apk
 ```
 
 **3b — Move VPC APK:**
@@ -109,7 +109,7 @@ mv /home/workspace/VPC-Native.apk /home/workspace/Bxthre3/projects/the-valleypla
 
 ### Post-step verification
 ```bash
-ls -lh /home/workspace/Bxthre3/projects/the-agentos-native/AgentOS-Native.apk
+ls -lh /home/workspace/Bxthre3/projects/the-agentic-native/Agentic-Native.apk
 ls -lh /home/workspace/Bxthre3/projects/the-valleyplayersclub-project/android-native/VPC-Native.apk
 ls /home/workspace/*.apk
 # Last command must return: No such file or directory
@@ -261,7 +261,7 @@ git add \
   Bxthre3/README.md \
   Bxthre3/P0_REMEDIATION_PLAN.md \
   Bxthre3/WORKSPACE_ASSESSMENT.md
-git add Bxthre3/projects/the-agentos-native/AgentOS-Native.apk
+git add Bxthre3/projects/the-agentic-native/Agentic-Native.apk
 git add Bxthre3/projects/the-valleyplayersclub-project/android-native/VPC-Native.apk
 git add Bxthre3/INBOX/agents/ARCHIVED/
 git add Bxthre3/INBOX/agents/INBOX_ROUTING.py
@@ -333,11 +333,11 @@ Each project lives in its own folder under `projects/` following the naming conv
 | **Irrig8** | `the-irrig8-project/` | Precision Agriculture OS — deterministic irrigation operating system leveraging satellite, sensor, and API data | Active |
 | **Valley Players Club** | `the-valleyplayersclub-project/` | Skills-and-slots sweepstakes gaming platform | Active |
 | **RAIN** | `the-rain-project/` | Regulatory Arbitrage Intelligence Network — AI-powered compliance gap mapping | Beta Live |
-| **AgentOS** | `the-agentos-project/` | Mobile-first agentic computing platform | Active |
-| **AgentOS Native** | `the-agentos-native/` | Native Android APK for AgentOS | Active |
+| **Agentic** | `the-agentic-project/` | Mobile-first agentic computing platform | Active |
+| **Agentic Native** | `the-agentic-native/` | Native Android APK for Agentic | Active |
 | **MCP Mesh** | `mcp-mesh/` | MCP interoperability mesh protocol for agent communication | Active |
 | **SLV Mesh** | `slv-mesh/` | San Luis Valley sensor mesh infrastructure | Pilot |
-| **Zoe** | `the-zoe-project/` | Conversational AI interface (pending merge into AgentOS) | Review |
+| **Zoe** | `the-zoe-project/` | Conversational AI interface (pending merge into Agentic) | Review |
 | **Antigravity** | `the-antigravity-project/` | Purpose under review | Review |
 | **ARD** | `the-ard-project/` | Purpose under review — no README | Review |
 | **Trenchbabys** | `the-trenchbabys-project/` | Purpose under review — no README | Review |

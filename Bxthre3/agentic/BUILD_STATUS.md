@@ -54,7 +54,7 @@
 - **Live data:** Yes (real API calls)
 
 ## Android APK
-- **Package:** `com.bxthre3.agentos`
+- **Package:** `com.bxthre3.agentic`
 - **Version:** 1.0.0
 - **APK:** https://zo.pub/brodiblanco/agentic-android/Agentic-v1.0.0-release.apk
 - **Signed:** Yes (v1 keystore)

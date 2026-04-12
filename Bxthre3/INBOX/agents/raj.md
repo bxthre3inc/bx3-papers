@@ -56,7 +56,7 @@ For each grant discovered (7+/10 fit), produce:
 | Vector | Priority | Examples |
 |---|---|---|
 | **Irrig8** | 🔴 P0 | Water, ag tech, irrigation, San Luis Valley |
-| **AgentOS** | 🟠 P1 | AI, workforce, automation, SBIR |
+| **Agentic** | 🟠 P1 | AI, workforce, automation, SBIR |
 | **VPC** | 🟡 P2 | Gaming, regtech, sweepstakes, FinTech |
 | **ARD** | 🟡 P2 | Rural dev, real estate, CDFI, EDA |
 | **Rain** | 🟡 P3 | International, World Bank, UNDP, climate |

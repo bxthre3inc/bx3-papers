@@ -1,17 +1,17 @@
 # Build-A-Biz Packages
 
-**Turnkey Business-in-a-Box Built on AgentOS**
+**Turnkey Business-in-a-Box Built on Agentic**
 
-Build-A-Biz Packages is a complete packaged solution for launching AI-powered businesses using the AgentOS platform. It includes everything you need to go from zero to a fully operational business with AI agents handling operations, sales, and customer management.
+Build-A-Biz Packages is a complete packaged solution for launching AI-powered businesses using the Agentic platform. It includes everything you need to go from zero to a fully operational business with AI agents handling operations, sales, and customer management.
 
 ---
 
 ## Product Overview
 
-Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-native businesses into a replicable, deliverable product. Built on AgentOS, the same platform powering Bxthre3 Inc's own operations, Build-A-Biz gives entrepreneurs and operators a head start on building with AI.
+Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-native businesses into a replicable, deliverable product. Built on Agentic, the same platform powering Bxthre3 Inc's own operations, Build-A-Biz gives entrepreneurs and operators a head start on building with AI.
 
 **What makes it different:**
-- Pre-configured AgentOS agents and workflows
+- Pre-configured Agentic agents and workflows
 - Proven playbooks from real AI businesses
 - Step-by-step implementation guidance
 - Multiple tiers to match budget and ambition
@@ -24,14 +24,14 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 
 **Best for:** Solo founders, side-hustlers, first-time AI adopters
 
-- Pre-configured AgentOS workspace
+- Pre-configured Agentic workspace
 - 3 core agents (Operations, Inbox, Tasks)
 - Basic playbook access (digital)
 - Email setup support
 - 30-day email support
 
 **Deliverables:**
-- Configured AgentOS account
+- Configured Agentic account
 - Custom agent templates (3)
 - Digital playbook PDF
 - Setup call (1 hour)
@@ -42,7 +42,7 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 
 **Best for:** Small teams (2-5), small businesses, operators ready to scale
 
-- Full AgentOS workspace with all core agents
+- Full Agentic workspace with all core agents
 - 5 agent types pre-configured
 - Complete playbook library
 - Sales materials template pack
@@ -50,7 +50,7 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 - 90-day support + onboarding call
 
 **Deliverables:**
-- Fully configured AgentOS workspace
+- Fully configured Agentic workspace
 - 5 custom agent configurations
 - Complete playbook set
 - Pitch deck template
@@ -73,7 +73,7 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 - Monthly strategy calls (first 6 months)
 
 **Deliverables:**
-- Complete AgentOS configuration
+- Complete Agentic configuration
 - 8 custom agent configurations
 - Advanced playbook library
 - White-label readiness assessment
@@ -101,7 +101,7 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 - Multi-user workspace with team permissions
 
 **Deliverables:**
-- Bespoke AgentOS configuration
+- Bespoke Agentic configuration
 - Custom agent development
 - White-label ready
 - Full playbook library + custom playbooks
@@ -118,7 +118,7 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 
 ## What's Included (All Tiers)
 
-### Core AgentOS Features
+### Core Agentic Features
 - AI inbox management and routing
 - Task automation and delegation
 - Calendar and scheduling integration
@@ -166,7 +166,7 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 **Key differentiators:**
 1. **It's not just prompts** — Pre-configured agents that persist, learn, and act autonomously
 2. **It's not just software** — Includes playbooks, templates, and support to actually implement
-3. **It's built on proven infrastructure** — AgentOS powers real businesses, not hypothetical use cases
+3. **It's built on proven infrastructure** — Agentic powers real businesses, not hypothetical use cases
 4. **It's affordable** — Fraction of the cost of hiring, with faster time-to-value
 5. **It's extensible** — Start with what you need, add capabilities as you grow
 
@@ -193,9 +193,9 @@ Build-A-Biz Packages packages the proven Bxthre3 methodology for building AI-nat
 - Upsell to Professional within first 30 days
 - Ultimate for growth-stage customers
 - Enterprise for referrals and larger opportunities
-- Bundle with AgentOS platform subscription (required for all tiers)
+- Bundle with Agentic platform subscription (required for all tiers)
 
 ---
 
 *Last updated: 2026-03-29*
-*Product of Bxthre3 Inc — Built on AgentOS*
+*Product of Bxthre3 Inc — Built on Agentic*

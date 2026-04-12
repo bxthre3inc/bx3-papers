@@ -1,6 +1,6 @@
 # Trace — BI & Analytics Lead INBOX
 **Role:** BI & Analytics Lead, Bxthre3 Inc.  
-**Ventures:** Irrig8, RAIN, Starting5, VPC, ARD, AgentOS  
+**Ventures:** Irrig8, RAIN, Starting5, VPC, ARD, Agentic  
 **Reports to:** Insight (Data Science), Balance (CFO), Atlas (COO)  
 **Last Updated:** 2026-03-23
 
@@ -77,7 +77,7 @@ Own business intelligence and advanced analytics across all Bxthre3 ventures. Bu
 | **Starting5** | 🟡 | Architecture pending | Q2 planning |
 | **VPC** | 🔴 | CI failures | Edge validation needed |
 | **ARD** | 🟢 | Stable | Core platform operational |
-| **AgentOS** | 🟢 | 10 agents | 2 cycles/day |
+| **Agentic** | 🟢 | 10 agents | 2 cycles/day |
 
 ---
 
@@ -94,14 +94,14 @@ Own business intelligence and advanced analytics across all Bxthre3 ventures. Bu
 |---|---|---|
 | **VPC** | 1 user, 0 games, 8 wagers | 🟡 Very early - needs CI fix first |
 | **Irrig8** | CAPEX/OPEX validated, sensor DB 12KB | 🟢 Ready - field data modeling possible |
-| **AgentOS** | 10 agents, PostgreSQL live | 🟢 Ready - telemetry infrastructure exists |
+| **Agentic** | 10 agents, PostgreSQL live | 🟢 Ready - telemetry infrastructure exists |
 | **RAIN** | Grant pipeline active | 🟢 Ready - GFS scoring framework exists |
 | **ARD** | Stable | 🟢 Operational |
 | **Starting5** | Architecture pending | 🔴 Not ready |
 
 ### Immediate Priorities
 1. **VPC CI fix** → unlocks full analytics pipeline
-3. **AgentOS cost dashboard** → surface cost analytics to leadership
+3. **Agentic cost dashboard** → surface cost analytics to leadership
 4. **VPC cohort baseline** → establish LTV/churn tracking once CI fixed
 
 ### Blocker for BI Standup

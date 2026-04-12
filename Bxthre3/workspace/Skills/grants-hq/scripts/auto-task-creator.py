@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Grant-to-Task Automation — Creates AgentOS tasks from grant deadlines."""
+"""Grant-to-Task Automation — Creates Agentic tasks from grant deadlines."""
 
 import csv
 import json
@@ -10,8 +10,8 @@ from pathlib import Path
 PIPELINE_PATH = Path("/home/workspace/Bxthre3/grants/pipeline.csv")
 TASKS_PATH = Path("/home/workspace/Bxthre3/INBOX/grant-tasks.json")
 
-# AgentOS API endpoint via MCP bridge
-AGENTOS_API = "http://localhost:9999/api/agentos"
+# Agentic API endpoint via MCP bridge
+AGENTOS_API = "http://localhost:9999/api/agentic"
 
 def load_pipeline():
     if not PIPELINE_PATH.exists():

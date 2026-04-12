@@ -1,5 +1,5 @@
 # Investor Relations — Department INBOX
-**Reach | VP Investor Outreach — Bxthre3 Inc / AgentOS Finance Division**
+**Reach | VP Investor Outreach — Bxthre3 Inc / Agentic Finance Division**
 **Department:** Investor Relations
 **Created:** 2026-04-02
 
@@ -11,7 +11,7 @@ Investor Relations owns all fundraising, capital market activities, and investor
 - **Irrig8:** Series A (~$5-10M) — hardware scaling + San Luis Valley market expansion
 - **Valley Players Club:** Strategic investor round (~$1-3M) — licensing + multi-state expansion
 - **The Starting 5:** Seed/Series A (~$2-5M) — team buildout + growth
-- **Zoe / AgentOS:** Open source / strategic enterprise (~$1-2M)
+- **Zoe / Agentic:** Open source / strategic enterprise (~$1-2M)
 - **Bxthre3 corporate:** Master company raise (SAFE/convertible note, cap table management)
 
 ---
@@ -44,7 +44,7 @@ Investor Relations owns all fundraising, capital market activities, and investor
 | **Irrig8** | Series A | $5-10M | Hardware scaling, SLV expansion, sensor deployment | P1 |
 | **Valley Players Club** | Strategic | $1-3M | WY licensing, FL/NY bond execution, ops buildout | P1 |
 | **The Starting 5** | Seed/A | $2-5M | Engineering team, GTM, customer acquisition | P2 |
-| **Zoe / AgentOS** | Strategic | $1-2M | Open source adoption, enterprise pilots | P2 |
+| **Zoe / Agentic** | Strategic | $1-2M | Open source adoption, enterprise pilots | P2 |
 | **Bxthre3 corporate** | SAFE/Note | TBD | Working capital, cap table cleanup | P3 |
 
 ---
@@ -95,7 +95,7 @@ Investor Relations owns all fundraising, capital market activities, and investor
 - **Irrig8** is the flagship product — do NOT use FarmSense (retired 2026-03-23)
 - **VPC** equity split confirmed: 500,001 / 499,999 (BXB / co-founder)
 - **Water Court** Jun 29, 2026 — evidence prep ongoing; do not distract core team
-- **AgentOS** has 93 stub findings (P0/P1) — engineering remediation in progress; do not oversell until remediated
+- **Agentic** has 93 stub findings (P0/P1) — engineering remediation in progress; do not oversell until remediated
 
 ---
 

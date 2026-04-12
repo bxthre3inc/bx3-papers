@@ -23,7 +23,7 @@
 ### What Was Fixed
 
 1. **Accuracy Claims**: MAPE/R² reframed from "verified data" to "engineering projections" — no field data exists yet (deployment May 2026)
-2. **Digital Workforce Added**: Section 4 + supporting evidence doc quantify AgentOS 25+ agents, 1:4+ human-to-network ratio
+2. **Digital Workforce Added**: Section 4 + supporting evidence doc quantify Agentic 25+ agents, 1:4+ human-to-network ratio
 3. **Document Status**: All claims now accurately represent current state of development
 
 
@@ -56,7 +56,7 @@ grants/
 ## Next Steps
 
 - [ ] Confirm Zo Space / Irrig8 demo is operational for reviewers
-- [ ] Update BATCH-01-FED-US.md with new Irrig8/AgentOS branding
+- [ ] Update BATCH-01-FED-US.md with new Irrig8/Agentic branding
 - [ ] Audit all active batches for Irrig8 → Irrig8 rebrand completeness
 
 ---

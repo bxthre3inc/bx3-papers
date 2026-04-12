@@ -24,7 +24,7 @@ The 2B2F strategic planning unit has completed Month 1 of the 12-month planning 
 |------|-----------|--------|
 | IRRIG8CO | 3-entity IP/ops/data separation | Complete |
 | VPC | 3-entity regulatory firewall | Complete |
-| AgentOS | 2-entity platform/licensing | Draft |
+| Agentic | 2-entity platform/licensing | Draft |
 | HoldCo | Bxthre3 Inc + OpCo Holdings | Complete |
 
 **Key Decisions:**
@@ -123,7 +123,7 @@ Cross-OpCo integration creates compounding advantages:
 
 | Service | Standalone Cost | Shared Cost | Savings |
 |---------|-----------------|-------------|---------|
-| AgentOS Platform | $200K/OpCo/year | $50K + usage | 60% |
+| Agentic Platform | $200K/OpCo/year | $50K + usage | 60% |
 | Legal/Compliance | $400K/OpCo/year | $200K allocated | 50% |
 | Data Infrastructure | $150K/OpCo/year | $50K + usage | 55% |
 | Engineering | $2M/OpCo/year | Cost + 15% | 25% |
@@ -170,8 +170,8 @@ Research paper co-authorship format:
 
 ## Next Month Priorities (May 2026)
 
-### Week 1-2: AgentOS Architecture
-- Complete AgentOS OpCo entity structure
+### Week 1-2: Agentic Architecture
+- Complete Agentic OpCo entity structure
 - Define platform licensing model
 - Document API monetization framework
 

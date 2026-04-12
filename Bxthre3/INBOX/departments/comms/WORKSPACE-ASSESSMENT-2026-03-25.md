@@ -14,7 +14,7 @@
 | # | Category | Score | Trend |
 |---|----------|-------|-------|
 | 1 | zo.space Active Routes | 3/10 | 🔴 |
-| 2 | AgentOS Code Quality | 4/10 | 🔴 |
+| 2 | Agentic Code Quality | 4/10 | 🔴 |
 | 3 | VPC Platform Readiness | 5/10 | 🟡 |
 | 4 | INBOX System Integrity | 5/10 | 🟡 |
 | 5 | Zo Space Home + Branding | 7/10 | 🟢 |
@@ -48,12 +48,12 @@
 
 ---
 
-### 2. 🤖 AgentOS Code Quality — 4/10 🔴
+### 2. 🤖 Agentic Code Quality — 4/10 🔴
 
 - **`ApiService.kt`** — 100% mock data. No real HTTP calls. Every `fetch*()` function returns hardcoded `listOf(...)`. This is the source of the phantom agent detections.
 - **`LocalDataSource.kt`** — All agent data is `LocalAgent` models with no server sync.
 - **Android native build** — Has Gradle/tooling churn history. Last active 2026-03-24 per profile, current state unverified.
-- **Capacitor builds** — VPC and AgentOS mobile apps were rebuilt successfully but are flagged as "not real clients" by brodiblanco.
+- **Capacitor builds** — VPC and Agentic mobile apps were rebuilt successfully but are flagged as "not real clients" by brodiblanco.
 - **`/api/grants`** endpoint returns empty/mismatched data per recent session notes.
 - **No real API integration** — all network layers are stubs.
 
@@ -179,13 +179,13 @@
 
 | Priority | Action | Category | Owner |
 |----------|--------|----------|-------|
-| 🔴 P1 | Fix database backup agent (failing since 03-23) | INBOX System | AgentOS / Ops |
-| 🔴 P2 | Wire ApiService.kt to real endpoints | AgentOS | Engineering |
+| 🔴 P1 | Fix database backup agent (failing since 03-23) | INBOX System | Agentic / Ops |
+| 🔴 P2 | Wire ApiService.kt to real endpoints | Agentic | Engineering |
 | 🔴 P3 | Delete or build 6 placeholder zo.space routes | Routes | Engineering |
 | 🟠 P4 | Move 3 stale projects into `projects/` | Structure | Engineering |
 | 🟠 P5 | Fix `/api/grants` and `/api/tasks` endpoints | VPC | Engineering |
 | 🟡 P6 | Create `SOUL.md` at workspace root | Documentation | Press |
-| 🟡 P7 | Verify Android native APK build state | AgentOS | Engineering |
+| 🟡 P7 | Verify Android native APK build state | Agentic | Engineering |
 | 🟡 P8 | Populate Supermemory with key learnings | Knowledge | All agents |
 | 🟡 P9 | Review Irrig8 code for transferable IP | Irrig8 | Engineering |
 | 🟡 P10 | Build live Irrig8 product page | Branding | Press |

@@ -24,7 +24,7 @@
 
 | # | Project | Status | Type | IP Strategy | Campus Connection |
 |---|---------|--------|------|-------------|---------------------|
-| 8 | **AgentOS** | Active | Internal Platform | Trade Secret | Powers all campus operations; Tier 1 access only |
+| 8 | **Agentic** | Active | Internal Platform | Trade Secret | Powers all campus operations; Tier 1 access only |
 | 9 | **The Starting 5** | Draft | SaaS Concept | Patentable (co-founder AI) | Campus incubator = first customer cohort |
 | 10 | **The Zoe Project** | Active | Digital Assistant | Subsidiary/IP | Bxthre3 consumer product; personal server |
 | 11 | **SymphonyOS** | Active | Middleware | Separate LLC planned | Open-source layer; campus integration API |
@@ -49,7 +49,7 @@
 | P1 | Method for Bi-Dimensional Resource Orchestration (10-Point Vector, Z-Axis) | ⏳ PROVISIONAL PENDING | 2026-05-15 | Provisional | 5/5 — Core moat |
 | P2 | System for Forensic Environmental Data Sealing at Edge Relay Nodes | ⏳ PROVISIONAL PENDING | 2026-05-15 | Provisional | 5/5 — Legal moat |
 | P3 | Deterministic Autonomous Protocol for Agricultural Decision-Making (9-Plane DAP) | ⏳ PROVISIONAL PENDING | 2026-05-15 | Provisional | 5/5 — Logic moat |
-| P4 | Cascading Workflow Trigger Architecture for Multi-Worker Orchestration | ⏳ PROVISIONAL PENDING | 2026-05-15 | Provisional | 5/5 — AgentOS moat |
+| P4 | Cascading Workflow Trigger Architecture for Multi-Worker Orchestration | ⏳ PROVISIONAL PENDING | 2026-05-15 | Provisional | 5/5 — Agentic moat |
 | P5 | Self-Modification Engine for Autonomous Software Systems | ⏳ PROVISIONAL PENDING | 2026-05-15 | Provisional | 5/5 — Evolution moat |
 | P6 | Antifragile Event Cascade Orchestration with Thermodynamic Bounds | ⏳ PROVISIONAL PENDING | 2026-04-19 | Provisional | 5/5 — ACA core |
 | P7 | 48-Hour Local Autonomy for Distributed Environmental Control | ⏳ PLANNED | 2026-06-15 | Provisional | 4/5 — Edge moat |
@@ -59,7 +59,7 @@
 
 | Secret | Tier | Protection | Value |
 |--------|------|------------|-------|
-| AgentOS Core (Truth Gate, INBOX routing, State Machine) | TIER 1 (BX3 only) | Employment agreements, access logging, encryption | Catastrophic loss — entire portfolio depends on this |
+| Agentic Core (Truth Gate, INBOX routing, State Machine) | TIER 1 (BX3 only) | Employment agreements, access logging, encryption | Catastrophic loss — entire portfolio depends on this |
 | Federated Mesh Protocol (Zo/Kali/Render/Android) | TIER 1-2 | Network segmentation, hardware tokens | High — operational backbone |
 | Kriging Interpolation Algorithms (Irrig8) | TIER 2 | Engineering team NDA | High — technical moat |
 | Symphony/ACA Event System Details | TIER 2 | Patent pending + trade secret | Medium-High — dual protection |
@@ -83,7 +83,7 @@
 
 | Work | Type | Registration | Status |
 |------|------|--------------|--------|
-| AgentOS Source Code | Software | Planned (Library of Congress) | TIER 1 access only |
+| Agentic Source Code | Software | Planned (Library of Congress) | TIER 1 access only |
 | Irrig8 Master Manual V2.1 | Technical | — | 566 pages, confidential |
 | Symphony IP Architecture Doc | Technical | — | Internal strategic |
 | Build-A-Biz Playbooks | Business | — | Client deliverables |
@@ -101,7 +101,7 @@
 | **Irrig8** | Anchor tenant, Zone B manufacturing | CSU pilot (2 fields), hardware specs, DAP logic | 40-acre demo expansion |
 | **VPC** | Zone A data center customer, compliance testing | v8.0.0 APK, Unity migration, CREDs wallet | Physical venue partners |
 | **Build-A-Biz** | Campus services provider, client pipeline | 5 restaurant demos, app templates, grant scripts | First paying customers |
-| **AgentOS** | Campus operations platform (internal) | All core primitives, INBOX routing, Pulse | Public-facing docs (Symphony) |
+| **Agentic** | Campus operations platform (internal) | All core primitives, INBOX routing, Pulse | Public-facing docs (Symphony) |
 
 ### NEEDS ACTIVATION (🔄)
 
@@ -140,7 +140,7 @@
 
 | Campus Component | Grant Programs | Projects Supported |
 |------------------|--------------|------------------|
-| **Zone A Data Center** | EDA (regional innovation), USDA REAP (rural energy) | VPC, AgentOS training, Starting 5 |
+| **Zone A Data Center** | EDA (regional innovation), USDA REAP (rural energy) | VPC, Agentic training, Starting 5 |
 | **Zone B Manufacturing** | USDA NIFA (ag manufacturing), ARPA-E (precision ag) | Irrig8 hardware, AgEaaS fleet |
 | **Zone C Demo Fields** | NSF (research infrastructure), CIG (conservation) | Irrig8 validation, CARBON8 soil science |
 | **Equipment Commons** | USDA REAP (equipment efficiency), SBA 504 | AgEaaS fleet, Build-A-Biz services |
@@ -152,7 +152,7 @@
 |--------------|-------|--------|--------|
 | **CSU Partnership** | Ag students (field tech) | Irrig8, CARBON8, AgEaaS | Local grads → full-time |
 | **Equipment Commons** | Mechanics (equipment) | AgEaaS, Build-A-Biz | Valley employment |
-| **Data Center** | IT/Network (edge compute) | VPC, RAIN, AgentOS | Remote + local hybrid |
+| **Data Center** | IT/Network (edge compute) | VPC, RAIN, Agentic | Remote + local hybrid |
 | **Incubator** | Entrepreneurs (AI co-founders) | The Starting 5, new ventures | 6-month → full companies |
 
 ---
@@ -165,7 +165,7 @@
 |-----|------|--------|----------|
 | **Patent Agent deadline** | Lose novelty on ACA system | File provisional by 2026-04-19 | 13 days |
 | **7 Irrig8 provisionals** | Competitor filing in water/AI space | File all 7 by 2026-05-15 | 39 days |
-| **AgentOS leak exposure** | No employment agreements for all contractors | Draft, sign, file | 30 days |
+| **Agentic leak exposure** | No employment agreements for all contractors | Draft, sign, file | 30 days |
 | **Trademark "Irrig8"** | Brand confusion, dilution | File USPTO application | 30 days |
 
 ### HIGH (P1 — Strategic Risk)
@@ -207,7 +207,7 @@
 | **AgEaaS (activate)** | Fleet optimization, predictive maintenance | Irrig8 (field equipment data) |
 | **CARBON8 (activate)** | Soil carbon algorithms, verification protocols | Irrig8 (sensor network), Campus (lab certification) |
 
-### AgentOS (Bxthre3 Internal) — ABSOLUTELY PROTECTED
+### Agentic (Bxthre3 Internal) — ABSOLUTELY PROTECTED
 
 | Access Tier | Who | What They See | What They DON'T See |
 |-------------|-----|---------------|---------------------|
@@ -215,7 +215,7 @@
 | **TIER 1** | 2-3 core engineers | API documentation, agent configuration, deployment scripts | Core algorithms, routing logic, rollback internals |
 | **TIER 2** | Engineering team | Pre-configured agents, limited API access | Any core system modification capability |
 | **TIER 3** | Subsidiary operators | Their vertical's INBOX only | Other verticals' data, any core system |
-| **TIER 4** | End customers (Build-A-Biz) | Packaged agents, no branding | Any AgentOS/platform layer |
+| **TIER 4** | End customers (Build-A-Biz) | Packaged agents, no branding | Any Agentic/platform layer |
 
 ---
 
@@ -251,7 +251,7 @@
 
 ### The "Full-Stack Rural Modernization" Thesis
 
-> "Bxthre3 isn't building an ag-tech product. We're building the **operating system for rural economic development** — starting with the San Luis Valley. The SLV Technology Commons is the physical infrastructure layer: data center, manufacturing, research fields, and equipment commons. All of it powered by AgentOS, protected by 8+ patents, and designed to make the SLV the **Silicon Valley of climate-resilient agriculture.**"
+> "Bxthre3 isn't building an ag-tech product. We're building the **operating system for rural economic development** — starting with the San Luis Valley. The SLV Technology Commons is the physical infrastructure layer: data center, manufacturing, research fields, and equipment commons. All of it powered by Agentic, protected by 8+ patents, and designed to make the SLV the **Silicon Valley of climate-resilient agriculture.**"
 
 ### Investment/Gift Positioning
 
@@ -274,7 +274,7 @@
 | **GAMEPLAN** | `Bxthre3/GAMEPLAN-2026-MASTER.md` — Strategic constitution |
 | **IP ARCHITECTURE** | `Bxthre3/projects/agentic/SYMPHONY-IP-ARCHITECTURE.md` — 7 patents |
 | **PATENT STATUS** | `Bxthre3/FUNDING/patent-status.md` — ACA filing tracker |
-| **AGENTOS CORE** | `Bxthre3/projects/agentic/the-agentos-project/docs/ARCHITECTURE.md` |
+| **AGENTOS CORE** | `Bxthre3/projects/agentic/the-agentic-project/docs/ARCHITECTURE.md` |
 | **IRRIG8 SPECS** | `Bxthre3/projects/the-irrig8-project/docs/specs/` — 12 hardware specs |
 | **BUILD-A-BIZ** | `Bxthre3/projects/build-a-biz-llc/` — Services infrastructure |
 | **THINKTANK** | `Bxthre3/ThinkTank/` — CARBON8, CORDSR, AgEaaS1 drafts |

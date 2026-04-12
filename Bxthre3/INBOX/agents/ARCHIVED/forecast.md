@@ -23,7 +23,7 @@
 | **Starting5** | $0 | — | — | Development stage |
 | **ARD** | $0 | — | — | Scout operations |
 | **RAIN** | $0 | — | — | Bootstrap |
-| **Corporate** | Minimal | — | — | AgentOS overhead |
+| **Corporate** | Minimal | — | — | Agentic overhead |
 
 **Overall:** Clean burn position. No unplanned cash outflows.
 

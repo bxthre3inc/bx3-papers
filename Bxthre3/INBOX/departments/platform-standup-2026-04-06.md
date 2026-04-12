@@ -10,36 +10,36 @@
 
 | Service | Status | Details |
 |---------|--------|---------|
-| zo.space (AgentOS routes) | ✅ UP | All 10 /api/agentos/* endpoints responding 200 |
-| agentos-api (port 9000) | ✅ UP | v7.0.0, healthy at /health |
+| zo.space (Agentic routes) | ✅ UP | All 10 /api/agentic/* endpoints responding 200 |
+| agentic-api (port 9000) | ✅ UP | v7.0.0, healthy at /health |
 | VPC service (port 5176) | ✅ UP | Running |
 
 ---
 
 ## Incident Resolution — Shared Symlink Broken
 
-**Problem:** 10 AgentOS API routes failing with `Cannot find module '/home/workspace/Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.js'`
+**Problem:** 10 Agentic API routes failing with `Cannot find module '/home/workspace/Bxthre3/shared/agentic/core/hierarchy/agentOSApi.js'`
 
-**Root Cause:** `/home/workspace/Bxthre3/shared/agent-os/core` was a standalone empty directory, not a symlink. This broke the module resolution chain:
-- `/home/workspace/Bxthre3/shared/agent-os` → `agentic/agent-os` ✅ (symlink)
-- `/home/workspace/Bxthre3/shared/agent-os/core` → **was broken directory** ❌
+**Root Cause:** `/home/workspace/Bxthre3/shared/agentic/core` was a standalone empty directory, not a symlink. This broke the module resolution chain:
+- `/home/workspace/Bxthre3/shared/agentic` → `agentic/agentic` ✅ (symlink)
+- `/home/workspace/Bxthre3/shared/agentic/core` → **was broken directory** ❌
 
 **Fix Applied:** Created symlink:
 ```
-/home/workspace/Bxthre3/shared/agent-os/core/hierarchy → /home/workspace/Bxthre3/projects/agentic/agent-os/core/hierarchy
+/home/workspace/Bxthre3/shared/agentic/core/hierarchy → /home/workspace/Bxthre3/projects/agentic/agentic/core/hierarchy
 ```
 
 **Verification:** All 10 endpoints now return HTTP 200:
-- /api/agentos/status ✅
-- /api/agentos/agents ✅
-- /api/agentos/org ✅
-- /api/agentos/tasks ✅
-- /api/agentos/depts ✅
-- /api/agentos/workqueue ✅
-- /api/agentos/workforce/metrics ✅
-- /api/agentos/starting5 ✅
-- /api/agentos/projects ✅
-- /api/agentos/android/agents/:id/:action ✅ (returns 400 for unknown actions — expected)
+- /api/agentic/status ✅
+- /api/agentic/agents ✅
+- /api/agentic/org ✅
+- /api/agentic/tasks ✅
+- /api/agentic/depts ✅
+- /api/agentic/workqueue ✅
+- /api/agentic/workforce/metrics ✅
+- /api/agentic/starting5 ✅
+- /api/agentic/projects ✅
+- /api/agentic/android/agents/:id/:action ✅ (returns 400 for unknown actions — expected)
 
 **Residual:** Old errors still cached in zo.space error log (from pre-fix requests). New requests are clean.
 
@@ -63,7 +63,7 @@
 | Issue | Status | Notes |
 |-------|--------|-------|
 | Stale error cache in zo.space | Monitor | Clears on new requests |
-| agentos-api service doctor shows old ENOENT errors | Historical | Current PID 51858 running clean |
+| agentic-api service doctor shows old ENOENT errors | Historical | Current PID 51858 running clean |
 
 ---
 

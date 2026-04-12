@@ -17,7 +17,7 @@ Agents currently only wake on schedule. When Blueprint completes a task at 8am, 
 
 | Component | Location | Status |
 |---|---|---|
-| Event Bus | `the-agentos-project/core/events/bus.ts` | Write-only stub (publish works, getEvents returns []) |
+| Event Bus | `the-agentic-project/core/events/bus.ts` | Write-only stub (publish works, getEvents returns []) |
 | INBOX Routing | `INBOX/agents/INBOX_ROUTING.py` | Works for agent inbox writes |
 | Scheduled Agents | Zo agent scheduler | Time-based only, no event triggers |
 | Blue Ocean Agents | Blueprint + Grader | Run on daily schedule |
@@ -90,7 +90,7 @@ BO-003 (Blueprint spec)     → completes → fires → BO-004 (Human review)
 For B-grade opportunities: stops at human review. For A-grade: auto-builds.
 
 ### 3. Dispatcher Service (pulse.ts enhancement)
-**File:** `the-agentos-project/core/employees/pulse.ts` (add Blue Ocean dispatcher)  
+**File:** `the-agentic-project/core/employees/pulse.ts` (add Blue Ocean dispatcher)  
 **Behavior:**
 - Runs every 60 seconds (short interval, not hourly)
 - Reads unprocessed events from EVENT_LOG.jsonl
@@ -221,7 +221,7 @@ Bxthre3/
 │               ├── EVENT_LOG.jsonl        (append-only)
 │               └── HANDOFF_LOG.jsonl      (append-only)
 │
-└── projects/the-agentos-project/
+└── projects/the-agentic-project/
     └── core/
         └── employees/
             └── pulse.ts                   (enhanced with dispatcher)

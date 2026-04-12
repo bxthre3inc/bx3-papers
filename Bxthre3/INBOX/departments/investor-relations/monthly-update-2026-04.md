@@ -41,11 +41,11 @@
 - **Stage:** Pre-commercial — regulatory pathway advancing
 - **Equity split:** 500,001 / 499,999 (BXB / co-founder)
 
-### AgentOS
+### Agentic
 
 - **Stage:** Development — AI workforce orchestration platform
 - **Workforce:** 19 agents deployed across Bxthre3 ventures
-- **Android app:** Built and live (AgentOS-Native)
+- **Android app:** Built and live (Agentic-Native)
 - **Note:** 93 stub findings — remediation in progress; do not oversell until remediated
 
 ---
@@ -88,7 +88,7 @@
 
 ## Fundraising Pipeline
 
-| Stage | Irrig8 | VPC | Starting 5 | AgentOS | Total |
+| Stage | Irrig8 | VPC | Starting 5 | Agentic | Total |
 |-------|--------|-----|------------|---------|-------|
 | Sourced | 3 | 2 | 4 | 1 | 10 |
 | Researched | 6 | 4 | 0 | 2 | 12 |

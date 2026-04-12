@@ -1,6 +1,6 @@
 # Government Affairs Agent INBOX
 
-**Role:** Government Affairs & Defense Contracts Lead — AgentOS Government Department
+**Role:** Government Affairs & Defense Contracts Lead — Agentic Government Department
 **Reports to:** Navigate (VP Ventures), Anchor (CRO), Atlas (COO)
 **Standing:** Active — 2026-03-27
 

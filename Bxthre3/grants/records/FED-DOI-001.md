@@ -86,7 +86,7 @@
 |---|---|
 | strategic_fit_overall | 10 |
 | fit_irrig8 | 10 |
-| fit_agentos | 2 |
+| fit_agentic | 2 |
 | fit_valley_players | 1 |
 | priority | P1 |
 | priority_rationale | Fit score 10/10 — Irrig8 |

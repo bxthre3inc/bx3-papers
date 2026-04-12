@@ -1,5 +1,5 @@
 # Network — Investor Relations Manager
-**Bxthre3 Inc. / AgentOS Finance Division**
+**Bxthre3 Inc. / Agentic Finance Division**
 **Agent ID:** network | **Status:** Active | **Reports to:** Reach (VP Investor Outreach), Oracle (Investor Relations Lead)
 
 ---
@@ -94,7 +94,7 @@ Manage ongoing relationships with existing investors, LPs, and advisors. Keep cu
 | Colorado regional investors | Unknown | Needs source list |
 | Starting 5 angels | Unknown | Coordinate with Starting 5 team |
 | VPC strategic partners | Unknown | Coordinate with VPC agent |
-| Zoe open source supporters | Unknown | Coordinate with Zoe/AgentOS team |
+| Zoe open source supporters | Unknown | Coordinate with Zoe/Agentic team |
 | Government/Econ Dev partners | Unknown | Coordinate with RAIN agent |
 
 ---

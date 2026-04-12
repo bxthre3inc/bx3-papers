@@ -42,12 +42,12 @@ The goal is NOT to become the dominant 45Z CI platform. It's to build something:
 
 | Week | Action | Owner | Output |
 |---|---|---|---|
-| 1 | Map GREET inputs → Irrig8 data fields | AgentOS (Blueprint) | Data mapping doc |
-| 2 | Build CI scoring layer on existing pipeline | AgentOS (Engineering) | API endpoint: `/ci-score/{field_id}` |
-| 3 | Pull 3 years historical SLV sensor data → generate CI scores | AgentOS (Data) | Historical CI dataset |
+| 1 | Map GREET inputs → Irrig8 data fields | Agentic (Blueprint) | Data mapping doc |
+| 2 | Build CI scoring layer on existing pipeline | Agentic (Engineering) | API endpoint: `/ci-score/{field_id}` |
+| 3 | Pull 3 years historical SLV sensor data → generate CI scores | Agentic (Data) | Historical CI dataset |
 | 4 | Validate with 1 agronomist (remote, per-diem) | Human | GREET validation memo |
 | 5 | Approach 1 ethanol plant with pilot proposal | Human (brodiblanco) | Signed LOI or pilot agreement |
-| 6 | Run pilot + generate real CI report | AgentOS + Human | Pilot report with real numbers |
+| 6 | Run pilot + generate real CI report | Agentic + Human | Pilot report with real numbers |
 | 7–8 | Approach 2nd ethanol plant + approach 1 incumbent | Human | Competitive tension established |
 
 **Total to first revenue:** 8 weeks  
@@ -91,7 +91,7 @@ Whoever offers better terms (acquisition, licensing, partnership) wins.
 Before any outreach:
 1. **Document the methodology** — How Irrig8 maps irrigation energy to GREET CI. This is the IP.
 2. **Do NOT publish** — Keep the arid-land CI mapping proprietary.
-3. **Consider provisional patent** — One-page filing on "Method for field-level carbon intensity scoring using multi-source irrigation energy data in arid regions." ~$5K external cost, AgentOS can draft.
+3. **Consider provisional patent** — One-page filing on "Method for field-level carbon intensity scoring using multi-source irrigation energy data in arid regions." ~$5K external cost, Agentic can draft.
 
 **Why:** Incumbents will try to replicate rather than buy. IP makes them **have to** come to the table.
 
@@ -99,13 +99,13 @@ Before any outreach:
 
 ## HITL COST (TO KEEP MINIMAL)
 
-| Task | HITL Required | Can AgentOS Reduce? |
+| Task | HITL Required | Can Agentic Reduce? |
 |---|---|---|
-| GREET methodology mapping | 1 agronomist (5 hrs) | Partial — AgentOS does data mapping, human validates |
-| Pilot LOI / negotiation | brodiblanco (2 hrs/wk) | Partial — AgentOS drafts, human signs |
+| GREET methodology mapping | 1 agronomist (5 hrs) | Partial — Agentic does data mapping, human validates |
+| Pilot LOI / negotiation | brodiblanco (2 hrs/wk) | Partial — Agentic drafts, human signs |
 | CI report generation | 0 (fully automated) | Yes — fully automated |
 | Acquirer outreach | brodiblanco | No — human required |
-| IP filing | External attorney | Partial — AgentOS prepares, attorney finalizes |
+| IP filing | External attorney | Partial — Agentic prepares, attorney finalizes |
 
 ---
 

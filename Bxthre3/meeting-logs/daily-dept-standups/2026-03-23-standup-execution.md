@@ -9,7 +9,7 @@
 - SMS delivery: FAILED (user has not replied to recent texts)
 
 ## Blocking Issues
-1. **ORG-CHART.md** not found at `/home/workspace/Bxthre3/agent-os-v2/ORG-CHART.md`
+1. **ORG-CHART.md** not found at `/home/workspace/Bxthre3/agentic-v2/ORG-CHART.md`
 2. **meeting-helpers.py** not found at `/home/workspace/Skills/meeting-orchestrator/scripts/meeting-helpers.py`
 
 ## Impact

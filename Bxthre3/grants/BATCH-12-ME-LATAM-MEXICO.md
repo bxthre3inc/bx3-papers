@@ -112,7 +112,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | AgentOS, Irrig8 |
+| Portfolio Fit | Agentic, Irrig8 |
 | Status | Active — Canada-Mexico AI and agriculture collaboration |
 | Next Action | Engage through Canada-Mexico trade missions |
 

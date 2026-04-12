@@ -125,7 +125,7 @@ TOTAL         : 22
 |------|--------|-------------|
 | SBIR deadline miss | Lose $180K | Maya daily check |
 | Outreach delay | Cash runway shortens | Pitch deck priority |
-| IP remediation lag | Investor narrative hurt | Hold AgentOS until remediated |
+| IP remediation lag | Investor narrative hurt | Hold Agentic until remediated |
 | Cold outreach low response | Pipeline stalls | brodiblanco warm intros critical |
 
 ---

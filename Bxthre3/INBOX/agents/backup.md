@@ -7,13 +7,13 @@
 | VPC Database | ✅ Success | 36KB (0.035 MB) | Passed |
 | Airtable Tasks | ✅ Success | 2.9KB | 21 records |
 | Airtable Integrations | ✅ Success | 875B | 7 records |
-| AgentOS Core | ✅ Success | 13KB | Tar archive |
+| Agentic Core | ✅ Success | 13KB | Tar archive |
 
 ### Backup Files Created
 - `/home/workspace/Backups/vpc-20260329.db`
 - `/home/workspace/Backups/airtable-tasks-20260329.json`
 - `/home/workspace/Backups/airtable-integrations-20260329.json`
-- `/home/workspace/Backups/agentos-core-20260329.tar.gz`
+- `/home/workspace/Backups/agentic-core-20260329.tar.gz`
 
 ### SQLite Verification Output
 ```
@@ -46,13 +46,13 @@ games         sessions      transactions  wallets
 | VPC Database | ✅ Success | 36KB (0.035 MB) | Passed |
 | Airtable Tasks | ✅ Success | 6.5KB | 21 records |
 | Airtable Integrations | ✅ Success | 1.9KB | 7 records |
-| AgentOS Core | ✅ Success | 4.8KB | Tar archive |
+| Agentic Core | ✅ Success | 4.8KB | Tar archive |
 
 ### Backup Files Created
 - `/home/workspace/Backups/vpc-20260406.db`
 - `/home/workspace/Backups/airtable-tasks-20260406.json`
 - `/home/workspace/Backups/airtable-integrations-20260406.json`
-- `/home/workspace/Backups/agentos-core-20260406.tar.gz`
+- `/home/workspace/Backups/agentic-core-20260406.tar.gz`
 
 ### SQLite Verification Output
 ```
@@ -69,6 +69,6 @@ games         sessions      transactions  wallets
   - `vpc-20260329.db`
   - `airtable-tasks-20260329.json`
   - `airtable-integrations-20260329.json`
-  - `agentos-core-20260329.tar.gz`
+  - `agentic-core-20260329.tar.gz`
 
 ---

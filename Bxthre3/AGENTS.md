@@ -41,45 +41,45 @@
 | **ARD / Oferta** | `Bxthre3/projects/the-ard-project/` | 802 Morton St real estate arbitrage |
 | **The Rain Project** | `Bxthre3/projects/the-rain-project/` | Arbitrage intelligence + notifications |
 | **Trenchbabys** | `Bxthre3/projects/the-trenchbabys-project/` | Urban lifestyle retail — clothing, grooming, jewelry, events, Valley Grown |
-| **AgentOS** | `Bxthre3/projects/the-agentos-project/` | AI workforce orchestration |
-| **AgentOS Android** | `Bxthre3/projects/the-agentos-native/AgentOS-Native-Source/` | Native Android app (package: `com.agentosnative`) |
+| **Agentic** | `Bxthre3/projects/the-agentic-project/` | AI workforce orchestration |
+| **Agentic Android** | `Bxthre3/projects/the-agentic-native/Agentic-Native-Source/` | Native Android app (package: `com.agenticnative`) |
 
 ---
 
-## AgentOS — Single Source of Truth
+## Agentic — Single Source of Truth
 
 > **⚠️ Roster Merger — 2026-03-25:** org.ts and live API were diverged (org.ts had 24 fictional employees, live API had 14). Both now sync to the same 15-entity roster. Orphaned INBOXes flagged for department review.
 
 ### Architecture
 
 ```
-Canonical data: the-agentos-project/core/hierarchy/org.ts  (19 employees)
+Canonical data: the-agentic-project/core/hierarchy/org.ts  (19 employees)
                  └─ used by: core/hierarchy/agentOSApi.ts  (serialization layer)
                                               │
                     ┌─────────────────────────┼─────────────────────────┐
                     ▼                         ▼                         ▼
-           zo.space /aos            AgentOS Android App        Future clients
-     (https://brodiblanco.zo.space)  (BASE_URL: brodiblanco.zo.space/api/agentos/)
+           zo.space /agentic            Agentic Android App        Future clients
+     (https://brodiblanco.zo.space)  (BASE_URL: brodiblanco.zo.space/api/agentic/)
                     │
                     ▼
-     /api/agentos/status      → version, agents, metrics, tasks, integrations
-     /api/agentos/agents      → all 14 agents
-     /api/agentos/tasks        → all 15 active tasks
-     /api/agentos/org          → org chart (15 entries)
-     /api/agentos/workforce/metrics → workforce metrics
+     /api/agentic/status      → version, agents, metrics, tasks, integrations
+     /api/agentic/agents      → all 14 agents
+     /api/agentic/tasks        → all 15 active tasks
+     /api/agentic/org          → org chart (15 entries)
+     /api/agentic/workforce/metrics → workforce metrics
 ```
 
 ### Android App
 
-- **APK:** `Bxthre3/projects/the-agentos-native/AgentOS-Native-Source/app/build/outputs/apk/debug/app-debug.apk`
-- **Package:** `com.agentosnative`
-- **API:** `https://brodiblanco.zo.space/api/agentos/` (all 5 endpoints)
+- **APK:** `Bxthre3/projects/the-agentic-native/Agentic-Native-Source/app/build/outputs/apk/debug/app-debug.apk`
+- **Package:** `com.agenticnative`
+- **API:** `https://brodiblanco.zo.space/api/agentic/` (all 5 endpoints)
 - **Screens:** Dashboard, Agents, Tasks, Org Chart, Workforce, Inbox, Settings, Agent Detail
 
 ### Webapp
 
-- **URL:** `https://brodiblanco.zo.space/aos` (private, requires auth)
-- **Source:** `Bxthre3/projects/the-agentos-project/` (zo.space routes)
+- **URL:** `https://brodiblanco.zo.space/agentic` (private, requires auth)
+- **Source:** `Bxthre3/projects/the-agentic-project/` (zo.space routes)
 - **6 Tabs:** Status, Agents, Tasks, Org Chart, Starting 5, Integrations
 
 ### Agent INBOXes
@@ -139,7 +139,7 @@ Department report          → Bxthre3/INBOX/departments/{dept}.md
 | vpc | VPC Agent | Gaming Operations | Operations | active |
 | trenchbabys | Trenchbabys Agent | Retail Operations | Sales | idle |
 
-> **Roster Merger — 2026-03-25:** Canonical roster now 19 (18 AI + brodiblanco). Previously diverged across 3 environments: org.ts had 24 fictional Arkad employees, shared/agent-os had 33 hardcoded agents, live zo.space API had 14. All 3 now unified at 19. 4 new vertical agents added: irrig8, rain, vpc, trenchbabys.  
+> **Roster Merger — 2026-03-25:** Canonical roster now 19 (18 AI + brodiblanco). Previously diverged across 3 environments: org.ts had 24 fictional Arkad employees, shared/agentic had 33 hardcoded agents, live zo.space API had 14. All 3 now unified at 19. 4 new vertical agents added: irrig8, rain, vpc, trenchbabys.  
 > **2026-04-05:** Specialist agent `soil-variability-mapper` created (P1) for SLV 1m soil mapping — see `file 'Bxthre3/INBOX/agents/soil-variability-mapper.md'`
 
 ---

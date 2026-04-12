@@ -1,0 +1,59 @@
+IRRIG8 PRECISION AG PILOT — PITCH TEMPLATES
+
+---
+
+SMS VERSION (Send to 3 farmers you know):
+
+"Hey [Name], I'm testing a new precision ag monitoring system this season. Satellite + soil data weekly, irrigation recommendations via SMS. Looking for 3 farms to pilot — $500 setup (early price). Interested? Call me: [your number]"
+
+---
+
+EMAIL VERSION (More formal):
+
+Subject: Precision Ag Pilot — 3 Spots Available
+
+Hi [Name],
+
+I'm launching a pilot program for precision agriculture monitoring in the San Luis Valley this growing season.
+
+What you get:
+- Weekly satellite imagery of your fields
+- Soil moisture readings from your sensors (or I'll install basic ones)
+- SMS irrigation recommendations based on weather + soil data
+- Early-season pricing: $500 setup + $150/month monitoring
+
+I'm selecting 3 farms for the pilot. First come, first served.
+
+Interested? Reply or call me at [number].
+
+Best,
+Jeremy Beebe
+Bxthre3 Inc / Irrig8
+
+---
+
+PHONE SCRIPT (If they call):
+
+"Hey [Name], thanks for calling. Yeah, so here's the deal — I'm building precision ag software and need real farm data to test. For $500, I set you up with satellite monitoring and weekly irrigation recommendations. The $150/month covers the data processing and SMS alerts. This is early pricing — once I'm out of pilot, it's double. I need 3 farms, and you're one of my first calls. What do you think?"
+
+IF INTERESTED:
+"Great. I can come by this week to walk your fields and set up the first reading. Do you have soil sensors already, or do I need to install basic ones?"
+
+IF HESITANT:
+"Totally get it. No obligation — I just need to lock in 3 farms by [specific date] to start the season right. Can I send you the details via text and follow up Friday?"
+
+---
+
+FOLLOW-UP (48 hours later):
+
+"Hey [Name], following up on the precision ag pilot. Have 2 farms committed, 1 spot left. Still interested?"
+
+---
+
+CLOSING LINE (when they say yes):
+
+"Perfect. I'll send you a simple agreement and can start Monday. Need your field boundaries and any existing sensor data you have. Let's do this."
+
+---
+
+GOAL: 3 verbal commitments by tonight, 1 cash in hand by Day 3.

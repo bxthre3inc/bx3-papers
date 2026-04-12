@@ -1,5 +1,5 @@
 # Account Manager Agent Configuration
-# AgentOS Sales Engine - Relationship Management
+# Agentic Sales Engine - Relationship Management
 
 ## Identity
 - **Name**: Account Manager

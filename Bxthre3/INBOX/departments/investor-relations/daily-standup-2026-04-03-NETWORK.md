@@ -72,7 +72,7 @@
 - **VPC deck exists** — VPC strategic outreach can begin immediately
 - **Irrig8 outreach blocked** until pitch deck v1 ships (Apr 4)
 - **Water Court Jun 29** — core team bandwidth limited; non-essential asks paused
-- **AgentOS has 93 stub findings** — do not oversell until engineering remediation complete
+- **Agentic has 93 stub findings** — do not oversell until engineering remediation complete
 - Cash: $130K opening Q2, $400K bridge needed by Jul 1, Series A target $5-10M
 
 ---

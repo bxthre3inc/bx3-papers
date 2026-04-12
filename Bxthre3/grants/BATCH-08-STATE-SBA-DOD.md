@@ -17,7 +17,7 @@
 | Deadline | 2026-07-15 |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | Irrig8 (if international expansion), AgentOS |
+| Portfolio Fit | Irrig8 (if international expansion), Agentic |
 | Status | Active |
 | Next Action | Apply through OEDIT; export expansion activities |
 
@@ -249,7 +249,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS (AI/cloud infrastructure) |
+| Portfolio Fit | Agentic (AI/cloud infrastructure) |
 | Status | Active |
 | Next Action | Apply through Google for Startups; cloud credits + mentorship |
 
@@ -264,7 +264,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
 | Next Action | Join Microsoft for Startups; access Azure + GitHub Enterprise |
 
@@ -279,7 +279,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS, Irrig8 |
+| Portfolio Fit | Agentic, Irrig8 |
 | Status | Active |
 | Next Action | Apply through AWS Activate; cloud credits for scale |
 
@@ -294,7 +294,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
 | Next Action | Apply for Meta AI research grants; open source AI research |
 
@@ -309,7 +309,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS (GPU compute for AI training/inference) |
+| Portfolio Fit | Agentic (GPU compute for AI training/inference) |
 | Status | Active |
 | Next Action | Apply to NVIDIA Inception; free GPU credits + mentorship + investor access |
 
@@ -324,7 +324,7 @@
 | Deadline | Rolling (applications per cohort) |
 | Stage | IDENTIFIED |
 | Fit Score | 5/10 |
-| Portfolio Fit | AgentOS (iOS integration) |
+| Portfolio Fit | Agentic (iOS integration) |
 | Status | Active |
 | Next Action | Apply for Apple Entrepreneur Camp if iOS app development |
 

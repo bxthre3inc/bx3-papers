@@ -22,7 +22,7 @@ Thank you for your continued support of Bxthre3 Inc. This update covers our Q1 2
 | **Irrig8** | Pre-Commercial | Pilot deployments, Water Court prep |
 | **Valley Players Club** | Pre-Commercial | Regulatory pathway advancing |
 | **The Starting 5** | Pre-Commercial | AI co-founders SaaS development |
-| **AgentOS** | Development | AI workforce orchestration platform |
+| **Agentic** | Development | AI workforce orchestration platform |
 
 ---
 
@@ -97,12 +97,12 @@ Thank you for your continued support of Bxthre3 Inc. This update covers our Q1 2
 
 ---
 
-## AgentOS — Q1 Highlights
+## Agentic — Q1 Highlights
 
 - AI workforce orchestration platform operational
-- Android app (AgentOS-Native) built and live
+- Android app (Agentic-Native) built and live
 - 19-agent workforce deployed across Bxthre3 ventures
-- API endpoints functional at brodiblanco.zo.space/api/agentos/
+- API endpoints functional at brodiblanco.zo.space/api/agentic/
 - 93 stub findings noted — engineering remediation in progress
 
 ---

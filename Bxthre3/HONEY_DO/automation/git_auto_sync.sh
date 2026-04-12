@@ -1,8 +1,8 @@
 #!/bin/bash
-# Git Auto-Sync for AgentOS
+# Git Auto-Sync for Agentic
 # Triggers on login to any frontend → syncs all connected nodes
 
-REPO_DIR="/home/workspace/Bxthre3/projects/the-agentos-project"
+REPO_DIR="/home/workspace/Bxthre3/projects/the-agentic-project"
 USER="brodiblanco"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOG_FILE="/home/workspace/Bxthre3/TELEMETRY/git_sync.log"

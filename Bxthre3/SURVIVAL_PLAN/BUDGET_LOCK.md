@@ -1,5 +1,5 @@
 # SURVIVAL BUDGET — Zero-Cash Mode
-# Status: AgentOS = Entire Engineering
+# Status: Agentic = Entire Engineering
 
 ## MILESTONES COMPLETE (2026-03-31)
 

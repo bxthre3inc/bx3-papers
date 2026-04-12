@@ -123,7 +123,7 @@ export default function Home() {
     { icon: <Cpu className="w-5 h-5" />, title: "Edge-Native", desc: "Deterministic compute at the edge" },
     { icon: <Network className="w-5 h-5" />, title: "Mesh Architecture", desc: "Federated agent coordination" },
     { icon: <Shield className="w-5 h-5" />, title: "Zero-Trust", desc: "Telemetry with locked access" },
-    { icon: <Zap className="w-5 h-5" />, title: "AgentOS", desc: "Autonomous system orchestration" },
+    { icon: <Zap className="w-5 h-5" />, title: "Agentic", desc: "Autonomous system orchestration" },
   ];
 
   return (
@@ -160,7 +160,7 @@ export default function Home() {
             <div className={`transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 mb-8">
                 <Radio className="w-4 h-4 text-cyan-400 animate-pulse" />
-                <span className="text-sm text-zinc-400">AgentOS v7.0 Now Running</span>
+                <span className="text-sm text-zinc-400">Agentic v7.0 Now Running</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8">
@@ -174,7 +174,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mb-12 leading-relaxed">
-                Bxthre3 Inc builds AgentOS — the edge-native platform for autonomous operations. 
+                Bxthre3 Inc builds Agentic — the edge-native platform for autonomous operations. 
                 From agriculture to finance, we orchestrate deterministic AI that runs where data lives.
               </p>
               
@@ -209,7 +209,7 @@ export default function Home() {
                   <span className="text-sm font-medium tracking-wider uppercase">The Platform</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                  AgentOS
+                  Agentic
                 </h2>
                 <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
                   A deterministic operating system for autonomous agents. Built for edge deployment, 
@@ -237,16 +237,16 @@ export default function Home() {
                       <div className="w-3 h-3 rounded-full bg-red-500/50" />
                       <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
                       <div className="w-3 h-3 rounded-full bg-green-500/50" />
-                      <span className="ml-2">agentos-cli</span>
+                      <span className="ml-2">agentic-cli</span>
                     </div>
                     <div className="space-y-2 text-zinc-300">
-                      <p><span className="text-cyan-400">$</span> agentos pulse --all</p>
+                      <p><span className="text-cyan-400">$</span> agentic pulse --all</p>
                       <p className="text-zinc-500">Scanning mesh nodes...</p>
                       <p className="text-emerald-400">✓ 47 agents responding</p>
                       <p className="text-emerald-400">✓ 12 edge nodes active</p>
                       <p className="text-emerald-400">✓ MCP bridge connected</p>
                       <p className="text-zinc-500">---</p>
-                      <p><span className="text-cyan-400">$</span> agentos deploy --env=production</p>
+                      <p><span className="text-cyan-400">$</span> agentic deploy --env=production</p>
                       <p className="text-violet-400">→ Deploying Irrig8 v2.1.0...</p>
                       <p className="text-violet-400">→ Rolling update: 3/3 nodes</p>
                       <p className="text-emerald-400">✓ Deployment complete</p>
@@ -268,10 +268,10 @@ export default function Home() {
                 <span className="text-sm font-medium tracking-wider uppercase">Portfolio</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                Built on AgentOS
+                Built on Agentic
               </h2>
               <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-                Real products solving real problems. Each venture leverages the AgentOS platform 
+                Real products solving real problems. Each venture leverages the Agentic platform 
                 for deterministic, autonomous operations.
               </p>
             </div>

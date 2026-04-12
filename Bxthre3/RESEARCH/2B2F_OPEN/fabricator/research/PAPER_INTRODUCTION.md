@@ -24,7 +24,7 @@ The 2B2F framework draws on two historical models:
 
 **Berkshire Hathaway** demonstrates the power of the decentralized holding company structure. Warren Buffett's innovation was not stock picking but organizational architecture—acquiring entire companies, retaining their management, and providing capital allocation at the holding company level (Cunningham, 2014). The 2B2F framework extends this model by introducing deterministic systems and autonomous operations that reduce the dependency on heroic individual managers.
 
-**Amazon Web Services (AWS)** illustrates platform economics at scale. By building internal infrastructure to solve Amazon's own scaling challenges, then externalizing that infrastructure as a service, AWS created a multi-billion dollar business while simultaneously improving Amazon's core retail operations (Miller, 2020). The AgentOS platform OpCo in the 2B2F ecosystem operates similarly—building AI workforce orchestration for internal OpCos, then licensing that capability externally.
+**Amazon Web Services (AWS)** illustrates platform economics at scale. By building internal infrastructure to solve Amazon's own scaling challenges, then externalizing that infrastructure as a service, AWS created a multi-billion dollar business while simultaneously improving Amazon's core retail operations (Miller, 2020). The Agentic platform OpCo in the 2B2F ecosystem operates similarly—building AI workforce orchestration for internal OpCos, then licensing that capability externally.
 
 ### Research Scope and Methodology
 
@@ -36,7 +36,7 @@ This paper documents the 2B2F framework as a replicable methodology for venture 
 
 - **Agent governance protocols**: Decision authority matrices defining the boundary between autonomous and human-mediated decisions.
 
-- **Empirical validation**: Real-world deployment of the framework through Bxthre3 Inc, a venture studio operating in precision agriculture (IRRIG8), gaming (Valley Players Club), and AI workforce orchestration (AgentOS).
+- **Empirical validation**: Real-world deployment of the framework through Bxthre3 Inc, a venture studio operating in precision agriculture (IRRIG8), gaming (Valley Players Club), and AI workforce orchestration (Agentic).
 
 ### Research Questions
 

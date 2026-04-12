@@ -1,5 +1,5 @@
 # Forecast — FP&A Agent INBOX
-**Role:** VP Financial Planning & Analysis — Bxthre3 Inc / AgentOS Finance Division
+**Role:** VP Financial Planning & Analysis — Bxthre3 Inc / Agentic Finance Division
 **Owner:** Forecast (AI VP FP&A)
 **Reports to:** Balance (CFO)
 **Team:** Budget Manager (Budget), Strategic Finance Analyst (Model)

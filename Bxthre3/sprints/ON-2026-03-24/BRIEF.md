@@ -22,7 +22,7 @@ Create a single view that shows:
 - All 4 ventures + status
 - Service health (even if intentionally offline)
 - Grant pipeline status
-- AgentOS workforce health
+- Agentic workforce health
 
 **Deliverable:** `Bxthre3/DASHBOARD.md` or Zo Space route
 
@@ -54,7 +54,7 @@ At sprint end:
 | Item | Status | Notes |
 |------|--------|-------|
 | Irrig8 | STANDBY | Funding gate active |
-| AgentOS | LIVE | zo.computer service operational |
+| Agentic | LIVE | zo.computer service operational |
 | Valley Players Club | PLANNING | Legal docs drafted, platform not started |
 | The Starting 5 | NOT STARTED | Needs definition sprint |
 

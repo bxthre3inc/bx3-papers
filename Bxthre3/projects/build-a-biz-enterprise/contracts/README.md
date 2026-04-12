@@ -1,8 +1,8 @@
-# AgentOS Business Builder Contracts
+# Agentic Business Builder Contracts
 
 ## Overview
 
-Standard contract templates for AgentOS Business Builder engagements.
+Standard contract templates for Agentic Business Builder engagements.
 
 **Note:** Have an attorney review all contracts before use. These are starting templates, not legal advice.
 

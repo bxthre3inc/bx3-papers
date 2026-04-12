@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Stub Finder v2 - AgentOS
+# Stub Finder v2 - Agentic
 
 import re, os, sys
 from datetime import datetime
@@ -7,9 +7,9 @@ from pathlib import Path
 
 WORKSPACE = Path("/home/workspace")
 PATHS = [
-    WORKSPACE / "Bxthre3/projects/the-agentos-project/core/",
-    WORKSPACE / "Bxthre3/shared/agent-os/core/",
-    WORKSPACE / "Bxthre3/projects/the-agentos-native/app/src/main/kotlin/com/bxthre3/agentos/",
+    WORKSPACE / "Bxthre3/projects/the-agentic-project/core/",
+    WORKSPACE / "Bxthre3/shared/agentic/core/",
+    WORKSPACE / "Bxthre3/projects/the-agentic-native/app/src/main/kotlin/com/bxthre3/agentic/",
 ]
 EXTS = {".ts", ".kt", ".java", ".js", ".py", ".sh"}
 
@@ -28,7 +28,7 @@ RESPONSIBLE = {
     "goals":"zoe","drift":"sentinel","training":"pulse",
     "emergency":"sentinel","budget":"sam","audit":"raj",
     "infrastructure":"theo","runtime":"dev","hybrid":"dev",
-    "android":"dev","shared/agent-os":"zoe",
+    "android":"dev","shared/agentic":"zoe",
 }
 
 PHANTOMS = {

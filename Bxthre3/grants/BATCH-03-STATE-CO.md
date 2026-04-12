@@ -86,10 +86,10 @@
 | Deadline | 2026-06-01 (Rolling) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS / All Bx3 |
+| Portfolio Fit | Agentic / All Bx3 |
 | Status | Rolling applications |
-| Next Action | Apply — frame AgentOS as advanced industry AI platform; frame Irrig8 as advanced tech |
-| Notes | Colorado's advanced industry program covers AI/tech. AgentOS qualifies as advanced industry. |
+| Next Action | Apply — frame Agentic as advanced industry AI platform; frame Irrig8 as advanced tech |
+| Notes | Colorado's advanced industry program covers AI/tech. Agentic qualifies as advanced industry. |
 
 ---
 
@@ -139,7 +139,7 @@
 | Deadline | 2026-07-15 (Annual) |
 | Stage | IDENTIFIED |
 | Fit Score | 5/10 |
-| Portfolio Fit | AgentOS (if international expansion) |
+| Portfolio Fit | Agentic (if international expansion) |
 | Status | Annual program |
 | Next Action | Lower priority unless international markets identified |
 

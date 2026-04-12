@@ -7,11 +7,11 @@
 
 | Path | Modules | Department |
 |---|---|---|
-| AgentOS Certified — Engineering | E1, E2, E3, E4, E5 | Engineering |
-| AgentOS Certified — Operations | O1, O2, O3, O4 | Operations |
-| AgentOS Certified — Sales & Marketing | SM1, SM2, SM3 | Sales/Marketing |
-| AgentOS Certified — Grants & Legal | GL1, GL2, GL3 | Grants/Legal |
-| AgentOS Certified — Core | E1, O1, SM1, GL1 (select one) | All |
+| Agentic Certified — Engineering | E1, E2, E3, E4, E5 | Engineering |
+| Agentic Certified — Operations | O1, O2, O3, O4 | Operations |
+| Agentic Certified — Sales & Marketing | SM1, SM2, SM3 | Sales/Marketing |
+| Agentic Certified — Grants & Legal | GL1, GL2, GL3 | Grants/Legal |
+| Agentic Certified — Core | E1, O1, SM1, GL1 (select one) | All |
 
 ---
 

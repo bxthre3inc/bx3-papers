@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fast-Casual - Speed-optimized, modifiers, nutrition */
+
+:root {
+  --color-primary: #059669;
+  --color-secondary: #047857;
+  --color-accent: #34D399;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* Modifier grid */
+.modifier-grid {
+  @apply grid grid-cols-2 gap-2;
+}
+
+.modifier-option {
+  @apply p-3 border rounded-xl bg-white text-sm;
+}
+
+.modifier-option.selected {
+  @apply border-emerald-500 bg-emerald-50;
+}
+
+/* Nutrition label */
+.nutrition-fact {
+  @apply text-xs text-gray-500 flex items-center gap-1;
+}
+
+/* Speed-optimized button */
+.btn-primary {
+  @apply bg-emerald-600 text-white px-6 py-4 rounded-full font-semibold text-lg shadow-lg active:scale-95 transition-transform;
+}
+
+/* Quick repeat order */
+.quick-reorder {
+  @apply flex items-center gap-3 p-3 bg-emerald-50 rounded-xl border border-emerald-200;
+}
+
+.quick-reorder button {
+  @apply bg-emerald-600 text-white px-4 py-1.5 rounded-lg text-sm font-medium;
+}

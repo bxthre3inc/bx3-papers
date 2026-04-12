@@ -7,7 +7,7 @@
 ## 1. Yesterday's Accomplishments
 
 - Initialized Events & Conferences Department
-- Built 2026 Annual Events Calendar (18 events across 5 verticals: Irrig8, VPC, Starting 5, Zoe/AgentOS, Corporate)
+- Built 2026 Annual Events Calendar (18 events across 5 verticals: Irrig8, VPC, Starting 5, Zoe/Agentic, Corporate)
 - Established department INBOX at `Bxthre3/INBOX/departments/events.md`
 - Created agent INBOX at `Bxthre3/INBOX/agents/stage.md`
 - Created standup template at `Bxthre3/INBOX/departments/events-standup-TEMPLATE.md`
@@ -59,7 +59,7 @@ None at this time.
 | Irrig8 | $12.6M | TBD | TBD | TBD | TBD |
 | VPC | $4.3M | TBD | TBD | TBD | TBD |
 | Starting 5 | $3.5M | TBD | TBD | TBD | TBD |
-| Zoe/AgentOS | Awareness | TBD | TBD | TBD | TBD |
+| Zoe/Agentic | Awareness | TBD | TBD | TBD | TBD |
 | **TOTAL** | **$20.4M** | **0** | **0** | **0** | **0** |
 
 *Awaiting Q1 event data from Sales*

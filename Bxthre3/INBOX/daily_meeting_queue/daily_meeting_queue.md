@@ -231,7 +231,7 @@ Complete TBD fields in drafts, then say **"let's go"** or **"make it official"**
 #### Blockers
 - Irrig8 pitch deck v1: Awaiting brodiblanco input (due Apr 4 — [VERIFY] delivered?)
 - Cap table + SAFE registry: Awaiting Balance (due Apr 5 — [VERIFY] delivered?)
-- AgentOS IP remediation: Iris working, 93 stub findings (no outreach until fixed)
+- Agentic IP remediation: Iris working, 93 stub findings (no outreach until fixed)
 
 #### Today's Actions
 - [ ] Confirm USDA SBIR submission with Maya

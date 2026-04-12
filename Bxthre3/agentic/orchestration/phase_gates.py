@@ -3,7 +3,7 @@ Agentic Phase Gate System
 Replaces ChatDev ChatChain — Conditional Gates, Not Linear Phases
 
 Module: phase_gates.py
-Location: Bxthre3/projects/agent-os/orchestration/phase_gates.py
+Location: Bxthre3/projects/agentic/orchestration/phase_gates.py
 Status: IMPLEMENTED
 
 Every phase transition is validated. Failed gates suspend work,

@@ -1,6 +1,6 @@
 # Deliver — Agent INBOX
-**Role:** Professional Services Lead — AgentOS Implementation & Onboarding Department
-**Scope:** Irrig8, AgentOS/Zoe, Valley Players Club, The Starting 5
+**Role:** Professional Services Lead — Agentic Implementation & Onboarding Department
+**Scope:** Irrig8, Agentic/Zoe, Valley Players Club, The Starting 5
 **Reports to:** Grow (Customer Success), Deal (VP Sales), Atlas (COO)
 
 ---
@@ -28,7 +28,7 @@
 - **Next Milestone:** Pilot deployment — San Luis Valley, Subdistrict 1 (June 2026)
 - **Key Docs:** `Bxthre3/projects/the-irrig8-project/docs/`
 
-### AgentOS / Zoe
+### Agentic / Zoe
 - **Status:** LIVE — internal ops
 - **Implementation Phase:** Active internal deployment
 - **Onboarding:** Ongoing workforce expansion
@@ -65,7 +65,7 @@
 
 ## 🟡 P2 | deliver | 2026-03-24 15:10 UTC
 
-Deliver agent initialized — Professional Services Lead onboarded. Scope: Irrig8, AgentOS/Zoe, Valley Players Club, The Starting 5.
+Deliver agent initialized — Professional Services Lead onboarded. Scope: Irrig8, Agentic/Zoe, Valley Players Club, The Starting 5.
 
 ## 🟢 P3 | deliver | 2026-03-25 09:05 UTC
 
@@ -76,7 +76,7 @@ All 4 ventures reviewed. Status unchanged from yesterday — all in pre-launch/s
 | Venture | Status | Next Milestone |
 |---------|--------|----------------|
 | **Irrig8** | 🟡 Standby (funding gate) | SLV pilot deployment (June 2026) |
-| **AgentOS / Zoe** | 🟢 Live (internal) | Workforce expansion |
+| **Agentic / Zoe** | 🟢 Live (internal) | Workforce expansion |
 | **Valley Players Club** | 🟡 Planning | Platform build + cash partner onboarding |
 | **The Starting 5** | 🔴 Not started | Definition sprint needed |
 

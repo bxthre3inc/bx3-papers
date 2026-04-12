@@ -1,0 +1,103 @@
+# Autodark Manufacturing | Net Employment Impact
+
+**Status: PRE-OPERATIONAL** | Last Updated: 2026-04-02
+**Type: UAV Component Manufacturing**
+
+---
+
+## 1. Jobs Created (Direct Hires)
+
+**EXAMPLE:**
+```
+Manufacturing Floor:
+- 7 Assembly Technicians @ $48,000 = $336,000
+- 3 Quality Control Inspectors @ $52,000 = $156,000
+- 2 Composite Fabricators @ $62,000 = $124,000
+- 1 Production Manager @ $78,000 = $78,000
+- 2 CNC Machinists @ $58,000 = $116,000
+
+Engineering Support:
+- 2 CAD/CAM Engineers @ $68,000 = $136,000
+- 1 Supply Chain Coordinator @ $54,000 = $54,000
+- 1 Safety/OSHA Officer @ $62,000 = $62,000
+
+Total Direct Created: 19
+```
+
+---
+
+## 2. Jobs Displaced (Automation/Replacement)
+
+**EXAMPLE:**
+```
+Efficiency Impact vs Traditional Manufacturing:
+- 4 Manual assembly roles → pick/place robotics (displaced)
+- 1 Inventory clerk → automated RFID/WMS (displaced)
+- 2 QC inspectors → computer vision inspection (displaced)
+- 1 Production scheduler → ERP automation (displaced)
+
+Retraining Program:
+- 2 of 8 displaced workers retrain as robotic technician/operators
+- 1 retrain as CAD drafter
+- Net retrained: 3 (moved from displaced to created)
+
+Total Displaced: 5 (8 initial - 3 retained/retrained)
+```
+
+---
+
+## 3. Jobs Protected/Enabled (Downstream)
+
+**EXAMPLE:**
+```
+Fleet Operations Dependency:
+- Autodark supplies Fleet Operations with 40% of components
+- 40 Fleet roles depend on local supply chain reliability
+- Alternative: offshore sourcing (leakage risk)
+
+Supply Chain Economic:
+- 3 local composite material suppliers
+- 2 local machining service partners
+- Estimated 12-18 supplier jobs preserved/enabled
+
+Total Protected: ~52-58 jobs
+```
+
+---
+
+## 4. Net Employment Calculation
+
+```
+Direct Jobs Created:      +19
+Retraining (retained):    +3 (moved from displaced)
+Direct Jobs Displaced:     -5 (after retraining)
+
+Net Direct:               +14 Bxthre3 payroll positions
+
+Protected (Supplier):     +15
+Protected (Fleet):        +40
+Total Protected:          +55
+
+Note: Manufacturing efficiency displaces roles, but 
+retraining programs and local economic impact create 
+net positive. Supplier network preserves regional jobs 
+vs. offshore alternatives.
+```
+
+---
+
+## 5. Verification
+
+| Metric | Source | Status |
+|--------|--------|--------|
+| Direct hires | Gusto (pending facility) | ⏳ Pre-operational |
+| Training success | Internal HR tracking | ⚠️ Projection |
+| Supplier jobs | Vendor contracts | ⚠️ Estimates |
+
+---
+
+## Summary
+
+**Direct Net: +14 Bxthre3 positions**
+**Total Impact: +14 direct + 55 protected = 69 jobs**
+**Displacement Rate: 21% (5/24) with 37% retraining success**

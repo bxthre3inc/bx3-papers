@@ -22,11 +22,11 @@ Each project lives in its own folder under `projects/` following the naming conv
 | **Irrig8** | `the-irrig8-project/` | Precision Agriculture OS — deterministic irrigation operating system leveraging satellite, sensor, and API data | Active |
 | **Valley Players Club** | `the-valleyplayersclub-project/` | Skills-and-slots sweepstakes gaming platform | Active |
 | **RAIN** | `the-rain-project/` | Regulatory Arbitrage Intelligence Network — AI-powered compliance gap mapping | Beta Live |
-| **AgentOS** | `the-agentos-project/` | Mobile-first agentic computing platform | Active |
-| **AgentOS Native** | `the-agentos-native/` | Native Android APK for AgentOS | Active |
+| **Agentic** | `the-agentic-project/` | Mobile-first agentic computing platform | Active |
+| **Agentic Native** | `the-agentic-native/` | Native Android APK for Agentic | Active |
 | **MCP Mesh** | `mcp-mesh/` | MCP interoperability mesh protocol for agent communication | Active |
 | **SLV Mesh** | `slv-mesh/` | San Luis Valley sensor mesh infrastructure | Pilot |
-| **Zoe** | `the-zoe-project/` | Conversational AI interface (pending merge into AgentOS) | Review |
+| **Zoe** | `the-zoe-project/` | Conversational AI interface (pending merge into Agentic) | Review |
 | **Antigravity** | `the-antigravity-project/` | Purpose under review | Review |
 | **ARD** | `the-ard-project/` | Purpose under review — no README | Review |
 | **Trenchbabys** | `the-trenchbabys-project/` | Purpose under review — no README | Review |

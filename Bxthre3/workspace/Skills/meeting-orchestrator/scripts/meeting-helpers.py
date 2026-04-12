@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Meeting Helper Utilities — AgentOS Meeting Infrastructure
+Meeting Helper Utilities — Agentic Meeting Infrastructure
 Handles Google Calendar integration for meeting orchestration.
 """
 
@@ -11,7 +11,7 @@ from typing import Optional
 
 # Configuration
 TIMEZONE = "America/Denver"
-ORG_CHART_PATH = "/home/workspace/Bxthre3/agent-os-v2/ORG-CHART.md"
+ORG_CHART_PATH = "/home/workspace/Bxthre3/agentic-v2/ORG-CHART.md"
 
 # Meeting configurations
 MEETINGS = {

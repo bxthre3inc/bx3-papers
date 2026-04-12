@@ -1,4 +1,4 @@
-# SW-SPEC-API-v1.0 — AgentOS API Specification
+# SW-SPEC-API-v1.0 — Agentic API Specification
 **Status:** APPROVED  
 **Owner:** Engineering (Iris)  
 **Created:** 2026-03-20  
@@ -8,9 +8,9 @@
 
 ## 1. Overview
 
-REST API for AgentOS platform. Serves agent status, tasks, org data to desktop and mobile clients.
+REST API for Agentic platform. Serves agent status, tasks, org data to desktop and mobile clients.
 
-**Base URL:** `https://brodiblanco.zo.space/api/agentos/`  
+**Base URL:** `https://brodiblanco.zo.space/api/agentic/`  
 **Version:** v1  
 **Auth:** Bearer token in header
 

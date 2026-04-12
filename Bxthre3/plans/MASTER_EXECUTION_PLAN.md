@@ -1,4 +1,4 @@
-# Master Execution Plan: AgentOS + Zo + Antigravity
+# Master Execution Plan: Agentic + Zo + Antigravity
 **Date:** 2026-03-29
 
 ---
@@ -7,9 +7,9 @@
 
 | Priority | System | Phase | Deliverable | Impact |
 |----------|--------|-------|-------------|--------|
-| P0 | AgentOS↔Zo | Phase 2 | Event Streaming | HIGH - Real-time sync |
-| P0 | AgentOS↔Zo | Phase 3 | Agent Delegation | HIGH - Cross-system workflows |
-| P1 | AgentOS↔Zo | Phase 4-6 | War Room, File Sync, Notifications | MED - Consolidation |
+| P0 | Agentic↔Zo | Phase 2 | Event Streaming | HIGH - Real-time sync |
+| P0 | Agentic↔Zo | Phase 3 | Agent Delegation | HIGH - Cross-system workflows |
+| P1 | Agentic↔Zo | Phase 4-6 | War Room, File Sync, Notifications | MED - Consolidation |
 | P1 | Antigravity | Phase 1 | MCP Server (when API available) | HIGH - Unlock IDE |
 | P2 | All | Phase 5+ | Full Mesh | MED - Nice to have |
 
@@ -17,21 +17,21 @@
 
 ## Immediate Next Steps (This Week)
 
-### 1. AgentOS↔Zo Event Streaming (Days 1-2)
+### 1. Agentic↔Zo Event Streaming (Days 1-2)
 ```
 Tasks:
 - Add WebSocket endpoint to bridge
 - Create event types: inbox.new, task.escalated, agent.offline
-- AgentOS worker subscribes to Zo events
+- Agentic worker subscribes to Zo events
 - Queue events when bridge down (offline resilience)
 ```
 
 ### 2. Agent Delegation Loop (Days 3-4)
 ```
 Tasks:
-- AgentOS agent calls zo_ask for research
-- Results auto-create AgentOS tasks
-- Zo can create AgentOS tasks via API
+- Agentic agent calls zo_ask for research
+- Results auto-create Agentic tasks
+- Zo can create Agentic tasks via API
 - Test: Research → Task created → Agent assigned
 ```
 
@@ -51,7 +51,7 @@ Tasks:
 
 **Unblocked work:**
 - Design MCP server architecture
-- Map Antigravity concepts → AgentOS concepts
+- Map Antigravity concepts → Agentic concepts
 - Create skill templates
 
 ---

@@ -3,7 +3,7 @@ Agentic Workflow DAG Engine
 Replaces ChatDev MacNet — Learnable Templates, Not Fixed Topologies
 
 Module: workflow_dag.py
-Location: Bxthre3/projects/agent-os/orchestration/workflow_dag.py
+Location: Bxthre3/projects/agentic/orchestration/workflow_dag.py
 Status: IMPLEMENTED
 
 Template-based DAGs with IER override capability.

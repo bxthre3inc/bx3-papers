@@ -1,7 +1,7 @@
 # BI & Analytics — Department INBOX
 **Department:** Business Intelligence  
 **Lead:** Trace  
-**Ventures:** Irrig8, RAIN, Starting5, VPC, ARD, AgentOS  
+**Ventures:** Irrig8, RAIN, Starting5, VPC, ARD, Agentic  
 **Last Updated:** 2026-03-23
 
 ---
@@ -32,7 +32,7 @@
 - **GFS Scoring:** Active across all ventures
 - **Morning briefing:** Blocked — grants skills not installed
 
-### 4. AgentOS Telemetry
+### 4. Agentic Telemetry
 - **10 agents operational**
 - **INBOX routing:** 3-layer system functioning
 - **Data.duckdb:** Initialized, awaiting telemetry ingestion
@@ -45,7 +45,7 @@
 |---|---|---|---|
 | VPC transactions | SQLite | 🟢 Live | Cohort analysis |
 | Irrig8 sensors | DuckDB | 🟡 Partial | Field validation |
-| AgentOS telemetry | PostgreSQL | 🟢 Live | BI dashboard |
+| Agentic telemetry | PostgreSQL | 🟢 Live | BI dashboard |
 | Grants pipeline | CSV | 🟢 Live | GFS refresh |
 
 ---
@@ -81,7 +81,7 @@ Phase 6b: Desktop build config. Compose Desktop packaging with rating UI. Gradle
 
 ## 🟡 P2 | insight | 2026-04-02 09:11 UTC
 
-Insight Wednesday cycle complete — VPC CI blocking production analytics, Grants pipeline empty, Irrig8 and AgentOS frameworks ready but no live data
+Insight Wednesday cycle complete — VPC CI blocking production analytics, Grants pipeline empty, Irrig8 and Agentic frameworks ready but no live data
 
 ## 🟡 P2 | insight | 2026-04-05 03:10 UTC
 
@@ -89,7 +89,7 @@ Insight Wednesday cycle complete — VPC CI blocking production analytics, Grant
 - **Irrig8 SLV sim:** 20 high-confidence correlations validated (R² > 0.80). Moisture+EC pair R²=0.9991 for VMC. T2 calibration risks flagged (>100% degradation). soil-variability-mapper P1 active.
 - **VPC:** Schema production-ready. 8 test transactions. CI failures still blocking.
 - **RAIN/Grants:** `pipeline_300plus.duckdb` present (268KB). Maya's latest grants not yet ingested — query for Zero Foodprint Restore coverage (deadline April 7).
-- **Starting5/AgentOS:** No schema defined for AI co-founder metrics. Telemetry not flowing.
+- **Starting5/Agentic:** No schema defined for AI co-founder metrics. Telemetry not flowing.
 
 **No P0/P1 escalations this cycle.**
 
@@ -123,10 +123,10 @@ Insight Wednesday cycle complete — VPC CI blocking production analytics, Grant
 - **Zero Foodprint Restore coverage** — deadline April 7 [VERIFY: still active?]
 - ARPA-E OPEN 2026: **25 days remaining** (2026-05-01 deadline)
 
-### Starting5 / AgentOS
+### Starting5 / Agentic
 - No schema defined for AI co-founder effectiveness metrics
 - Telemetry plane: 235 workspace sessions, 3 scheduled agents active (yesterday)
-- AgentOS telemetry being collected but not yet flowing to analytics layer
+- Agentic telemetry being collected but not yet flowing to analytics layer
 
 ### Cross-Venture Telemetry Snapshot (2026-04-06)
 | Metric | Value |

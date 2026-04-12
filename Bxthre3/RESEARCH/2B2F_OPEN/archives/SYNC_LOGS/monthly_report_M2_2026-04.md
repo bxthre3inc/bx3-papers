@@ -171,7 +171,7 @@ The 60% GDP target @ M120 requires clarification:
 ### Week 1-2 (Apr 5-18): B1 Resolution & M3 Prep
 - [ ] **CRITICAL:** brodiblanco to confirm GDP target definition (B1)
 - [ ] CARTOGRAPHER: Complete VPC analysis, begin IRRIG8CO analysis
-- [ ] FABRICATOR: AgentOS entity structure completion
+- [ ] FABRICATOR: Agentic entity structure completion
 - [ ] SENTINEL: CFTC deep-dive, state MTL analysis
 
 ### Week 3-4 (Apr 19-May 2): Methodology Lock

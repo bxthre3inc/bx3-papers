@@ -24,7 +24,7 @@
 
 1. **Venture Studio Positioning** — Bxthre3 as AI-native venture builder
 2. **Agricultural AI** — Irrig8 as flagship demonstration
-3. **AgentOS Platform** — AI workforce orchestration as productized IP
+3. **Agentic Platform** — AI workforce orchestration as productized IP
 4. **Founder Story** — SLV roots, deterministic farming background
 
 ## Competitive Landscape [VERIFY]

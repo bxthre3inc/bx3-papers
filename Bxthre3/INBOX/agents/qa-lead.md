@@ -11,7 +11,7 @@
 - Regression: **None detected** ✅ (backend P0 resolved, no new regressions)
 
 ### 🔴 P1 Escalation Active
-**`[QA] AgentOS release-blocking test failure`** written to INBOX.md  
+**`[QA] Agentic release-blocking test failure`** written to INBOX.md  
 SMS sent to brodiblanco.
 
 **Failing test:** `duplicate delivery is rejected (at-least-once semantics)` in `tests/mesh-sync.test.ts:122`  

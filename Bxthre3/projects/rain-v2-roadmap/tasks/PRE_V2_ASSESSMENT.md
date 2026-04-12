@@ -165,7 +165,7 @@ Before any V2.0 development begins, complete the following evaluation items. Thi
 
 - [ ] **Code Quality Assessment**
   - [ ] Document V1 tech stack
-  - [ ] Identify dependencies on Irrig8/AgentOS
+  - [ ] Identify dependencies on Irrig8/Agentic
   - [ ] Assess test coverage
   - [ ] Identify brittle/hard-to-maintain code
 

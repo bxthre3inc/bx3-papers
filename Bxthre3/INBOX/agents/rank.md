@@ -1,10 +1,24 @@
 # Rank — SEO & SEM Lead INBOX
 
-> **Role:** SEO & SEM Lead — AgentOS Demand Generation Department
+> **Role:** SEO & SEM Lead — Agentic Demand Generation Department
 > **Reports to:** Brand (VP Marketing), Optimize (Growth)
 > **Meeting Cadence:** Daily standup 8:15 AM MT
 
 ---
+
+## 2026-04-10 AM Standup Complete
+
+- Standup filed: `seo-sem-standup-2026-04-10.md`
+- Department INBOX updated: `seo-sem.md`
+- Status: 4 of 5 SEM campaigns 🔴 BLOCKED (account access + VPC compliance)
+- Apr 9 standup gap flagged — no file found, recommend same-day filing
+- Today: Irrig8 GBP claim → directory batch → VPC ASO → Google Ads follow-up
+
+---
+
+## 🔴 P1 | rank | 2026-04-03 15:10 UTC
+
+VPC Google Ads blocked — Google gambling/sweepstakes policy prohibits paid search for gaming rewards category. Requires Raj (Legal) compliance review before any activation. Recommend starting with ASO only until resolved. Escalating P1 per SOP since this is a cross-agent blocker.
 
 ## 🔴 P1 | rank | 2026-04-03 09:10 UTC
 

@@ -11,7 +11,7 @@
 | **Irrig8** | 1 – Flagship | 🟢 Strong | OEM distribution deals, M&A sensor acquisition |
 | **Valley Players Club** | 2 – Growth | 🟡 Pre-Launch | Affiliate structure, payment processor deals |
 | **The Starting 5** | 2 – Growth | 🟡 Active | SaaS partnership pipeline, accelerator affiliations |
-| **AgentOS / Zoe** | 3 – Emerging | 🟡 At Risk | AgTech VC investment narrative |
+| **Agentic / Zoe** | 3 – Emerging | 🟡 At Risk | AgTech VC investment narrative |
 | **ARD / Oferta** | 4 – Incubation | 🟡 Monitor | Real estate deal structure review |
 | **The Rain Project** | 4 – Incubation | 🟡 Monitor | Regulatory arbitrage — no active Corp Dev action |
 | **Trenchbabys** | 4 – Incubation | 🔴 Idle | **SUNSET RECOMMENDATION — reissued** |
@@ -60,7 +60,7 @@
 | Cash-in-person network | Structure payment partnership agreement |
 | Game studio aggregator | Build top-10 target list this week |
 
-### AgentOS — Strategic Investment (P1)
+### Agentic — Strategic Investment (P1)
 | Target | Corp Dev Action |
 |--------|-----------------|
 | AgTech VCs | Finalize top-20 target list this week |
@@ -85,7 +85,7 @@
 |--------|-------------|
 | Rain Bird patent US20250344653A1 — sensor-based irrigation controller UX | Design-around or whitespace analysis needed |
 | BASF EP3989698B1 — sensor fusion (granted Dec 2024) | Patent landscape overlap check for Irrig8 |
-| John Deere — autonomous ag systems patent activity | Competitive moat assessment for AgentOS |
+| John Deere — autonomous ag systems patent activity | Competitive moat assessment for Agentic |
 | Nature Robots (Germany) — €4M seed, modular ag autonomy | Potential acquisition or partnership target — **6-month watch** |
 
 ---
@@ -95,7 +95,7 @@
 | Horizon | Focus | Key Actions |
 |---------|-------|-------------|
 | **Year 1** | Irrig8 market penetration | Distribution deals (Valley, Reinke), non-dilutive grants |
-| **Year 2** | VPC launch + AgentOS external sales | Affiliate infrastructure, AgTech VC round |
+| **Year 2** | VPC launch + Agentic external sales | Affiliate infrastructure, AgTech VC round |
 | **Year 3** | Acquire sensor/data layer | Soil sensor company acquisition, weather data startup acquisition |
 
 ---
@@ -106,7 +106,7 @@
 - [ ] **Reinke** — Direct outreach via 402-365-7251 or dealer channel
 - [ ] **VPC game studios** — Compile top-10 target list (Nexus + Bridge)
 - [ ] **VPC payment processor** — Identify cash-in-person network partners
-- [ ] **AgentOS AgTech VC list** — Finalize top-20 with contact info
+- [ ] **Agentic AgTech VC list** — Finalize top-20 with contact info
 - [ ] **Trenchbabys sunset** — Route P1 recommendation to brodiblanco → INBOX.md
 - [ ] **BUILDBZ decisions** — Escalate 8-field blocker to brodiblanco
 - [ ] **TechCrunch Disrupt** — Submit application by May 27 (timebox to 90 min)

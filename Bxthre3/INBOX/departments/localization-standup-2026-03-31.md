@@ -24,7 +24,7 @@ N/A — Department did not exist prior to 2026-03-31.
   - **Starting 5** — English primary, global founder communities future
   - **VPC** — English/US only, future expansion
   - **Zoe** — Global open source community, documentation + community
-  - **AgentOS** — Internal agent instruction localization
+  - **Agentic** — Internal agent instruction localization
 
 ---
 

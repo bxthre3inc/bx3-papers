@@ -1,15 +1,16 @@
 # Bxthre3 Inc — Deep Dive Briefing
-**Source Document for NotebookLLM Audio Generation**  
-**Subject:** Personal investment opportunity for Joby  
-**Date:** April 6, 2026  
-**Prepared by:** BX3 (brodiblanco), Founder & CEO  
+
+**Source Document for NotebookLLM Audio Generation**\
+**Subject:** Personal investment opportunity for Joby\
+**Date:** April 6, 2026\
+**Prepared by:** BX3 (brodiblanco), Founder & CEO\
 **Classification:** Friends & Family — Pre-Seed Investment Context
 
 ---
 
 ## FOUNDER BACKGROUND
 
-The founder, BX3 (brodiblanco), has spent two years building a deterministic AI workforce platform called AgentOS. Unlike typical AI systems that use large language models for decision-making, AgentOS is built on state machines, event cascades, and forensic audit trails. This means it cannot hallucinate — every decision is auditable and reproducible.
+The founder, **Jeremy Beebe** (operating as **Brodi Blanco / BX3**), has spent two years building a deterministic AI workforce platform called **Agentic**. Unlike typical AI systems that use large language models for decision-making, Agentic is built on state machines, event cascades, and forensic audit trails. This means it cannot hallucinate — every decision is auditable and reproducible.
 
 The founder is based in Colorado's San Luis Valley, specifically Monte Vista, and is pursuing an ambitious vision: creating "Silicon Valley for climate-resilient agriculture" in a region traditionally overlooked by the tech industry.
 
@@ -25,19 +26,19 @@ Bxthre3 Inc is structured as a Delaware C-Corporation that functions as a ventur
 
 **3. Valley Build-A-Biz LLC (Colorado)** — A business-in-a-box service providing AI-powered operations support to rural small businesses, particularly restaurants and women-owned enterprises in the San Luis Valley.
 
-**4. RAIN LLC (in formation)** — A regulatory intelligence system monitoring 100+ agencies across cryptocurrency, water rights, hedge funds, and ESG regulations to detect arbitrage opportunities.
+**4. RAIN LLC (Colorado)** — A regulatory intelligence system monitoring 100+ agencies across cryptocurrency, water rights, hedge funds, and ESG regulations to detect arbitrage opportunities.
 
 **5. Trenchbabys LLC (Colorado)** — A lifestyle retail brand connecting urban streetwear to agricultural provenance through "Valley Grown" narratives.
 
 **6. ARD/Oferta LLC (Colorado)** — Real estate intelligence and development focused on the 802 Morton Street property and surrounding area.
 
-All intellectual property, including the AgentOS platform, patents, and trade secrets, is held at the parent company level. Operating subsidiaries license technology from the parent but do not own core IP.
+All intellectual property, including the **Agentic** platform, patents, and trade secrets, is held at the parent company level. Operating subsidiaries license technology from the parent but do not own core IP.
 
 ---
 
-## THE CORE TECHNOLOGY: AGENTOS
+## THE CORE TECHNOLOGY: AGENTIC
 
-AgentOS is the internal platform powering all subsidiaries. Its key differentiator is deterministic operation. While most AI systems are probabilistic — meaning the same input can produce different outputs — AgentOS uses state machines and deterministic protocols.
+**Agentic** is the internal platform powering all subsidiaries. Its key differentiator is deterministic operation. While most AI systems are probabilistic — meaning the same input can produce different outputs — Agentic uses state machines and deterministic protocols.
 
 Key technical components include:
 
@@ -49,7 +50,7 @@ Key technical components include:
 
 - **48-Hour Local Autonomy** — The system can operate for two full days without internet connectivity using cached worksheets, making it suitable for rural environments with unreliable connectivity.
 
-AgentOS is maintained as a trade secret and protected through employment agreements with all contractors and employees. It is not open-sourced or externally licensed.
+Agentic is maintained as a trade secret and protected through employment agreements with all contractors and employees. It is not open-sourced or externally licensed.
 
 ---
 
@@ -70,18 +71,21 @@ The founder chose the San Luis Valley for three strategic reasons:
 The SLV Technology Commons is a planned physical infrastructure project combining three zones:
 
 **Zone A — Nonprofit 501(c)(3) Shared Infrastructure:**
+
 - Edge data center (solar-powered, containerized, 100kW capacity)
 - Co-working and makerspace (30 workstations, conference rooms)
 - Shared laboratory for sensor calibration and soil sample analysis
 - Demonstration farm for pilot testing
 
 **Zone B — Incubator Space for Startups:**
+
 - Subsidized compute and connectivity infrastructure
 - Hardware access through the Equipment Commons
 - Office and light manufacturing space
 - Requirement: Companies must maintain physical presence in the valley and create local employment
 
 **Zone C — Manufacturing and Assembly:**
+
 - Containerized assembly facility for sensor hardware
 - Local production capabilities to reduce supply chain dependencies
 
@@ -131,7 +135,7 @@ The company is pursuing approximately $1.5 million in non-dilutive government fu
 - **ARPA-E OPEN 2026** ($3,000,000) — Energy-efficient water systems and edge computing
 - **USDA NIFA** ($500,000) — Soil health and irrigation optimization
 
-Grant applications are prepared by a dedicated grant strategist using the AgentOS platform for deadline tracking and document coordination. Deadlines range from late April through August 2026.
+Grant applications are prepared by a dedicated grant strategist using the **Agentic** platform for deadline tracking and document coordination. Deadlines range from late April through August 2026.
 
 Government funding flows to the parent company (Bxthre3 Inc) and is allocated to subsidiaries as R&D overhead. This structure allows the operating companies to focus on revenue while the parent manages research and compliance overhead.
 
@@ -146,6 +150,7 @@ The thirteen-week cash flow forecast (April 1 - June 30, 2026) shows a net cash 
 Regardless of revenue assumptions, the company requires $400,000 in bridge financing by July 1, 2026, to continue operations. Without this bridge, operations will halt.
 
 Revenue-generating activities include:
+
 - Build-A-Biz service packages ($997 Basic, $2,500 Professional, $5,000 Ultimate, $10,000+ Enterprise)
 - Valley Players Club platform fees and subscriptions
 - Irrig8 pilot contracts (pending)
@@ -243,7 +248,7 @@ The "Silicon Valley of Colorado" framing references Y-Combinator-style incubator
 
 ## FOUNDER COMMITMENT AND ALIGNMENT
 
-The founder maintains 51% equity ownership and has structured all employment agreements to protect AgentOS as a trade secret. Personal investment of time: two years full-time development of AgentOS prior to subsidiary launch. Financial investment: founder capital at risk alongside investors (specific amount not disclosed but includes personal savings).
+The founder maintains 51% equity ownership and has structured all employment agreements to protect **Agentic** as a trade secret. Personal investment of time: two years full-time development of **Agentic** prior to subsidiary launch. Financial investment: founder capital at risk alongside investors (specific amount not disclosed but includes personal savings).
 
 The founder is not drawing salary during the bridge period, aligning financial incentives with investment success. If the bridge fails and operations halt, founder loses two years of uncompensated work plus invested capital.
 
@@ -267,30 +272,31 @@ No decision is required immediately. The bridge round remains open until $400,00
 
 ## KEY PERSONNEL
 
-- **BX3 (brodiblanco):** Founder, CEO, AgentOS architect, majority shareholder (51%)
-- **Engineer #1:** Full-stack development, AgentOS core (retention critical)
+- **BX3 (brodiblanco):** Founder, CEO, **Agentic** architect, majority shareholder (51%)
+- **Engineer #1:** Full-stack development, **Agentic** core (retention critical)
 - **Engineer #2:** Hardware/embedded systems, sensor integration (retention critical)
 - **Maya (Grant Strategist):** Government funding applications, deadline management
 - **Raj (Legal/IP Agent):** Patent preparation, entity formation, employment agreements
 
-No other full-time employees. Subsidiary operations use contracted services and AgentOS automation.
+No other full-time employees. Subsidiary operations use contracted services and **Agentic** automation.
 
 ---
 
 ## DOCUMENT SOURCES AND VERIFICATION
 
 Key source documents available upon request:
-- `GAMEPLAN-2026-MASTER.md` — Strategic portfolio overview
-- `SYMPHONY-IP-ARCHITECTURE.md` — Patent claim structure and technical specifications
-- `13-week-cash-flow-Q2-2026.md` — Detailed weekly cash flow forecast
-- `SLVTC-MASTER-PLAN.md` — Technology Commons infrastructure specifications
-- `patent-status.md` — Attorney selection and filing timeline
-- `SOUL.md` — Company behavioral constitution and current priorities
+
+- `file GAMEPLAN-2026-MASTER.md` — Strategic portfolio overview
+- `file SYMPHONY-IP-ARCHITECTURE.md` — Patent claim structure and technical specifications
+- `file 13-week-cash-flow-Q2-2026.md` — Detailed weekly cash flow forecast
+- `file SLVTC-MASTER-PLAN.md` — Technology Commons infrastructure specifications
+- `file patent-status.md` — Attorney selection and filing timeline
+- `file SOUL.md` — Company behavioral constitution and current priorities
 
 All claims in this document are traceable to workspace files and can be verified through document review.
 
 ---
 
-**Prepared by:** BX3 (brodiblanco)  
-**Date:** April 6, 2026  
+**Prepared by:** Jeremy Beebe (Brodi Blanco / BX3)\
+**Date:** April 6, 2026\
 **Status:** Ready for NotebookLLM audio generation

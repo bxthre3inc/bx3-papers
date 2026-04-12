@@ -18,8 +18,8 @@
 **Valley Players Club**
 - 📋 Player behavior research: Discovery phase, scoping requirements from Roadmap
 
-**Zoe / AgentOS**
-- 🔄 Developer experience research: Ongoing via AgentOS feedback loops
+**Zoe / Agentic**
+- 🔄 Developer experience research: Ongoing via Agentic feedback loops
 - ⏳ AI interaction studies: Q2 planning
 
 ### Blockers

@@ -43,7 +43,7 @@
 | Item | Status | Notes |
 |------|--------|-------|
 | Service health baselines | ⏸️ DEFERRED | Intentional offline — funding gate |
-| AgentOS workload balancing | ⏸️ DEFERRED | Pending org clarity |
+| Agentic workload balancing | ⏸️ DEFERRED | Pending org clarity |
 | ARD project status | 🔴 NEEDS REVIEW | Unknown state |
 | Real estate arbitrage | 🔴 ARCHIVED | Not active |
 
@@ -75,7 +75,7 @@
 
 **Active Ventures (4):**
 1. **Irrig8 (irrig8)** — Standby, funding gate
-2. **AgentOS (Zoe)** — Live, internal ops
+2. **Agentic (Zoe)** — Live, internal ops
 3. **Valley Players Club** — Planning, legal drafted
 4. **The Starting 5** — Not started
 
@@ -84,7 +84,7 @@
 
 **System Status:**
 - All services intentionally offline (Irrig8 funding gate)
-- AgentOS core live at zo.computer
+- Agentic core live at zo.computer
 - INBOX system operational
 - Grant pipeline 7 active batches
 

@@ -7,7 +7,7 @@
 declare -A PAGES[
   ["home"]="/"
   ["irrig8"]="/projects/irrig8"
-  ["agentos"]="/projects/agentos"
+  ["agentic"]="/projects/agentic"
   ["vpc"]="/projects/vpc"
 ]
 

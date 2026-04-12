@@ -1,5 +1,5 @@
 # Reserve — Treasury Manager INBOX
-**Bxthre3 Inc / AgentOS Finance Division**
+**Bxthre3 Inc / Agentic Finance Division**
 **Activated:** 2026-03-31
 **Reports to:** Balance (CFO)
 

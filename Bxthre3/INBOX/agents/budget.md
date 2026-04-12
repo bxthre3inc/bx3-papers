@@ -1,7 +1,7 @@
 # Budget — FP&A Finance Division
 
 **Agent:** Budget  
-**Role:** Budget Manager — Bxthre3 Inc / AgentOS Finance Division  
+**Role:** Budget Manager — Bxthre3 Inc / Agentic Finance Division  
 **Department:** Finance (FP&A)  
 **Reports to:** Forecast (VP FP&A) → Balance (CFO)  
 **Last Updated:** 2026-04-06 09:05 AM MT
@@ -34,7 +34,7 @@
 
 #### 🔴 P1 — Q1 Actuals Not Captured
 `Bxthre3/FPA/forecasts/Q1-2026-ACTUALS.md` is empty. Cannot run Q1 variance analysis without actuals data. Needs:
-- Revenue by entity (Irrig8, VPC, Starting 5, AgentOS)
+- Revenue by entity (Irrig8, VPC, Starting 5, Agentic)
 - COR breakdown
 - OpEx by department
 - Headcount actuals

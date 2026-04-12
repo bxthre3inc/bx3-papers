@@ -38,7 +38,7 @@
 **Blue Ocean Analysis:**
 - **Value Innovation:** HIGH — Agent interoperability is infrastructure, not feature
 - **Market Creation:** HIGH — 'MCP Mesh' category doesn't exist yet commercially
-- **Strategic Alignment:** DIRECT — AgentOS already building mesh:  on port 7777
+- **Strategic Alignment:** DIRECT — Agentic already building mesh:  on port 7777
 - **Execution Feasibility:** HIGH — Server running, needs productization packaging
 
 **Evidence:**
@@ -46,7 +46,7 @@
 - MCP adoption timeline: Nov 2024 (launch) → Apr 2025 (Google) → Mar 2026 (standard)
 - Amazon Ads already shipping MCP connectors [Digiday, 2026-03]
 
-**Recommendation:** Package AgentOS MCP mesh as standalone 'Agent Gateway' product. Target: devtools/infra buyers. First customer: Valley Build-A-Biz onboarding portal.
+**Recommendation:** Package Agentic MCP mesh as standalone 'Agent Gateway' product. Target: devtools/infra buyers. First customer: Valley Build-A-Biz onboarding portal.
 
 ---
 
@@ -77,10 +77,10 @@
 
 **Opportunity:** Qodo raised 0M for AI code verification as 'vibe coding' scales. Gap: no open-source, deterministic verification for agent-generated code.
 
-**Strategic Question:** Should AgentOS build internal code-verification agent or partner?
+**Strategic Question:** Should Agentic build internal code-verification agent or partner?
 
 **Validation Needed:**
-- Does AgentOS generate enough code to justify own tooling?
+- Does Agentic generate enough code to justify own tooling?
 - Can we extend 'deterministic' brand to code verification?
 
 ---

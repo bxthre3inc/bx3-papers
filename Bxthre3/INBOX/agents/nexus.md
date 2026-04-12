@@ -1,7 +1,7 @@
 # Agent INBOX — Nexus, VP Strategic Partnerships
 
 **Agent:** Nexus
-**Role:** VP Strategic Partnerships — AgentOS Corporate Development Department
+**Role:** VP Strategic Partnerships — Agentic Corporate Development Department
 **Department:** Strategic Partnerships
 **Reports to:** brodiblanco (CEO)
 **Last Updated:** 2026-04-02

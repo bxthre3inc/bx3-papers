@@ -29,7 +29,7 @@
 | Equipment Distribution | 1.0 | 3.0 | -2.0 |
 | Ag Retail Partnerships | 1.0 | 3.0 | -2.0 |
 | VPC Partnerships | 1.0 | 3.0 | -2.0 |
-| AgentOS Investors | 1.0 | 3.0 | -2.0 |
+| Agentic Investors | 1.0 | 3.0 | -2.0 |
 | **Overall** | **1.0** | **3.0** | **-2.0** |
 
 ---

@@ -9,6 +9,6 @@
   },
   "active_services": [
     { "label": "vpc", "port": 5176, "status": "running" },
-    { "label": "agentos-api", "port": 9000, "status": "running" }
+    { "label": "agentic-api", "port": 9000, "status": "running" }
   ]
 }

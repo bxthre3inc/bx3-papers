@@ -87,10 +87,10 @@
 | Deadline | 2026-05-15 (Approx — check current round) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS / Irrig8 |
+| Portfolio Fit | Agentic / Irrig8 |
 | Status | Rolling competitions |
 | Next Action | Apply for Innovate UK competition; frame as precision agriculture AI |
-| Notes | UK equivalent of SBIR. Strong fit for AgentOS AI platform and Irrig8 deterministic decision engine. |
+| Notes | UK equivalent of SBIR. Strong fit for Agentic AI platform and Irrig8 deterministic decision engine. |
 
 ---
 
@@ -105,10 +105,10 @@
 | Deadline | 2026-06-15 (Multiple cutoffs per year) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | AgentOS (all Bx3) |
+| Portfolio Fit | Agentic (all Bx3) |
 | Status | Active — multiple cutoffs annually |
-| Next Action | Prepare EIC Accelerator application; AgentOS deterministic AI fits deep-tech criteria |
-| Notes | **P0 candidate.** €630M pool for deep-tech SMEs. 5 priority areas. AgentOS as a deterministic AI platform for autonomous operations fits EIC's "strategic technologies" priority. |
+| Next Action | Prepare EIC Accelerator application; Agentic deterministic AI fits deep-tech criteria |
+| Notes | **P0 candidate.** €630M pool for deep-tech SMEs. 5 priority areas. Agentic as a deterministic AI platform for autonomous operations fits EIC's "strategic technologies" priority. |
 
 ---
 
@@ -159,10 +159,10 @@
 | Deadline | 2026-05-30 (Rolling) |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS / Irrig8 |
+| Portfolio Fit | Agentic / Irrig8 |
 | Status | Active — accepting applications |
 | Next Action | Apply via EU Funding Portal; frame as agrifood tech innovation |
-| Notes | Intensive accelerator program for water/marine/sustainable blue technologies. Agrifood startups. Could be AgentOS entry point to EU market. |
+| Notes | Intensive accelerator program for water/marine/sustainable blue technologies. Agrifood startups. Could be Agentic entry point to EU market. |
 
 ---
 
@@ -195,10 +195,10 @@
 | Deadline | 2026-08-31 (Multiple calls per year) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS / Irrig8 |
+| Portfolio Fit | Agentic / Irrig8 |
 | Status | Active |
 | Next Action | Search Horizon Europe call topics for 2026; requires EU partner/consortium |
-| Notes | Requires consortium of EU entities. Very large grants. AgentOS/Irrig8 as technology component in EU research consortium. |
+| Notes | Requires consortium of EU entities. Very large grants. Agentic/Irrig8 as technology component in EU research consortium. |
 
 ---
 

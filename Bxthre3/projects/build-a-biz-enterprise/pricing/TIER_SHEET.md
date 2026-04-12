@@ -16,7 +16,7 @@
 ### What's Included
 
 **Setup:**
-- Pre-configured AgentOS workspace
+- Pre-configured Agentic workspace
 - 3 core agents (Operations, Inbox, Tasks)
 - Basic integrations (email, calendar)
 - 1-hour setup call
@@ -31,7 +31,7 @@
 - 1 onboarding call
 
 ### Requirements
-- AgentOS platform subscription (included in monthly)
+- Agentic platform subscription (included in monthly)
 - Active email account
 - Google Calendar (recommended)
 
@@ -42,7 +42,7 @@
 ### What's Included
 
 **Setup:**
-- Full AgentOS workspace
+- Full Agentic workspace
 - 5 pre-configured agents
 - All integrations (email, calendar, SMS, tasks)
 - 2 onboarding calls
@@ -72,7 +72,7 @@
 ### What's Included
 
 **Setup:**
-- Full AgentOS workspace with all features
+- Full Agentic workspace with all features
 - 8 pre-configured agents
 - All integrations + advanced automation
 - White-label readiness preparation
@@ -104,7 +104,7 @@
 ### What's Included
 
 **Setup:**
-- Bespoke AgentOS configuration
+- Bespoke Agentic configuration
 - Custom agent development (up to 10 agents)
 - White-label ready
 - API integrations (up to 3 external systems)
@@ -132,9 +132,9 @@
 
 ---
 
-## AgentOS Platform Requirement
+## Agentic Platform Requirement
 
-All tiers require an active AgentOS platform subscription.
+All tiers require an active Agentic platform subscription.
 
 **Platform pricing:**
 - Basic workspace: $97/month (included in monthly fees above)
@@ -143,7 +143,7 @@ All tiers require an active AgentOS platform subscription.
 - Enterprise workspace: Custom pricing
 
 Platform includes:
-- AgentOS core system
+- Agentic core system
 - Agent memory and persistence
 - MCP communication layer
 - Standard integrations

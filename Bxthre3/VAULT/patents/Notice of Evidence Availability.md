@@ -50,7 +50,7 @@ To ensure infrastructure readiness and baseline data ingestion for the
 June 29th window, Bxthre3 is now accepting **Compliance Retainers**.
 
 Stakeholders who secure a retainer before \[Date\] will be prioritized
-for **AgentOS** deployment, ensuring that their \"Librarian\" (Oracle)
+for **Agentic** deployment, ensuring that their \"Librarian\" (Oracle)
 and \"Scientist\" (Zo) clusters are fully synchronized to produce a
 certified QCV for the court.
 

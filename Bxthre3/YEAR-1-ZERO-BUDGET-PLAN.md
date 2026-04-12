@@ -19,7 +19,7 @@ RESOURCES AVAILABLE:
 ├── Zo Space hosting: Included (no extra cost)
 ├── GitHub/LINEAR/Notion: Free tiers active
 ├── Existing hardware: Android device, current machines
-└── AgentOS team: 18 AI agents (no payroll)
+└── Agentic team: 18 AI agents (no payroll)
 
 RESOURCES NOT AVAILABLE:
 ├── Cash for new infrastructure: $0

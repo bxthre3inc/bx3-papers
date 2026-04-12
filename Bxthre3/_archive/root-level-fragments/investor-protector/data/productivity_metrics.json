@@ -1,0 +1,634 @@
+{
+  "timestamp": "2026-04-07T02:00:31.069059",
+  "agents_active": {
+    "vas-partner-matcher": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "brodiblanco": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "taylor": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "ambient_capture": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "purchase": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "orderapp-prospector": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 6
+    },
+    "irrigation-tropical": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "press": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "vas-orchestrator": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "oracle": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "learn": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 2
+    },
+    "bridge": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "sentinel": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "backup": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 8
+    },
+    "trenchbabys": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "rain": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "iris": {
+      "p0_active": 1,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "irrigation-arid": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "sam": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "split": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "nexus": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "SCHEDULER_LOG": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "field-ops": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "interlocker": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "gavel": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv-correlation": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "zoe": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 12
+    },
+    "locale": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "rbf-agent": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "irrig8_slv_report_20260405_0924": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "android-lead": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 3
+    },
+    "qa-lead": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 3
+    },
+    "irrigation-grid": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv-sensor-correlation-specialist": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "vpc": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "archivist": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 7
+    },
+    "AMBIENT_CAPTURE": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 22
+    },
+    "slv-sensor-corr": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "irrigation-coastal": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "grants-hq": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "shadow-engineer": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "casey": {
+      "p0_active": 1,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv-sensor-specialist": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "optimize": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "grader": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "mesh-engineer": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 6
+    },
+    "ambientcapture": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 3
+    },
+    "maya": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "ambient-capture": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 20
+    },
+    "insight": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "claim": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "irrigation-vertical": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "pipeline": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "stage": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "irrigation-team": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "all-agents": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv-sensor-correlation": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "network": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "irrigation-framework": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "raj": {
+      "p0_active": 1,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "vault": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 7
+    },
+    "navigate": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "shelf": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "cartographer": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "LF-AGENT": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "pulse-health-20260330-0600": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 7
+    },
+    "rank": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "harvest": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "reserve": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "pulse": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "funding-orchestrator": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "government-affairs": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "irrigation-greenhouse": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv sensor correlation": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "balance": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "scout": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "vas-revenue-hunter": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "fabricator": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "government": {
+      "p0_active": 3,
+      "p1_active": 0,
+      "completed": 5
+    },
+    "devops": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "INBOX_ROUTING_IR": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "grade": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "budget": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 12
+    },
+    "vas-data-arbitrage": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "vance": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv-sensor": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "shield": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "forecast": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "reseller": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "pitch": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "irrigation-temperate": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "tribe": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "soil-variability-mapper": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "test": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "stack": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 7
+    },
+    "recon": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "dev": {
+      "p0_active": 1,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "deal-agent": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "slv sensor correlation specialist": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "vas-integration-scout": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "operations": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "source": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "deliver": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "reseller-standup-2026-04-06": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 2
+    },
+    "irrig8": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "theo": {
+      "p0_active": 0,
+      "p1_active": 1,
+      "completed": 0
+    },
+    "lens": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "keeper": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "pulse-health-log": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 12
+    },
+    "restaurant-scout": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 35
+    },
+    "slv_sensor_correlation": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "ticket": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "sbir-agent": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "atlas": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "architect": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 4
+    },
+    "reach": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "patent-agent": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 1
+    },
+    "vas-data-arbitrage_TARGETING": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "scout-qa": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 5
+    },
+    "drew": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "prime": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "model": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 2
+    },
+    "network-standup-2026-04-06": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 5
+    },
+    "slv-correlation-specialist": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 0
+    },
+    "AMBIENT_CAPTURE-RUN-2026-04-06-1805": {
+      "p0_active": 0,
+      "p1_active": 0,
+      "completed": 8
+    }
+  },
+  "tasks_total": 0,
+  "tasks_completed_week": 0,
+  "milestones_total": 0,
+  "milestones_completed": 0
+}

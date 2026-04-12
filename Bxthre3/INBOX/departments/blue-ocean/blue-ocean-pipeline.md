@@ -30,7 +30,7 @@ While hunting continues, the fastest path to cash from existing assets:
 | Asset | Action | Timeline | Human involvement |
 |---|---|---|---|
 | **Starting5** | Self-serve landing page + Stripe | 2-3 weeks | ~5% (approve copy + pricing) |
-| **AgentOS workflows** | Package 1 workflow as product | 1-2 weeks | ~5% (approve product spec) |
+| **Agentic workflows** | Package 1 workflow as product | 1-2 weeks | ~5% (approve product spec) |
 | **ARD** | Offer automation for owner-financed RE | 2-4 weeks | ~10% (requires integration decisions) |
 
 **Note:** These are RED OCEAN micro-SaaS plays — not blue oceans. But they generate cash while the hunt continues.

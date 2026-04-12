@@ -17,22 +17,22 @@ All 4 VAS agents have reported. Cross-referenced against grants pipeline (316 gr
 
 ---
 
-### OPPORTUNITY #1 — AgentOS Workforce → VPC Customer Support Integration
+### OPPORTUNITY #1 — Agentic Workforce → VPC Customer Support Integration
 
-- **OPPORTUNITY:** Repurpose AgentOS workforce as AI support layer for Valley Players Club — reduces support headcount 60-80%, generates $3K–$10K/month platform fee
-- **SOURCE SYSTEMS:** AgentOS + Valley Players Club (VPC)
+- **OPPORTUNITY:** Repurpose Agentic workforce as AI support layer for Valley Players Club — reduces support headcount 60-80%, generates $3K–$10K/month platform fee
+- **SOURCE SYSTEMS:** Agentic + Valley Players Club (VPC)
 - **REVENUE MODEL:** Platform fee ($500–$2K/mo) + operational cost savings ($2K–$5K/mo reduced headcount) + scalable to Trenchbabys/Build-A-Biz
 - **EFFORT:** ~40 hours + complexity 2/5 (API bridge already defined, legal review needed)
 - **FIRST DOLLAR:** 25–45 days (legal review + integration build)
 - **OWNER:** Drew (Sales) + Raj (Legal/Compliance) — VPC gaming compliance review required
-- **ACTION:** Raj: review AI handling of financial disputes under gaming regulations. Drew: draft VPC onboarding proposal for AgentOS workspace. Iris: build webhook bridge for VPC ticket events → AgentOS task queue.
+- **ACTION:** Raj: review AI handling of financial disputes under gaming regulations. Drew: draft VPC onboarding proposal for Agentic workspace. Iris: build webhook bridge for VPC ticket events → Agentic task queue.
 
 **SCORE:**
 | Criteria | Score |
 |---|---|
 | Revenue/mo | $3K–$10K (immediate), scales to $15K+ |
 | Cash impact | 30 days |
-| Strategic fit | 85% — AgentOS + VPC both P1 ventures |
+| Strategic fit | 85% — Agentic + VPC both P1 ventures |
 | Effort | Low-Medium |
 | **Overall** | **P1 — IMMEDIATE EXECUTE** |
 
@@ -84,7 +84,7 @@ All 4 VAS agents have reported. Cross-referenced against grants pipeline (316 gr
 
 | # | Opportunity | Source | Revenue/mo | First Dollar | Effort | Complexity | Score |
 |---|---|---|---|---|---|---|---|
-| 1 | AgentOS → VPC Support | Integration Scout | $3K–$10K | 25–45 days | 40 hrs | 2/5 | **P1** |
+| 1 | Agentic → VPC Support | Integration Scout | $3K–$10K | 25–45 days | 40 hrs | 2/5 | **P1** |
 | 2 | Irrig8 PBFT → Rain Intel | Integration Scout | $2K–$8K | 45–60 days | 60 hrs | 3/5 | **P1** |
 | 3 | Build-A-Biz Lead Lists | Data Arbitrage | $1K–$5K | 7–14 days | 8 hrs | 1/5 | **P2** |
 | 4 | VPC VIP Tier | Revenue Hunter | $2K–$8K | 30–45 days | 20 hrs | 2/5 | **P2** |
@@ -93,7 +93,7 @@ All 4 VAS agents have reported. Cross-referenced against grants pipeline (316 gr
 | 7 | Insurance Partnership | Revenue Hunter | $[VERIFY] | 90+ days | Legal | 4/5 | **P3** |
 | 8 | SLV Soil Correlation API | Data Arbitrage | $5K–$15K | 60–90 days | 40 hrs | 3/5 | **P3** |
 | 9 | VPC Affiliate Revenue Share | Revenue Hunter | $1K–$8K | 21–30 days | 15 hrs | 1/5 | **P2** |
-| 10 | AgentOS Per-Task Billing | Revenue Hunter | TBD | 90+ days | Infra | 4/5 | **P3** |
+| 10 | Agentic Per-Task Billing | Revenue Hunter | TBD | 90+ days | Infra | 4/5 | **P3** |
 
 ---
 
@@ -140,7 +140,7 @@ The following are flagged as "NEEDS REFINEMENT" per Orchestrator mandate — vag
 
 | Priority | Action | Owner | Due |
 |---|---|---|---|
-| 🔴 P1 | VPC + AgentOS integration legal review (gaming AI compliance) | Raj | 2026-04-08 |
+| 🔴 P1 | VPC + Agentic integration legal review (gaming AI compliance) | Raj | 2026-04-08 |
 | 🔴 P1 | Irrig8 farmer consent framework design | Irrig8/Rain | 2026-04-10 |
 | 🟠 P2 | Build-A-Biz segmented list export + outreach to 3 POS vendors | Drew | 2026-04-13 |
 | 🟠 P2 | VPC VIP tier product spec | VPC/Drew | 2026-04-10 |
@@ -164,5 +164,5 @@ Revenue opportunities 60–90 days: **#2, #6, #8** — important but do not solv
 
 ---
 
-*VAS-ORCHESTRATOR | Bxthre3/AgentOS | 2026-04-06 01:40 UTC*
+*VAS-ORCHESTRATOR | Bxthre3/Agentic | 2026-04-06 01:40 UTC*
 *Sources: vas-data-arbitrage.md, vas-integration-scout.md, vas-revenue-hunter.md, vas-partner-matcher.md, grants/PIPELINE_INDEX.md, FPA/cash-flow/13-week-cash-flow-Q2-2026.md*

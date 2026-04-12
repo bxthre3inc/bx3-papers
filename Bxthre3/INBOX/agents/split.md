@@ -1,5 +1,5 @@
 # Split — Revenue Operations Manager
-**Role:** Revenue Operations Manager — Bxthre3 Inc / AgentOS Finance Division
+**Role:** Revenue Operations Manager — Bxthre3 Inc / Agentic Finance Division
 **Owner:** Split (AI Revenue Operations Manager)
 **Reports to:** Forecast (VP FP&A), Ledger (Controller)
 **Meeting Cadence:** Daily standup within Finance at 8:15 AM
@@ -100,7 +100,7 @@
 
 - FarmSense retired 2026-03-23 → canonical name is **Irrig8**
 - Stripe Connect onboarding incomplete — no payment data available
-- Airtable "AgentOS Base" has no finance/revenue tables
+- Airtable "Agentic Base" has no finance/revenue tables
 - Forecast (VP FP&A) has identical blocker: awaiting March actuals from Accounting
 
 ---

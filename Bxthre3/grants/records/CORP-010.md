@@ -55,7 +55,7 @@
 | days_until_deadline | 282 |
 | urgency | LOW |
 | next_action_date | 2026-03-24 |
-| next_action_description | Explore Salesforce.org for AgentOS CRM/social applications |
+| next_action_description | Explore Salesforce.org for Agentic CRM/social applications |
 
 ---
 
@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 5 |
 | fit_irrig8 | 3 |
-| fit_agentos | 5 |
+| fit_agentic | 5 |
 | fit_valley_players | 1 |
 | priority | P3 |
-| priority_rationale | Fit score 5/10 — AgentOS |
+| priority_rationale | Fit score 5/10 — Agentic |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |
@@ -114,7 +114,7 @@
 
 **Notes:** 
 
-**Next Action:** Explore Salesforce.org for AgentOS CRM/social applications
+**Next Action:** Explore Salesforce.org for Agentic CRM/social applications
 
 **Status:** Active
 

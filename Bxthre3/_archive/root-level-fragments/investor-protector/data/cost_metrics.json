@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-07T02:00:31.028045",
+  "categories": {
+    "zo_computer": 0,
+    "github_actions": 0,
+    "render": 0,
+    "twilio": 0,
+    "supabase": 0,
+    "vercel": 0,
+    "stripe": 0
+  },
+  "total_weekly": 0,
+  "runway_weeks": null,
+  "burn_rate": "needs manual entry"
+}

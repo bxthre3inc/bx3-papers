@@ -61,7 +61,7 @@ While V2 is in assessment, the following V1 improvements should be prioritized t
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │   AgentOS   │◄──►│  Irrig8 DB  │◄──►│  Irrig8 API │         │
+│  │   Agentic   │◄──►│  Irrig8 DB  │◄──►│  Irrig8 API │         │
 │  │   Tasks     │    │  (Shared)   │    │  (Shared)   │         │
 │  └─────────────┘    └─────────────┘    └─────────────┘         │
 │         ▲                                                       │
@@ -84,7 +84,7 @@ While V2 is in assessment, the following V1 improvements should be prioritized t
 - **Shared database**: RAIN data in Irrig8 schema, migration risk
 - **Shared auth**: Login depends on Irrig8 auth service uptime
 - **Shared billing**: Stripe logic coupled to Irrig8 billing
-- **AgentOS dependency**: Alert scheduling via AgentOS task queue
+- **Agentic dependency**: Alert scheduling via Agentic task queue
 - **No isolation**: Irrig8 changes can break RAIN
 - **Hard to sell**: Cannot spin out RAIN as standalone product
 
@@ -132,7 +132,7 @@ While V2 is in assessment, the following V1 improvements should be prioritized t
 │                                                                         │
 │  ┌─────────────────────────────────────────────────────────────────┐   │
 │  │                    RAIN Scheduler                               │   │
-│  │           (Internal cron + queue - no AgentOS)                  │   │
+│  │           (Internal cron + queue - no Agentic)                  │   │
 │  └─────────────────────────────────────────────────────────────────┘   │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
@@ -201,11 +201,11 @@ V2: /data/rain-v2.db → isolated tables: subscribers, alerts, billing
 ```
 
 ### 5. RAIN Scheduler (Internal)
-**V1**: AgentOS task queue  
+**V1**: Agentic task queue  
 **V2**: Internal cron + queue
 
 ```typescript
-// V2: Built-in scheduler (no AgentOS dependency)
+// V2: Built-in scheduler (no Agentic dependency)
 import { Cron } from 'croner';
 
 // Check weather every 15 minutes
@@ -244,7 +244,7 @@ new Cron('*/15 * * * *', async () => {
 └─────────────┘     └─────────────┘     └─────────────┘
 ```
 
-**No AgentOS. No Irrig8. Fully contained.**
+**No Agentic. No Irrig8. Fully contained.**
 
 ---
 
@@ -314,7 +314,7 @@ Phase 3: Cleanup
 | Benefit | Description |
 |---------|-------------|
 | **Independence** | No cross-team coordination for deployments |
-| **Stability** | Changes to Irrig8/AgentOS cannot break RAIN |
+| **Stability** | Changes to Irrig8/Agentic cannot break RAIN |
 | **Portability** | Can migrate to separate hosting easily |
 | **Sellability** | Can spin out as standalone company |
 | **Testability** | Full system tests without external mocks |

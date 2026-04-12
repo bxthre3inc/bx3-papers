@@ -1,5 +1,5 @@
 # Scout-QA — Agent INBOX
-> QA & Testing Lead — AgentOS Engineering Department
+> QA & Testing Lead — Agentic Engineering Department
 > Created: 2026-03-25
 > Schedule: Weekly — business days 9 AM MT
 
@@ -7,9 +7,9 @@
 
 ## 🔴 P1 | scout-qa | 2026-03-25 09:15 UTC
 
-**FINDING: AgentOS Unit Tests FAILING — 4 of 5 tests fail**
+**FINDING: Agentic Unit Tests FAILING — 4 of 5 tests fail**
 
-Executed: `cd the-agentos-project && bun test`
+Executed: `cd the-agentic-project && bun test`
 Results:
 
 ```
@@ -56,7 +56,7 @@ tests/escalation.test.ts:
 
 ### Executive Summary
 
-No formal test infrastructure exists across any Bxthre3 product. Existing AgentOS unit tests are failing (4/5). This is the single largest near-term quality risk.
+No formal test infrastructure exists across any Bxthre3 product. Existing Agentic unit tests are failing (4/5). This is the single largest near-term quality risk.
 
 ---
 
@@ -64,7 +64,7 @@ No formal test infrastructure exists across any Bxthre3 product. Existing AgentO
 
 | Product | Test Infra | Last Verified | Status |
 |---|---|---|---|
-| **AgentOS** | ⚠️ 5 tests, **4 FAILING** | 2026-03-25 | 🔴 Failing |
+| **Agentic** | ⚠️ 5 tests, **4 FAILING** | 2026-03-25 | 🔴 Failing |
 | **Irrig8** | ❌ None found | — | 🔴 No coverage |
 | **RAIN** | ❌ None found | — | 🔴 No coverage |
 | **Valley Players Club** | ❌ None found | — | 🔴 No coverage |
@@ -74,7 +74,7 @@ No formal test infrastructure exists across any Bxthre3 product. Existing AgentO
 
 ### Critical Open Issues
 
-#### 🔴 P0 — AgentOS unit tests failing (4 of 5)
+#### 🔴 P0 — Agentic unit tests failing (4 of 5)
 **Source:** `bun test` executed 2026-03-25 09:12 UTC
 **Failing tests:**
 - `hierarchy.test.ts:11` — stale expectation (expects 20, roster is 19)
@@ -93,7 +93,7 @@ No formal test infrastructure exists across any Bxthre3 product. Existing AgentO
 | `core/execution/workspace-manager.ts` | 64 | Remove stale ID "sage" |
 | `core/hierarchy/org.ts` | 165 | Remove stale ID "brand" |
 
-**Pre-condition:** Fix org.ts data path (`/data/agentos/org` → `/home/.z/agentos/org`) per stub-finder root cause.
+**Pre-condition:** Fix org.ts data path (`/data/agentic/org` → `/home/.z/agentic/org`) per stub-finder root cause.
 
 #### 🟡 P1 — zo.space P1 outage (2026-03-25 01:45 UTC)
 **Finding:** HTTP 503 for ~40 minutes. org.ts cascading import failures.
@@ -101,7 +101,7 @@ No formal test infrastructure exists across any Bxthre3 product. Existing AgentO
 **Recommended Test:** Chaos test — isolate one route failure, verify others survive.
 
 #### 🟡 P1 — Roster divergence re-emerging
-**Finding:** org.ts writes to `/data/agentos/org/chart.json` (non-existent path).
+**Finding:** org.ts writes to `/data/agentic/org/chart.json` (non-existent path).
 **Status:** Fix proposed, not validated.
 **Action:** After fix, run stub-finder, confirm zero phantom detections.
 
@@ -151,7 +151,7 @@ No formal test infrastructure exists across any Bxthre3 product. Existing AgentO
 
 | Priority | Action | Owner | ETA |
 |---|---|---|---|
-| **P0** | Fix AgentOS unit tests (stale expectations + test isolation) | Drew/Iris | Today |
+| **P0** | Fix Agentic unit tests (stale expectations + test isolation) | Drew/Iris | Today |
 | **P0** | Re-run `bun test` — confirm 5/5 pass | Scout-QA | Today |
 | **P0** | Fix org.ts path + validate stub-finder P0 fixes | Drew/Iris | Today |
 | **P0** | Run stub-finder post-fix, confirm clean | Scout-QA | Today |
@@ -172,4 +172,4 @@ No formal test infrastructure exists across any Bxthre3 product. Existing AgentO
 ---
 
 *Scout-QA — QA & Testing Lead*
-*AgentOS Engineering Department*
+*Agentic Engineering Department*

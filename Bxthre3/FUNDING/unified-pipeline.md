@@ -1,7 +1,7 @@
 # BX3 Inc — Unified Funding Pipeline
 
 **Funding Philosophy:** Small equity (5-10%) for significantly large checks ($2M+)  
-**Scope:** Multi-subsidiary holding company (Irrig8, VPC, AgentOS, ARD)  
+**Scope:** Multi-subsidiary holding company (Irrig8, VPC, Agentic, ARD)  
 **TAM:** $160B+ combined (ag $30B + gaming $80B + AI infra $50B)  
 **Burn Rate:** $18/month — infinite runway, position for maximum leverage  
 
@@ -35,7 +35,7 @@
 | Outcome | Equity Preserved | Cash Secured | Next Phase |
 |---------|-----------------|--------------|------------|
 | **Best Case** | 92% (8% dilution) | $3M+ ($2M strategic + $1M grants) | Spin out VPC, scale Irrig8 |
-| **Strong Case** | 95% (5% dilution) | $2.5M ($2M strategic + $500K grants) | Build team, B2B AgentOS |
+| **Strong Case** | 95% (5% dilution) | $2.5M ($2M strategic + $500K grants) | Build team, B2B Agentic |
 | **Grants Only** | 100% | $500K SBIR | Extend runway, delay equity |
 | **Creative Capital** | 100% | $500K RBF | Bridge to series A metrics |
 | **Bootstrap** | 100% | $0 (shadow validation) | Prove antifragility, raise later |

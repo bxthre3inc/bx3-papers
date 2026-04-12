@@ -1,0 +1,12 @@
+id,location,latitude,longitude,type,tolerance_km,status,notes
+A,Antonito,37.089,-106.010,Town Node,2.5,Planned,Southmost terminus
+B,La Jara,37.288,-106.075,Town Node,2.5,Planned,Gap fill south of Alamosa
+R1,Alamosa N Rural,37.452,-105.780,Relay,3,Planned,N-S backbone relay
+C,Alamosa (HUB),37.470,-105.870,Key Hub,3,Planned,Largest town, key relay
+R2,MV/Alamosa Gap,37.530,-105.860,Relay,3,Planned,Rural gap fill
+D,Monte Vista (MVP),37.617,-106.148,Key Hub,3,Planned,MVP focus town
+R3,E-W Cross,37.635,-106.050,Relay,2,Planned,Del Norte branch
+G,Sargent,37.635,-106.360,Town Node,2,Planned,West branch off MV
+R4,Alamosa-Sarg Gap,37.550,-106.200,Relay,2,Planned,Sargent-to-backbone
+E,Del Norte,37.680,-106.350,Town Hub,2.5,Planned,Upper valley hub
+F,South Fork,37.800,-106.640,Town Node,2.5,Planned,Northern terminus

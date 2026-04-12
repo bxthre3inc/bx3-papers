@@ -73,7 +73,7 @@
 1. **AOP-2026 only consolidates 4 departments** — 20+ departments have no allocated budget
 2. **Total OpEx in AOP:** $5.2M across 4 depts — does not reflect full 24-dept structure
 3. **Headcount in AOP:** 35 FTEs — org chart shows ~19 agents + brodiblanco; gap needs reconciliation
-4. **Burn rate per entity** not calculated — Irrig8, VPC, Starting 5, AgentOS individually untracked
+4. **Burn rate per entity** not calculated — Irrig8, VPC, Starting 5, Agentic individually untracked
 
 ---
 

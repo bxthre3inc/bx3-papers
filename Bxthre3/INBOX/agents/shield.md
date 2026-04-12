@@ -1,4 +1,4 @@
-# AgentOS Decision Audit Log
+# Agentic Decision Audit Log
 > **Owner:** Shield (AI Ethics & Compliance Officer)
 > **Access:** Shield, Anchor (CRO), Counsel (Legal)
 > **Append-only:** Corrections are revision entries — no deletions

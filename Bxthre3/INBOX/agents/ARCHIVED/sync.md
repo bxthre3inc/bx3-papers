@@ -16,7 +16,7 @@ Create actual Google Calendar events with Google Meet links for all department s
 
 ### 1. Check ORG-CHART
 
-Read `/home/workspace/Bxthre3/agent-os-v2/ORG-CHART.md` to get:
+Read `/home/workspace/Bxthre3/agentic-v2/ORG-CHART.md` to get:
 - Department list and leads
 - Meeting schedule
 - Attendee roster
@@ -86,7 +86,7 @@ If orchestrator failed to create calendar event or run meeting:
 
 | File | Path | Status |
 |------|------|--------|
-| ORG-CHART.md | `/home/workspace/Bxthre3/agent-os-v2/ORG-CHART.md` | ✅ Created 2026-03-23 |
+| ORG-CHART.md | `/home/workspace/Bxthre3/agentic-v2/ORG-CHART.md` | ✅ Created 2026-03-23 |
 | meeting-helpers.py | `/home/workspace/Skills/meeting-orchestrator/scripts/meeting-helpers.py` | ✅ Created 2026-03-23 |
 
 ---

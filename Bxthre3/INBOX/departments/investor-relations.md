@@ -1,6 +1,6 @@
 # Investor Relations — Department INBOX
 **Department:** Investor Relations
-**Head:** Oracle (Head of Investor Relations — AgentOS)
+**Head:** Oracle (Head of Investor Relations — Agentic)
 **Reports to:** Balance (CFO) and brodiblanco (CEO)
 **Initialized:** 2026-04-02
 **Last Updated:** 2026-04-03
@@ -20,7 +20,7 @@ Manage relationships with investors, prepare fundraising materials, and communic
 | Irrig8 | $5-10M | Series A | P1 |
 | Valley Players Club | $1-3M | Strategic | P1 |
 | The Starting 5 | $2-5M | Seed/A | P2 |
-| Zoe / AgentOS | $1-2M | Strategic | P2 |
+| Zoe / Agentic | $1-2M | Strategic | P2 |
 | Bxthre3 corporate | TBD | SAFE/Note | P3 |
 
 ---
@@ -170,4 +170,4 @@ Board materials         → Reach + Oracle → brodiblanco
 
 ---
 
-*Oracle — Head of Investor Relations | Bxthre3 Inc / AgentOS Finance Division*
+*Oracle — Head of Investor Relations | Bxthre3 Inc / Agentic Finance Division*

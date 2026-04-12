@@ -17,9 +17,9 @@
 🤫 SILENT AGENTS (live API, no INBOX activity 7d) — 2 agents:
   atlas, vance
 
-**ROOT CAUSE:** org.ts writes to /data/agentos/org/chart.json — that path does not exist. All 24 employees in org.ts are never loaded. The org.ts module is non-functional.
+**ROOT CAUSE:** org.ts writes to /data/agentic/org/chart.json — that path does not exist. All 24 employees in org.ts are never loaded. The org.ts module is non-functional.
 
 **RECOMMENDED ACTIONS:**
-1. Fix data path in core/hierarchy/org.ts (change /data/agentos/org → /home/.z/agentos/org)
+1. Fix data path in core/hierarchy/org.ts (change /data/agentic/org → /home/.z/agentic/org)
 2. Run stub-finder.ts again post-fix to confirm resolution
 3. Decide: canonical roster = org.ts (24) or live API (14) — pick ONE

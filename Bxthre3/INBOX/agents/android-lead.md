@@ -12,16 +12,16 @@
 - Fixed `local.properties` — `sdk.dir=/opt/android-sdk`
 
 ### Codebase Health
-- **Source:** `Bxthre3/projects/agentic/the-agentos-project/client/android/`
-- **Package:** `com.bxthre3.agentos` | v1.0.2
+- **Source:** `Bxthre3/projects/agentic/the-agentic-project/client/android/`
+- **Package:** `com.bxthre3.agentic` | v1.0.2
 - **Kotlin files:** 5 (MainActivity, AgentOSApplication, ApiClient, Theme, empty screens)
 - **Ktor WebSocket:** dependency present, not implemented
 
 ### API Status
 - **Android base URL:** `https://brodiblanco.zo.computer` ❌ WRONG
 - **Correct base URL:** `https://brodiblanco.zo.space`
-- **Path prefix missing:** `/api/agentos/`
-- **Live API:** ✅ `https://brodiblanco.zo.space/api/agentos/status` operational (v6.0.0)
+- **Path prefix missing:** `/api/agentic/`
+- **Live API:** ✅ `https://brodiblanco.zo.space/api/agentic/status` operational (v6.0.0)
 
 ### Screens
 - All 7 tabs are placeholders (DashboardTab, TasksTab, AgentsTab, etc.)
@@ -38,7 +38,7 @@
 
 | Priority | Issue |
 |----------|-------|
-| P2 | Update `ApiClient` base URL to `https://brodiblanco.zo.space/api/agentos/` |
+| P2 | Update `ApiClient` base URL to `https://brodiblanco.zo.space/api/agentic/` |
 | P2 | Wire `DashboardTab` to real API |
 | P2 | Implement 7 real screens |
 | P2 | Add MCP WebSocket client |
@@ -57,7 +57,7 @@
 
 ### MCP Mesh Transport Status: ✅ READY
 
-**Mesh location:** `Bxthre3/projects/the-agentos-project/mcp-mesh/`
+**Mesh location:** `Bxthre3/projects/the-agentic-project/mcp-mesh/`
 
 **Transports available for Android:**
 1. **WebSocket** (`transport/websocket.ts`) — Full-duplex, reconnect with backoff

@@ -6,7 +6,7 @@
 
 **Objective:** Orchestrate a high-availability \"Virtual AWS\" by
 federating 120+ free-tier SaaS providers into a unified,
-self-propagating mesh for AgentOS and Irrig8.
+self-propagating mesh for Agentic and Irrig8.
 
 ## 1. System Architecture: The 6-Pillar Uniform Mesh
 

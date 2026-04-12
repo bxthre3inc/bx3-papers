@@ -155,7 +155,7 @@
 | Deadline | **2026-03-25** (AI/Quantum/ICT call — imminent) |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | AgentOS (AI research) |
+| Portfolio Fit | Agentic (AI research) |
 | Status | Active — deadline March 25, 2026 |
 | Next Action | LOW — requires prior Wallenberg affiliation |
 | Notes | Sweden's largest private research funder (2.4B SEK/year). Requires prior Wallenberg research affiliation. |
@@ -276,9 +276,9 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
-| Next Action | Apply for Google.org AI grants for AgentOS social impact applications |
+| Next Action | Apply for Google.org AI grants for Agentic social impact applications |
 
 ## CORP-010 — Salesforce.org Impact Fund
 | Field | Value |
@@ -291,9 +291,9 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 5/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Active |
-| Next Action | Explore Salesforce.org for AgentOS CRM/social applications |
+| Next Action | Explore Salesforce.org for Agentic CRM/social applications |
 
 ## CORP-011 — Microsoft AI for Good / Philanthropies
 | Field | Value |
@@ -306,7 +306,7 @@
 | Deadline | Rolling |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS, Irrig8 |
+| Portfolio Fit | Agentic, Irrig8 |
 | Status | Active |
 | Next Action | Apply through Microsoft Nonprofit Tech for Impact programs |
 

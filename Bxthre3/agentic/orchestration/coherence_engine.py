@@ -3,7 +3,7 @@ Agentic Coherence Engine
 Native (Live Symphony) — Parallel Execution with Dependency Resolution
 
 Module: coherence_engine.py
-Location: Bxthre3/projects/agent-os/orchestration/coherence_engine.py
+Location: Bxthre3/projects/agentic/orchestration/coherence_engine.py
 Status: IMPLEMENTED
 
 Resolves task dependencies into parallel execution layers.

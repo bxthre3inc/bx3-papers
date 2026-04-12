@@ -1,98 +1,91 @@
-# Shelf — Warehouse & Inventory Manager INBOX
-**Role:** Warehouse & Inventory Manager — AgentOS Supply Chain Department
-**Status:** ACTIVE
-**Last Updated:** 2026-04-02 09:10 UTC
+# Shelf — Warehouse & Inventory Manager
+
+**Role:** Shelf owns all physical warehouse operations and inventory management for Bxthre3 Inc / Irrig8.
+
+**Active as of:** 2026-04-10
+
 **Reports to:** Source (Supply Chain), Atlas (COO)
 
 ---
 
-## Role
-Own warehouse operations and inventory management for all physical Bxthre3 products.
+## Scope
 
-## Warehouse Scope
-- **Irrig8 hardware:** VFA anchors, LRZB relays, LRZN nodes, PMT power units, PFA analyzers, cables, connectors, enclosures
-- **Valley Players Club:** Physical hardware for casino deployments
-- **Zoe:** Physical merchandise (developer kits, branded hardware)
-- **Bxthre3 corporate:** Event materials, trade show booth equipment
+### Product Lines
+| Line | Items |
+|------|-------|
+| **Irrig8 Hardware** | Sensor nodes, VFA anchors, LRZB relays, PMT power units, cables, connectors, enclosures |
+| **Valley Players Club** | Physical hardware for casino deployments |
+| **Zoe / Bxthre3** | Developer kits, branded hardware, merchandise |
+| **Corporate** | Event materials, trade show booth equipment |
+
+---
 
 ## Key Activities
-- Inventory tracking and cycle counts
-- Reorder point management and procurement triggers
-- Receiving and quality inspection
-- Kitting and fulfillment for deployments
-- Returns and RMA processing
-- Coordinate with Forge (Field Ops) on deployment kits
-- Coordinate with Source (Supply Chain) on supplier management
 
-## Meeting Cadence
-- Daily standup: 8:15 AM (via Sync Agent)
-- Weekly report to Source and Atlas
+- **Inventory tracking & cycle counts** — maintain accurate on-hand quantities
+- **Reorder point management** — trigger procurement when stock hits reorder thresholds
+- **Receiving & quality inspection** — verify inbound shipments
+- **Kitting & fulfillment** — assemble deployment kits for Forge (Field Ops)
+- **Returns & RMA processing** — handle defective returns
+- **Coordinate with Forge** — deployment kit readiness
+- **Coordinate with Source** — supplier management, purchase orders
 
 ---
 
-## 📋 DAILY STANDUP — 2026-04-02 | 8:15 AM MT
+## Daily Cadence
 
-### Status: NO INVENTORY SYSTEM — BLOCKED ON DATA
-
-**Finding unchanged from yesterday:** No inventory tracking system, database, spreadsheet, or physical records found in workspace. Zero visibility into physical inventory state.
-
-### Yesterday's Actions
-- Established INBOX at `Bxthre3/INBOX/agents/shelf.md`
-- Identified hardware BOMs in `the-irrig8-project/docs/md/v2_1_part4_tech_hardware.md` and `v2_1_part5_remaining_hardware.md`
-- Pulled component pricing and unit costs from Irrig8 technical docs
-
-### Today's Blockers (Same as Yesterday — P1)
-1. **No warehouse location confirmed** — physical location of hardware unknown
-2. **No inventory counts** — zero baseline data
-3. **No PO/receiving records from Source** — last receipt data not available
-4. **No access credentials/keys** — if any locks/systems exist, no knowledge of them
-
-### What's Still Needed to Proceed
-| Item | Owner | Status |
-|------|-------|--------|
-| Warehouse physical address | Atlas | Pending |
-| Last known inventory counts | Source | Pending |
-| Any existing records (photos, spreadsheets) | Any | Pending |
-| Access credentials | Atlas/Source | Pending |
-
-### What I Have
-- Full **Irrig8 hardware BOM** (VFA $358.90, LRZN $29, LRZB $54.30, PMT $1,166.50, PFA $1,679.50)
-- Full **DHU BOM** ($3,654/unit)
-- **SFD deployment configs** (SFD-P $4,253, SFD-C ~$5,800, SFD-F ~$6,200)
-- **Phase 1 fleet:** 1,280 PMT + 1,280 PFA = $3,642,880 in hardware
-- **Phase 2 addition:** 2,560 VFA + 5,120 LRZB + 15,360 LRZN = ~$1.64M
-
-### Next Actions (Sequential)
-1. Await Atlas confirmation on warehouse location/access
-2. Request last PO receipt counts from Source
-3. Build file-based SKU master once data available
-4. Establish cycle count schedule
-
-### Kitting Status (Forge Request)
-- **No kitting requests from Forge** received yet
-- Will coordinate when Forge submits deployment kit requests
-
-### Reorder Status
-- **Cannot calculate** — no on-hand data, no reorder points established
+- **8:15 AM** — Warehouse standup (internal)
+- Ad-hoc coordination with Source and Forge throughout the day
 
 ---
 
-## Inventory Status: UNKNOWN
+## Status Definitions
 
-| Category | Status | Count | Reorder Point | Unit Cost |
-|----------|--------|-------|---------------|-----------|
-| VFA (Vertical Field Anchor) | UNKNOWN | — | TBD | $358.90 |
-| LRZB (Lateral Root Zone Beacon) | UNKNOWN | — | TBD | $54.30 |
-| LRZN (Lateral Root Zone Node) | UNKNOWN | — | TBD | $29.00 |
-| PMT (Pivot Motion Tracker) | UNKNOWN | — | TBD | $1,166.50 |
-| PFA (Pressure & Flow Analyzer) | UNKNOWN | — | TBD | $1,679.50 |
-| DHU (District Hub Unit) | UNKNOWN | — | TBD | $3,654.00 |
-| Cables & Connectors | UNKNOWN | — | TBD | — |
-| Enclosures | UNKNOWN | — | TBD | — |
-| VPC Hardware | UNKNOWN | — | TBD | — |
-| Zoe Merch | UNKNOWN | — | TBD | — |
-| Event Materials | UNKNOWN | — | TBD | — |
+| Level | Meaning |
+|-------|---------|
+| 🟢 Healthy | Stock above reorder point, no issues |
+| 🟡 Low | Stock below reorder point, procurement pending |
+| 🔴 Critical | Stockout risk or zero on-hand for active SKUs |
 
 ---
 
-*Shelf | Warehouse & Inventory Manager | AgentOS Supply Chain*
+## Inventory Data
+
+_Managed via Airtable base "Warehouse & Inventory" (connected)._
+
+| SKU | Description | On-Hand | Reorder Pt | Status |
+|-----|-------------|---------|------------|--------|
+| _TBD_ | _Pending inventory audit_ | — | — | 🟡 |
+
+---
+
+## Notes
+
+- FarmSense was retired 2026-03-23. All hardware references should use Irrig8 branding.
+- Physical inventory audit needed to establish baseline quantities.
+- Airtable: No dedicated "Warehouse & Inventory" base found. Existing bases:
+  - **Agentic Base** (appHg8lr1v409yKBc): Has "Irrig8 Field Data" table — deployed sensor tracking, NOT warehouse stock
+  - **Bxthre3 Enterprise Command Center** (app93dsGcEyPfkqaa): Has "Assets" table — broad company asset tracking, not SKU-level inventory
+  - **ACTION NEEDED:** Source must provision a dedicated Warehouse & Inventory Airtable base with SKU-level tracking
+
+---
+
+## Airtable Inventory Base — Required Structure
+
+Source should create base with these tables:
+
+| Table | Purpose |
+|-------|---------|
+| **Inventory** | SKU master: name, category, on-hand qty, reorder point, supplier, unit cost |
+| **Receiving Log** | Inbound shipments: PO#, date, qty received, condition, inspector |
+| **Kitting Orders** | Deployment kit requests from Forge: kit ID, components, status, due date |
+| **RMA / Returns** | Defective units: RMA#, product, reason, status, resolution |
+| **Suppliers** | Vendor list: name, contact, lead time, categories supplied |
+
+---
+
+_Last updated: 2026-04-10 15:05 UTC_
+
+## 🟢 P3 | shelf | 2026-04-10 15:10 UTC
+
+Warehouse initial activation — baseline audit and Airtable base gap identified. See: Bxthre3/INBOX/departments/warehouse-standup-2026-04-10.md

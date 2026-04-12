@@ -50,7 +50,7 @@
 | Source | Model | Monthly | Cumulative |
 |--------|-------|---------|------------|
 | **Build-A-Biz Professional** | $2,500 setup × 4/mo | $10,000 | $10,000 |
-| **AgentOS early access** | $500/mo × 20 beta users | $10,000 | $20,000 |
+| **Agentic early access** | $500/mo × 20 beta users | $10,000 | $20,000 |
 | **Irrig8 pilot contracts** | $5K setup + $500/mo × 3 farms | $15,000 + $1,500 | ~$21,500 |
 | **Ghost Cloud managed mesh** | $1,000/mo × 10 startups | $10,000 | ~$31,500 |
 

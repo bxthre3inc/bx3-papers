@@ -11,7 +11,7 @@
 | Severity | Issue | Status | Assigned | Notes |
 |---|---|---|---|---|
 | P1 | Hardcoded credentials in irrig8-code/backend/.env | **RESOLVED** | Sentinel | .env file removed, .gitignore added, start.sh validates secrets in production |
-| 🔴 P1 | AgentOS kill-switch stubs returning `{ approved: true }` — production safety gap | **OPEN** | Iris | No regression test. Any traffic through these paths has zero approval enforcement. Sentinel flagged 2026-03-31 |
+| 🔴 P1 | Agentic kill-switch stubs returning `{ approved: true }` — production safety gap | **OPEN** | Iris | No regression test. Any traffic through these paths has zero approval enforcement. Sentinel flagged 2026-03-31 |
 
 ---
 
@@ -40,14 +40,14 @@
 - `server/src/security.test.ts` covers: CORS validation, security headers, health check
 - Tests confirm CORS whitelist: `['http://localhost:5173', 'https://vpc-brodiblanco.zocomputer.io', 'http://localhost:5176']`
 
-### ✅ CLEARED: AgentOS API (per Sentinel 2026-03-31)
+### ✅ CLEARED: Agentic API (per Sentinel 2026-03-31)
 - 5/5 services confirmed UP in Sentinel's latest scan
 
-### 🔴 NEW — AgentOS Kill-Switch Stubs (P1 — Production Safety Gap)
-- **File:** `Bxthre3/projects/the-agentos-project/core/execution/kill-switch.ts` (lines 82, 88)
+### 🔴 NEW — Agentic Kill-Switch Stubs (P1 — Production Safety Gap)
+- **File:** `Bxthre3/projects/the-agentic-project/core/execution/kill-switch.ts` (lines 82, 88)
 - **Finding:** Hardcoded `return { approved: true };` — bypasses all safety guards
 - **Risk:** Any production traffic through these paths has zero actual approval enforcement
-- **Also flagged:** 100+ stub CCRs in AgentOS codebase (per Sentinel T&S standup 2026-03-31)
+- **Also flagged:** 100+ stub CCRs in Agentic codebase (per Sentinel T&S standup 2026-03-31)
 - **Escalated to:** Iris (engineering lead) — INBOX handoff 2026-03-31
 - **Test coverage:** No regression test exists for this kill-switch behavior (per QA-Lead 2026-03-31)
 
@@ -58,13 +58,13 @@
 - [x] Sentinel runs periodic security scans — ACTIVE
 - [x] Secrets management verified — CLEAR
 - [x] SQL injection vectors checked — CLEAR
-- [x] AgentOS kill-switch stub P1 flagged — OPEN (Iris assigned)
+- [x] Agentic kill-switch stub P1 flagged — OPEN (Iris assigned)
 - [ ] Vulnerabilities in third-party dependencies (npm/pip) — PENDING dependency audit
 - [ ] Access control policy enforcement — Baseline established
 - [ ] Data breach monitoring — Ongoing
 - [ ] Patch management tracking — PENDING
 - [ ] Port/network exposure audit — IN PROGRESS
-- [ ] AgentOS stub code audit — PENDING (100+ stubs flagged)
+- [ ] Agentic stub code audit — PENDING (100+ stubs flagged)
 
 ---
 
@@ -73,8 +73,8 @@
 | Date | Incident | Severity | Resolution |
 |---|---|---|---|
 | 2026-03-23 | Hardcoded JWT_SECRET, SECRET_KEY, DB_PASSWORD in .env | P1 | Fixed - .env removed, .gitignore added, start.sh validates secrets |
-| 2026-03-31 | Security Assessment Round 1 | — | No new P1/P2 issues found. VPC server cleared. AgentOS services verified. |
-| 2026-03-31 | AgentOS kill-switch stubs returning `{ approved: true }` | 🔴 P1 | Escallated to Iris — production safety gap, no regression test |
+| 2026-03-31 | Security Assessment Round 1 | — | No new P1/P2 issues found. VPC server cleared. Agentic services verified. |
+| 2026-03-31 | Agentic kill-switch stubs returning `{ approved: true }` | 🔴 P1 | Escallated to Iris — production safety gap, no regression test |
 
 ---
 
@@ -84,7 +84,7 @@
 |---|---|---|
 | P1 vulnerabilities | 1 open (kill-switch stubs) | 🔴 ACTIVE |
 | P2 vulnerabilities | 1 known (Irrig8 .env.example placeholders) | ✅ Monitored |
-| Services monitored | 5 (AgentOS) + 1 (VPC) | ✅ |
+| Services monitored | 5 (Agentic) + 1 (VPC) | ✅ |
 | Secret exposures | 0 | ✅ |
 | SQL injection vectors | 0 | ✅ |
 | XSS vectors | 0 (active code) | ✅ |
@@ -103,16 +103,16 @@ Phase 2 Subtask: Task auto-escalation system. Monitor agent ratings, auto-escala
 
 **Scanner:** Sentinel  
 **Time:** 06:10 UTC  
-**Scope:** Secrets exposure, AgentOS health, service availability
+**Scope:** Secrets exposure, Agentic health, service availability
 
 ### ✅ Secrets Exposure — CLEAR
 - No API_KEY, SECRET, PASSWORD, or TOKEN patterns found exposed in workspace
 - No Stripe keys detected
 - VPC JWT_SECRET fallback is dev-only, not reachable in production
 
-### 🟡 AgentOS API — STABILITY EVENT (Not a Security Incident)
-- **06:10 UTC:** AgentOS API reached FATAL state (workdir path misconfigured in service config)
-- **Fix Applied:** Workdir updated to `/home/workspace/Bxthre3/projects/agentic/the-agentos-project/backend`
+### 🟡 Agentic API — STABILITY EVENT (Not a Security Incident)
+- **06:10 UTC:** Agentic API reached FATAL state (workdir path misconfigured in service config)
+- **Fix Applied:** Workdir updated to `/home/workspace/Bxthre3/projects/agentic/the-agentic-project/backend`
 - **Resolution:** Service restored — `/health` endpoint responding
 - **Classification:** Operational misconfiguration — not a breach or exploit
 - **Related risk:** Service instability could mask a real attack — recommending monitoring elevation
@@ -120,7 +120,7 @@ Phase 2 Subtask: Task auto-escalation system. Monitor agent ratings, auto-escala
 ### ✅ Service Availability
 | Service | Status | Notes |
 |---------|--------|-------|
-| AgentOS API | ✅ UP | Restored 06:10 UTC |
+| Agentic API | ✅ UP | Restored 06:10 UTC |
 | Ollama | ✅ UP | PID 231 |
 | VPC Server | ✅ UP | Uptime 9:42:51 |
 
@@ -137,11 +137,11 @@ No change in status. Remains highest security priority per 2026-04-01 assessment
 | Item | Status | Notes |
 |------|--------|-------|
 | Secrets exposure | ✅ CLEAR | No findings |
-| AgentOS API stability | 🟡 MONITOR | Restored but had FATAL event |
-| AgentOS kill-switch stubs | 🔴 P1 OPEN | Iris assigned |
+| Agentic API stability | 🟡 MONITOR | Restored but had FATAL event |
+| Agentic kill-switch stubs | 🔴 P1 OPEN | Iris assigned |
 | Sentinel T&S scan | ✅ CLEAR | No new findings |
 | Dependency audit | ❌ PENDING | Not started |
-| AgentOS stub code audit | ❌ PENDING | 100+ stubs unverified |
+| Agentic stub code audit | ❌ PENDING | 100+ stubs unverified |
 | Access control policy | ⚠️ BASELINE | Enforcement not tested |
 | Data breach monitoring | ✅ ONGOING | Sentinel active |
 

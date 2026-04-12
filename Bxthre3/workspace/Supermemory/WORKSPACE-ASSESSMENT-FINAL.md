@@ -27,20 +27,20 @@
 |---|---|---|
 | `the-irrig8-project` | 6/10 | Brand contamination (Irrig8), massive legacy code, 71 files referencing Irrig8 |
 | `the-valleyplayersclub-project` | 7/10 | Working backend+services, investor portal live |
-| `the-agentos-project` | 6/10 | Multiple APK versions, MCP server, API shape issues fixed |
-| `the-agentos-native` | 5/10 | Duplicate project, 3 APK files, build clutter |
+| `the-agentic-project` | 6/10 | Multiple APK versions, MCP server, API shape issues fixed |
+| `the-agentic-native` | 5/10 | Duplicate project, 3 APK files, build clutter |
 | `the-rain-project` | 5/10 | RAIN product page deployed, outreach docs in progress |
 | `mcp-mesh` | 7/10 | Clean, documented, A/B comparison planned |
 | `slv-mesh` | 4/10 | Minimal, nodes.csv + assets, underutilized |
 
 **Issues:**
-- `the-agentos-native` is a duplicate of `the-agentos-project` android source — same code, two locations
+- `the-agentic-native` is a duplicate of `the-agentic-project` android source — same code, two locations
 - `farmsense-code/` in `the-irrig8-project` is old/dead code (Irrig8 branding, not Irrig8)
 - `slv-mesh` has no active development path
 - 23 `node_modules` directories across projects (bloat)
 
 **Improvements:**
-- Consolidate `the-agentos-native` into `the-agentos-project`
+- Consolidate `the-agentic-native` into `the-agentic-project`
 - Archive `farmsense-code/` under `the-irrig8-project/IP/`
 - Create A/B comparison tables for `mcp-mesh` vs potential `antigravity-mcp`
 
@@ -83,7 +83,7 @@
 | Pulse | 7/10 | System health active |
 | Database Backup | 6/10 | SQLite fixed, running on schedule |
 | Rain-Research | 7/10 | SMS delivery, regulatory arbitrage |
-| AgentOS Runner | 6/10 | 5-min scheduler running |
+| Agentic Runner | 6/10 | 5-min scheduler running |
 | War Room | 6/10 | Daily round table active |
 | Sync Agent (Daily Standup) | 6/10 | 24-department standup active |
 
@@ -129,7 +129,7 @@
 
 **What works:**
 - Nightly/evening sprints (22:00 UTC, 16:00 UTC) ✅
-- 5-minute AgentOS runner scheduler ✅
+- 5-minute Agentic runner scheduler ✅
 - Hourly Pulse health checks ✅
 - Hourly Sentinel security scans ✅
 - 48-hour GitOps checks ✅
@@ -165,9 +165,9 @@
 - `/war-room` ✅
 - `/govcon` ✅
 - `/starting5` ✅
-- `/aos` (private) ✅
+- `/agentic` (private) ✅
 - All VPC investor flows (send-code, verify, subscriptions) ✅
-- AgentOS Android API routes ✅
+- Agentic Android API routes ✅
 
 **Concerns:**
 - 68 routes is a large surface area — no route audit/consolidation
@@ -185,13 +185,13 @@
 ## 🔧 SERVICES — Score: 7/10
 
 **Running:**
-- `agentos-mobile` ✅ (https://agentos-mobile-brodiblanco.zocomputer.io)
+- `agentic-mobile` ✅ (https://agentic-mobile-brodiblanco.zocomputer.io)
 - `vpc` ✅ (https://vpc-brodiblanco.zocomputer.io)
 
 **Missing:**
 - No `irrig8` service running (the-irrig8-project has no deployed service)
 - No `rain` service (only the zo.space page)
-- No AgentOS backend as a proper service
+- No Agentic backend as a proper service
 
 ---
 
@@ -284,7 +284,7 @@ Key contaminated locations:
 | 1 | 🔴 Brand | Replace Irrig8 → Irrig8 in all 71+ files | Compliance |
 | 2 | 🔴 Agents | Archive 50+ ghost agents | Operational clarity |
 | 3 | 🔴 Skills | Consolidate Skills directories | Tool reliability |
-| 4 | 🟡 Projects | Consolidate the-agentos-native duplicate | Code hygiene |
+| 4 | 🟡 Projects | Consolidate the-agentic-native duplicate | Code hygiene |
 | 5 | 🟡 INBOX | Audit agent INBOX files, test P0 routing | Communication |
 | 6 | 🟡 Finance | Full VPC equity math audit | Legal risk |
 | 7 | 🟢 Nice | slv-mesh revival or archive | Focus |

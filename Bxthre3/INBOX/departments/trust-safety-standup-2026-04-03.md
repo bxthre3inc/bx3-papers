@@ -63,14 +63,14 @@
 | AMP event bus — no persistence (tasks lost on restart) | 🔴 P1 | **OPEN — UNCHANGED** | Mesh-Engineer | Immediate |
 | mcp-mesh/src/core/ not implemented | 🔴 P1 | **OPEN — UNCHANGED** | Mesh-Engineer | Immediate |
 | No test suite (mcp-mesh, mcp-bridge, Android, AMP) | 🔴 P1 | **OPEN — UNCHANGED** | Iris/Dev | Immediate |
-| `aos` (9999) + `mcp-mesh-control-plane` (7777) workdirs ENOENT | 🔴 P1 | **OPEN — per AgentOS-PM** | DevOps | Immediate |
+| `aos` (9999) + `mcp-mesh-control-plane` (7777) workdirs ENOENT | 🔴 P1 | **OPEN — per Agentic-PM** | DevOps | Immediate |
 | Mobile shell `mobile_CORRUPTED_20260401_0241/` unrestored | 🔴 P1 | **OPEN — per Android-Lead** | Android-Lead | Immediate |
 | Bias detection monitoring | 🟡 P2 | NOT ACTIVE | Sentinel | TBD |
 | Shield coordination | 🟡 P2 | NOT ACTIVE | Sentinel | TBD |
 
 **Critical Safety Risk:** Kill-switch stubs returning `{ approved: true }` bypass all safety guards. Any production traffic through these paths has zero actual approval enforcement. **Status: UNCHANGED — 0 days toward resolution since first flagged 2026-03-31.**
 
-**Assessment:** AgentOS production is in an unreleasable state. 8+ P1 items open across stack. Risk: **CRITICAL**.
+**Assessment:** Agentic production is in an unreleasable state. 8+ P1 items open across stack. Risk: **CRITICAL**.
 
 ---
 
@@ -132,12 +132,12 @@
 |---------|---------|-------|--------------|
 | Irrig8 | 3 (water court) | → | 🔴 HIGH |
 | Valley Players Club | 6 (4 regulatory + 2 legal overdue) | ↑ | 🔴 CRITICAL |
-| AgentOS | 8+ (stubs + infra) | → | 🔴 CRITICAL |
+| Agentic | 8+ (stubs + infra) | → | 🔴 CRITICAL |
 | Zoe | 0 | → | 🟡 MEDIUM |
 | Starting 5 | 0 | → | 🟡 MEDIUM |
 | Infrastructure | 1 (PostgreSQL outage — NEW) | ↑ | 🔴 HIGH |
 
-**Overall T&S Risk Posture:** 🔴 **CRITICAL** — escalated from HIGH. VPC legal items now OVERDUE. New PostgreSQL outage adds infrastructure P1. AgentOS unreleasable state persists.
+**Overall T&S Risk Posture:** 🔴 **CRITICAL** — escalated from HIGH. VPC legal items now OVERDUE. New PostgreSQL outage adds infrastructure P1. Agentic unreleasable state persists.
 
 ---
 
@@ -148,7 +148,7 @@
 | 1 | brodiblanco | Water Court 3 Critical Gaps | 🔴 P1 | INBOX.md + SMS | No — ongoing |
 | 2 | brodiblanco | VPC Gaming Tax OVERDUE + 2 Legal Items Due TODAY | 🔴 P1 | INBOX.md + SMS | **NEW** |
 | 3 | DevOps | PostgreSQL DOWN (localhost:5432) | 🔴 P1 | INBOX.md | **NEW** |
-| 4 | Iris | 100+ AgentOS stub CCRs — production safety gap | 🔴 P1 | iris.md | No — ongoing |
+| 4 | Iris | 100+ Agentic stub CCRs — production safety gap | 🔴 P1 | iris.md | No — ongoing |
 | 5 | Rain/VPC | FL/NY gaming tax compliance OVERDUE | 🔴 P1 | rain.md / vpc.md | **NEW** |
 | 6 | Raj | Colorado sales tax nexus + foreign contractor due TODAY | 🔴 P1 | raj.md | **NEW** |
 | 7 | Mesh-Engineer | AMP event bus no persistence + mcp-mesh/core not implemented | 🔴 P1 | iris.md | No — ongoing |
@@ -167,7 +167,7 @@
 | **This week** | Iris: prioritize kill-switch.ts stubs — production safety gap | Iris | ASAP |
 | **This week** | Sentinel: complete VPC KYC end-to-end audit | Sentinel | 2026-04-07 |
 | **This week** | Rain: confirm SLV sensor telemetry coverage status | Rain | 2026-04-07 |
-| **Next sprint** | Standing: AgentOS bias detection + Shield activation | Sentinel | TBD |
+| **Next sprint** | Standing: Agentic bias detection + Shield activation | Sentinel | TBD |
 
 ---
 

@@ -76,7 +76,7 @@ data_pipeline_01, data_warehouse_01, data_streaming_01
 ## SECTION 6: PRODUCT (24 specialists)
 pm_field_01, pm_field_02, pm_field_03
 pm_gaming_01, pm_gaming_02, pm_gaming_03
-pm_agentos_01, pm_agentos_02, pm_agentos_03
+pm_agentic_01, pm_agentic_02, pm_agentic_03
 ux_research_01, ux_research_02, ux_research_03
 visual_brand_01, visual_marketing_02, visual_ui_03
 interaction_proto_01, interaction_anim_02, interaction_qa_03

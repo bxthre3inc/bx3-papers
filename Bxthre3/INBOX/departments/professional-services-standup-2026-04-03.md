@@ -11,7 +11,7 @@
 | Venture | Phase | Health | Trend |
 |---------|-------|--------|-------|
 | **Irrig8** | Pre-launch (pilot) | 🟡 Standby | → |
-| **AgentOS / Zoe** | Active internal | 🟢 Live | → |
+| **Agentic / Zoe** | Active internal | 🟢 Live | → |
 | **Valley Players Club** | Planning | 🟡 Planning | → |
 | **The Starting 5** | Not started | 🔴 Blocked | → |
 
@@ -21,13 +21,13 @@
 
 - **Irrig8:** SLV sensor correlation work ongoing. air_rh_moisture sensor pair validated (R²>0.97) for ET and irrigation efficiency. 86 days to Water Court (June 29, 2026).
 - **VPC:** v8.1 build in progress. Legal gates (WY LLC, bonds) still open.
-- **AgentOS/Zoe:** Internal workforce live. Enterprise onboarding framework next PS priority.
+- **Agentic/Zoe:** Internal workforce live. Enterprise onboarding framework next PS priority.
 
 ---
 
 ## Deliverables Status
 
-| Deliverable | Irrig8 | AgentOS/Zoe | VPC | Starting 5 |
+| Deliverable | Irrig8 | Agentic/Zoe | VPC | Starting 5 |
 |-------------|--------|-------------|-----|------------|
 | Implementation playbook | ❌ | ❌ | ❌ | ❌ |
 | Onboarding timeline (30/60/90) | ❌ | ❌ | ❌ | ❌ |

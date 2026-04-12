@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 5 |
 | fit_irrig8 | 3 |
-| fit_agentos | 5 |
+| fit_agentic | 5 |
 | fit_valley_players | 1 |
 | priority | P3 |
-| priority_rationale | Fit score 5/10 — AgentOS (if international expansion) |
+| priority_rationale | Fit score 5/10 — Agentic (if international expansion) |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |

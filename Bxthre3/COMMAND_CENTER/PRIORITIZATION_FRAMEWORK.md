@@ -1,4 +1,4 @@
-# Prioritization Framework — AgentOS Product Management
+# Prioritization Framework — Agentic Product Management
 **Owner:** Prime (Product Operations Lead)
 **Status:** DRAFT v1.0 — Needs: Roadmap (VP Product) approval
 **Last Updated:** 2026-04-03
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This document defines the prioritization framework used across all Bxthre3/AgentOS ventures for sizing features, initiatives, and roadmap candidates.
+This document defines the prioritization framework used across all Bxthre3/Agentic ventures for sizing features, initiatives, and roadmap candidates.
 
 **Framework stack:**
 1. **RICE** — Primary scoring for features with clear reach × impact × confidence × effort
@@ -179,7 +179,7 @@ Post-RICE, divide backlog into shipping waves.
 - Geo-block implementation = auto-**Must** before launch
 - Marketing/sales features = scored against expected user reach at launch
 
-### AgentOS (Platform)
+### Agentic (Platform)
 
 | Metric | Definition |
 |---|---|
@@ -187,7 +187,7 @@ Post-RICE, divide backlog into shipping waves.
 | Secondary | Time-to-completion reduction |
 | Tertiary | Agent utilization % |
 
-**AgentOS-specific scoring rules:**
+**Agentic-specific scoring rules:**
 - Platform stability/security = auto-**Must**
 - MCP integration reach = number of connected agents
 - Launch features scored on agent adoption rate
@@ -209,7 +209,7 @@ Post-RICE, divide backlog into shipping waves.
 
 ```markdown
 ## Feature: [Name]
-**Venture:** [Irrig8 / VPC / AgentOS]
+**Venture:** [Irrig8 / VPC / Agentic]
 **Date scored:** YYYY-MM-DD
 **Scoring method:** [RICE / ICE]
 

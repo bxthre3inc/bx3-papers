@@ -8,7 +8,7 @@
 | Project | Path | Status | Priority |
 |---------|------|--------|----------|
 | **Irrig8** | `projects/the-irrig8-project/` | 🟡 STANDBY — awaiting funding | P0 |
-| **AgentOS (Zoe)** | `projects/the-agentos-project/` + `projects/the-zoe-project/` | 🟢 ACTIVE — internal ops | P0 |
+| **Agentic (Zoe)** | `projects/the-agentic-project/` + `projects/the-zoe-project/` | 🟢 ACTIVE — internal ops | P0 |
 | **Valley Players Club** | `projects/the-valleyplayersclub-project/` | 🟡 PLANNING — legal docs drafted | P1 |
 | **The Starting 5** | `projects/the-starting5-project/` | 🔴 NOT STARTED | P2 |
 | **ARKAD (Real Estate)** | `projects/the-realestate-arbitrage-project/` | 🔴 ARCHIVED | — |
@@ -22,7 +22,7 @@
 |--------|----------|--------|
 | **INBOX System** | `Bxthre3/INBOX/` | 🟢 OPERATIONAL |
 | **Grant Pipeline** | `Bxthre3/grants/` | 🟢 OPERATIONAL |
-| **AgentOS (aos)** | Zo Service (`aos-brodiblanco.zocomputer.io`) | 🟢 LIVE |
+| **Agentic (aos)** | Zo Service (`aos-brodiblanco.zocomputer.io`) | 🟢 LIVE |
 | **PostgreSQL** | Local (`postgres-data/`) | 🟡 READY |
 | **Zo Sites** | `projects/*/site/`, `projects/*/Sites/` | MIXED |
 
@@ -49,7 +49,7 @@ Irrig8
 ├── Edge Compute (`edge-compute/`) — OFFLINE
 └── Satellite/Sensor Integration — UNVERIFIED
 
-AgentOS (Zoe)
+Agentic (Zoe)
 ├── Core Service — LIVE (zo.computer)
 ├── INBOX System — OPERATIONAL
 ├── Agent Workforce (25+) — OPERATIONAL

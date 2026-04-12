@@ -1,0 +1,13 @@
+{
+  "restaurant": "China Garden",
+  "colors": {
+    "primary": "#D32F2F",
+    "secondary": "#FFC107",
+    "accent": "#FFFFFF",
+    "background": "#FFEBEE",
+    "text": "#B71C1C"
+  },
+  "extraction_source": "signage_and_door_dash_logo_analysis",
+  "collected_date": "2026-04-01",
+  "notes": "Classic Chinese restaurant red and gold palette with pagoda imagery, traditional Chinese aesthetic"
+}

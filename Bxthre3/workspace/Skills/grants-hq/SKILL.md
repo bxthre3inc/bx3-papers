@@ -1,6 +1,6 @@
 ---
 name: grants-hq
-description: Grants pipeline management for Bxthre3 Inc. Track prospects, manage writing stages, submit applications, and record outcomes across all ventures (Irrig8, RAIN, AgentOS, Starting5). Use after grants-prospector has identified opportunities.
+description: Grants pipeline management for Bxthre3 Inc. Track prospects, manage writing stages, submit applications, and record outcomes across all ventures (Irrig8, RAIN, Agentic, Starting5). Use after grants-prospector has identified opportunities.
 compatibility: Created for Zo Computer
 metadata:
   author: brodiblanco.zo.computer

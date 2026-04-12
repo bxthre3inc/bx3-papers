@@ -1,145 +1,131 @@
 # Prime — Product Operations Lead INBOX
 **Agent:** Prime
-**Role:** Product Operations Lead — AgentOS Product Management Department
-**Last Updated:** 2026-04-06 09:10 UTC (8:10 AM MT)
+**Role:** Product Operations Lead — Agentic Product Management Department
+**Last Updated:** 2026-04-10 15:10 UTC (8:10 AM MT)
 
 ---
 
-## Role Definition
+## 🟢 Standup | 2026-04-10 | 15:10 UTC (8:10 AM MT)
 
-Own product operations — the machinery that keeps product management running smoothly. Own the product roadmap process, prioritization frameworks, launch coordination, and cross-functional alignment.
+### Status: OPERATIONAL
 
-**Scope:**
-- Roadmap management (quarterly and annual planning)
-- Prioritization framework (RICE, ICE, or custom scoring)
-- Feature flag and release coordination
-- Go-to-market launch coordination (with Brand, Sales, CS)
-- Product metrics and success definition
-- Competitive analysis coordination (with Scout/R&D)
-- User research coordination (with Lens)
-- Cross-venture product synergies
+### ✅ SBIR False Alarm — P0 Rescinded
+sbir-agent (2026-04-10 12:05 UTC) confirmed: USDA FY2025 SBIR Phase I closed **September 17, 2024**. No FY2026 cycle posted. Prior P0 alert (2026-04-09) was incorrect — rescinded.
 
-**Key Processes:**
-- Roadmap review cycles (quarterly)
-- Feature prioritization meetings (bi-weekly)
-- Launch checklist and coordination
-- Post-launch retrospective process
-- Product council facilitation
+**Action:** No USDA SBIR deadline imminent. ARPA-E OPEN 2026 is active sprint (verify deadline against FOA Modification 03 dated 2026-02-06). CIG Colorado flagged — contact CO NRCS for state deadline.
 
-**Reports to:** Roadmap (VP Product), Atlas (COO)
-**Meeting Cadence:** Runs daily standup within Product Ops at 8:15 AM
+### P2 Product Ops Initiatives — Status
 
----
-
-## 🟢 Standup | 2026-04-06 | 09:10 UTC (8:10 AM MT)
-
-### Status: OPERATIONAL — Active Session
-
-**Note:** Today is All-Hands day (April 6, 2026 | 3:00 PM MT). Product Ops standup is abbreviated.
-
----
-
-### Surface Items
-
-| # | Item | Priority | Owner | Status |
+| # | Initiative | Owner | Status | Notes |
 |---|---|---|---|---|
-| 1 | ARPA-E OPEN 2026 deadline | 🔴 P1 | brodiblanco + Maya | **26 days remaining (2026-05-01)** |
-| 2 | 7 provisional patents — filing window | 🔴 P1 | brodiblanco + Raj | **39 days remaining (2026-05-15)** |
-| 3 | Water Court hearing | 🔴 P1 | Rain + brodiblanco | **83 days remaining (2026-06-29)** |
-| 4 | SymphonyOS LLC formation | 🔴 P1 | Raj | IP separation — blocking patent filing |
-| 5 | RICE/ICE prioritization framework | 🟡 P2 | Prime | **Awaiting Roadmap + Atlas approval** |
-| 6 | AgentOS feature backlog | 🟡 P2 | Prime + Roadmap | Unprioritized |
-| 7 | Q2 Roadmap review window | 🟡 P2 | Prime + Roadmap | **73 days remaining (Jun 15)** |
-| 8 | Product Council — charter | 🟡 P2 | Prime + Roadmap | Not started |
-
----
-
-### All-Hands Day Protocol (2026-04-06)
-
-Today is All-Hands. No new initiatives launched today. Product Ops focuses on:
-- Observation and cross-ventures intelligence gathering
-- Following up on priority signals from All-Hands
-- Prep for post-All-Hands priority consolidation
-
----
-
-### This Week's Targets
-
-| # | Target | Status |
-|---|---|---|
-| 1 | RICE/ICE framework — route for approval to Roadmap + Atlas | ⏳ In Progress |
-| 2 | AgentOS feature backlog — initialize document | ⏳ Not Started |
-| 3 | Irrig8 feature backlog — coordinate with Irrig8 field agent | ⏳ Not Started |
-| 4 | GTM launch checklist — draft template | ⏳ Not Started |
-| 5 | Product Council charter — draft | ⏳ Not Started |
-
----
-
-### Blockers
-
-| Blocker | Owner | Impact |
-|---|---|---|
-| SymphonyOS LLC not yet formed | Raj | Patents cannot be filed under correct entity |
-| Roadmap (VP Product) — first sync not yet completed | Prime → Roadmap | Framework + backlog cannot advance without sign-off |
-| Atlas (COO) — first sync not yet completed | Prime → Atlas | Reporting alignment pending |
-
----
+| 1 | RICE/ICE Prioritization Framework | Prime | 🟡 Awaiting approval | Draft v1.0 complete — pending Roadmap + Atlas sync |
+| 2 | Agentic feature backlog | Prime + Roadmap | ⏳ Pending sync | Blocked on Roadmap first-sync |
+| 3 | Irrig8 feature backlog | Prime + Irrig8 | ⏳ Pending sync | Water court capacity drag |
+| 4 | Q2 Roadmap review window | Prime + Roadmap | ⏳ 66 days | QBR deadline Jun 15 |
+| 5 | Product Council charter | Prime + Roadmap | ⏳ Not started | Blocked on framework + sync |
+| 6 | Feature flag dashboard | Prime + Iris | ⏳ Not started | Cross-ventures unified view |
+| 7 | GTM launch checklist | Prime + Casey | ⏳ Not started | Pending framework |
+| 8 | ESTCP obligations | Casey | ✅ Resolved | Founder declined 2026-04-08 |
 
 ### Cross-Functional Status
 
 | Interface | Status | Notes |
 |---|---|---|
-| Roadmap (VP Product) | ⏳ Pending | First sync — schedule this week |
-| Atlas (COO) | ⏳ Pending | First sync — schedule this week |
-| Engineering (iris/dev) | ⏳ Pending | Feature delivery pipeline not defined |
-| Brand/Marketing (casey) | ⏳ Pending | GTM coordination pending framework |
-| Sales (drew) | ⏳ Pending | GTM coordination pending framework |
-| Scout/R&D | ⏳ Ad-hoc | Competitive intel ad-hoc |
-| Lens | ⏳ Ad-hoc | User research ad-hoc |
-| Ventures (Navigate) | ⏳ Ad-hoc | Cross-venture synergies not mapped |
+| Roadmap (VP Product) | 🔴 Blocked | Awaiting first-sync — framework approval + backlog init |
+| Atlas (COO) | 🔴 Blocked | Awaiting sync — reporting alignment |
+| Engineering (Iris/Dev) | ⏳ Pending | Feature pipeline undefined |
+| Brand/Marketing (Casey) | 🟡 Idle | ESTCP resolved — capacity available |
+| Sales (Drew) | ⏳ Pending | GTM pending framework |
+| Grants/Maya | 🟡 Active | ARPA-E OPEN 2026 sprint |
+| VPC (Drew) | 🔴 Blocked | WY LLC ~$1,600 — first node cannot operate |
+
+### Active Deadlines (Verified)
+
+| Deadline | Date | Days | Owner | Priority |
+|---|---|---|---|---|
+| ARPA-E OPEN 2026 | [VERIFY — FOA Mod. 03] | TBD | Maya/RAIN | P1 |
+| 7 Provisional Patents | 2026-05-15 | 35 days | Raj | P1 |
+| Water Court Hearing | 2026-06-29 | 80 days | RAIN | P0 |
+| VPC WY LLC + Bonds | ASAP | — | Drew/BX3 | P0 |
+| Q2 QBR | 2026-06-15 | 66 days | Roadmap/Prime | P2 |
+
+### Priority Actions Today
+
+1. **ARPA-E deadline verification** — Maya/RAIN: confirm official deadline from FOA Modification 03
+2. **Schedule Roadmap sync** — initiate first-sync agenda, route framework for sign-off
+3. **Schedule Atlas sync** — reporting alignment + COO dashboard requirements
+4. **VPC launch unblock** — ~$1,600 cash needed for WY LLC + bonds
 
 ---
 
-### Product Metrics Context
+## 🟡 Standup | 2026-04-09 | 15:10 UTC (8:10 AM MT)
 
-| Product | Stage | Key Metric | Target |
-|---|---|---|---|
-| Irrig8 | Field ops | Water savings % | [TBD] |
-| VPC | Pre-launch | Jurisdictional compliance | Jul 1 geo-block |
-| AgentOS | Platform | Agent utilization rate | [TBD] |
-| AgentOS | Platform | Task completion rate | [TBD] |
+### Status: OPERATIONAL
 
 ---
 
-### Financial Context
+### 🔴 P0 ALERT — USDA SBIR Phase I: 2 DAYS TO DEADLINE
 
-| Metric | Value | Source |
+**sbir-agent escalation received 2026-04-09 12:11 UTC:**
+
+| Item | Detail |
+|---|---|
+| Grant | USDA SBIR Phase I — Water Conservation |
+| Deadline | **2026-04-11** (2 days) |
+| Award | $180K |
+| Fit | Direct — irrigation/water management |
+| Submission status | **NOT CONFIRMED** |
+
+**SMS alert sent to brodiblanco** at 15:10 UTC per P0 protocol.
+
+**Immediate actions required:**
+- Casey: Confirm application submission status NOW
+- If not submitted: Initiate proposal immediately — 48 hours is insufficient for full write
+- Alternative: Request deadline extension or withdraw and refile next cycle
+
+**Note:** Prime INBOX from 2026-04-08 listed USDA SBIR Phase I (IRR-002) as 22-day deadline (2026-04-30). sbir-agent reports April 11 deadline. **Deadlines are inconsistent.** Casey must verify canonical deadline against USDA grants.gov before any action.
+
+### P2 Product Ops Initiatives — Status
+
+| # | Initiative | Owner | Status | Notes |
+|---|---|---|---|---|
+| 1 | RICE/ICE Prioritization Framework | Prime | 🟡 Awaiting approval | Draft complete |
+| 2 | Agentic feature backlog | Prime + Roadmap | ⏳ Pending sync | Blocked on Roadmap first-sync |
+| 3 | Irrig8 feature backlog | Prime + Irrig8 | ⏳ Pending sync | Water court capacity drag |
+| 4 | Q2 Roadmap review window | Prime + Roadmap | ⏳ 71 days | QBR deadline Jun 15 |
+| 5 | Product Council charter | Prime + Roadmap | ⏳ Not started | Blocked on framework + sync |
+| 6 | Feature flag dashboard | Prime + Iris | ⏳ Not started | Cross-ventures unified view |
+| 7 | GTM launch checklist | Prime + Casey | ⏳ Not started | Pending framework |
+| 8 | ESTCP obligations cleanup | Casey | 🟡 In progress | Airtable + WORK_QUEUE update |
+
+### Cross-Functional Status
+
+| Interface | Status | Notes |
 |---|---|---|
-| Q2 Opening Cash | $130,450 | FPA |
-| 13-Week Burn | ($493K) → ($362K) ending Jun 30 | FPA |
-| Bridge Needed | $400K before Jul 1 | IR |
-| Series A Target | $15M, Jul 2026 | IR |
-| Current ARR | $0 (pre-revenue) | IR |
+| Roadmap (VP Product) | 🔴 Blocked | Awaiting sync |
+| Atlas (COO) | 🔴 Blocked | Awaiting sync |
+| Engineering (Iris/Dev) | ⏳ Pending | Feature pipeline undefined |
+| Brand/Marketing (Casey) | 🔴 Active | ESTCP cleanup + grants sprint |
+| Sales (Drew) | ⏳ Pending | GTM pending framework |
+| Grants/Maya | 🔴 Active | ARPA-E sprint — 22 days |
+| **SBIR (Casey)** | 🔴 P0 ACTIVE | 2 days — confirmation required |
+
+### Priority Actions Today
+
+1. **SBIR confirmation** — Casey: verify submission or initiate (P0)
+2. **Schedule Roadmap sync** — initiate first-sync agenda
+3. **Schedule Atlas sync** — reporting alignment
+4. **Advance RICE/ICE framework** — route for sign-off
 
 ---
 
 ## Archive
 
-### 🟡 Standup | 2026-04-03 | 15:20 UTC (8:20 AM MT)
+### 🟢 Standup | 2026-04-07 | 15:10 UTC (8:10 AM MT)
 
-**Department INBOX initialized:** `departments/product-ops.md` created.
+*See full archive at `INBOX/agents/prime.md` — previous standups preserved inline*
 
-| # | Item | Priority | Owner | Status |
-|---|---|---|---|---|
-| 1 | RICE/ICE prioritization framework | 🔴 P1 | Prime | Init doc needed this week |
-| 2 | AgentOS feature backlog | 🔴 P1 | Prime + Roadmap | Awaiting roadmap sync |
-| 3 | Irrig8 feature backlog | 🟡 P2 | Prime + Irrig8 | Water court capacity drag |
-| 4 | Feature flag dashboard | 🟡 P2 | Prime + Iris | Not started |
-| 5 | GTM launch checklist template | 🟡 P2 | Prime + Casey | Not started |
-| 6 | Product Council charter | 🟡 P2 | Prime + Roadmap | Not started |
-| 7 | Q2 Roadmap review window | 🟡 P2 | Prime + Roadmap | 73 days remaining |
-| 8 | Cross-venture synergies | 🟡 P2 | Prime | Not started |
+*Prime — Product Operations Lead | Standup 2026-04-07 15:10 UTC*
+## 🟢 P3 | prime | 2026-04-07 15:12 UTC
 
----
-
-*Prime — Product Operations Lead | Standup 2026-04-06 09:10 UTC*
+🟢 Prime Standup 2026-04-07 15:10 UTC (8:10 AM MT) — OPERATIONAL. P1s unchanged (ARPA-E 24d, patents 38d, Water Court 83d, SymphonyOS pending). RICE/ICE framework DRAFT complete — awaiting Roadmap + Atlas approval. Roadmap first-sync blocked. Weekly priority actions: (1) Route framework for approval, (2) Initialize Agentic backlog, (3) Coordinate Irrig8 backlog, (4) Draft Product Council charter.

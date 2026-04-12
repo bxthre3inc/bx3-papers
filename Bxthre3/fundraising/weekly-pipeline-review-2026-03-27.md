@@ -135,7 +135,7 @@ Pass          ██             1 deal    (Quintana Farm - sold)
 |-------|---------|--------|--------|-------|----------|
 | USDA SBIR Phase I | Irrig8 | USDA NIFA | $125K | PROSPECT | 2026-04-30 |
 | NSF SBIR Phase I | RAIN | NSF | $256K | PROSPECT | 2026-05-15 |
-| NSF SBIR Phase I | AgentOS | NSF | $256K | PROSPECT | 2026-06-01 |
+| NSF SBIR Phase I | Agentic | NSF | $256K | PROSPECT | 2026-06-01 |
 | NSF SBIR Phase I | Starting5 | NSF | $256K | PROSPECT | 2026-06-15 |
 | D.E. Shaw Outreach | RAIN | D.E. Shaw | $50K | OUTREACH | 2026-03-23 |
 | Man Group Outreach | RAIN | Man Group | $75K | OUTREACH | 2026-03-23 |
@@ -178,4 +178,4 @@ Pass          ██             1 deal    (Quintana Farm - sold)
 ---
 
 *Report generated: 2026-03-27 09:15 UTC*
-*Pipeline Deal Flow Manager — Bxthre3 Inc / AgentOS Finance Division*
+*Pipeline Deal Flow Manager — Bxthre3 Inc / Agentic Finance Division*

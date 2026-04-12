@@ -16,7 +16,7 @@
 | Deadline | 2026-04-10 (Approx) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | Irrig8 / AgentOS |
+| Portfolio Fit | Irrig8 / Agentic |
 | Status | Not yet contacted |
 | Next Action | Draft SF-424, pull pilot data from LRZ1/LRZ2 sensors |
 | Notes | USDA NIFA administers. Phase I proof-of-concept. Strong fit with Irrig8 deterministic OS. |
@@ -34,7 +34,7 @@
 | Deadline | 2026-04-15 (Approx) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | Irrig8 / AgentOS |
+| Portfolio Fit | Irrig8 / Agentic |
 | Status | Not yet contacted |
 | Next Action | Research prior NSF awards, align with attention_engine.py work |
 
@@ -154,10 +154,10 @@
 | Deadline | 2026-06-01 (Rolling) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS |
+| Portfolio Fit | Agentic |
 | Status | Not yet contacted |
 | Next Action | Research DARPA electronics/AI priorities, align with Zoe architecture |
-| Notes | Direct to Phase II requires prior R&D evidence. Check if AgentOS work qualifies. |
+| Notes | Direct to Phase II requires prior R&D evidence. Check if Agentic work qualifies. |
 
 ---
 
@@ -208,7 +208,7 @@
 | Deadline | 2026-07-01 (Approx) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | AgentOS / Irrig8 |
+| Portfolio Fit | Agentic / Irrig8 |
 | Status | Not yet contacted |
 | Next Action | Align with attention_engine.py deterministic processing |
 
@@ -293,7 +293,7 @@
 | Deadline | 2026-09-01 (Approx) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS / Valley Players Club |
+| Portfolio Fit | Agentic / Valley Players Club |
 | Status | Not yet contacted |
 | Next Action | Align with community broadband + tech adoption narrative |
 
@@ -327,7 +327,7 @@
 | Deadline | 2026-10-01 (Rolling) |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | Irrig8 / AgentOS |
+| Portfolio Fit | Irrig8 / Agentic |
 | Status | Not yet contacted |
 | Next Action | Lower priority unless infrastructure gap identified |
 

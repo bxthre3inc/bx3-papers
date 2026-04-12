@@ -67,7 +67,7 @@ profiles in the RGWCD database:
 
 -   **Action:** Meet with the **Division 3 Engineer**.
 
--   **Goal:** Offer a \"Read-Only\" seat on the **AgentOS** dashboard
+-   **Goal:** Offer a \"Read-Only\" seat on the **Agentic** dashboard
     > for the trial fields. This creates \"Systemic Trust\" before the
     > court date.
 

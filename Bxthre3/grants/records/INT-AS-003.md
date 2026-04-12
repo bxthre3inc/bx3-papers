@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 7 |
 | fit_irrig8 | 7 |
-| fit_agentos | 7 |
+| fit_agentic | 7 |
 | fit_valley_players | 1 |
 | priority | P2 |
-| priority_rationale | Fit score 7/10 — AgentOS / Irrig8 |
+| priority_rationale | Fit score 7/10 — Agentic / Irrig8 |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |
@@ -112,7 +112,7 @@
 
 ## SECTION 8: HOW TO WIN
 
-**Notes:** India's AI Farming Summit 2026. Growing precision farming market. Could be AgentOS/Irrig8 entry into South Asian market.
+**Notes:** India's AI Farming Summit 2026. Growing precision farming market. Could be Agentic/Irrig8 entry into South Asian market.
 
 **Next Action:** Attend/sponsor AI Farming Summit 2026 India; explore as market entry
 

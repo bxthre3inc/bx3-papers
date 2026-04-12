@@ -18,7 +18,7 @@
 
 ## 1. Company Overview
 
-Bxthre3 Inc is a venture studio building the future of agriculture (Irrig8), gaming (Valley Players Club), and AI workforce orchestration (AgentOS). We are based in Monte Vista, Colorado.
+Bxthre3 Inc is a venture studio building the future of agriculture (Irrig8), gaming (Valley Players Club), and AI workforce orchestration (Agentic). We are based in Monte Vista, Colorado.
 
 ---
 

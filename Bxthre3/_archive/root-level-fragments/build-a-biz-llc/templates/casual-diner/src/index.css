@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Casual Diner - Warm, welcoming, family-friendly */
+
+:root {
+  --color-primary: #D97706;
+  --color-secondary: #78350F;
+  --color-accent: #FCD34D;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Combo builder cards */
+.combo-card {
+  @apply bg-white rounded-xl shadow-sm border-2 border-amber-200 p-4;
+}
+
+.combo-card:hover {
+  @apply border-amber-400 shadow-md;
+}
+
+/* Catering banner */
+.catering-banner {
+  @apply bg-gradient-to-r from-amber-500 to-orange-500 text-white text-center py-3 rounded-lg;
+}
+
+.btn-primary {
+  @apply bg-amber-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform;
+}
+
+/* Family portion selector */
+.portion-selector {
+  @apply flex gap-2;
+}
+
+.portion-selector button {
+  @apply px-4 py-2 rounded-lg border-2 border-amber-200 text-amber-700 font-medium;
+}
+
+.portion-selector button.active {
+  @apply bg-amber-600 text-white border-amber-600;
+}

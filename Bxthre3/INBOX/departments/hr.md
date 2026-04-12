@@ -81,15 +81,15 @@ Two conflicting sources:
 | Source | Count | Status |
 |--------|-------|--------|
 | `AGENTS.md` canonical roster | 19 | ✅ Active, used by live API |
-| `ORG-CHART.md` (agent-os-v2) | 24+ | ⚠️ FICTIONA — Arkad-era names |
-| `org.ts` (shared/agent-os) | 24 | ⚠️ Non-functional — wrong data path |
+| `ORG-CHART.md` (agentic-v2) | 24+ | ⚠️ FICTIONA — Arkad-era names |
+| `org.ts` (shared/agentic) | 24 | ⚠️ Non-functional — wrong data path |
 
 **Stub Finder v2 findings (2026-03-24):**
 - 93 total issues (3 P0, 88 P1, 2 P2)
 - 19 phantom employees in code NOT in canonical roster
 - 9 ghost agents in live API NOT in org.ts
 - 12 orphaned INBOXes (no corresponding agent)
-- `org.ts` writes to non-existent path `/data/agentos/org/chart.json`
+- `org.ts` writes to non-existent path `/data/agentic/org/chart.json`
 
 **Recommended resolution:** Canonical roster = AGENTS.md (19 agents). Purge phantom agents from all code files.
 
@@ -178,7 +178,7 @@ Two conflicting sources:
 | 🔴 P0 | Fix meeting orchestrator root cause (ORG-CHART.md + meeting-helpers.py) | Atlas |
 | 🔴 P1 | Resolve Water Court evidence gaps (expert witness + sensors) | Atlas → brodiblanco |
 | 🔴 P1 | Approve patent filing approach (April 23 deadline) | Atlas → brodiblanco |
-| 🟡 P2 | Purge phantom agents from org.ts + all AgentOS code (93 issues) | Iris |
+| 🟡 P2 | Purge phantom agents from org.ts + all Agentic code (93 issues) | Iris |
 | 🟡 P2 | Decide: deprecate or reallocate 5 idle agents | Pulse |
 | 🟡 P2 | Hire water rights attorney + hydrology expert (contractors) | Atlas → brodiblanco |
 | 🟢 P3 | Enforce agent offboarding protocol (INBOX cleanup) | Pulse |

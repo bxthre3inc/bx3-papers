@@ -37,7 +37,7 @@
 ### Integration Points
 - [ ] MCP client to Zo (can call Zo tools)
 - [ ] MCP server for IDEs (Cursor, VS Code can connect)
-- [ ] AgentOS MCP mesh peer
+- [ ] Agentic MCP mesh peer
 
 **Deliverable:** Web IDE at `antigravity-brodiblanco.zocomputer.io`
 
@@ -61,7 +61,7 @@
 - [ ] Commit message suggestions
 
 ### Agent Integration
-- [ ] AgentOS agents as "smart cursors"
+- [ ] Agentic agents as "smart cursors"
 - [ ] Agents can edit files alongside you
 - [ ] Agent suggestions appear as diffs
 - [ ] Accept/reject agent changes
@@ -94,8 +94,8 @@
 **Goal:** Central node in 3-way mesh
 
 ### As Mesh Peer
-- [ ] Serve tools to Zo and AgentOS
-- [ ] Consume tools from Zo and AgentOS
+- [ ] Serve tools to Zo and Agentic
+- [ ] Consume tools from Zo and Agentic
 - [ ] Context sync: open files, active file, cursor position
 - [ ] Resource locking (file being edited)
 
@@ -212,7 +212,7 @@
 
 ## Integration Matrix
 
-| Feature | Zo | AgentOS | External |
+| Feature | Zo | Agentic | External |
 |---------|----|---------|----------|
 | File ops | ✅ | ✅ | MCP |
 | Terminal | ✅ | ❌ | - |
@@ -224,4 +224,4 @@
 ---
 
 ## Current Status: Phase 1 Not Started
-**Priority:** P1 (start after AgentOS Phase 2)
+**Priority:** P1 (start after Agentic Phase 2)

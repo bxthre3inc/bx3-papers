@@ -23,7 +23,7 @@ $10B lost annually to agricultural inefficiency. Water scarcity. Labor shortages
 
 **Irrig8** — Deterministic farming OS. 30% water savings through precision irrigation.
 
-**AgentOS** — Internal AI workforce (18 agents) = 10x execution speed.
+**Agentic** — Internal AI workforce (18 agents) = 10x execution speed.
 
 **Valley Players Club** — Sweepstakes gaming. Cash, in-person. Different.
 
@@ -36,7 +36,7 @@ $10B lost annually to agricultural inefficiency. Water scarcity. Labor shortages
 | Metric | Value | Date |
 |--------|-------|------|
 | Pilots (Irrig8) | 2 farms active | 2026-03 |
-| AgentOS agents | 18 | 2026-04 |
+| Agentic agents | 18 | 2026-04 |
 | VPC signups | 150 | 2026-04 |
 
 ---

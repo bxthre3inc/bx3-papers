@@ -60,7 +60,7 @@
 
 **Assessment:** Schema production-ready. 268KB of pipeline data present. Maya's output needs ingestion into DuckDB.
 
-### AgentOS / Starting5
+### Agentic / Starting5
 | Component | Status | Notes |
 |-----------|--------|-------|
 | `analytics.py` | 🟢 OPERATIONAL | AgentAnalytics class built |
@@ -77,7 +77,7 @@
 | **VPC** | 🟡 Production-ready schema | CI failures (P1); no player data |
 | **RAIN/Grants** | 🟡 Schema ready, data present | Maya's work not yet DuckDB-queried |
 | **Starting5** | 🔴 No schema defined | AI co-founder metrics undefined |
-| **AgentOS** | 🟡 Engine ready | Telemetry not flowing |
+| **Agentic** | 🟡 Engine ready | Telemetry not flowing |
 
 ---
 
@@ -92,7 +92,7 @@ New agent created 2026-04-05 08:51 UTC. Mission: 1m soil map for SLV. Tier 1 sou
 3. **Irrig8 Live Sensor Schema** — Define DuckDB schema for satellite + ground sensor join; prepare for soil-variability-mapper outputs
 
 ### Medium Priority
-4. **Agent Telemetry Dashboard** — `analytics.py` built; needs live data feed from AgentOS
+4. **Agent Telemetry Dashboard** — `analytics.py` built; needs live data feed from Agentic
 5. **Starting5 Tool Effectiveness Framework** — Metrics schema undefined
 
 ---

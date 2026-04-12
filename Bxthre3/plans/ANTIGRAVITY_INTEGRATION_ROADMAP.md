@@ -25,19 +25,19 @@
 
 ## Why Integrate?
 
-| Workload | Zo | Antigravity | AgentOS |
+| Workload | Zo | Antigravity | Agentic |
 |----------|-----|-------------|---------|
 | Quick questions | Best | Slow | Wrong tool |
 | Multi-file coding | Limited | Best | Wrong tool |
 | Agent orchestration | Not designed | Different model | Best |
 | Cross-platform automation | Best | Editor only | Best |
 
-**The Play:** Antigravity codes. AgentOS orchestrates. Zo glues.
+**The Play:** Antigravity codes. Agentic orchestrates. Zo glues.
 
 ---
 
 ## Phase 1: MCP Server for Antigravity (P0)
-**Goal:** AgentOS → Antigravity tool calls
+**Goal:** Agentic → Antigravity tool calls
 
 ### Tools to Expose
 - [ ] `antigravity_create_skill` - Create reusable agent skill
@@ -49,42 +49,42 @@
 - [ ] `antigravity_open_project` - Open project in browser
 - [ ] `antigravity_agent_status` - Check agent health/metrics
 
-**Deliverable:** AgentOS controls Antigravity agents
+**Deliverable:** Agentic controls Antigravity agents
 
 ---
 
 ## Phase 2: Skill Exchange (P0)
 **Goal:** Skills flow between systems
 
-### AgentOS → Antigravity
-- [ ] Deploy `agentos-skill` to Antigravity marketplace
-- [ ] Enables Antigravity to list AgentOS agents
-- [ ] Antigravity can create AgentOS tasks
-- [ ] Antigravity can query AgentOS status
+### Agentic → Antigravity
+- [ ] Deploy `agentic-skill` to Antigravity marketplace
+- [ ] Enables Antigravity to list Agentic agents
+- [ ] Antigravity can create Agentic tasks
+- [ ] Antigravity can query Agentic status
 
-### Antigravity → AgentOS
-- [ ] Import Antigravity skills into AgentOS
-- [ ] ADK skill → AgentOS agent mapping
-- [ ] AgentOS schedules Antigravity skills
-- [ ] AgentOS triggers Antigravity workflows
+### Antigravity → Agentic
+- [ ] Import Antigravity skills into Agentic
+- [ ] ADK skill → Agentic agent mapping
+- [ ] Agentic schedules Antigravity skills
+- [ ] Agentic triggers Antigravity workflows
 
 **Deliverable:** Bidirectional skill ecosystem
 
 ---
 
 ## Phase 3: Full Mesh (P1)
-**Goal:** 3-way MCP mesh: Zo ↔ AgentOS ↔ Antigravity
+**Goal:** 3-way MCP mesh: Zo ↔ Agentic ↔ Antigravity
 
 ```
       Zo ◄────────────► Antigravity
       │                     │
       └──────────┬──────────┘
                  │
-              AgentOS
+              Agentic
 ```
 
 ### Mesh Features
-- [ ] Context sync: Antigravity → Zo → AgentOS
+- [ ] Context sync: Antigravity → Zo → Agentic
 - [ ] Skill registry: Unified API across all three
 - [ ] Resource locking: Who's editing what
 - [ ] Event pub/sub: Antigravity events → all peers
@@ -94,29 +94,29 @@
 ---
 
 ## Phase 4: Artifact Pipeline (P1)
-**Goal:** Antigravity outputs → AgentOS inputs
+**Goal:** Antigravity outputs → Agentic inputs
 
 | Artifact | Flow |
 |----------|------|
-| Code commit | Antigravity → AgentOS git monitor |
-| Test results | Antigravity → AgentOS test agent |
-| Documentation | Antigravity → AgentOS docs agent |
-| Deployment | Antigravity → AgentOS deploy agent |
-| Implementation plan | Antigravity → AgentOS project tracker |
+| Code commit | Antigravity → Agentic git monitor |
+| Test results | Antigravity → Agentic test agent |
+| Documentation | Antigravity → Agentic docs agent |
+| Deployment | Antigravity → Agentic deploy agent |
+| Implementation plan | Antigravity → Agentic project tracker |
 
-**Deliverable:** Antigravity outputs power AgentOS decisions
+**Deliverable:** Antigravity outputs power Agentic decisions
 
 ---
 
 ## Phase 5: Deployment Integration (P2)
-**Goal:** Antigravity builds, AgentOS deploys
+**Goal:** Antigravity builds, Agentic deploys
 
 ### Pipeline
-1. AgentOS task: "Build VPC v2.0"
+1. Agentic task: "Build VPC v2.0"
 2. → Antigravity skill: Build app
 3. → Artifact: APK/Build output
 4. → Zo: Verify build
-5. → AgentOS: Deploy via render/fly
+5. → Agentic: Deploy via render/fly
 6. → Zo: Notify deployment complete
 
 **Deliverable:** Code-to-deploy pipeline
@@ -124,14 +124,14 @@
 ---
 
 ## Phase 6: Agentic War Room (P2)
-**Goal:** Antigravity proposals in AgentOS governance
+**Goal:** Antigravity proposals in Agentic governance
 
 ### Process
 - [ ] Antigravity generates implementation plan
-- [ ] Plan appears in AgentOS War Room
-- [ ] AgentOS agents vote on plan
+- [ ] Plan appears in Agentic War Room
+- [ ] Agentic agents vote on plan
 - [ ] Quorum reached → Antigravity executes
-- [ ] Artifacts reviewed → AgentOS closes task
+- [ ] Artifacts reviewed → Agentic closes task
 
 **Deliverable:** Cross-system governance
 
@@ -143,8 +143,8 @@
 - [ ] `vpc-deploy-skill` for Antigravity
 - [ ] `grant-tracker-skill` for Antigravity
 - [ ] `android-build-skill` for Antigravity
-- [ ] Export from AgentOS → Antigravity
-- [ ] Import from Antigravity → AgentOS
+- [ ] Export from Agentic → Antigravity
+- [ ] Import from Antigravity → Agentic
 
 **Deliverable:** Skill ecosystem
 

@@ -1,6 +1,6 @@
 # Pitch — Investor Relations Agent
 **Agent:** Pitch
-**Role:** Pitch & Presentation Specialist — Bxthre3 Inc / AgentOS Finance Division
+**Role:** Pitch & Presentation Specialist — Bxthre3 Inc / Agentic Finance Division
 **Reports to:** Reach (VP Investor Outreach)
 **Status:** ACTIVE
 **Last Updated:** 2026-04-01 15:05 UTC

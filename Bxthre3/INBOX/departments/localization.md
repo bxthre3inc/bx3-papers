@@ -21,7 +21,7 @@ Own localization and internationalization across all Bxthre3 ventures. Adapt pro
 | **Starting 5** | English primary, future: founder communities globally | Planning |
 | **Valley Players Club** | English only (US initially), future expansion | Not started |
 | **Zoe** | Open source community is global — documentation and community localization | Planning |
-| **AgentOS** | Internal localization of agent instructions and communications | Active |
+| **Agentic** | Internal localization of agent instructions and communications | Active |
 
 ---
 
@@ -67,7 +67,7 @@ Own localization and internationalization across all Bxthre3 ventures. Adapt pro
 - Starting 5: English primary; global founder communities future phase
 - VPC: English/US only for now
 - Zoe: Global open source community; documentation + community
-- AgentOS: Internal agent instruction localization
+- Agentic: Internal agent instruction localization
 
 **Dependencies identified:**
 - Brand (VP Marketing): voice/tone guidelines, marketing copy localization priorities
@@ -75,6 +75,54 @@ Own localization and internationalization across all Bxthre3 ventures. Adapt pro
 - Roadmap (VP Product): localization milestones in product roadmap
 
 **Next:** Awaiting kickoff sync with Brand, Frame, and Roadmap leads to align on priorities and timeline.
+
+---
+
+## Standup #10 | 2026-04-10 08:15 UTC
+
+**Department Status:** Active  
+**Canonical name:** Irrig8 (FarmSense retired 2026-03-23)  
+**Active blocker:** 9 days since Brand/Frame/Roadmap sync requests — no response
+
+### Work Completed
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Irrig8 Spanish Voice & Tone Guide v0.1 | `Bxthre3/shared/localization/irrig8/es/voice-tone-es.md` | Created |
+| Agentic Terminology Glossary v0.1 | `Bxthre3/shared/localization/agentic/glossary.md` | Created |
+| TM tool decisions | Department INBOX | Crowdin (Zoe) + Memsource eval (Irrig8/VPC) |
+
+### Scope Status
+
+| Venture | Languages | Phase | Notes |
+|---------|-----------|-------|-------|
+| **Irrig8** | es-MX (farmworkers) | Planning → Draft | Voice/tone v0.1 done; awaiting Frame sync |
+| **Starting 5** | en-US primary | Planning | Global expansion — future |
+| **VPC** | en-US only | Not started | US-only until expansion decision |
+| **Zoe** | Global | Planning | Crowdin GitHub integration in evaluation |
+| **Agentic** | Internal | Active | Glossary v0.1 created; `locale:` field standard started |
+
+### Compliance Notes
+
+- **US deployment:** No locale-specific compliance blockers for current Irrig8 US rollout
+- **MX expansion:** COFETEL-equivalent IoT sensor certification required (flagged for Roadmap)
+- **BR expansion:** ANATEL hardware certification required (flagged for Roadmap)
+- **ARPA-E OPEN 2026 grant (P1):** US-DOE — no international localization impact
+
+### Blocker — Escalated
+
+| Sync Request | Owner | Last Sent | Days Stale |
+|--------------|-------|-----------|------------|
+| Voice/tone + SEO priorities | Brand (Casey) | 2026-04-01 | **9 days** |
+| i18n infra + UI patterns | Frame (UI/UX) | 2026-04-01 | **9 days** |
+| Localization milestones | Roadmap (VP Product) | 2026-04-01 | **9 days** |
+
+### Next Actions
+
+1. Re-send sync requests via INBOX routing (blocked since 2026-04-01)
+2. Phase 2 Irrig8: sensor UI string localization
+3. Crowdin setup for Zoe documentation
+4. Await Brand/Frame/Roadmap response before proceeding to cultural adaptation guide v0.2
 
 ## 🟡 P2 | locale | 2026-04-01 15:08 UTC
 

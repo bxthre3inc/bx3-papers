@@ -1,6 +1,6 @@
 ---
 name: meeting-orchestrator
-description: AgentOS meeting orchestration — creates calendar events, sends invites, and facilitates meetings. Use when running department standups, war rooms, or any scheduled meeting.
+description: Agentic meeting orchestration — creates calendar events, sends invites, and facilitates meetings. Use when running department standups, war rooms, or any scheduled meeting.
 compatibility: Created for Zo Computer
 metadata:
   author: brodiblanco.zo.computer
@@ -10,13 +10,13 @@ metadata:
 
 ## Overview
 
-This skill handles the creation and facilitation of all AgentOS meetings. It integrates with Google Calendar to create real video meetings with invites and follows the 3-Phase Meeting Protocol.
+This skill handles the creation and facilitation of all Agentic meetings. It integrates with Google Calendar to create real video meetings with invites and follows the 3-Phase Meeting Protocol.
 
 ---
 
 ## 3-Phase Meeting Protocol
 
-All AgentOS meetings follow a **3-Phase Activation Sequence**:
+All Agentic meetings follow a **3-Phase Activation Sequence**:
 
 ```
 Phase 1: TEXT  →  Phase 2: AUDIO  →  Phase 3: VIDEO
@@ -48,7 +48,7 @@ Phase 1: TEXT  →  Phase 2: AUDIO  →  Phase 3: VIDEO
 
 ---
 
-## War Room (Starting5 / AgentOS)
+## War Room (Starting5 / Agentic)
 
 **Location:** Google Meet (auto-created via Google Calendar)
 **Frequency:** Daily at 4:00 PM MT (Mon-Fri)
@@ -56,7 +56,7 @@ Phase 1: TEXT  →  Phase 2: AUDIO  →  Phase 3: VIDEO
 
 **Calendar Event Description Template:**
 ```
-WAR ROOM — AgentOS Executive Sync
+WAR ROOM — Agentic Executive Sync
 
 PHASE 1: TEXT (3:45 PM) — Async updates in chat
 PHASE 2: AUDIO (4:00 PM) — Live verbal sync  

@@ -55,7 +55,7 @@
 | days_until_deadline | 282 |
 | urgency | LOW |
 | next_action_date | 2026-03-24 |
-| next_action_description | Apply — frame AgentOS as advanced industry AI platform; frame Irrig8 as advanced tech |
+| next_action_description | Apply — frame Agentic as advanced industry AI platform; frame Irrig8 as advanced tech |
 
 ---
 
@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 8 |
 | fit_irrig8 | 3 |
-| fit_agentos | 8 |
+| fit_agentic | 8 |
 | fit_valley_players | 1 |
 | priority | P2 |
-| priority_rationale | Fit score 8/10 — AgentOS / All Bx3 |
+| priority_rationale | Fit score 8/10 — Agentic / All Bx3 |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |
@@ -112,9 +112,9 @@
 
 ## SECTION 8: HOW TO WIN
 
-**Notes:** Colorado's advanced industry program covers AI/tech. AgentOS qualifies as advanced industry.
+**Notes:** Colorado's advanced industry program covers AI/tech. Agentic qualifies as advanced industry.
 
-**Next Action:** Apply — frame AgentOS as advanced industry AI platform; frame Irrig8 as advanced tech
+**Next Action:** Apply — frame Agentic as advanced industry AI platform; frame Irrig8 as advanced tech
 
 **Status:** Rolling applications
 

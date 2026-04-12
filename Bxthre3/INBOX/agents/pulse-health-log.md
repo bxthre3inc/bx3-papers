@@ -32,7 +32,7 @@ All registered services healthy. Ports 3000/8080 were monitored in error — no 
 | Port 3000 | ⚠️ UNCONFIGURED | No service expected |
 | Port 8080 | ⚠️ UNCONFIGURED | No service expected |
 | VPC service (5176) | ✅ Running | Registered service |
-| AgentOS API (9000) | ✅ Running | Registered service |
+| Agentic API (9000) | ✅ Running | Registered service |
 
 All registered services healthy. Ports 3000/8080 are not configured (known baseline).
 

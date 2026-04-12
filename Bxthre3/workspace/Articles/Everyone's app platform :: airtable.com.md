@@ -8,6 +8,6 @@ Everyone's app platform
 Irrig8 invited you!
 ----------------------
 
-Create an account to start working with Irrig8 in AgentOS Base
+Create an account to start working with Irrig8 in Agentic Base
 
 or

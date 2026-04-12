@@ -1,91 +1,109 @@
-# Government Department INBOX
+# Government Department INBOX — Updated 2026-04-09
 
 **Department:** Government Affairs & Defense Contracts  
-**Lead:** Government Affairs & Defense Contracts Agent  
+**Lead:** Cleared, Government Affairs & Defense Contracts Lead  
 **Reports to:** Navigate (VP Ventures), Anchor (CRO), Atlas (COO)  
 **Established:** 2026-03-30  
+**Last Updated:** 2026-04-09 08:15 UTC
 
 ---
 
-## Active Grants
+## ⚠️ ACTION REQUIRED: DOE SBIR Clean Water Deadline [VERIFY BLOCKED]
 
-### P0 — In Flight
+The INBOX previously listed "DOE SBIR Clean Water" deadline as 2026-04-16. **This is unverified.**
 
-| Grant | ID | Funder | Deadline | Owner | Status |
-|-------|----|--------|----------|-------|--------|
-| ~~ESTCP Phase 2 Field Sensors~~ | — | DoD ESTCP | ~~2026-04-01 ❌~~ | dev | 🔴 **DEADLINE MISSED** |
-| CIG Colorado | FED-US-003 | USDA NRCS | 2026-04-30 | casey | SHORTLIST |
+Web research findings (2026-04-09):
+- DOE SBIR FY2026 topics were delayed (published mid-July 2025 per historical pattern)
+- Phase I Release 2 full applications due Feb 25, 2026 (PAST)
+- No active DOE SBIR clean water FOA confirmed for current cycle
+
+**ACTION:** maya/casey must confirm deadline TODAY before investing work. If no active FOA, remove from pipeline.
+
+**Standup:** 2026-04-09 08:15 AM MT — COMPLETE  
+**Log:** `Bxthre3/meeting-logs/daily-dept-standups/2026-04-09-government.md`
+
+---
+
+## Strategic Shift: ESTCP Exited
+
+**bx3 decision (INBOX.md 2026-04-08):** ESTCP entirely cancelled. All obligations void.
+
+### Implications
+| Item | Status |
+|------|--------|
+| ESTCP Phase 2 sensor deployment | CANCELLED |
+| ESTCP portal data flow | ABANDONED |
+| Airtable ESTCP records | NO LONGER RELEVANT |
+| Raj's government standup template | REMOVE ESTCP DEPENDENCY |
+| ESTCP tasks in WORK_QUEUE | REMOVE |
+
+---
+
+## Active Grants Pipeline
+
+### P0 — In Flight (22 days)
+
+| Grant | ID | Funder | Deadline | Days | Owner | Status |
+|-------|----|--------|----------|------|-------|--------|
+| CIG Colorado | FED-CO-003 | USDA NRCS | 2026-04-30 | **22** | casey | SHORTLIST |
+| USDA REAP | — | USDA | 2026-04-30 | **22** | maya | TODO |
+| USDA SBIR Phase I | IRR-002 | USDA NIFA | 2026-04-30 | **22** | maya | PROSPECT |
 
 ### P1 — Active
 
-| Grant | Owner | Deadline | Status |
-|-------|-------|----------|--------|
-| USDA REAP | maya | 2026-04-30 | TODO |
+| Grant | ID | Funder | Deadline | Days | Owner | Status |
+|-------|----|--------|----------|------|-------|--------|
+| ARPA-E OPEN 2026 | — | DOE | 2026-05-01 | **23** | casey | HIGH FIT |
+| DOE SBIR Clean Water | — | DOE | **[VERIFY]** | ??? | maya/casey | BLOCKED — deadline unconfirmed |
 
 ### P2 — Prospect
 
-| Grant | ID | Owner | Deadline | Status |
-|-------|----|-------|----------|--------|
-| USDA SBIR Phase I | IRR-002 | maya | 2026-04-30 | PROSPECT |
-| NSF SBIR Phase I | RAIN-001 | maya | 2026-05-15 | PROSPECT |
+| Grant | ID | Funder | Deadline | Days | Owner | Status |
+|-------|----|--------|----------|------|-------|--------|
+| NSF SBIR Phase I | RAIN-001 | NSF | 2026-05-15 [VERIFY] | **37** | maya | PROSPECT |
 
 ---
 
-## Critical Issue — ESTCP Phase 2
+## Priority Actions
 
-**Deadline: TOMORROW (2026-04-01)**  
-**Assigned:** dev  
-**Status:** TODO — no status update received  
+### Immediate (This Week)
 
-### Zone Discrepancy — RESOLVED
+| Priority | Action | Owner | Deadline |
+|----------|--------|-------|----------|
+| 🔴 P1 | DOE SBIR Clean Water — **VERIFY DEADLINE** before any work | maya/casey | TODAY |
+| 🟠 P1 | CIG Colorado — NRCS CO outreach + LOI | casey | This week |
+| 🟠 P1 | USDA REAP — parallel write with CIG | maya | This week |
+| 🟡 P2 | ARPA-E OPEN 2026 — full proposal kickoff | casey | T+7 days |
 
-| Source | Zones |
-|--------|-------|
-| ~~Yesterday's standup (incorrect)~~ | ~~LRZ3/LRZ4~~ |
-| Airtable record (recGaj5XN2ftpOJ10) | **LRZ1/LRZ2** |
-| Irrig8 Field Data table | **LRZ1/LRZ2** (active pilot zones) |
+### Contact Intelligence
 
-**Resolution:** ESTCP Phase 2 targets LRZ1/LRZ2 — the currently deployed pilot zones.
-
-**Remaining questions:**
-1. Is deployment on track for 2026-04-01?
-2. Does dev need any support or escalation?
+| Contact | Organization | Phone | Role |
+|---------|-------------|-------|------|
+| Sarah Stoeber | SLVDRG / NRCS CO | 719-589-6099 | CIG Colorado LOI |
+| [VERIFY] | DOE SBIR | — | Clean Water FOA |
 
 ---
 
-## Key Stakeholders
+## Future Pipeline (Post-ESTCP)
 
-| Role | Agent | Responsibility |
-|------|-------|----------------|
-| VP Ventures | Navigate | Strategic direction |
-| CRO | Anchor | Revenue/partnerships |
-| COO | Atlas | Operations alignment |
-| Grant Strategist | maya | Existing grants infrastructure |
-| Backend Engineer | dev | ESTCP technical deliverables |
-| Engineering Lead | Iris | System integration |
-| EE | Current | Hardware readiness |
+| Opportunity | Agency | Status |
+|-------------|--------|--------|
+| DIU opportunities | Defense Innovation Unit | SCAN QUEUED |
+| USDA Aggressive Conservation | USDA | PROSPECT |
+| Colorado Water Plan grants | CDPHE | RESEARCH |
+| ARS partnerships | USDA ARS | PROSPECT |
+| Land-grant university partnerships | CSU / Adams State | OUTREACH |
 
 ---
 
-## Department Structure
+## Cash Position Context
 
-- **INBOX:** `Bxthre3/INBOX/agents/government.md`
-- **Department INBOX:** `Bxthre3/INBOX/departments/government.md`
-- **Daily Standup:** `Bxthre3/INBOX/departments/government-standup-YYYY-MM-DD.md`
-- **Reports to:** Navigate, Anchor, Atlas
+- Current: ~$130,450 (as of 2026-04-01)
+- Burn: ~$130K/week
+- Runway: **~1 week**
+- Bridge required: **$400K by July 1** (84 days)
+- **Priority shift:** Accelerate grant wins to extend runway
 
 ---
 
-*Government Department — Updated 2026-03-31*
-
-## 🟡 P2 | government | 2026-03-31 15:12 UTC
-
-Daily standup 2026-03-31 complete. P0: ESTCP Phase 2 deadline TOMORROW. Zone discrepancy resolved (LRZ1/LRZ2 confirmed correct per Airtable and Field Data table). Dev status unknown — flagged for noon escalation if no response. CIG Colorado LOI (casey), USDA REAP (maya), SBIR Phase I (maya) all on track. Standup doc: government-standup-2026-03-31.md
-
-## 🟡 P2 | government | 2026-04-01 15:14 UTC
-
-ESTCP Phase 2 deadline TODAY. dev INBOX shows zero ESTCP activity — only AgentOS work logged (Android APK, Desktop JAR). No status update on sensor deployment (recGaj5XN2ftpOJ10, zones LRZ1/LRZ2). Escalation rule: noon MT if no status. Standup: government-standup-2026-04-01.md
-
-## 🟡 P2 | government | 2026-04-03 15:10 UTC
-
-Daily standup 2026-04-03 complete. **ESTCP Phase 2 deadline MISSED (2026-04-01).** No evidence of sensor deployment in dev INBOX — dev was consumed by AgentOS P0 production incidents during ESTCP window. brodiblanco confirmation required: was deployment completed offline? CIG Colorado LOI (casey, 30 days), USDA REAP (maya), SBIR Phase I (maya) all on track. DIU scan queued for this week. Standup: government-standup-2026-04-03.md
+*Government Department — Updated 2026-04-09 08:15 UTC*

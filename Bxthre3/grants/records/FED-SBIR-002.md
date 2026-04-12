@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 9 |
 | fit_irrig8 | 9 |
-| fit_agentos | 9 |
+| fit_agentic | 9 |
 | fit_valley_players | 1 |
 | priority | P1 |
-| priority_rationale | Fit score 9/10 — AgentOS (AI/ML), Irrig8 (sensors) |
+| priority_rationale | Fit score 9/10 — Agentic (AI/ML), Irrig8 (sensors) |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |

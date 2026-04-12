@@ -26,7 +26,7 @@ Identifying strategic partnerships, co-marketing deals, and integration partners
 | Google.org / AWS / Microsoft | Infrastructure / Data | Corporate tech grants (22 in pipeline). Cloud credits + satellite data. | Grant apps + cloud infrastructure partnership | P2 | Pipeline |
 | Rockefeller / Gates Foundation | Strategic | Impact investment follow-on. Foundation relationships. | Relationship building, PRIs | P2 | Pipeline |
 | Murray-Darling Basin Authority | Channel | Phase 3 Australia expansion. Center-pivot water scarcity analog. | Distributor/reseller model post-SLV validation | P3 | Future |
-| EIC Accelerator (€17.5M) | Strategic | EU funding for AgentOS AI workflow automation. | Full application with EU counsel | P3 | Pipeline |
+| EIC Accelerator (€17.5M) | Strategic | EU funding for Agentic AI workflow automation. | Full application with EU counsel | P3 | Pipeline |
 
 ---
 

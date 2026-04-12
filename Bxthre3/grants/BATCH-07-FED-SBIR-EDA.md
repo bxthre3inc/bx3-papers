@@ -17,7 +17,7 @@
 | Deadline | 2026-07-02 (annual window) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | Irrig8, AgentOS |
+| Portfolio Fit | Irrig8, Agentic |
 | Status | Active — 2026 window confirmed |
 | Next Action | Check USDA NIFA for 2026 solicitation topics (typically: 8.05 Agriculture) |
 | Notes | 6-8 month Phase I → $650K Phase II. Topics include: farm efficiency, water management, IoT sensors, AI/ML. |
@@ -33,7 +33,7 @@
 | Deadline | Rolling (decline to ~Q4 for Dec council) |
 | Stage | IDENTIFIED |
 | Fit Score | 9/10 |
-| Portfolio Fit | AgentOS (AI/ML), Irrig8 (sensors) |
+| Portfolio Fit | Agentic (AI/ML), Irrig8 (sensors) |
 | Status | Rolling submissions — full pipeline |
 | Next Action | Engage Grant Engine or similar for topic matching; check NSF 2026 topics |
 | Notes | 14 topic areas. AI/ML (Topic 4), Sensors/Devices (Topic 7), Water (Topic 12). |
@@ -49,7 +49,7 @@
 | Deadline | 2026-09-30 (Topic-specific windows) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | Irrig8 (water-energy nexus), AgentOS |
+| Portfolio Fit | Irrig8 (water-energy nexus), Agentic |
 | Status | Active — 2026 topics expected Q2 |
 | Next Action | Monitor DOE SBIR 2026 solicitation; topics include: AI for energy, water tech |
 
@@ -64,7 +64,7 @@
 | Deadline | Rolling (topics open/close frequently) |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS (autonomy, AI) |
+| Portfolio Fit | Agentic (autonomy, AI) |
 | Status | Active — specific topics rotate |
 | Next Action | Check DOD SBIR "Open Topics" list; note: foreign affiliation restrictions apply |
 
@@ -79,7 +79,7 @@
 | Deadline | 2026-10-15 (Phase I) |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS (space-tech crossover) |
+| Portfolio Fit | Agentic (space-tech crossover) |
 | Status | Active — 2026 topics TBD |
 | Next Action | Monitor NASA SBIR 2026 topics; agriculture/earth observation crossover topics exist |
 
@@ -109,7 +109,7 @@
 | Deadline | 2026-10-01 |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | AgentOS (infrastructure monitoring, AI) |
+| Portfolio Fit | Agentic (infrastructure monitoring, AI) |
 | Status | Active |
 | Next Action | Monitor DHS S&T topics for AI/infrastructure crossover |
 
@@ -139,7 +139,7 @@
 | Deadline | 2026-06-15 |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS (measurement science, AI standards) |
+| Portfolio Fit | Agentic (measurement science, AI standards) |
 | Status | Active |
 | Next Action | Check NIST AI and measurement science topics |
 
@@ -172,7 +172,7 @@
 | Deadline | Rolling (Phase 1 in progress) |
 | Stage | IDENTIFIED |
 | Fit Score | 7/10 |
-| Portfolio Fit | AgentOS (AI tech hub designation), ARD |
+| Portfolio Fit | Agentic (AI tech hub designation), ARD |
 | Status | Active — Phase 1 designation in progress |
 | Next Action | Engage Colorado EDA office for Tech Hub designation |
 
@@ -187,7 +187,7 @@
 | Deadline | 2026-09-30 (estimated annual) |
 | Stage | IDENTIFIED |
 | Fit Score | 6/10 |
-| Portfolio Fit | The Starting 5, AgentOS |
+| Portfolio Fit | The Starting 5, Agentic |
 | Status | Active |
 | Next Action | Apply through EDA Build to Scale NOFO; requires regional economic impact narrative |
 
@@ -314,7 +314,7 @@
 | Deadline | 2026-09-01 (Phase I cohort 3) |
 | Stage | IDENTIFIED |
 | Fit Score | 8/10 |
-| Portfolio Fit | AgentOS (AI/ML convergence) |
+| Portfolio Fit | Agentic (AI/ML convergence) |
 | Status | Active — 2026 Cohort 3 topics TBD |
 | Next Action | Monitor NSF Convergence Accelerator 2026 topics; AI + domain focus = strong fit |
 

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-07T02:00:30.989176+00:00",
+  "deliverables": {
+    "total": 468,
+    "architecture_specs": 67,
+    "execution_plans": 18,
+    "working_code_modules": 0,
+    "research_outputs": 3
+  },
+  "quality_indicators": {
+    "documentation_to_code_ratio": 0.52,
+    "knowledge_capture": "ADEQUATE"
+  },
+  "interpretation": {
+    "high_deliverables": "Value being documented and captured",
+    "low_deliverables": "Activity not translating to artifacts",
+    "strong_docs": "Knowledge institutionalized, onboarding possible",
+    "weak_docs": "Tribal knowledge risk \u2014 bus factor dangerous"
+  }
+}

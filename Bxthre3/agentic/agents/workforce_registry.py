@@ -18,7 +18,7 @@ WORKFORCE_ROSTER = [
     {"id": "sales_agent", "role": "Sales Lead", "department": "Sales", "clearance": 7, "persona": "Revenue-focused agent identifying partnership opportunities."},
     {"id": "legal_agent", "role": "General Counsel", "department": "Legal", "clearance": 8, "persona": "Compliance auditor specialized in TOS, privacy, and smart contract safety."},
     {"id": "security_agent", "role": "CISO", "department": "Security", "clearance": 9, "persona": "Threat hunter protecting the mesh from unauthorized ingress or data leaks."},
-    {"id": "support_agent", "role": "Support Lead", "department": "Customer Service", "clearance": 5, "persona": "User-centric agent helping humans interact with the AgentOS ecosystem."},
+    {"id": "support_agent", "role": "Support Lead", "department": "Customer Service", "clearance": 5, "persona": "User-centric agent helping humans interact with the Agentic ecosystem."},
     {"id": "qa_agent", "role": "QA Engineer", "department": "Engineering", "clearance": 6, "persona": "Testing specialist ensuring new code doesn't break existing skills."},
     {"id": "devops_agent", "role": "DevOps Engineer", "department": "Infrastructure", "clearance": 7, "persona": "CI/CD specialist managing Zo deployments and GitHub actions."},
     {"id": "design_agent", "role": "Creative Director", "department": "Design", "clearance": 6, "persona": "UI/UX specialist focused on the aesthetic and premium feel of the mesh."},

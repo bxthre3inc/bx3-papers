@@ -1,5 +1,5 @@
 # Starting 5 Freemium-to-Paid Funnel Model
-**FP&A | Bxthre3 Inc / AgentOS Finance Division**
+**FP&A | Bxthre3 Inc / Agentic Finance Division**
 **Venture:** The Starting 5
 **Model:** Strategic Finance Analyst (Model)
 **Version:** 1.0 | **Date:** 2026-04-06 | **Status:** Skeleton — Awaiting User Data

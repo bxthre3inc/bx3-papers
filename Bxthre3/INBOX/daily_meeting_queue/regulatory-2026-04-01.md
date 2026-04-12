@@ -15,7 +15,7 @@
 | 4 | Irrig8: Water Court expert witness retainer | 🟡 P2 | Legal | 97 days remaining — act this week |
 | 5 | Starting 5: AI disclosure gap analysis | 🟡 P2 | Legal | CO/UT/CA/EU AI Act obligations |
 | 6 | BIPA vs BSA biometric retention conflict | 🟡 P2 | Legal | 3-year vs 5-year — unresolved |
-| 7 | Zoe/AgentOS: Open source licensing | 🟡 P2 | Legal | AGPL/GPL API compliance |
+| 7 | Zoe/Agentic: Open source licensing | 🟡 P2 | Legal | AGPL/GPL API compliance |
 
 ---
 

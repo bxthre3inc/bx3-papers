@@ -21,7 +21,7 @@ The transition is designed to feel like a podcast episode intro — hook first, 
 
 I'm building Bxthre3 Inc, a company in Colorado's San Luis Valley that's essentially trying to create 'Silicon Valley for climate-resilient agriculture.' 
 
-We have two things working right now: AgentOS — an AI workforce platform I've been building for two years that doesn't hallucinate, runs deterministic operations — and Irrig8, a precision agriculture system that's about to pilot with Colorado State University.
+We have two things working right now: Agentic — an AI workforce platform I've been building for two years that doesn't hallucinate, runs deterministic operations — and Irrig8, a precision agriculture system that's about to pilot with Colorado State University.
 
 We're raising a friends-and-family bridge round — minimum twenty-five hundred. Because you're in early, I'm offering better terms than standard: five million cap, thirty percent discount, plus pro-rata rights for the Series A.
 
@@ -41,9 +41,9 @@ Okay, here's the rest.
 
 # PART B: WHAT WE'RE ACTUALLY BUILDING (0:50 - 1:50)
 
-So Bxthre3 Inc is structured as a Delaware C-Corp holding company. Think of it like a venture studio. We have a core platform called AgentOS — that's the engine — and then multiple operating subsidiaries that run on top of it.
+So Bxthre3 Inc is structured as a Delaware C-Corp holding company. Think of it like a venture studio. We have a core platform called Agentic — that's the engine — and then multiple operating subsidiaries that run on top of it.
 
-AgentOS is essentially an AI workforce orchestration system. I've been building this for two years. The key thing that makes it different: it's deterministic, not probabilistic. It doesn't use large language models for decision-making. It uses state machines, event cascades, and forensic audit trails. Meaning: it can't hallucinate, every decision is auditable, and it can run for forty-eight hours without an internet connection.
+Agentic is essentially an AI workforce orchestration system. I've been building this for two years. The key thing that makes it different: it's deterministic, not probabilistic. It doesn't use large language models for decision-making. It uses state machines, event cascades, and forensic audit trails. Meaning: it can't hallucinate, every decision is auditable, and it can run for forty-eight hours without an internet connection.
 
 That last part matters because a lot of our customers — farmers, rural businesses — they don't have reliable connectivity.
 

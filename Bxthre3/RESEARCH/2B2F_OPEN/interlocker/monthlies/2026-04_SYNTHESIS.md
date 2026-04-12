@@ -49,15 +49,15 @@ INTERLOCKER has successfully initiated the 2B2F Council mandate. In 6 days of op
 | Launch Order | TTM (Days) | Platform Assets |
 |--------------|------------|-----------------|
 | 1st (Zoe) | 200 | Ground up |
-| 2nd (AgentOS) | 210 | +Zoe AI patterns |
-| 3rd (VPC) | 300 | +AgentOS orchestration |
+| 2nd (Agentic) | 210 | +Zoe AI patterns |
+| 3rd (VPC) | 300 | +Agentic orchestration |
 | 4th (projected) | 105-150 | Full platform stack |
 
 **Acceleration factors identified:** Reusable agent framework (-30d), shared infra (-15d), unified auth (-20d), legal templates (-10d), marketing stack (-10d).
 
 ### 4. Failure Mode Library
 **Status:** 5 of ~30 failure modes documented, taxonomy established.
-- Integration Cascade (IC): 3 documented (Zoe-dependent, AgentOS orchestration, shared infrastructure)
+- Integration Cascade (IC): 3 documented (Zoe-dependent, Agentic orchestration, shared infrastructure)
 - Data Breach (DB): 1 documented (cross-OpCo leakage)
 - Regulatory Block (RB): 1 documented (unified data compliance)
 

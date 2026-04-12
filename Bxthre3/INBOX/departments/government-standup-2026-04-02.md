@@ -17,7 +17,7 @@
 
 | Check | Result |
 |-------|--------|
-| Dev INBOX activity | Zero ESTCP work logged — only AgentOS (Android APK, Desktop JAR, v0.2.0) |
+| Dev INBOX activity | Zero ESTCP work logged — only Agentic (Android APK, Desktop JAR, v0.2.0) |
 | Airtable record recGaj5XN2ftpOJ10 | NOT FOUND — base/table access issue |
 | Sensor deployment to LRZ1/LRZ2 | **UNKNOWN — likely NOT completed** |
 | Data flowing to ESTCP portal | **UNKNOWN — likely NOT achieved** |

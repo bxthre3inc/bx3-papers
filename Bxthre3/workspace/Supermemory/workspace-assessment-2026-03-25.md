@@ -4,7 +4,7 @@
 
 ## Top 3 Risks (P1)
 1. **Database backup failing since 2026-03-23** — backup agent is broken, no backups exist after 03-18. Data integrity risk.
-2. **AgentOS ApiService.kt is 100% mock** — no real API calls, all data is hardcoded. Mobile apps are stubs.
+2. **Agentic ApiService.kt is 100% mock** — no real API calls, all data is hardcoded. Mobile apps are stubs.
 3. **6 zo.space routes are empty placeholders** — dead pages damaging credibility.
 
 ## Top 3 Quick Wins

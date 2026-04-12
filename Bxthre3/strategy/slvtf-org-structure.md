@@ -33,7 +33,7 @@
 3. **Arm's-length transactions** with Irrig8
    - SLVTF pays Irrig8 fair market rate for:
      - Sensor hardware (if Irrig8 manufactures)
-     - AgentOS platform usage
+     - Agentic platform usage
      - Integration services
    - Documented via competitive quotes or cost-plus pricing
    - No free services, no inflated prices
@@ -77,7 +77,7 @@ Startups get free/subsidized access
 ┌─────────────────────────────────────────────────────────┐
 │  Bxthre3 / Irrig8 (for-profit)                        │
 │  • Sells hardware to SLVTF at market rate               │
-│  • Provides AgentOS platform (licensed)                 │
+│  • Provides Agentic platform (licensed)                 │
 │  • May compete for SLVTF startup slots like anyone else│
 └─────────────────────────────────────────────────────────┘
 ```

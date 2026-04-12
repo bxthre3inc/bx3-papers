@@ -57,3 +57,6 @@
 ---
 
 *Community Department — Tribe*
+## 🟡 P2 | tribe | 2026-04-10 15:16 UTC
+
+Community Manager daily standup complete. 5 communities scoped. VPC affiliate Tier 3 approved to proceed. Agentic dev community on hold until P1s resolve. Monthly newsletter not started - awaiting Brand sync.

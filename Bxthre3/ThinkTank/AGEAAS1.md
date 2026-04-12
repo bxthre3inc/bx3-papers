@@ -114,7 +114,7 @@ OpEx model for agriculture equipment — farmers pay monthly/seasonal fees for e
 - [TBD] Delivery/pickup logistics
 
 ### Integration
-- [TBD] AgentOS-powered fleet management
+- [TBD] Agentic-powered fleet management
 - [TBD] Irrig8 data integration for usage optimization
 - [TBD] Billing/subscription management
 
@@ -142,7 +142,7 @@ The following fields require decisions before promotion to active status:
 - **Build-A-Biz Synergy:** Valley Build-A-Biz LLC infrastructure enables OpEx model delivery
 - **Pilot Opportunity:** 3-5 SLV farmers for initial pilot
 - **IP Risk:** Low — business model innovation, execution-dependent
-- **Dependencies:** Equipment capital, logistics infrastructure, AgentOS fulfillment engine
+- **Dependencies:** Equipment capital, logistics infrastructure, Agentic fulfillment engine
 
 ---
 

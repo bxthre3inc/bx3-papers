@@ -1,15 +1,15 @@
-# AgentOS Business Builder Sales Materials
+# Agentic Business Builder Sales Materials
 
 ## Overview
 
-This folder contains templates and resources for selling AgentOS Business Builder packages.
+This folder contains templates and resources for selling Agentic Business Builder packages.
 
 ---
 
 ## Available Materials
 
 ### Pitch Deck Template
-`file 'agentos-business-builder/PITCH.md'`
+`file 'agentic-business-builder/PITCH.md'`
 
 Complete presentation outline with:
 - Problem/solution slides
@@ -20,7 +20,7 @@ Complete presentation outline with:
 - Objection handling
 
 ### One-Pager
-`file 'agentos-business-builder/ONE-PAGER.md'`
+`file 'agentic-business-builder/ONE-PAGER.md'`
 
 Single-page overview including:
 - Product description
@@ -29,7 +29,7 @@ Single-page overview including:
 - Value proposition
 
 ### Pricing Sheet
-`file 'agentos-business-builder/pricing/TIER_SHEET.md'`
+`file 'agentic-business-builder/pricing/TIER_SHEET.md'`
 
 Detailed pricing breakdown for each tier.
 

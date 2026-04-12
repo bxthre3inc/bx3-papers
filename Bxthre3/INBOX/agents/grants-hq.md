@@ -7,11 +7,11 @@
 
 | # | Grant | Agency | Deadline | Days Left | Amount | Fit |
 |---|---|---|---|---|---|---|
-| 1 | **NSF TIP: Agentic AI for Science** | NSF | 2026-10-01 | 178 | $1M–$2M | HIGH — AgentOS |
-| 2 | **DARPA AI Tools & Infrastructure** | DARPA | 2026-09-01 | 148 | $1M+ | HIGH — AgentOS |
-| 3 | **DOE AI for Science & Energy** | DOE SBIR | 2026-07-01 | 86 | $375K–$1.5M | HIGH — AgentOS |
-| 4 | **NSF SBIR Phase I: AI Agent Infrastructure** | NSF | 2026-07-01 | 86 | $275K | HIGH — AgentOS |
-| 5 | **HHS SBIR: AI in Health Administration** | HHS | 2026-06-01 | 56 | $275K | MED — AgentOS |
+| 1 | **NSF TIP: Agentic AI for Science** | NSF | 2026-10-01 | 178 | $1M–$2M | HIGH — Agentic |
+| 2 | **DARPA AI Tools & Infrastructure** | DARPA | 2026-09-01 | 148 | $1M+ | HIGH — Agentic |
+| 3 | **DOE AI for Science & Energy** | DOE SBIR | 2026-07-01 | 86 | $375K–$1.5M | HIGH — Agentic |
+| 4 | **NSF SBIR Phase I: AI Agent Infrastructure** | NSF | 2026-07-01 | 86 | $275K | HIGH — Agentic |
+| 5 | **HHS SBIR: AI in Health Administration** | HHS | 2026-06-01 | 56 | $275K | MED — Agentic |
 | 6 | **Phase I: Smart Irrigation Systems** | USDA SBIR | 2026-06-01 | 56 | $275K | HIGH — Irrig8 |
 | 7 | **Colorado Advanced Industries Accelerator** | CO OEDIT | 2026-06-01 | 56 | $25K–$250K | MED — Irrig8 |
 | 8 | **Agricultural Technology Innovation** | USDA NIFA | 2026-07-01 | 86 | $325K | MED — Irrig8 |
@@ -29,7 +29,7 @@
 | FED-US-003 | CIG Colorado | Irrig8 | 2026-04-30 | **24** | $500K | ACTIVE | SHORTLIST | 100 |
 | IRR-002 | USDA SBIR Phase I | Irrig8 | 2026-04-30 | 24 | $125K | PROSPECT | PROSPECT | 70 |
 | RAIN-001 | NSF SBIR Phase I | RAIN | 2026-05-15 | 39 | $256K | PROSPECT | PROSPECT | 75 |
-| AGENT-001 | NSF SBIR Phase I | AgentOS | 2026-06-01 | 56 | $256K | PROSPECT | PROSPECT | 72 |
+| AGENT-001 | NSF SBIR Phase I | Agentic | 2026-06-01 | 56 | $256K | PROSPECT | PROSPECT | 72 |
 | S5-001 | NSF SBIR Phase I | Starting5 | 2026-06-15 | 70 | $256K | PROSPECT | PROSPECT | 65 |
 | FED-US-004 | EQIP Vendor Enrollment | Irrig8 | 2026-12-31 | 269 | $0 (rev) | ACTIVE | SHORTLIST | 90 |
 
@@ -43,10 +43,10 @@
 | 2 | **CSU Sports Tech Innovation** | $50K max + 25-day deadline | 25 | $50K |
 | 3 | **Colorado Fintech Sandbox** | $50K max + 25-day deadline | 25 | $50K |
 | 4 | **USDA SBIR Phase I (IRR-002)** | $125K + Irrig8 irrigation fit | 24 | $125K |
-| 5 | **NSF SBIR Phase I: AI Agent Infra** | $275K + AgentOS fit | 56 | $275K |
+| 5 | **NSF SBIR Phase I: AI Agent Infra** | $275K + Agentic fit | 56 | $275K |
 | 6 | **Phase I: Smart Irrigation Systems** | $275K + direct Irrig8 fit | 56 | $275K |
 | 7 | NSF SBIR Phase I (RAIN-001) | $256K — RAIN reg tech fit | 39 | $256K |
-| 8 | NSF SBIR Phase I (AGENT-001) | $256K — AgentOS fit | 56 | $256K |
+| 8 | NSF SBIR Phase I (AGENT-001) | $256K — Agentic fit | 56 | $256K |
 
 ---
 

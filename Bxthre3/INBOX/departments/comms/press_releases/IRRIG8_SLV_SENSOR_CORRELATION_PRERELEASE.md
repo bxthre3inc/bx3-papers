@@ -51,7 +51,7 @@ Irrig8 is a venture of Bxthre3 Inc.
 
 ## About Bxthre3 Inc
 
-Bxthre3 Inc is a venture studio building the future of agriculture (Irrig8), gaming (Valley Players Club), and AI workforce orchestration (AgentOS). Based in Monte Vista, Colorado.
+Bxthre3 Inc is a venture studio building the future of agriculture (Irrig8), gaming (Valley Players Club), and AI workforce orchestration (Agentic). Based in Monte Vista, Colorado.
 
 ---
 

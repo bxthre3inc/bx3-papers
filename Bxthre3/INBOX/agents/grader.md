@@ -40,7 +40,7 @@
 **Strategic Alignment with Bxthre3:**
 - **Irrig8 Synergy:** Natural extension from "water-as-a-service" to "equipment-as-a-service"
 - **SLV Context:** Colorado farmers face capital constraints; water court pressures favor OpEx models
-- **AgentOS Fit:** Subscription orchestration platform already built; can extend to physical assets
+- **Agentic Fit:** Subscription orchestration platform already built; can extend to physical assets
 
 **Execution Feasibility:** HIGH — Leverages existing Valley Build-A-Biz LLC infrastructure (once formed) and Irrig8 field relationships.
 
@@ -72,7 +72,7 @@
 **Strategic Alignment with Bxthre3:**
 - **Irrig8 Synergy:** Sensors already deployed for moisture; extend to soil carbon monitoring
 - **SLV Relevance:** Water court evidence + carbon credits = dual revenue potential for farmers
-- **AgentOS Fit:** Automated data collection, verification workflows, audit trails
+- **Agentic Fit:** Automated data collection, verification workflows, audit trails
 
 **Execution Feasibility:** MEDIUM-HIGH — Requires sensor hardware partnerships but data infrastructure exists.
 
@@ -102,7 +102,7 @@
 Multi-agent orchestration with governance layer — crowded but validated by massive funding.
 
 **Strategic Alignment:**
-- **AgentOS Synergy:** Direct competitive space; opportunity to differentiate via vertical specialization
+- **Agentic Synergy:** Direct competitive space; opportunity to differentiate via vertical specialization
 - **Differentiation Angle:** Agriculture-specific agent orchestration (competitors are horizontal)
 
 **Evidence:**
@@ -157,7 +157,7 @@ Enable farmers to own, control, and monetize their operational data.
 
 **Strategic Alignment:**
 - **Irrig8 Synergy:** Data collection infrastructure already in place
-- **AgentOS Fit:** Data exchange platform extends AgentOS capabilities
+- **Agentic Fit:** Data exchange platform extends Agentic capabilities
 
 **Evidence:**
 - CIBO Technologies: "leading independent data and analytics platform for agriculture"
@@ -185,7 +185,7 @@ Enable farmers to own, control, and monetize their operational data.
 **Assessment:**
 - Strong validation (record-breaking funding)
 - **Not aligned** with Bxthre3 ag-tech focus
-- Defense sector diverges from Irrig8/AgentOS mission
+- Defense sector diverges from Irrig8/Agentic mission
 
 **Recommended Action:** P3 — Monitor but do not pursue.
 

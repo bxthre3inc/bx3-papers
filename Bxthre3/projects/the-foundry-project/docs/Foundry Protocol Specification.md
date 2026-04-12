@@ -4,11 +4,11 @@
 
 **Role:** Recursive IP Capture & Asset Hardening
 
-**Layer:** Agentic Operating Layer (AOL/AgentOS)
+**Layer:** Agentic Operating Layer (AOL/Agentic)
 
 ## 1. Executive Overview
 
-The **Foundry Protocol** is the internal mechanism of **AgentOS**
+The **Foundry Protocol** is the internal mechanism of **Agentic**
 responsible for the transition of unstructured operational data and
 emergent technical breakthroughs into formalized, \"filing-ready\"
 Intellectual Property (IP). It ensures that every successful actuation
@@ -42,7 +42,7 @@ The Foundry is activated by three specific \"Discovery Triggers\":
   -----------------------------------------------------------------------
   **Stage**               **Process**             **Output**
   ----------------------- ----------------------- -----------------------
-  **Observation**         AgentOS flags a unique  Raw Execution Log
+  **Observation**         Agentic flags a unique  Raw Execution Log
                           successful              
                           \"Handshake\" or        
                           \"Pop\" event.          

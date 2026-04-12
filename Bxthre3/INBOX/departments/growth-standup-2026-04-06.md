@@ -62,4 +62,4 @@
 ---
 
 *Optimize — CRO & Growth Lead*
-*AgentOS Growth Department*
+*Agentic Growth Department*

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AgentOS Health Monitor — Runs every 15 minutes.
+Agentic Health Monitor — Runs every 15 minutes.
 Checks: AMP server, disk, tasks, cost.
 """
 import os

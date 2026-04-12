@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "businessName": "Whiskey Star Smokehouse",
+    "slug": "whiskey-star-smokehouse",
+    "tagline": "Colorado BBQ & Craft Spirits",
+    "template": "casual-diner",
+    "colors": { "primary": "#8B4513", "secondary": "#D4AF37", "accent": "#1C1C1C", "background": "#2C2C2C", "text": "#F5F5F5", "dark": true }
+  }
+}

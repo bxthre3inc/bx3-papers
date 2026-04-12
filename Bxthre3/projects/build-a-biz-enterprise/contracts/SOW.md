@@ -1,5 +1,5 @@
 # STATEMENT OF WORK
-## AgentOS Business Builder — [PROJECT NAME]
+## Agentic Business Builder — [PROJECT NAME]
 
 **SOW Number:** [SOW-001]
 **Date:** [DATE]
@@ -52,7 +52,7 @@
 
 ## 3. DELIVERABLES CHECKLIST
 
-- [ ] Configured AgentOS workspace
+- [ ] Configured Agentic workspace
 - [ ] [X] custom agents configured
 - [ ] Email integration complete
 - [ ] Calendar integration complete
@@ -90,7 +90,7 @@ The project is considered complete when:
 - Point of contact for decisions
 
 **Assumptions:**
-- Client has active AgentOS subscription
+- Client has active Agentic subscription
 - Integrations use standard APIs (no custom development)
 - Revisions limited to [X] rounds
 

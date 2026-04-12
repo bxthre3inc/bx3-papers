@@ -18,18 +18,18 @@
 
 ## Required Training Modules
 
-### Module SM1 — AgentOS Product Fundamentals (All)
+### Module SM1 — Agentic Product Fundamentals (All)
 **Duration:** 2 hours  
-**File:** `the-agentos-project/AGENTOS_ARCHITECTURE_v6.2.md`
+**File:** `the-agentic-project/AGENTOS_ARCHITECTURE_v6.2.md`
 
 | Topic | Depth |
 |---|---|
-| What AgentOS does | Must explain |
+| What Agentic does | Must explain |
 | AMP mesh architecture | Must understand |
 | Task routing paradigm | Must describe |
 | Competitive differentiation | Must articulate |
 
-**Verification:** Explain AgentOS to a new user without errors
+**Verification:** Explain Agentic to a new user without errors
 
 ---
 

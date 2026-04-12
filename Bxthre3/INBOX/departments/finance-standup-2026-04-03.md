@@ -115,5 +115,5 @@
 ---
 
 *Reserve — Treasury Manager*  
-*Finance Division | Bxthre3 / AgentOS*  
+*Finance Division | Bxthre3 / Agentic*  
 *Daily standup complete — awaiting Balance data callout*

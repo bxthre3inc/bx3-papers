@@ -17,7 +17,7 @@ Manage relationships with investors, prepare fundraising materials, and communic
 | Irrig8 | Series A | $5–10M | P1 |
 | Valley Players Club | Strategic | $1–3M | P1 |
 | The Starting 5 | Seed/A | $2–5M | P2 |
-| Zoe / AgentOS | Strategic | $1–2M | P2 |
+| Zoe / Agentic | Strategic | $1–2M | P2 |
 | Bxthre3 corporate | SAFE/Note | TBD | P3 |
 
 ## Investor Types
@@ -97,7 +97,7 @@ Manage relationships with investors, prepare fundraising materials, and communic
 - Tribal gaming authorities
 - Gaming VCs (Aonic Group, Delaware North)
 
-### AgentOS / The Starting 5
+### Agentic / The Starting 5
 - AI VCs: True Ventures, Bloomberg Beta, Emergence Capital, GitHub Fund
 - Colorado Impact Fund
 - Anthropic alumni angels
@@ -105,7 +105,7 @@ Manage relationships with investors, prepare fundraising materials, and communic
 ## Context
 
 - **Water Court hearing:** June 29, 2026
-- **AgentOS 93 stub findings:** Engineering remediation in progress — do not oversell to investors until remediated
+- **Agentic 93 stub findings:** Engineering remediation in progress — do not oversell to investors until remediated
 - **VPC equity split:** 500,001 / 499,999 (BXB / co-founder) confirmed
 - **USDA SBIR deadline:** 2026-04-05 ($180K grant — Maya submitting)
 
@@ -119,5 +119,5 @@ Manage relationships with investors, prepare fundraising materials, and communic
 
 ---
 
-*Oracle — Head of Investor Relations | Bxthre3 Inc / AgentOS Finance Division*
+*Oracle — Head of Investor Relations | Bxthre3 Inc / Agentic Finance Division*
 *Last updated: 2026-04-06*

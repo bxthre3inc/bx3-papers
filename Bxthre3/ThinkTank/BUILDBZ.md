@@ -27,7 +27,7 @@ Virtual operations and tech services for rural and underserved small businesses.
 Rural and underserved small businesses lack access to affordable tech services, grant expertise, and digital operations support that urban businesses take for granted. [TBD — refine problem statement]
 
 ### Solution Hypothesis[TBD]
-Provide "business-in-a-box" virtual operations powered by AgentOS, combining human expertise with AI-powered automation to deliver enterprise-grade support at small business prices. [TBD — validate solution hypothesis]
+Provide "business-in-a-box" virtual operations powered by Agentic, combining human expertise with AI-powered automation to deliver enterprise-grade support at small business prices. [TBD — validate solution hypothesis]
 
 ### Target Users[TBD]
 - Rural and underserved women-owned small businesses
@@ -70,8 +70,8 @@ Provide "business-in-a-box" virtual operations powered by AgentOS, combining hum
 | Component | Detail |
 |-----------|--------|
 | **Build-A-Biz Template** | Business-in-a-box model (owner 70%, Bxthre3 30%) [TBD — confirm equity split] |
-| **AgentOS-powered sales engine** | [TBD — build requirements] |
-| **AgentOS-powered fulfillment engine** | [TBD — build requirements] |
+| **Agentic-powered sales engine** | [TBD — build requirements] |
+| **Agentic-powered fulfillment engine** | [TBD — build requirements] |
 
 ---
 
@@ -96,7 +96,7 @@ The following fields require decisions before promotion to active status:
 - **Legal Entity:** LLC (articles of org present)
 - **Target Market:** Rural women-owned businesses in Colorado
 - **IP Risk:** Low — service-based business
-- **Dependencies:** AgentOS (sales/fulfillment engines)
+- **Dependencies:** Agentic (sales/fulfillment engines)
 
 ---
 

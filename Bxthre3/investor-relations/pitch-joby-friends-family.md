@@ -17,7 +17,7 @@ I'm not coming to you as a random founder cold-pitching. I'm coming as a friend 
 
 ## 🎯 What Bxthre3 Is (The Non-BS Version)
 
-**In one sentence:** We're building an AI workforce platform (AgentOS) that powers multiple ventures — precision agriculture (Irrig8), gaming (Valley Players Club), rural business services (Build-A-Biz), and a physical technology campus in the San Luis Valley.
+**In one sentence:** We're building an AI workforce platform (Agentic) that powers multiple ventures — precision agriculture (Irrig8), gaming (Valley Players Club), rural business services (Build-A-Biz), and a physical technology campus in the San Luis Valley.
 
 **The core tech:** A deterministic AI orchestration system I've been building for 2+ years. It doesn't hallucinate. It routes tasks across specialized AI agents, maintains forensic audit trails, and runs 48 hours without internet. This isn't ChatGPT wrappers — it's infrastructure.
 
@@ -128,7 +128,7 @@ If you invest $2,500 — $25,000, here's where it goes:
 
 ## 📞 Next Steps (No Pressure)
 
-1. **Questions:** Call/text me anytime. I can walk through the patents, the CSU pilot, the AgentOS architecture — whatever you want to understand.
+1. **Questions:** Call/text me anytime. I can walk through the patents, the CSU pilot, the Agentic architecture — whatever you want to understand.
 
 2. **Documents:** I can share:
    - SAFE template (YC standard, modified terms)
@@ -146,7 +146,7 @@ If you invest $2,500 — $25,000, here's where it goes:
 
 I'm not raising from strangers right now. I'm raising from people who know me, who can judge my work ethic and my technical ability, and who understand that building in rural Colorado is either a quixotic mistake or a genuine arbitrage opportunity.
 
-I believe it's the latter. The valley has cheap land, real agricultural problems, and a regulatory environment (water rights) that demands deterministic solutions. That's exactly what AgentOS was built for.
+I believe it's the latter. The valley has cheap land, real agricultural problems, and a regulatory environment (water rights) that demands deterministic solutions. That's exactly what Agentic was built for.
 
 If you want to bet on that with me, I'd be honored. If you want to pass, zero hard feelings — I know you've got your own obligations.
 

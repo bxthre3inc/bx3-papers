@@ -104,7 +104,7 @@
 
 ### 7. Platform/IP Contribution — $100,000 (Match Only)
 
-**In-kind contribution of existing Bxthre3/AgentOS infrastructure:**
+**In-kind contribution of existing Bxthre3/Agentic infrastructure:**
 
 | Component | Description | FMV |
 |-----------|-------------|-----|

@@ -5,7 +5,7 @@
 ### 2026-04-06 — Morning Security Scan
 
 **Scanner:** Sentinel (06:10 UTC)  
-**Scope:** Secrets, service health, AgentOS API stability
+**Scope:** Secrets, service health, Agentic API stability
 
 ---
 
@@ -14,7 +14,7 @@ No change in status from 2026-04-01. Remains the highest security priority.
 
 **🟡 AGENTOS API — STABILITY EVENT (Resolved)**
 - 06:10 UTC: FATAL state triggered by workdir misconfiguration
-- Fix: Workdir updated to `/home/workspace/Bxthre3/projects/agentic/the-agentos-project/backend`
+- Fix: Workdir updated to `/home/workspace/Bxthre3/projects/agentic/the-agentic-project/backend`
 - Status: ✅ Service restored, `/health` responding
 - Note: Not a security breach — operational misconfiguration. However, service instability can mask attacks. Flagging for monitoring elevation.
 
@@ -24,7 +24,7 @@ No change in status from 2026-04-01. Remains the highest security priority.
 - VPC .env properly gitignored
 
 **✅ SERVICES — ALL UP**
-- AgentOS API: ✅ UP (restored)
+- Agentic API: ✅ UP (restored)
 - Ollama: ✅ UP (PID 231)
 - VPC Server: ✅ UP (uptime 9:42:51)
 
@@ -37,7 +37,7 @@ No change in status from 2026-04-01. Remains the highest security priority.
 
 | To | Subject | Priority | Status |
 |----|---------|----------|--------|
-| Iris | AgentOS kill-switch stubs (`approved: true`) | 🔴 P1 | OPEN — assigned |
+| Iris | Agentic kill-switch stubs (`approved: true`) | 🔴 P1 | OPEN — assigned |
 | Sentinel | Coordination — confirmed aligned on findings | — | ✅ Synced |
 
 ## Blockers

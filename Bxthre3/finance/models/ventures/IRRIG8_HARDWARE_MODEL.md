@@ -1,5 +1,5 @@
 # Irrig8 Hardware Unit Economics
-**FP&A | Bxthre3 Inc / AgentOS Finance Division**
+**FP&A | Bxthre3 Inc / Agentic Finance Division**
 **Venture:** Irrig8 (formerly FarmSense)
 **Model:** Strategic Finance Analyst (Model)
 **Version:** 1.0 | **Date:** 2026-04-06 | **Status:** Skeleton — Awaiting Engineering Cost Data

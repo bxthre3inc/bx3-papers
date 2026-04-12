@@ -4,7 +4,7 @@
 
 | # | App | Package | OTA Endpoint | Current Version | APK Path |
 |---|-----|---------|--------------|-----------------|----------|
-| 1 | AgentOS | `com.bxthre3.agentos` | `/api/ota/agentos/check` | 7.0.0 | `the-agentos-project/releases/` |
+| 1 | Agentic | `com.bxthre3.agentic` | `/api/ota/agentic/check` | 7.0.0 | `the-agentic-project/releases/` |
 | 2 | VPC | `com.valleyplayersclub.vpc` | `/api/ota/vpc/check` | 8.1.0 | `the-valleyplayersclub-project/android-native/` |
 | 3 | **Zo Space** | `com.bxthre3.zospace` | `/api/ota/zospace` | 1.0.0 | `zo-space-android/releases/` |
 | 4 | **Zo Computer** | `com.bxthre3.zocomputer` | `/api/ota/zocomputer` | 1.0.0 | `zo-computer-android/releases/` |

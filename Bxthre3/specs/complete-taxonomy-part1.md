@@ -1,5 +1,5 @@
 # Bxthre3 Document Standards v3.0 — COMPLETE SPEC TAXONOMY
-**Owner:** brodiblanco | **Maintained by:** AgentOS  
+**Owner:** brodiblanco | **Maintained by:** Agentic  
 **Effective:** 2026-04-02  
 **Status:** APPROVED
 
@@ -7,7 +7,7 @@
 
 # PART I: AGENTOS POSITIONING
 
-> **AgentOS = INTERNAL INFRASTRUCTURE** (like IBM Watson)
+> **Agentic = INTERNAL INFRASTRUCTURE** (like IBM Watson)
 > NOT a product, NOT for sale — internal force multiplier only
 
 ---
@@ -46,7 +46,7 @@ Before ANY document ships:
 | AOS-SLA | SLA Spec | Uptime targets | CTO |
 | AOS-DATA | Data Architecture | Storage, privacy | CTO |
 
-**Location:** `the-agentos-project/docs/`
+**Location:** `the-agentic-project/docs/`
 
 ---
 

@@ -1,4 +1,4 @@
-# Architect — AgentOS Pre-Sales Engineering
+# Architect — Agentic Pre-Sales Engineering
 
 **Role:** Technical pre-sales support across all Bxthre3 ventures  
 **Reports to:** Deal (VP Sales), Bits (CTO)  

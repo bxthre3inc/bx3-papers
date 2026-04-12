@@ -28,7 +28,7 @@
 ### Notification Preferences
 - Routine status updates: NOT wanted between meetings
 - P1 escalations: SMS immediately with 1-line summary
-- AgentOS: run silently, surface status only during meetings
+- Agentic: run silently, surface status only during meetings
 
 ---
 

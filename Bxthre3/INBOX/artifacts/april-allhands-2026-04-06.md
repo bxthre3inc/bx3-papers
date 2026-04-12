@@ -1,4 +1,4 @@
-# AgentOS Monthly All-Hands — April 2026
+# Agentic Monthly All-Hands — April 2026
 **Date:** Monday, April 6, 2026 | 3:00 PM MT  
 **Duration:** 90 minutes  
 **Location:** [Google Meet](https://meet.google.com/ndh-sdxr-vvq) | Meeting ID: ndh-sdxr-vvq  

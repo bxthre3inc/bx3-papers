@@ -2,7 +2,7 @@
 """
 Grants Prospector — Identifies grant opportunities for Bxthre3 ventures.
 Usage: python3 scan.py <venture> [limit]
-Venture: irriga8, rain, agentos, starting5, all
+Venture: irriga8, rain, agentic, starting5, all
 """
 
 import sys
@@ -21,7 +21,7 @@ KEYWORDS = {
         "CDFI", "financial inclusion", "state licensing", "money transmission",
         "payment infrastructure", "banking desert", "revenue assurance",
     ],
-    "agentos": [
+    "agentic": [
         "AI agents", "autonomous systems", "open source AI",
         "NSF SBIR", "DARPA", "machine learning", "agentic AI",
         "LLM", "workflow automation", "software infrastructure",
@@ -158,7 +158,7 @@ PROGRAMS = {
             "sbir_type": "state", "phase": None,
         },
     ],
-    "agentos": [
+    "agentic": [
         {
             "id": "nsf_sbir_ai", "funder": "nsf_sbir",
             "name": "NSF SBIR Phase I: AI Agent Infrastructure",
@@ -305,7 +305,7 @@ def main():
     args = sys.argv[1:]
     if not args:
         print("Usage: python3 scan.py <venture> [limit]")
-        print("Venture: irriga8, rain, agentos, starting5, all")
+        print("Venture: irriga8, rain, agentic, starting5, all")
         sys.exit(1)
 
     venture = args[0].lower()

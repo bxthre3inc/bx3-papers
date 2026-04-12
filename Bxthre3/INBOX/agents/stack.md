@@ -1,6 +1,6 @@
 # INBOX — Stack (Platform Engineering Lead)
 
-**Role:** Platform Engineering Lead — AgentOS Infrastructure Department
+**Role:** Platform Engineering Lead — Agentic Infrastructure Department
 **Reports to:** Bits (CTO)
 **Last Updated:** 2026-04-06 09:20 AM MT
 
@@ -11,8 +11,8 @@
 | Metric | Value |
 |--------|-------|
 | Services UP | 5/5 |
-| AgentOS API (zo.space) | ✅ UP — 10/10 endpoints healthy |
-| agentos-api (port 9000) | ✅ UP — v7.0.0 |
+| Agentic API (zo.space) | ✅ UP — 10/10 endpoints healthy |
+| agentic-api (port 9000) | ✅ UP — v7.0.0 |
 | VPC Service (port 5176) | ✅ UP |
 | Shared symlink | ✅ FIXED |
 
@@ -20,11 +20,11 @@
 
 ## Incident — 2026-04-06
 
-**Issue:** 10 AgentOS API routes failing with `Cannot find module '/home/workspace/Bxthre3/shared/agent-os/core/hierarchy/agentOSApi.js'`
+**Issue:** 10 Agentic API routes failing with `Cannot find module '/home/workspace/Bxthre3/shared/agentic/core/hierarchy/agentOSApi.js'`
 
-**Root Cause:** `/home/workspace/Bxthre3/shared/agent-os/core` was a standalone empty directory, not a symlink pointing to the actual code.
+**Root Cause:** `/home/workspace/Bxthre3/shared/agentic/core` was a standalone empty directory, not a symlink pointing to the actual code.
 
-**Fix:** Created symlink `/home/workspace/Bxthre3/shared/agent-os/core/hierarchy → /home/workspace/Bxthre3/projects/agentic/agent-os/core/hierarchy`
+**Fix:** Created symlink `/home/workspace/Bxthre3/shared/agentic/core/hierarchy → /home/workspace/Bxthre3/projects/agentic/agentic/core/hierarchy`
 
 **Resolution:** All endpoints verified HTTP 200. Incident closed.
 
@@ -34,7 +34,7 @@
 
 ## Responsibilities
 
-- Manage AgentOS core platform (Zo Computer)
+- Manage Agentic core platform (Zo Computer)
 - Maintain agent creation and deployment systems
 - Optimize compute resource allocation
 - Manage agent memory and context systems
@@ -52,9 +52,9 @@
 
 | Service | Port | URL | Status |
 |---------|------|-----|--------|
-| `agentos-api` | 9000 | `https://agentos-api-brodiblanco.zocomputer.io` | ✅ UP |
+| `agentic-api` | 9000 | `https://agentic-api-brodiblanco.zocomputer.io` | ✅ UP |
 | `vpc` | 5176 | `https://vpc-brodiblanco.zocomputer.io` | ✅ UP |
-| zo.space AgentOS routes | 3099 | `https://brodiblanco.zo.space/aos` | ✅ UP |
+| zo.space Agentic routes | 3099 | `https://brodiblanco.zo.space/agentic` | ✅ UP |
 
 ---
 
@@ -73,10 +73,10 @@
 
 ## Key Files
 
-- Architecture: `Bxthre3/projects/the-agentos-project/AGENTOS_ARCHITECTURE_v6.2.md`
-- MCP Bridge: `Bxthre3/projects/the-agentos-project/mcp-bridge/`
-- Android App: `Bxthre3/projects/the-agentos-native/AgentOS-Native-Source/`
-- Webapp: `https://brodiblanco.zo.space/aos`
+- Architecture: `Bxthre3/projects/the-agentic-project/AGENTOS_ARCHITECTURE_v6.2.md`
+- MCP Bridge: `Bxthre3/projects/the-agentic-project/mcp-bridge/`
+- Android App: `Bxthre3/projects/the-agentic-native/Agentic-Native-Source/`
+- Webapp: `https://brodiblanco.zo.space/agentic`
 - Standup Report: `Bxthre3/INBOX/departments/platform-standup-2026-04-06.md`
 
 ---

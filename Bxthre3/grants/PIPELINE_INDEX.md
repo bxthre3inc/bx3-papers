@@ -1,6 +1,6 @@
 # Bxthre3 Grant Pipeline — Master Index
 **Generated: 2026-03-23 | Researcher: Zoe | Total: 316 grants across 12 regions**
-**Portfolio: Bxthre3 Inc (Irrig8, AgentOS/Zoe, Valley Players Club, The Starting 5, ARD, Rain)**
+**Portfolio: Bxthre3 Inc (Irrig8, Agentic/Zoe, Valley Players Club, The Starting 5, ARD, Rain)**
 
 ---
 
@@ -23,7 +23,7 @@
 | Bx3 Vector | Fit Score | Grants | Top Opportunity |
 |---|---|---|---|
 | **Irrig8** | 9-10/10 | 78 grants | USDA EQIP 90% reimbursement + NC DEQ $1.5M |
-| **AgentOS / Zoe** | 8-9/10 | 42 grants | EIC Accelerator (€17.5M), NSF Convergence Accelerator |
+| **Agentic / Zoe** | 8-9/10 | 42 grants | EIC Accelerator (€17.5M), NSF Convergence Accelerator |
 | **Valley Players Club** | 7-8/10 | 12 grants | CO Sweepstakes License (P0), Multi-State Gaming Coalition |
 | **The Starting 5** | 5-6/10 | 22 grants | NIST AI RMF, Innovate UK |
 | **ARD** | 6-7/10 | 18 grants | USDA RD Programs, EDA Tech Hubs |
@@ -41,7 +41,7 @@
 | **UK-001** | FETF 2026 (£50M) | DEFRA | £75K max | **2026-04-28** | Irrig8 | UK partner assessment |
 | **INT-AF-002** | IWMI Africa Irrigation | IWMI/CGIAR | Large | 2026-05-15 | Irrig8 | Contact IWMI with tech brief |
 | **EPA-001** | NC Water Quality ($1.5M) | EPA/NC DEQ | $1.5M | **2026-05-29** | Irrig8 | Partner with NC farm org |
-| **CORP-001** | Knut & Alice Wallenberg AI | Wallenberg | Varies | **2026-03-25** | AgentOS | LOW — requires prior affiliation |
+| **CORP-001** | Knut & Alice Wallenberg AI | Wallenberg | Varies | **2026-03-25** | Agentic | LOW — requires prior affiliation |
 | **ASIA-005** | ADB $40M Smart Irrigation | ADB | $40M | 2026-06-30 | Irrig8 | Contact ADB agriculture-water |
 
 ---
@@ -59,7 +59,7 @@
 ### 9/10 — Critical
 | ID | Grant | Amount | Portfolio |
 |---|---|---|---|
-| EU-EIC-005 | EIC Accelerator | Up to €17.5M | AgentOS |
+| EU-EIC-005 | EIC Accelerator | Up to €17.5M | Agentic |
 | INT-AF-010 | World Bank Water Security | Large | Irrig8 |
 | AFR-001 | Africa Green Economy ($3.09B) | $3.09B | Irrig8 |
 | GAM-020 | Multi-State Sweepstakes Coalition | Regulatory | Valley Players |
@@ -179,5 +179,5 @@
 
 ---
 
-*Managed by: Zoe (AgentOS VP People Operations)*
+*Managed by: Zoe (Agentic VP People Operations)*
 *All batches: BATCH-01-FED-US.md through BATCH-15-REALESTATE-GAMING-FINTECH.md*

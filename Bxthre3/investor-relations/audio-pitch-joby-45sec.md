@@ -12,7 +12,7 @@
 
 I'm building Bxthre3 Inc, a company in Colorado's San Luis Valley that's essentially trying to create 'Silicon Valley for climate-resilient agriculture.' 
 
-We have two things working right now: AgentOS — an AI workforce platform I've been building for two years that doesn't hallucinate, runs deterministic operations — and Irrig8, a precision agriculture system that's about to pilot with Colorado State University.
+We have two things working right now: Agentic — an AI workforce platform I've been building for two years that doesn't hallucinate, runs deterministic operations — and Irrig8, a precision agriculture system that's about to pilot with Colorado State University.
 
 We're raising a friends-and-family bridge round — minimum twenty-five hundred. Because you're in early, I'm offering better terms than standard: five million cap, thirty percent discount, plus pro-rata rights for the Series A.
 

@@ -14,7 +14,7 @@ The SLV Technology Commons (SLVTC) transforms Bxthre3 Inc's portfolio of ag-tech
 - **Zone B (For-Park):** Light industrial build-to-suit for venture manufacturing
 - **Zone C (Demo Fields):** 40-acre living laboratory for precision agriculture research
 
-**All powered by AgentOS, protected by 8+ patents, and designed to attract climate-tech startups globally.**
+**All powered by Agentic, protected by 8+ patents, and designed to attract climate-tech startups globally.**
 
 ---
 
@@ -149,14 +149,14 @@ The SLV Technology Commons (SLVTC) transforms Bxthre3 Inc's portfolio of ag-tech
 
 ### AGENTOS — Campus Operating System (Internal)
 
-| Campus Function | AgentOS Primitive | Protection |
+| Campus Function | Agentic Primitive | Protection |
 |-----------------|---------------------|------------|
 | **All operations** | INBOX routing, Pulse monitoring | TIER 1: BX3 only |
 | **Tenant workflows** | Pre-configured agents (no core access) | TIER 3: Subsidiary operators |
 | **Grant automation** | Maya → SLVTC grant tracking | TIER 2: Engineering team |
 | **Security/Access** | Truth Gate on all data center access | TIER 0: brodiblanco |
 
-**Critical:** AgentOS core NEVER exposed to tenants. They use packaged, pre-configured agents only.
+**Critical:** Agentic core NEVER exposed to tenants. They use packaged, pre-configured agents only.
 
 ---
 
@@ -167,7 +167,7 @@ The SLV Technology Commons (SLVTC) transforms Bxthre3 Inc's portfolio of ag-tech
 | **CARBON8** | Zone C Fields = soil carbon lab | Zero Foodprint Restore grant + CSU | Equipment Commons (sampling rigs) |
 | **AgEaaS** | Zone B Building B = fleet depot | Fleet financing ($500K) closed | Irrig8 (field telemetry data) |
 | **CORDSR** | Zone A Data Center = marketplace host | USDA Wood Innovations grant | Local supplier network |
-| **The Starting 5** | Zone A Incubator = first cohort | Productization complete | AgentOS training ground |
+| **The Starting 5** | Zone A Incubator = first cohort | Productization complete | Agentic training ground |
 | **RGIU** | 802 Morton St = Zone A site OR separate property | First acquisition closed | Campus expansion pipeline |
 
 ---
@@ -193,13 +193,13 @@ The SLV Technology Commons (SLVTC) transforms Bxthre3 Inc's portfolio of ag-tech
 
 ### Bxthre3 Inc — Parent Organization
 
-**Role:** Founder, initial funder, technology provider (AgentOS), anchor tenant (Irrig8)
+**Role:** Founder, initial funder, technology provider (Agentic), anchor tenant (Irrig8)
 
 **Financial Flow:**
 ```
 Bxthre3 Inc → Donations/Grants → SLVTC (tax-deductible)
 Bxthre3 Inc → Lease Payments → SLVTC (Zone B buildings)
-Bxthre3 Inc → Licensing Fees → SLVTC (AgentOS tenant version)
+Bxthre3 Inc → Licensing Fees → SLVTC (Agentic tenant version)
 SLVTC → FMV Leases → Bxthre3 subsidiaries (Irrig8, VPC, etc.)
 ```
 
@@ -363,7 +363,7 @@ SLVTC → FMV Leases → Bxthre3 subsidiaries (Irrig8, VPC, etc.)
 
 | Asset | Holder | Campus Use | Protection |
 |-------|--------|------------|------------|
-| **AgentOS** | Bxthre3 Inc | Internal operations only | Trade secret, TIER 0-1 access |
+| **Agentic** | Bxthre3 Inc | Internal operations only | Trade secret, TIER 0-1 access |
 | **Irrig8 Patents (7)** | Bxthre3 Inc / Irrig8 LLC | Irrig8 manufacturing | Provisional → full patents |
 | **VPC Gaming IP** | VPC LLC | Colocation only | Trade secret + trademarks |
 | **RAIN Intel** | RAIN LLC | Internal alerts | Trade secret |

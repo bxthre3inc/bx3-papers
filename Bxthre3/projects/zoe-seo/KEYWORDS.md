@@ -1,6 +1,6 @@
 # Zoe SEO — Keyword Strategy
 
-> **Venture:** Zoe (AI assistant / AgentOS reference implementation)
+> **Venture:** Zoe (AI assistant / Agentic reference implementation)
 > **Updated:** 2026-04-03
 
 ## Primary Keywords — AI/Developer

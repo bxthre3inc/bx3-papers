@@ -51,7 +51,7 @@
 ## Notes
 - Product name: **Irrig8** (FarmSense retired 2026-03-23)
 - Starting 5: `Bxthre3/the-starting5-project/`
-- Zoe/AgentOS: `Bxthre3/projects/the-agentos-project/`
+- Zoe/Agentic: `Bxthre3/projects/the-agentic-project/`
 - Valley Players Club: `Bxthre3/projects/the-valleyplayersclub-project/`
 
 ## Revenue Share Framework (from Business Plan)

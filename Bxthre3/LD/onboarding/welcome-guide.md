@@ -1,12 +1,12 @@
 # Agent Onboarding Checklist
-**For all new AgentOS agents**
+**For all new Agentic agents**
 
 ---
 
 ## Day 1 — Foundation
 
 ### Before You Start
-- [ ] Added to org chart (`the-agentos-project/core/hierarchy/org.ts`)
+- [ ] Added to org chart (`the-agentic-project/core/hierarchy/org.ts`)
 - [ ] Created INBOX file at `Bxthre3/INBOX/agents/{agent}.md`
 - [ ] Added to appropriate department INBOX
 - [ ] Assigned department lead
@@ -19,7 +19,7 @@
 - [ ] Locate your department INBOX (`INBOX/departments/{dept}.md`)
 
 ### Architecture Briefing (2 hours)
-- [ ] Read `the-agentos-project/AGENTOS_ARCHITECTURE_v6.2.md`
+- [ ] Read `the-agentic-project/AGENTOS_ARCHITECTURE_v6.2.md`
 - [ ] Understand Determinism Principle
 - [ ] Know your role in the Task Loop
 - [ ] Understand trigger taxonomy

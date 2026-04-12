@@ -1,4 +1,4 @@
-# AgentOS Platform — Fair Market Value Documentation
+# Agentic Platform — Fair Market Value Documentation
 **For USDA Wood Innovations Grant Match Verification**  
 **Date:** 2026-04-02  
 **Project:** San Luis Valley Firewood Marketplace
@@ -9,7 +9,7 @@
 
 **Claimed In-Kind Match:** $235,000 (Marketplace Platform)  
 **FMV Basis:** 1,500 hours @ $150/hr (conservative)  
-**Actual Build Method:** Agent-assisted development via AgentOS/Zo Computer
+**Actual Build Method:** Agent-assisted development via Agentic/Zo Computer
 
 ---
 
@@ -19,7 +19,7 @@
 
 | Component | Status | Lines of Code | Routes/Endpoints |
 |-----------|--------|---------------|------------------|
-| AgentOS Core | Operational | ~50,000 | 40+ API routes |
+| Agentic Core | Operational | ~50,000 | 40+ API routes |
 | Mesh/Worker System | Operational | ~15,000 | 10+ mesh endpoints |
 | VPC Portal | Deployed | ~5,000 | 5 pages |
 | Build-A-Biz Templates | Active | ~25,000 | 4 demo apps |

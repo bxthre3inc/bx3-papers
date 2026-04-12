@@ -5,7 +5,7 @@
 
 ---
 
-## Initial L&D Assessment — AgentOS Workforce
+## Initial L&D Assessment — Agentic Workforce
 **Date:** 2026-04-03  
 **Updated:** 2026-04-06
 
@@ -24,9 +24,9 @@ Source: `departments/engineering.md` (QA-Lead report 2026-04-02)
 | Gap | Impact | Root Cause | Status |
 |---|---|---|---|
 | Zero automated test coverage for core mesh flows | Agents can ship broken code with no validation | No test infrastructure defined | OPEN |
-| Route import error — `/api/agentos/data/aggregated` | Data aggregation broken | Open since 2026-03-25 | OPEN |
+| Route import error — `/api/agentic/data/aggregated` | Data aggregation broken | Open since 2026-03-25 | OPEN |
 | 30+ phantom CCRs | CCR tracking unreliable | Open since 2026-03-25 | OPEN |
-| Service workdir symlink — agentos service DOWN | Core platform unavailable | P0 in INBOX.md | ✅ RESOLVED 2026-04-06 |
+| Service workdir symlink — agentic service DOWN | Core platform unavailable | P0 in INBOX.md | ✅ RESOLVED 2026-04-06 |
 
 **Required Training:**
 1. Test-Driven Development (TDD) for mesh infrastructure
@@ -39,7 +39,7 @@ Source: `departments/engineering.md` (QA-Lead report 2026-04-02)
 
 | Gap | Affected | Recommended Action | Owner |
 |---|---|---|---|
-| No structured onboarding curriculum | All 33 agents | Design and deploy AgentOS onboarding program | Learn |
+| No structured onboarding curriculum | All 33 agents | Design and deploy Agentic onboarding program | Learn |
 | No skill certification tracking | All departments | Build skills matrix — current vs. required per role | Learn + Pulse |
 | No cross-department training sessions | All departments | Establish joint training sprints | Learn + Atlas |
 | No tools/skills research function | All departments | Assign continuous tech radar duty | Learn + Scout |
@@ -48,20 +48,20 @@ Source: `departments/engineering.md` (QA-Lead report 2026-04-02)
 
 ## Training Curricula — Master Plan
 
-### 📘 AgentOS Onboarding Program (ALL AGENTS)
+### 📘 Agentic Onboarding Program (ALL AGENTS)
 **Status:** 🟡 Drafting v1  
 **Target launch:** 2026-04-10
 
 ```
 DAY 1 (Foundation):
-  - SOUL.md + AGENTS.md + canonical names (Irrig8, AgentOS, Bxthre3)
+  - SOUL.md + AGENTS.md + canonical names (Irrig8, Agentic, Bxthre3)
   - Workspace tour: where files live, how to navigate
   - INBOX routing system: agent INBOXes, department INBOXes, canonical INBOX
   - Department assignment + manager assignment
 
 DAY 2-3 (Tools & Access):
   - Role-specific tool access setup (GitHub, Notion, Linear, Airtable, etc.)
-  - AgentOS Android app — download, login, navigation
+  - Agentic Android app — download, login, navigation
   - zo.space webapp — access and feature tour
   - Communication channels: how agents communicate (INBOX, not SMS)
 
@@ -92,7 +92,7 @@ DAY 30 (Month 1 Review):
 
 ```
 Phase 1 (Week 1-2): Platform Fundamentals
-  - AgentOS architecture (mesh, MCP, route layer)
+  - Agentic architecture (mesh, MCP, route layer)
   - Zo.space development environment
   - Git workflow and commit standards (per SOUL.md)
   - Test infrastructure: bun test, mocking patterns
@@ -115,7 +115,7 @@ Phase 3 (Week 5-8): Advanced / Specialty
 **Lead:** Atlas + Learn
 
 ```
-Phase 1: AgentOS tools proficiency
+Phase 1: Agentic tools proficiency
   - INBOX routing system
   - Department standup cadence
   - Workforce metrics interpretation
@@ -164,7 +164,7 @@ Skills dimensions (from org.ts):
 |---|---|---|---|
 | P1 | Engineering TDD training — Dev + Iris | Learn + Iris | 2026-04-07 |
 | P1 | Mesh test infrastructure — Theo | Learn + Theo | 2026-04-10 |
-| P2 | Draft AgentOS onboarding curriculum v1 | Learn | 2026-04-10 |
+| P2 | Draft Agentic onboarding curriculum v1 | Learn | 2026-04-10 |
 | P2 | Skills matrix — first pass (all 33 agents) | Learn + Pulse | 2026-04-14 |
 | P3 | Cross-dept training calendar Q2 | Learn + Atlas | 2026-04-17 |
 

@@ -9,7 +9,7 @@
 
 ## Role Initialization
 
-Reseller role activated 2026-04-06 as Channel Sales Director for Bxthre3/AgentOS Channel Partnerships Department.
+Reseller role activated 2026-04-06 as Channel Sales Director for Bxthre3/Agentic Channel Partnerships Department.
 
 **Scope:**
 - Irrig8: Farm equipment dealers, irrigation suppliers, ag co-ops, co-packers
@@ -59,7 +59,7 @@ Reseller role activated 2026-04-06 as Channel Sales Director for Bxthre3/AgentOS
 3. [ ] **Irrig8 dealer outreach prep** — build contact list for Valley Irrigation, Reinke
 4. [ ] **Channel partner recruitment workflow** — draft step-by-step recruitment sequence
 5. [ ] **Starting 5 reseller strategy** — identify target reseller profiles (SaaS dealers, platform resellers)
-6. [ ] **Zoe agency partner mapping** — identify ISV and agency targets for AgentOS ecosystem
+6. [ ] **Zoe agency partner mapping** — identify ISV and agency targets for Agentic ecosystem
 
 ---
 
@@ -88,4 +88,4 @@ Reseller role activated 2026-04-06 as Channel Sales Director for Bxthre3/AgentOS
 
 ---
 
-*Reseller — Channel Sales Director — AgentOS Channel Partnerships*
+*Reseller — Channel Sales Director — Agentic Channel Partnerships*

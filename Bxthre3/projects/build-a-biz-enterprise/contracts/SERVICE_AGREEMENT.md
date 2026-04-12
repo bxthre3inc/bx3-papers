@@ -1,5 +1,5 @@
 # SERVICE AGREEMENT
-## AgentOS Business Builder
+## Agentic Business Builder
 
 **Version:** 1.0 | **Date:** [DATE]
 
@@ -17,7 +17,7 @@ This Agreement is entered into by and between:
 
 ## 1. SERVICES
 
-Service Provider agrees to deliver the **AgentOS Business Builder** package at the tier selected below:
+Service Provider agrees to deliver the **Agentic Business Builder** package at the tier selected below:
 
 | Tier | Setup Fee | Monthly Fee | Term |
 |------|-----------|--------------|------|
@@ -32,14 +32,14 @@ Service Provider agrees to deliver the **AgentOS Business Builder** package at t
 ## 2. SCOPE OF SERVICES
 
 ### Starter Tier Includes:
-- Pre-configured AgentOS workspace
+- Pre-configured Agentic workspace
 - 3 core agents (Operations, Inbox, Tasks)
 - Basic integrations (email, calendar)
 - 1-hour setup call
 - 30-day email support
 
 ### Professional Tier Includes:
-- Full AgentOS workspace with all core agents
+- Full Agentic workspace with all core agents
 - 5 agent types pre-configured
 - Complete playbook library access
 - Sales materials template pack
@@ -110,7 +110,7 @@ Service Provider agrees to deliver the **AgentOS Business Builder** package at t
 ## 7. INTELLECTUAL PROPERTY
 
 - Client retains ownership of content they provide
-- Service Provider retains AgentOS platform and methodology
+- Service Provider retains Agentic platform and methodology
 - White-label rights: Enterprise tier only (separate addendum required)
 
 ---

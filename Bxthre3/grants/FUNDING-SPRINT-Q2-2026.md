@@ -59,7 +59,7 @@
 - Drew: Begin full application draft
 - **Why start now:** Large application, competitive
 
-### 5. USDA SBIR Phase I (AgentOS) — $175K — Due 2026-07-02
+### 5. USDA SBIR Phase I (Agentic) — $175K — Due 2026-07-02
 **Status:** PREPARE NOW (3 months out)
 - Drew: Use GFS refinement as core
 - Casey: Technical writer support if needed

@@ -27,13 +27,13 @@ Sent sync requests to:
 Evaluating tools for TM management:
 - **SDL Trados** — industry standard, high cost
 - **MemoQ** — flexible, mid-range
-- **Memsource** — cloud-native, API-friendly ← preferred for AgentOS integration
+- **Memsource** — cloud-native, API-friendly ← preferred for Agentic integration
 - **OmegaT** — open source, no cost
 - **Crowdin** — developer-friendly, GitHub integration ← strong candidate for Zoe
 
 Recommendation: Memsource (ventures) + Crowdin (Zoe open source)
 
-### 3. AgentOS Internal Localization — Active
+### 3. Agentic Internal Localization — Active
 
 Mapping agent instruction strings that need locale-aware routing:
 - Agent response templates

@@ -1,0 +1,51 @@
+[package]
+name = "agentic"
+version = "0.1.0"
+edition = "2021"
+authors = ["Bxthre3 Inc"]
+description = "Agentic — AI Workforce Orchestration Platform"
+license = "Proprietary"
+rust-version = "1.75"
+
+[[bin]]
+name = "agentic-core"
+path = "src/bin/agentic.rs"
+
+[lib]
+name = "agentic"
+path = "src/lib.rs"
+
+[dependencies]
+# HTTP server
+axum = "0.7"
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Database
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+anyhow = "1"
+thiserror = "2"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-appender = "0.2"
+
+# Utilities
+uuid = { version = "1", features = ["v7", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+sha3 = "0.10"
+hex = "0.4"
+async-trait = "0.1"
+
+[dev-dependencies]
+# Note: tests will be added as modules are implemented"

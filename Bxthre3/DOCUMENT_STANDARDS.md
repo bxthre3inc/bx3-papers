@@ -1,5 +1,5 @@
 # Bxthre3 Document Standards v3.0 — COMPLETE SPEC TAXONOMY
-**Owner:** brodiblanco | **Maintained by:** AgentOS  
+**Owner:** brodiblanco | **Maintained by:** Agentic  
 **Effective:** 2026-04-02  
 **Status:** APPROVED
 
@@ -7,7 +7,7 @@
 
 # PART I: AGENTOS POSITIONING
 
-> **AgentOS = INTERNAL INFRASTRUCTURE** (like IBM Watson)
+> **Agentic = INTERNAL INFRASTRUCTURE** (like IBM Watson)
 > NOT a product, NOT for sale — internal force multiplier only
 
 ---
@@ -31,15 +31,15 @@ Before ANY document ships:
 
 | Category | Code | Example | Description |
 |----------|------|---------|-------------|
-| **Platform** | AOS-ARCH | `examples/platform/AOS-ARCH-v1.0.md` | AgentOS system architecture |
+| **Platform** | AOS-ARCH | `examples/platform/AOS-ARCH-v1.0.md` | Agentic system architecture |
 | **Product** | PRD | `examples/product/PRD-Irrig8-v2.1.md` | Irrig8 product requirements |
 | **Hardware** | HW-SPEC | `examples/hardware/HW-SPEC-Sensor-v1.0.md` | Soil moisture sensor spec |
-| **Software** | SW-SPEC | `examples/software/SW-SPEC-API-v1.0.md` | AgentOS API specification |
+| **Software** | SW-SPEC | `examples/software/SW-SPEC-API-v1.0.md` | Agentic API specification |
 | **Business** | BIZ | `examples/business/BIZ-Irrig8-v1.0.md` | Irrig8 business plan |
 | **Grants** | GRANT | `examples/grants/GRANT-CIG-Colorado-v1.0.md` | CIG grant application |
 | **Legal** | NDA | `examples/legal/NDA-Template-v1.0.md` | NDA agreement template |
 | **Marketing** | 1PG | `examples/marketing/1PG-Bxthre3-v1.0.md` | One pager for investors |
-| **Agent** | AG-SPEC | `examples/agentos/AG-SPEC-Maya-v1.0.md` | Maya agent specification |
+| **Agent** | AG-SPEC | `examples/agentic/AG-SPEC-Maya-v1.0.md` | Maya agent specification |
 | **BOM** | BOM-E | `examples/hardware/BOM-E-Irrig8-v1.0.md` | Electronics bill of materials |
 
 **All examples follow:**
@@ -71,7 +71,7 @@ Before ANY document ships:
 | AOS-SLA | SLA Spec | Uptime targets | CTO |
 | AOS-DATA | Data Architecture | Storage, privacy | CTO |
 
-**Location:** `the-agentos-project/docs/`
+**Location:** `the-agentic-project/docs/`
 
 ---
 
@@ -573,12 +573,12 @@ Before ANY document ships:
 
 | Rule | Platform (AOS-*) | Products |
 |------|------------------|----------|
-| **Location** | `the-agentos-project/` | `projects/{name}/` |
+| **Location** | `the-agentic-project/` | `projects/{name}/` |
 | **Users** | Internal only | External customers |
 | **Breaking** | All agents affected | One venture |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Lead/Founder |
-| **Docs for** | AgentOS runs | Customer value |
+| **Docs for** | Agentic runs | Customer value |
 | **Revenue** | Indirect (enables) | Direct (customers) |
 
 ---
@@ -600,7 +600,7 @@ DRAFT → REVIEW → APPROVED → DEPRECATED → ARCHIVED
 
 | Category | Count | Key Types |
 |----------|-------|-----------|
-| AgentOS Platform | 15 | AOS-ARCH, SEC, API, AGENT-DEF |
+| Agentic Platform | 15 | AOS-ARCH, SEC, API, AGENT-DEF |
 | Business & Finance | 18 | BIZ, GTM, FIN, PITCH, CAC-LTV |
 | Collaboration | 15 | MTG, EM, ADR, RFC, RETRO |
 | Compliance & Regulation | 15 | HIPAA, SOX, FDA, WATER-RIGHTS |

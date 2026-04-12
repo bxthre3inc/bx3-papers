@@ -4,7 +4,7 @@
 
 ## IDENTITY
 
-**"Agentic" is the only name.** AgentOS, ABE, AgenticBusinessEmpire, Helm, SymphonyOS (internal), and Live Symphony (research) are all deprecated. Only "Agentic" survives.
+**"Agentic" is the only name.** Agentic, ABE, AgenticBusinessEmpire, Helm, SymphonyOS (internal), and Live Symphony (research) are all deprecated. Only "Agentic" survives.
 
 ## WHAT IS AGENTIC
 
@@ -196,7 +196,7 @@ Gmail | Google Calendar | Google Tasks | Google Drive | Notion | Airtable | Line
 | P1 | SEM Worksheet Engine | 48-hour edge autonomy — NOT IMPLEMENTED |
 | P1 | SHA-256 Forensic Sealing @ PMT | Court-admissible hash chain — NOT IMPLEMENTED |
 | P1 | IER weekly training loop | Q-value re-evaluation — NOT IMPLEMENTED |
-| P1 | Android AgentOS Panel (native Kotlin) | PIMPED Edition spec — NOT IMPLEMENTED |
+| P1 | Android Agentic Panel (native Kotlin) | PIMPED Edition spec — NOT IMPLEMENTED |
 | P2 | 9-Plane DAP Decision Engine | SymphonyOS IP — NOT IMPLEMENTED |
 | P2 | FTE Satellite Calibration | SymphonyOS IP — NOT IMPLEMENTED |
 | P2 | GitHub OAuth Integration | Connected workspace — NOT IMPLEMENTED |
@@ -220,7 +220,7 @@ Research project proving agentic systems can conduct their own research using hu
 
 ## NON-NEGOTIABLE RULES
 
-1. Agentic is canonical — never AgentOS, ABE, Helm
+1. Agentic is canonical — never Agentic, ABE, Helm
 2. Irrig8 is canonical — never FarmSense
 3. No nested Bxthre3/
 4. P0/P1 to Jeremy only — via INBOX.md + SMS
@@ -259,8 +259,8 @@ Owner: Raj (Legal). Status: PROVISIONAL PENDING.
 
 | Repo | Action |
 |------|--------|
-| bxthre3inc/agent-os | RENAME to agentic |
-| bxthre3inc/agentos | ARCHIVE |
+| bxthre3inc/agentic | RENAME to agentic |
+| bxthre3inc/agentic | ARCHIVE |
 | bxthre3inc/AgenticBusinessEmpire | ARCHIVE (superseded) |
 | bxthre3inc/Helm-the-Business-Automation-Platform | KEEP (public MIT) |
 | bxthre3inc/mcp-mesh | MERGE into agentic/mesh/ |

@@ -55,7 +55,7 @@
 | days_until_deadline | 282 |
 | urgency | LOW |
 | next_action_date | 2026-03-24 |
-| next_action_description | Apply for Google.org AI grants for AgentOS social impact applications |
+| next_action_description | Apply for Google.org AI grants for Agentic social impact applications |
 
 ---
 
@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 7 |
 | fit_irrig8 | 3 |
-| fit_agentos | 7 |
+| fit_agentic | 7 |
 | fit_valley_players | 1 |
 | priority | P2 |
-| priority_rationale | Fit score 7/10 — AgentOS |
+| priority_rationale | Fit score 7/10 — Agentic |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |
@@ -114,7 +114,7 @@
 
 **Notes:** 
 
-**Next Action:** Apply for Google.org AI grants for AgentOS social impact applications
+**Next Action:** Apply for Google.org AI grants for Agentic social impact applications
 
 **Status:** Active
 

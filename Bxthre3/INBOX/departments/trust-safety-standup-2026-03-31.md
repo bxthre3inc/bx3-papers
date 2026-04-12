@@ -54,7 +54,7 @@
 | Phantom agent IDs in codebase (alex, jordan, nico, etc.) | 🔴 P1 | OPEN | Iris | Ongoing |
 | Kill-switch stubs returning hardcoded `{ approved: true }` | 🔴 P1 | OPEN | Iris | Immediate |
 | Config-loader stubs returning hardcoded scores | 🔴 P1 | OPEN | Iris | Immediate |
-| AgentOS Services (5/5 UP) | 🟢 | HEALTHY | Sentinel | — |
+| Agentic Services (5/5 UP) | 🟢 | HEALTHY | Sentinel | — |
 
 **Critical Risk:** Kill-switch stubs returning `{ approved: true }` bypass all safety guards. Any production traffic through these paths has zero actual approval enforcement.
 
@@ -93,7 +93,7 @@
 | SQL injection vectors | ✅ CLEAR (VPC) |
 | XSS vectors (active) | ✅ CLEAR (VPC) |
 | IP surveillance | ✅ CLEAR |
-| AgentOS services (5/5) | ✅ UP |
+| Agentic services (5/5) | ✅ UP |
 | Third-party dependency audit | ❌ PENDING |
 | Port/network exposure audit | ⚠️ IN PROGRESS |
 
@@ -105,7 +105,7 @@
 |---------|---------|---------|--------------|
 | Irrig8 | 3 (water court gaps) | 0 | 🔴 HIGH |
 | Valley Players Club | 4 (regulatory pre-launch) | 4 (unsupported) | 🔴 HIGH |
-| AgentOS | 100+ (stub code) | 2 (bias, Shield) | 🔴 HIGH |
+| Agentic | 100+ (stub code) | 2 (bias, Shield) | 🔴 HIGH |
 | Zoe | 0 | 3 (AI safety unaudited) | 🟡 MEDIUM |
 | Starting 5 | 0 | 3 (fraud/content unaudited) | 🟡 MEDIUM |
 
@@ -116,7 +116,7 @@
 | # | To | Subject | Priority | Route |
 |---|----|---------|----------|-------|
 | 1 | brodiblanco | Water Court 3 Critical Gaps (Rain) | 🔴 P1 | INBOX.md + SMS |
-| 2 | Iris | 100+ AgentOS stub CCRs | 🔴 P1 | iris.md |
+| 2 | Iris | 100+ Agentic stub CCRs | 🔴 P1 | iris.md |
 | 3 | Sentinel | VPC pre-launch compliance audit | 🟡 P2 | this report |
 
 ---
@@ -127,7 +127,7 @@
 2. **This week:** Rain initiate expert witness contact for water court
 3. **This week:** Sentinel audit VPC KYC implementation end-to-end
 4. **This week:** Rain confirm SLV sensor telemetry coverage (does day3 validation satisfy?)
-5. **Next sprint:** Standing agenda item: AgentOS bias detection + Shield activation
+5. **Next sprint:** Standing agenda item: Agentic bias detection + Shield activation
 
 ---
 

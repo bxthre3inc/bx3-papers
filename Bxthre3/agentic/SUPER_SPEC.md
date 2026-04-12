@@ -52,8 +52,8 @@ Agentic is not a chatbot wrapper. It is not a dashboard. It is an operating syst
 ```
 LAYER 4: PRODUCT INTERFACES
   /agents (Dashboard - React + Tailwind, zo.space deployed)
-  /aos (Admin Cockpit - React SPA)
-  Android AgentOS Panel (Native bottom sheet overlay)
+  /agentic (Admin Cockpit - React SPA)
+  Android Agentic Panel (Native bottom sheet overlay)
   Linux TUI (ncurses dashboard)
   VS Code Extension (Instant AI Widget)
 
@@ -121,7 +121,7 @@ Hardware telemetry pulled:
 - USB: lsusb
 - Services: systemctl
 - Processes: ps aux (top 15 by CPU)
-Controls: Q/Esc=quit, R=refresh, L=AgentOS panel
+Controls: Q/Esc=quit, R=refresh, L=Agentic panel
 
 ## WASM Execution Fabric (from Distributed-Execution-System)
 DAG submission via YAML:
@@ -329,7 +329,7 @@ Darwin Godel Cycle:
 Immutable core: LLM weights, safety constraints, Truth Gate enforcement, INBOX routing
 
 # SECTION 6: LAYER 3 — ORCHESTRATION ENGINE
-## 6.1 IER Router — Learnable Task→Agent Routing (from agent-os ier_router.py)
+## 6.1 IER Router — Learnable Task→Agent Routing (from agentic ier_router.py)
 Contextual Bandits replacing ChatDev opaque RL
 
 Data models:
@@ -364,7 +364,7 @@ Methods:
 - get_routing_explanation(task_class) → explainable audit rules
 - get_training_data(min_entries=3) → IER training data from reasoning streams
 
-## 6.2 Phase Gates — Conditional Quality Enforcement (from agent-os phase_gates.py)
+## 6.2 Phase Gates — Conditional Quality Enforcement (from agentic phase_gates.py)
 Replaces ChatDev ChatChain (linear phases)
 
 Phase enum:
@@ -393,7 +393,7 @@ Class methods:
 - resume(task, to_phase) — human override to resume suspended task
 - get_gate_history(task_id) → list[GateResult]
 
-## 6.3 Workflow DAG Engine (from agent-os workflow_dag.py)
+## 6.3 Workflow DAG Engine (from agentic workflow_dag.py)
 Template-based DAGs with IER override capability
 
 Node role enum:
@@ -418,7 +418,7 @@ Engine methods:
 - get_plan(task, task_type) → ExecutionPlan
 - to_mermaid(dag) → mermaid graph TD string
 
-## 6.4 Coherence Engine (from agent-os coherence_engine.py)
+## 6.4 Coherence Engine (from agentic coherence_engine.py)
 Native to Live Symphony — parallel execution with dependency resolution
 
 WorkerType enum: DIGITAL | PHYSICAL | HUMAN
@@ -441,7 +441,7 @@ Methods:
 - execute_layer(plan, layer_index) → {status, layer, can_parallel, buckets[], conflict_check}
 - to_mermaid(plan, tasks) → mermaid diagram
 
-## 6.5 Reasoning Stream (from agent-os reasoning_stream.py)
+## 6.5 Reasoning Stream (from agentic reasoning_stream.py)
 Append-only audit trail — successor agents read WHY not just WHAT
 
 NOT: 'Agent said X'
@@ -462,21 +462,21 @@ Methods:
 - get_training_data(min_entries=3) → IER training data [{task_type, agent_sequence, avg_confidence}]
 
 # SECTION 7: LAYER 4 — PRODUCT INTERFACES
-## 7.1 zo.space Routes (from agent-os deployed)
+## 7.1 zo.space Routes (from agentic deployed)
 | Route | Type | Purpose |
 |-------|------|--------|
 | / | page | Homepage (redirect to /agents) |
 | /agents | page | Agent dashboard UI |
-| /aos | page | Admin cockpit |
+| /agentic | page | Admin cockpit |
 | /api/agent-webhook | api | GitHub/file event router |
 | /api/work-queue | api | Task CRUD |
 | /api/agent-inbox | api | INBOX read |
-| /api/agentos/status | api | System health + metrics |
+| /api/agentic/status | api | System health + metrics |
 | /api/crypto/invoice | api | Invoice generation |
 | /api/sensors | api | Sensor telemetry (Irrig8) |
 | /api/physical/pivot | api | Pivot control |
 
-## 7.2 Agent OS v4 Server (from the-agentos-project src/server.ts)
+## 7.2 Agent OS v4 Server (from the-agentic-project src/server.ts)
 Hono/Bun server, routes:
 - GET /health → {status, version, timestamp}
 - GET /status → {employees, integrations, activeWork, pendingTasks, autonomyLevel, uptime, services}
@@ -492,20 +492,20 @@ Hono/Bun server, routes:
 - GET /api/starting5 → {maya, drew, jordan, alex, vance} status
 - POST /api/employees/:id/standup → standup submission
 
-## 7.3 Android AgentOS Panel (from zo-computer-android PIMPED Edition SPEC)
+## 7.3 Android Agentic Panel (from zo-computer-android PIMPED Edition SPEC)
 Native Kotlin/Jetpack Compose implementation
 
 Screens:
 1. SplashScreen — logo animation, biometric prompt
 2. LoginScreen — handle + password + biometric fallback
-3. MainScreen — WebView + AgentOS bottom sheet + nav
+3. MainScreen — WebView + Agentic bottom sheet + nav
 4. SettingsScreen — preferences
 5. AgentDetailScreen — full agent profile
 
 Features:
 - Biometric unlock (EncryptedSharedPreferences)
 - Full-screen WebView (brodiblanco.zo.computer)
-- AgentOS bottom sheet overlay (19-agent roster, active task count, 3 preset task buttons)
+- Agentic bottom sheet overlay (19-agent roster, active task count, 3 preset task buttons)
 - FCM push notifications (P1 escalations, task assignments)
 - BLE sensor pairing (Irrig8 field sensors)
 - Camera (QR code scanning)
@@ -518,9 +518,9 @@ Features:
 - Certificate pinning
 
 ## 7.4 Linux TUI (from zo-computer-linux SPEC.md)
-ncurses dashboard, real-time telemetry + AgentOS status
-Controls: Q/Esc=quit, R=refresh, L=AgentOS live panel
-AgentOS API: https://brodiblanco.zo.space/api/agentos/status
+ncurses dashboard, real-time telemetry + Agentic status
+Controls: Q/Esc=quit, R=refresh, L=Agentic live panel
+Agentic API: https://brodiblanco.zo.space/api/agentic/status
 Polling: 15-second intervals
 
 ## 7.5 VS Code Extension (from instant-ai-widget)
@@ -559,11 +559,11 @@ Every file from every project has ONE canonical destination.
 ## Orchestration Layer
 | Canonical Path | Source | Best Of |
 |---------------|--------|--------|
-| orchestration/ier_router.py | agent-os ier_router.py | contextual bandits, Q-table, epsilon-greedy, audit trail |
-| orchestration/phase_gates.py | agent-os phase_gates.py | conditional gates, suspend-on-fail, resume-on-override |
-| orchestration/workflow_dag.py | agent-os workflow_dag.py | template-based DAGs, IER override, mermaid export |
-| orchestration/coherence_engine.py | agent-os coherence_engine.py | digital/physical/human parallel layers, conflict detection |
-| orchestration/reasoning_stream.py | agent-os reasoning_stream.py | evidence citations, training data generator, audit trail |
+| orchestration/ier_router.py | agentic ier_router.py | contextual bandits, Q-table, epsilon-greedy, audit trail |
+| orchestration/phase_gates.py | agentic phase_gates.py | conditional gates, suspend-on-fail, resume-on-override |
+| orchestration/workflow_dag.py | agentic workflow_dag.py | template-based DAGs, IER override, mermaid export |
+| orchestration/coherence_engine.py | agentic coherence_engine.py | digital/physical/human parallel layers, conflict detection |
+| orchestration/reasoning_stream.py | agentic reasoning_stream.py | evidence citations, training data generator, audit trail |
 
 ## Mesh Layer
 | Canonical Path | Source | Best Of |
@@ -598,7 +598,7 @@ Every file from every project has ONE canonical destination.
 | Canonical Path | Source | Best Of |
 |---------------|--------|--------|
 | clients/android/ | zo-computer-android GitHub repo | native Kotlin, FCM, BLE, biometric, widget, WorkManager sync |
-| clients/linux/ | zo-computer-linux GitHub repo | ncurses TUI, /proc-based telemetry, AgentOS polling |
+| clients/linux/ | zo-computer-linux GitHub repo | ncurses TUI, /proc-based telemetry, Agentic polling |
 | clients/instant-ai-widget/ | instant-ai-widget GitHub repo | VS Code extension, privacy-first routing, Ollama/Claude/GPT support |
 
 ## Infrastructure Layer
@@ -614,17 +614,17 @@ Every file from every project has ONE canonical destination.
 ## Agents Layer
 | Canonical Path | Source | Best Of |
 |---------------|--------|--------|
-| agents/starting5.ts | agent-os starting5-v2.ts | Maya/Drew/Jordan/Alex with evolutionPath (seed→seriesA→seriesB→seriesC→public) |
-| agents/warroom.ts | agent-os warroom.ts | dynamic standup/crisis/celebration message generation |
+| agents/starting5.ts | agentic starting5-v2.ts | Maya/Drew/Jordan/Alex with evolutionPath (seed→seriesA→seriesB→seriesC→public) |
+| agents/warroom.ts | agentic warroom.ts | dynamic standup/crisis/celebration message generation |
 | agents/roster.json | ABE system_manifest.json | 19-agent canonical roster |
-| agents/instructions/ | agent-os agents/instructions/ | 8 agent handbooks (sentinel/pulse/drew/alex/casey/iris/chronicler/erica) |
-| agents/status/ | agent-os agents/status/ | 8 JSON status files |
+| agents/instructions/ | agentic agents/instructions/ | 8 agent handbooks (sentinel/pulse/drew/alex/casey/iris/chronicler/erica) |
+| agents/status/ | agentic agents/status/ | 8 JSON status files |
 
 ## Inbox Layer
 | Canonical Path | Source | Best Of |
 |---------------|--------|--------|
-| inbox/INBOX.md | agent-os AGENT_INBOX.md | single communication thread, P0/P1 escalations |
-| inbox/WORK_QUEUE.jsonl | agent-os WORK_QUEUE.jsonl | central task queue, priority/status/assignee/deadline |
+| inbox/INBOX.md | agentic AGENT_INBOX.md | single communication thread, P0/P1 escalations |
+| inbox/WORK_QUEUE.jsonl | agentic WORK_QUEUE.jsonl | central task queue, priority/status/assignee/deadline |
 
 ## Docs Layer
 | Canonical Path | Source | Best Of |
@@ -798,7 +798,7 @@ Robotic workers: 8-12 WU (lower cognitive load, higher throughput)
 ## 9.16 MCP Mesh Protocol v2 (from MCP Mesh GitHub — 12 fixes applied)
 | Fix | Status | Description |
 |-----|--------|------------|
-| Real Adapter Integration | Applied | Wraps actual AgentOS + Antigravity MCP servers |
+| Real Adapter Integration | Applied | Wraps actual Agentic + Antigravity MCP servers |
 | Heartbeat/Keepalive | Applied | 30s ping/pong with 90s timeout |
 | Schema Validation | Applied | JSON Schema for all messages |
 | Graceful Cleanup | Applied | SIGTERM/SIGINT + destroy() |
@@ -887,7 +887,7 @@ LAYER 0: HARDWARE FABRIC
 
 Delegation: time-bounded, scope-limited, revocable by delegator or Sovereign
 
-## 9.22 Starting 5 Personas + Evolution (from agent-os starting5-v2.ts)
+## 9.22 Starting 5 Personas + Evolution (from agentic starting5-v2.ts)
 Maya Chen (Builder): Founding Engineer -> VP Engineering -> CTO -> CTO Platform -> Chief Product & Technology Officer
 Drew Park (Operator): Operations Lead -> Head of Operations -> COO -> President -> COO Global Scale
 Jordan Okonkwo (Hunter): First Sales -> VP Sales -> CRO -> CCO -> Chief Growth Officer
@@ -895,7 +895,7 @@ Alex Rivera (Architect): Technical Strategy -> Principal Architect -> Chief Arch
 
 WarRoomDecision schema: situation, options[], heroRecommendations{}, consensus?, visionaryOverride?
 
-## 9.23 War Room Chat Simulation (from agent-os warroom.ts)
+## 9.23 War Room Chat Simulation (from agentic warroom.ts)
 generateStandup(context): Drew starts (anxious about deadlines), Maya responds (terse), Jordan brings energy, Alex watches patterns
 generateCelebration(event): Jordan leads celebration, Drew dance party, Maya quietly proud, Alex rare smile
 generateCrisisResponse(crisis): Drew deep breath, Maya cut scope, Jordan buy time, Alex map minimums
@@ -905,7 +905,7 @@ Tables: workforce, companies, blue_ocean_seeds, agent_usage_log, integrations, s
 Shard key: company_id (tenant isolation)
 RQE: record_performance(task_id, action, prompt_len, output_tokens, elapsed_ms)
 
-## 9.25 Event-Driven Scheduling (from agent-os)
+## 9.25 Event-Driven Scheduling (from agentic)
 delivery_method:none = silent agents (no chat spam)
 No 15-minute polling. Agents triggered by:
   - GitHub webhook (Drew: push/PR/issue)
@@ -964,18 +964,18 @@ Security layers:
 |---------|--------|-------|
 | farmsense-retired/ | RETIRED | Byte-identical to irrig8/code; no delta |
 | AgenticBusinessEmpire (repo) | SUPERSEDED | All code merged into Bxthre3/agentic/ |
-| agentos (GitHub bxthre3inc/agentos) | DUPLICATE | v4 vs v6 version drift; canonical is bxthre3inc/agent-os |
+| agentic (GitHub bxthre3inc/agentic) | DUPLICATE | v4 vs v6 version drift; canonical is bxthre3inc/agentic |
 | agentic-orchestration (workspace) | STALLED | Replaced by unified agentic kernel |
 | the-zoe-project | REBRAND STALLED | Zoe concept not progressing; archived workflows |
 | honestly-beautiful/agentic-integration | EMPTY | Directory with no content |
-| Backups/agentos/ | ARCHIVED | Old backup; superseded by canonical |
+| Backups/agentic/ | ARCHIVED | Old backup; superseded by canonical |
 | ALTS-TBD/AgenticBusinessEmpire/ | MERGED | All Python kernel/core/handlers/logic merged into canonical |
 | ALTS-TBD/Helm-the-Business-Automation-Platform | KEEP (public) | MIT licensed demo; Helm UX concepts merged |
 
 ## GitHub Repo Disposition
 | Repo | Action | Reason |
 |------|--------|-------|
-| bxthre3inc/agent-os | RENAME to bxthre3inc/agentic | Canonical |
+| bxthre3inc/agentic | RENAME to bxthre3inc/agentic | Canonical |
 | bxthre3inc/AgenticBusinessEmpire | ARCHIVE | Superseded |
 | bxthre3inc/mcp-mesh | MERGE into agentic | Integrate as agentic/mesh/mcp_mesh_v2/ |
 | bxthre3inc/Distributed-Execution-System | MERGE into agentic | Integrate as agentic/execution/wasm_dag/ |
@@ -1001,7 +1001,7 @@ Goal: Unified kernel running and executing TCOs
 ## Phase 2: Orchestration (Weeks 2-3)
 Goal: All 5 orchestration modules integrated
 
-1. Copy agent-os orchestration (ier_router.py, phase_gates.py, workflow_dag.py, coherence_engine.py, reasoning_stream.py)
+1. Copy agentic orchestration (ier_router.py, phase_gates.py, workflow_dag.py, coherence_engine.py, reasoning_stream.py)
 2. Wire: inference_node -> ier_router -> workflow_dag -> phase_gates -> coherence_engine -> reasoning_stream
 3. Integrate reasoning_stream into phase_gates as context provider
 4. Verify: TASK-GRANT flows through all 5 modules
@@ -1025,8 +1025,8 @@ Goal: Zero hallucination enforcement operational
 ## Phase 5: Product Interfaces (Weeks 6-8)
 Goal: All interfaces consuming unified kernel
 
-1. Migrate /agents and /aos routes to canonical kernel
-2. Build Android AgentOS panel (PIMPED Edition)
+1. Migrate /agents and /agentic routes to canonical kernel
+2. Build Android Agentic panel (PIMPED Edition)
 3. Build Linux TUI dashboard
 4. Wire Starting 5 war room
 
@@ -1059,8 +1059,8 @@ Goal: Infrastructure layer operational
 # SECTION 13: NAMING CONVENTIONS
 | Old Name | Canonical Name |
 |----------|--------------|
-| agent-os | agentic |
-| AgentOS | agentic |
+| agentic | agentic |
+| Agentic | agentic |
 | AOS | agentic |
 | AgenticBusinessEmpire | agentic |
 | SymphonyOS / LiveSymphony | agentic (Symphony module) |

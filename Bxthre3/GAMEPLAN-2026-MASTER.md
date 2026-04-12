@@ -75,7 +75,7 @@ Every BX3 project — from agriculture to gaming — runs on the same internal p
 |---|---|
 **What** | AI-powered business-in-a-box for rural/underserved SMBs  
 **Problem** | Small businesses spend 40% of time on ops; AI tools exist but require technical expertise  
-**Solution** | Pre-configured AgentOS agents + playbooks + templates + support  
+**Solution** | Pre-configured Agentic agents + playbooks + templates + support  
 **Customer** | Rural restaurants, consultants, real estate agents, e-commerce operators  
 **Revenue Model** | Tiered packages: Basic $997 → Professional $2,500 → Ultimate $5,000 → Enterprise $10K+  
 **Funding Angle** | USDA (rural business development), SBA (small business innovation)  

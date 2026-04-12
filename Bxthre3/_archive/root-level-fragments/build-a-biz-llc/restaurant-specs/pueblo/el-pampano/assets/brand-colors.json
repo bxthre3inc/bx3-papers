@@ -1,0 +1,13 @@
+{
+  "restaurant": "El Pampano Foods",
+  "colors": {
+    "primary": "#FDD835",
+    "secondary": "#2E7D32",
+    "accent": "#D32F2F",
+    "background": "#FFFDE7",
+    "text": "#1B5E20"
+  },
+  "extraction_source": "logo_analysis",
+  "collected_date": "2026-04-01",
+  "notes": "Bold Mexican brand with bright yellow, green, and red colors (Mexican flag palette), cartoon pig mascot with sombrero"
+}

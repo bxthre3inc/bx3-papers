@@ -5,7 +5,7 @@
 ### 1. Title Slide
 **Build-A-Biz Packages**
 *Turnkey AI-Powered Business-in-a-Box*
-- Logo: AgentOS x Bxthre3
+- Logo: Agentic x Bxthre3
 - Tagline: Launch your AI-native business in weeks, not months
 
 ---
@@ -30,7 +30,7 @@
 ### 3. The Solution (What It Is)
 
 **Build-A-Biz Packages:**
-A complete packaged solution for launching AI-powered businesses using AgentOS.
+A complete packaged solution for launching AI-powered businesses using Agentic.
 
 **Core components:**
 1. Pre-configured AI agents (not prompts — persistent workers)
@@ -48,7 +48,7 @@ You subscribe → We configure → You launch → Agents run 24/7
 ### 4. The Product Deep-Dive
 
 **What's included:**
-- AgentOS workspace (pre-configured)
+- Agentic workspace (pre-configured)
 - Core agents: Inbox, Tasks, Calendar, Sales, Support
 - Playbook library (digital access)
 - Templates: Pitch deck, one-pager, contracts
@@ -118,13 +118,13 @@ Problem → Solution → Result → Impact
 ### 8. The Team / Credibility
 
 **Bxthre3 Inc:**
-- Built on AgentOS platform (same infrastructure as the product)
+- Built on Agentic platform (same infrastructure as the product)
 - Real AI business, real results
 - Documented methodology, proven playbooks
 
 **Key credentials:**
 - Operating AI-native company since 2025
-- AgentOS platform developers
+- Agentic platform developers
 - Published playbooks and frameworks
 
 ---
@@ -173,7 +173,7 @@ Problem → Solution → Result → Impact
 ## Slide Design Notes
 
 **Visual style:**
-- Dark theme (matches AgentOS branding)
+- Dark theme (matches Agentic branding)
 - Clean, minimal text
 - Icons for features (not stock photos)
 - Charts/diagrams for process flows

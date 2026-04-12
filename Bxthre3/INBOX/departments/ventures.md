@@ -12,8 +12,8 @@
 |------|---------|--------|-------|-------|
 | **T1 - Flagship** | Irrig8 | 🟢 Stable | — | Water Court Jun 29; ARPA-E deadline May 1; 7 patents due May 15 |
 | **T2 - Growth** | Valley Players Club (VPC) | 🟡 Active | ↑ | Gaming ops running; geo-block compliant |
-| **T2 - Growth** | The Starting 5 | 🟢 Active | — | AI co-founders SaaS; AgentOS-powered |
-| **T3 - Emerging** | AgentOS / Zoe | 🟢 Internal | ↑ | Self-Modification Engine + 10-Point Vector integrated |
+| **T2 - Growth** | The Starting 5 | 🟢 Active | — | AI co-founders SaaS; Agentic-powered |
+| **T3 - Emerging** | Agentic / Zoe | 🟢 Internal | ↑ | Self-Modification Engine + 10-Point Vector integrated |
 | **T4 - Incubation** | 9 ThinkTank drafts | 🟡 Pending | — | 111 [TBD] fields awaiting decisions |
 | **T4 - Incubation** | Rain Project (RAIN) | 🟡 Active | — | Regulatory intelligence; Water Court prep |
 | **T4 - Incubation** | ARD / Oferta | 🟡 Stalled | — | Real estate arbitrage; path unclear |
@@ -54,7 +54,7 @@
 
 | Source | Resource | Target | Opportunity |
 |--------|----------|--------|-------------|
-| AgentOS | Self-Modification Engine | All ventures | Embedded AI capability |
+| Agentic | Self-Modification Engine | All ventures | Embedded AI capability |
 | Rain (RAIN) | Water Court intelligence | Irrig8 | Evidence preparation |
 | VPC | Sweepstakes ops playbook | Build-A-Biz | Compliance-by-design |
 | Irrig8 | Sensor data | CARBON8, DATAPIV | Verified data layers |
@@ -66,7 +66,7 @@
 | Priority | Allocation | Venture |
 |----------|------------|---------|
 | P1 | ARPA-E grant (Maya) | Irrig8 |
-| P1 | 7 provisional patents (Raj) | AgentOS |
+| P1 | 7 provisional patents (Raj) | Agentic |
 | P1 | Water Court evidence (RAIN) | Irrig8 |
 | P2 | ThinkTank TBD resolution | brodiblanco |
 | P2 | Trenchbabys decision | brodiblanco |
@@ -87,7 +87,7 @@
 | Vertical | Landscape |
 |----------|-----------|
 | **AgTech / Precision Ag** | Irrig8 + CARBON8 address SLV center-pivot + carbon verification. DATAPIV positions Bxthre3 as ag data layer. |
-| **SaaS / AI Platforms** | AgentOS is internal infrastructure. Starting 5 is the external product layer. |
+| **SaaS / AI Platforms** | Agentic is internal infrastructure. Starting 5 is the external product layer. |
 | **Gaming / Entertainment** | VPC operates legally in CO under cash-in-person model. Compliance track clear. |
 | **Infrastructure / Dev Tools** | MCP mesh + self-modification engine are differentiated. IP-protected. |
 

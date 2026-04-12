@@ -86,10 +86,10 @@
 |---|---|
 | strategic_fit_overall | 6 |
 | fit_irrig8 | 3 |
-| fit_agentos | 6 |
+| fit_agentic | 6 |
 | fit_valley_players | 1 |
 | priority | P3 |
-| priority_rationale | Fit score 6/10 — AgentOS (infrastructure monitoring, AI) |
+| priority_rationale | Fit score 6/10 — Agentic (infrastructure monitoring, AI) |
 | funder_relationship_score | 1 |
 | estimated_applicants | 100 |
 | estimated_award_rate | 15 |

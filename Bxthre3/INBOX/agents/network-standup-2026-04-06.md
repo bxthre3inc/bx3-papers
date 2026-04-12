@@ -98,7 +98,7 @@
 | **Starting 5** | Angels list for Starting 5 | 🔴 Need contact list |
 | **RAIN** | Government/Econ Dev partners | 🔴 Awaiting list |
 | **Irrig8** | Ag co-op investor relationships | 🔴 Awaiting list |
-| **Zoe/AgentOS** | Open source supporters | 🔴 Awaiting list |
+| **Zoe/Agentic** | Open source supporters | 🔴 Awaiting list |
 
 ---
 
@@ -108,5 +108,5 @@
 
 ---
 
-*Network — Investor Relations Manager | Bxthre3 Inc / AgentOS Finance Division*
+*Network — Investor Relations Manager | Bxthre3 Inc / Agentic Finance Division*
 *Report Time: 2026-04-06 08:15 MT*

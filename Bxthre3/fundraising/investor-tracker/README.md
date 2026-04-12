@@ -112,4 +112,4 @@ This is the master investor target universe for Bxthre3 Inc. Current size: **42 
 
 ---
 
-*Reach — VP Investor Outreach — Bxthre3 Inc / AgentOS Finance Division*
+*Reach — VP Investor Outreach — Bxthre3 Inc / Agentic Finance Division*

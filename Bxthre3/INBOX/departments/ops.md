@@ -50,7 +50,7 @@
 ### Submodule Status (No Issues)
 All 5 submodules are properly initialized and at expected commits:
 - `Bxthre3/projects/mcp-mesh` — `6f5904e` (heads/main)
-- `Bxthre3/projects/the-agentos-project` — `510ab73` (v0.9.2-4)
+- `Bxthre3/projects/the-agentic-project` — `510ab73` (v0.9.2-4)
 - `Bxthre3/projects/the-irrig8-project` — `7c8ff68` (remotes/origin/HEAD)
 - `Bxthre3/projects/the-rain-project` — `98a531c` (heads/main)
 - `Bxthre3/projects/the-valleyplayersclub-project` — `4f16172` (remotes/origin/HEAD)
@@ -93,11 +93,11 @@ No nested `Bxthre3` directories found under `Bxthre3/projects/`.
 
 ---
 
-### Issue 3: Uncommitted Submodule Changes — the-agentos-project
+### Issue 3: Uncommitted Submodule Changes — the-agentic-project
 - **Severity:** HIGH
-- **Path:** `Bxthre3/projects/the-agentos-project`
+- **Path:** `Bxthre3/projects/the-agentic-project`
 - **Description:** Submodule shows modified `.gitmodules`, `AmbientCapture-LOG.md`, `AGENTS.md`, and a deleted `ARCHIVE/mcp-mesh_20260330`. Cross-linked submodule state is dirty.
-- **Recommended Action:** Commit inside the-agentos-project first. The cross-linked `.gitmodules` modification suggests the parent repo and this submodule share git history — investigate before forcing any resets.
+- **Recommended Action:** Commit inside the-agentic-project first. The cross-linked `.gitmodules` modification suggests the parent repo and this submodule share git history — investigate before forcing any resets.
 
 ---
 
@@ -119,7 +119,7 @@ No nested `Bxthre3` directories found under `Bxthre3/projects/`.
 
 ### Issue 6: Truncated Directory Fragments at Workspace Root
 - **Severity:** LOW
-- **Paths:** `Bxthre3/projects/ard-pro`, `Bxthre3/projects/ard-project/`, `Bxthre3/projects/flee`, `Bxthre3/projects/the`, `Bxthre3/projects/the-ag`, `Bxthre3/projects/the-agentos-pro`, `Bxthre3/projects/the-rain-pro`, `Bxthre3/projects/the-start`, `Bxthre3/projects/the-trench`, `Bxthre3/projects/trenchbabys-project/`, `Bxthre3/projects/valley`, `Bxthre3/projects/zo-computer-android/`, `Bxthre3/projects/zo-space-android/`, `Bxthre3/projects/zoe-seo/`
+- **Paths:** `Bxthre3/projects/ard-pro`, `Bxthre3/projects/ard-project/`, `Bxthre3/projects/flee`, `Bxthre3/projects/the`, `Bxthre3/projects/the-ag`, `Bxthre3/projects/the-agentic-pro`, `Bxthre3/projects/the-rain-pro`, `Bxthre3/projects/the-start`, `Bxthre3/projects/the-trench`, `Bxthre3/projects/trenchbabys-project/`, `Bxthre3/projects/valley`, `Bxthre3/projects/zo-computer-android/`, `Bxthre3/projects/zo-space-android/`, `Bxthre3/projects/zoe-seo/`
 - **Description:** Many truncated or oddly-named project directory fragments at workspace root level and inside `Bxthre3/projects/`. These suggest interrupted copy/move operations or partial project creation.
 - **Recommended Action:** Inspect each — consolidate anything with valid content into `Bxthre3/projects/<canonical-name>/`. Delete anything that is empty or junk. These should not exist as sibling fragments.
 

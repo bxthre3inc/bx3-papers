@@ -17,7 +17,7 @@
 ## 1. Definition of Confidential Information
 
 "Confidential Information" means any and all non-public information disclosed by Disclosing Party to Receiving Party, including but not limited to:
-- Product specifications (Irrig8, AgentOS, etc.)
+- Product specifications (Irrig8, Agentic, etc.)
 - Financial projections
 - Customer lists
 - Trade secrets

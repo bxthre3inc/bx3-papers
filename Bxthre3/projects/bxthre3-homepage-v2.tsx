@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 
 const brands = [
-  { name: "AgentOS", role: "AI Workforce Platform", icon: Cpu, color: "cyan", desc: "Deterministic agent orchestration", slug: "agentos" },
+  { name: "Agentic", role: "AI Workforce Platform", icon: Cpu, color: "cyan", desc: "Deterministic agent orchestration", slug: "agentic" },
   { name: "Irrig8", role: "Precision Agriculture", icon: Droplets, color: "emerald", desc: "Satellite-driven resource intelligence", slug: "irrig8" },
   { name: "VPC", role: "Entertainment & Community", icon: Sparkles, color: "violet", desc: "Interactive experiences & esports", slug: "vpc" }
 ];
@@ -44,7 +44,7 @@ function NewsletterSignup() {
         <Mail className="w-6 h-6 text-cyan-400" />
         <h3 className="text-xl font-bold">Stay in the Loop</h3>
       </div>
-      <p className="text-zinc-400 mb-6">Get AgentOS release notes, venture updates, and edge tech insights.</p>
+      <p className="text-zinc-400 mb-6">Get Agentic release notes, venture updates, and edge tech insights.</p>
       <form onSubmit={submit} className="flex gap-3">
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@company.com" className="flex-1 px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-sm focus:border-cyan-400 focus:outline-none transition" />
         <button type="submit" className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 rounded-lg text-sm font-medium hover:bg-cyan-500/20 transition">{ok ? "Subscribed!" : "Subscribe"}</button>
@@ -155,7 +155,7 @@ export default function Bxthre3Home() {
             <div className="flex items-center gap-4 mb-6">
               <Boxes className="w-8 h-8 text-cyan-400" />
               <div>
-                <h2 className="text-2xl font-bold">AgentOS</h2>
+                <h2 className="text-2xl font-bold">Agentic</h2>
                 <p className="text-zinc-500">The platform powering all Bxthre3 ventures</p>
               </div>
             </div>

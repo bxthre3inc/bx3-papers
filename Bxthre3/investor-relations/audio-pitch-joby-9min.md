@@ -16,9 +16,9 @@
 
 *[Narrative — personal history, clear arc]*
 
-"So Bxthre3 Inc is structured as a Delaware C-Corp holding company. Think of it like a venture studio. We have a core platform called AgentOS — that's the engine — and then multiple operating subsidiaries that run on top of it.
+"So Bxthre3 Inc is structured as a Delaware C-Corp holding company. Think of it like a venture studio. We have a core platform called Agentic — that's the engine — and then multiple operating subsidiaries that run on top of it.
 
-AgentOS is essentially an AI workforce orchestration system. I've been building this for two years. The key thing that makes it different: it's deterministic, not probabilistic. It doesn't use large language models for decision-making. It uses state machines, event cascades, and forensic audit trails. Meaning: it can't hallucinate, every decision is auditable, and it can run for forty-eight hours without an internet connection.
+Agentic is essentially an AI workforce orchestration system. I've been building this for two years. The key thing that makes it different: it's deterministic, not probabilistic. It doesn't use large language models for decision-making. It uses state machines, event cascades, and forensic audit trails. Meaning: it can't hallucinate, every decision is auditable, and it can run for forty-eight hours without an internet connection.
 
 That last part matters because a lot of our customers — farmers, rural businesses — they don't have reliable connectivity.
 

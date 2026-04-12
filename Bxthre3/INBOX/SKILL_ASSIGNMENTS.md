@@ -1,4 +1,4 @@
-# Skill Registry — AgentOS
+# Skill Registry — Agentic
 
 Mapping agents to executable skills.
 

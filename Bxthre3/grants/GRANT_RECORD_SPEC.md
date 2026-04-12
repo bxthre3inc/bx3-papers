@@ -209,7 +209,7 @@ personnel:
 # FIT SCORES (1-10) per Bx3 vector
 strategic_fit_overall: 9
 fit_irrig8: 10               # Irrig8 product alignment
-fit_agentos: 3               # AgentOS alignment
+fit_agentic: 3               # Agentic alignment
 fit_valley_players: 1         # Gaming platform alignment
 fit_ard: 2                   # ARD real estate alignment
 fit_starting5: 1             # Starting 5 alignment
@@ -276,7 +276,7 @@ improvement_for_next: []
 # WHAT MAKES US UNIQUELY STRONG FOR THIS GRANT
 differentiators:
   - "Only company with live IoT sensor deployment in San Luis Valley — real-time water use data from 50+ center-pivot systems"
-  - "Bx3 AgentOS manages 25+ AI employees — proof of AI/ML research management capability"
+  - "Bx3 Agentic manages 25+ AI employees — proof of AI/ML research management capability"
   - "Colorado state legislator endorsement for water conservation (letter on file)"
   - "University of Colorado Boulder research partnership — Dr. Sarah Chen, Precision Agriculture Lab"
 

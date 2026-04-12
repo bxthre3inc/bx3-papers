@@ -43,9 +43,9 @@ We have generalized the \"Resolution Pop\" from a UI trick into a
 -   **High Fidelity (The Provision):** 1m data + Cognitive Math +
     > Actuation Utility. This is what the Subscriber pays for.
 
-## 4. The AgentOS Operating Model
+## 4. The Agentic Operating Model
 
-**AgentOS** isn\'t just a dashboard; it is the **Grid Controller** for
+**Agentic** isn\'t just a dashboard; it is the **Grid Controller** for
 this utility.
 
 -   **Oracle** manages the \"Library\" (SDW).

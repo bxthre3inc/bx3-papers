@@ -1,0 +1,909 @@
+{
+  "timestamp": "2026-04-07T02:00:19.667944",
+  "period": "last_7_days",
+  "execution": {
+    "p0_completed": 3,
+    "p1_completed": 881,
+    "p0_active_backlog": 3,
+    "p1_active_backlog": 4,
+    "total_completed": 884,
+    "total_active": 7
+  },
+  "velocity_score": 99.6,
+  "velocity_rating": "HIGH",
+  "by_agent": {
+    "vas-partner-matcher": {
+      "completed": 0,
+      "active": 0
+    },
+    "brodiblanco": {
+      "completed": 0,
+      "active": 0
+    },
+    "taylor": {
+      "completed": 0,
+      "active": 0
+    },
+    "ambient_capture": {
+      "completed": 11,
+      "active": 0
+    },
+    "purchase": {
+      "completed": 0,
+      "active": 0
+    },
+    "orderapp-prospector": {
+      "completed": 17,
+      "active": 0
+    },
+    "irrigation-tropical": {
+      "completed": 0,
+      "active": 0
+    },
+    "press": {
+      "completed": 9,
+      "active": 0
+    },
+    "vas-orchestrator": {
+      "completed": 4,
+      "active": 0
+    },
+    "oracle": {
+      "completed": 0,
+      "active": 0
+    },
+    "learn": {
+      "completed": 4,
+      "active": 0
+    },
+    "bridge": {
+      "completed": 4,
+      "active": 0
+    },
+    "sentinel": {
+      "completed": 16,
+      "active": 0
+    },
+    "backup": {
+      "completed": 9,
+      "active": 0
+    },
+    "trenchbabys": {
+      "completed": 0,
+      "active": 0
+    },
+    "rain": {
+      "completed": 1,
+      "active": 0
+    },
+    "iris": {
+      "completed": 2,
+      "active": 1
+    },
+    "irrigation-arid": {
+      "completed": 0,
+      "active": 0
+    },
+    "sam": {
+      "completed": 0,
+      "active": 0
+    },
+    "split": {
+      "completed": 2,
+      "active": 0
+    },
+    "nexus": {
+      "completed": 0,
+      "active": 0
+    },
+    "SCHEDULER_LOG": {
+      "completed": 42,
+      "active": 0
+    },
+    "field-ops": {
+      "completed": 1,
+      "active": 0
+    },
+    "interlocker": {
+      "completed": 2,
+      "active": 0
+    },
+    "gavel": {
+      "completed": 0,
+      "active": 0
+    },
+    "slv-correlation": {
+      "completed": 1,
+      "active": 0
+    },
+    "zoe": {
+      "completed": 14,
+      "active": 0
+    },
+    "locale": {
+      "completed": 1,
+      "active": 0
+    },
+    "rbf-agent": {
+      "completed": 0,
+      "active": 0
+    },
+    "irrig8_slv_report_20260405_0924": {
+      "completed": 5,
+      "active": 0
+    },
+    "android-lead": {
+      "completed": 3,
+      "active": 0
+    },
+    "qa-lead": {
+      "completed": 3,
+      "active": 0
+    },
+    "irrigation-grid": {
+      "completed": 1,
+      "active": 0
+    },
+    "slv-sensor-correlation-specialist": {
+      "completed": 7,
+      "active": 0
+    },
+    "vpc": {
+      "completed": 0,
+      "active": 0
+    },
+    "archivist": {
+      "completed": 11,
+      "active": 0
+    },
+    "AMBIENT_CAPTURE": {
+      "completed": 48,
+      "active": 0
+    },
+    "slv-sensor-corr": {
+      "completed": 1,
+      "active": 0
+    },
+    "irrigation-coastal": {
+      "completed": 0,
+      "active": 0
+    },
+    "grants-hq": {
+      "completed": 0,
+      "active": 0
+    },
+    "shadow-engineer": {
+      "completed": 0,
+      "active": 0
+    },
+    "casey": {
+      "completed": 2,
+      "active": 1
+    },
+    "slv-sensor-specialist": {
+      "completed": 2,
+      "active": 0
+    },
+    "optimize": {
+      "completed": 1,
+      "active": 0
+    },
+    "grader": {
+      "completed": 1,
+      "active": 0
+    },
+    "mesh-engineer": {
+      "completed": 9,
+      "active": 0
+    },
+    "ambientcapture": {
+      "completed": 7,
+      "active": 0
+    },
+    "maya": {
+      "completed": 2,
+      "active": 0
+    },
+    "ambient-capture": {
+      "completed": 31,
+      "active": 0
+    },
+    "insight": {
+      "completed": 1,
+      "active": 0
+    },
+    "claim": {
+      "completed": 1,
+      "active": 0
+    },
+    "irrigation-vertical": {
+      "completed": 0,
+      "active": 0
+    },
+    "pipeline": {
+      "completed": 2,
+      "active": 0
+    },
+    "stage": {
+      "completed": 0,
+      "active": 0
+    },
+    "irrigation-team": {
+      "completed": 0,
+      "active": 0
+    },
+    "all-agents": {
+      "completed": 0,
+      "active": 1
+    },
+    "slv-sensor-correlation": {
+      "completed": 5,
+      "active": 0
+    },
+    "network": {
+      "completed": 0,
+      "active": 0
+    },
+    "irrigation-framework": {
+      "completed": 0,
+      "active": 0
+    },
+    "raj": {
+      "completed": 1,
+      "active": 0
+    },
+    "vault": {
+      "completed": 7,
+      "active": 0
+    },
+    "navigate": {
+      "completed": 0,
+      "active": 0
+    },
+    "shelf": {
+      "completed": 0,
+      "active": 0
+    },
+    "cartographer": {
+      "completed": 1,
+      "active": 0
+    },
+    "LF-AGENT": {
+      "completed": 2,
+      "active": 0
+    },
+    "pulse-health-20260330-0600": {
+      "completed": 7,
+      "active": 0
+    },
+    "rank": {
+      "completed": 0,
+      "active": 0
+    },
+    "harvest": {
+      "completed": 2,
+      "active": 0
+    },
+    "reserve": {
+      "completed": 0,
+      "active": 0
+    },
+    "pulse": {
+      "completed": 2,
+      "active": 0
+    },
+    "funding-orchestrator": {
+      "completed": 0,
+      "active": 0
+    },
+    "government-affairs": {
+      "completed": 11,
+      "active": 0
+    },
+    "irrigation-greenhouse": {
+      "completed": 0,
+      "active": 0
+    },
+    "slv sensor correlation": {
+      "completed": 1,
+      "active": 0
+    },
+    "balance": {
+      "completed": 0,
+      "active": 0
+    },
+    "scout": {
+      "completed": 1,
+      "active": 0
+    },
+    "vas-revenue-hunter": {
+      "completed": 0,
+      "active": 0
+    },
+    "fabricator": {
+      "completed": 1,
+      "active": 0
+    },
+    "government": {
+      "completed": 3,
+      "active": 0
+    },
+    "devops": {
+      "completed": 0,
+      "active": 0
+    },
+    "INBOX_ROUTING_IR": {
+      "completed": 0,
+      "active": 0
+    },
+    "grade": {
+      "completed": 0,
+      "active": 0
+    },
+    "budget": {
+      "completed": 12,
+      "active": 0
+    },
+    "vas-data-arbitrage": {
+      "completed": 13,
+      "active": 0
+    },
+    "vance": {
+      "completed": 0,
+      "active": 0
+    },
+    "slv-sensor": {
+      "completed": 3,
+      "active": 0
+    },
+    "shield": {
+      "completed": 0,
+      "active": 0
+    },
+    "forecast": {
+      "completed": 1,
+      "active": 0
+    },
+    "reseller": {
+      "completed": 0,
+      "active": 0
+    },
+    "pitch": {
+      "completed": 2,
+      "active": 0
+    },
+    "irrigation-temperate": {
+      "completed": 0,
+      "active": 0
+    },
+    "tribe": {
+      "completed": 3,
+      "active": 0
+    },
+    "soil-variability-mapper": {
+      "completed": 0,
+      "active": 0
+    },
+    "test": {
+      "completed": 0,
+      "active": 0
+    },
+    "stack": {
+      "completed": 9,
+      "active": 0
+    },
+    "recon": {
+      "completed": 0,
+      "active": 0
+    },
+    "dev": {
+      "completed": 23,
+      "active": 0
+    },
+    "deal-agent": {
+      "completed": 0,
+      "active": 0
+    },
+    "slv sensor correlation specialist": {
+      "completed": 1,
+      "active": 0
+    },
+    "vas-integration-scout": {
+      "completed": 7,
+      "active": 0
+    },
+    "operations": {
+      "completed": 11,
+      "active": 0
+    },
+    "source": {
+      "completed": 0,
+      "active": 0
+    },
+    "deliver": {
+      "completed": 6,
+      "active": 2
+    },
+    "reseller-standup-2026-04-06": {
+      "completed": 2,
+      "active": 0
+    },
+    "irrig8": {
+      "completed": 0,
+      "active": 0
+    },
+    "theo": {
+      "completed": 0,
+      "active": 0
+    },
+    "lens": {
+      "completed": 0,
+      "active": 0
+    },
+    "keeper": {
+      "completed": 1,
+      "active": 0
+    },
+    "pulse-health-log": {
+      "completed": 12,
+      "active": 0
+    },
+    "restaurant-scout": {
+      "completed": 50,
+      "active": 0
+    },
+    "slv_sensor_correlation": {
+      "completed": 1,
+      "active": 0
+    },
+    "ticket": {
+      "completed": 1,
+      "active": 0
+    },
+    "sbir-agent": {
+      "completed": 0,
+      "active": 0
+    },
+    "atlas": {
+      "completed": 0,
+      "active": 0
+    },
+    "architect": {
+      "completed": 7,
+      "active": 0
+    },
+    "reach": {
+      "completed": 4,
+      "active": 0
+    },
+    "patent-agent": {
+      "completed": 4,
+      "active": 0
+    },
+    "vas-data-arbitrage_TARGETING": {
+      "completed": 0,
+      "active": 0
+    },
+    "scout-qa": {
+      "completed": 7,
+      "active": 0
+    },
+    "drew": {
+      "completed": 8,
+      "active": 0
+    },
+    "prime": {
+      "completed": 2,
+      "active": 0
+    },
+    "model": {
+      "completed": 2,
+      "active": 0
+    },
+    "network-standup-2026-04-06": {
+      "completed": 6,
+      "active": 0
+    },
+    "slv-correlation-specialist": {
+      "completed": 1,
+      "active": 0
+    },
+    "AMBIENT_CAPTURE-RUN-2026-04-06-1805": {
+      "completed": 14,
+      "active": 0
+    },
+    "ops": {
+      "completed": 5,
+      "active": 0
+    },
+    "marketing": {
+      "completed": 0,
+      "active": 0
+    },
+    "community-standup-2026-04-02": {
+      "completed": 1,
+      "active": 0
+    },
+    "channel-standup-2026-04-06": {
+      "completed": 14,
+      "active": 0
+    },
+    "corp-dev-standup-2026-04-06": {
+      "completed": 4,
+      "active": 0
+    },
+    "professional-services-standup-2026-04-03": {
+      "completed": 2,
+      "active": 0
+    },
+    "procurement-standup-2026-04-01": {
+      "completed": 4,
+      "active": 0
+    },
+    "channel-standup-2026-03-24": {
+      "completed": 1,
+      "active": 0
+    },
+    "solutions-engineering-standup-2026-04-02": {
+      "completed": 1,
+      "active": 0
+    },
+    "content-studio": {
+      "completed": 0,
+      "active": 0
+    },
+    "corp-dev": {
+      "completed": 2,
+      "active": 0
+    },
+    "blue-ocean": {
+      "completed": 3,
+      "active": 0
+    },
+    "growth": {
+      "completed": 0,
+      "active": 0
+    },
+    "government-standup-TEMPLATE": {
+      "completed": 0,
+      "active": 0
+    },
+    "accounting": {
+      "completed": 0,
+      "active": 0
+    },
+    "government-standup-2026-04-03": {
+      "completed": 3,
+      "active": 0
+    },
+    "affiliate-standup-TEMPLATE": {
+      "completed": 0,
+      "active": 0
+    },
+    "channel-standup-2026-04-01": {
+      "completed": 1,
+      "active": 0
+    },
+    "rd": {
+      "completed": 0,
+      "active": 0
+    },
+    "events-standup-2026-03-31": {
+      "completed": 0,
+      "active": 0
+    },
+    "localization": {
+      "completed": 1,
+      "active": 0
+    },
+    "affiliate-standup-2026-03-30": {
+      "completed": 0,
+      "active": 0
+    },
+    "grants-firewood-budget-justification": {
+      "completed": 0,
+      "active": 0
+    },
+    "channel-standup-2026-03-31": {
+      "completed": 1,
+      "active": 0
+    },
+    "solutions-engineering": {
+      "completed": 3,
+      "active": 0
+    },
+    "procurement": {
+      "completed": 0,
+      "active": 0
+    },
+    "channel-standup-2026-04-03": {
+      "completed": 12,
+      "active": 0
+    },
+    "legal": {
+      "completed": 15,
+      "active": 0
+    },
+    "finance-standup-2026-04-03": {
+      "completed": 5,
+      "active": 0
+    },
+    "learning": {
+      "completed": 1,
+      "active": 0
+    },
+    "comms": {
+      "completed": 0,
+      "active": 0
+    },
+    "sales": {
+      "completed": 1,
+      "active": 0
+    },
+    "community": {
+      "completed": 1,
+      "active": 0
+    },
+    "bi": {
+      "completed": 4,
+      "active": 0
+    },
+    "finance": {
+      "completed": 0,
+      "active": 0
+    },
+    "partnerships": {
+      "completed": 0,
+      "active": 0
+    },
+    "seo-sem-standup-2026-04-01": {
+      "completed": 6,
+      "active": 0
+    },
+    "fpa": {
+      "completed": 0,
+      "active": 0
+    },
+    "professional-services-standup-2026-04-02": {
+      "completed": 8,
+      "active": 0
+    },
+    "deals": {
+      "completed": 0,
+      "active": 0
+    },
+    "procurement-standup-2026-04-03": {
+      "completed": 0,
+      "active": 0
+    },
+    "trust-safety-standup-2026-03-31": {
+      "completed": 6,
+      "active": 0
+    },
+    "growth-standup-2026-04-06": {
+      "completed": 1,
+      "active": 0
+    },
+    "design": {
+      "completed": 2,
+      "active": 0
+    },
+    "grants": {
+      "completed": 9,
+      "active": 0
+    },
+    "executive": {
+      "completed": 4,
+      "active": 0
+    },
+    "product-ops": {
+      "completed": 0,
+      "active": 0
+    },
+    "integrations": {
+      "completed": 0,
+      "active": 0
+    },
+    "government-standup-2026-04-01": {
+      "completed": 4,
+      "active": 0
+    },
+    "finance-standup-2026-04-01": {
+      "completed": 0,
+      "active": 0
+    },
+    "security": {
+      "completed": 21,
+      "active": 0
+    },
+    "hr-weekly-2026-03-24": {
+      "completed": 3,
+      "active": 1
+    },
+    "seo-sem": {
+      "completed": 0,
+      "active": 0
+    },
+    "ventures": {
+      "completed": 1,
+      "active": 0
+    },
+    "ir": {
+      "completed": 0,
+      "active": 0
+    },
+    "engineering": {
+      "completed": 21,
+      "active": 0
+    },
+    "affiliate-standup-2026-03-31": {
+      "completed": 2,
+      "active": 0
+    },
+    "retail": {
+      "completed": 0,
+      "active": 0
+    },
+    "trust-safety-standup-2026-04-03": {
+      "completed": 14,
+      "active": 0
+    },
+    "grants-firewood-marketplace": {
+      "completed": 3,
+      "active": 0
+    },
+    "corp-dev-standup-2026-04-02": {
+      "completed": 5,
+      "active": 0
+    },
+    "brand": {
+      "completed": 0,
+      "active": 0
+    },
+    "procurement-standup-2026-03-31": {
+      "completed": 3,
+      "active": 0
+    },
+    "government-standup-2026-04-02": {
+      "completed": 3,
+      "active": 0
+    },
+    "events-standup-2026-04-01": {
+      "completed": 0,
+      "active": 0
+    },
+    "events-standup-TEMPLATE": {
+      "completed": 0,
+      "active": 0
+    },
+    "affiliate-standup-2026-04-02": {
+      "completed": 2,
+      "active": 0
+    },
+    "government-standup-2026-03-31": {
+      "completed": 1,
+      "active": 0
+    },
+    "procurement-standup-TEMPLATE": {
+      "completed": 0,
+      "active": 0
+    },
+    "regulatory": {
+      "completed": 2,
+      "active": 0
+    },
+    "localization-standup-2026-03-31": {
+      "completed": 1,
+      "active": 0
+    },
+    "RD": {
+      "completed": 0,
+      "active": 0
+    },
+    "platform-standup-2026-04-06": {
+      "completed": 16,
+      "active": 0
+    },
+    "departments": {
+      "completed": 1,
+      "active": 0
+    },
+    "government-standup-2026-03-30": {
+      "completed": 2,
+      "active": 0
+    },
+    "investor-relations": {
+      "completed": 0,
+      "active": 0
+    },
+    "seo-sem-standup-TEMPLATE": {
+      "completed": 0,
+      "active": 0
+    },
+    "hr": {
+      "completed": 8,
+      "active": 0
+    },
+    "affiliate-standup-2026-04-03": {
+      "completed": 2,
+      "active": 0
+    },
+    "partnership-evaluation-framework": {
+      "completed": 3,
+      "active": 0
+    },
+    "weekly-partnership-pipeline-2026-04-01": {
+      "completed": 0,
+      "active": 0
+    },
+    "corp-dev-standup-2026-03-31": {
+      "completed": 2,
+      "active": 0
+    },
+    "channel-standup-2026-03-25": {
+      "completed": 3,
+      "active": 0
+    },
+    "grants-wood-innovations-concept-paper": {
+      "completed": 13,
+      "active": 0
+    },
+    "affiliate-standup-2026-04-06": {
+      "completed": 5,
+      "active": 0
+    },
+    "trust-safety-standup-2026-04-02": {
+      "completed": 13,
+      "active": 0
+    },
+    "seo-sem-standup-2026-03-31": {
+      "completed": 8,
+      "active": 0
+    },
+    "affiliate": {
+      "completed": 0,
+      "active": 0
+    },
+    "localization-standup-2026-04-01": {
+      "completed": 0,
+      "active": 0
+    },
+    "professional-services": {
+      "completed": 2,
+      "active": 0
+    },
+    "weekly-partnership-pipeline-2026-03-31": {
+      "completed": 0,
+      "active": 0
+    },
+    "seo-sem-keyword-maps-2026-04-01": {
+      "completed": 0,
+      "active": 0
+    },
+    "treasury": {
+      "completed": 0,
+      "active": 0
+    },
+    "corp-dev-standup-2026-04-03": {
+      "completed": 2,
+      "active": 0
+    },
+    "events": {
+      "completed": 2,
+      "active": 0
+    },
+    "trust-safety-standup-2026-04-06": {
+      "completed": 27,
+      "active": 0
+    },
+    "channel": {
+      "completed": 0,
+      "active": 0
+    }
+  },
+  "interpretation": {
+    "high_velocity": "Tasks completing faster than new ones created \u2014 shipping",
+    "low_velocity": "Backlog growing faster than completion \u2014 bottleneck detected",
+    "zero_velocity": "No completion signals detected \u2014 work stalled"
+  }
+}

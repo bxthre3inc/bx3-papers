@@ -1,13 +1,13 @@
 # Bxthre3 Workspace Assessment
 **Assessed:** 2026-03-25
-**Conducted by:** Press — Head of Press & Communications / AgentOS
+**Conducted by:** Press — Head of Press & Communications / Agentic
 **Scope:** Full workspace audit — structure, naming, git hygiene, INBOX, tooling, documentation
 
 ---
 
 ## Executive Summary
 
-The Bxthre3 workspace has significant structural integrity issues stemming from organic growth without governance. 32 of 44 agent INBOXes were inactive noise. Irrig8 references persisted past brand retirement. A nested `Bxthre3/Bxthre3/` directory violated single-level structure. APK artifacts lived at workspace root instead of project directories. Git submodule state was stale. That said: the core project portfolio is real, AgentOS is genuinely built and shipping APKs, Irrig8 has active IP strategy, and the INBOX routing system is sound.
+The Bxthre3 workspace has significant structural integrity issues stemming from organic growth without governance. 32 of 44 agent INBOXes were inactive noise. Irrig8 references persisted past brand retirement. A nested `Bxthre3/Bxthre3/` directory violated single-level structure. APK artifacts lived at workspace root instead of project directories. Git submodule state was stale. That said: the core project portfolio is real, Agentic is genuinely built and shipping APKs, Irrig8 has active IP strategy, and the INBOX routing system is sound.
 
 **Overall Score: 4.8 / 10**
 
@@ -37,7 +37,7 @@ The Bxthre3 workspace has significant structural integrity issues stemming from 
 
 **Strengths:**
 - 12 real, named projects with substantive content
-- 4 projects actively deployed: Irrig8 (IP), VPC (live site + APK), RAIN (beta), AgentOS (APK live)
+- 4 projects actively deployed: Irrig8 (IP), VPC (live site + APK), RAIN (beta), Agentic (APK live)
 - Project naming convention (`the-{name}-project/`) is consistent and professional
 - PUBLIC projects clearly differentiated from internal infrastructure
 
@@ -67,10 +67,10 @@ The Bxthre3 workspace has significant structural integrity issues stemming from 
 **Weaknesses:**
 - Irrig8 appeared in README until 2026-03-25 (fixed today) ❌
 - `VPC-Native/` folder vs `the-valleyplayersclub-project/android-native/` — two different Android structures
-- `AgentOS-Native-Source/` vs `the-agentos-native/` — two different AgentOS Android structures
+- `Agentic-Native-Source/` vs `the-agentic-native/` — two different Agentic Android structures
 - Agent naming inconsistency: `Palette.md` (capitalized) vs `palette.md` (lowercase) — both existed in INBOX
 - Zo Space routes use no consistent slug convention: `/invest`, `/projects/rain`, `/projects/valleyplayersclub/invest`, `/investor-deck`
-- Hosted service names: `agentos-mobile`, `valley-players-club`, `zo-space` — inconsistent with project naming
+- Hosted service names: `agentic-mobile`, `valley-players-club`, `zo-space` — inconsistent with project naming
 
 **Action:** Standardize on hyphenated lowercase slugs everywhere. Pick ONE Android project structure per product.
 
@@ -88,12 +88,12 @@ The Bxthre3 workspace has significant structural integrity issues stemming from 
 - Nested `Bxthre3/Bxthre3/` submodule reference in `.gitmodules` (fixed today)
 - `VPC-Native/` folder (Gradle source) at workspace root — should be inside `the-valleyplayersclub-project/`
 - 32 archived agent INBOX files staged via filesystem move (not git mv) — risk of future confusion
-- Submodules `the-agentos-project` and `the-irrig8-project` show as dirty — uncommitted work inside submodule
+- Submodules `the-agentic-project` and `the-irrig8-project` show as dirty — uncommitted work inside submodule
 - `irrig8-code/` folder still exists at workspace root with active Postgres data — legacy artifact
 
 **Findings:**
 ```
- M  Bxthre3/projects/the-agentos-project   (submodule dirty)
+ M  Bxthre3/projects/the-agentic-project   (submodule dirty)
  M  Bxthre3/projects/the-irrig8-project    (submodule dirty)
  M  Bxthre3/projects/the-valleyplayersclub-project
 ```
@@ -163,14 +163,14 @@ The Bxthre3 workspace has significant structural integrity issues stemming from 
 **Strengths:**
 - Zo Space (managed) — zero-config, just works ✅
 - Zo Sites available for complex projects ✅
-- AgentOS Android APK built and functional ✅
+- Agentic Android APK built and functional ✅
 - VPC Android APK built and functional ✅
 - Capacitor and native Android Kotlin both working ✅
 - RAIN deployed live at `/projects/rain` ✅
 
 **Weaknesses:**
 - Two different Android project structures for VPC (duplication, maintenance burden)
-- Two different Android project structures for AgentOS (Capacitor vs native Kotlin)
+- Two different Android project structures for Agentic (Capacitor vs native Kotlin)
 - `irrig8-code/` folder still has `docker-compose.yml`, active Postgres data — potential confusion with Irrig8
 - `postgres-data/` at workspace root (not inside any project) — orphan database
 - No clear build pipeline: APKs built ad-hoc via manual `gradlew assembleDebug`
@@ -193,18 +193,18 @@ The Bxthre3 workspace has significant structural integrity issues stemming from 
 - VPC investor portal: live at `/invest` ✅
 - VPC investor page: live at `/projects/valleyplayersclub/invest` ✅
 - RAIN beta: live at `/projects/rain` ✅
-- AgentOS mobile app: APK download available ✅
+- Agentic mobile app: APK download available ✅
 
 **Weaknesses:**
 - VPC cash partner portal (`/projects/valleyplayersclub/invest`) — private but functional
 - No HTTPS custom domain on any service (all on `zo.space` subdomain)
 - No monitoring/alerting on live endpoints (no uptime checks, no error alerting)
-- AgentOS backend API (`agentos-mobile` service) — running on port 3000 but health/status unclear
+- Agentic backend API (`agentic-mobile` service) — running on port 3000 but health/status unclear
 - VPC backend API — running but health endpoint behavior inconsistent with mobile client expectations
 - Zo Space has no analytics integration (can't measure traffic to project pages)
 
 **Findings:**
-- `agentos-mobile` service: registered on port 3000, running
+- `agentic-mobile` service: registered on port 3000, running
 - `valley-players-club` service: registered, running
 - No uptime monitoring on either service
 - No error alerting (INBOX backup failure events not acted upon)
@@ -253,13 +253,13 @@ The Bxthre3 workspace has significant structural integrity issues stemming from 
 
 | # | Issue | Priority | Owner |
 |---|-------|----------|-------|
-| P1.1 | No `.gitignore` at workspace root | High | AgentOS |
+| P1.1 | No `.gitignore` at workspace root | High | Agentic |
 | P1.2 | VPC-Native/ Gradle source at root | High | Drew |
 | P1.3 | 4 orphaned projects need owner or archive | High | Brodiblanco |
-| P1.4 | Zo Space no uptime/ error monitoring | Medium | AgentOS |
+| P1.4 | Zo Space no uptime/ error monitoring | Medium | Agentic |
 | P1.5 | `irrig8-code/` legacy cleanup | Medium | Maya |
 | P1.6 | Investor-portal-db.json in git | High | Taylor |
-| P1.7 | AgentOS API health endpoints inconsistent | Medium | Drew |
+| P1.7 | Agentic API health endpoints inconsistent | Medium | Drew |
 | P1.8 | Zoe merge decision pending | Medium | Brodiblanco |
 | P1.9 | SLV Mesh no recent deliverables | Low | TBD |
 | P1.10 | 10+ sparse department INBOXes need audit | Medium | Echo |
@@ -326,7 +326,7 @@ Items that degraded or remained unresolved:
 | Archived agent INBOXes | 32 |
 | Department INBOXes | ~15 |
 | zo.space routes (total) | ~25 |
-| APK builds | 2 (AgentOS + VPC) |
+| APK builds | 2 (Agentic + VPC) |
 | Git submodules | 6 |
 | Dirty submodules | 2 |
 | P0 issues fixed | 5 |

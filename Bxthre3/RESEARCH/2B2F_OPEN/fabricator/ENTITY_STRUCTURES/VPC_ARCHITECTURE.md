@@ -128,7 +128,7 @@ Primary: Colorado (founder location)
 
 | Service | Provider | Cost Model | Volume |
 |---------|----------|------------|--------|
-| AgentOS Platform | IRRIG8CO | Licensing fee | $50K/year base |
+| Agentic Platform | IRRIG8CO | Licensing fee | $50K/year base |
 | Data Analytics | IRRIG8CO Data | Revenue share | 2% of net |
 | Customer Identity | Shared | Cross-platform | Unified KYC |
 

@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-Consolidated financial projections for Bxthre3 Inc as a holding company across three Operating Companies: IRRIG8 Solutions Ltd (agriculture), Valley Players Club LLC (gaming), and AgentOS Solutions LLC (AI platform). Includes inter-OpCo eliminations and true consolidated view.
+Consolidated financial projections for Bxthre3 Inc as a holding company across three Operating Companies: IRRIG8 Solutions Ltd (agriculture), Valley Players Club LLC (gaming), and Agentic Solutions LLC (AI platform). Includes inter-OpCo eliminations and true consolidated view.
 
 ---
 
@@ -17,7 +17,7 @@ Consolidated financial projections for Bxthre3 Inc as a holding company across t
 
 ### Revenue Build
 
-| Period | IRRIG8CO | VPC | AgentOS | Inter-OpCo | **Consolidated Revenue** |
+| Period | IRRIG8CO | VPC | Agentic | Inter-OpCo | **Consolidated Revenue** |
 |--------|----------|-----|---------|------------|--------------------------|
 | M12 | $3.5M | $0.5M | $0.2M | ($0.3M) | **$3.9M** |
 | M24 | $35M | $9.4M | $4.0M | ($2.1M) | **$46.3M** |
@@ -34,14 +34,14 @@ Consolidated financial projections for Bxthre3 Inc as a holding company across t
 
 | From | To | Purpose | M24 | M36 | M60 | M120 |
 |------|----|---------|-----|-----|-----|------|
-| AgentOS-IRRIG8 | IRRIG8CO | Platform license | $1.5M | $12M | $80M | $320M |
-| AgentOS-VPC | VPC | Platform license | $0.6M | $6M | $40M | $190M |
+| Agentic-IRRIG8 | IRRIG8CO | Platform license | $1.5M | $12M | $80M | $320M |
+| Agentic-VPC | VPC | Platform license | $0.6M | $6M | $40M | $190M |
 | IRRIG8CO | VPC | Data insights | — | — | — | — |
 | **Total Eliminated** | | | **$2.1M** | **$18M** | **$120M** | **$1.6B** |
 
 ### Operating Expenses
 
-| Period | IRRIG8CO OpEx | VPC OpEx | AgentOS OpEx | Holding Co | **Total OpEx** |
+| Period | IRRIG8CO OpEx | VPC OpEx | Agentic OpEx | Holding Co | **Total OpEx** |
 |--------|---------------|----------|--------------|------------|----------------|
 | M12 | $4.0M | $0.8M | $1.5M | $0.5M | **$6.8M** |
 | M24 | $12M | $2.0M | $6M | $1.0M | **$21M** |
@@ -137,7 +137,7 @@ Consolidated financial projections for Bxthre3 Inc as a holding company across t
 
 ## Notes on Consolidation
 
-1. **Inter-OpCo eliminations** represent internal licensing payments from OpCos to AgentOS verticals
+1. **Inter-OpCo eliminations** represent internal licensing payments from OpCos to Agentic verticals
 2. **Holding Co expenses** include corporate overhead, legal, accounting, and investor relations
 3. **Cash** assumes 18-month minimum runway maintained at all times
 4. **Equity splits** reflect projected dilution through Series C (M60)

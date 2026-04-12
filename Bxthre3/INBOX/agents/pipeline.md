@@ -1,6 +1,6 @@
 # Pipeline — Deal Flow Manager INBOX
 **Agent:** Pipeline
-**Role:** Deal Flow Manager — Bxthre3 Inc / AgentOS Finance Division
+**Role:** Deal Flow Manager — Bxthre3 Inc / Agentic Finance Division
 **Reports to:** Reach (VP Investor Outreach)
 **Department:** Investor Relations
 **Last Updated:** 2026-04-06 09:20 MT
@@ -57,7 +57,7 @@
 | Irrig8 | $5-10M | Series A | Target Jul 2026 | P1 |
 | Valley Players Club | $1-3M | Strategic | Pre-launch | P1 |
 | The Starting 5 | $2-5M | Seed/A | Development | P2 |
-| Zoe / AgentOS | $1-2M | Strategic | IP remediation | P2 |
+| Zoe / Agentic | $1-2M | Strategic | IP remediation | P2 |
 | Bxthre3 corporate | $500K | SAFE ($5M cap) | Active | P1 |
 
 ---
@@ -97,7 +97,7 @@
 **Cannot launch outreach until:**
 1. Irrig8 pitch deck v1 delivered (Pitch + brodiblanco — due Apr 4)
 2. Cap table + SAFE/note registry delivered (Balance — due Apr 5)
-3. AgentOS IP remediation complete (Iris — ongoing, 93 stub findings)
+3. Agentic IP remediation complete (Iris — ongoing, 93 stub findings)
 
 ---
 

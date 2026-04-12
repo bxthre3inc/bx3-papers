@@ -1,5 +1,5 @@
-# AI SaaS / Zoe / AgentOS — Investor Pipeline
-**Venture:** Zoe / AgentOS
+# AI SaaS / Zoe / Agentic — Investor Pipeline
+**Venture:** Zoe / Agentic
 **Raise:** Strategic (~$1-2M) — open source adoption, enterprise pilots
 **Last Updated:** 2026-04-02
 
@@ -54,8 +54,8 @@
 
 ## Notes
 
-- Zoe/AgentOS is positioned as open source + enterprise — thesis is AgentOS as infrastructure
-- AgentOS has 93 stub findings (P0/P1) — do not oversell; lead with open source community angle
+- Zoe/Agentic is positioned as open source + enterprise — thesis is Agentic as infrastructure
+- Agentic has 93 stub findings (P0/P1) — do not oversell; lead with open source community angle
 - "The Starting 5" is the SaaS product (AI co-founders) — different pitch than Zoe
 - Open source investors (GitHub Fund, OSS Capital) are best fit for Zoe narrative
 - Colorado Impact Fund is strong regional fit for both Zoe and Starting 5

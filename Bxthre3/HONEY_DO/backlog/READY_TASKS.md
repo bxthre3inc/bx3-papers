@@ -52,7 +52,7 @@ Assigned: 2026-03-31 | Due: Daily Sprint
 
 ## TASK 8: Agent Health Report
 **Owner:** pulse_alpha
-**Command:** python3 /home/workspace/Bxthre3/SOPS/agentos/health_check.py --all
+**Command:** python3 /home/workspace/Bxthre3/SOPS/agentic/health_check.py --all
 **Frequency:** Daily 16:00
 **Time:** 2m
 **Output:** INBOX.md P0 report
@@ -83,13 +83,13 @@ Assigned: 2026-03-31 | Due: Daily Sprint
 ## ANDROID-LEAD UPDATE — 2026-04-06
 
 ### Build Status: ✅ SUCCESSFUL
-- APK: `Bxthre3/projects/agentic/the-agentos-project/client/android/app/build/outputs/apk/debug/app-debug.apk` (24M)
+- APK: `Bxthre3/projects/agentic/the-agentic-project/client/android/app/build/outputs/apk/debug/app-debug.apk` (24M)
 - Fixed: Created `local.properties` with SDK path — must be committed
 
 ### Open Tasks for Dev:
 | Priority | Task |
 |----------|------|
-| 🟡 P2 | Update `ApiClient` base URL: `https://brodiblanco.zo.space` + `/api/agentos/` prefix |
+| 🟡 P2 | Update `ApiClient` base URL: `https://brodiblanco.zo.space` + `/api/agentic/` prefix |
 | 🟡 P2 | Wire `DashboardTab` to call `apiClient.health()` |
 | 🟡 P2 | Implement real screens for 7 tabs (currently all placeholders) |
 | 🟡 P2 | Add MCP WebSocket client (requires Mesh-Engineer adapter paths) |

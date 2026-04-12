@@ -196,7 +196,7 @@
           "required": false,
           "placeholder": "Where do you see your business in 1 year? 3 years?",
           "hint": "Where will this business be in 1 year? 3 years? Show you're ready to scale, not just stay afloat. Include specific milestones, revenue targets, or expansion plans. What specific bottlenecks will the grant solve?",
-          "defaultValue": "AgentOS-powered ops engine handled by cofounder",
+          "defaultValue": "Agentic-powered ops engine handled by cofounder",
           "readonly": true
         }
       ]

@@ -59,19 +59,19 @@
 | Kill-switch stubs returning hardcoded `{ approved: true }` | 🔴 P1 | **OPEN — UNCHANGED** | Iris | **IMMEDIATE** |
 | 30+ phantom CCRs + hardcoded stubs unregressed | 🔴 P1 | **OPEN — UNCHANGED** | Iris/Dev | Ongoing |
 | Stub code in production paths (100+ CCRs) | 🔴 P1 | **OPEN — UNCHANGED** | Iris | Ongoing |
-| AMP event bus — no persistence (tasks lost on restart) | 🔴 P1 | **NEW — per AgentOS-PM** | Mesh-Engineer | Immediate |
-| mcp-mesh/src/core/ not implemented | 🔴 P1 | **NEW — per AgentOS-PM** | Mesh-Engineer | Immediate |
-| No test suite (mcp-mesh, mcp-bridge, Android, AMP) | 🔴 P1 | **NEW — per AgentOS-PM** | Iris/Dev | Immediate |
+| AMP event bus — no persistence (tasks lost on restart) | 🔴 P1 | **NEW — per Agentic-PM** | Mesh-Engineer | Immediate |
+| mcp-mesh/src/core/ not implemented | 🔴 P1 | **NEW — per Agentic-PM** | Mesh-Engineer | Immediate |
+| No test suite (mcp-mesh, mcp-bridge, Android, AMP) | 🔴 P1 | **NEW — per Agentic-PM** | Iris/Dev | Immediate |
 | Bias detection monitoring | 🟡 P2 | NOT ACTIVE | Sentinel | TBD |
 | Shield coordination | 🟡 P2 | NOT ACTIVE | Sentinel | TBD |
 
 **Critical Risk (UNCHANGED — still not fixed):** Kill-switch stubs returning `{ approved: true }` bypass all safety guards. Any production traffic through these paths has zero actual approval enforcement.
 
-**Additional P0/P1 this cycle (per INBOX.md — AgentOS-PM):**
+**Additional P0/P1 this cycle (per INBOX.md — Agentic-PM):**
 - `aos` (9999) + `mcp-mesh-control-plane` (7777) workdirs ENOENT — DevOps-Lead flagged 2026-04-01
 - Mobile shell `mobile_CORRUPTED_20260401_0241/` unrestored — Android-Lead flagged 2026-04-01
 
-**Assessment:** AgentOS production is in an unreleasable state. 6+ P1 items open across stack. Kill-switch gap remains the highest safety risk.
+**Assessment:** Agentic production is in an unreleasable state. 6+ P1 items open across stack. Kill-switch gap remains the highest safety risk.
 
 ---
 
@@ -110,7 +110,7 @@
 | SQL injection vectors | ✅ CLEAR | — |
 | XSS vectors | ✅ CLEAR | — |
 | IP surveillance | ✅ CLEAR | — |
-| AgentOS services (5/5) | ❌ 1+ DOWN | ⚠️ NEW OUTAGE |
+| Agentic services (5/5) | ❌ 1+ DOWN | ⚠️ NEW OUTAGE |
 | Third-party dependency audit | ❌ PENDING | — |
 | Port/network exposure audit | ⚠️ IN PROGRESS | — |
 
@@ -132,11 +132,11 @@
 |---------|---------|---------|-------|--------------|
 | Irrig8 | 3 (water court) | 0 | → | 🔴 HIGH |
 | Valley Players Club | 4 (regulatory) + 3 (legal) | 4 | → | 🔴 HIGH |
-| AgentOS | 6+ (stubs + infra) | 2 | ↑ | 🔴 HIGH |
+| Agentic | 6+ (stubs + infra) | 2 | ↑ | 🔴 HIGH |
 | Zoe | 0 | 3 | → | 🟡 MEDIUM |
 | Starting 5 | 0 | 3 | → | 🟡 MEDIUM |
 
-**Overall T&S Risk Posture:** 🔴 HIGH — unchanged from 2026-03-31. AgentOS added 3 new P1s this cycle. VPC legal items coming due.
+**Overall T&S Risk Posture:** 🔴 HIGH — unchanged from 2026-03-31. Agentic added 3 new P1s this cycle. VPC legal items coming due.
 
 ---
 
@@ -145,7 +145,7 @@
 | # | To | Subject | Priority | Route | New? |
 |---|----|---------|----------|-------|------|
 | 1 | brodiblanco | Water Court 3 Critical Gaps (Rain) | 🔴 P1 | INBOX.md + SMS | No — ongoing |
-| 2 | Iris | 100+ AgentOS stub CCRs | 🔴 P1 | iris.md | No — ongoing |
+| 2 | Iris | 100+ Agentic stub CCRs | 🔴 P1 | iris.md | No — ongoing |
 | 3 | VPC/Rain | Gaming tax compliance due TODAY | 🔴 P1 | vpc.md + rain.md | **NEW** |
 | 4 | Mesh-Engineer | AMP event bus no persistence | 🔴 P1 | iris.md | **NEW** |
 | 5 | DevOps | zo.space outage + port 3000 DOWN | 🔴 P1 | DevOps inbox | **NEW** |
@@ -164,7 +164,7 @@
 | **This week** | Sentinel: complete VPC KYC end-to-end audit | Sentinel | 2026-04-07 |
 | **This week** | Rain: confirm SLV sensor telemetry coverage status | Rain | 2026-04-07 |
 | **Next sprint** | Iris: implement test infrastructure for AMP mesh | Iris | Sprint-bound |
-| **Next sprint** | Standing: AgentOS bias detection + Shield activation | Sentinel | TBD |
+| **Next sprint** | Standing: Agentic bias detection + Shield activation | Sentinel | TBD |
 
 ---
 

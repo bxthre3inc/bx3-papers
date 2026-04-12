@@ -1,4 +1,4 @@
-# AgentOS OpCo Entity Architecture
+# Agentic OpCo Entity Architecture
 
 **Model ID:** 2B2F-AGENTOS-ARCH-v0.2  
 **Status:** DRAFT  
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This document defines the Operating Company (OpCo) structure for AgentOS Solutions LLC, the AI workforce orchestration platform that powers all Bxthre3 ventures. AgentOS operates as a modular platform OpCo with vertical subsidiaries and external licensing capabilities.
+This document defines the Operating Company (OpCo) structure for Agentic Solutions LLC, the AI workforce orchestration platform that powers all Bxthre3 ventures. Agentic operates as a modular platform OpCo with vertical subsidiaries and external licensing capabilities.
 
 ---
 
@@ -19,33 +19,33 @@ This document defines the Operating Company (OpCo) structure for AgentOS Solutio
 Bxthre3 Inc (Holding Company)
 │   └── 100% ownership of all OpCos
 │
-├── AgentOS Solutions LLC (Platform OpCo)
+├── Agentic Solutions LLC (Platform OpCo)
 │   ├── Core: Agent runtime, orchestration, memory systems
 │   ├── Revenue: SaaS licensing ($50-500/seat/month)
 │   └── Vertical Subsidiaries:
-│       ├── AgentOS-IRRIG8 LLC (field operations agents)
-│       ├── AgentOS-VPC LLC (gaming compliance agents)
-│       └── AgentOS-RAIN LLC (regulatory intelligence)
+│       ├── Agentic-IRRIG8 LLC (field operations agents)
+│       ├── Agentic-VPC LLC (gaming compliance agents)
+│       └── Agentic-RAIN LLC (regulatory intelligence)
 │
 ├── IRRIG8 Solutions Ltd (Agriculture OpCo)
-│   └── Licenses AgentOS-IRRIG8 technology
+│   └── Licenses Agentic-IRRIG8 technology
 │
 └── Valley Players Club LLC (Gaming OpCo)
-    └── Licenses AgentOS-VPC technology
+    └── Licenses Agentic-VPC technology
 ```
 
 ---
 
-## AgentOS Solutions LLC — Core Structure
+## Agentic Solutions LLC — Core Structure
 
 ### Intellectual Property Assignment
 
 | IP Asset | Owner | License Type | Royalty |
 |----------|-------|--------------|---------|
-| Agent Runtime Engine | AgentOS Solutions LLC | Exclusive internal | — |
-| Orchestration Layer | AgentOS Solutions LLC | SaaS external | 20% of revenue |
-| Memory/Context System | AgentOS Solutions LLC | SaaS external | 20% of revenue |
-| AgentOS Android App | AgentOS Solutions LLC | White-label | $10K/instance |
+| Agent Runtime Engine | Agentic Solutions LLC | Exclusive internal | — |
+| Orchestration Layer | Agentic Solutions LLC | SaaS external | 20% of revenue |
+| Memory/Context System | Agentic Solutions LLC | SaaS external | 20% of revenue |
+| Agentic Android App | Agentic Solutions LLC | White-label | $10K/instance |
 
 ### Revenue Model
 
@@ -61,7 +61,7 @@ Bxthre3 Inc (Holding Company)
 
 ## Vertical Subsidiaries
 
-### AgentOS-IRRIG8 LLC
+### Agentic-IRRIG8 LLC
 
 **Purpose:** Field operations agents for precision agriculture  
 **Primary Customer:** IRRIG8 Solutions Ltd (exclusive license)  
@@ -72,12 +72,12 @@ Bxthre3 Inc (Holding Company)
 ```
 IRRIG8 Solutions Ltd (customer)
     ↓ pays licensing fee: 15% of IRRIG8CO revenue
-AgentOS-IRRIG8 LLC
-    ↓ pays platform fee: 80% to AgentOS Solutions LLC
+Agentic-IRRIG8 LLC
+    ↓ pays platform fee: 80% to Agentic Solutions LLC
     ↓ retains: 20% for vertical R&D
 ```
 
-### AgentOS-VPC LLC
+### Agentic-VPC LLC
 
 **Purpose:** Gaming compliance and fraud detection agents  
 **Primary Customer:** Valley Players Club LLC (exclusive license)  
@@ -88,12 +88,12 @@ AgentOS-IRRIG8 LLC
 ```
 Valley Players Club LLC (customer)
     ↓ pays licensing fee: 10% of VPC net revenue
-AgentOS-VPC LLC
-    ↓ pays platform fee: 80% to AgentOS Solutions LLC
+Agentic-VPC LLC
+    ↓ pays platform fee: 80% to Agentic Solutions LLC
     ↓ retains: 20% for vertical R&D
 ```
 
-### AgentOS-RAIN LLC
+### Agentic-RAIN LLC
 
 **Purpose:** Regulatory intelligence and arbitrage detection  
 **Primary Customer:** Bxthre3 Inc (internal) + external compliance firms  
@@ -104,8 +104,8 @@ AgentOS-VPC LLC
 ```
 External customers (future)
     ↓ pays subscription: $5K/month base
-AgentOS-RAIN LLC
-    ↓ pays platform fee: 70% to AgentOS Solutions LLC
+Agentic-RAIN LLC
+    ↓ pays platform fee: 70% to Agentic Solutions LLC
     ↓ retains: 30% for regulatory R&D
 ```
 
@@ -119,7 +119,7 @@ AgentOS-RAIN LLC
 ┌─────────────────────────────────────────────────────────┐
 │              Bxthre3 Data Trust (Holding)                │
 │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    │
-│  │  IRRIG8CO    │ │    VPC       │ │   AgentOS    │    │
+│  │  IRRIG8CO    │ │    VPC       │ │   Agentic    │    │
 │  │   Data       │ │   Data       │ │   Data       │    │
 │  │  (Anonymized)│ │(Anonymized)  │ │ (Anonymized)│    │
 │  └──────┬───────┘ └──────┬───────┘ └──────┬───────┘    │
@@ -141,7 +141,7 @@ AgentOS-RAIN LLC
 |-----------|--------|-------|----------|
 | Aggregated usage patterns | Any OpCo | Product improvement | Automatic |
 | Customer PII | Any OpCo | Cross-sell | Customer opt-in |
-| Proprietary algorithms | AgentOS | External licensing | CEO approval |
+| Proprietary algorithms | Agentic | External licensing | CEO approval |
 | Revenue/cost data | All OpCos | Consolidated reporting | Automatic |
 | Competitive intelligence | RAIN | All OpCos | Legal review |
 
@@ -181,10 +181,10 @@ AgentOS-RAIN LLC
 
 | Entity | Initial Capital | Funding Source | Valuation Method |
 |--------|-----------------|----------------|------------------|
-| AgentOS Solutions LLC | $500K | Holding Co seed | IP + team |
-| AgentOS-IRRIG8 LLC | $100K | AgentOS Solutions | Cost basis |
-| AgentOS-VPC LLC | $100K | AgentOS Solutions | Cost basis |
-| AgentOS-RAIN LLC | $50K | AgentOS Solutions | Cost basis |
+| Agentic Solutions LLC | $500K | Holding Co seed | IP + team |
+| Agentic-IRRIG8 LLC | $100K | Agentic Solutions | Cost basis |
+| Agentic-VPC LLC | $100K | Agentic Solutions | Cost basis |
+| Agentic-RAIN LLC | $50K | Agentic Solutions | Cost basis |
 
 ---
 

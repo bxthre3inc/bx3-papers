@@ -1,4 +1,4 @@
-# AOS-ARCH-v1.0 — AgentOS Platform Architecture
+# AOS-ARCH-v1.0 — Agentic Platform Architecture
 **Status:** APPROVED  
 **Owner:** CTO (Bits)  
 **Created:** 2026-04-02  
@@ -9,11 +9,11 @@
 
 ## 1. System Overview
 
-AgentOS is Bxthre3's internal AI workforce orchestration platform. It enables 24/7 autonomous execution across all ventures through a distributed agent mesh.
+Agentic is Bxthre3's internal AI workforce orchestration platform. It enables 24/7 autonomous execution across all ventures through a distributed agent mesh.
 
 **Core Purpose:** Coordinate 18+ AI agents to execute tasks without human intervention.
 
-**Analogy:** AgentOS = Internal Infrastructure (like IBM Watson). Not a product. Competitive moat, not revenue source.
+**Analogy:** Agentic = Internal Infrastructure (like IBM Watson). Not a product. Competitive moat, not revenue source.
 
 ---
 
@@ -24,8 +24,8 @@ AgentOS is Bxthre3's internal AI workforce orchestration platform. It enables 24
 │                    AGENTOS PLATFORM                       │
 ├─────────────────────────────────────────────────────────┤
 │  Control Plane (zo.space)                               │
-│  ├─ [/aos] Web Dashboard                                │
-│  ├─ [/api/agentos/*] Core API                           │
+│  ├─ [/agentic] Web Dashboard                                │
+│  ├─ [/api/agentic/*] Core API                           │
 │  │   ├─ /status   → System health                       │
 │  │   ├─ /agents   → Agent roster                        │
 │  │   ├─ /tasks    → Work queue                          │
@@ -63,7 +63,7 @@ AgentOS is Bxthre3's internal AI workforce orchestration platform. It enables 24
 
 ## 4. API Contracts
 
-### GET /api/agentos/status
+### GET /api/agentic/status
 ```json
 {
   "version": "2.5.1",
@@ -74,7 +74,7 @@ AgentOS is Bxthre3's internal AI workforce orchestration platform. It enables 24
 }
 ```
 
-### GET /api/agentos/agents
+### GET /api/agentic/agents
 ```json
 {
   "agents": [

@@ -30,9 +30,9 @@ Lead M&A, strategic investments, and partnership structures for Bxthre3. Reports
 
 | Year | Flagship | Growth | Incubation | Emerging |
 |---|---|---|---|---|
-| **Y1 (2026)** | Irrig8 revenue | VPC scaling | Starting5, AgentOS | ARD, Rain |
+| **Y1 (2026)** | Irrig8 revenue | VPC scaling | Starting5, Agentic | ARD, Rain |
 | **Y2 (2027)** | Irrig8 Series A | VPC MRR $50K | Spinouts evaluated | |
-| **Y3 (2028)** | Irrig8 Series B | VPC profitable | AgentOS external | |
+| **Y3 (2028)** | Irrig8 Series B | VPC profitable | Agentic external | |
 
 ### Acquisition Criteria by Vertical
 
@@ -47,7 +47,7 @@ Lead M&A, strategic investments, and partnership structures for Bxthre3. Reports
 - Licensed in states VPC operates
 - <$2M ARR, revenue-generating
 
-**AI / SaaS (AgentOS):**
+**AI / SaaS (Agentic):**
 - Workflow automation or agent orchestration tooling
 - <$1M ARR, strong technical team
 - IP defensible
@@ -56,9 +56,9 @@ Lead M&A, strategic investments, and partnership structures for Bxthre3. Reports
 
 | Asset | Can Serve | Deal Type |
 |---|---|---|
-| AgentOS / Zoe | All ventures | Internal license → external pricing |
-| Irrig8 field ops | AgentOS | Production demo for distribution |
-| VPC | AgentOS | Integration testing sandbox |
+| Agentic / Zoe | All ventures | Internal license → external pricing |
+| Irrig8 field ops | Agentic | Production demo for distribution |
+| VPC | Agentic | Integration testing sandbox |
 | RAIN | All ventures | Regulatory intelligence license |
 | Rain IP (8/10) | External partners | Complete to 10/10 before licensing |
 
@@ -73,7 +73,7 @@ Lead M&A, strategic investments, and partnership structures for Bxthre3. Reports
 | VPC Founding Cash Partner (Sage) | Equity partnership | Legal review | 2.5% | $2,500 | Await Sage response |
 | VPC Cash Partner (future) | Equity partnership | Prospecting | 1% min | $10K min | Build prospect list |
 | Irrig8 Distribution | Distribution | Identified | — | — | Draft one-pager |
-| AgentOS External License | SaaS license | Internal | — | TBD | Evaluate tier upgrade |
+| Agentic External License | SaaS license | Internal | — | TBD | Evaluate tier upgrade |
 | BUILDBZ JV | JV | Blocked | TBD | TBD | Need 8 decisions |
 
 ---

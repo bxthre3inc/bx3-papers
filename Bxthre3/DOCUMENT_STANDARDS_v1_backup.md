@@ -1,6 +1,6 @@
 # Bxthre3 Document Standards
 **Version:** 1.0  
-**Owner:** brodiblanco | **Maintained by:** AgentOS  
+**Owner:** brodiblanco | **Maintained by:** Agentic  
 **Effective:** 2026-04-02  
 **Reference:** `file 'SOUL.md'` Principle #5 (Zero Hallucination)
 
@@ -8,7 +8,7 @@
 
 ## Purpose
 
-This document defines every document type used across Bxthre3 Inc and AgentOS, including:
+This document defines every document type used across Bxthre3 Inc and Agentic, including:
 - Required sections and structure
 - Quality criteria and acceptance standards
 - Approval workflows and sign-offs
@@ -1050,7 +1050,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -1058,16 +1058,16 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
 # PART II: AGENTOS POSITIONING — INTERNAL INFRASTRUCTURE
 
-> **AgentOS is not a product.** It is the internal force multiplier that builds and runs products.
+> **Agentic is not a product.** It is the internal force multiplier that builds and runs products.
 > **Analogy:** IBM Watson — impressive technology that demonstrated capability, but primarily served as internal infrastructure and competitive advantage, not a standalone SKU.
 
-## What AgentOS Is
+## What Agentic Is
 
 | Aspect | Description |
 |--------|-------------|
@@ -1077,7 +1077,7 @@ Certified by: _______________
 | **Value** | Speed, consistency, 24/7 execution, zero-hallucination quality |
 | **Revenue** | Indirect — enables products that generate revenue |
 
-## What AgentOS Is NOT
+## What Agentic Is NOT
 
 | Aspect | Description |
 |--------|-------------|
@@ -1090,7 +1090,7 @@ Certified by: _______________
 
 **How we talk about it publicly:**
 
-> *"Bxthre3 operates its own AI workforce orchestration platform — AgentOS — that enables our 18 AI agents to work 24/7 across all ventures. This internal capability accelerates execution, ensures quality standards, and gives us unfair advantage in speed-to-market."*
+> *"Bxthre3 operates its own AI workforce orchestration platform — Agentic — that enables our 18 AI agents to work 24/7 across all ventures. This internal capability accelerates execution, ensures quality standards, and gives us unfair advantage in speed-to-market."*
 
 **What investors see:**
 - Demo of agents working in parallel
@@ -1099,17 +1099,17 @@ Certified by: _______________
 - Infrastructure moat — not easily replicated
 
 **What we do NOT say:**
-- ❌ "AgentOS is our next product"
-- ❌ "We're building AgentOS to sell to enterprises"
-- ❌ "AgentOS is a standalone business unit"
+- ❌ "Agentic is our next product"
+- ❌ "We're building Agentic to sell to enterprises"
+- ❌ "Agentic is a standalone business unit"
 
 ## Document Implications
 
 | Type | Location | Contains |
 |------|----------|----------|
-| **AgentOS Platform Docs** | `the-agentos-project/docs/` | Internal architecture, NOT customer-facing |
-| **AgentOS Demos** | `the-agentos-project/demos/` | Investor demos, NOT product marketing |
-| **Agent PRs** | `the-agentos-project/press/` | Capability announcements, NOT product launches |
+| **Agentic Platform Docs** | `the-agentic-project/docs/` | Internal architecture, NOT customer-facing |
+| **Agentic Demos** | `the-agentic-project/demos/` | Investor demos, NOT product marketing |
+| **Agent PRs** | `the-agentic-project/press/` | Capability announcements, NOT product launches |
 
 ---
 
@@ -1117,24 +1117,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -1165,12 +1165,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -1258,7 +1258,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -1266,7 +1266,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -1274,24 +1274,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -1322,12 +1322,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -1415,7 +1415,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -1423,7 +1423,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -1431,24 +1431,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -1479,12 +1479,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -1572,7 +1572,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -1580,7 +1580,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -1588,24 +1588,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -1636,12 +1636,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -1729,7 +1729,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -1737,7 +1737,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -1745,24 +1745,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -1793,12 +1793,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -1886,7 +1886,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -1894,7 +1894,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -1902,24 +1902,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -1950,12 +1950,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2043,7 +2043,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2051,7 +2051,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -2059,24 +2059,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -2107,12 +2107,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2200,7 +2200,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2208,7 +2208,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -2216,24 +2216,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -2264,12 +2264,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2357,7 +2357,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2365,7 +2365,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -2373,24 +2373,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -2421,12 +2421,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2514,7 +2514,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2522,7 +2522,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -2530,24 +2530,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -2578,12 +2578,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2671,7 +2671,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2679,7 +2679,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -2687,24 +2687,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -2735,12 +2735,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2828,7 +2828,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2836,7 +2836,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -2844,24 +2844,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -2892,12 +2892,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -2985,7 +2985,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -2993,7 +2993,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3001,24 +3001,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3049,12 +3049,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -3142,7 +3142,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -3150,7 +3150,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3158,24 +3158,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3206,12 +3206,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -3299,7 +3299,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -3307,7 +3307,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3315,24 +3315,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3363,12 +3363,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -3456,7 +3456,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -3464,7 +3464,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3472,24 +3472,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3520,12 +3520,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -3613,7 +3613,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -3621,7 +3621,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3629,24 +3629,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3677,12 +3677,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -3770,7 +3770,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -3778,7 +3778,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3786,24 +3786,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3834,12 +3834,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -3927,7 +3927,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -3935,7 +3935,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -3943,24 +3943,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -3991,12 +3991,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -4084,7 +4084,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -4092,7 +4092,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -4100,24 +4100,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -4148,12 +4148,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -4241,7 +4241,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -4249,7 +4249,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -4257,24 +4257,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -4305,12 +4305,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -4398,7 +4398,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -4406,7 +4406,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -4414,24 +4414,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -4462,12 +4462,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -4555,7 +4555,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -4563,7 +4563,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -4571,24 +4571,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -4619,12 +4619,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -4712,7 +4712,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -4720,7 +4720,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -4728,24 +4728,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -4776,12 +4776,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -4869,7 +4869,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -4877,7 +4877,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -4885,24 +4885,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -4933,12 +4933,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -5026,7 +5026,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -5034,7 +5034,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -5042,24 +5042,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -5090,12 +5090,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -5183,7 +5183,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -5191,7 +5191,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -5199,24 +5199,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -5247,12 +5247,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -5340,7 +5340,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -5348,7 +5348,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -5356,24 +5356,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -5404,12 +5404,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -5497,7 +5497,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -5505,7 +5505,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -5513,24 +5513,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -5561,12 +5561,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -5654,7 +5654,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -5662,7 +5662,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -5670,24 +5670,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
@@ -5718,12 +5718,12 @@ These documents define what AgentOS agents DO — products, projects, operations
 
 | Aspect | Platform (AOS-*) | Capabilities (Project Docs) |
 |--------|------------------|----------------------------|
-| **What** | How AgentOS runs | What AgentOS agents DO |
+| **What** | How Agentic runs | What Agentic agents DO |
 | **Why** | Foundation/execution layer | Business value/ventures |
-| **Who owns** | AgentOS team | Venture leads |
+| **Who owns** | Agentic team | Venture leads |
 | **Stability** | Slow, careful changes | Fast iteration |
 | **Tests** | CI/CD blocking | Integration tests |
-| **Docs in** | `the-agentos-project/docs/` | `projects/{name}/` |
+| **Docs in** | `the-agentic-project/docs/` | `projects/{name}/` |
 | **Breaking** | All agents affected | One venture affected |
 | **Versioning** | Semantic (v1.0.0) | Iterative (v1, v2) |
 | **Approval** | CTO + brodiblanco | Venture lead |
@@ -5811,7 +5811,7 @@ Certified by: _______________
 
 **Last Updated:** 2026-04-02  
 **Version:** 1.0  
-**Owner:** brodiblanco | Maintained by: AgentOS  
+**Owner:** brodiblanco | Maintained by: Agentic  
 **Status:** APPROVED
 
 
@@ -5819,7 +5819,7 @@ Certified by: _______________
 
 # PART II: AGENTOS DOCUMENTATION FRAMEWORK
 
-> **Principle:** Separate **Platform** (what runs AgentOS) from **Capabilities** (what it does)
+> **Principle:** Separate **Platform** (what runs Agentic) from **Capabilities** (what it does)
 
 ---
 
@@ -5827,24 +5827,24 @@ Certified by: _______________
 
 ### 1. AGENTOS PLATFORM (The Engine)
 
-These documents define AgentOS itself — how it runs, is built, and maintains coherence.
+These documents define Agentic itself — how it runs, is built, and maintains coherence.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
-| **Platform Architecture** | AOS-ARCH | `the-agentos-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
-| **AgentOS Build Spec** | AOS-BUILD | `the-agentos-project/docs/BUILD-SPEC.md` | How to build/deploy AgentOS |
-| **Agent Def Spec** | AGENT-DEF | `the-agentos-project/docs/AGENT-SPEC.md` | Standard for defining agents |
-| **Task Schema** | TASK-SCHEMA | `the-agentos-project/schemas/task.yaml` | Task structure, validation |
-| **Platform BOM** | AOS-BOM | `the-agentos-project/docs/BOM.md` | Infra parts, services, deps |
-| **API Contract** | AOS-API | `the-agentos-project/api/*.ts` + specs | All endpoints documented |
+| **Platform Architecture** | AOS-ARCH | `the-agentic-project/docs/ARCHITECTURE.md` | System design, APIs, data flows |
+| **Agentic Build Spec** | AOS-BUILD | `the-agentic-project/docs/BUILD-SPEC.md` | How to build/deploy Agentic |
+| **Agent Def Spec** | AGENT-DEF | `the-agentic-project/docs/AGENT-SPEC.md` | Standard for defining agents |
+| **Task Schema** | TASK-SCHEMA | `the-agentic-project/schemas/task.yaml` | Task structure, validation |
+| **Platform BOM** | AOS-BOM | `the-agentic-project/docs/BOM.md` | Infra parts, services, deps |
+| **API Contract** | AOS-API | `the-agentic-project/api/*.ts` + specs | All endpoints documented |
 | **Release Notes** | AOS-REL | `releases/v{X.Y.Z}.md` | What's in each version |
-| **Dependency Map** | AOS-DEPS | `the-agentos-project/docs/DEPS.md` | External deps + versions |
+| **Dependency Map** | AOS-DEPS | `the-agentic-project/docs/DEPS.md` | External deps + versions |
 
 ---
 
 ### 2. AGENTOS CAPABILITIES (The Work)
 
-These documents define what AgentOS agents DO — products, projects, operations.
+These documents define what Agentic agents DO — products, projects, operations.
 
 | Type | Code | Location | Purpose |
 |------|------|----------|---------|
