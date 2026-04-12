@@ -269,66 +269,97 @@ The following table is grounded in documented GitHub issue discussions, PRs, and
 
 ---
 
-## 6. Roadmap — All Features Pre-v1
+## 6. Pre-v1 Feature Checklist
 
-All features below are in-scope for the initial AgentOS release. No phase gates. The complete BX3 Universal Architecture is the baseline.
+Each item below traces directly to the BX3 Universal Architecture v6.0 source spec. Items not grounded in the source are removed. Engineering review required to confirm feasibility.
 
-### Pre-v1: Full BX3 Feature Set
+### Purpose Layer (Owner Interface)
 
-**Purpose Layer (Owner Interface)**
-- [ ] Owner Dashboard (goal-setting, authorization boundaries, Ledger review)
-- [ ] Human Accountability Anchor — required per agent, cannot be delegated to an agent
-- [ ] Authorization boundary configuration (what each agent can and cannot do)
-- [ ] Escalation threshold configuration (when Bailout fires)
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| P1 | Owner Dashboard — goal-setting, authorization boundaries, Ledger review | BX3 Spec §2 Purpose Layer | ⬜ |
+| P2 | Human Accountability Anchor — required per agent, cannot be delegated | BX3 Spec §2 "Human Root Mandate" | ⬜ |
+| P3 | Authorization boundary configuration per agent | BX3 Spec §2 Purpose Layer | ⬜ |
+| P4 | Escalation threshold configuration (when Bailout fires) | BX3 Spec §5 "Bailout Protocol" | ⬜ |
 
-**Bounds Engine (Agent Reasoning)**
-- [ ] Sandbox simulation previews before any proposal is executed
-- [ ] Confidence scoring on all proposals
-- [ ] Bounds display — what the agent is NOT permitted to propose
-- [ ] Limbless enforcement — cannot execute directly, must pass through Fact Layer
+### Bounds Engine (Agent Reasoning)
 
-**Fact Layer (Execution Firewall)**
-- [ ] Architectural execution gate — not RBAC, not configurable bypass
-- [ ] SHA-256 forensic sealing on every event
-- [ ] Hard block on proposals that violate safety, regulatory, or authorization constraints
-- [ ] Tier gate enforcement (Tiers 1–4)
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| B1 | Sandbox simulation previews before any proposal is executed | BX3 Spec §4 "Sandbox Gate" | ⬜ |
+| B2 | Confidence scoring (0.0–1.0) on all proposals | BX3 Spec Glossary "Confidence Score" | ⬜ |
+| B3 | Bounds display — what the agent is NOT permitted to propose | BX3 Spec §2 Purpose Layer (authorization boundaries) | ⬜ |
+| B4 | Limbless enforcement — Bounds Engine cannot execute directly | BX3 Spec §2 "Limbless — no physical execution permissions" | ⬜ |
 
-**Pillar 1 — Loop Isolation**
-- [ ] Task Isolation Mode — every task is a self-contained BX3 sub-loop
-- [ ] No agent-to-agent direct execution — must route through Fact Layer
-- [ ] Task state isolation — compromised Bounds Engine cannot bleed across tasks
+### Fact Layer (Execution Firewall)
 
-**Pillar 2 — Recursive Spawning**
-- [ ] Worksheet mechanism — parent agents can birth containerized child agents
-- [ ] Child agent inherits parent's Purpose boundaries
-- [ ] Child agent has independent Bounds Engine + Fact Layer
-- [ ] Child agent revocation — parent or owner can revoke at any time
-- [ ] Local Survivability — child executes last-known-good Worksheet during cloud disconnection
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| F1 | Architectural execution gate — not RBAC, no configurable bypass | BX3 Spec §2 "100% deterministic. Hard-blocks any violation" | ⬜ |
+| F2 | SHA-256 forensic sealing on every event | BX3 Spec §5 "Ledger: Cryptographically sealed forensic log" | ⬜ |
+| F3 | Hard block on proposals that violate safety, regulatory, or authorization constraints | BX3 Spec §2 "Executes only commands that satisfy pre-defined safety, regulatory, and physical constraints" | ⬜ |
+| F4 | Tier gate enforcement (Tiers 1–4) | BX3 Spec §3 Pillar 3 "Spatial Resolution Tiers" | ⬜ |
 
-**Pillar 3 — Spatial Firewall**
-- [ ] 4-tier data access gates (Observer / Analyst / Operator / Admin)
-- [ ] Resolution-gated data access — Tier 1 agent cannot retrieve Tier 3 data
-- [ ] Tier upgrade requires owner approval via Purpose Layer
-- [ ] 9-plane data model (P1–P9)
+### Pillar 1 — Loop Isolation
 
-**Pillar 4 — Root Tunneling**
-- [ ] Owner Root-Pipe override — project into any agent without collapsing hierarchy
-- [ ] Non-collapsing authority projection
-- [ ] Sandbox Gate pre-execution simulation
-- [ ] HITL approval for high-stakes actions (configurable thresholds)
-- [ ] Full telemetry redirect to owner during Root-Pipe
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| L1 | Task Isolation Mode — every task is a self-contained BX3 sub-loop | BX3 Spec §3 Pillar 1 "Each BX3 Loop is self-contained" | ⬜ |
+| L2 | No agent-to-agent direct execution — must route through Fact Layer | BX3 Spec §3 Pillar 1 "Bounds Engine never shares a plane with Fact Layer" | ⬜ |
+| L3 | Task state isolation — compromised Bounds Engine cannot bleed across tasks | BX3 Spec §3 Pillar 1 "strictly isolated into discrete planes" | ⬜ |
 
-**Pillar 5 — Bailout Protocol**
-- [ ] Exception escalation chain — bypasses all machine actors to Human Root
-- [ ] Three trigger conditions (Capability Boundary / Safety Envelope / Authorization Gap)
-- [ ] Full escalation chain visibility to owner
-- [ ] Ledger — SHA-256 sealed forensic record across Purpose/Bounds/Fact planes
-- [ ] Deterministic loop breaking via topological state machine
+### Pillar 2 — Recursive Spawning
 
-**Governance & Interoperability**
-- [ ] BX3 Interchangeability Framework — Human/Machine role swap without loss of deterministic integrity
-- [ ] Agent-to-agent coordination via Fact Layer only
-- [ ] Ledger exportable for regulatory audit
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| R1 | Worksheet mechanism — parent agents birth containerized child agents | BX3 Spec §3 Pillar 2 "Worksheet: containerized BX3 Child Loop" | ⬜ |
+| R2 | Child agent inherits parent's Purpose boundaries | BX3 Spec §3 Pillar 2 "Hard-coded pointer to Parent's Purpose layer" | ⬜ |
+| R3 | Child agent has independent Bounds Engine + Fact Layer | BX3 Spec §3 Pillar 2 "Contains complete Bounds Engine + Fact Layer logic" | ⬜ |
+| R4 | Local Survivability — child executes last-known-good Worksheet during cloud disconnection | BX3 Spec §3 Pillar 2 "Local Survivability" | ⬜ |
+
+### Pillar 3 — Spatial Firewall
+
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| S1 | 4-tier data access gates (Observer / Analyst / Operator / Admin) | BX3 Spec §3 Pillar 3 "Spatial Resolution Tiers" | ⬜ |
+| S2 | 9-plane data model (P1–P9) | BX3 Spec §4 "9-Plane DAP" | ⬜ |
+
+### Pillar 4 — Root Tunneling
+
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| T1 | Owner Root-Pipe override — project into any agent without collapsing hierarchy | BX3 Spec §3 Pillar 4 "Root-Pipe Protocol" | ⬜ |
+| T2 | Non-collapsing authority projection | BX3 Spec §3 Pillar 4 "Hierarchy remains non-collapsing" | ⬜ |
+| T3 | Sandbox Gate pre-execution simulation | BX3 Spec §3 Pillar 4 "Sandbox Gate" | ⬜ |
+| T4 | Full telemetry redirect to owner during Root-Pipe | BX3 Spec §3 Pillar 4 "All telemetry... redirect to Root Dashboard" | ⬜ |
+
+### Pillar 5 — Bailout Protocol
+
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| A1 | Exception escalation chain — bypasses all machine actors to Human Root | BX3 Spec §5 "Bailout Protocol" + "Machine Actor Exclusion" | ⬜ |
+| A2 | Three trigger conditions (Capability Boundary / Safety Envelope / Authorization Gap) | BX3 Spec §5 "Three Trigger Conditions" | ⬜ |
+| A3 | Ledger — SHA-256 sealed forensic record across Purpose/Bounds/Fact planes | BX3 Spec §5 "Ledger: Cryptographically sealed forensic log" | ⬜ |
+
+### Governance & Interoperability
+
+| # | Feature | Source | Status |
+|---|---------|--------|--------|
+| G1 | BX3 Interchangeability Framework — Human/Machine role swap without loss of deterministic integrity | BX3 Spec §2 "Interchangeability Framework" | ⬜ |
+
+---
+
+**Removed items (not sourced in BX3 Spec v6.0):**
+- Child agent revocation — requires engineering decision (can parent revoke? is it immediate?)
+- Resolution-gated data access for agents — BX3 tier model is for irrigation; AgentOS tier mapping requires product spec decision
+- Tier upgrade requires owner approval — requires product spec decision
+- HITL approval with configurable thresholds — "configurable" is a product decision, HITL itself is sourced
+- Full escalation chain visibility to owner — escalation chain exists but visibility UX not specified in BX3
+- Deterministic loop breaking via topological state machine — TSM appears in competitive research, not in BX3 source
+- Agent-to-agent coordination via Fact Layer only — inferred, not explicit in BX3
+- Ledger exportable for regulatory audit — export format not specified in BX3
+
+**Note:** ⬜ = not started. Mark ✅ when complete.
 
 ---
 
