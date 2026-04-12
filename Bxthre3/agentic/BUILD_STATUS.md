@@ -1,6 +1,6 @@
 # Agentic v1 — Build Status
-**Version:** 1.0.1
-**Updated:** 2026-04-11
+**Version:** 1.0.2
+**Updated:** 2026-04-12
 **Status:** DEPLOYED ✅
 
 ## Live Endpoints (zo.space)
@@ -64,12 +64,13 @@
 - ✅ Truth Gate — No-Fetch-No-Think RAG enforcement
 - ✅ Deterministic Shell — Command whitelist + safety interlocks
 - ✅ Self-Modification Engine — Darwin Gödel Cycle
+- ✅ Inference Node — Agent-agnostic model serving
 
 ## Orchestration Modules (5/5)
 - ✅ Reasoning Stream — Append-only audit trail
 - ✅ Phase Gates — PENDING→ANALYZE→VALIDATE→EXECUTE→DELIVER→COMPLETE
 - ✅ Workflow DAG — Template-based with IER override
-- ✅ IER Router — Thompson Sampling Q-learning
+- ✅ IER Router — UCB1 contextual bandits (was Thompson Sampling)
 - ✅ Coherence Engine — Digital/Physical/Human parallel layers
 
 ## Not Yet Implemented
