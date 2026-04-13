@@ -8,8 +8,8 @@ import { Jordan, HunterPersonality } from '../employees/hunter-human.js';
 import { Alex, ArchitectPersonality } from '../employees/architect-human.js';
 
 export interface WarRoomMessage {
-  from: 'maya' | 'drew' | 'jordan' | 'alex' | 'visionary';
-  to?: 'maya' | 'drew' | 'jordan' | 'alex' | 'visionary' | 'all';
+  from: 'maya' | 'drew' | | | 'visionary';
+  to?: 'maya' | 'drew' | | | 'visionary' | 'all';
   content: string;
   tone: 'casual' | 'urgent' | 'celebratory' | 'concerned' | 'excited';
   timestamp: string;
@@ -77,8 +77,7 @@ export class Starting5WarRoom {
     // Jordan (Hunter) brings market energy
     const dealEnergy = context.dealsInPipeline > 2 ? 'excited' : 'concerned';
     messages.push({
-      from: 'jordan',
-      to: 'all',
+      from:       to: 'all',
       content: context.dealsInPipeline > 0
         ? `🎉 ${context.dealsInPipeline} prospects hot right now. One could close this week if we nail the demo.`
         : `Pipeline's... quiet. But I've got outreach in motion. Something will pop.`,
@@ -89,8 +88,7 @@ export class Starting5WarRoom {
 
     // Alex (Architect) watches patterns
     messages.push({
-      from: 'alex',
-      to: 'all',
+      from:       to: 'all',
       content: context.sprintActive
         ? `*quietly* The sprint pattern is holding. But watch our technical debt velocity. I'll flag if it shifts.`
         : `Architecture is... stable. I see opportunities in our platform layer. We should discuss post-deadline.`,
@@ -128,17 +126,13 @@ export class Starting5WarRoom {
     // Jordan and Alex sometimes debate scale
     if (context.dealsInPipeline > 3) {
       messages.push({
-        from: 'jordan',
-        to: 'alex',
-        content: `Alex, these customers want to scale fast. Like, "10x in 6 months" fast. Can our architecture...?`,
+        from:         to:         content: `Alex, these customers want to scale fast. Like, "10x in 6 months" fast. Can our architecture...?`,
         tone: 'excited',
         timestamp: now
       });
 
       messages.push({
-        from: 'alex',
-        to: 'jordan',
-        content: `*pause* They can scale. But not infinitely without tradeoffs. Let's map what "fast" actually means before we promise.`,
+        from:         to:         content: `*pause* They can scale. But not infinitely without tradeoffs. Let's map what "fast" actually means before we promise.`,
         tone: 'concerned',
         timestamp: now
       });
@@ -158,8 +152,7 @@ export class Starting5WarRoom {
 
     if (event.type === 'deal_closed') {
       messages.push({
-        from: 'jordan',
-        to: 'all',
+        from:         to: 'all',
         content: `🎉🎉🎉 BOOM! We got 'em! ${event.description} — ${event.value ? '$' + (event.value / 1000).toFixed(0) + 'K' : 'big win'}! Who's buying drinks? I'M BUYING DRINKS!`,
         tone: 'celebratory',
         timestamp: now
@@ -182,8 +175,7 @@ export class Starting5WarRoom {
       });
 
       messages.push({
-        from: 'alex',
-        to: 'all',
+        from:         to: 'all',
         content: `*rare smile* This validates our platform thesis. But more importantly — you all did great work.`,
         tone: 'celebratory',
         timestamp: now
@@ -208,16 +200,14 @@ export class Starting5WarRoom {
       });
 
       messages.push({
-        from: 'jordan',
-        to: 'all',
+        from:         to: 'all',
         content: `This is going to open SO many doors. You all crushed it. I'm genuinely honored to work with you.`,
         tone: 'celebratory',
         timestamp: now
       });
 
       messages.push({
-        from: 'alex',
-        to: 'all',
+        from:         to: 'all',
         content: `Structure is destiny. And we just... built something that will outlast us all. *pause* That's the goal.`,
         tone: 'celebratory',
         timestamp: now
@@ -254,16 +244,14 @@ export class Starting5WarRoom {
       });
 
       messages.push({
-        from: 'jordan',
-        to: 'all',
+        from:         to: 'all',
         content: `I can buy us time with the customer. "Polish week" I can sell that. But only once.`,
         tone: 'concerned',
         timestamp: now
       });
 
       messages.push({
-        from: 'alex',
-        to: 'all',
+        from:         to: 'all',
         content: `If we cut scope, let's be intentional about what stays. I'll map the minimum viable architecture.`,
         tone: 'concerned',
         timestamp: now

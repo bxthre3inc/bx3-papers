@@ -143,7 +143,7 @@ class OverwatchV2 {
     // Jordan checks: leads needing response, deals stalling
     const staleLeads = this.findStaleLeads();
     if (staleLeads.length > 0) {
-      this.escalateToEmployee('jordan', {
+      this.escalateToEmployee({
         type: 'sales-action',
         leads: staleLeads,
         responseDeadline: Date.now() + 2 * 60 * 60 * 1000 // 2 hours
@@ -155,7 +155,7 @@ class OverwatchV2 {
     // Alex checks: strategic drift, market signals, long-term risks
     const strategicAlerts = this.findStrategicAlerts();
     if (strategicAlerts.length > 0) {
-      this.escalateToEmployee('alex', {
+      this.escalateToEmployee({
         type: 'strategic-review',
         alerts: strategicAlerts,
         responseDeadline: Date.now() + 4 * 60 * 60 * 1000 // 4 hours
@@ -240,13 +240,13 @@ class OverwatchV2 {
         targetEmployee = 'maya';
         break;
       case 'sales':
-        targetEmployee = 'jordan';
+        targetEmployee = ;
         break;
       case 'operations':
         targetEmployee = 'drew';
         break;
       default:
-        targetEmployee = 'alex'; // Default to architect for triage
+        targetEmployee = ; // Default to architect for triage
     }
     
     this.escalateToEmployee(targetEmployee, {

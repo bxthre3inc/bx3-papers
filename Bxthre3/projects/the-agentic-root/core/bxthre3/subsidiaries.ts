@@ -62,7 +62,7 @@ export class SubsidiaryManager {
         runwayMonths: 3,
         nextRound: 'Seed $500K by April 30'
       },
-      employees: ['casey', 'jordan-researcher', 'iris', 'drew', 'theo', 'quinn', 'avery-ops'],
+      employees: ['casey', 'jordan-researcher', 'iris', 'drew', 'theo', 'avery-ops'],
       projects: ['estcp-fy2027', 'csu-pilot', 'san-luis-valley'],
       ip: ['irrig8-iot-water', 'irrig8-oracle'],
       metrics: {
@@ -94,7 +94,7 @@ export class SubsidiaryManager {
         committed: 0,
         runwayMonths: 6 // Funded by Bxthre3 R&D
       },
-      employees: ['morgan', 'riley', 'jordan-dev'],
+      employees: ['morgan', 'jordan-dev'],
       projects: ['platform-mvp', 'agent-marketplace'],
       ip: ['arkad-digital-employee'],
       metrics: {
