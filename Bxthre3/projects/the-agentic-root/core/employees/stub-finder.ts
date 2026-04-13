@@ -32,8 +32,7 @@ const SCAN_TARGETS = [
   { path: '/home/workspace/Bxthre3/projects/the-agentic-android/app/src/main/kotlin', description: 'Android native app' },
 ];
 
-const KNOWN_FAKE_IDS = new Set([
-  // avery, remy, chronicler — caught by CANONICAL_ROSTER check; kept as doc only]);
+const KNOWN_FAKE_IDS: string[] = []; // populated by scanner
 
 const CANONICAL_ROSTER = new Set([
   'brodiblanco','zoe','atlas','vance','pulse','sentinel',
@@ -132,7 +131,7 @@ function scanFile(fp: string, findings: StubFinding[]): void {
     }
   }
   
-  if (/completionRate.*?0\.(?:9[0-9]|8[0-9]|7[0-6])/.test(content)) {
+  if (/completionRate.*?0\.[789][0-9]/.test(content)) {
     findings.push({
       id: 'stub-' + (++idx), type: 'FAKE_DATA', severity: 'P0',
       file: relPath,

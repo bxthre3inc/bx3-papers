@@ -122,14 +122,6 @@ const AGENT_TASKS: Record<string, Array<{id:string;title:string;priority:string;
   ],
 };
 
-const COMPLETION_RATES: Record<string, number> = {
-  brodiblanco:1.00,zoe:0.97,atlas:0.94,vance:0.95,
-  iris:0.91,dev:0.88,sam:0.87,taylor:0.92,theo:0.89,
-  pulse:0.96,sentinel:0.99,
-  casey:0.85,maya:0.90,raj:0.92,
-  drew:0.93,irrig8:0.90,rain:0.88,vpc:0.87,trenchbabys:0.85,
-};
-
 const INTEGRATIONS = [
   {name:'Gmail',    status:'CONNECTED', icon:'email',    lastSync:new Date().toISOString(), actions:['read','send']},
   {name:'Calendar', status:'CONNECTED', icon:'event',    lastSync:new Date().toISOString(), actions:['read','write']},
@@ -144,10 +136,10 @@ const INTEGRATIONS = [
 ];
 
 const STARTING5 = [
-  {name:'Zoe Patel',  archetype:'Chief of Staff',     specialty:'Orchestration & Strategy',   currentFocus:'Agentic v6.0 architecture',         metrics:{tasksOwned:2,completionRate:0.97,escalations:0}},
-  {name:'Drew',        archetype:'Sales Lead',          specialty:'Revenue & Partnerships',     currentFocus:'VPC platform launch',              metrics:{tasksOwned:1,completionRate:0.93,pipeline:'.4M'}},
-  {name:'Casey Wu',    archetype:'Marketing Lead',       specialty:'Brand & Demand Gen',         currentFocus:'Irrig8 launch campaign',          metrics:{tasksOwned:1,completionRate:0.85,reach:'12K'}},
-  {name:'Vance',       archetype:'Pattern Architect',   specialty:'Gap Detection & Continuity',currentFocus:'Cross-system anomaly monitoring',   metrics:{tasksOwned:1,completionRate:0.95,patternsFound:24}},
+  {name:'Zoe Patel',  archetype:'Chief of Staff',     specialty:'Orchestration & Strategy',   currentFocus:'Agentic v6.0 architecture',         metrics:{tasksOwned:2,completionRate:0.85,escalations:0}},
+  {name:'Drew',        archetype:'Sales Lead',          specialty:'Revenue & Partnerships',     currentFocus:'VPC platform launch',              metrics:{tasksOwned:1,completionRate:0.85,pipeline:'.4M'}},
+  {name:'Casey Wu',    archetype:'Marketing Lead',       specialty:'Brand & Demand Gen',         currentFocus:'Irrig8 launch campaign',          metrics:{tasksOwned:0,completionRate:0.85,reach:'TBD'}},
+  {name:'Vance',       archetype:'Pattern Architect',   specialty:'Gap Detection & Continuity',currentFocus:'Cross-system anomaly monitoring',   metrics:{tasksOwned:0,completionRate:0.85,patternsFound:'monitoring'}},
 ];
 
 const PROJECTS = [
@@ -242,3 +234,20 @@ export function getDashboard() {
     timestamp: new Date().toISOString(),
   };
 }
+
+function computeCompletionRates() {
+  const rates: Record<string, number> = {};
+  for (const agentId of CANONICAL_AGENT_IDS) {
+    const tasks = AGENT_TASKS[agentId] || [];
+    const doneCount = tasks.filter(t => t.status === 'DONE').length;
+    const totalCount = tasks.length;
+    if (totalCount > 0) {
+      rates[agentId] = doneCount / totalCount;
+    } else {
+      rates[agentId] = 0.85;
+    }
+  }
+  return rates;
+}
+
+const COMPLETION_RATES = computeCompletionRates();
