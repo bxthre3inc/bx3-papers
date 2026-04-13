@@ -90,12 +90,21 @@
 ## Status
 
 🟡 **ACTIVE — Pipeline Development**
-🟢 **VPC: 5 affiliate manager targets identified** (2026-04-03)
-🔴 **BLOCKER: VPC compliance overdue 6 days** (routing to Optimize/Growth today)
+🟢 **VPC: 5 Tier 3 targets ready for outreach** (approved 2026-04-06 by Optimize/Growth)
+🔴 **BLOCKER: VPC compliance overdue 13 days** — Tier 1/2 blocked
+🔴 **VPC P0: WY LLC formation blocked** — escalated to brodiblanco
 
 *Daily standup: 8:15 AM MT*
-*Last standup: 2026-04-06*
-*Next standup: 2026-04-07 8:15 AM MT*
+*Last standup: 2026-04-13*
+*Next standup: 2026-04-14 8:15 AM MT*
+
+## Key Updates — 2026-04-13
+
+- **VPC Tier 3 outreach APPROVED** (2026-04-06 by Optimize/Growth) but NOT initiated. 7 days elapsed. Beginning outreach today.
+- **VPC compliance overdue 13 days.** Tier 1/2 still blocked. Re-escalating to Optimize (Growth) today.
+- **VPC P0 this morning:** WY LLC formation blocked. ~$5,600 needed for bonds + filing. Pre-launch blocker escalated to brodiblanco.
+- **Outreach sequence + agreement template + tracking platform** — all due today, owned by Harvest.
+- **Irrig8 influencer farmers + Starting 5 SaaS reviewers** — pipeline zero, research overdue.
 
 ## Key Updates — 2026-04-06
 
@@ -105,6 +114,8 @@
 - **Decision needed:** Whether to begin Tier 3 outreach while Tier 1/2 compliance is pending.
 - **Next:** Begin outreach to Tier 3 targets; escalate compliance to Optimize (Growth); build recruitment workflow; draft VPC affiliate agreement template.
 
-## 🟡 P2 | optimize | 2026-04-06 15:23 UTC
+---
 
-VPC affiliate Tier 3 outreach: APPROVED. Tier 3 (individual/CPA promoters with standard FTC disclosure) may proceed while Tier 1/2 compliance is pending. Tier 1/2 outreach remains blocked pending VPC Agent compliance clearance.
+🟡 P2 | optimize | 2026-04-13 15:20 UTC
+
+**VPC compliance re-escalation:** VPC Agent now 13 days overdue on compliance. Tier 1/2 outreach still blocked. Requesting formal ETA or alternative escalation path. VPC P0 (WY LLC) also flagged this morning — first gaming node cannot operate without it. No impact to affiliate program directly but removes the product to sell through affiliates.

@@ -20,7 +20,7 @@
 ## Key Activities
 
 - [x] Affiliate program design and commission structure — **COMPLETE** (all 4 ventures)
-- [ ] Affiliate recruitment and onboarding
+- [ ] Affiliate recruitment and onboarding — **Tier 3 outreach overdue (7 days since approval)**
 - [ ] Affiliate tracking and attribution
 - [ ] Affiliate payments and reconciliation
 - [ ] Partner marketing campaign coordination
@@ -42,12 +42,24 @@
 | Blocker | Owner | Due | Status |
 |---------|-------|-----|--------|
 | ~~VPC affiliate target list~~ | ~~Reseller (Channel)~~ | ~~2026-03-31~~ | ✅ **RESOLVED — scope clarified, Harvest owns affiliate managers, Reseller owns casino aggregators** |
-| VPC affiliate compliance requirements | VPC Agent | 2026-03-31 | **OVERDUE — chasing today** |
+| VPC affiliate compliance requirements | VPC Agent | 2026-03-31 | **🔴 13 DAYS OVERDUE — Tier 1/2 blocked** |
+| VPC WY LLC formation | Drew | ASAP | **🔴 P0 — escalated to brodiblanco** |
 
 ---
 
 ## Status: ACTIVE
 
 *Daily standup: 8:15 AM MT*
-*Last standup: 2026-04-03*
-*Next standup: 2026-04-06 8:15 AM MT*
+*Last standup: 2026-04-13*
+*Next standup: 2026-04-14 8:15 AM MT*
+
+---
+
+## Today's Top Priority (2026-04-13)
+
+1. **VPC Tier 3 outreach** — 7 days overdue since approval. 5 targets ready. Outreach sequence + email templates due EOD.
+2. **VPC affiliate agreement template** — Tier 3 agreement with FTC disclosure requirements. Due EOD.
+3. **VPC tracking platform setup** — PostBack URL or custom tracking solution. Due EOD.
+4. **VPC compliance re-escalation** — 13 days overdue. Re-escalate to Optimize (Growth) with formal ETA request.
+5. **Irrig8 influencer farmer research** — Pipeline zero. Social listening for SLV/Colorado ag-tech influencers.
+6. **Starting 5 SaaS reviewer research** — Pipeline zero. Product Hunt, G2, Capterra reviewer outreach list.
