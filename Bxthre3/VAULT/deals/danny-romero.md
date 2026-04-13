@@ -3,7 +3,7 @@
 **Type:** Revenue Share + Equity (Dual Offer)
 **Amount:** $10,000
 **Stage:** Outreach
-**Last Updated:** 2026-04-11
+**Last Updated:** 2026-04-12
 
 ## Deal Terms
 - **Revenue Share:** 20% of Agentic V1 gross revenue until $15K repaid; then 10% for 6 months
@@ -11,7 +11,12 @@
 - **Target Return:** $20,000-$25,000 total
 
 ## Current Status
-🟡 PENDING — No response to SMS outreach. **4 days since last contact** (April 6). Approaching 7-day stale threshold on April 13.
+🔴 STALE — **7+ days no contact (threshold hit 2026-04-13)** → P2 already escalated to INBOX.md at 09:05 UTC. SMS outreach sent 2026-04-06 + follow-up 2026-04-07. Zero response. Deal approaching dead unless brodiblanco intervenes.
+
+## Updated 2026-04-13 09:20 UTC
+- P2 escalation entry written to INBOX.md (09:05 UTC)
+- Threshold: 7 days with zero response
+- Next action: Brodiblanco direct outreach or abandon deal
 
 ## Deal Timeline
 | Date | Action | Status |

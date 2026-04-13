@@ -89,7 +89,7 @@ class Jordan {
     
     this.backlog.push(item);
     
-    eventBus.publish(BXTHRE3_EVENTS.WORK_FOUND, 'jordan', {
+    eventBus.publish(BXTHRE3_EVENTS.WORK_FOUND, {
       itemId: item.id,
       type: item.type,
       priority: item.priority
@@ -111,15 +111,13 @@ class Jordan {
       id: `jordan-resolution-${Date.now()}`,
       content: `Auto-resolved: ${item.type}`,
       type: 'resolution',
-      agent: 'jordan',
-      tags: ['auto-resolved', item.type],
+      agent:       tags: ['auto-resolved', item.type],
       timestamp: new Date().toISOString(),
-      source: 'jordan'
-    });
+      source:     });
   }
 
   private escalate(item: any): void {
-    eventBus.publish(BXTHRE3_EVENTS.BLOCKER_ESCALATED, 'jordan', {
+    eventBus.publish(BXTHRE3_EVENTS.BLOCKER_ESCALATED, {
       itemId: item.id,
       type: item.type,
       requiresVisionary: true,

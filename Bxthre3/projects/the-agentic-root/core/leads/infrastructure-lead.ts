@@ -5,7 +5,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 
 class InfrastructureLead {
   private services = new Map();
-  private team = ['skye', 'devops-1', 'devops-2', 'security-1'];
+  private team = ['devops-1', 'devops-2', 'security-1'];
   
   constructor() {
     this.startScanning();

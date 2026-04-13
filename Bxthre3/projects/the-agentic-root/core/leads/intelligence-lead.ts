@@ -5,7 +5,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 
 class IntelligenceLead {
   private watchlist = new Set();
-  private team = ['blake', 'analyst-1', 'analyst-2'];
+  private team = ['analyst-1', 'analyst-2'];
   private insights = [];
   
   constructor() {

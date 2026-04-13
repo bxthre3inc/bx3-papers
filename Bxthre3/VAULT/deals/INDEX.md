@@ -2,7 +2,7 @@
 **DEAL-AGENT Tracking — Bxthre3 Inc**
 **Bridge Financing Target:** $400,000 by July 1, 2026
 **Cash Position:** $130,450 | **Burn:** $130K/week | **Runway:** ~1 week
-**Last Updated:** 2026-04-11
+**Last Updated:** 2026-04-13
 
 ---
 
@@ -30,7 +30,7 @@
 | Deal | Days Stale | Owner | Action Required |
 |------|------------|-------|------------------|
 | Sage (VPC-CP-001) | **15+ days** | Drew | Follow up on legal docs — mark-up 15 days overdue |
-| Danny Romero (INV-DANNY-001) | **3 days** | DEAL-AGENT | Await response — approaching 7-day threshold |
+| Danny Romero (INV-DANNY-001) | **5 days** | DEAL-AGENT | Await response — approaching 7-day threshold |
 
 ## Escalation Log
 | Time | Event |

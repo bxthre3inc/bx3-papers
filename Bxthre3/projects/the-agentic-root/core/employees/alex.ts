@@ -89,7 +89,7 @@ class Alex {
     
     this.backlog.push(item);
     
-    eventBus.publish(BXTHRE3_EVENTS.WORK_FOUND, 'alex', {
+    eventBus.publish(BXTHRE3_EVENTS.WORK_FOUND, {
       itemId: item.id,
       type: item.type,
       priority: item.priority
@@ -106,7 +106,7 @@ class Alex {
   }
 
   private escalate(item: any): void {
-    eventBus.publish(BXTHRE3_EVENTS.BLOCKER_ESCALATED, 'alex', {
+    eventBus.publish(BXTHRE3_EVENTS.BLOCKER_ESCALATED, {
       itemId: item.id,
       type: item.type,
       requiresVisionary: true,

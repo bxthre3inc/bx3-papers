@@ -6,7 +6,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 
 class CommercializationLead {
   private pipeline = new Map();
-  private team = ['jordan', 'sales-1', 'sales-2', 'partnerships-1', 'partnerships-2', 'bd-1'];
+  private team = ['sales-1', 'sales-2', 'partnerships-1', 'partnerships-2', 'bd-1'];
   
   constructor() {
     this.startScanning();

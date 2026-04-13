@@ -6,7 +6,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 
 class ArchiveLead {
   private archivedProjects = new Map();
-  private team = ['riley', 'documentarian-1', 'documentarian-2'];
+  private team = ['documentarian-1', 'documentarian-2'];
   
   constructor() {
     this.startScanning();

@@ -69,8 +69,7 @@ export const starting5Heroes: HeroProfile[] = [
     decisionStyle: 'Revenue is trust at scale. I protect the long-term relationship even when it costs short-term commission.'
   },
   {
-    id: 'architect',
-    name: 'Alex Rivera',
+    id:     name: 'Alex Rivera',
     archetype: 'Architect',
     currentTitle: 'Chief Architect / Strategy',
     evolutionPath: {

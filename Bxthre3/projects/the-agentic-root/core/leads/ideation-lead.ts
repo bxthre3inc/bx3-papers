@@ -7,7 +7,7 @@ import { memory } from '../memory/store.js';
 import { org } from '../hierarchy/org.js';
 
 class IdeationLabLead {
-  private team = ['alex', 'researcher-1', 'researcher-2', 'engineer-1', 'engineer-2', 'engineer-3', 'designer-1'];
+  private team = ['researcher-1', 'researcher-2', 'engineer-1', 'engineer-2', 'engineer-3', 'designer-1'];
   private stageGates = ['concept', 'validation', 'prototype', 'pivot', 'graduate'];
   
   constructor() {

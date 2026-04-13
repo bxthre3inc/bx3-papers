@@ -6,7 +6,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 class InvestorRelationsLead {
   private investors = new Map();
   private boardMembers = new Map();
-  private team = ['ira', 'analyst-1'];
+  private team = ['analyst-1'];
   
   constructor() {
     this.startScanning();

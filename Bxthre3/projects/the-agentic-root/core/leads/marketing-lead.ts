@@ -5,7 +5,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 
 class MarketingLead {
   private brandVoice = 'technical, ambitious, founder-led';
-  private team = ['cameron', 'content-1', 'content-2', 'designer-1'];
+  private team = ['content-1', 'content-2', 'designer-1'];
   private contentCalendar = new Map();
   
   constructor() {

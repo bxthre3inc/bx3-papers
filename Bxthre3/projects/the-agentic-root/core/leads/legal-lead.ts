@@ -5,7 +5,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 
 class LegalLead {
   private activeContracts = new Map();
-  private team = ['sage', 'paralegal-1', 'ip-specialist-1'];
+  private team = ['paralegal-1', 'ip-specialist-1'];
   
   constructor() {
     this.startScanning();

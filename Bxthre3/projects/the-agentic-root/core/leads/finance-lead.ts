@@ -6,7 +6,7 @@ import { eventBus, BXTHRE3_EVENTS } from '../events/bus.js';
 class FinanceLead {
   private burnRate = 45000; // monthly
   private runway = 18; // months
-  private team = ['quinn', 'accountant-1', 'accountant-2', 'analyst-1'];
+  private team = ['accountant-1', 'accountant-2', 'analyst-1'];
   
   constructor() {
     this.startScanning();
