@@ -2,263 +2,177 @@
 Chairman Queue — HITL-Gated Tool Call Store
 Bxthre3/agentic/kernel/gateway/chairman_queue.py
 
-Stores all T2 (HITL-Gated) tool call requests pending approval.
-Only agentos-core or agents with chairman_write permission can write.
-Human (brodiblanco) approves via /api/chairman/decide.
+Stores T2 (HITL-Gated) tool call requests pending human approval.
+Humans (brodiblanco) approve via /api/chairman/ approve endpoint.
+
+Tool call syntax: LFM Pythonic
+  <|tool_call_start|>[T2_tool_name(arg="value")]<|tool_call_end|>
 """
-import sqlite3
+import json
 import uuid
-import time
+import sqlite3
 import logging
-from pathlib import Path
-from enum import Enum
-from typing import Optional
-from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
+from pathlib import Path
+from typing import Optional
+from enum import Enum
 
 logger = logging.getLogger("agentic.chairman")
 
-DB_PATH = Path(__file__).parent.parent.parent / "store" / "chairman_queue.db"
+DB_PATH = Path(__file__).parent.parent / "store" / "chairman_queue.db"
 
 
-class Decision(Enum):
-    PENDING = "pending"
-    APPROVED = "approved"
-    DENIED = "denied"
-    EXPIRED = "expired"
+class QueueStatus(Enum):
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    DENIED = "DENIED"
+    EXPIRED = "EXPIRED"
 
 
-@dataclass
-class ChairmanItem:
-    item_id: str
-    agent_id: str
-    agent_did: str
-    tool_name: str
-    tier: str  # T2
-    parameters: str  # JSON
-    rationale: Optional[str]
-    requested_at: str
-    decision: str
-    decided_by: Optional[str]
-    decided_at: Optional[str]
-    notes: Optional[str]
-    ttl_seconds: int
-    context_hash: str  # sha256 of full context for audit
-    parent_job_id: Optional[str]
-    status: str  # open / closed
-
-    def to_dict(self):
-        d = asdict(self)
-        d["decision"] = self.decision
-        return d
-
-
-def _get_db() -> sqlite3.Connection:
+def _get_db():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH))
     conn.execute("""
         CREATE TABLE IF NOT EXISTS chairman_queue (
-            item_id        TEXT PRIMARY KEY,
-            agent_id       TEXT NOT NULL,
-            agent_did      TEXT NOT NULL,
-            tool_name      TEXT NOT NULL,
-            tier           TEXT NOT NULL DEFAULT 'T2',
-            parameters     TEXT NOT NULL,
-            rationale      TEXT,
-            requested_at   TEXT NOT NULL,
-            decision       TEXT NOT NULL DEFAULT 'pending',
-            decided_by     TEXT,
-            decided_at     TEXT,
-            notes          TEXT,
-            ttl_seconds    INTEGER NOT NULL DEFAULT 7200,
-            context_hash   TEXT NOT NULL,
-            parent_job_id  TEXT,
-            status         TEXT NOT NULL DEFAULT 'open'
+            id              TEXT PRIMARY KEY,
+            agent_did       TEXT NOT NULL,
+            tool_call       TEXT NOT NULL,
+            tool_name       TEXT NOT NULL,
+            intent_summary  TEXT NOT NULL,
+            risk_level      TEXT NOT NULL,
+            status          TEXT NOT NULL DEFAULT 'PENDING',
+            requested_at    TEXT NOT NULL,
+            reviewed_by     TEXT,
+            reviewed_at     TEXT,
+            rationale       TEXT,
+            expires_at      TEXT NOT NULL
         )
     """)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS chairman_decision_log (
-            log_id         TEXT PRIMARY KEY,
-            item_id        TEXT NOT NULL,
-            decided_by     TEXT NOT NULL,
-            decision       TEXT NOT NULL,
-            rationale      TEXT,
-            notes          TEXT,
-            created_at     TEXT NOT NULL,
-            FOREIGN KEY (item_id) REFERENCES chairman_queue(item_id)
-        )
-    """)
-    conn.execute("CREATE INDEX IF NOT EXISTS idx_cq_status ON chairman_queue(status)")
-    conn.execute("CREATE INDEX IF NOT EXISTS idx_cq_agent ON chairman_queue(agent_id)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_status ON chairman_queue(status)")
     conn.commit()
     return conn
 
 
-# ─── Write ────────────────────────────────────────────────────────────────────
-
 def enqueue(
-    agent_id: str,
     agent_did: str,
-    tool_name: str,
-    parameters: dict,
-    rationale: Optional[str] = None,
-    ttl_seconds: int = 7200,
-    context_hash: str = "",
-    parent_job_id: Optional[str] = None,
-) -> ChairmanItem:
-    """Add a T2 tool call to the approval queue."""
+    tool_call: str,
+    intent_summary: str,
+    risk_level: str = "HIGH",
+    ttl_hours: int = 24
+) -> str:
+    """Enqueue a T2 tool call for HITL approval. Returns queue item ID."""
+    item_id = f"hitl-{uuid.uuid4().hex[:12]}"
+    now = datetime.now(timezone.utc)
+    expires = datetime.fromtimestamp(
+        now.timestamp() + ttl_hours * 3600, tz=timezone.utc
+    )
+
     conn = _get_db()
-    item_id = f"chm-{uuid.uuid4().hex[:12]}"
-    now = datetime.now(timezone.utc).isoformat()
-    row = {
-        "item_id": item_id,
-        "agent_id": agent_id,
-        "agent_did": agent_did,
-        "tool_name": tool_name,
-        "tier": "T2",
-        "parameters": __import__("json").dumps(parameters),
-        "rationale": rationale or "",
-        "requested_at": now,
-        "decision": Decision.PENDING.value,
-        "decided_by": None,
-        "decided_at": None,
-        "notes": None,
-        "ttl_seconds": ttl_seconds,
-        "context_hash": context_hash,
-        "parent_job_id": parent_job_id or "",
-        "status": "open",
-    }
     conn.execute("""
         INSERT INTO chairman_queue
-        (item_id, agent_id, agent_did, tool_name, tier, parameters, rationale,
-         requested_at, decision, ttl_seconds, context_hash, parent_job_id, status)
-        VALUES
-        (:item_id, :agent_id, :agent_did, :tool_name, :tier, :parameters, :rationale,
-         :requested_at, :decision, :ttl_seconds, :context_hash, :parent_job_id, :status)
-    """, row)
+            (id, agent_did, tool_call, tool_name, intent_summary, risk_level, status, requested_at, expires_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        item_id,
+        agent_did,
+        tool_call,
+        tool_call.split("(")[0],
+        intent_summary,
+        risk_level,
+        QueueStatus.PENDING.value,
+        now.isoformat(),
+        expires.isoformat()
+    ))
     conn.commit()
     conn.close()
-    logger.info(f"[Chairman] Enqueued {item_id}: {tool_name} from {agent_id}")
-    return ChairmanItem(**{**row, "decision": Decision.PENDING.value})
+    logger.info(f"[CHAIRMAN] Enqueued: {item_id} | {tool_call}")
+    return item_id
 
 
-def decide(
-    item_id: str,
-    decision: str,  # approved | denied
-    decided_by: str = "brodiblanco",
-    rationale: Optional[str] = None,
-    notes: Optional[str] = None,
-) -> ChairmanItem:
-    """
-    Approve or deny a T2 item.
-   decision: 'approved' or 'denied'
-    decided_by: 'brodiblanco' or 'chairman_agent:<agent_id>'
-    """
+def approve(item_id: str, reviewer: str, rationale: str = "") -> bool:
+    """Approve a pending T2 item."""
     conn = _get_db()
     now = datetime.now(timezone.utc).isoformat()
+    cur = conn.execute(
+        "SELECT status FROM chairman_queue WHERE id = ?", (item_id,)
+    ).fetchone()
+    if not cur:
+        conn.close()
+        return False
+    if cur[0] != QueueStatus.PENDING.value:
+        conn.close()
+        return False
+
     conn.execute("""
         UPDATE chairman_queue
-        SET decision=:decision, decided_by=:decided_by, decided_at=:decided_at, notes=:notes, status='closed'
-        WHERE item_id=:item_id
-    """, {"decision": decision, "decided_by": decided_by, "decided_at": now, "notes": notes or "", "item_id": item_id})
+        SET status=?, reviewed_by=?, reviewed_at=?, rationale=?
+        WHERE id=?
+    """, (QueueStatus.APPROVED.value, reviewer, now, rationale, item_id))
+    conn.commit()
+    conn.close()
+    logger.info(f"[CHAIRMAN] Approved: {item_id} by {reviewer}")
+    return True
+
+
+def deny(item_id: str, reviewer: str, rationale: str = "") -> bool:
+    """Deny a pending T2 item."""
+    conn = _get_db()
+    now = datetime.now(timezone.utc).isoformat()
+    cur = conn.execute(
+        "SELECT status FROM chairman_queue WHERE id = ?", (item_id,)
+    ).fetchone()
+    if not cur:
+        conn.close()
+        return False
+    if cur[0] != QueueStatus.PENDING.value:
+        conn.close()
+        return False
+
     conn.execute("""
-        INSERT INTO chairman_decision_log (log_id, item_id, decided_by, decision, rationale, notes, created_at)
-        VALUES (:log_id, :item_id, :decided_by, :decision, :rationale, :notes, :created_at)
-    """, {
-        "log_id": f"log-{uuid.uuid4().hex[:12]}",
-        "item_id": item_id,
-        "decided_by": decided_by,
-        "decision": decision,
-        "rationale": rationale or "",
-        "notes": notes or "",
-        "created_at": now,
-    })
-    conn.commit()
-    item = get(item_id)
-    conn.close()
-    logger.info(f"[Chairman] {decision.upper()} {item_id} by {decided_by}")
-    return item
-
-
-def expire_stale() -> int:
-    """Mark pending items past their TTL as expired. Returns count."""
-    conn = _get_db()
-    now_ts = time.time()
-    cur = conn.execute("""
-        SELECT item_id, requested_at, ttl_seconds FROM chairman_queue
-        WHERE decision='pending' AND status='open'
-    """)
-    expired = 0
-    for row in cur.fetchall():
-        item_id, requested_at, ttl = row
-        try:
-            requested_ts = datetime.fromisoformat(requested_at).timestamp()
-            if now_ts - requested_ts > ttl:
-                conn.execute("""
-                    UPDATE chairman_queue SET decision='expired', status='closed'
-                    WHERE item_id=? AND decision='pending'
-                """, (item_id,))
-                expired += 1
-        except Exception:
-            pass
+        UPDATE chairman_queue
+        SET status=?, reviewed_by=?, reviewed_at=?, rationale=?
+        WHERE id=?
+    """, (QueueStatus.DENIED.value, reviewer, now, rationale, item_id))
     conn.commit()
     conn.close()
-    if expired:
-        logger.info(f"[Chairman] Expired {expired} stale items")
-    return expired
+    logger.info(f"[CHAIRMAN] Denied: {item_id} by {reviewer}")
+    return True
 
 
-# ─── Read ─────────────────────────────────────────────────────────────────────
-
-def get(item_id: str) -> Optional[ChairmanItem]:
+def get_pending(limit: int = 50) -> list[dict]:
+    """Return all PENDING items oldest-first."""
     conn = _get_db()
-    row = conn.execute("SELECT * FROM chairman_queue WHERE item_id=?", (item_id,)).fetchone()
+    rows = conn.execute("""
+        SELECT id, agent_did, tool_call, tool_name, intent_summary,
+               risk_level, requested_at, expires_at
+        FROM chairman_queue
+        WHERE status = ?
+        ORDER BY requested_at ASC
+        LIMIT ?
+    """, (QueueStatus.PENDING.value, limit)).fetchall()
+    conn.close()
+    return [
+        {
+            "id": r[0], "agent_did": r[1], "tool_call": r[2],
+            "tool_name": r[3], "intent_summary": r[4],
+            "risk_level": r[5], "requested_at": r[6], "expires_at": r[7]
+        }
+        for r in rows
+    ]
+
+
+def get_by_id(item_id: str) -> Optional[dict]:
+    """Return a single queue item by ID."""
+    conn = _get_db()
+    row = conn.execute(
+        "SELECT * FROM chairman_queue WHERE id = ?", (item_id,)
+    ).fetchone()
     conn.close()
     if not row:
         return None
-    cols = [c[0] for c in conn.execute("SELECT * FROM chairman_queue LIMIT 0").description]
-    return ChairmanItem(**dict(zip(cols, row)))
-
-
-def list_pending(limit: int = 50) -> list[ChairmanItem]:
-    conn = _get_db()
-    rows = conn.execute("""
-        SELECT * FROM chairman_queue
-        WHERE status='open' AND decision='pending'
-        ORDER BY requested_at ASC LIMIT ?
-    """, (limit,)).fetchall()
-    conn.close()
-    if not rows:
-        return []
-    cols = [c[0] for c in conn.execute("SELECT * FROM chairman_queue LIMIT 0").description]
-    return [ChairmanItem(**dict(zip(cols, row))) for row in rows]
-
-
-def list_all(limit: int = 100, status: Optional[str] = None) -> list[ChairmanItem]:
-    conn = _get_db()
-    if status:
-        rows = conn.execute("""
-            SELECT * FROM chairman_queue
-            WHERE status=? ORDER BY requested_at DESC LIMIT ?
-        """, (status, limit)).fetchall()
-    else:
-        rows = conn.execute("""
-            SELECT * FROM chairman_queue ORDER BY requested_at DESC LIMIT ?
-        """, (limit,)).fetchall()
-    conn.close()
-    if not rows:
-        return []
-    cols = [c[0] for c in conn.execute("SELECT * FROM chairman_queue LIMIT 0").description]
-    return [ChairmanItem(**dict(zip(cols, row))) for row in rows]
-
-
-def get_decision_log(item_id: str) -> list[dict]:
-    conn = _get_db()
-    rows = conn.execute("""
-        SELECT * FROM chairman_decision_log WHERE item_id=? ORDER BY created_at ASC
-    """, (item_id,)).fetchall()
-    conn.close()
-    if not rows:
-        return []
-    cols = [c[0] for c in conn.execute("SELECT * FROM chairman_decision_log LIMIT 0").description]
-    return [dict(zip(cols, row)) for row in rows]
+    cols = [c[0] for c in conn.execute("PRAGMA table_info(chairman_queue)").fetchall()] if False else [
+        "id","agent_did","tool_call","tool_name","intent_summary",
+        "risk_level","status","requested_at","reviewed_by",
+        "reviewed_at","rationale","expires_at"
+    ]
+    return dict(zip(cols, row))
