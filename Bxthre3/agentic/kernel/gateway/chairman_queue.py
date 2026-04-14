@@ -29,7 +29,20 @@ class QueueStatus(Enum):
     EXPIRED = "EXPIRED"
 
 
-def _get_db():
+def count_pending() -> int:
+    """Return count of PENDING items."""
+    conn = _get_db()
+    n = conn.execute("SELECT COUNT(*) FROM chairman_queue WHERE status='PENDING'").fetchone()[0]
+    conn.close()
+    return n
+
+def clear() -> None:
+    """Wipe all items from the queue. Use for testing only."""
+    DB_PATH.unlink(missing_ok=True)
+
+# ── SQLite ───────────────────────────────────────────────────────────────────
+
+def _get_db() -> sqlite3.Connection:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH))
     conn.execute("""

@@ -212,15 +212,18 @@ def list_tools(tier: Optional[Tier] = None) -> list[ToolDef]:
     return [t for t in _TOOL_REGISTRY.values() if t.tier == tier]
 
 def route_tool_call(agent_did: str, raw_lfm_call: str) -> dict:
-    """Route a tool call based on tier. T2 → ChairmanQueue."""
-    from .gateway.chairman_queue import enqueue
+    """Route a tool call based on tier. T2 -> ChairmanQueue."""
+    from Bxthre3.agentic.kernel.gateway.chairman_queue import enqueue
+    from Bxthre3.agentic.kernel.service_mesh.event_bus import emit_tool_event
     tool_name, params = parse_lfm_tool_call(raw_lfm_call)
     tool = get_tool(tool_name)
     if not tool:
         return {"status": "ERROR", "error": f"Unknown tool: {tool_name}"}
     if tool.tier == Tier.T0_AUTONOMOUS:
+        emit_tool_event(tool=tool_name, action="executed", agent_did=agent_did, tier="T0", params=params)
         return {"status": "EXECUTE", "tool": tool_name, "params": params, "tier": 0}
     elif tool.tier == Tier.T1_INTENTIONAL:
+        emit_tool_event(tool=tool_name, action="executed", agent_did=agent_did, tier="T1", params=params)
         return {"status": "EXECUTE", "tool": tool_name, "params": params, "tier": 1}
     else:
         enqueued_id = enqueue(
@@ -229,6 +232,7 @@ def route_tool_call(agent_did: str, raw_lfm_call: str) -> dict:
             intent_summary=f"T2 tool call: {tool_name}",
             risk_level="HIGH"
         )
+        emit_tool_event(tool=tool_name, action="blocked_t2", agent_did=agent_did, tier="T2", enqueued_id=enqueued_id)
         return {"status": "BLOCKED_T2", "enqueued_id": enqueued_id, "tool": tool_name}
 
 # ─── Auto-load ────────────────────────────────────────────────────────────────
