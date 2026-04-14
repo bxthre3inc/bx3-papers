@@ -32,10 +32,11 @@ def health():
 
 @app.route("/api/tools", methods=["GET"])
 def api_list_tools():
-    tools = list_tools()
+    tools = list_tools()  # returns list[ToolDef]
     by_tier = {"T0": [], "T1": [], "T2": []}
     for t in tools:
-        by_tier.setdefault(tier, []).append(t)
+        tier_str = str(t.tier.value) if hasattr(t.tier, 'value') else str(t.tier)
+        by_tier.setdefault(tier_str, []).append(t.name)
     return jsonify({"count": len(tools), "by_tier": by_tier})
 
 @app.route("/api/tools/route", methods=["POST"])
