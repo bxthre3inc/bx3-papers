@@ -23,7 +23,7 @@ import json
 from pathlib import Path
 from enum import Enum
 
-AGENTIC_STORE = Path(__file__).parent
+AGENTIC_STORE = Path(__file__).parent / "agentic-store.json"
 GRANTS_DB    = Path(__file__).parent.parent.parent / "store" / "grants_pipeline.json"
 
 app = Flask(__name__)
