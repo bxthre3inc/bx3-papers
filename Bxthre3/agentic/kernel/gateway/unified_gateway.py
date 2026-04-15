@@ -21,11 +21,25 @@ from Bxthre3.agentic.kernel.service_mesh.evaluator.evaluator import grade_tool_c
 from Bxthre3.agentic.kernel.service_mesh.event_bus import subscribe, drain_all, list_subscriptions
 import json
 from pathlib import Path
+from enum import Enum
 
-AGENTIC_STORE = Path(__file__).parent.parent.parent / "store" / "agentic-store.json"
+AGENTIC_STORE = Path(__file__).parent
 GRANTS_DB    = Path(__file__).parent.parent.parent / "store" / "grants_pipeline.json"
 
 app = Flask(__name__)
+
+def _flat(obj):
+    """Recursively convert Enum values and dataclasses to plain Python."""
+    from dataclasses import is_dataclass, asdict as _asdict
+    if isinstance(obj, Enum):
+        return obj.value
+    if is_dataclass(obj):
+        return {k: _flat(v) for k, v in _asdict(obj).items()}
+    if isinstance(obj, dict):
+        return {k: _flat(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_flat(i) for i in obj]
+    return obj
 
 # ─── Health ───────────────────────────────────────────────────────────────────
 
@@ -135,25 +149,27 @@ def api_infer():
 
 @app.route("/api/eval/tool", methods=["POST"])
 def api_eval_tool():
+    from dataclasses import asdict as _asdict
     body = request.json
     result = grade_tool_call(
         tool_name=body.get("tool_name"),
         gold_args=body.get("gold_args", {}),
-        actual_args=body.get("actual_args", {}),
-        latency_ms=body.get("latency_ms", 0)
+        pred_args=body.get("pred_args", {}),
+        pred_result=body.get("pred_result"),
+        latency_ms=body.get("latency_ms")
     )
-    return jsonify(result)
+    return app.response_class(json.dumps(_flat(result)), mimetype="application/json")
 
 @app.route("/api/eval/agent-round", methods=["POST"])
 def api_eval_agent():
     body = request.json
-    return jsonify(grade_agent_round_trip(
+    return jsonify(_flat(grade_agent_round_trip(
         agent_did=body.get("agent_did"),
         task=body.get("task"),
         tool_calls=body.get("tool_calls", []),
         final_response=body.get("final_response"),
         expected_outcome=body.get("expected_outcome")
-    ))
+    )))
 
 @app.route("/api/eval/summary", methods=["GET"])
 def api_eval_summary():
