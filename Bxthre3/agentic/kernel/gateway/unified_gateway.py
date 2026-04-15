@@ -19,6 +19,7 @@ from Bxthre3.agentic.kernel.service_mesh.peer_bridge.peer_bridge import register
 from Bxthre3.agentic.kernel.service_mesh.agent_runtime.agent_runtime import get_runtime, infer_sync, TierAssignment
 from Bxthre3.agentic.kernel.service_mesh.evaluator.evaluator import grade_tool_call, grade_agent_round_trip, get_agent_grade
 from Bxthre3.agentic.kernel.service_mesh.event_bus import subscribe, drain_all, list_subscriptions, emit_training_event
+from Bxthre3.agentic.kernel.notification_service import dispatch as _notif_dispatch, notify_chairman as _notify_chairman, notify_training as _notify_training_stage, get_recent as _get_notif_recent, Priority as NPriority, NotifChannel as NChannel
 import json
 from pathlib import Path
 from enum import Enum
@@ -450,6 +451,35 @@ def auth_required(role="admin"):
         wrapped.__name__ = f.__name__
         return wrapped
     return decorator
+
+
+# ─── Notifications ─────────────────────────────────────────────────────────────
+@app.route("/api/notifications", methods=["GET"])
+def api_notifications():
+    limit = request.args.get("limit", 20, type=int)
+    items = _get_notif_recent(limit=limit)
+    out = []
+    for n in items:
+        p = n.priority.value if hasattr(n.priority, "value") else str(n.priority)
+        ch = n.channel.value if hasattr(n.channel, "value") else str(n.channel)
+        out.append({"notif_id": n.notif_id, "priority": p, "channel": ch,
+                    "subject": n.subject, "body": n.body,
+                    "delivered": bool(n.delivered), "created_at": n.created_at})
+    return app.response_class(response=json.dumps(out), status=200, mimetype="application/json")
+
+@app.route("/api/notifications/test", methods=["POST"])
+def api_notif_test():
+    result = _notif_dispatch(NPriority.P1, "Test notification",
+                             "AgentOS notification system is working", NChannel.SMS)
+    return jsonify({"notif_id": result.notif_id, "status": "sent"})
+
+@app.route("/api/notifications/push", methods=["POST"])
+def api_notif_push():
+    body = request.json
+    p = NPriority[body.get("priority", "P3")]
+    ch = NChannel[body.get("channel", "INBOX")]
+    result = _notif_dispatch(p, body["subject"], body.get("body",""), ch)
+    return jsonify({"notif_id": result.notif_id})
 
 if __name__ == "__main__":
     port = int(os.environ.get("AGENTIC_GATEWAY_PORT", 3097))
