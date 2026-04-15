@@ -495,99 +495,17 @@ Even in domains where AI could theoretically replace deterministic systems on a 
 
 % -------------------------------------------------------
 \section{Relationship to Prior Work}
-\label{sec:priorwork}
+\label{sec:prior}
 
-The BX3 Framework synthesizes several established frameworks rather than claiming wholly original invention.
+The BX3 Framework synthesizes established ideas from separation of concerns, sociotechnical systems theory, cybernetics, systems safety, and human-in-the-loop design, but it departs from prior work by defining immutable functional layers according to required properties rather than according to actor type. The closest contemporary analogue is the intelligent sociotechnical systems framework \cite{xu2024}, which similarly emphasizes structured coordination between human and technical components; however, BX3 extends this line of work by explicitly isolating a deterministic Fact Layer and by specifying an actor-agnostic architecture in which any occupant of a layer is bound by that layer's functional obligations.
 
-\textbf{Separation of Concerns} \cite{dijkstra1982}: Dijkstra's foundational principle that different aspects of a problem should be handled by different components is extended here to explicitly include human and AI roles alongside traditional software components --- a dimension the original principle did not address.
+Recent agentic-AI literature reinforces several needs that BX3 attempts to formalize. Tiered Agentic Oversight (TAO) \cite{kim2025} demonstrates that hierarchical supervision among specialized agents can reduce error propagation in safety-critical settings. BX3 differs in making human accountability the required terminal endpoint of unresolved escalation rather than a high-tier supervisory option. TAO's hierarchy routes to human oversight as a high-risk escalation pathway; BX3 makes this routing unconditional and architectural. Likewise, recent work on production-grade agent architectures \cite{alenezi2026} recommends fail-safe behavior, sandbox-first execution, deterministic fallback workflows, and human approval gates for risky actions; BX3 incorporates these concerns as named architectural pillars --- most notably the Sandbox Gate and Bailout Protocol --- rather than as implementation heuristics.
 
-\textbf{Sociotechnical Systems Theory} \cite{trist1981}: The Tavistock Institute's work on the joint optimization of social and technical systems anticipated the importance of explicitly modeling human roles within technical systems rather than treating them as external to the design.
+While recent agentic-architecture literature recommends sandbox-first execution and human approval gates for high-risk actions, BX3 specifies a narrower architectural requirement: proposed interventions must be evaluated in a digital twin and cleared through a role-bounded Sandbox Gate tied to Root Tunneling authority before the Fact Layer is unlocked.
 
-\textbf{Cybernetics and Control Theory} \cite{wiener1948}: Wiener's foundational work on feedback systems and the sense-process-act loop provides the theoretical basis for understanding how deterministic control systems interact with adaptive agents and human oversight.
+BX3 also sits naturally alongside emerging governance and compliance literature. Koch \cite{koch2026} argues that standards such as ISO/IEC 42001 \cite{iso2023} and the NIST AI RMF \cite{nist2023} do not themselves provide implementable runtime guardrails, and instead require translation across governance, design-time, runtime, and assurance layers. BX3 may be read as one candidate architecture for that translation. In parallel, formal-verification approaches such as the Lean-Agent Protocol \cite{rashie2026} show how proposed agentic actions can be forced through deterministic verification gates before execution. BX3 generalizes that intuition beyond theorem proving: wherever execution must remain non-probabilistic, a protected deterministic layer is architecturally indispensable.
 
-\textbf{Human-in-the-Loop Design} \cite{bansal2019}: The extensive literature on HITL systems provides empirical grounding for the claim that human oversight remains essential in AI-assisted systems, particularly for safety-critical applications.
-
-The contribution of this paper is the synthesis of these frameworks into a single, unified, and practically applicable model --- the BX3 Framework --- and the argument that this model applies not just to software systems but as a universal structural pattern across complex engineered and organizational systems.
-
-The most closely related contemporary work is the intelligent sociotechnical systems (iSTS) framework proposed by Xu and Gao \cite{xu2024}, which similarly extends traditional STS theory to address the demands of AI integration and proposes a hierarchical human-centered AI approach. The BX3 Framework is distinguished from iSTS in three important respects. First, it explicitly identifies the Fact Layer as a named, first-class architectural component --- a distinction iSTS does not make. Second, it operates at the level of system engineering architecture rather than organizational and societal design, making it more directly applicable as a practical engineering heuristic. Third, and most significantly, the BX3 Framework is actor-agnostic: it defines layers by functional properties rather than by actor type, allowing humans, AI systems, and mechanical processes to occupy any layer provided they satisfy its requirements. iSTS remains human-centered by design; the BX3 Framework is function-centered by design.
-
-The BX3 Framework also bears a productive relationship to the current industrial standards landscape. The NIST AI Risk Management Framework \cite{nist2023} and ISO/IEC 42001 \cite{iso42001} provide governance and risk management structures for AI systems but do not prescribe an architectural model for how AI, deterministic, and human components should be separated within a system. The BX3 Framework is best understood as a complementary architectural layer beneath these governance frameworks --- providing the structural foundation that makes governance possible in practice. This reading is directly supported by Koch \cite{koch2026}, who argues that standards such as ISO/IEC 42001 and the NIST AI RMF are highly relevant to agentic AI but do not by themselves yield implementable runtime guardrails, and that requirements must instead be distributed across governance objectives, design-time constraints, runtime mediation, and assurance feedback layers. The BX3 Framework provides one candidate architecture for that distribution: the Purpose Layer carries governance objectives, the Bounds Engine operates under design-time constraints, the Fact Layer provides runtime enforcement, and the Forensic Ledger provides assurance feedback.
-
-The most closely related contemporary work on escalation and oversight is Tiered Agentic Oversight (TAO) \cite{kim2025tao}, a hierarchical multi-agent system for healthcare safety that routes tasks through specialized agent tiers based on complexity and escalates unresolved cases upward through the hierarchy. BX3 differs from TAO in a foundational architectural respect. TAO organizes oversight primarily as inter-agent supervision, with human involvement available as the highest escalation pathway in selected high-risk scenarios. BX3, by contrast, treats escalation to the human Purpose Layer as an unconditional architectural requirement for every unresolved exception state --- not a domain-specific option or supervisory extension. In BX3, accountability is never stranded within machine-only recursion. The Bailout Protocol guarantees that any unresolvable exception propagates upward through the system hierarchy, bypassing all machine actors, until it terminates at the human accountability anchor. A productive synthesis of BX3 and TAO is also envisioned: the BX3-TAO Hybrid applies BX3's unconditional human Purpose Layer anchor as the top tier above TAO's agentic escalation hierarchy, combining TAO's structured multi-tier agentic reasoning with BX3's upstream accountability guarantee. This variant, designated BX3-x-TAO, is proposed as an appropriate architecture for high-stakes domains where structured probabilistic reasoning and unconditional human escalation must coexist.
-
-Recent work on production-grade agentic architecture further corroborates the need for the safety properties BX3 formalizes. Alenezi \cite{alenezi2026} argues that agentic systems must be designed to fail safely, with key architectural patterns including clear escalation paths to human oversight, fallback deterministic workflows, and sandbox-first execution before commitment. BX3 incorporates these concerns as named, role-bounded architectural pillars --- the Bailout Protocol, the Fact Layer, and the Sandbox Gate respectively --- rather than as implementation heuristics. The critical distinction for the Sandbox Gate specifically: BX3 requires that proposed interventions be evaluated in a digital twin and cleared through a role-bounded gate tied to Root Tunneling authority before the Fact Layer is unlocked. This is a narrower and more precisely specified requirement than generic sandbox-first execution.
-
-A complementary formal-verification approach is demonstrated by the Lean-Agent Protocol \cite{rashie2026}, which permits agentic execution only when a proof kernel can verify that a proposed action satisfies precompiled regulatory axioms, functioning as a deterministic gateway in financial systems. BX3 makes a broader architectural claim: wherever execution must remain non-probabilistic, a protected deterministic layer is architecturally indispensable regardless of implementation method. Formal proof kernels and physically isolated deterministic subsystems can therefore be understood as different implementation strategies for the same deeper requirement --- that certain classes of action must cross a verifiable boundary from probabilistic proposal into deterministic execution. Russell's foundational work on AI control \cite{russell2019} and Leveson's systems safety engineering \cite{leveson2011} provide further grounding for the safety-critical arguments made in Sections 5 and 6. Brooks' seminal observation that there is no single silver bullet in software engineering \cite{brooks1987} anticipates the central claim of this paper --- that AI is not a universal solution but one bounded layer in a properly structured system.
-
-% -------------------------------------------------------
-\section{Implications}
-\label{sec:implications}
-
-\subsection{For Engineers and Architects}
-
-The primary practical implication of the BX3 Framework is a concrete design heuristic: before deploying any AI component in a system, explicitly define which layer it belongs to, what constraints the Fact Layer places on it, and what human oversight mechanisms govern it. Resist the tendency to use AI where deterministic systems are sufficient. Prefer the simplest system that solves the problem. The BX3 Framework gives engineers a vocabulary and a structure for making these decisions explicitly rather than by default.
-
-\subsection{For Executives and Organizations}
-
-AI adoption strategies that frame AI as a replacement for existing systems are likely to underestimate complexity, overestimate reliability, and underestimate regulatory risk. A more productive framing --- one the BX3 Framework makes concrete --- is AI as an accelerant for building, improving, and extending deterministic systems, preserving reliability while gaining capability.
-
-\subsection{For Regulators and Policymakers}
-
-The BX3 Framework provides a principled architectural basis for AI governance. Regulations need not attempt to certify AI systems in isolation --- a potentially intractable problem --- but can instead focus on the Purpose Layer accountability anchor and the Fact Layer enforcement constraints within which AI agents must operate. This reframes AI governance as an architectural specification problem rather than a purely behavioral one.
-
-\subsection{For Researchers}
-
-The convergence of the BX3 Framework with biological cognitive architecture, legal system design, and organizational theory suggests productive cross-disciplinary research directions. Understanding why layered Purpose-Bounds-Fact architectures appear robust across widely different domains --- and what formal properties such architectures possess --- represents a significant open research agenda.
-
-\section{Limitations}
-\label{sec:limitations}
-
-As a conceptual framework paper, the BX3 Framework carries limitations that should be stated plainly.
-
-First, the three-layer boundary in practice is not always clean. Real systems frequently involve actors that span multiple layers --- a human who both sets intent and executes adaptively, or an AI system that both reasons and enforces constraints. The BX3 Framework is a normative model --- describing how systems \textit{should} be structured --- rather than a descriptive taxonomy of all existing systems. Boundary cases require judgment in application.
-
-Second, the actor-agnostic property of the framework introduces a qualification problem: determining whether a given actor genuinely satisfies a layer's functional requirements is itself a non-trivial judgment. The framework states that an AI system may occupy the Purpose Layer if it can genuinely satisfy accountability requirements --- but it does not yet provide a formal test for when that threshold is met. Developing such qualification criteria is a critical direction for the BX3 Protocol, addressed in Study 5 of Section~\ref{sec:research}.
-
-Third, the cross-domain analogies presented in Section 6 are illustrative rather than rigorously demonstrated. The claim that the BX3 Framework describes a universal structural pattern is a hypothesis, not a proven theorem. The planned empirical studies in Section~\ref{sec:research} are designed specifically to test this claim.
-
-Fourth, the framework is silent on how the three layers should be \textit{sized} relative to one another in any given system. The appropriate balance between Bounds Engine capability and Fact Layer constraint will vary significantly by domain, risk profile, and regulatory context. Providing domain-specific sizing guidance is a further research direction.
-
-These limitations do not undermine the central contribution --- the identification of three distinct functional roles defined by their required properties, the specification of five implementation pillars, and the argument that their explicit separation produces more reliable, governable, and certifiable systems. Targeted searches of arXiv, academic databases, and technical literature found no direct match for the BX3 terminology or its specific combination of claims; this supports originality but is not a legal non-infringement determination. These limitations define the boundaries within which the framework should currently be applied and the directions in which it must be extended.
-
-% -------------------------------------------------------
-\section{Future Research Agenda}
-\label{sec:research}
-
-This paper is explicitly positioned as a \textit{conceptual framework and position paper}. It proposes the BX3 Framework as a unifying architectural model and argues for its validity through cross-domain analogy and synthesis of established theory. It does not yet provide empirical validation.
-
-That validation is the research agenda this paper opens --- and it is one the author is actively pursuing.
-
-\subsection{Planned Empirical Studies}
-
-\textbf{Study 1: Complexity Reduction in BX3-Structured Systems}\\
-A comparative analysis of software systems built with explicit BX3 layer separation versus those without, measuring lines of code, defect rates, time-to-debug, and architectural decision overhead. We hypothesize that BX3-structured systems will demonstrate measurably lower complexity scores across standard software metrics.
-
-\textbf{Study 2: Case Studies in Safety-Critical Domains}\\
-In-depth documentation of three to five real-world deployments --- in industrial automation, medical devices, and autonomous vehicles --- where BX3 Framework principles were applied explicitly or implicitly. Outcomes measured will include system reliability, regulatory approval timelines, and incident rates. An initial agentic business enterprise deployment (field trials planned June 2026) is designated as Study 2's first case.
-
-\textbf{Study 3: Cross-Domain Validation Survey}\\
-Structured interviews with engineers, architects, legal professionals, and medical practitioners to assess whether the three-layer pattern --- Purpose, Bounds Engine, Fact --- is recognized as descriptive of existing best practices, and where breakdowns in layer separation correlate with system failures or governance incidents.
-
-\textbf{Study 4: Bounds Engine-Accelerated Fact Layer Development}\\
-A controlled study measuring development velocity, defect rates, and auditability of Fact Layer systems built with Bounds Engine assistance versus traditional methods --- testing the core practical claim of the BX3 Framework: that the Bounds Engine is most powerful as a builder of Fact Layer systems rather than a replacement for them.
-
-\textbf{Study 5: Formal Properties of BX3 Architectures}\\
-A theoretical computer science investigation into whether BX3-structured systems admit formal verification properties not available to undifferentiated AI systems --- specifically, whether Loop Isolation and the Bailout Protocol together constitute a provable upstream accountability guarantee under all failure modes.
-
-\textbf{Study 6: BX3 Protocol Development}\\
-The BX3 Framework as presented here is a conceptual model. A companion engineering protocol --- the BX3 Protocol --- is in preparation, providing normative, implementable specifications for layer definition, boundary enforcement, Forensic Ledger standards, Bailout Protocol implementation, and BX3 compliance verification. The BX3 Protocol will be the engineering standard that the BX3 Framework makes theoretically necessary.
-
-\subsection{An Invitation}
-
-This research agenda is being developed independently by the author. Findings from the above studies will be published as they are completed. Researchers, practitioners, and organizations interested in contributing to or following this research agenda are invited to engage.
-
-\vspace{0.5em}
-\noindent\textit{We will be back --- with the evidence.}
+The recurrence of layered models in global AI governance discourse \cite{sabah2026} further suggests that complex AI systems are increasingly being understood through stratified functional abstractions, although those models are policy-descriptive rather than engineering-prescriptive.
 
 \section{Conclusion}
 \label{sec:conclusion}

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: bx3_framework.aux
+The style file: plainnat.bst
+Database file #1: bx3framework.bib
+Warning--can't use both volume and number fields in bansal2019
+You've used 15 entries,
+            2773 wiz_defined-function locations,
+            672 strings with 7207 characters,
+and the built_in function-call counts, 5793 in all, are:
+= -- 492
+> -- 320
+< -- 17
++ -- 114
+- -- 99
+* -- 392
+:= -- 928
+add.period$ -- 44
+call.type$ -- 15
+change.case$ -- 76
+chr.to.int$ -- 15
+cite$ -- 31
+duplicate$ -- 286
+empty$ -- 494
+format.name$ -- 118
+if$ -- 1205
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 12
+newline$ -- 81
+num.names$ -- 60
+pop$ -- 178
+preamble$ -- 1
+purify$ -- 63
+quote$ -- 0
+skip$ -- 228
+stack$ -- 0
+substring$ -- 92
+swap$ -- 28
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 145
+warning$ -- 1
+while$ -- 53
+width$ -- 0
+write$ -- 199
+(There was 1 warning)

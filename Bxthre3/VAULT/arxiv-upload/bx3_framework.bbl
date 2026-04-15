@@ -1,0 +1,100 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alenezi(2026)]{alenezi2026}
+Mamdouh Alenezi.
+\newblock From prompt-response to goal-directed systems: The evolution of
+  agentic {AI} software architecture, 2026.
+
+\bibitem[Bansal et~al.(2019)Bansal, Nushi, Kamar, Lasecki, Weld, and
+  Horvitz]{bansal2019}
+Gagan Bansal, Besmira Nushi, Ece Kamar, Walter~S. Lasecki, Daniel~S. Weld, and
+  Eric Horvitz.
+\newblock Beyond accuracy: The role of mental models in human-{AI} team
+  performance.
+\newblock In \emph{Proceedings of the AAAI Conference on Human Computation and
+  Crowdsourcing}, volume~7, pages 2--11, 2019.
+\newblock \doi{10.1609/hcomp.v7i1.5285}.
+
+\bibitem[Brooks(1987)]{brooks1987}
+Frederick~P. Brooks.
+\newblock No silver bullet: Essence and accidents of software engineering.
+\newblock \emph{Computer}, 20\penalty0 (4):\penalty0 10--19, 1987.
+
+\bibitem[Dijkstra(1982)]{dijkstra1982}
+Edsger~W. Dijkstra.
+\newblock On the role of scientific thought.
+\newblock In \emph{Selected Writings on Computing: A Personal Perspective},
+  pages 60--66. Springer-Verlag, New York, 1982.
+
+\bibitem[{ISO/IEC}(2023)]{iso42001}
+{ISO/IEC}.
+\newblock {ISO/IEC} 42001:2023 --- information technology --- artificial
+  intelligence --- management system.
+\newblock Technical report, International Organization for Standardization,
+  Geneva, 2023.
+
+\bibitem[Kahneman(2011)]{kahneman2011}
+Daniel Kahneman.
+\newblock \emph{Thinking, Fast and Slow}.
+\newblock Farrar, Straus and Giroux, New York, 2011.
+
+\bibitem[Kim et~al.(2025)Kim, Jeong, Park, Park, Zhang, Liu, Lee, McDuff,
+  Ghassemi, Breazeal, Tulebaev, and Park]{kim2025tao}
+Yubin Kim, Hyewon Jeong, Chanwoo Park, Eunsoo Park, Helen Zhang, Xuan Liu,
+  Hyungjoo Lee, Daniel McDuff, Marzyeh Ghassemi, Cynthia Breazeal, Salar
+  Tulebaev, and Hae~Won Park.
+\newblock Tiered agentic oversight: A hierarchical multi-agent system for
+  healthcare safety, 2025.
+
+\bibitem[Koch(2026)]{koch2026}
+Christoph Koch.
+\newblock From governance norms to enforceable controls: A layered translation
+  method for runtime guardrails in agentic {AI}, 2026.
+
+\bibitem[Leveson(2011)]{leveson2011}
+Nancy~G. Leveson.
+\newblock \emph{Engineering a Safer World: Systems Thinking Applied to Safety}.
+\newblock MIT Press, Cambridge, MA, 2011.
+
+\bibitem[{National Institute of Standards and Technology}(2023)]{nist2023}
+{National Institute of Standards and Technology}.
+\newblock Artificial intelligence risk management framework ({AI RMF 1.0}).
+\newblock Technical Report NIST AI 100-1, U.S. Department of Commerce,
+  Gaithersburg, MD, 2023.
+
+\bibitem[Rashie and Rashi(2026)]{rashie2026}
+Darren Rashie and Vikram Rashi.
+\newblock Type-checked compliance: Deterministic guardrails for agentic
+  financial systems using {Lean} 4 theorem proving, 2026.
+
+\bibitem[Russell(2019)]{russell2019}
+Stuart Russell.
+\newblock \emph{Human Compatible: Artificial Intelligence and the Problem of
+  Control}.
+\newblock Viking, New York, 2019.
+
+\bibitem[Trist(1981)]{trist1981}
+Eric Trist.
+\newblock The evolution of socio-technical systems.
+\newblock Occasional paper, Ontario Quality of Working Life Centre, Toronto,
+  1981.
+
+\bibitem[Wiener(1948)]{wiener1948}
+Norbert Wiener.
+\newblock \emph{Cybernetics: Or Control and Communication in the Animal and the
+  Machine}.
+\newblock MIT Press, Cambridge, MA, 1948.
+
+\bibitem[Xu and Gao(2024)]{xu2024}
+Wei Xu and Yue Gao.
+\newblock An intelligent sociotechnical systems ({iSTS}) framework: Enabling a
+  hierarchical human-centered {AI} ({hHCAI}) approach.
+\newblock \emph{IEEE Transactions on Human-Machine Systems}, 2024.
+\newblock arXiv:2401.03223.
+
+\end{thebibliography}
