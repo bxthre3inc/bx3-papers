@@ -1,447 +1,595 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern,microtype}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,shadows,calc,positioning}
+\usepackage{booktabs}
 \usepackage{natbib}
-\usepackage{url}
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
-\newcommand{\bxthree}{BX\textsuperscript{3}}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shadows,calc}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+\newcommand{\bxthree}{BX\textsuperscript{3}Framework}
 \newcommand{\purpose}{\textbf{Purpose Layer}}
 \newcommand{\bounds}{\textbf{Bounds Engine}}
 \newcommand{\fact}{\textbf{Fact Layer}}
-\title{The BX3 Framework: A Universal Architecture of Functional Roles\\ for Purpose, Bounded Reasoning, and Deterministic Fact}
-\author{Jeremy Blaine Thompson Beebe\\Independent Researcher\\Submitted for review --- arXiv cs.AI / cs.SE\\April 2026}
-\date{}
+\newcommand{\bxthreeprotocol}{BX\textsuperscript{3}Protocol}
+
+\title{The BX3 Framework: A Universal Architecture of Functional Roles}
+\subtitle{How Defining Three Immutable Functional Layers Produces Systems That Are More Capable, Reliable, and Governable}
+\author{Jeremy Blaine Thompson Beebe\\Independent Researcher}
+\date{April 2026}
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-The current discourse around artificial intelligence frequently presents a false binary: either AI will replace traditional software systems, or it is merely a productivity tool of limited consequence. This paper argues that both positions miss a more fundamental and practically useful insight. We propose the BX3 Framework --- a universal architectural model organized around three immutable functional layers: the \purpose{}, which provides intent, judgment, and accountability; the \bounds{}, which provides interpretation, bounded reasoning, and constrained execution; and the \fact{}, which provides deterministic enforcement, hard physical constraint, and forensic auditability.
-
-Critically, the BX3 Framework does not prescribe who or what occupies each layer. It prescribes the functional properties each layer must maintain --- and holds any actor occupying that layer to those properties regardless of their nature. A human, an AI system, or a mechanical process may each legitimately occupy any layer, provided the functional requirements of that layer are satisfied. This actor-agnostic, function-centered definition makes the framework universally applicable across human organizations, fully automated systems, multi-agent AI architectures, and any hybrid composition.
-
-A core safety property of the framework is its upstream accountability guarantee: when any node encounters a state it cannot resolve within its bounds, accountability escalates recursively upward through the system hierarchy --- bypassing all machine actors --- until it reaches a human anchor. The system fails upward into human consciousness --- never downward into algorithmic chaos.
-
-We demonstrate that when these three functional layers are clearly separated and their properties enforced by design, systems become simultaneously more capable and less complex. We further argue that the \bounds{} is most powerfully employed not as a replacement for the \fact{} but as a tool for designing, accelerating, and improving it. We show that the BX3 Framework is not merely a software engineering principle but a universal structural pattern observable across law, medicine, autonomous systems, organizational design, and biological cognition. The framework is currently under active implementation in \textbf{Agentic} --- an AI workforce orchestration platform --- and in a precision agriculture autonomous system in the San Luis Valley, Colorado, with field trials planned for June 2026. A companion open-source specification --- \textbf{The BX3 Framework} --- is available at \url{https://github.com/bxthre3inc/the-bx3-framework}. A companion engineering protocol --- the BX3 Protocol --- is in preparation and will provide normative, certifiable implementation standards derived from this theoretical foundation.
-
-This paper is a conceptual framework and position paper. Empirical validation studies are currently in development by the author and will be published as subsequent work. This preprint establishes the theoretical foundation and research agenda that those studies will address.
-\noindent\textbf{Keywords:} BX3 Framework, Purpose Layer, Bounds Engine, Fact Layer, artificial intelligence, deterministic systems, software architecture, human-in-the-loop, upstream accountability, recursive systems, autonomous systems, AI governance, sociotechnical systems, agentic systems, edge computing
+The current discourse around artificial intelligence frequently presents a false binary: either AI will replace traditional software systems, or it is merely a productivity tool of limited consequence. This paper argues that both positions miss a more fundamen- tal and practically useful insight. We propose the BX3 Framework — a universal architectural model organized around three immutable functional layers: the Purpose Layer, which provides intent, judgment, and accountability; the Bounds Engine, which provides interpretation, bounded reasoning, and constrained execution; and the Fact Layer, which providesdeterministicenforcement,hardphysicalconstraint,andforensic auditability. Critically, the BX3 Framework does not prescribe who or what occupies each layer. It prescribes the functional properties each layer must maintain — and holds any actor occupying that layer to those properties regardless of their nature. A human, an AI system, or a mechanical process may each legitimately occupy any layer, provided theysatisfythatlayer’sfunctionalrequirements. Thisactor-agnostic,function-centered definitionmakestheframeworkuniversallyapplicableacrosshumanorganizations,fully automated systems, multi-agent AI architectures, and any hybrid composition. A core safety property of the framework is its upstream accountability guarantee: when any node encounters a state it cannot resolve within its bounds, accountability escalates recursively upward through the system hierarchy — bypassing all machine actors — until it reaches a human anchor. The system fails upward into human con- sciousness — never downward into algorithmic chaos. We demonstrate that when these three functional layers are clearly separated and their properties enforced by design, systems become simultaneously more capable and less complex. We further argue that the Bounds Engine is most powerfully employed not as a replacement for the Fact Layer but as a tool for designing, accelerating, and improving it. We show that the BX3 Framework is not merely a software engi- neering principle but a universal structural pattern observable across law, medicine, autonomous systems, organizational design, and biological cognition. The framework is currently under active implementation in a precision agriculture autonomous system in the San Luis Valley, Colorado, with field trials planned for June 2026 — providing an initial empirical test across all five architectural pillars. A companion engineering specification — the BX3 Protocol — is in preparation and will provide normative, certifiable implementation standards derived from this framework. This paper is a conceptual framework and position paper. Empirical validation studies are currently in development by the author and will be published as subsequent work. This preprint establishes the theoretical foundation and research agenda that those stud- ies will address. Keywords: BX3 Framework, Purpose Layer, Bounds Engine, Fact Layer, artificial in- telligence, deterministic systems, software architecture, human-in-the-loop, upstream ac- countability, recursive systems, autonomous systems, AI governance, sociotechnical systems, agentic systems, edge computing
 \end{abstract}
 
-\section{Introduction}\label{sec:intro}
+\section{Introduction}
+The rapid advancement and deployment of large language models and AI-based systems has generated significant confusion about the appropriate role of AI within engineered systems.
 
-The rapid advancement and deployment of large language models and AI-based systems has generated significant confusion about the appropriate role of AI within engineered systems. A prevalent narrative suggests that AI will progressively replace traditional deterministic software, eventually subsuming most computational tasks. A counter-narrative dismisses AI as a novelty, inadequate for the reliability demands of production systems.
+A prevalent narrative suggests that AI will progressively replace traditional deterministic software, eventually subsuming most computational tasks.
 
-Both narratives fail engineers, architects, and decision-makers in the same fundamental way: they offer no principled model for how these technologies relate to one another or how they should be combined in practice. The result is systems that are either over-reliant on AI where determinism is required, or unnecessarily constrained by legacy deterministic thinking where AI could genuinely add value.
+A counter-narrative dismisses AI as a novelty, inadequate for the reliability demands of production systems.
 
-This paper proposes a clarifying framework: the BX3 Framework. The framework organizes any complex system into three immutable functional layers --- the \purpose{}, the \bounds{}, and the \fact{} --- each defined by the properties it must maintain rather than by the type of actor that occupies it.
+Both narratives fail engineers, architects, and decision-makers in the same fundamental way: they offer no principled model for how these technologies relate to one another or how they should be combined in practice.
 
-This actor-agnostic, function-centered definition is the framework's most important architectural property. A human, an AI system, or a mechanical process may each legitimately occupy any layer of the BX3 Framework --- provided they satisfy the functional requirements of that role. What the framework prescribes is not who belongs in each layer but what properties each layer must maintain for the system as a whole to be reliable, governable, and certifiable.
+The result is systems that are either over-reliant on AI where determinism is required, or unnecessarily constrained by legacy deterministic thinking where AI could genuinely help.
 
-The framework is currently under active implementation in \textbf{Agentic} --- an AI workforce orchestration platform --- and in a precision agriculture autonomous system operating across the San Luis Valley, Colorado, with field trials planned for June 2026 that will provide an initial empirical test across all five architectural pillars described in Section~\ref{sec:pillars}. A companion open-source specification --- \textbf{The BX3 Framework} --- is available at \url{https://github.com/bxthre3inc/the-bx3-framework}, providing permissive reference implementations that demonstrate the framework's principles without exposing proprietary system details. A companion engineering specification --- the BX3 Protocol --- is in preparation and will provide normative, certifiable implementation standards derived from this theoretical foundation.
+This paper proposes a clarifying framework: the BX3 Framework.
 
-We further argue that the BX3 Framework is not a novel invention but a synthesis of well-established principles --- separation of concerns \cite{dijkstra1982}, sociotechnical systems theory \cite{trist1981}, control theory \cite{wiener1948}, and human-in-the-loop design \cite{bansal2019} --- applied to the specific and urgent challenge of AI integration in the current technological moment. Its value lies not in the novelty of its components but in the clarity, universality, and completeness of their unification.
+The framework organizes any complex system into three immutable functional layers — the Purpose Layer, the Bounds Engine, and the Fact Layer — each defined by the properties it must maintain rather than by the type of actor that occupies it.
 
-The paper proceeds as follows. Section~\ref{sec:layers} defines the three functional layers. Section~\ref{sec:structure} presents the framework's structural properties and the functional properties table. Section~\ref{sec:pillars} introduces the five implementation pillars. Section~\ref{sec:domains} applies the framework across five high-stakes domains. Section~\ref{sec:determinism} argues the case for deterministic systems. Section~\ref{sec:prior} positions the framework relative to prior work. Section~\ref{sec:implications} discusses implications for engineers and architects. Section~\ref{sec:limitations} addresses limitations. Section~\ref{sec:future} outlines the future research agenda. Section~\ref{sec:conclusion} concludes.
+This actor-agnostic, function-centered definition is the framework’s most important architectural property.
 
-\textbf{Note:} The first-person plural ``we'' is used throughout in the conventional academic sense, consistent with single-author scholarly writing.
+A human, an AI system, or a mechanical process may each legitimately occupy any layer of the BX3 Framework — provided they satisfy the functional requirements of that role.
 
-\section{Defining the Three Functional Layers}\label{sec:layers}
+What the framework prescribes is not who belongs in each layer but what properties each layer must maintain for the system as a whole to be reliable, governable, and certifiable.
 
-The BX3 Framework defines three functional layers. Each layer is defined by the properties it must maintain, not by the type of actor that occupies it. A human, an AI system, a mechanical process, an institution, or any combination thereof may occupy any layer --- provided the functional requirements of that layer are satisfied.
+The framework is currently under active implementation in a precision agriculture autonomous system operating across the San Luis Valley, Colorado, with field trials planned for June 2026 that will provide an initial empirical test across all five architectural pillars described in Section 4.
 
-This actor-agnostic definition is deliberate and essential. It makes the framework applicable to human-only organizations, to fully automated systems, to multi-agent AI architectures, and to any hybrid composition. It also resolves the false question of whether AI will ``replace'' humans in any given role: the question is not who occupies the layer, but whether the occupant satisfies the layer's functional requirements.
+A companion engineering specification — the BX3 Protocol — is in preparation and will provide normative, certifiable implementation standards derived from this theoretical foundation.
 
-\subsection{Layer 1: The Purpose Layer}
+Wefurtherarguethatthe BX3Frameworkisnotanovelinventionbutasynthesisofwellestablished principles — separation of concerns \citep{ref1}, sociotechnical systems theory \citep{ref2}, control theory \citep{ref3}, and human-in-the-loop design \citep{ref4} — applied to the specific and urgent challenge of AI integration in the current technological moment.
 
-The \purpose{} is responsible for intent, judgment, and accountability. It sets Service Level Objectives, strategic goals, and the ``why'' that governs all downstream activity. Whatever occupies this layer must be capable of:
+Its value lies not in the novelty of its components but in the clarity, universality, and completeness of their unification.
 
-\begin{itemize}
-    \item Defining the goals the system exists to achieve and why.
-    \item Making trade-off decisions under genuine uncertainty, where no algorithmic optimum exists.
-    \item Holding accountability for outcomes --- answering for the system's behavior to external parties.
-    \item Asking and answering ``why are we building this, and for whom?''
-    \item Updating goals when context changes in ways the system was not designed to anticipate.
-\end{itemize}
+Note: The first-person plural “we” is used throughout in the conventional academic sense, consistent with single-author scholarly writing.
 
-In the current technological moment, the \purpose{} must remain anchored to a human accountability anchor --- an individual or institution capable of bearing legal and ethical responsibility for the system's actions. This is the Human Root Mandate: in the event of system failure, accountability does not dissipate into the algorithm. It remains fixed to the human at the root.
+\section{Defining the Three Functional Layers}
+The BX3 Framework defines three functional layers.
 
-\textbf{Key property:} The \purpose{} must be accountable --- its decisions must be attributable to an actor who can be questioned, overridden, and held responsible.
+Each layer is defined by the properties it must maintain, not by the type of actor that occupies it.
 
-\subsection{Layer 2: The Bounds Engine}
+A human, an AI system, a mechanical process, an institution, or any combination thereof may occupy any layer — provided the functional requirements of that layer are satisfied.
 
-The \bounds{} is responsible for interpretation, bounded reasoning, and constrained execution. It performs the cognitive work of the system --- analysis, pattern recognition, simulation, and optimal path proposal --- but is architecturally limbless: it can propose but cannot execute. It lacks the authority to commit actions to the physical world unilaterally.
+This actor-agnostic definition is deliberate and essential.
 
-Whatever occupies this layer must be capable of:
+It makes the framework applicable to human-only organizations, to fully automated systems, to multi-agent AI architectures, and to any hybrid composition.
 
-\begin{itemize}
-    \item Receiving goals and constraints from the \purpose{} and translating them into proposed actions.
-    \item Handling inputs that are ambiguous, variable, unstructured, or novel.
-    \item Performing complex analysis --- probabilistic modeling, trend analysis, simulation --- within defined boundaries.
-    \item Operating within a sandboxed cognitive environment, separated from physical execution authority.
-    \item Escalating to the \purpose{} when proposed actions approach or exceed its authorization scope.
-\end{itemize}
+It also resolves the false question of whether AI will “replace” humans in any given role: the question is not who occupies the layer, but whether the occupant satisfies the layer’s functional requirements.
 
-The \bounds{} is the layer most naturally occupied by large language models and AI agents. It is the layer where AI adds the most value --- extending cognitive reach without assuming physical authority.
+\subsection{Layer 1: The Purpose Layer} The Purpose Layer is responsible for intent, judgment, and accountability.
 
-\textbf{Key property:} The \bounds{} must be bounded --- its authority is strictly limited by \purpose{} mandates.
+It sets Service Level Objectives, strategicgoals, andthe“why”thatgovernsalldownstreamactivity.
 
-\subsection{Layer 3: The Fact Layer}
+Whatever occupies this layer must be capable of: Defining the goals the system exists to achieve and why. Making trade-off decisions under genuine uncertainty, where no algorithmic optimum exists. Holding accountability for outcomes — answering for the system’s behavior to external parties. Asking and answering “why are we building this, and for whom?” Updating goals when context changes in ways the system was not designed to anticipate.
 
-The \fact{} is responsible for deterministic enforcement, physical constraint, and forensic auditability. It is the layer that actually commits actions to the physical world --- and it does so only when proposals from the \bounds{} pass through its validation gates. The \fact{} operates with complete determinism: the same input must always produce the same output, all outputs must be auditable, and no \bounds{} proposal may bypass validation.
+In the current technological moment, the Purpose Layer must remain anchored to a human accountability anchor — an individual or institution capable of bearing legal and ethical responsibility for the system’s actions.
 
-Whatever occupies this layer must be capable of:
+This is the Human Root Mandate: in the event of system failure, accountability does not dissipate into the algorithm.
 
-\begin{itemize}
-    \item Enforcing physical constraints with 100\% reliability, even when the \bounds{} proposes otherwise.
-    \item Maintaining a forensic ledger of every action taken, every proposal received, and every constraint evaluated.
-    \item Hard-blocking any proposed action that violates a defined constraint --- without exception or override from the \bounds{}.
-    \item Operating deterministically: same inputs, same conditions, same outputs every time.
-    \item Escalating to the \purpose{} when constraint violations are detected or when a \bounds{} proposal requires \purpose{} review.
-\end{itemize}
+It remains fixed to the human at the root.
 
-The \fact{} is the layer most naturally occupied by deterministic software, rule engines, control systems, and safety interlocks. It is the layer where probabilistic systems cannot be permitted --- where only mathematical certainty suffices.
+The framework does not preclude an advanced AI system from eventually occupying this layer, but until AI systems can be held meaningfully accountable for intent-level decisions, the Human Root Mandate applies.
 
-\textbf{Key property:} The \fact{} must be deterministic --- the same input must always produce the same output, all outputs must be auditable, and no \bounds{} proposal may bypass validation.
+Key property: The Purpose Layer must be accountable — its decisions must be attributable to an actor who can be questioned, overridden, and held responsible.
 
-\subsection{Role Occupancy Rules}
-\label{sec:occupancy}
+\subsection{Layer 2: The Bounds Engine} The Bounds Engine is responsible for interpretation, bounded reasoning, and constrained execution.
 
-The flexibility of the BX3 Framework --- allowing any actor to occupy any layer --- requires explicit rules to prevent abuse. The following role occupancy rules are architecturally binding:
+It performs the cognitive work of the system — analysis, pattern recognition, simulation, and optimal path proposal — but is architecturally limbless: it can propose but cannot execute.
 
-\begin{enumerate}
-    \item \textbf{No self-promotion.} A layer cannot promote its own actor to a higher layer. Only the \purpose{} can expand the authorization scope of the \bounds{}, and only the \bounds{} can submit proposals to the \fact{}. Self-authorization is architecturally impossible.
-    \item \textbf{All three layers must be present.} A system missing any one of the three layers is not a BX3-compliant system. The framework's guarantees do not apply.
-    \item \textbf{Accountability must always be traceable to a human.} For the foreseeable technological horizon, the \purpose{} must be occupied by a human or human institution capable of bearing legal and ethical accountability. This is the Human Root Mandate.
-    \item \textbf{The \bounds{} and \fact{} never share a functional plane.} They must be architecturally separated. The \fact{} must not be subordinate to the \bounds{} in any configuration.
-    \item \textbf{The \fact{} cannot be bypassed.} No actor may commit a physical action without passing through the \fact{}'s validation gates. This is not a software permission --- it is a physical architectural constraint.
-\end{enumerate}
-
-These rules distinguish the BX3 Framework from advisory frameworks. Violating any role occupancy rule produces a system that is \textit{not} BX3-compliant, and the framework's safety and accountability guarantees do not apply.
-\section{The BX3 Framework: Structure and Properties}\label{sec:structure}
-
-\subsection{Structural Representation}
-\label{sec:diagram}
-
-The \bxthree{} organizes any complex system into three functional layers. Figure~\ref{fig:bx3architecture} shows the default configuration, but any actor satisfying a layer's functional requirements may occupy that position. Note the critical constraint arrow from the \fact{} directly to the \bounds{} --- the physical firewall does not merely inform; it hard-blocks.
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
-    node distance=1.4cm,
-    box/.style={rectangle,rounded corners=6pt,minimum width=14cm,minimum height=1.6cm,text centered,font=\sffamily\small},
-    purpose/.style={box,fill=blue!12,draw=blue!50!black,line width=1.2pt},
-    bounds/.style={box,fill=green!10,draw=green!50!black,line width=1.2pt},
-    fact/.style={box,fill=gray!15,draw=gray!50!black,line width=1.2pt},
-    arrow/.style={-{Stealth[length=2.5mm]},line width=1pt},
-    constraintarrow/.style={-{Stealth[length=2.5mm]},line width=1.5pt,red!70!black},
-    escalationarrow/.style={-{Stealth[length=2.5mm]},line width=1pt,orange!70!black,dashed},
-    labeltext/.style={font=\sffamily\footnotesize}
-]
-\node[purpose] (purpose) {\begin{tabular}{@{}c@{}}\textcolor{blue!50!black}{\textbf{\large LAYER 1: PURPOSE}}\[0.15em]\textcolor{blue!70!black}{Intent --- Judgment --- Accountability}\end{tabular}};
-\node[bounds,below=of purpose] (bounds) {\begin{tabular}{@{}c@{}}\textcolor{green!50!black}{\textbf{\large LAYER 2: BOUNDS ENGINE}}\[0.15em]\textcolor{green!70!black}{Analysis --- Bounded Reasoning --- Proposal (Limbless)}\end{tabular}};
-\node[fact,below=of bounds] (fact) {\begin{tabular}{@{}c@{}}\textcolor{gray!50!black}{\textbf{\large LAYER 3: FACT LAYER}}\[0.15em]\textcolor{gray!70!black}{Physical Firewall --- Hard Constraint --- Forensic Ledger}\end{tabular}};
-\draw[arrow,blue!50!black] (purpose)--(bounds) node[midway,right,xshift=0.5cm,labeltext]{Goals, SLOs, Constraints};
-\draw[arrow,green!50!black] (bounds)--(fact) node[midway,right,xshift=0.5cm,labeltext]{Structured Proposals};
-\draw[constraintarrow] (fact.east)--++(2cm,0)|-(bounds.east) node[pos=0.25,right,xshift=0.2cm,labeltext,align=left]{\textbf{Hard Block}\[3pt]\footnotesize Constraint Violations};
-\draw[escalationarrow] (fact.west)--++(-2cm,0)|-(purpose.west) node[pos=0.25,left,xshift=-0.2cm,labeltext,align=right]{Forensic Ledger\[3pt]\& Escalation};
-\node[below=0.1cm of purpose,labeltext,italic,text=blue!50!black]{Human Root Mandate --- accountable actor required};
-\node[below=0.1cm of bounds,labeltext,italic,text=green!50!black]{Can propose --- cannot execute without Fact Layer approval};
-\node[below=0.1cm of fact,labeltext,italic,text=gray!50!black]{100\% deterministic --- hard-blocks any constraint violation};
-\end{tikzpicture}
-\caption{The BX3 Framework Architecture. The three functional layers operate in strict isolation. The \fact{} acts as a physical firewall, preventing the \bounds{} from unilateral execution. Accountability escalates upward to the human-anchored \purpose{}.}
-\label{fig:bx3architecture}
-\end{figure}
-
-\subsection{Why Separation Reduces Complexity}
-\label{sec:complexity}
-
-A counterintuitive but important property of the \bxthree{} is that explicitly adding a third named functional layer --- separating the \bounds{} from both the \purpose{} and the \fact{} --- reduces overall system complexity rather than increasing it.
-
-Each layer is optimized for its function. The \fact{} does not need to handle ambiguity. The \bounds{} does not need to guarantee physical consistency. The \purpose{} does not need to manage execution. When each layer is relieved of responsibilities it handles poorly, the entire system becomes leaner and more reliable. In a conventional system where these concerns are mixed, the result is often a layer that handles everything poorly.
-
-Interfaces become well-defined. Purpose-to-Bounds communication occurs through Service Level Objectives, goals, and constraints. Bounds-to-Fact communication occurs through structured action proposals against defined validation gates. Fact-to-Purpose feedback occurs through forensic ledger events, alerts, and escalation signals.
-
-Failure modes are isolated and directed upward. When the \fact{} detects a constraint violation, it hard-blocks and escalates --- it never fails silently. When the \bounds{} exceeds its authority, the \fact{} catches it. When the \purpose{} makes a poor decision, it is an accountability problem with a named responsible party. Critically, failures propagate upward toward human consciousness, not downward into autonomous drift.
-
-\subsection{The Functional Properties Table}
-\label{sec:proptable}
-
-Table~\ref{tab:properties} summarizes the required properties of each layer.
-
-\begin{table}[htbp]
-\centering
-\caption{Functional Properties by Layer}
-\label{tab:properties}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{3.8cm}@{}}
-\toprule
-\textbf{Property}&\textbf{Purpose Layer}&\textbf{Bounds Engine}&\textbf{Fact Layer}\
-\midrule
-Core Function&Intent \& SLO setting&Analysis \& proposal&Physical enforcement\
-\addlinespace
-Required Property&Accountable&Bounded (limbless)&Deterministic\
-\addlinespace
-Handles Ambiguity&Yes (by design)&Yes (within bounds)&No\
-\addlinespace
-Consistent Output&Variable&Mostly&Always\
-\addlinespace
-Auditable&Via attribution&Via reasoning trace&Fully (forensic ledger)\
-\addlinespace
-Latency&Slow (deliberate)&Moderate&Fast to instant\
-\addlinespace
-Can Execute Physically&Yes (override)&No (limbless)&Yes (only if validated)\
-\addlinespace
-Certifiable&Accountable&Difficult&Yes\
-\addlinespace
-Default Occupant&Human / institution&AI agent / heuristic&Software / mechanism\
-\bottomrule
-\end{tabular}
-\end{table}
+It lacks the authority to commit actions to the physical world unilaterally.
 
-\subsection{Layer Interface Specification}
-\label{sec:interfaces}
+Whatever occupies this layer must be capable of: Receiving goals and constraints from the Purpose Layer and translating them into proposed actions. Handling inputs that are ambiguous, variable, unstructured, or novel. Performing complex analysis — probabilistic modeling, trend analysis, simulation — within defined boundaries. Operating within a sandboxed cognitive environment, separated from physical execution authority. Escalating to the Purpose Layer when situations exceed its authority or capability.
 
-Table~\ref{tab:interfaces} defines what crosses each layer boundary.
+This layer is most commonly occupied by an AI agent or heuristic engine in modern systems.
 
-\begin{table}[htbp]
-\centering
-\caption{Layer Interface Specification}
-\label{tab:interfaces}
-\begin{tabular}{@{}lllp{6cm}@{}}
-\toprule
-\textbf{Interface}&\textbf{From}&\textbf{To}&What Crosses the Boundary\
-\midrule
-Authorization&Purpose Layer&Bounds Engine&Goals, SLOs, constraints, authorization scope\
-\addlinespace
-Proposal&Bounds Engine&Fact Layer&Structured action proposals, simulation outputs\
-\addlinespace
-Hard Block&Fact Layer&Bounds Engine&Constraint violation signals, blocked proposal receipts\
-\addlinespace
-Forensic Feedback&Fact Layer&Purpose Layer&Ledger events, escalation signals, performance metrics\
-\addlinespace
-Override&Purpose Layer&Fact Layer&Direct commands, emergency halt, Sandbox Gate approval\
-\addlinespace
-Escalation&Any node&Purpose Layer&Bailout signals when bounds are exceeded\
-\bottomrule
-\end{tabular}
-\end{table}
+However, a human expert, a hybrid human-AI team, or a sophisticated rule-based system may also occupy this layer when appropriate.
 
-Note that the \bounds{} and \fact{} never share a functional plane. The \bounds{} cannot write directly to physical actuators. The \fact{} cannot initiate reasoning. These are architectural separations enforced by Loop Isolation.
+The defining requirement is bounded adaptability — the ability to reason flexibly within hard constraints, never autonomously.
 
-\section{The Five Pillars of BX3 Implementation}\label{sec:pillars}
+The Bounds Engine proposes; the Fact Layer decides whether to execute.
 
-The three functional layers define what a BX3-compliant system must contain. The Five Pillars define how those layers must behave in practice.
+Key property: The Bounds Engine must be bounded — its outputs must pass through Fact Layer validation before any physical action occurs, and its authority is strictly limited by Purpose Layer direction.
 
-\subsection{Pillar 1: Loop Isolation}
-\label{sec:pillar1}
+\subsection{Layer 3: The Fact Layer} The Fact Layer is the physical firewall and brakes of the system.
 
-\textbf{Problem solved:} Logic Collision --- when the \bounds{} and the \fact{} occupy the same functional plane, enabling un-vetted autonomous actions.
+It acts as the deterministic gate through which all Bounds Engine proposals must pass before becoming real-world actions.
 
-\textbf{Solution:} Strict isolation of the three functional layers into discrete planes. Each BX3 loop is self-contained. A Logic Collision is architecturally impossible because the \bounds{} never shares a functional plane with physical execution. The \bounds{} proposes; the \fact{} decides.
+Whatever occupies this layer must be capable of: Producing the same output given the same input, without exception. Hard-blocking any Bounds Engine proposal that violates a pre-defined safety, regulatory, or physical constraint — regardless of how confident the Bounds Engine is in its proposal. Maintaining a complete, tamper-evident forensic ledger of all decisions, proposals, and physical outcomes. Operating at the latency and reliability level required by the system’s risk profile. Providingabasisforformalverification,regulatorycertification,orlegalaccountability.
 
-\subsection{Pillar 2: Recursive Spawning}
-\label{sec:pillar2}
+This layer is most commonly occupied by deterministic software, rule engines, control systems, or physical mechanisms.
 
-\textbf{Problem solved:} Logic Rigidity --- static edge devices that cannot adapt to local conditions without constant cloud connectivity.
+An AI system may occupy this layer only under strict conditions: fixed parameters, no generalization, no probabilistic inference, and formal verification against specification.
 
-\textbf{Solution:} A parent node births a child BX3 loop by generating a \textbf{Worksheet} --- a containerized, self-contained logic set encapsulating the parent's Purpose for a specific local context. Each Worksheet carries a hard-coded pointer to the parent's Purpose, preventing autonomous drift. If cloud connectivity is lost, the child executes the last-known-good Worksheet based on local inputs.
+The result of a properly implemented Fact Layer is that the system remains bounded by reality at all times — no Bounds Engine action, however confidently proposed, can violate a hard physical or regulatory constraint.
 
-\subsection{Pillar 3: Spatial Firewall}
-\label{sec:pillar3}
+Key property: The Fact Layer must be deterministic — the same input must always produce the same output, all outputs must be auditable, and no Bounds Engine proposal may bypass it.
 
-\textbf{Problem solved:} Soft permissions that can be bypassed --- access privileges implemented as software permissions rather than physical constraints.
+\subsection{Role Occupancy Rules} Theflexibilityofthe BX3Framework—allowinganyactortooccupyanylayer—isbounded by three non-negotiable rules: 1.
 
-\textbf{Solution:} Access privileges are implemented as physical, hard-coded constraints of the \fact{} --- not as software permissions. The \fact{} physically cannot serve data or execute actions beyond a node's provisioned authorization tier. When a \bounds{} requests a capability beyond its tier, the \fact{} triggers an automated resolution pathway --- upgrade funnel, human escalation, or logged denial. Data resolution tiers are enforced at the physical layer, not the application layer.
+Property satisfaction is mandatory.
 
-\subsection{Pillar 4: Root Tunneling}
-\label{sec:pillar4}
+An actor may only occupy a layer if it genuinelysatisfiesthatlayer’sfunctionalrequirements.
 
-\textbf{Problem solved:} Abstraction Leakage --- collapse of organizational hierarchy when a human operator accesses a sub-node.
+Claimingtooccupyalayerwithout satisfying its properties is an architectural violation.
 
-\textbf{Solution:} The Root-Pipe Protocol enables the human \purpose{} to project authority into any node without collapsing the hierarchy. When activated, the node's Purpose redirects to the human operator's intent, telemetry pipes to the root dashboard, and proposed \bounds{} actions must pass through a Sandbox Gate. The Sandbox Gate requires modeling proposed actions in a digital twin before physical actuators are unlocked \cite{leveson2011}.
+Layer properties are non-negotiable.
 
-\subsection{Pillar 5: Bailout Protocol}
-\label{sec:pillar5}
+The properties of each layer — accountability, boundedness, determinism — cannot be relaxed to accommodate an actor’s limitations.
 
-\textbf{Problem solved:} The Black Box problem --- autonomous actions orphaned from human responsibility.
+If an actor cannot satisfy a layer’s requirements, a different actor must be found, or the system cannot be considered BX3-compliant.
 
-\textbf{Solution:} A systemic escalation protocol guaranteeing accountability always reaches a human. When any node encounters a state conflict it cannot resolve, it escalates upward through the hierarchy, bypassing all machine actors, until it reaches the human \purpose{}.
+All three layers must be present.
 
-The system fails upward into human consciousness --- never downward into algorithmic drift.
+A system missing any layer is architecturally incomplete.
 
-\textbf{The Forensic Ledger:} Every event is logged simultaneously across three planes --- Purpose (what was authorized), Bounds (what was proposed and why), and Fact (what physical action was taken). This three-plane ledger provides the forensic standard required for high-stakes regulatory environments.
+Without the Fact Layer there are no hard constraints.
 
-\section{Application Across Domains}\label{sec:domains}
+Without the Purpose Layer there is no accountable intent.
 
-The \bxthree{} appears across many complex domains.
+Without the Bounds Engine the system cannot handle the ambiguity and complexity of the real world.
 
-\subsection{Autonomous Systems and Sensor Networks}
+\section{The BX3 Framework: Structure and Properties}
+\subsection{Structural Representation} The BX3 Framework organizes any complex system into three functional layers.
 
-Human engineers occupy the \purpose{} (mission parameters, safety constraints). AI occupies the \bounds{} (sensor interpretation, real-time decisions). Deterministic control systems occupy the \fact{} (collision avoidance, actuator limits) --- never overridden by the \bounds{}.
+The diagram below shows the default configuration, but any actor satisfying a layer’s functional requirements may occupy that position.
 
-\subsection{Legal Systems}
+Note the critical constraint arrow from the Fact Layer directly to the Bounds Engine — the physical firewall does not merely inform; it hard-blocks: LAYER 1: PURPOSE Intent — Judgment — Accountability Human Root Mandate — accountable actor required directs & sets SLO LAYER 2: BOUNDS ENGINE Analysis — Bounded Reasoning — Proposal (Limbless) forensic ledger & escalation Can propose — cannot execute wpritohpooustes Faaccttio Lnayer approval hard-blocks violations LAYER 3: FACT LAYER Physical Firewall — Hard Constraint — Forensic Ledger 100% deterministic — hard-blocks any constraint violation \subsection{Why Separation Reduces Complexity} A counterintuitive but important property of the BX3 Framework is that explicitly adding a third named functional layer — separating the Bounds Engine from both the Purpose Layer and the Fact Layer — reduces overall system complexity rather than increasing it.
 
-Legislatures and judges occupy the \purpose{} (law's purpose, novel case judgment). AI occupies parts of the \bounds{} (legal research, document analysis). Written law and procedural rules occupy the \fact{} --- same statute, same circumstances, same outcome.
+This occurs for three reasons: Each layer is optimized for its function.
 
-\subsection{Medicine}
+The Fact Layer does not need to handle ambiguity.
 
-Physicians occupy the \purpose{} (patient context, ethical judgment). AI occupies portions of the \bounds{} (imaging analysis, drug interaction checking). Dosage protocols, surgical checklists, and regulatory requirements occupy the \fact{} --- deterministic rules constraining both physician and AI. The human operator remains accountable for the system's actions under the Human Root Mandate.
+The Bounds Engine does not need to guarantee physical consistency.
 
-Medical systems demonstrate the three-layer separation naturally: physicians do not directly control drug infusion pumps (the \fact{} does), but they set the intent and parameters (the \purpose{}), and AI assists with diagnosis within strict protocols (the \bounds{}).
+The Purpose Layer does not need to manage execution.
 
-\subsection{Organizational Design}
+When each layer is relieved of responsibilities it handles poorly, the entire system becomes leaner and more reliable.
 
-Executive leadership occupies the Intent Layer (strategic direction). Knowledge workers and AI-augmented teams occupy the \bounds{} (strategy interpretation, analysis, proposal). Policies, compliance, and financial controls occupy the \fact{}.
+Interfaces become well-defined.
 
-\subsection{Biological Cognition}
+Purpose-to-Bounds communication occurs through Service Level Objectives, goals, and constraints.
 
-The \bxthree{} mirrors biological cognition \cite{kahneman2011}. The autonomic nervous system occupies the \fact{} (deterministic, fast). Learned heuristics occupy the \bounds{} (efficient familiar responses). Conscious deliberative reasoning occupies the \purpose{} (slow, deliberate, novel situations).
+Bounds-to-Fact communication occurs through structured action proposals against defined validation gates.
 
-This convergence suggests the \bxthree{} reflects a near-optimal solution for any system that must be simultaneously reliable, adaptive, and accountable.
+Fact-to-Purpose feedback occurs through forensic ledger events, alerts, and escalation signals.
 
-\section{The Bounds Engine Used to Build and Improve Fact Layer Systems}\label{sec:builder}
+Each interface is appropriate to its parties regardless of who or what occupies each layer.
 
-One of the most practically significant implications of the \bxthree{} is that the \bounds{} is not merely a constraint layer for AI systems --- it is an active engineering tool for improving the \fact{} itself.
+Failure modes are isolated and directed upward.
 
-The \bounds{} can be used to design, accelerate, and refine the \fact{}. Because the \bounds{} is the layer where interpretation, simulation, and complex analysis occur, it is the natural layer for: generating new constraint rules from observed system behavior; proposing optimized deterministic logic from probabilistic training data; identifying edge cases and failure modes in existing \fact{} implementations; and continuously improving the fidelity of the forensic ledger.
+When the Fact Layer detects a constraint violation, it hard-blocks and escalates — it never fails silently.
 
-In effect, the \bounds{} is the layer that makes the \fact{} smarter over time --- not by replacing deterministic enforcement, but by proposing better deterministic rules. The \bounds{} proposes new constraint logic; the \fact{} evaluates and hard-accepts or hard-rejects those proposals. This creates a continuous improvement loop where the \fact{} becomes progressively more capable and precise without ever leaving the deterministic regime.
+When the Bounds Engine exceeds its authority, the Fact Layer catches it.
 
-This has immediate practical implications for safety-critical systems. Instead of requiring engineers to manually enumerate every constraint, the \bounds{} can generate candidate constraints from operational data, which are then validated against the forensic ledger and formally verified before incorporation into the \fact{}.
+When the Purpose Layer makes a poor decision, it is an accountability problem with a named responsible party.
 
-\textbf{Shadow Mode Validation} uses the \bounds{} to run proposed \fact{} changes in parallel with the live \fact{} using identical inputs, comparing outputs without affecting physical systems. Discrepancies are flagged for human review before any change is committed.
+Critically, failures propagate upward toward human consciousness, not downward into autonomous action.
 
-\textbf{The Continuous Improvement Loop} describes how the three-layer architecture enables progressive refinement: the \bounds{} proposes; the \fact{} hard-blocks violations; the forensic ledger records the outcomes; engineers review the ledger; approved changes are formally verified; the \fact{} is updated. Over time, \bounds{} behaviors that consistently generate approved proposals are incorporated into the \fact{}'s baseline logic, making the system progressively smarter without ever crossing from probabilistic reasoning into unconstrained execution.
+\subsection{The Functional Properties Table} Property Purpose Layer Bounds Engine Fact Layer Core func- Intent & SLO set- Analysis & pro- Physical enforcetion ting posal ment Required Accountable Bounded (limb- Deterministic property less) Handles am- Yes (by design) Yes (within No biguity bounds) Consistent Variable Mostly Always output Auditable Via attribution Via reasoning Fully (forensic trace ledger) Latency Slow (deliberate) Moderate Fast to instant Can execute Yes (override) No (limbless) Yes (only if valiphysically dated) Certifiable Accountable Difficult Yes Default oc- Human / institu- AI agent / heuris- Software / mechacupant tion tic nism \subsection{Layer Interface Specification} The BX3 Framework defines not only what each layer must do but what crosses each layer boundary.
 
-\section{Why Deterministic Systems Will Not Be Replaced}\label{sec:determinism}
+Well-defined interfaces are the mechanism by which layer isolation is maintained in practice: Interface From To What Crosses the Boundary Direction Purpose Bounds En- Goals, SLOs, constraints, autho- Layer gine rization scope Proposal Bounds En- Fact Layer Structured action proposals, simgine ulation outputs Hard Block Fact Layer Bounds En- Constraint violation signals, gine blocked proposal receipts Forensic Feed- Fact Layer Purpose Ledger events, escalation signals, back Layer performance metrics Override Purpose Fact Layer Direct commands, emergency Layer halt, Sandbox Gate approval Escalation Any node Purpose Bailout signals when bounds are Layer exceeded Note that the Bounds Engine and Fact Layer never share a functional plane.
 
-A common claim is that advanced AI will subsume deterministic software. This misunderstands determinism as a property, not merely a limitation.
+The Bounds Engine cannot write directly to physical actuators.
 
-\subsection{The Value of Determinism is Not Compensable}
+The Fact Layer cannot initiate reasoning.
 
-Determinism provides properties probabilistic systems cannot replicate:
+These are not software permissions — they are architectural separations enforced by Loop Isolation (Pillar 1).
 
-\begin{itemize}
-    \item \textbf{Reproducibility:} Reproduce any past output given the same input --- enabling debugging, auditing, legal accountability.
-    \item \textbf{Formal verification:} Mathematically prove properties under all possible inputs.
-    \item \textbf{Certification:} Regulatory frameworks require deterministic behavior for approval, including DO-178C for aviation, ISO 26262 for automotive, and IEC 61508 for industrial control.
-    \item \textbf{Latency:} Hard real-time response at microsecond precision is achievable with deterministic systems, not with current probabilistic AI.
-\end{itemize}
+\section{The Five Pillars of BX3 Implementation}
+The three functional layers define what a BX3-compliant system must contain.
 
-\subsection{The Infrastructure Argument}
+The Five Pillars define how those layers must behave in practice to maintain their properties under real-world conditions including network failures, scale, security threats, and exception states.
 
-Every AI system runs on deterministic infrastructure: operating systems, databases, networking stacks, authentication systems. The claim that AI will replace software is self-refuting --- AI depends on deterministic software that will not be replaced and cannot be replaced without eliminating the AI itself.
+Eachpillaraddressesaspecificfailuremodethatemergeswhen AI,deterministic, andhuman systems are combined without disciplined architectural separation.
 
-\subsection{The Regulatory and Trust Barrier}
+\subsection{Pillar 1: Loop Isolation} Problem solved: Logic Collision — when the Bounds Engine and the Fact Layer occupy the same functional plane, enabling un-vetted autonomous actions that bypass physical constraint.
 
-Organizations will not replace functioning, auditable, certified systems with probabilistic alternatives without extraordinary evidence. The burden of proof is high; current AI does not meet it for most production environments where failure carries real consequences.
+Solution: Strict isolation of the three functional layers into discrete planes.
 
-\section{Relationship to Prior Work}\label{sec:prior}
+Each BX3 loop is self-contained and operates independently.
 
-The \bxthree{} synthesizes established frameworks.
+A Logic Collision is architecturally impossible because the Bounds Engine never shares a functional plane with physical execution.
 
-\textbf{Separation of Concerns} \cite{dijkstra1982}: Extended to include human and AI roles alongside software components.
+The Bounds Engine proposes; the Fact Layer decides.
 
-\textbf{Sociotechnical Systems Theory} \cite{trist1981}: Models human roles within technical systems, not external to them.
+These are never the same operation.
 
-\textbf{Cybernetics and Control Theory} \cite{wiener1948}: Provides feedback systems and sense-process-act loops.
+A single human Purpose Layer can govern an arbitrarily large tree of Bounds Engine agents and Fact Layer mechanisms with absolute precision, because the accountability chain remains non-collapsing regardless of system scale.
 
-\textbf{Human-in-the-Loop Design} \cite{bansal2019}: Provides empirical grounding for human oversight in AI-assisted systems.
+\subsection{Pillar 2: Recursive Spawning} Problem solved: Logic Rigidity—staticedgedevicesthatcannotadapttolocalconditions without constant cloud connectivity.
 
-The contribution is synthesis into a unified, applicable model --- the \bxthree{} --- as a universal structural pattern applicable across all domains.
+Solution: A parent node (operating at the Bounds Engine layer) births a child BX3 loop by generating a Worksheet — a containerized, self-contained logic set encapsulating the parent’s Purpose for a specific local context — and deploying it over-the-air to the child node.
 
-The most closely related contemporary work is iSTS \cite{xu2024}. The \bxthree{} differs: (1) explicit \fact{} as first-class component; (2) system engineering architecture vs. organizational design; (3) actor-agnostic vs. human-centered.
+Each Worksheet carries a hard-coded pointer to the parent’s Purpose, preventing autonomous drift.
 
-NIST AI RMF \cite{nist2023} and ISO/IEC 42001 \cite{iso2023} provide governance structures. The \bxthree{} is the complementary architectural layer beneath them \cite{koch2026}: \purpose{} carries governance objectives; \bounds{} operates under design-time constraints; \fact{} provides runtime enforcement; Forensic Ledger provides assurance feedback.
+The child loop applies the parent’s intent to local sensor data independently, without requiring a constant cloud heartbeat.
 
-Tiered Agentic Oversight (TAO) \cite{kim2025} routes tasks through agent tiers. BX3 differs: escalation to human \purpose{} is unconditional for every unresolved exception --- accountability never strands in machine-only recursion.
+If cloud connectivity is lost, the child node executes the last-known-good Worksheet based on local inputs.
 
-Recent work corroborates BX3 safety properties: fail-safely \cite{alenezi2026}, clear escalation paths, fallback deterministic workflows, sandbox-first execution. BX3 incorporates these as named architectural pillars.
+The system maintains integrity and local reflexes in degraded network conditions (Local Survivability).
 
-Lean-Agent Protocol \cite{rashie2026} uses proof kernels as deterministic gateways. BX3 makes the broader claim: wherever execution must be non-probabilistic, a protected deterministic layer is architecturally indispensable.
+This mechanism allows a single human Purpose Layer to project authority and logic across an arbitrarily large distributed system while preserving BX3 layer integrity at every node: Bailout escalation HUMAN PURPOSE LAYER (Level 0) Human Root — Accountability Anchor Spawns via Worksheet Spawns via Worksheet BX3 CHILD LOOP A Worksheet OTA → Local Fact Layer BX3 CHILD LOOP B Worksheet OTA → Local Fact Layer Sensor Node Sensor Node Sensor Node Every spawned Worksheet maintains a hard-coded pointer to the parent’s Purpose, preventing autonomous drift regardless of network conditions or child node failures.
 
-Russell \cite{russell2019} and Leveson \cite{leveson2011} provide safety-critical grounding. Brooks \cite{brooks1987} anticipates the central claim of this paper: AI is not a universal solution but one bounded layer in a properly structured system.
+\subsection{Pillar 3: Spatial Firewall} Problem solved: Soft permissions that can be bypassed, and IP that is protected only by logical access controls rather than physical constraints.
 
-\section{Implications}\label{sec:implications}
+Solution: Access privileges and data resolution tiers are implemented as physical, hardcoded constraints of the Fact Layer — not as software permissions.
 
-\subsection{For Engineers and Architects}
+The system’s Fact Layer physically cannot serve data or execute actions beyond a node’s provisioned authorization level.
 
-Before deploying any AI component in a safety-critical or high-stakes system, engineers and architects should ask whether the AI is being asked to occupy the \bounds{} or the \fact{}. If it is asked to occupy the \fact{}, the system is not BX3-compliant and the framework's guarantees do not apply.
+When a Bounds Engine requests a capability beyond its provisioned tier, the Fact Layer does not return a “Permission Denied” error.
 
-The BX3 Framework provides a principled checklist: Is there a named, accountable human at the \purpose{}? Is the \bounds{} architecturally separated from physical execution? Is the \fact{} implementing hard constraints that cannot be bypassed by software privilege? Is there a forensic ledger? If any answer is no, the system requires redesign before deployment.
+Instead, it triggers an automated resolution pathway — which may include a commercial upgrade funnel, a human escalation, or a logged denial.
 
-\subsection{For Policymakers and Regulators}
+Even if a Bounds Engine node is compromised, it cannot access or execute beyond what its Fact Layer gate physically permits.
 
-The BX3 Framework provides a legible structure for AI governance. Rather than regulating AI technologies directly --- an approach that struggles to keep pace with rapid advancement --- regulators can require BX3-compliant architecture as a precondition for deployment in high-stakes domains.
+The firewall is in the physics, not the logic.
 
-Concretely: any autonomous system making physical decisions affecting human safety should be required to demonstrate that its \bounds{} and \fact{} are architecturally separated; that the forensic ledger is tamper-evident; and that the accountability chain terminates at a named human accountable party. The specific AI technology used at the \bounds{} becomes a secondary question.
+\subsection{Pillar 4: Root Tunneling} Problem solved: Abstraction Leakage — the collapse of organizational hierarchy when a human operator accesses a sub-node, losing global context and breaking the recursive audit trail.
 
-\subsection{For Researchers}
+Solution: The Root-Pipe Protocol enablesthehuman Purpose Layertoprojectauthority into any node in the system without collapsing the hierarchy.
 
-The BX3 Framework opens several immediate research directions. How do different AI architectures perform as \bounds{} occupants across different domains? Under what conditions does the continuous improvement loop produce net-positive results in safety-critical \fact{} systems? How should the forensic ledger be standardized for cross-system auditability? The framework provides a shared vocabulary for asking these questions precisely.
+When a tunnel is activated, the node’s Purpose is redirected to the human operator’s intent, all telemetry and logs are piped to the root dashboard, and all proposed Bounds Engine actions for that node must pass through a Sandbox Gate before reaching the Fact Layer.
 
-\subsection{For Organizations}
+The Sandbox Gate requires the Bounds Engine to model the projected outcome of any proposed action in a digital twin environment before physical actuators are unlocked \citep{ref10}.
 
-Organizations deploying AI systems should conduct a BX3 audit of their existing AI stack. Where is the \purpose{}? Who is accountable? Where is the \bounds{}? Where is the \fact{}? Are they architecturally separated? Many organizations will find their AI systems blur these boundaries in ways that create unacknowledged risk. The BX3 Framework provides a lens for seeing and correcting these design flaws before they produce failures.
+The human reviews the simulation and provides explicit approval.
 
-\section{Limitations}\label{sec:limitations}
+Only after Human-in-the- Loop validation does the Fact Layer permit physical execution.
 
-As a conceptual framework paper, the BX3 Framework carries limitations that should be stated plainly.
+This provides a high-stakes safety buffer against live-system errors while maintaining the full audit trail.
 
-First, the three-layer boundary is not always sharp. In practice, some systems exhibit hybrid behaviors that resist clean layer assignment. The framework provides an analytical lens, not a mechanical prescription.
+\subsection{Pillar 5: Bailout Protocol} Problem solved: The “Black Box” problem — autonomous actions that are orphaned from human responsibility, creating unresolvable legal and operational risk.
 
-Second, the Human Root Mandate is a temporary assumption. The framework explicitly notes this as a boundary condition, not a permanent constraint. If AI systems can eventually be held accountable at the \purpose{} level, the framework accommodates this development without structural change.
+Solution: A systemic escalation protocol that guarantees accountability always reaches a human.
 
-Third, formal verification of BX3-compliant systems remains an open engineering challenge. The framework defines what properties must be maintained; it does not yet provide complete mechanical proofs of those properties for specific implementations.
+When any node encounters a state conflict it cannot resolve within its functional bounds, it escalates the exception upward through the recursive system hierarchy, bypassing all machine actors, until it reaches the human Purpose Layer anchor.
 
-Fourth, the actor-agnostic property introduces flexibility that can be abused. The role occupancy rules provide structural constraints, but enforcement requires institutional will. A sophisticated actor could design a nominally BX3-compliant system that violates the framework's intent while satisfying its letter.
+The system fails upward into human consciousness — never downward into algorithmic chaos.
 
-Fifth, the cross-domain analogies that support the framework's universality also risk diluting its specificity. The framework's validity in one domain does not automatically validate it in others. Each domain application requires careful analysis.
+No autonomous action is ever orphaned from its human source.
 
-\section{Future Research Agenda}\label{sec:future}
+Every exception has a traceable escalation path terminating at a named, accountable human.
 
-This paper is explicitly positioned as a conceptual framework and position paper. It proposes the BX3 Framework as a unifying architectural model and argues for its validity through cross-domain analogy and synthesis of established theory.
+The Forensic Ledger: Every event in the system is logged simultaneously across three discrete planes — the Purpose plane (what was authorized), the Bounds Engine plane (what was proposed and why), and the Fact plane (what physical action was taken and what was its outcome).
 
-\textbf{Study 1:} Empirical validation in the San Luis Valley precision agriculture deployment, providing initial data across all five pillars.
+This three-plane ledger provides the forensic standard required for highstakes regulatory environments, proving that deterministic human oversight was structurally guaranteed throughout the lifecycle of every autonomous event.
 
-\textbf{Study 2:} Case studies in safety-critical domains (industrial control, medical devices, autonomous vehicles), testing the framework against established safety standards.
+Layer Systems Oneofthemostpracticallysignificantimplicationsofthe BX3Frameworkisthatthe Bounds Engine’smostpowerfulandappropriateusemaynotbeoperating withinproductionsystems, but designing and improving the Fact Layer systems that do.
 
-\textbf{Study 3:} Formal specification of the Worksheet and Root-Pipe protocols for peer-reviewed engineering specification.
+This inversion of the conventional narrative — the Bounds Engine as a builder of reliability rather than a replacement for it — is the framework’s most actionable contribution for engineers and architects.
 
-\textbf{Study 4:} Cross-domain comparative analysis examining how the framework's universality holds across different domains.
+\subsection{Pattern Discovery to Rule Encoding} Bounds Engine systems can be applied to large datasets to discover patterns, correlations, and decision boundaries that would be infeasible for humans to enumerate manually.
 
-\textbf{Study 5:} Risk-weighted variant (BX3-TAO Hybrid) incorporating tiered risk stratification into the BX3 layer model, enabling proportional constraint enforcement based on consequence severity.
+Once discovered, these patterns can be encoded as deterministic Fact Layer rules, thresholds, or constraint tables — effectively graduating from probabilistic inference to reliable physical enforcement.
 
-\textbf{Study 6:} BX3 Protocol Development providing normative, implementable specifications for certifiable BX3-compliant systems.
+This is the model used in several mature autonomous systems domains, where machine learning is used offline to develop and validate behavioral policies, and only validated, frozen logic is deployed to operational Fact Layer systems.
 
-\section{Conclusion}\label{sec:conclusion}
+The Bounds Engine’s work happens in the design environment; the Fact Layer does the work in the field.
 
-The BX3 Framework is a universal architectural model for complex systems. It defines three immutable functional layers --- \purpose{}, \bounds{}, and \fact{} --- that together provide intent, bounded reasoning, and deterministic enforcement.
+The system benefits from the Bounds Engine’s pattern recognition capability without inheriting its runtime unpredictability.
 
-These layers are not software components. They are functional roles that can be occupied by humans, AI systems, institutions, or any combination thereof --- provided the functional requirements of the layer are satisfied.
+\subsection{Bounds Engine-Accelerated Fact Layer Development} Bounds Engine systems are increasingly used to generate, review, and test deterministic Fact Layer code and constraint specifications.
 
-The five pillars --- Loop Isolation, Recursive Spawning, Spatial Firewall, Root Tunneling, and Bailout Protocol --- translate the three-layer model into an engineering specification that is simultaneously more capable, more reliable, and more governable than systems built on implicit or informal role assignments.
+The output of this process is traditional deterministic software — auditable and certifiable.
 
-The framework is currently under active implementation in Agentic --- an AI workforce orchestration platform --- and in a precision agriculture autonomous system in the San Luis Valley, Colorado, with field trials planned for June 2026. The companion BX3 Framework open-source repository provides permissive reference implementations. The companion BX3 Protocol (in preparation) will provide normative, certifiable implementation standards.
+The Bounds Engine was a tool in the construction process, not a component of the runtime system.
 
-The BX3 Framework does not resolve every open question in AI safety or autonomous systems design. It provides a structural framework within which those questions can be asked more precisely, answered more rigorously, and implemented more reliably.
+This preserves all the reliability properties of deterministic enforcement while dramatically accelerating development.
 
-The BX3 Framework is not entirely new. Its pattern is visible in legal systems, medical practice, autonomous vehicles, biological cognition, and organizational design --- wherever reliable systems must manage the intersection of ambiguous reasoning and deterministic execution. What the framework adds is the explicit naming, the formal separation, and the accountability architecture that makes these patterns legible and enforceable.
+This pattern resolves a common false trade-off: the assumption that gaining Bounds Engine capability requires accepting Bounds Engine unpredictability at runtime.
 
-The human operator remains the accountable anchor. No system we build is complete --- regardless of how capable its components are individually.
+When the Bounds Engineisusedtobuild Fact Layersystemsratherthanreplace them,theorganization gains speed and generalization at the design phase while retaining reliability and auditability at runtime.
 
-\appendix
+\subsection{Shadow Mode Validation} A powerful hybrid pattern involves running a Bounds Engine system in parallel with an existing Fact Layer system, comparing proposals against actual enforcement outcomes, and flagging divergences for Purpose Layer review.
+
+Over time, Bounds Engine behaviors that consistently improve on the Fact Layer can be promoted — after explicit Purpose Layer approval — into the Fact Layer itself.
+
+This pattern is particularly valuable in regulated industries where replacing a certified Fact Layer system requires extensive re-certification.
+
+Shadow mode allows Bounds Enginedriven improvements to be identified, validated by the human Purpose Layer, and gradually incorporated without disrupting the certified operational system.
+
+\subsection{The Continuous Improvement Loop} The BX3 Framework enables a structured continuous improvement cycle that preserves system integrity at every stage: 1.
+
+The Fact Layer operates in production, generating performance data and constraintevent logs.
+
+The Bounds Engine analyzes that data, identifying edge cases, inefficiencies, and improvement opportunities.
+
+The Purpose Layer (human anchor) reviews Bounds Engine findings and exercises judgment about which improvements to pursue.
+
+Approved improvements are encoded into the Fact Layer after validation and certification.
+
+The cycle repeats — the system grows more capable without growing less reliable.
+
+The Purpose Layerremainsthegatekeeperthroughwhomall Bounds Engineinsightmust pass before it becomes Fact Layer logic.
+
+Accountability is preserved throughout the improvement process, and the Forensic Ledger records every proposed change and its authorization status.
+
+The BX3Framework is nota softwareengineering principlealone.
+
+The same three functional layers — an accountable Purpose Layer, a bounded Bounds Engine, and a deterministic Fact Layer — appear across many complex domains.
+
+In each case, different types of actors occupy eachlayer, confirmingthattheframework’spowerliesinitsfunctionaldefinitionsratherthan in any prescription about actor type.
+
+\subsection{Autonomous Systems and Sensor Networks} In sensor-driven autonomous systems, the BX3 Framework maps directly onto system architecture.
+
+Human engineers occupying the Purpose Layer define mission parameters, safety constraints, and acceptable risk envelopes.
+
+AI processing layers occupying the Bounds Engine interpret sensor data, handle ambiguous environments, and propose real-time decisions within those constraints.
+
+Deterministic control systems occupying the Fact Layer enforce hard constraints — collision avoidance thresholds, actuator limits, safety interlocks — that cannot be overridden by the Bounds Engine under any circumstances.
+
+This architecture is critical where the cost of Bounds Engine error is physical and potentially irreversible.
+
+The Fact Layer does not need to handle every situation — only to prevent catastrophic outcomes while the Bounds Engine and Purpose Layer resolve ambiguity.
+
+\subsection{Legal Systems} Legal systems demonstrate the actor-agnostic property of the BX3 Framework clearly.
+
+Legislatures and judges occupy the Purpose Layer — defining the purpose and interpretation of law, exercising judgment in novel cases, and bearing institutional accountability.
+
+AI systems increasingly occupy parts of the Bounds Engine — assisting with legal research, document analysis, and pattern recognition across case law.
+
+The written law itself, procedural rules, and enforcement mechanisms occupy the Fact Layer — the same statute applies the same way in the same circumstances, regardless of who the parties are.
+
+\subsection{Medicine} Physicians occupy the Purpose Layer — exercising judgment incorporating patient context, ethical considerations, and probabilistic reasoning beyond any protocol.
+
+AI systems occupy portions of the Bounds Engine — assisting with imaging analysis, drug interaction checking, and population-level pattern recognition.
+
+Drug dosage protocols, surgical checklists, equipment operation specifications, and regulatory requirements occupy the Fact Layer — deterministic rules that constrain both physician and AI behavior alike.
+
+\subsection{Organizational Design} Organizations themselves exhibit the BX3 structure.
+
+Executive leadership occupies the Intent Layer — setting strategic direction and bearing accountability.
+
+Knowledge workers and AI-augmented teams occupy the Bounds Engine — interpreting strategy and executing flexibly within organizational guidelines.
+
+Policies, compliance requirements, contractual obligations, and financial controls occupy the Fact Layer — rules that apply consistently regardless of who is executing or what the AI recommends.
+
+\subsection{Biological Cognition} Notably, the BX3 Framework mirrors the layered architecture of biological cognition \citep{ref5}.
+
+The autonomicnervoussystemandreflexesoccupythe Fact Layer—deterministic, fast, andnonnegotiable.
+
+Learnedheuristics,intuitions,andpatternrecognitionoccupythe Bounds Engine — efficient responses to familiar situations.
+
+Conscious deliberative reasoning occupies the Purpose Layer — slow, deliberate, and engaged only for genuinely novel, high-stakes, or ethically complex situations.
+
+This convergence suggests the BX3 Framework reflects something deeper than an engineeringpreference.
+
+Thesamethree-layerfunctionalarchitectureappearstobeanear-optimal solution for any system that must simultaneously be reliable, adaptive, and accountable — regardless of whether that system is biological, organizational, legal, or computational.
+
+\section{Why Deterministic Systems Will Not Be Replaced}
+Why Deterministic Systems Will Not Be Replaced A common claim is that sufficiently advanced AI will eventually subsume deterministic software.
+
+We argue this position misunderstands the distinct value of determinism as a property, not merely a limitation.
+
+\subsection{The Value of Determinism is Not Compensable} Determinism provides properties that probabilistic systems cannot replicate: Reproducibility: The ability to reproduce any past output given the same input, enabling debugging, auditing, and legal accountability. Formal verification: The ability to mathematically prove that a system satisfies certain properties under all possible inputs. Certification: Regulatory frameworks in aviation, medical devices, financial systems, and safety-critical infrastructure require deterministic behavior as a precondition for approval. Latency: Hard real-time requirements (microsecond response times) are achievable with deterministic systems and not with current AI inference pipelines.
+
+\subsection{The Infrastructure Argument} Every AI system in production today runs on top of vast deterministic infrastructure: operating systems, databases, networking stacks, authentication systems, billing pipelines, and monitoring tools.
+
+The claim that AI will replace software is structurally self-refuting — the AI systems making this possible are themselves dependent on deterministic software that will not and should not be replaced.
+
+\subsection{The Regulatory and Trust Barrier} Evenindomainswhere AIcouldtheoreticallyreplacedeterministicsystemsonaperformance basis, the practical barriers are substantial.
+
+Organizations with core operations dependent on software will not replace functioning, auditable, certified systems with probabilistic alternatives without extraordinary evidence of equivalent reliability and auditability.
+
+The burden of proof is appropriately high, and current AI systems do not meet it for most production contexts.
+
+\section{Relationship to Prior Work}
+Relationship to Prior Work The BX3 Framework synthesizes several established frameworks rather than claiming wholly original invention.
+
+Separation of Concerns \citep{ref1}: Dijkstra’s foundational principle that different aspects of a problem should be handled by different components is extended here to explicitly include human and AI roles alongside traditional software components — a dimension the original principle did not address.
+
+Sociotechnical Systems Theory \citep{ref2}: The Tavistock Institute’s work on the joint optimization of social and technical systems anticipated the importance of explicitly modeling human roles within technical systems rather than treating them as external to the design.
+
+Cybernetics and Control Theory \citep{ref3}: Wiener’s foundational work on feedback systems and the sense-process-act loop provides the theoretical basis for understanding how deterministic control systems interact with adaptive agents and human oversight.
+
+Human-in-the-Loop Design \citep{ref4}: The extensive literature on HITL systems provides empirical grounding for the claim that human oversight remains essential in AI-assisted systems, particularly for safety-critical applications.
+
+The contribution of this paper is the synthesis of these frameworks into a single, unified, and practically applicable model — the BX3 Framework — and the argument that this model applies not just to software systems but as a universal structural pattern across complex engineered and organizational systems.
+
+The most closely related contemporary work is the intelligent sociotechnical systems (i STS) framework proposed by Xu and Gao \citep{ref6}, which similarly extends traditional STS theory to address the demands of AI integration and proposes a hierarchical human-centered AI approach.
+
+The BX3 Framework is distinguished from i STS in three important respects.
+
+First, it explicitly identifies the Fact Layer as a named, first-class architectural component — a distinction i STS does not make.
+
+Second, it operates at the level of system engineering architecture rather than organizational and societal design, making it more directly applicable as a practical engineering heuristic.
+
+Third, and most significantly, the BX3 Framework is actor-agnostic: it defines layers by functional properties rather than by actor type, allowing humans, AI systems, and mechanical processes to occupy any layer provided they satisfy its requirements.
+
+i STS remains human-centered by design; the BX3 Framework is function-centered by design.
+
+The BX3 Framework also bears a productive relationship to the current industrial standards landscape.
+
+The NIST AI Risk Management Framework \citep{ref7} and ISO/IEC 42001 \citep{ref8} provide governance and risk management structures for AI systems but do not prescribe an architectural model for how AI, deterministic, and human components should be separated within a system.
+
+The BX3 Framework is best understood as a complementary architectural layer beneath these governance frameworks — providing the structural foundation that makes governance possible in practice.
+
+This reading is directly supported by Koch \citep{ref13}, who argues that standards such as ISO/IEC 42001 and the NIST AI RMF are highly relevant to agentic AI but do not by themselves yield implementable runtime guardrails, and that requirements must instead be distributed across governance objectives, design-time constraints, runtime mediation, and assurance feedback layers.
+
+The BX3 Framework provides one candidate architecture for that distribution: the Purpose Layer carries governance objectives, the Bounds Engine operates under design-time constraints, the Fact Layer provides runtime enforcement, and the Forensic Ledger provides assurance feedback.
+
+The most closely related contemporary work on escalation and oversight is Tiered Agentic Oversight (TAO) \citep{ref12}, a hierarchical multi-agent system for healthcare safety that routes tasks through specialized agent tiers based on complexity and escalates unresolved cases upward through the hierarchy.
+
+BX3 differs from TAO in a foundational architectural respect.
+
+TAO organizes oversight primarily as inter-agent supervision, with human involvement available as the highest escalation pathway in selected high-risk scenarios.
+
+BX3, by contrast, treats escalation to the human Purpose Layer as an unconditional architectural requirement for every unresolved exception state — not a domain-specific option or supervisory extension.
+
+In BX3, accountability is never stranded within machine-only recursion.
+
+The Bailout Protocol guarantees that any unresolvable exception propagates upward through the system hierarchy, bypassing all machine actors, until it terminates at the human accountability anchor.
+
+Recent work on production-grade agentic architecture further corroborates the need for the safety properties BX3 formalizes.
+
+Alenezi \citep{ref14} argues that agentic systems must be designed to fail safely, with key architectural patterns including clear escalation paths to human oversight, fallback deterministic workflows, and sandbox-first execution before commitment.
+
+BX3 incorporates these concerns as named, role-bounded architectural pillars — the Bailout Protocol, the Fact Layer, and the Sandbox Gate respectively — rather than as implementation heuristics.
+
+The critical distinction for the Sandbox Gate specifically: BX3 requires that proposed interventions be evaluated in a digital twin and cleared through a role-bounded gate tied to Root Tunneling authority before the Fact Layer is unlocked.
+
+This is a narrower and more precisely specified requirement than generic sandbox-first execution.
+
+Acomplementaryformal-verificationapproachisdemonstratedbythe Lean-Agent Protocol \citep{ref15}, which permits agentic execution only when a proof kernel can verify that a proposed action satisfies precompiled regulatory axioms, functioning as a deterministic gateway in financial systems.
+
+BX3 makes a broader architectural claim: wherever execution must remain non-probabilistic,aprotecteddeterministiclayerisarchitecturallyindispensableregardlessof implementation method.
+
+Formal proof kernels and physically isolated deterministic subsystems can therefore be understood as different implementation strategies for the same deeper requirement — that certain classes of action must cross a verifiable boundary from probabilistic proposal into deterministic execution.
+
+Russell’s foundational work on AI control \citep{ref9} and Leveson’ssystemssafetyengineering\citep{ref10}providefurthergroundingforthesafety-critical arguments made in Sections 5 and 6.
+
+Brooks’ seminal observation that there is no single silver bullet in software engineering \citep{ref11} anticipates the central claim of this paper — that AI is not a universal solution but one bounded layer in a properly structured system.
+
+\section{Implications}
+Implications \subsection{For Engineers and Architects} The primary practical implication of the BX3 Framework is a concrete design heuristic: before deploying any AI component in a system, explicitly define which layer it belongs to, what constraints the Fact Layer places on it, and what human oversight mechanisms govern it.
+
+Resist the tendency to use AI where deterministic systems are sufficient.
+
+Prefer the simplest system that solves the problem.
+
+The BX3 Framework gives engineers a vocabulary and a structure for making these decisions explicitly rather than by default.
+
+\subsection{For Executives and Organizations} AI adoption strategies that frame AI as a replacement for existing systems are likely to underestimate complexity, overestimate reliability, and underestimate regulatory risk.
+
+A moreproductiveframing—onethe BX3Frameworkmakesconcrete—is AIasanaccelerant for building, improving, and extending deterministic systems, preserving reliability while gaining capability.
+
+\subsection{For Regulators and Policymakers} The BX3Frameworkprovidesaprincipledarchitecturalbasisfor AIgovernance.
+
+Regulations need not attempt to certify AI systems in isolation — a potentially intractable problem — but can instead focus on the Purpose Layer accountability anchor and the Fact Layer enforcement constraints within which AI agents must operate.
+
+This reframes AI governance as an architectural specification problem rather than a purely behavioral one.
+
+\subsection{For Researchers} The convergence of the BX3 Framework with biological cognitive architecture, legal system design, and organizational theory suggests productive cross-disciplinary research directions.
+
+Understanding why layered Purpose-Bounds-Fact architectures appear robust across widely different domains — and what formal properties such architectures possess — represents a significant open research agenda.
+
+\section{Limitations}
+Limitations As a conceptual framework paper, the BX3 Framework carries limitations that should be stated plainly.
+
+First, the three-layer boundary in practice is not always clean.
+
+Real systems frequently involve actors that span multiple layers — a human who both sets intent and executes adaptively, or an AI system that both reasons and enforces constraints.
+
+The BX3 Framework is a normativemodel—describinghowsystemsshould bestructured—ratherthanadescriptive taxonomy of all existing systems.
+
+Boundary cases require judgment in application.
+
+Second, the actor-agnostic property of the framework introduces a qualification problem: determining whether a given actor genuinely satisfies a layer’s functional requirements is itself a non-trivial judgment.
+
+The framework states that an AI system may occupy the Purpose Layer if it can genuinely satisfy accountability requirements — but it does not yet provide a formal test for when that threshold is met.
+
+Developing such qualification criteria is a critical direction for the BX3 Protocol, addressed in Study 5 of Section 11.
+
+Third, the cross-domain analogies presented in Section 6 are illustrative rather than rigorouslydemonstrated.
+
+Theclaimthatthe BX3Frameworkdescribesauniversalstructural pattern is a hypothesis, not a proven theorem.
+
+The planned empirical studies in Section 11 are designed specifically to test this claim.
+
+Fourth, the framework is silent on how the three layers should be sized relative to one another in any given system.
+
+The appropriate balance between Bounds Engine capability and Fact Layer constraint will vary significantly by domain, risk profile, and regulatory context.
+
+Providing domain-specific sizing guidance is a further research direction.
+
+These limitations do not undermine the central contribution — the identification of three distinct functional roles defined by their required properties, the specification of five implementation pillars, and the argument that their explicit separation produces more reliable, governable, and certifiable systems.
+
+Targeted searches of ar Xiv, academic databases, and technicalliteraturefoundnodirectmatchforthe BX3terminologyoritsspecificcombination of claims; this supports originality but is not a legal non-infringement determination.
+
+These limitations define the boundaries within which the framework should currently be applied and the directions in which it must be extended.
+
+\section{Future Research Agenda}
+Future Research Agenda This paper is explicitly positioned as a conceptual framework and position paper.
+
+It proposes the BX3 Framework as a unifying architectural model and argues for its validity through cross-domain analogy and synthesis of established theory.
+
+It does not yet provide empirical validation.
+
+That validation is the research agenda this paper opens — and it is one the author is actively pursuing.
+
+\subsection{Planned Empirical Studies} Study 1: Complexity Reduction in BX3-Structured Systems A comparative analysis of software systems built with explicit BX3 layer separation versus thosewithout,measuringlinesofcode,defectrates,time-to-debug,andarchitecturaldecision overhead.
+
+We hypothesize that BX3-structured systems will demonstrate measurably lower complexity scores across standard software metrics.
+
+Study 2: Case Studies in Safety-Critical Domains In-depth documentation of three to five real-world deployments — in industrial automation, medical devices, and autonomous vehicles — where BX3 Framework principles were applied explicitly or implicitly.
+
+Outcomes measured will include system reliability, regulatory approval timelines, and incident rates.
+
+The San Luis Valley precision agriculture system (field trials planned June 2026) is designated as Study 2’s first case.
+
+Study 3: Cross-Domain Validation Survey Structured interviews with engineers, architects, legal professionals, and medical practitioners to assess whether the three-layer pattern — Purpose, Bounds Engine, Fact — is recognized as descriptive of existing best practices, and where breakdowns in layer separation correlate with system failures or governance incidents.
+
+Study 4: Bounds Engine-Accelerated Fact Layer Development A controlled study measuring development velocity, defect rates, and auditability of Fact Layer systems built with Bounds Engine assistance versus traditional methods — testing the core practical claim of the BX3 Framework: that the Bounds Engine is most powerful as a builder of Fact Layer systems rather than a replacement for them.
+
+Study 5: Formal Properties of BX3 Architectures A theoretical computer science investigation into whether BX3-structured systems admit formal verification properties not available to undifferentiated AI systems — specifically, whether Loop Isolation and the Bailout Protocol together constitute a provable upstream accountability guarantee under all failure modes.
+
+Study 6: BX3 Protocol Development The BX3 Framework as presented here is a conceptual model.
+
+A companion engineering protocol — the BX3 Protocol — is in preparation, providing normative, implementable specifications for layer definition, boundary enforcement, Forensic Ledger standards, Bailout Protocol implementation, and BX3 compliance verification.
+
+The BX3 Protocol will be the engineering standard that the BX3 Framework makes theoretically necessary.
+
+\subsection{An Invitation} This research agenda is being developed independently by the author.
+
+Findings from the above studies will be published as they are completed.
+
+Researchers, practitioners, and organizations interested in contributing to or following this research agenda are invited to engage.
+
+We will be back — with the evidence.
+
+The question of how humans, AI, and traditional software should relate to one another is not merely a technical question.
+
+It is an architectural, organizational, ethical, and regulatory question with significant and growing practical consequences.
+
+The BX3 Framework proposes a principled and universal answer.
+
+It organizes any complexsystemintothreefunctionallayers—Purpose, Bounds Engine, and Fact—eachdefined by the properties it must maintain rather than by the type of actor that occupies it.
+
+Any actor capable of satisfying a layer’s functional requirements may occupy that layer: human, AI, mechanical, institutional, or hybrid.
+
+What cannot vary are the properties themselves — accountability in the Purpose Layer, boundedness in the Bounds Engine, and determinism in the Fact Layer.
+
+This actor-agnostic definition is the framework’s most important contribution beyond its predecessors.
+
+It makes the BX3 Framework applicable to the full range of systems that exist and the full range of systems that are coming: human-only organizations, fully automated pipelines, multi-agent AI architectures, and hybrid compositions that do not yet have names.
+
+In each case, the framework asks the same three questions: Is there an accountable layer that sets purpose and bears responsibility?
+
+Is there a bounded layer that reasons and proposes withindefinedconstraints?
+
+Isthereadeterministiclayerthatenforces, validates, andaudits?
+
+If any layer is missing or its properties are not maintained, the system is architecturally incomplete — regardless of how capable its components are individually.
+
+The BX3 Framework is not entirely new.
+
+Its pattern is visible in legal systems, medical practice, autonomous vehicles, biological cognition, and organizational design — wherever reliable systems have been built to handle a world that is simultaneously rule-bound and unpredictable.
+
+What is new is the urgency of making the pattern explicit, naming its layers by function rather than actor, and building from it deliberately — at a moment when the temptation to collapse these roles, and the cost of doing so, have never been higher.
+
+\section{Conclusion}
+Acknowledgments The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across control theory, sociotechnical systems, and computer science provides the shoulders on which this synthesis stands.
 
 \section*{Acknowledgments}
-
-The author acknowledges foundational contributions from the broader AI safety, systems engineering, and sociotechnical systems research communities. The synthesis presented here is built entirely on the shoulders of those who came before, and this unified framework does not diminish their individual contributions; it is intended to honor them.
+The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across control theory, sociotechnical systems, and computer science provides the shoulders on which this synthesis stands.
 
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
-
 \end{document}
