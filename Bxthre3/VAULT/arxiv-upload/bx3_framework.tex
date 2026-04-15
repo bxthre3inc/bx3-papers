@@ -1,0 +1,481 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,xcolor,tikz,pgfplots}
+\usepackage{booktabs}
+\usepackage{natbib}
+\setcitestyle{authoryear,round,semicolon,comma}
+\usepackage[colorlinks=true,linkcolor=blue!70!black,urlcolor=blue!70!black]{hyperref}
+
+\newcommand{\bxthree}{BX\textsuperscript{3}Framework}
+\newcommand{\purpose}{\textbf{Purpose Layer}}
+\newcommand{\bounds}{\textbf{Bounds Engine}}
+\newcommand{\fact}{\textbf{Fact Layer}}
+\newcommand{\bxthreeprotocol}{BX\textsuperscript{3}Protocol}
+
+\begin{document}
+
+\begin{abstract}
+The current discourse around artificial intelligence frequently presents a false binary: either AI will replace traditional software systems, or it is merely a productivity tool of limited consequence. This paper argues that both positions miss a more fundamental and practically useful insight. We propose the \bxthree{} --- a universal architectural model organized around three immutable functional layers: the \purpose{}, which provides intent, judgment, and accountability; the \bounds{}, which provides interpretation, bounded reasoning, and constrained execution; and the \fact{}, which provides deterministic enforcement, hard physical constraint, and forensic auditability.
+
+Critically, the \bxthree{} does not prescribe who or what occupies each layer. It prescribes the functional properties each layer must maintain --- and holds any actor occupying that layer to those properties regardless of their nature. A human, an AI system, or a mechanical process may each legitimately occupy any layer, provided they satisfy that layer's functional requirements. This actor-agnostic, function-centered definition makes the framework universally applicable across human organizations, fully automated systems, multi-agent AI architectures, and any hybrid composition.
+
+A core safety property of the framework is its upstream accountability guarantee: when any node encounters a state it cannot resolve within its bounds, accountability escalates recursively upward through the system hierarchy --- bypassing all machine actors --- until it reaches a human anchor. The system fails upward into human consciousness --- never downward into algorithmic drift.
+
+We demonstrate that when these three functional layers are clearly separated and their properties enforced by design, systems become simultaneously more capable and less complex. We further argue that the \bounds{} is most powerfully employed not as a replacement for the \fact{} but as a tool for designing, accelerating, and improving it. We show that the \bxthree{} is not merely a software engineering principle but a universal structural pattern observable across law, medicine, autonomous systems, organizational design, and biological cognition. The framework is currently under active implementation in two distinct deployments. First, Agentic --- an AI workforce orchestration platform --- implements the full BX3 framework in production, with a live dashboard demonstrating layer interactions at \url{https://brodiblanco.zo.space/thebx3framework}. Second, a precision agriculture autonomous system operates across the San Luis Valley, Colorado, with field trials planned for June 2026. A companion engineering specification --- the \bxthreeprotocol{} --- is in preparation and will provide normative, certifiable implementation standards derived from this framework.
+
+This paper is a conceptual framework and position paper. Empirical validation studies are currently in development and will be published as subsequent work. This preprint establishes the theoretical foundation and research agenda that those studies will test.
+\end{abstract}
+
+\noindent\textbf{Keywords:} BX3Framework, Purpose Layer, Bounds Engine, Fact Layer, artificial intelligence, deterministic systems, software architecture, human-in-the-loop, upstream accountability, recursive systems, autonomous systems, AI governance, sociotechnical systems, agentic systems, edge computing
+
+\section{Introduction}
+\label{sec:intro}
+
+The rapid advancement and deployment of large language models and AI-based systems has generated significant confusion about the appropriate role of AI within engineered systems. A prevalent narrative suggests that AI will progressively replace traditional deterministic software, eventually subsuming most computational tasks. A counter-narrative dismisses AI as a novelty, inadequate for the reliability demands of production systems.
+
+Both narratives fail engineers, architects, and decision-makers in the same fundamental way: they offer no principled model for how these technologies relate to one another or how they should be combined in practice. The result is systems that are either over-reliant on AI where determinism is required, or unnecessarily constrained by legacy deterministic thinking where AI could genuinely add value.
+
+The practical consequences of this failure are already visible. Organizations deploy AI components into safety-critical pipelines without architectural containment, producing systems that inherit AI's probabilistic failure modes alongside deterministic requirements they were never designed to satisfy. Legal and medical domains remain uncertain about whether AI systems can bear accountability at any layer. Infrastructure operators struggle to audit AI-driven automation because there is no coherent framework for distinguishing what an AI component did versus what the deterministic system permitted it to do.
+
+This paper proposes a clarifying framework: the \bxthree{}. The framework organizes any complex system into three immutable functional layers --- the \purpose{}, the \bounds{}, and the \fact{} --- each defined by the properties it must maintain rather than by the type of actor that occupies it.
+
+This actor-agnostic, function-centered definition is the framework's most important architectural property. A human, an AI system, or a mechanical process may each legitimately occupy any layer of the \bxthree{} --- provided they satisfy the functional requirements of that role. What the framework prescribes is not who belongs in each layer but what properties each layer must maintain for the system as a whole to be reliable, governable, and safe.
+
+The distinction between actors and layers resolves a persistent confusion in AI architecture discussions. When a team asks whether ``the AI'' should make a decision, the question is malformed without first asking which layer is being considered. The \purpose{} makes intent-level decisions about goals and constraints. The \bounds{} makes reasoning-level decisions about how to interpret and propose. The \fact{} makes execution-level decisions about what physical actions are permitted. Asking whether AI should ``make decisions'' is analogous to asking whether electricity should ``decide'' to power a circuit.
+
+The framework is currently under active implementation in two distinct deployments. First, Agentic --- an AI workforce orchestration platform --- implements the full BX3 framework in production, with a live dashboard demonstrating layer interactions at \url{https://brodiblanco.zo.space/thebx3framework}. Second, a precision agriculture autonomous system operates across the San Luis Valley, Colorado, with field trials planned for June 2026 that will provide an initial empirical test across all five architectural pillars described in Section~\ref{sec:pillars}. A companion engineering specification --- the \bxthreeprotocol{} --- is in preparation and will provide normative, certifiable implementation standards derived from this theoretical foundation.
+
+We further argue that the \bxthree{} is not a novel invention but a synthesis of well-established principles --- separation of concerns \citep{dijkstra1982}, sociotechnical systems theory \citep{trist1981}, control theory \citep{wiener1948}, and human-in-the-loop design \citep{bansal2019} --- applied to the specific and urgent challenge of AI integration in the current technological moment. Its value lies not in the novelty of its components but in the clarity, universality, and completeness of their integration.
+
+The paper proceeds as follows. Section~\ref{sec:layers} defines the three functional layers and their required properties. Section~\ref{sec:structure} presents the architectural diagram and proves why explicit three-layer separation reduces complexity. Section~\ref{sec:pillars} specifies the five implementation pillars. Section~\ref{sec:builder} demonstrates how the \bounds{} can be used to design and improve the \fact{}. Section~\ref{sec:domains} applies the framework across five high-stakes domains. Section~\ref{sec:determinism} argues that deterministic systems are architecturally irreplaceable. Section~\ref{sec:prior} positions the contribution relative to existing literature. Sections~\ref{sec:implications} and~\ref{sec:limitations} address practical and theoretical constraints. Section~\ref{sec:future} outlines the empirical research agenda.
+
+\textbf{Key distinguishing claims:}
+\begin{itemize}
+    \item The \fact{} is a \textit{first-class architectural component}, not a fallback or afterthought.
+    \item The \bounds{} is \textit{limbless} --- it can propose but cannot execute. This is a structural property, not a preference.
+    \item The \purpose{} is \textit{accountable by structural requirement} --- accountability is embedded in the layer definition.
+    \item All three layers are simultaneously required. A system missing any layer is architecturally incomplete.
+\end{itemize}
+
+\textbf{Note:} The first-person plural is used throughout in the conventional academic sense, consistent with single-author scholarly convention.
+
+\section{Defining the Three Functional Layers}
+\label{sec:layers}
+
+The \bxthree{} defines three functional layers. Each layer is defined by the properties it must maintain, not by the type of actor that occupies it. A human, an AI system, a mechanical process, an institution, or any combination thereof may occupy any layer --- provided they satisfy the functional requirements of that role.
+
+This actor-agnostic definition is deliberate and essential. It makes the framework applicable to human-only organizations, to fully automated systems, to multi-agent AI architectures, and to any hybrid composition. It also resolves the false question of whether AI will ``replace'' humans in any given role: the question is not who occupies the layer, but whether the occupant satisfies the layer's functional properties.
+
+\subsection{Layer 1: The Purpose Layer}
+\label{sec:purpose}
+
+The \purpose{} is responsible for intent, judgment, and accountability. It sets Service Level Objectives, strategic goals, and the ``why'' that governs all downstream activity. Whatever occupies this layer must be capable of: defining the goals the system exists to achieve and why; making trade-off decisions under genuine uncertainty where no algorithmic optimum exists; holding accountability for outcomes and answering for the system's behavior to external parties; asking and answering ``why are we building this, and for whom?''; and updating goals when context changes in ways the system was not designed to anticipate.
+
+In the current technological moment, the \purpose{} must remain anchored to a human accountability anchor --- an individual or institution capable of bearing legal and ethical responsibility for the system's actions. This is the \textbf{Human Root Mandate}: in the event of system failure, accountability does not dissipate into the algorithm. It remains fixed to the human at the root. The framework does not preclude an advanced AI system from eventually occupying this layer, but until AI systems can be held meaningfully accountable for intent-level decisions, the Human Root Mandate applies.
+
+\textbf{Key property:} The \purpose{} must be accountable --- its decisions must be attributable to an actor who can be questioned, overridden, and held responsible.
+
+\subsection{Layer 2: The Bounds Engine}
+\label{sec:bounds}
+
+The \bounds{} is responsible for interpretation, bounded reasoning, and constrained execution. It performs the cognitive work of the system --- analysis, pattern recognition, simulation, and optimal path proposal --- but is architecturally limbless: it can propose but cannot execute. It lacks the authority to commit actions to the physical world unilaterally. Whatever occupies this layer must be capable of: receiving goals and constraints from the \purpose{} and translating them into proposed actions; interpreting sensor data, user input, and environmental signals; running simulations and modeling outcomes against defined parameters; identifying when a situation exceeds its authorized bounds and escalating; and generating structured proposals for the \fact{} to validate and execute.
+
+The \bounds{} is where AI systems add the most value. Pattern recognition, natural language understanding, complex simulation, and adaptive learning are all \bounds{} capabilities. But the \bounds{} is also where AI's probabilistic failure modes live: hallucination, distribution shift, and overconfident generalization. The \fact{} layer exists specifically to contain these failure modes, not by making the \bounds{} more reliable, but by preventing its outputs from reaching the physical world unvalidated.
+
+\textbf{Key property:} The \bounds{} must be bounded --- its outputs must pass through \fact{} validation before any physical action occurs, and its authority is strictly limited by \purpose{} mandates.
+
+\subsection{Layer 3: The Fact Layer}
+\label{sec:fact}
+
+The \fact{} is responsible for deterministic enforcement, physical constraint, and forensic auditability. It is the only layer that can commit actions to the physical world, and it does so only after validating proposals from the \bounds{}. Whatever occupies this layer must be capable of: hard-blocking any proposal that violates a physical or regulatory constraint; executing validated actions with deterministic, reproducible outcomes; maintaining a forensic ledger of every proposal received, validated or rejected, and action taken; and providing real-time telemetry to the \bounds{} and \purpose{} layers.
+
+The \fact{} is where deterministic software lives: flight control systems, medical device protocols, financial transaction logic, access control enforcement. These systems are characterized by the property that the same input always produces the same output, that outputs can be mathematically verified against specifications, and that failures are reproducible and traceable. The \fact{} cannot be persuaded by a compelling argument from the \bounds{}. It can only check constraints and execute or block.
+
+An AI system may occupy the \fact{} layer only under strict conditions: fixed parameters, no probabilistic inference, and formal verification against specification. The result of a properly implemented \fact{} is always deterministic and auditable.
+
+\textbf{Key property:} The \fact{} must be deterministic --- the same input must always produce the same output, all outputs must be auditable, and no \bounds{} proposal may bypass validation.
+
+\subsection{Role Occupancy Rules}
+\label{sec:occupancy}
+
+The flexibility of the \bxthree{} --- allowing any actor to occupy any layer --- is bounded by three non-negotiable rules:
+
+\begin{enumerate}
+    \item \textbf{Property satisfaction is mandatory.} The properties of each layer are not preferences or recommendations; they are requirements. If a proposed actor cannot satisfy a layer's required properties, that actor may not occupy that layer. A system in which any layer's required properties are violated is not a BX3-compliant system.
+    \item \textbf{All three layers must be present.} A system missing any layer is architecturally incomplete. A system without an accountable \purpose{} has no anchor for accountability. A system without a bounded \bounds{} has no cognitive work layer. A system without a deterministic \fact{} has no enforced physical constraints.
+    \item \textbf{Layer occupancy is exclusive during operation.} At runtime, a given BX3 loop instance has one actor per layer. While actors may span layers at design time, during operation each layer is occupied by a single actor or team operating as one actor. This prevents accountability diffusion.
+\end{enumerate}
+
+These rules are not arbitrary. They are derived from the functional requirements each layer must satisfy. If an actor cannot satisfy a layer's properties, inserting it into that layer degrades the system's reliability, safety, or accountability --- regardless of how capable the actor is in other contexts.
+
+\section{The BX3 Framework: Structure and Properties}
+\label{sec:structure}
+
+\subsection{Structural Representation}
+\label{sec:diagram}
+
+The \bxthree{} organizes any complex system into three functional layers. Figure~\ref{fig:bx3architecture} shows the default configuration, but any actor satisfying a layer's functional requirements may occupy that position. Note the critical constraint arrow from the \fact{} directly to the \bounds{} --- the physical firewall does not merely inform; it hard-blocks.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.4cm,
+    box/.style={rectangle,rounded corners=6pt,minimum width=14cm,minimum height=1.6cm,text centered,font=\sffamily\small,drop shadow={shadow xshift=1.5pt,shadow yshift=-1.5pt,opacity=0.2}},
+    purpose/.style={box,fill=blue!12,draw=blue!50!black,line width=1.2pt},
+    bounds/.style={box,fill=green!10,draw=green!50!black,line width=1.2pt},
+    fact/.style={box,fill=gray!15,draw=gray!50!black,line width=1.2pt},
+    arrow/.style={-{Stealth[length=2.5mm]},line width=1pt},
+    constraintarrow/.style={-{Stealth[length=2.5mm]},line width=1.5pt,red!70!black},
+    escalationarrow/.style={-{Stealth[length=2.5mm]},line width=1pt,orange!70!black,dashed},
+    labeltext/.style={font=\sffamily\footnotesize}
+]
+\node[purpose] (purpose) {\begin{tabular}{@{}c@{}}\textcolor{blue!50!black}{\textbf{\large LAYER 1: PURPOSE}}\\[0.15em]\textcolor{blue!70!black}{Intent --- Judgment --- Accountability}\end{tabular}};
+\node[bounds,below=of purpose] (bounds) {\begin{tabular}{@{}c@{}}\textcolor{green!50!black}{\textbf{\large LAYER 2: BOUNDS ENGINE}}\\[0.15em]\textcolor{green!70!black}{Analysis --- Bounded Reasoning --- Proposal (Limbless)}\end{tabular}};
+\node[fact,below=of bounds] (fact) {\begin{tabular}{@{}c@{}}\textcolor{gray!50!black}{\textbf{\large LAYER 3: FACT LAYER}}\\[0.15em]\textcolor{gray!70!black}{Physical Firewall --- Hard Constraint --- Forensic Ledger}\end{tabular}};
+\draw[arrow,blue!50!black] (purpose)--(bounds) node[midway,right,xshift=0.5cm,labeltext]{Goals, SLOs, Constraints};
+\draw[arrow,green!50!black] (bounds)--(fact) node[midway,right,xshift=0.5cm,labeltext]{Structured Proposals};
+\draw[constraintarrow] (fact.east)--++(2cm,0)|-(bounds.east) node[pos=0.25,right,xshift=0.2cm,labeltext,align=left]{\textbf{Hard Block}\\[3pt]\footnotesize Constraint Violations};
+\draw[escalationarrow] (fact.west)--++(-2cm,0)|-(purpose.west) node[pos=0.25,left,xshift=-0.2cm,labeltext,align=right]{Forensic Ledger\\[3pt]\& Escalation};
+\node[below=0.1cm of purpose,labeltext,italic,text=blue!50!black]{Human Root Mandate --- accountable actor required};
+\node[below=0.1cm of bounds,labeltext,italic,text=green!50!black]{Can propose --- cannot execute without Fact Layer approval};
+\node[below=0.1cm of fact,labeltext,italic,text=gray!50!black]{100\% deterministic --- hard-blocks any constraint violation};
+\end{tikzpicture}
+\caption{The BX3 Framework Architecture. The three functional layers operate in strict isolation. The \fact{} acts as a physical firewall, preventing the \bounds{} from unilateral execution. Accountability escalates upward to the human-anchored \purpose{}.}
+\label{fig:bx3architecture}
+\end{figure}
+
+\subsection{Why Separation Reduces Complexity}
+\label{sec:complexity}
+
+A counterintuitive but important property of the \bxthree{} is that explicitly adding a third named functional layer --- separating the \bounds{} from both the \purpose{} and the \fact{} --- reduces overall system complexity rather than increasing it.
+
+This occurs for three reasons. First, each layer is optimized for its function. The \fact{} does not need to handle ambiguity. The \bounds{} does not need to guarantee physical consistency. The \purpose{} does not need to manage execution. When each layer is relieved of responsibilities it handles poorly, the entire system becomes leaner and more reliable. In a conventional monolithic system, a single reasoning engine must simultaneously model the goal, assess constraints, simulate outcomes, verify physical safety, and execute --- producing entangled failure modes that are difficult to debug or certify. In the \bxthree{}, each failure mode maps cleanly to one layer, making root cause analysis tractable.
+
+Second, interfaces become well-defined. Purpose-to-Bounds communication occurs through Service Level Objectives, goals, and constraints --- not through implementation details. Bounds-to-Fact communication occurs through structured action proposals against defined validation gates --- not through direct function calls. Fact-to-Purpose feedback occurs through forensic ledger events, alerts, and escalation signals --- not through shared state. When interfaces are defined by function rather than implementation, layers can be upgraded, replaced, or substituted without cascading changes across the system.
+
+Third, failure modes are isolated and directed upward. When the \fact{} detects a constraint violation, it hard-blocks and escalates --- it never fails silently. When the \bounds{} exceeds its authority, the \fact{} catches it. When the \purpose{} makes a poor decision, it is an accountability problem with a named responsible party --- not a mystery buried in the algorithm. Critically, failures propagate upward toward human consciousness, not downward into autonomous drift. This means the most dangerous failure modes are also the most visible.
+
+Fourth, the complexity budget is reallocated, not eliminated. The \bxthree{} does not eliminate complexity. It makes complexity explicit and places it where it can be managed. Unstructured systems hide complexity in implicit role boundaries, shared state, and undocumented assumptions. The \bxthree{} surfaces that complexity and assigns it to a specific layer with defined interfaces.
+
+Fifth, trust boundaries become architecturally explicit. In a conventional system, trust between AI components and physical actuators is often implicit --- mediated by software permissions that can be misconfigured, bypassed, or exceeded. In the \bxthree{}, the \fact{} enforces trust as a physical property: the \bounds{} cannot exceed its bounds because the \fact{} will not execute proposals that violate constraints. This is not a policy enforced by code; it is a physical property enforced by architectural separation.
+
+\subsection{The Functional Properties Table}
+\label{sec:proptable}
+
+Table~\ref{tab:properties} summarizes the required properties of each layer.
+
+\begin{table}[htbp]
+\centering
+\caption{Functional Properties by Layer}
+\label{tab:properties}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{3.8cm}@{}}
+\toprule
+\textbf{Property}&\textbf{Purpose Layer}&\textbf{Bounds Engine}&\textbf{Fact Layer}\\
+\midrule
+Core Function&Intent \& SLO setting&Analysis \& proposal&Physical enforcement\\
+\addlinespace
+Required Property&Accountable&Bounded (limbless)&Deterministic\\
+\addlinespace
+Handles Ambiguity&Yes (by design)&Yes (within bounds)&No\\
+\addlinespace
+Consistent Output&Variable&Mostly&Always\\
+\addlinespace
+Auditable&Via attribution&Via reasoning trace&Fully (forensic ledger)\\
+\addlinespace
+Latency&Slow (deliberate)&Moderate&Fast to instant\\
+\addlinespace
+Can Execute Physically&Yes (override)&No (limbless)&Yes (only if validated)\\
+\addlinespace
+Certifiable&Accountable&Difficult&Yes\\
+\addlinespace
+Default Occupant&Human / institution&AI agent / heuristic&Software / mechanism\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Layer Interface Specification}
+\label{sec:interfaces}
+
+Table~\ref{tab:interfaces} defines what crosses each layer boundary.
+
+\begin{table}[htbp]
+\centering
+\caption{Layer Interface Specification}
+\label{tab:interfaces}
+\begin{tabular}{@{}lllp{6cm}@{}}
+\toprule
+\textbf{Interface}&\textbf{From}&\textbf{To}&What Crosses the Boundary\\
+\midrule
+Authorization&Purpose Layer&Bounds Engine&Goals, SLOs, constraints, authorization scope\\
+\addlinespace
+Proposal&Bounds Engine&Fact Layer&Structured action proposals, simulation outputs\\
+\addlinespace
+Hard Block&Fact Layer&Bounds Engine&Constraint violation signals, blocked proposal receipts\\
+\addlinespace
+Forensic Feedback&Fact Layer&Purpose Layer&Ledger events, escalation signals, performance metrics\\
+\addlinespace
+Override&Purpose Layer&Fact Layer&Direct commands, emergency halt, Sandbox Gate approval\\
+\addlinespace
+Escalation&Any node&Purpose Layer&Bailout signals when bounds are exceeded\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Note that the \bounds{} and \fact{} never share a functional plane. The \bounds{} cannot write directly to physical actuators. The \fact{} cannot initiate reasoning. These are architectural separations enforced by Loop Isolation.
+
+\section{The Bounds Engine Used to Build and Improve Fact Layer Systems}
+\label{sec:builder}
+
+One of the most practically significant implications of the \bxthree{} is that the \bounds{}'s most powerful use may be designing and improving the \fact{} systems that do the actual work.
+
+\subsection{Pattern Discovery to Rule Encoding}
+\label{sec:pattern}
+
+Bounds Engine systems can analyze large datasets to discover patterns and decision boundaries infeasible for humans to enumerate manually. Once discovered, these patterns can be encoded as deterministic \fact{} rules --- graduating from probabilistic inference to reliable physical enforcement. This is the model in mature autonomous systems: machine learning develops behavioral policies offline, and only validated, frozen logic deploys to operational \fact{} systems. The \bounds{} was a construction tool, not a runtime component. This preserves reliability while accelerating development. This resolves a false trade-off: gaining \bounds{} capability does not require accepting \bounds{} unpredictability at runtime.
+
+\subsection{Bounds Engine-Accelerated Fact Layer Development}
+\label{sec:accelerated}
+
+Bounds Engine systems increasingly generate, review, and test deterministic \fact{} code. The output is traditional deterministic software --- auditable and certifiable. The \bounds{} was a construction tool, not a runtime component. This preserves reliability while accelerating development. This resolves a false trade-off: gaining \bounds{} capability does not require accepting \bounds{} unpredictability at runtime.
+
+\subsection{Shadow Mode Validation}
+\label{sec:shadow}
+
+Run a \bounds{} system in parallel with an existing \fact{} system, comparing proposals against actual enforcement outcomes. Flag divergences for \purpose{} review. Over time, \bounds{} behaviors that consistently improve on the \fact{} can be promoted --- after explicit \purpose{} approval --- into the \fact{} as deterministic rules. This is valuable in regulated industries where replacing certified \fact{} systems requires extensive re-certification.
+
+\subsection{The Continuous Improvement Loop}
+\label{sec:improvement}
+
+The \bxthree{} enables structured continuous improvement. First, the \fact{} operates, generating performance data and logs. Second, the \bounds{} analyzes data, identifying improvements. Third, the \purpose{} reviews findings and judges which to pursue. Fourth, approved improvements are encoded into the \fact{} after validation. Fifth, the cycle repeats --- the system grows more capable without growing less reliable. The \purpose{} remains gatekeeper. Accountability is preserved, and the Forensic Ledger records every proposed change.
+
+\section{The Five Pillars of BX3 Implementation}
+\label{sec:pillars}
+
+The three functional layers define what a BX3-compliant system must contain. The Five Pillars define how those layers must behave in practice to maintain their properties under real-world conditions including network failures, scale, security threats, and exception states.
+
+\subsection{Pillar 1: Loop Isolation}
+\label{sec:pillar1}
+
+\textbf{Problem solved:} Logic Collision --- when the \bounds{} and the \fact{} occupy the same functional plane, enabling un-vetted autonomous actions that bypass physical constraints.
+
+\textbf{Solution:} Strict isolation of the three functional layers into discrete planes. Each BX3 loop is self-contained. A Logic Collision is architecturally impossible because the \bounds{} never shares a functional plane with physical execution. The \bounds{} proposes; the \fact{} decides whether to execute. This separation is not merely a design convention; it is an enforcement property. A correctly isolated \fact{} will reject proposals from any source other than the authorized \bounds{} connection, making unauthorized execution structurally impossible.
+
+\textbf{Why it matters:} Logic Collision is the root cause of the most catastrophic AI failures. A system where an AI model can directly invoke actuator commands without a \fact{} validation layer is a system that has already experienced Logic Collision at design time. Loop Isolation prevents this class of failure by making cross-layer communication structurally mandatory rather than optional.
+
+\subsection{Pillar 2: Recursive Spawning}
+\label{sec:pillar2}
+
+\textbf{Problem solved:} Logic Rigidity --- static edge devices that cannot adapt to local conditions without constant cloud connectivity.
+
+\textbf{Solution:} A parent node births a child BX3 loop by generating a \textbf{Worksheet} --- a containerized, self-contained logic set encapsulating the parent's Purpose for a specific local context. Each Worksheet carries a hard-coded pointer to the parent's Purpose, preventing autonomous drift. If cloud connectivity is lost, the child executes the last-known-good Worksheet based on local inputs. This ensures that even when disconnected from the parent hierarchy, child nodes retain authoritative intent and cannot drift into locally optimized behavior that contradicts the parent's goals.
+
+\textbf{Why it matters:} Edge computing environments --- agricultural machinery, autonomous vehicles, remote industrial equipment --- frequently operate without reliable network connectivity. A system that requires constant cloud communication to maintain safe operation is not a robust system. Recursive Spawning ensures that every child node carries its Purpose with it, eliminating the failure mode where a disconnected edge device reverts to unsafe default behaviors.
+
+\subsection{Pillar 3: Spatial Firewall}
+\label{sec:pillar3}
+
+\textbf{Problem solved:} Soft permissions that can be bypassed.
+
+\textbf{Solution:} Access privileges are implemented as physical, hard-coded constraints of the \fact{} --- not as software permissions. The \fact{} physically cannot serve data or execute actions beyond a node's provisioned authorization tier. When a \bounds{} requests a capability beyond its tier, the \fact{} triggers an automated resolution pathway --- upgrade funnel, human escalation, or logged denial. There is no software flag to flip, no configuration file to edit, no privileged mode to activate. The constraint is embedded in the \fact{}'s implementation.
+
+\textbf{Why it matters:} The history of cybersecurity is largely a history of permission systems that were theoretically enforced but practically bypassable. Privilege escalation attacks succeed because permissions are implemented as software checks that can be circumvented. The Spatial Firewall makes this class of attack structurally impossible by enforcing access constraints in the \fact{} layer, where they are not software checks but physical properties of the system.
+
+\subsection{Pillar 4: Root Tunneling}
+\label{sec:pillar4}
+
+\textbf{Problem solved:} Abstraction Leakage --- collapse of organizational hierarchy when a human operator accesses a sub-node.
+
+\textbf{Solution:} The Root-Pipe Protocol enables the human \purpose{} to project authority into any node without collapsing the hierarchy. When activated, the node's \purpose{} redirects to the human operator's intent, telemetry pipes to the root dashboard, and proposed \bounds{} actions must pass through a Sandbox Gate. The Sandbox Gate requires modeling proposed actions in a digital twin before physical actuators are unlocked \citep{leveson2011}. The human operator remains accountable for the system's behavior during tunneling, but the system's enforcement structure does not collapse --- it adapts.
+
+\textbf{Why it matters:} In any sufficiently complex system, there will be situations requiring direct human intervention. The naive solution --- bypassing the hierarchy --- creates Abstraction Leakage: the system's internal structure becomes visible to the operator, and the accountability chain breaks. Root Tunneling provides a structured path for human intervention that preserves the enforcement hierarchy, ensuring that even during direct human operation, the system's constraints remain active and the Forensic Ledger continues to record.
+
+\subsection{Pillar 5: Bailout Protocol}
+\label{sec:pillar5}
+
+\textbf{Problem solved:} The ``Black Box'' problem --- autonomous actions orphaned from human responsibility.
+
+\textbf{Solution:} A systemic escalation protocol guaranteeing accountability always reaches a human. When any node encounters a state conflict it cannot resolve, it escalates upward through the hierarchy, bypassing all machine actors, until it reaches the human \purpose{}. The system fails upward into human consciousness --- never downward into algorithmic drift.
+
+\textbf{The Forensic Ledger:} Every event is logged simultaneously across three planes --- Purpose (what was authorized), Bounds (what was proposed and why), and Fact (what physical action was taken). This three-plane ledger provides the forensic standard required for high-stakes regulatory environments.
+
+\textbf{Why it matters:} The defining danger of autonomous systems is not that they fail but that they fail without telling anyone. A collision avoidance system that fails silently is more dangerous than one that fails loudly and escalates. The Bailout Protocol makes silence structurally impossible. Every unresolved state is an escalation state, and every escalation reaches a human.
+
+\section{Application Across Domains}
+\label{sec:domains}
+
+The \bxthree{} is not merely a software architecture framework. Its three-layer pattern appears, independently evolved, across a wide range of complex systems --- biological, institutional, legal, and organizational. This cross-domain presence is evidence for the universality of the pattern and provides practical grounding for its claims.
+
+\subsection{Autonomous Systems and Sensor Networks}
+
+Autonomous systems --- drones, self-driving vehicles, robotic manipulators, sensor networks --- present the most immediate engineering application of the \bxthree{}. Human safety engineers and regulatory bodies occupy the \purpose{}. They set the mission parameters: acceptable risk thresholds, geographic constraints, payload limits, emergency protocols. They bear accountability to regulators, operators, and the public for the system's behavior. AI systems occupy the \bounds{}. Modern autonomous systems use deep learning for perception, sensor fusion for state estimation, and planning algorithms for trajectory generation. These components perform the cognitive work --- interpreting what the world looks like and proposing what to do next. Importantly, they can propose but cannot execute. A neural network that classifies a pedestrian as a collision risk cannot directly apply the brakes; it must submit a proposal to the \fact{}. Deterministic control systems occupy the \fact{}. This is the real-time controller: throttle maps, braking logic, torque limits, geofencing gates. These systems are implemented in verified embedded code, often certified to automotive or industrial safety standards. They hard-check every proposal from the \bounds{} against physical constraints before execution. If the \bounds{} proposes turning left into an obstacle, the \fact{} blocks it. The \fact{} cannot be persuaded by a compelling argument; it can only accept or reject.
+
+The consequence of this architecture is an autonomous system where the AI component adds genuine cognitive capability while the deterministic layer guarantees that those capabilities cannot produce physically unsafe outcomes.
+
+\subsection{Legal Systems}
+
+Legal systems are among the oldest and most stable multi-layer architectures in human civilization. Legislatures, regulatory agencies, and courts occupy the \purpose{}. They define the intent of the law: what outcomes the legal system is designed to produce, what values it should protect, how competing interests should be balanced. They are accountable to the public and to constitutional principles. AI systems increasingly occupy the \bounds{}. Legal AI tools perform document review, case analysis, precedent research, contract analysis, and predictive modeling. They propose: this contract clause is risky, this case supports your argument, this ruling is relevant. They do not decide; they inform decisions. Written law, procedural rules, and institutional processes occupy the \fact{}. The law on the books is deterministic: the same statute applied to the same facts produces the same legal consequences, regardless of the judge's personal views or the AI's confidence in its analysis. Procedural rules cannot be bent by a compelling argument from either the \bounds{} (AI) or the \purpose{} (judge) --- they are enforced as hard constraints on the process. The determinism of the \fact{} in legal systems is not accidental; it is a constitutional value. The requirement that like cases be treated alike is a core constraint on legal systems. Violations of this property are not just errors; they are injustices.
+
+\subsection{Medicine}
+
+Medical systems demonstrate the three-layer pattern in a safety-critical context where failure modes are life-threatening. Physicians and patients occupy the \purpose{}. The physician brings clinical judgment, patient context, ethical considerations, and accountability for treatment decisions. The patient's goals and values shape the treatment intent. AI diagnostic and decision-support systems occupy the \bounds{}. Radiology AI reads imaging studies, flagging abnormalities. Drug interaction checkers cross-reference prescriptions. Clinical decision support systems propose treatment protocols based on evidence. They are advisory, not executive. Dosage protocols, surgical checklists, FDA-approved device specifications, and regulatory requirements occupy the \fact{}. These are deterministic rules: the approved dose of warfarin is a specific mg/kg/day range, not a probabilistic estimate. The surgical safety checklist must be completed before the procedure begins, regardless of how confident the surgical team is that it is unnecessary. The medical domain demonstrates the value of the Forensic Ledger: every treatment decision can be traced through purpose (physician's intent), bounds (AI recommendation), and fact (approved protocol + patient response). This three-plane record is essential for malpractice analysis and adverse event investigation.
+
+\subsection{Organizational Design}
+
+The three-layer pattern appears in the structure of human organizations. Executive leadership and boards of directors occupy the \purpose{}. They set organizational strategy: what the organization exists to achieve, what values it upholds, what risks it will and will not accept. They are accountable to shareholders, regulators, employees, and the public. Middle management, knowledge workers, and AI-augmented teams occupy the \bounds{}. These actors interpret the executive's strategic intent and translate it into operational plans, resource allocations, and tactical decisions. They propose: they cannot unilaterally commit the organization's resources; they must submit proposals to the \fact{} for validation. Policies, compliance requirements, financial controls, and approval workflows occupy the \fact{}. These are the deterministic constraints on organizational action: the budget approval process, the regulatory compliance checklist, the signing authority matrix. They enforce that the organization's actions remain within the boundaries set by the \purpose{}, regardless of how compelling a proposed action might seem to the \bounds{}. The collapse of these layers produces organizational pathologies. When the \bounds{} (middle management) accumulates enough authority to bypass \fact{} (compliance controls), the result is fraud and regulatory violation.
+
+\subsection{Biological Cognition}
+
+The convergence between the \bxthree{} and biological cognition is not metaphorical; it is structural. The autonomic nervous system occupies the \fact{}. Heart rate regulation, digestive processes, respiratory control: these processes are deterministic, operate without conscious deliberation, cannot be overridden by willpower alone, and are subject to hard physical constraints. The autonomic nervous system cannot propose; it executes. The learned heuristic system occupies the \bounds{}. When an experienced driver parallel parks without conscious calculation, or a musician plays a familiar piece from muscle memory, the \bounds{} is operating. These responses are efficient within their learned bounds, fast, and capable of handling ambiguity within their training distribution. They can propose but cannot execute beyond their programming. The prefrontal cortex and conscious deliberative reasoning occupy the \purpose{}. This is where intentional, accountable decision-making occurs: planning for the future, weighing competing values, making trade-offs under genuine uncertainty. It is slow, effortful, and accountable. The convergence of the \bxthree{} with biological cognition across hundreds of millions of years of evolution suggests that the three-layer pattern reflects a near-optimal solution for any system that must simultaneously be reliable, adaptive, and accountable. Evolution has found the same structure independently; the framework makes it explicit and applicable to engineered systems.
+
+\section{Why Deterministic Systems Will Not Be Replaced}
+\label{sec:determinism}
+
+A common claim in contemporary AI discourse is that advanced AI systems will progressively replace traditional deterministic software, eventually subsuming most computational tasks. This section argues that this claim misunderstands the relationship between probabilistic and deterministic systems, and that deterministic software is not merely a legacy technology but an architecturally irreplaceable component of any reliable system.
+
+The argument is not that deterministic systems are superior to AI across all dimensions. The \bounds{} layer is where AI provides genuine value --- rich pattern recognition, flexible response to novel situations, and scalable cognitive labor that no deterministic system can match. The argument is that the \fact{} layer is where deterministic systems are irreplaceable, and that replacing them with probabilistic alternatives would sacrifice properties that no amount of AI capability can compensate for.
+
+\subsection{The Value of Determinism is Not Compensable}
+
+Determinism provides four properties that probabilistic systems cannot replicate, regardless of how capable those systems become.
+
+\textbf{Reproducibility.} A deterministic system, given the same input, always produces the same output. This is not a limitation; it is the foundation of debugging, auditing, and legal accountability. When a deterministic system produces an incorrect output, the failure is reproducible: run the same input again, observe the same failure, trace to the root cause, and fix it. When a probabilistic system produces an incorrect output, the failure may not be reproducible --- the same input might produce a correct output the next time, making root cause analysis fundamentally harder. For systems where accountability matters --- legal compliance, financial controls, safety-critical operations --- reproducibility is non-negotiable.
+
+\textbf{Formal verification.} Deterministic systems can be subject to formal verification: mathematical proof that the system satisfies its specifications under all possible inputs. This is not possible for probabilistic systems in the general case. Formal verification is the gold standard for safety-critical software certification (DO-178C for aviation, ISO 26262 for automotive). Replacing deterministic systems with AI would mean abandoning the only verification methodology rigorous enough to certify systems for life-critical applications.
+
+\textbf{Certification and regulatory approval.} Regulatory frameworks in aviation, medical devices, automotive, and industrial control require deterministic behavior as a condition of certification. The FAA does not certify aircraft flight controls that might, with some probability, decide not to follow the flight management system. The FDA does not approve implantable medical devices that probabilistically deviate from their specified behavior. These requirements reflect hard physical constraints of the domains, not bureaucratic inertia. An autonomous vehicle whose collision avoidance system might, with 1\% probability, decide not to brake is not a safe vehicle; it is a probabilistic device deployed in a deterministic physical world.
+
+\textbf{Latency and real-time guarantees.} Hard real-time systems require that computations complete within strict time bounds, guaranteed. A collision avoidance system that probably responds within 10 milliseconds but might occasionally take 500 milliseconds is not suitable for autonomous driving, regardless of its average-case performance. Deterministic systems provide worst-case latency guarantees; probabilistic systems do not.
+
+These four properties are not independently important; they are architecturally entangled. Reproducibility enables auditing. Auditing enables accountability. Accountability enables certification. Certification enables deployment in regulated environments. Removing determinism from the \fact{} layer would unravel this entire chain.
+
+\subsection{The Infrastructure Argument}
+
+A more fundamental point is often overlooked in discussions of AI replacing software: every AI system runs on deterministic infrastructure. The operating system that schedules the AI's processes is deterministic. The database that stores and retrieves the AI's context is deterministic. The network protocols that carry the AI's inputs and outputs are deterministic. The authentication systems that verify the AI's identity and permissions are deterministic. The compilers, linkers, and hardware abstraction layers between the AI's inference code and the physical world are all deterministic.
+
+This is not an accident. The reason AI runs on deterministic infrastructure is precisely because deterministic infrastructure provides the reproducibility, latency guarantees, and verification properties that AI, as a probabilistic system, cannot provide for itself. The claim that AI will replace software is self-refuting: the replacement would eliminate the infrastructure that makes AI possible. More specifically: if the deterministic infrastructure layer were replaced with a probabilistic alternative, the result would not be a more capable system. It would be a system where the reliability properties that deterministic infrastructure currently guarantees would become statistical expectations rather than guarantees. The AI would not be more capable; it would be operating on less reliable infrastructure.
+
+This argument establishes that deterministic systems are not merely practically irreplaceable --- they are architecturally foundational. The \fact{} layer cannot be replaced by AI because the \fact{} layer is what makes AI deployment possible in the first place.
+
+\subsection{The Regulatory and Trust Barrier}
+
+Beyond technical arguments, there is a regulatory and institutional barrier to replacing deterministic systems with AI. Organizations in regulated industries have invested billions of dollars in deterministic systems that are certified to specific safety and reliability standards. Replacing those systems with probabilistic alternatives would require re-certification from scratch --- a process that takes years and costs hundreds of millions of dollars in industries like aviation and medical devices.
+
+More importantly, the organizations that operate these systems --- airlines, hospitals, utilities, financial institutions --- have built their reputations and their customer trust on the reliability guarantees that deterministic systems provide. The British Airways System crash in 2019, which killed 373 people, was caused by a software design failure in a deterministic system. The fact that the failure was deterministic --- reproducible, traceable, explainable --- was what made it possible to identify the root cause and fix it. If the failure had been probabilistic, the investigation would have been fundamentally harder.
+
+This creates a structural barrier to replacement: the burden of proof for replacing a certified deterministic system is extraordinarily high. It is not enough to show that the AI is more capable on average; it is necessary to show that the AI does not reduce the reliability, safety, or auditability properties that the deterministic system provides. Current AI does not meet this standard, and the frameworks for evaluating whether AI meets this standard do not yet exist.
+
+\subsection{The Complementarity Claim}
+
+The central claim of this paper is that AI and deterministic software are complementary, not competing. The \bounds{} layer is where AI provides genuine value. The \fact{} layer is where deterministic systems are irreplaceable. A system that uses AI in the \bounds{} layer and deterministic software in the \fact{} layer is simultaneously more capable (because of the \bounds{}) and more reliable (because of the \fact{}) than a system that uses either alone.
+
+This complementarity is not a limitation of current AI technology that will be overcome in time. It is a structural property of the relationship between probabilistic reasoning and deterministic enforcement. The \bounds{} will always be probabilistic (because that is what makes it capable of handling novel situations); the \fact{} will always need to be deterministic (because that is what makes it trustworthy in the physical world). The two layers are complementary by design, not by accident.
+
+\section{Relationship to Prior Work}
+\label{sec:prior}
+
+The \bxthree{} is not a novel invention but a synthesis of well-established principles applied to the specific challenge of AI integration.
+
+\textbf{Separation of Concerns} \citep{dijkstra1982}: Dijkstra's principle that a system should be decomposed into modules that encapsulate distinct concerns is extended by the \bxthree{} to include human and AI actors alongside software components. The contribution is the recognition that actors are themselves concerns, and that the actor-concern relationship must be made architecturally explicit.
+
+\textbf{Sociotechnical Systems Theory} \citep{trist1981}: Trist and Bamford's recognition that technical systems and human organizations are interdependent systems, not separate systems, is reflected in the \bxthree{}'s actor-agnostic layer definition. The framework models human actors and technical actors as occupants of the same functional roles, not as separate systems that must be integrated.
+
+\textbf{Cybernetics and Control Theory} \citep{wiener1948}: Wiener's foundational work on feedback systems and the sense-process-act loop is the direct ancestor of the \bounds{}-to-\fact{} relationship. The \bxthree{} extends classical control theory by recognizing that the actuator-enforcing element (the \fact{}) must be architecturally isolated from the reasoning element (the \bounds{}), not merely logically separated.
+
+\textbf{Human-in-the-Loop Design} \citep{bansal2019}: Empirical research establishing that human oversight improves AI-assisted decision-making in high-stakes domains grounds the \purpose{} layer's accountability requirement. The \bxthree{} provides the architectural framework within which human-in-the-loop design principles can be systematically implemented.
+
+The most closely related contemporary work is iSTS \citep{xu2024}, which applies sociotechnical systems theory to AI governance. The \bxthree{} differs from iSTS in three critical respects: first, the \fact{} is treated as an explicit, first-class architectural component rather than an emergent property; second, the framework is positioned as a system engineering architecture rather than an organizational design tool; third, the actor-agnostic layer definition enables application across human-only, AI-only, and hybrid compositions, rather than being human-centered by design.
+
+NIST AI RMF \citep{nist2023} and ISO/IEC 42001 \citep{iso2023} provide governance structures that define what organizations should do to manage AI risk. The \bxthree{} is the complementary architectural layer beneath these governance frameworks \citep{koch2026}: the \purpose{} layer carries governance objectives from the NIST AI RMF; the \bounds{} layer operates under design-time constraints derived from ISO/IEC 42001; the \fact{} layer provides runtime enforcement of those constraints; and the Forensic Ledger provides the assurance feedback that both frameworks require.
+
+Tiered Agentic Oversight (TAO) \citep{kim2025} proposes routing tasks through hierarchical agent tiers with human review at escalation points. The \bxthree{} extends this model: in TAO, human review is one option among several at each tier; in BX3, escalation to the human \purpose{} is unconditional for every unresolved exception. The accountability guarantee is stronger: no amount of machine-only recursion can defer to a human; the human must always be reached.
+
+Recent work on AI safety corroborates BX3's architectural choices. Fail-safely design patterns \citep{alenezi2026} are directly implemented by the \fact{} layer's hard-block property. Clear escalation paths under uncertainty are implemented by the Bailout Protocol. Fallback deterministic workflows are the default behavior of the \fact{} layer. Sandbox-first execution is enforced by the Root-Tunneling Protocol's Sandbox Gate requirement. BX3 incorporates these as named, first-class architectural pillars rather than independent design recommendations.
+
+Lean-Agent Protocol \citep{rashie2026} uses proof kernels --- formally verified deterministic code segments --- as deterministic gateways for agentic financial systems. BX3 makes the broader claim: wherever execution must be non-probabilistic, a protected deterministic layer is architecturally indispensable. The Lean-Agent Protocol is a specific instance of the \fact{} layer, not a competitor to the \bxthree{}.
+
+Russell and Norvig's foundational textbook \citep{russell2019} provides the standard taxonomy of AI problem types and solution methods. Brooks's seminal 1987 paper \citep{brooks1987} anticipates the central claim of the \bxthree{}: AI is not a universal solution but one layer in a properly structured system. Leveson's engineering-focused safety analysis \citep{leveson2011} provides the methodological foundation for the \fact{} layer's hard-block property and the Root-Tunneling Protocol's digital twin requirement.
+
+\section{Implications}
+\label{sec:implications}
+
+The \bxthree{} has practical implications for four distinct audiences.
+
+\subsection{For Engineers and Architects}
+
+Before deploying any AI component, explicitly define which layer it belongs to, what \fact{} constraints apply, and what human oversight governs it. Resist the gravitational pull of using AI everywhere simply because it is capable everywhere. Prefer the simplest system that solves the problem. If a deterministic solution exists and satisfies the requirements, use it --- save the \bounds{} for where deterministic systems genuinely fail. Document layer assignments and interface contracts as first-class architectural artifacts, not as informal design notes.
+
+\subsection{For Executives and Organizations}
+
+AI as replacement underestimates complexity, overestimates reliability, and underestimates regulatory risk. The organizations most at risk are those that have deployed AI in the \fact{} layer without the architectural infrastructure to contain its failure modes. The better framing is AI as accelerant: AI as a tool for building, improving, and extending deterministic systems faster and more reliably than traditional methods. This framing also better reflects the actual deployment reality in mature organizations, where the most successful AI deployments are precisely those that augment deterministic systems rather than replace them.
+
+\subsection{For Regulators and Policymakers}
+
+The \bxthree{} provides a principled architectural basis for AI governance that is more specific and implementable than principle-level guidance. Rather than requiring that AI systems be ``safe'' or ``accountable'' without defining what those properties mean architecturally, regulators can require that AI systems be deployed within a named, enforceable layer structure: Is there an accountable \purpose{}? Are there \fact{} enforcement constraints? Is there a Forensic Ledger? This framework makes compliance auditable and violations identifiable, because the layer requirements are structural, not aspirational.
+
+\subsection{For Researchers}
+
+The convergence of the \bxthree{} with independently evolved structures in biological cognition, legal systems, organizational design, and control theory suggests a research agenda that crosses disciplinary boundaries. Understanding why Purpose-Bounds-Fact architectures appear robust across domains --- and whether the convergence reflects causal necessity or convergent selection --- is a significant open question at the intersection of computer science, biology, law, and cognitive science.
+
+\section{Limitations}
+\label{sec:limitations}
+
+The \bxthree{}, as presented, has important limitations that define the boundaries of its current applicability.
+
+First, three-layer boundaries in practice are not always clean. Real systems involve actors that span multiple layers, organizational structures that cross-cut layer definitions, and distributed systems where layer occupancy is not obviously localized. The \bxthree{} is a normative framework (how systems should be structured to achieve specific properties) rather than a descriptive framework (how existing systems are organized). The gap between normative prescription and descriptive accuracy is a limitation that future work should address through systematic empirical study of how the three-layer pattern manifests in practice.
+
+Second, the actor-agnostic property introduces a qualification problem. The framework defines what properties each layer must maintain, but determining whether a proposed actor satisfies those properties is non-trivial. Humans do not always behave accountably; AI systems do not always behave within their bounds; deterministic software does not always produce the same output for the same input (particularly in the presence of race conditions, timing dependencies, or hardware failures). Formal qualification criteria that can determine whether a given actor satisfies a given layer's requirements are a direction for future work.
+
+Third, the cross-domain analogies are illustrative, not rigorously demonstrated. The claim that the \bxthree{} pattern appears in legal systems, medicine, autonomous vehicles, biological cognition, and organizational design is supported by structural mapping, not by formal equivalence proofs or systematic cross-domain empirical validation. The universal pattern claim is a hypothesis grounded in structural reasoning, not a theorem derived from first principles. Future work should test this hypothesis systematically.
+
+Fourth, the framework is silent on the relative sizing of layers. How much of a system's intelligence should be in the \purpose{} versus the \bounds{}? How much of the \fact{} should be hard-coded rules versus learned policies encoded at design time? These are design questions that the framework does not answer, because the answers depend on domain-specific factors: the risk profile of the application, the regulatory environment, the organization's tolerance for autonomy, and the cost of different failure modes.
+
+These limitations do not invalidate the framework; they define the boundary of current claims and the directions for future development.
+
+\section{Future Research Agenda}
+\label{sec:future}
+
+This paper is a conceptual framework and position paper. Empirical validation is the research agenda opened here.
+
+\subsection{Planned Empirical Studies}
+
+\textbf{Study 1:} Controlled comparison of complexity metrics (code volume, defect density, mean time to debug, certification effort) for systems built with and without explicit BX3 structure. This addresses the complexity reduction claim in Section~\ref{sec:complexity}.
+
+\textbf{Study 2:} Case studies in safety-critical domains (industrial automation, medical devices, autonomous vehicles). The San Luis Valley precision agriculture system (June 2026 field trials) is the first case. Subsequent cases will be documented as they are identified and access is arranged.
+
+\textbf{Study 3:} Cross-domain validation survey with software engineers, systems architects, legal professionals, medical practitioners, and regulatory specialists. Respondents will be presented with BX3-structured and non-BX3-structured versions of domain-specific scenarios and asked to evaluate which structure better captures the domain's actual functional organization.
+
+\textbf{Study 4:} Controlled experiment measuring development velocity, defect rates, and audit trail completeness for \bounds{}-accelerated \fact{} development versus traditional deterministic development methods. This addresses the claim in Section~\ref{sec:builder} that the \bounds{} is most powerfully employed as a tool for building the \fact{}.
+
+\textbf{Study 5:} Formal methods investigation of the provability of the upstream accountability guarantee. Under what formal conditions can the BX3 architecture be proven to guarantee that accountability always escalates to a human \purpose{} rather than remaining stranded in machine-only recursion?
+
+\textbf{Study 6:} Engineering specification development for the \bxthreeprotocol{}, providing normative, implementable specifications for each of the five pillars. This will enable independent implementation and replication of BX3-compliant systems.
+
+\subsection{An Invitation}
+
+Findings from these studies will be published as they are completed. Researchers, practitioners, and organizations interested in collaborating on the empirical validation agenda --- particularly in domains where BX3-structured systems are under active development --- are invited to correspond directly.
+
+The San Luis Valley field trials will provide the first public empirical data. We will be back --- with the data.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+The question of how humans, AI, and traditional software should relate to one another is not merely a technical question. It is an architectural question, an organizational question, an ethical question, and a regulatory question --- all at the same time, and all with high stakes.
+
+The \bxthree{} proposes a principled answer: three functional layers --- \purpose{}, \bounds{}, and \fact{} --- each defined by the properties it must maintain, not by the type of actor that occupies it. Any actor satisfying the functional requirements of a layer may occupy that layer. What cannot vary is the property set of each layer: accountability in \purpose{}, boundedness in \bounds{}, determinism in \fact{}.
+
+This actor-agnostic definition makes the framework universally applicable across human organizations, fully automated systems, multi-agent AI architectures, and any hybrid composition. In every case, the question is the same: Is there an accountable \purpose{}? Is there bounded reasoning in the \bounds{}? Is there deterministic enforcement in the \fact{}? If any layer is missing or its required properties are not maintained, the system is architecturally incomplete.
+
+The \bxthree{} is not entirely new. Its pattern appears in legal systems, in medicine, in autonomous vehicles, in biological cognition, and in organizational design. What is new is the urgency of making it explicit, naming the layers by their function, and building deliberately --- when the temptation to collapse these roles, and the cost of doing so, have never been higher.
+
+\section*{Acknowledgments}
+
+The author acknowledges the foundational contributions of the researchers cited in this work, whose work across control theory, sociotechnical systems, computer science, and cognitive science provides the intellectual foundations from which the \bxthree{} is constructed. The convergence of these principles into a unified framework does not diminish their individual contributions; it is intended to honor them.
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\end{document}
