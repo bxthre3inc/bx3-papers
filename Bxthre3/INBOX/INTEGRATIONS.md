@@ -1,178 +1,167 @@
 # BX3 Integration Architecture
-> Last updated: 2026-04-16
+> Last updated: 2026-04-17
 
 ## Overview
 
-BX3 Inc runs on Zo Computer with a multi-platform integration stack. This doc is the canonical reference for how all integrations work, what their state is, and what the intended workflows are.
+BX3 Inc runs on Zo Computer as its primary agentic infrastructure. This
+document is the canonical reference for how all integrations connect and
+what the current state is.
 
 ---
 
-## Active Integrations
+## INTEGRATION STACK (2026-04-17)
 
-### GitHub
-- **Account:** `bxthre3inc` (token: `GITHUB_TOKEN`, scopes: `gist, read:org, repo`)
-- **PAT for Linear API:** `AGENTOS_GITHUBPAT` (used as Linear bearer token)
-- **Webhook secret:** `GITHUB_WEBHOOK_SECRET` (HMAC-SHA256, set in Settings > Advanced)
+### Event-Driven GitHub → Linear (✅ Live)
+- **Webhook endpoint:** `https://brodiblanco.zo.space/api/github-webhook`
+  (HMAC-SHA256 verified via `GITHUB_WEBHOOK_SECRET`)
+- **What it does:** On PR merge → parses `BX3-N` from title/body →
+  closes Linear issue instantly. No polling.
+- **Registered repos:** `agent-os`, `bxthre3`, `agentos-command-center`,
+  `Distributed-Execution-System`, `CREDsWallet`
 
-**Webhook repos** (pull_request events → `https://brodiblanco.zo.space/api/github-webhook`):
-- `bxthre3inc/agent-os`
-- `bxthre3inc/bxthre3`
-- `bxthre3inc/agentos-command-center`
-- `bxthre3inc/Distributed-Execution-System`
-- `bxthre3inc/CREDsWallet`
+### Linear ↔ Google Tasks Bridges (✅ Live — 15-min polling)
+- **Linear → Google Tasks:** Every 15 min. Issues assigned to you
+  (`be904814-6678-4b8d-8e62-c7acd880cef2`) → created as Google Tasks,
+  routed by keyword (Agentic→BX3:Agentic, Irrig8→BX3:Irrig8, etc.)
+- **Google Tasks → Linear:** Every 15 min. Tasks completed in Google Tasks
+  → corresponding Linear issue moved to Done
+- **Weekly Hygiene:** Every Monday 9am MT. Cleans stale Linear issues,
+  archives completed, checks unstarted tasks
+- **Sync state file:** `Bxthre3/INBOX/foundry-queue/linear-gtasks-bridge.json`
 
-**Webhook flow:**
-1. PR merged on any registered repo
-2. GitHub POSTs to `/api/github-webhook`
-3. Route validates HMAC signature against `GITHUB_WEBHOOK_SECRET`
-4. Parses PR title + body for `BX3-N` identifier
-5. If found → direct Linear GraphQL call to close matching issue
-6. Logged to webhook debug log
-
-**Poll agents** (fallback, every 6 hours):
-- Check for missed webhook deliveries (stale open issues with merged PRs)
-
----
-
-### Linear
-- **Account:** `bxthre3inc@gmail.com`
-- **Team ID:** `ffb6f386-e51a-4aa9-a686-e92e3e1c3e81`
-- **User ID:** `be904814-6678-4b8d-8e62-c7acd880cef2`
-- **Completed state ID:** `2ea4e15f-69c5-46d7-97c3-2495a070e796`
-- **Canceled state ID:** `4e8b624e-f04f-4e9e-bf2c-37342eee442e`
-- **API:** Linear GraphQL (`https://api.linear.app/graphql`), auth via `AGENTOS_GITHUBPAT`
-
-**Issue naming convention:** `BX3-N` (e.g., `BX3-5`, `BX3-6`)
-
-**Bridge agents:**
-- `linear-to-gtasks` (15-min poll): Issues assigned to `be904814` → Google Tasks, routed by keyword
-  - "agentic" / "Agentic" → BX3:Agentic
-  - "irrig8" / "Irrig8" / "farm" → BX3:Irrig8
-  - everything else → BX3:Today
-- `gtasks-to-linear` (15-min poll): New Google Tasks in BX3:Today without `[BX3-` prefix → Linear issue
+### Daily Morning Brief (✅ Live — 8am MT)
+- **Agent:** BX3 Daily Brief — sends email to brodiblanco @ 8am MT
+- **Content:** Google Tasks summaries (BX3:Today, BX3:Agentic, BX3:Irrig8,
+  BX3:Projects), open Linear issues, workspace breadcrumbs
+- **Log:** `Bxthre3/INBOX/foundry-queue/google-tasks-log.md`
 
 ---
 
-### Google Tasks
-- **Account:** `getfarmsense@gmail.com`
-- **No outbound webhooks** — polling only
+## GOOGLE TASKS — STRUCTURE
 
-**Task lists (created 2026-04-16):**
-| List | ID | Purpose |
+4 lists created 2026-04-17. Use these IDs in all API calls:
+
+| List | ID | Use For |
 |------|----|---------|
-| BX3:Today | `MjJ3TlRoU3pjT1c4X2pERw` | General / unclassified tasks |
-| BX3:Agentic | `eG9wOUxObnpidmptczNRNA` | Agentic development |
+| BX3:Today | `MjJ3TlRoU3pjT1c4X2pERw` | General tasks, triage |
+| BX3:Agentic | `eG9wOUxObnpidmptczNNA` | Agentic development |
 | BX3:Irrig8 | `bGsxVXFOcmotNnRscWhKMQ` | Irrig8 farming OS |
-| BX3:Projects | `WEozRDdoa1VrUFRjRnAzag` | All other projects |
-
-**Automation rules:**
-- INBOX routing → Google Tasks (via `INBOX_ROUTING.py`)
-- `#action` items in work-log/INBOX → BX3:Today
-- Log file: `Bxthre3/INBOX/foundry-queue/google-tasks-log.md`
-
-**Daily agent:** `morning-brief` — 8am daily email summarizing all 4 task lists
+| BX3:Projects | `WEozRDdoa1VrUFRjRnAzag` | Everything else |
 
 ---
 
-### Airtable
-- **Account:** `getfarmsense@gmail.com`
+## LINEAR — CONFIG
+
+| Field | Value |
+|-------|-------|
+| Team ID | `ffb6f386-e51a-4aa9-a686-e92e3e1c3e81` |
+| User ID | `be904814-6678-4b8d-8e62-c7acd880cef2` |
+| Issue convention | `BX3-N` (e.g. `BX3-5`) |
+| Connected accounts | `getfarmsense@gmail.com`, `bxthre3inc@gmail.com` |
+
+---
+
+## GOOGLE WORKSPACE — CONNECTED
+
+| Service | Status | Account |
+|---------|--------|---------|
+| Gmail | ✅ full read/write | getfarmsense@gmail.com |
+| Google Calendar | ✅ full read/write | getfarmsense@gmail.com |
+| Google Tasks | ✅ full read/write | getfarmsense@gmail.com |
+| Google Drive | ✅ full read/write | getfarmsense@gmail.com |
+
+---
+
+## AIRTABLE — CONNECTED
+
+- **Account:** getfarmsense@gmail.com
 - **Bases in use:**
-  - `appHg8lr1v409yKBc` — Agentic base (6 tables)
-  - `app93dsGcEyPfkqaa` — Enterprise Command Center (8 tables, includes Organizations)
+  - `appHg8lr1v409yKBc` — 6 tables (type: Organizations)
+  - `app93dsGcEyPfkqaa` — 8 tables (Irrig8 base, see below)
 
-**Tables in Enterprise Command Center:**
-- Organizations (primary)
-- Team
-- Integrations
-- Products
-- ... (see `airtable_oauth-list-tables` output for full schema)
-
-**Airtable native automations** can POST to zo.space webhooks for event-driven flows.
-
----
-
-### Notion
-- **Account:** `getfarmsense@gmail.com`
-- **Status:** Barely utilized — should be primary project documentation layer
-- **Capabilities:** Full page/block CRUD, file uploads, comments, databases
-- **Gap:** No Notion → workspace sync exists yet
+### Irrig8 Base Tables (app93dsGcEyPfkqaa)
+| Table | Purpose |
+|-------|---------|
+| Field Operations | Pivot-level irrigation tasks |
+| Sensor Data | In-ground/above-ground telemetry |
+| Compliance | Audit trail, regulatory filings |
+| Equipment | Hardware inventory, firmware |
+| Staff | Field team management |
 
 ---
 
-### Google Workspace (Calendar, Drive, Gmail)
-- **Account:** `getfarmsense@gmail.com`
-- **Calendar:** Event creation from rules; no systematic meeting → task flow
-- **Drive:** Connected; file upload/download available
-- **Gmail:** Sending working; not tracking responses or creating follow-ups
+## NOTION — CONNECTED
+
+- **Account:** getfarmsense@gmail.com
+- **Capabilities:** Pages, databases, file uploads, comments, block
+  append — full read/write
 
 ---
 
-## Rules (Active)
+## GITHUB — FULL TOKEN (✅ Connected)
 
-| Condition | Action |
-|-----------|--------|
-| New directory at workspace root | Enforce `Bxthre3/projects/` canonical structure |
-| P1 entry in INBOX.md | SMS alert to brodiblanco |
-| INBOX routing triggered | Google Task created in appropriate list |
-| `#action` in work-log/INBOX | Google Task created in BX3:Today |
-| Symbolic link created | Verify target exists, delete if broken |
+- **Token:** `GITHUB_TOKEN` (repo scope + gist + read:org)
+- **Org:** bxthre3inc (22 repos including agentic, CREDsWallet, etc.)
+- **Webhook secret:** `GITHUB_WEBHOOK_SECRET` (verified in use)
 
----
-
-## Agents (Active Scheduled)
-
-| Agent | Schedule | Purpose |
-|-------|---------|---------|
-| `linear-to-gtasks` | Every 15 min | Linear issues → Google Tasks |
-| `gtasks-to-linear` | Every 15 min | Google Tasks → Linear issues |
-| `github-linear-fallback` | Every 6 hours | GitHub PR → Linear close (poll fallback) |
-| `linear-hygiene` | Daily 9am | Audit stale Linear issues, email summary |
-| `morning-brief` | Daily 8am | Email all Google Tasks across 4 lists |
+### Key Repos
+| Repo | Purpose |
+|------|---------|
+| bxthre3inc/agentic | Standalone Rust build (primary IP) |
+| bxthre3inc/agent-os | Legacy AgentOS reference |
+| bxthre3inc/bxthre3 | Workspace root git |
+| bxthre3inc/CREDsWallet | Credits wallet product |
+| bxthre3inc/agentos-command-center | Zo Space command routes |
+| bxthre3inc/Distributed-Execution-System | WASM mesh |
 
 ---
 
-## Canonical Project Structure
+## STRIPE — TEST MODE (⚠️ Onboarding incomplete)
 
-All active work lives under `Bxthre3/projects/`. Archive at `Bxthre3/_archive/`.
+- **Secret key:** `STRIPE_API_SECRET_TEST`
+- **Webhook configured:** `https://brodiblanco.zo.space/api/stripe-webhook`
+- **Status:** Stripe Connect onboarding needs completion at [Sell](/?t=sell)
+  before accepting live payments
 
-```
-Bxthre3/
-  projects/
-    the-agentic-project/   ← Agentic core
-    the-agentic-root/     ← AgentOS runtime + governance
-    the-agentos-project/  ← Android native client
-    irrig8/               ← Irrig8 farming OS
-    credswallet/          ← CREDsWallet
-    low-price-auto-glass/  ← Monte Vista auto glass app
-    the-ard-project/       ← ARD project
-    ...
-  INBOX/
-    agents/               ← Agent inboxes
-    departments/           ← Department inboxes
-    foundry-queue/        ← Processing queue + logs
-  work-log/               ← Meeting + decision logs
-  VAULT/                  ← IP, arxiv, investor materials
-  vpc-decks/              ← Pitch decks
+---
+
+## AGENTIC STANDALONE BUILD (⚠️ Blocked — Rust toolchain)
+
+**Repo:** `https://github.com/bxthre3inc/agentic`
+
+The standalone Rust binary (`Bxthre3/agentic/src/`) cannot compile on
+this machine due to Rust 1.63 / cargo 1.65 — too old for modern crate
+ecosystem (uuid v1.23 requires edition 2024 which needs cargo 1.82+).
+
+**Workaround:** GitHub Actions uses latest Rust. Push → CI builds.
+See `bxthre3inc/agentic/.github/workflows/build.yml`.
+
+**CI Pipeline (5 jobs, all automatic on push):**
+1. Security audit (trivy)
+2. Test suite
+3. Multi-arch binary build (Linux x64/arm64, macOS, Windows)
+4. Docker image → `ghcr.io/bxthre3inc/agentic:latest`
+5. Release → on git tag → GitHub Releases page with all artifacts
+
+**Trigger build without Antigravity:**
+```bash
+gh workflow run "Build Agentic" --repo bxthre3inc/agentic
 ```
 
+**Build targeting:**
+```bash
+gh workflow run "Build Agentic" --repo bxthre3inc/agentic \
+  --field build_target=docker   # Docker only
+```
+
+**Release:**
+```bash
+git tag v1.0.0 && git push origin v1.0.0
+```
+
 ---
 
-## Key Conventions
+## SOUND + MUSIC
 
-- **Issue IDs:** Always `BX3-N` format (e.g., `BX3-5`, not `BX3-005`)
-- **Product names:** "Agentic" (not AgentOS), "Irrig8" (not FarmSense)
-- **GitHub PAT for Linear:** `AGENTOS_GITHUBPAT` env var
-- **Webhook secret:** `GITHUB_WEBHOOK_SECRET`
-- **Sync state file:** `Bxthre3/INBOX/foundry-queue/linear-gtasks-sync-state.json`
-
----
-
-## Known Gaps / TODO
-
-- [ ] Notion → workspace project doc sync (bidirectional)
-- [ ] Airtable → Linear issue creation on new records
-- [ ] Google Calendar → meeting notes auto-extracted to INBOX
-- [ ] Gmail → follow-up task creation on no-response
-- [ ] Linear → Notion page auto-creation on new issues
-- [ ] Agentic-specific Linear project (currently all issues in one team)
-- [ ] GitHub Issues → Google Tasks for non-PR issue tracking
+- **Spotify** — connected (read/write). Use for ambient music during
+  focused work, or automation triggers based on listening activity.
