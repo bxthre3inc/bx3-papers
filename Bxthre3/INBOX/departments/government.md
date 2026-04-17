@@ -1,86 +1,59 @@
-# Government Department INBOX — Updated 2026-04-09
+# Government Department INBOX — Updated 2026-04-16
 
-**Department:** Government Affairs & Defense Contracts  
-**Lead:** Cleared, Government Affairs & Defense Contracts Lead  
-**Reports to:** Navigate (VP Ventures), Anchor (CRO), Atlas (COO)  
-**Established:** 2026-03-30  
-**Last Updated:** 2026-04-09 08:15 UTC
-
----
-
-## ⚠️ ACTION REQUIRED: DOE SBIR Clean Water Deadline [VERIFY BLOCKED]
-
-The INBOX previously listed "DOE SBIR Clean Water" deadline as 2026-04-16. **This is unverified.**
-
-Web research findings (2026-04-09):
-- DOE SBIR FY2026 topics were delayed (published mid-July 2025 per historical pattern)
-- Phase I Release 2 full applications due Feb 25, 2026 (PAST)
-- No active DOE SBIR clean water FOA confirmed for current cycle
-
-**ACTION:** maya/casey must confirm deadline TODAY before investing work. If no active FOA, remove from pipeline.
-
-**Standup:** 2026-04-09 08:15 AM MT — COMPLETE  
-**Log:** `Bxthre3/meeting-logs/daily-dept-standups/2026-04-09-government.md`
+**Department:** Government Affairs & Defense Contracts
+**Lead:** Cleared, Government Affairs & Defense Contracts Lead
+**Reports to:** Navigate (VP Ventures), Anchor (CRO), Atlas (COO)
+**Established:** 2026-03-30
+**Last Updated:** 2026-04-17 08:15 UTC
 
 ---
 
-## Strategic Shift: ESTCP Exited
+## 🟢 ESTCP — CLOSED
 
-**bx3 decision (INBOX.md 2026-04-08):** ESTCP entirely cancelled. All obligations void.
-
-### Implications
-| Item | Status |
-|------|--------|
-| ESTCP Phase 2 sensor deployment | CANCELLED |
-| ESTCP portal data flow | ABANDONED |
-| Airtable ESTCP records | NO LONGER RELEVANT |
-| Raj's government standup template | REMOVE ESTCP DEPENDENCY |
-| ESTCP tasks in WORK_QUEUE | REMOVE |
+ESTCP officially cancelled by founder 2026-04-08. No further action.
 
 ---
 
-## Active Grants Pipeline
+## Active Grants Pipeline — Verified 2026-04-16
 
-### P0 — In Flight (22 days)
+### P0/P1 — NONE ACTIVE
 
-| Grant | ID | Funder | Deadline | Days | Owner | Status |
-|-------|----|--------|----------|------|-------|--------|
-| CIG Colorado | FED-CO-003 | USDA NRCS | 2026-04-30 | **22** | casey | SHORTLIST |
-| USDA REAP | — | USDA | 2026-04-30 | **22** | maya | TODO |
-| USDA SBIR Phase I | IRR-002 | USDA NIFA | 2026-04-30 | **22** | maya | PROSPECT |
+No grants with confirmed deadlines within 14 days.
 
-### P1 — Active
+### P2 — Active Opportunities
 
-| Grant | ID | Funder | Deadline | Days | Owner | Status |
-|-------|----|--------|----------|------|-------|--------|
-| ARPA-E OPEN 2026 | — | DOE | 2026-05-01 | **23** | casey | HIGH FIT |
-| DOE SBIR Clean Water | — | DOE | **[VERIFY]** | ??? | maya/casey | BLOCKED — deadline unconfirmed |
-
-### P2 — Prospect
-
-| Grant | ID | Funder | Deadline | Days | Owner | Status |
-|-------|----|--------|----------|------|-------|--------|
-| NSF SBIR Phase I | RAIN-001 | NSF | 2026-05-15 [VERIFY] | **37** | maya | PROSPECT |
+| Grant | ID | Agency | Deadline | Amount | Fit | Owner | Status |
+|---|---|---|---|---|---|---|---|
+| **NSF SBIR Phase I** | RAIN-001 | NSF | Rolling | $275K | HIGH — digital ag | maya | ✅ OPEN — most immediately actionable |
+| **ARPA-E OPEN 2026** | ARPA-E-001 | DOE | FA Deadline TBD | $250K–$10M | HIGH — energy/ag | casey | ✅ ACTIVE — DE-FOA-0003567 |
+| **USDA REAP** | REAP-001 | USDA RD | Varies [VERIFY] | $300K–$1M | MED-HIGH | maya | 🟡 VERIFY |
+| **CIG Colorado** | FED-CO-003 | USDA NRCS | TBD by CO NRCS | Varies | HIGH — soil/water | casey | 🟡 CONTACT NRCS CO |
+| **USDA SBIR Phase I FY2026** | IRR-002 | USDA NIFA | FY2026 NOT RELEASED | $125K–$181.5K | HIGH — irrigation | maya | 🔴 TRACK — FY2025 closed 9/17/24 |
 
 ---
 
-## Priority Actions
+## Priority Actions This Week
 
-### Immediate (This Week)
+| # | Action | Owner | Deadline | Status |
+|---|---|---|---|---|
+| 1 | NSF SBIR Phase I — prepare proposal narrative | maya | This week | 🟡 TODO |
+| 2 | Contact CO NRCS (Sarah Stoeber 719-589-6099) — confirm CIG Colorado 2026 deadline | casey | This week | 🟡 TODO |
+| 3 | Verify USDA REAP current round deadline with USDA RD state office | maya | This week | 🟡 TODO |
+| 4 | Monitor ARPA-E eXCHANGE for FA deadline announcement | casey | Ongoing | ⏳ WAITING |
+| 5 | Monitor NIFA monthly for FY2026 SBIR NOFO release | maya | Monthly | 🔴 TRACK |
 
-| Priority | Action | Owner | Deadline |
-|----------|--------|-------|----------|
-| 🔴 P1 | DOE SBIR Clean Water — **VERIFY DEADLINE** before any work | maya/casey | TODAY |
-| 🟠 P1 | CIG Colorado — NRCS CO outreach + LOI | casey | This week |
-| 🟠 P1 | USDA REAP — parallel write with CIG | maya | This week |
-| 🟡 P2 | ARPA-E OPEN 2026 — full proposal kickoff | casey | T+7 days |
+---
 
-### Contact Intelligence
+## Cash Position Context [VERIFY]
 
-| Contact | Organization | Phone | Role |
-|---------|-------------|-------|------|
-| Sarah Stoeber | SLVDRG / NRCS CO | 719-589-6099 | CIG Colorado LOI |
-| [VERIFY] | DOE SBIR | — | Clean Water FOA |
+| Item | Value |
+|------|-------|
+| Cash | ~$130,450 [VERIFY against financial docs] |
+| Burn rate | ~$130K/week [VERIFY] |
+| Runway | ~1 week [VERIFY] |
+| Bridge required | $400K by July 1 (84 days) |
+
+**Implication:** NSF SBIR ($275K rolling) is the most immediately actionable win to extend runway.
 
 ---
 
@@ -89,21 +62,17 @@ Web research findings (2026-04-09):
 | Opportunity | Agency | Status |
 |-------------|--------|--------|
 | DIU opportunities | Defense Innovation Unit | SCAN QUEUED |
-| USDA Aggressive Conservation | USDA | PROSPECT |
-| Colorado Water Plan grants | CDPHE | RESEARCH |
+| State ag tech initiatives | Colorado OIT | PROSPECT |
+| CDPHE water grants | CDPHE | RESEARCH |
 | ARS partnerships | USDA ARS | PROSPECT |
-| Land-grant university partnerships | CSU / Adams State | OUTREACH |
+| Land-grant partnerships | CSU / Adams State | OUTREACH |
 
 ---
 
-## Cash Position Context
+## DIU Scan — Queued
 
-- Current: ~$130,450 (as of 2026-04-01)
-- Burn: ~$130K/week
-- Runway: **~1 week**
-- Bridge required: **$400K by July 1** (84 days)
-- **Priority shift:** Accelerate grant wins to extend runway
+DIU priorities currently: AI eval infra, autonomous logistics, counter-drone. Irrig8 deterministic approach = **MEDIUM fit** at best. Will revisit if agtech/water AI becomes dual-use priority at DIU.
 
 ---
 
-*Government Department — Updated 2026-04-09 08:15 UTC*
+*Government Department — Updated 2026-04-16 08:15 UTC*

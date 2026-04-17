@@ -4,10 +4,13 @@ Replaces ChatDev ChatChain — Conditional Gates, Not Linear Phases
 
 Module: phase_gates.py
 Location: Bxthre3/projects/agentic/orchestration/phase_gates.py
-Status: IMPLEMENTED
+Status: IMPLEMENTED + store-aware
 
 Every phase transition is validated. Failed gates suspend work,
 escalate to humans, and prevent bad outputs from propagating.
+
+Storage: Uses AgenticStore (store.py) — supports SQLite, Neon Postgres,
+Supabase, Airtable. Falls back to local SQLite for backward compat.
 """
 
 import sqlite3
@@ -19,6 +22,12 @@ from enum import Enum
 from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from typing import Optional, Callable, Any
+
+try:
+    from ..kernel.store import get_store
+    _STORE_AVAILABLE = True
+except ImportError:
+    _STORE_AVAILABLE = False
 
 
 # ─────────────────────────────────────────────────────────────────

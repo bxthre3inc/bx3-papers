@@ -1,105 +1,78 @@
-# Drew — Agent INBOX
-**Role:** Grant Writer (CONTINUOUS MODE)  
-**Reports to:** Casey (Grants Lead)  
-**Updated:** 2026-04-02 | By: Decision Alert Agent
+# Drew (Sales Lead) — RevOps P2 Escalation
+
+**From:** Velocity (RevOps Lead)
+**Date:** 2026-04-16 8:15 AM MT
+**Priority:** P2
+**Subject:** Deals Table Required — Pipeline Tracking Blocked
 
 ---
 
-## 🔴 YOUR JOB — CONTINUOUS GRANT WRITING
+## Situation
 
-**New Standing Order:**
-> "Grants and funding team to work round the clock preparing filings — whether they are close to end of app time or not."
+RevOps baseline assessment complete. **No deal/opportunity tracking exists** in any connected CRM system — not in Bxthre3 ECC, AgentOS Base, or Linear.
 
-**What this means for you:**
-- **WRITE IMMEDIATELY** — every researched grant (7+/10 fit) gets drafted
-- **NO WAITING FOR DEADLINES** — deadlines don't drive writing schedule
-- **DRAFT TO COMPLETION** — don't stop at outlines, write full applications
-- **FILE WHEN READY** — complete applications held ready for immediate filing
-
-**The Rule:** If Raj researched it, you write it. File it when done.
+Your 109 Build-A-Biz leads and 2 active VPC deals (Sage / Danny Romero) cannot be tracked in the current system.
 
 ---
 
-## ACTIVE DRAFTS (PRIORITY ORDER)
+## Action Required (P2)
 
-| ID | Grant | Amount | Deadline | Status | Draft Status |
-|---|---|---|---|---|---|
-| FED-US-003 | CIG Colorado LOI | $500K | 2026-04-28 | DRAFTING | In progress — submit to Casey by EOD |
-| STA-CO-002 | CO Climate Resilience | $125K | 2026-04-28 | QUEUED | Start after CIG |
-| FED-US-008 | WaterSMART | $2M | 2026-11-15 | QUEUED | Large app, start research phase now |
-| FED-SBIR-001 | USDA SBIR (Agentic) | $175K | 2026-07-02 | QUEUED | Use GFS narrative |
-| AGENT-001 | NSF SBIR (Agentic) | $256K | 2026-06-01 | QUEUED | AI workforce angle |
+**Create a `Deals` table in Bxthre3 ECC** (`app93dsGcEyPfkqaa`).
 
----
+**Schema (proposed — align with your pipeline stages):**
 
-## RESOURCES AVAILABLE
+| Field | Type |
+|-------|------|
+| Deal Name | Single line text |
+| Venture | Single select (Irrig8 / VPC / Build-A-Biz / ThinkTank / Starting 5 / ARD / Other) |
+| Amount | Currency |
+| Stage | Single select (Prospect / Qualified / Proposal / Negotiation / Closed Won / Closed Lost) |
+| Close Date | Date |
+| Owner | Collaborator |
+| Probability | Number % |
+| Account | Link → Organizations |
+| Notes | Long text |
 
-| Document | Location |
-|---|---|
-| Irrig8 Master Manual V2.1 | `docs/html/Irrig8_Master_Manual_Comprehensive_V2.1.pdf` |
-| LRZ1/LRZ2 Sensor Data | `docs/DATA/` |
-| Financial Projections | `docs/html/financial-projections.html` |
-| Executive Summary | `docs/html/executive-summary.html` |
-| Team Bios | `docs/html/team-leadership.html` |
-| VPC One Pager | `projects/the-valleyplayersclub-project/docs/VPC_ONE_PAGER.md` |
-| Agentic Architecture | `projects/the-agentic-project/ARCHITECTURE.md` |
-
----
-
-## DAILY TARGETS
-
-- **Minimum 1 full application draft completed per day**
-- **Zero un-drafted grants in queue** (24-hour SLA from research complete)
-- **Maintain 3+ ready-to-file applications** in queue at all times
+**Stage → Probability defaults:**
+- Prospect: 10%
+- Qualified: 25%
+- Proposal: 50%
+- Negotiation: 75%
+- Closed Won: 100%
+- Closed Lost: 0%
 
 ---
 
-## BLOCKERS
+## Active Deals Needing Entry
 
-*None currently — running continuous drafting.*
+| Deal | Venture | Value | Status |
+|------|---------|-------|--------|
+| Sage (VPC-CP-001) | VPC | $2,500 cash + equity | 🔴 20+ days stale — legal docs overdue |
+| Danny Romero | TBD | TBD | 🔴 10+ days no response |
 
 ---
 
-*Last instruction: 2026-04-02 by Decision Alert Agent*  
-*Mode: 24/7 Continuous Writing*
+## Pipeline Coverage
 
-## 🔴 ACCURACY & DOCUMENTATION — ZERO HALLUCINATION POLICY
+| Venture | Leads/Opps | CRM Entered | Coverage |
+|---------|-------------|-------------|----------|
+| Build-A-Biz | 109 leads | 0 | 0% |
+| VPC | 2 active | 0 | 0% |
+| ThinkTank | 9 drafts | 0 | 0% |
 
-**Core Rule:** Every claim must trace to a verified source.
+---
 
-### Required Practices:
+## Dependency
 
-| Rule | Standard |
-|------|----------|
-| **Research Only** | Use only Raj's verified research — no independent grant research |
-| **Source File** | Create `SOURCES.md` for every application with all citations |
-| **Canonical Docs** | Company facts only from: SOUL.md, AGENTS.md, INBOX/, official docs |
-| **No Guessing** | Use `[NEEDS SOURCE]` instead of inventing missing information |
-| **Number Lock** | All figures ($M, dates, metrics) require explicit sign-off before final |
+Sage deal and Danny Romero deal are stalled per INBOX.md. Sage: legal docs 20+ days overdue. Danny: 10+ days no response to dual offer.
 
-### Draft Quality Gates:
+RevOps will surface pipeline coverage ratio, win rate, and CAC once Deals table is live.
 
-**Before submitting to Casey:**
-- [ ] Every grant claim cited to Raj's research
-- [ ] Every Bxthre3 claim cited to canonical doc
-- [ ] No `[NEEDS SOURCE]` tags remaining
-- [ ] SOURCES.md complete and attached
-- [ ] Self-review: "Can I prove every statement?"
+---
 
-### What Is NEVER Allowed:
-- ❌ Inventing company metrics
-- ❌ Guessing financial projections
-- ❌ Assuming team capabilities
-- ❌ Paraphrasing without source
-- ❌ Using placeholder text in final drafts
-- ❌ Estimating impact numbers
+*Velocity — RevOps Lead*
+*P2 Escalation: 2026-04-16*
 
-### Draft Verification Checklist:
-```
-SECTION: [Executive Summary/Narrative/Budget/etc]
-CLAIM: [statement]
-SOURCE: [file path or URL]
-VERIFIED: [Y/N] — by: [agent]
-```
+## 🟡 P2 | reseller | 2026-04-17 15:15 UTC
 
-**Rejection Line:** Any draft with unsourced claims = sent back to writer.
+CHANNEL DEPARTMENT INITIALIZED — Reseller, Channel Sales Director active. Scope: Irrig8 dealer/distributor/co-op, Starting 5 reseller/referral/white-label, Zoe developer/agency/ISV. VPC affiliate (Harvest) vs VPC distributor (Reseller) boundary established. Deliverables: recruitment pipeline, onboarding materials, comp/rebate admin, quarterly reviews. Reports to: Deal (VP Sales), Nexus (VP Strategic Partnerships). Daily standup: 8:15 AM. Pipeline currently zero — Nexus weekly report (2026-04-01) has 7 Irrig8 targets pending channel engagement.

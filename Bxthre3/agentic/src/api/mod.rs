@@ -4,6 +4,10 @@
 //! All business logic lives in core/.
 
 use crate::core::{AgentRegistry, DapEngine, EventBus, TaskQueue};
+use crate::core::truth_gate::TruthGate;
+use crate::core::shell::DeterministicShell;
+use crate::core::self_mod::SelfModificationEngine;
+use crate::core::rollback::CascadeManager;
 use crate::types::*;
 use crate::db::Database;
 use axum::{
@@ -154,6 +158,143 @@ pub async fn agent_action(
     }))
 }
 
+// POST /api/agentic/shell/validate
+pub async fn shell_validate(
+    State(_state): State<Arc<AppState>>,
+    Json(payload): Json<serde_json::Value>,
+) -> Json<serde_json::Value> {
+    // Parse event vector from payload
+    let vector = EventVector {
+        t: payload.get("t").and_then(|v| v.as_i64()).unwrap_or_else(|| chrono::Utc::now().timestamp_millis()),
+        s_x: payload.get("s_x").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        s_y: payload.get("s_y").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_negative: payload.get("z_negative").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_positive: payload.get("z_positive").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        c: payload.get("c").and_then(|v| v.as_f64()).unwrap_or(1.0),
+        l: payload.get("l").and_then(|v| v.as_str()).unwrap_or("APPROVED").to_string(),
+        v_f: payload.get("v_f").and_then(|v| v.as_f64()).unwrap_or(0.5),
+        e: payload.get("e").and_then(|v| v.as_i64()).unwrap_or(0),
+        g: payload.get("g").and_then(|v| v.as_str()).unwrap_or("COMPLIANT").to_string(),
+    };
+
+    let plane_results = DapEngine::evaluate(&vector);
+    let all_match = DapEngine::all_match(&plane_results);
+
+    Json(serde_json::json!({
+        "status": "evaluated",
+        "all_match": all_match,
+        "plane_results": plane_results,
+        "execution_state": DapEngine::execution_state(&plane_results),
+    }))
+}
+
+// POST /api/agentic/truth-gate/verify
+pub async fn truth_gate_verify(
+    State(_state): State<Arc<AppState>>,
+    Json(payload): Json<serde_json::Value>,
+) -> Json<serde_json::Value> {
+    // Parse event vector from payload
+    let vector = EventVector {
+        t: payload.get("t").and_then(|v| v.as_i64()).unwrap_or_else(|| chrono::Utc::now().timestamp_millis()),
+        s_x: payload.get("s_x").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        s_y: payload.get("s_y").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_negative: payload.get("z_negative").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_positive: payload.get("z_positive").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        c: payload.get("c").and_then(|v| v.as_f64()).unwrap_or(1.0),
+        l: payload.get("l").and_then(|v| v.as_str()).unwrap_or("APPROVED").to_string(),
+        v_f: payload.get("v_f").and_then(|v| v.as_f64()).unwrap_or(0.5),
+        e: payload.get("e").and_then(|v| v.as_i64()).unwrap_or(0),
+        g: payload.get("g").and_then(|v| v.as_str()).unwrap_or("COMPLIANT").to_string(),
+    };
+
+    let plane_results = DapEngine::evaluate(&vector);
+    let all_match = DapEngine::all_match(&plane_results);
+
+    Json(serde_json::json!({
+        "status": "evaluated",
+        "all_match": all_match,
+        "plane_results": plane_results,
+        "execution_state": DapEngine::execution_state(&plane_results),
+    }))
+}
+
+// GET /api/agentic/sme/status
+pub async fn sme_status(State(state): State<Arc<AppState>>) -> Json<serde_json::Value> {
+    let agents = state.agents.read().await;
+    let tasks = state.tasks.read().await;
+
+    Json(serde_json::json!({
+        "version": env!("CARGO_PKG_VERSION"),
+        "status": "operational",
+        "agentCount": agents.all().len(),
+        "activeAgents": agents.active_count(),
+        "workQueueDepth": tasks.work_queue_depth(),
+        "escalationCount": tasks.escalations().len(),
+        "avgHealth": agents.avg_completion_rate(),
+        "timestamp": chrono::Utc::now().to_rfc3339(),
+    }))
+}
+
+// POST /api/agentic/rollback/initiate
+pub async fn rollback_initiate(
+    State(_state): State<Arc<AppState>>,
+    Json(payload): Json<serde_json::Value>,
+) -> Json<serde_json::Value> {
+    // Parse event vector from payload
+    let vector = EventVector {
+        t: payload.get("t").and_then(|v| v.as_i64()).unwrap_or_else(|| chrono::Utc::now().timestamp_millis()),
+        s_x: payload.get("s_x").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        s_y: payload.get("s_y").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_negative: payload.get("z_negative").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_positive: payload.get("z_positive").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        c: payload.get("c").and_then(|v| v.as_f64()).unwrap_or(1.0),
+        l: payload.get("l").and_then(|v| v.as_str()).unwrap_or("APPROVED").to_string(),
+        v_f: payload.get("v_f").and_then(|v| v.as_f64()).unwrap_or(0.5),
+        e: payload.get("e").and_then(|v| v.as_i64()).unwrap_or(0),
+        g: payload.get("g").and_then(|v| v.as_str()).unwrap_or("COMPLIANT").to_string(),
+    };
+
+    let plane_results = DapEngine::evaluate(&vector);
+    let all_match = DapEngine::all_match(&plane_results);
+
+    Json(serde_json::json!({
+        "status": "evaluated",
+        "all_match": all_match,
+        "plane_results": plane_results,
+        "execution_state": DapEngine::execution_state(&plane_results),
+    }))
+}
+
+// POST /api/agentic/dap/evaluate
+pub async fn dap_evaluate(
+    State(_state): State<Arc<AppState>>,
+    Json(payload): Json<serde_json::Value>,
+) -> Json<serde_json::Value> {
+    // Parse event vector from payload
+    let vector = EventVector {
+        t: payload.get("t").and_then(|v| v.as_i64()).unwrap_or_else(|| chrono::Utc::now().timestamp_millis()),
+        s_x: payload.get("s_x").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        s_y: payload.get("s_y").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_negative: payload.get("z_negative").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        z_positive: payload.get("z_positive").and_then(|v| v.as_f64()).unwrap_or(0.0),
+        c: payload.get("c").and_then(|v| v.as_f64()).unwrap_or(1.0),
+        l: payload.get("l").and_then(|v| v.as_str()).unwrap_or("APPROVED").to_string(),
+        v_f: payload.get("v_f").and_then(|v| v.as_f64()).unwrap_or(0.5),
+        e: payload.get("e").and_then(|v| v.as_i64()).unwrap_or(0),
+        g: payload.get("g").and_then(|v| v.as_str()).unwrap_or("COMPLIANT").to_string(),
+    };
+
+    let plane_results = DapEngine::evaluate(&vector);
+    let all_match = DapEngine::all_match(&plane_results);
+
+    Json(serde_json::json!({
+        "status": "evaluated",
+        "all_match": all_match,
+        "plane_results": plane_results,
+        "execution_state": DapEngine::execution_state(&plane_results),
+    }))
+}
+
 /// Build the router for all agentic API routes.
 pub fn router(state: Arc<AppState>) -> Router {
     Router::new()
@@ -165,5 +306,10 @@ pub fn router(state: Arc<AppState>) -> Router {
         .route("/api/agentic/integrations", get(get_integrations))
         .route("/api/agentic/events/ingest", post(ingest_event))
         .route("/api/agentic/android/agents/{id}/{action}", post(agent_action))
+        .route("/api/agentic/shell/validate", post(shell_validate))
+        .route("/api/agentic/truth-gate/verify", post(truth_gate_verify))
+        .route("/api/agentic/sme/status", get(sme_status))
+        .route("/api/agentic/rollback/initiate", post(rollback_initiate))
+        .route("/api/agentic/dap/evaluate", post(dap_evaluate))
         .with_state(state)
 }

@@ -14,9 +14,9 @@
 ## Current Status
 🔴 STALE — Legal docs submitted 2026-03-24. Mark-up due 2026-03-27. **19 days overdue as of 2026-04-15.** Drew INBOX stale. P2 escalated to INBOX.md 2026-04-10. No response in 22 days. Deal approaching dead.
 
-## DEAL-AGENT Scan — 2026-04-15 09:05 UTC
-- **Days since docs submitted:** 22
-- **Days mark-up overdue:** 19
+## DEAL-AGENT Scan — 2026-04-17 15:05 UTC
+- **Days since docs submitted:** 24
+- **Days mark-up overdue:** 21
 - **Escalation status:** P2 already in INBOX.md (2026-04-10)
 - **Bridge contribution:** $2,500 (0.6% of $400K target) + equity
 - **Cash position critical:** $130,450 | Runway: ~1 week
@@ -31,6 +31,8 @@
 | 2026-04-10 | P2 written to INBOX.md | Drew: follow up on legal docs |
 | 2026-04-14 | DEAL-AGENT scan — 21 days stale, 18 days overdue | No change |
 | 2026-04-15 | DEAL-AGENT scan — 22 days stale, 19 days overdue | No change |
+| 2026-04-16 | DEAL-AGENT scan — 23 days stale, 20 days overdue | No change |
+| 2026-04-17 | DEAL-AGENT scan — 24 days stale, 21 days overdue | No change — P2 already in INBOX |
 
 ## Decision Required — CRITICAL
 Drew has not resolved Sage follow-up after 22 days. Options:

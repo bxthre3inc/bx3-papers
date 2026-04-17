@@ -2,7 +2,7 @@
 
 **Role:** Shelf owns all physical warehouse operations and inventory management for Bxthre3 Inc / Irrig8.
 
-**Active as of:** 2026-04-14 8:15 AM MT
+**Active as of:** 2026-04-16 8:15 AM MT
 
 **Reports to:** Source (Supply Chain), Atlas (COO)
 
@@ -49,18 +49,18 @@
 
 ---
 
-## Current Status — 2026-04-14
+## Current Status — 2026-04-16
 
 ### 🟡 Inventory Baseline
 - No physical inventory audit conducted — all SKU counts are TBD
 - Cannot fulfill Forge kitting requests without baseline quantities
-- Airtable "Warehouse & Inventory" base not yet provisioned by Source
+- Airtable "Warehouse & Inventory" base **confirmed NOT provisioned** — scan of both available Airtable bases shows no warehouse/inventory table
 
-### 🔴 P1 — G2E 2026 Demo Hardware (DUE TODAY)
-- G2E starts **tomorrow** (2026-04-15)
-- Demo hardware sourcing status **UNKNOWN** — flagged P1 by stage agent 2026-04-09
-- Escalated to Source (Supply Chain) for immediate status
-- **Risk:** No demo = no VPC product demo at G2E = missed $100K pipeline
+### 🔴 P1 — G2E 2026 Hardware (POST-EVENT)
+- G2E was **2026-04-15** — event has passed
+- Demo hardware status **UNKNOWN** — no confirmation received on what was sourced or deployed
+- **Action:** Request Source post-event debrief — what hardware was used, what needs returning
+- **Risk:** Unresolved = untracked inventory, potential shrinkage
 
 ### 🟡 P2 — VPC Node Hardware (BLOCKED)
 - Blocked pending WY LLC formation — no warehouse action until resolved
@@ -86,37 +86,36 @@ _Managed via Airtable base "Warehouse & Inventory" (NOT YET PROVISIONED — gap 
 
 | To | Item | Priority | Status |
 |----|------|----------|--------|
-| **Source** | G2E demo hardware sourcing status | 🔴 P1 | Escalated |
+| **Source** | G2E post-event hardware debrief | 🔴 P1 | Needs response |
 | **Source** | Airtable "Warehouse & Inventory" base provisioning | 🟡 P2 | Pending |
 | **Forge** | Deployment kit readiness | 🟡 P2 | On hold (pipeline TBD) |
-| **Stage** | G2E booth hardware coordination | 🔴 P1 | 1 day to event |
 | **Raj** | WY LLC formation status | 🟡 P2 | Monitoring |
+
+---
+
+## Airtable Gap Analysis
+
+Scanned via Airtable API — 2 bases found:
+
+| Base | Tables | Warehouse Coverage? |
+|------|--------|-------------------|
+| **AgentOS Base** (appHg8lr1v409yKBc) | "Irrig8 Field Data" table | ❌ Sensor deployment tracking, NOT warehouse stock |
+| **Bxthre3 Enterprise Command Center** (app93dsGcEyPfkqaa) | "Assets" table | ❌ Company asset tracking, NOT SKU-level inventory |
+
+**Required:** Source provisions dedicated "Warehouse & Inventory" Airtable base with tables:
+- Inventory (SKU master)
+- Receiving Log
+- Kitting Orders
+- RMA / Returns
+- Suppliers
 
 ---
 
 ## Notes
 
 - FarmSense retired 2026-03-23. All hardware references use Irrig8 branding.
-- Physical inventory audit needed to establish baseline quantities.
-- Airtable base gap: No dedicated "Warehouse & Inventory" base found. Existing bases do not cover SKU-level warehouse stock.
-  - **Agentic Base** (appHg8lr1v409yKBc): "Irrig8 Field Data" table — deployed sensor tracking, NOT warehouse stock
-  - **Bxthre3 Enterprise Command Center** (app93dsGcEyPfkqaa): "Assets" table — company asset tracking, not SKU-level inventory
-  - **Required:** Source provisions dedicated Warehouse & Inventory Airtable base
+- G2E 2026 is now concluded — hardware return/inventory close-out is immediate priority.
 
 ---
 
-## Airtable Inventory Base — Required Structure
-
-Source should create base with these tables:
-
-| Table | Purpose |
-|-------|---------|
-| **Inventory** | SKU master: name, category, on-hand qty, reorder point, supplier, unit cost |
-| **Receiving Log** | Inbound shipments: PO#, date, qty received, condition, inspector |
-| **Kitting Orders** | Deployment kit requests from Forge: kit ID, components, status, due date |
-| **RMA / Returns** | Defective units: RMA#, product, reason, status, resolution |
-| **Suppliers** | Vendor list: name, contact, lead time, categories supplied |
-
----
-
-*Last updated: 2026-04-14 8:15 AM MT*
+*Last updated: 2026-04-16 8:15 AM MT*

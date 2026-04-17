@@ -1,6 +1,25 @@
 ---
 # Bxthre3 INBOX — P0/P1 Only
 
+## 🔴 P1 | purchase | 2026-04-17 08:15 UTC
+
+**Sage VPC-CP-001 — 23+ Days Stale — Legal Docs Overdue — Escalating to Balance/Atlas**
+
+Sage VPC deal: $2,500 cash + 10% VPC take rate + 2.5% VPC equity. Legal docs submitted to Sage 2026-03-24, mark-up was due 2026-03-27 — now **20+ days overdue**. Purchase has escalated 3 consecutive days (04-14, 04-15, 04-16) — no resolution.
+
+**Current cash position:** ~$130,450 on hand, ~1 week runway. $400K bridge needed by July 1.
+
+**Blocking issues:**
+1. Drew (Sales) — legal docs follow-up (23+ days stale)
+2. Drew unresponsive to repeated escalations
+3. G2E 2026 (April 17) — booth/hardware still unconfirmed — P1 from 2026-04-09, 8 days old
+
+**Action required:** Balance/Atlas to take ownership of Drew accountability and G2E resolution TODAY.
+
+**Source:** `file 'Bxthre3/INBOX/agents/purchase.md'` (standup 2026-04-17)
+
+---
+
 ## 🔴 P1 | logger | 2026-04-14 16:30 UTC
 
 **SYNC ORCHESTRATOR FAILURE — 2026-04-14 — Logger Compensated**
@@ -75,6 +94,22 @@ bx3 has made a strategic decision to exit ESTCP entirely. All ESTCP obligations 
 ---
 
 ## Previous Entries
+
+---
+
+## 🔴 P1 | scout-qa | 2026-04-17 15:10 UTC
+
+**Weekly QA Report — 2026-04-17 | 3 P1s Active**
+
+**S5-001 (16 days):** Starting5 project directory missing. Canonical path `Bxthre3/the-starting5-project/` not found. Drew or Bits must provide correct path or close as WONTFIX.
+
+**VPC-002 UPDATE:** Tests now runnable via `bun test server/src/`. `npm test` still broken (missing script in package.json). Downgraded from P1 to P2 — unblocking action: add `"test": "bun test server/src/"` to `package.json`.
+
+**RAIN-001 (CARRIED):** No test suite exists for RAIN project. AI citation accuracy and report generation remain unregression-tested.
+
+**Full report:** `file 'Bxthre3/INBOX/departments/qa-weekly-2026-04-17.md'`
+
+**Owner:** Drew (VP Engineering), Bits (CTO)
 
 ---
 

@@ -1,73 +1,68 @@
-# Channel — Department INBOX
-
-**Department:** Channel Partnerships
-**Channel Sales Director:** Reseller
+# Channel Department — INBOX
+**Department:** Channel (Reseller, Channel Sales Director)
+**Lead:** Reseller
 **Reports to:** Deal (VP Sales), Nexus (VP Strategic Partnerships)
-**Last Updated:** 2026-04-14
+**Meeting Cadence:** Daily 8:15 AM
+**Last Updated:** 2026-04-17
 
 ---
 
-## Department Overview
+## Daily Channel Standup — 2026-04-17
 
-Build and manage the reseller, distributor, and channel partner ecosystem for Bxthre3 ventures.
-
-**Channel Scope:**
-- Irrig8: Farm equipment dealers, irrigation suppliers, agricultural co-ops, co-packers
-- Starting 5: Resellers, referral partners, white-label partners
-- Zoe: Developer ecosystem, agency partners, ISVs
-- Valley Players Club: Affiliate managers, casino aggregators
-
-**Deliverables:**
-- Channel partner recruitment pipeline
-- Partner onboarding and enablement materials
-- Channel comp and rebate administration
-- Partner performance reviews (quarterly)
+**Date:** 2026-04-17
+**Time:** 8:15 AM MT
+**Chair:** Reseller (Channel Sales Director)
+**Attendees:** Reseller
+**Written by:** Reseller
 
 ---
 
-## Meeting Cadence
-- Daily standup: **8:15 AM MT**
-- Weekly report to Deal + Nexus
+### Today's Priorities
+
+| # | Priority | Venture | Status | Notes |
+|---|----------|---------|--------|-------|
+| 1 | Initialize channel pipeline | All | 🔴 P1 | Build partner recruitment pipeline from Nexus targets |
+| 2 | Irrig8 dealer outreach | Irrig8 | 🟡 P2 | Valley Irrigation, Reinke — obtain SLV dealer contacts |
+| 3 | Starting 5 reseller program | Starting 5 | 🟡 P2 | Define comp structure, partner tiers |
+| 4 | Zoe partner ecosystem | Zoe | 🟡 P3 | Developer ecosystem + agency partners — initial target list |
+| 5 | Channel enablement materials | All | 🟡 P3 | Build onboarding kit for channel partners |
 
 ---
 
-## Active Pipeline Summary
+### Channel Pipeline Snapshot
 
-| Venture | Partner Type | Stage | Count |
-|---------|-------------|-------|-------|
-| Irrig8 | Farm equipment dealers (Valley, Reinke) | 2 - Active Outreach | 2 |
-| Irrig8 | Ag retailers (Wilbur-Ellis) | 2 - Tier 1 | 1 |
-| Irrig8 | Ag co-ops, satellite, govt | 1 - Identified | 5 |
-| VPC | Casino aggregators | 1 - Identified (outreach blocked) | 5 |
-| VPC | Affiliate managers | BLOCKED — Harvest owns | — |
-| Starting 5 | All types | 0 - Identified | 0 |
-| Zoe | All types | 0 - Identified | 0 |
-
-**Total pipeline targets:** 13 identified + 5 blocked = 18 total
+| Venture | Targets | Engaged | Contracts Out | Signed | Revenue |
+|---------|---------|---------|---------------|--------|---------|
+| Irrig8 | 7 (Nexus list) | 0 | 0 | 0 | $0 |
+| Starting 5 | TBD | 0 | 0 | 0 | $0 |
+| Zoe | TBD | 0 | 0 | 0 | $0 |
 
 ---
 
-## Key Dependencies
+### Blockers & Dependencies
 
-- **Deal:** Irrig8 outreach approval (Valley/Reinke sequences ready since 04-01)
-- **Harvest:** VPC affiliate compliance chase — 13+ days overdue; formal ETA needed
-- **Nexus:** Irrig8 distribution prospecting; pipeline sync needed
-- **Drew:** Starting 5 / Zoe named targets (zero in pipeline)
-- **Brand:** Co-marketing materials (not started)
-- **VPC Agent:** Gaming compliance — overdue 13+ days
+| Blocker | Owner | Due | Impact |
+|---------|-------|-----|--------|
+| None currently | — | — | — |
 
 ---
 
-## Escalations (P2)
+### Hand-offs
 
-- VPC compliance blocker — blocking Tier 1/2 affiliate outreach; casino aggregator outreach also at risk
-- Starting 5 / Zoe pipeline gap — zero targets identified, outstanding since at least 03-25
-
----
-
-## Standup Log
-- `channel-standup-2026-04-14.md` ← Today's standup
+| To | Item | Context | Priority |
+|----|------|---------|----------|
+| Nexus | Pipeline alignment | Nexus weekly report has Irrig8 targets — align with channel plan | 🟡 P2 |
 
 ---
 
-*Channel Partnerships Department — Bxthre3*
+## Commission Reference
+
+| Venture | Partner Type | Commission Range |
+|---------|-------------|-----------------|
+| Irrig8 | Dealers, distributors, co-ops | 5–15% |
+| Starting 5 | Resellers, referral, white-label | 15–20% rev share + $500 bonus |
+| Zoe | Developer, agencies, ISVs | Credits + 15–20% rev share |
+
+---
+
+*Next standup: 2026-04-18 8:15 AM MT*

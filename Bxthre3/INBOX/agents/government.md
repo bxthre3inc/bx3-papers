@@ -1,10 +1,10 @@
 # Government Affairs & Defense Contracts Lead — INBOX
 
-**Role:** Government Affairs & Defense Contracts Lead — Agentic Government Department  
-**Reports to:** Navigate (VP Ventures), Anchor (CRO), Atlas (COO)  
-**Meeting Cadence:** Daily standup within Government at 8:15 AM  
-**Status:** ✅ ACTIVE — 2026-04-14  
-**Last Updated:** 2026-04-14 08:15 UTC
+**Role:** Government Affairs & Defense Contracts Lead — Agentic Government Department
+**Reports to:** Navigate (VP Ventures), Anchor (CRO), Atlas (COO)
+**Meeting Cadence:** Daily standup within Government at 8:15 AM
+**Status:** ✅ ACTIVE — 2026-04-16
+**Last Updated:** 2026-04-16 08:15 UTC
 
 ---
 
@@ -23,9 +23,7 @@
 
 ---
 
-## Active Grants Pipeline — Verified 2026-04-14
-
-*Source: `file 'Bxthre3/INBOX/departments/grants.md'` (SBIR-AGENT, 2026-04-14)*
+## Active Grants Pipeline — Verified 2026-04-16
 
 ### P0/P1 — NONE ACTIVE
 
@@ -35,11 +33,11 @@ No grants with confirmed deadlines within 14 days.
 
 | Grant | ID | Agency | Deadline | Amount | Fit | Owner | Status |
 |---|---|---|---|---|---|---|---|
-| **NSF SBIR Phase I** | RAIN-001 | NSF | Rolling | $275K | HIGH — digital ag | maya | ✅ OPEN |
+| **NSF SBIR Phase I** | RAIN-001 | NSF | Rolling | $275K | HIGH — digital ag | maya | ✅ OPEN — most immediately actionable |
 | **ARPA-E OPEN 2026** | ARPA-E-001 | DOE | FA Deadline TBD | $250K–$10M | HIGH — energy/ag | casey | ✅ ACTIVE — DE-FOA-0003567 |
-| **USDA SBIR Phase I FY2026** | IRR-002 | USDA NIFA | FY2026 NOT RELEASED | $125K–$181.5K | HIGH — irrigation | maya | 🔴 TRACK — FY2025 closed 9/17/24 |
 | **USDA REAP** | REAP-001 | USDA RD | Varies [VERIFY] | $300K–$1M | MED-HIGH | maya | 🟡 VERIFY |
 | **CIG Colorado** | FED-CO-003 | USDA NRCS | TBD by CO NRCS | Varies | HIGH — soil/water | casey | 🟡 CONTACT NRCS CO |
+| **USDA SBIR Phase I FY2026** | IRR-002 | USDA NIFA | FY2026 NOT RELEASED | $125K–$181.5K | HIGH — irrigation | maya | 🔴 TRACK — FY2025 closed 9/17/24 |
 
 ---
 
@@ -94,7 +92,7 @@ No grants with confirmed deadlines within 14 days.
 | Runway | ~1 week [VERIFY] |
 | Bridge required | $400K by July 1 (84 days) |
 
-**Implication:** Every grant win extends runway. NSF SBIR ($275K rolling) is the most immediately actionable opportunity.
+**Implication:** NSF SBIR ($275K rolling) is the most immediately actionable opportunity.
 
 ---
 
@@ -107,6 +105,18 @@ No grants with confirmed deadlines within 14 days.
 | CDPHE water grants | CDPHE | RESEARCH |
 | ARS partnerships | USDA ARS | PROSPECT |
 | Land-grant partnerships | CSU / Adams State | OUTREACH |
+
+---
+
+## Priority Actions This Week
+
+| # | Action | Owner | Status |
+|---|---|---|---|
+| 1 | NSF SBIR Phase I — prepare proposal narrative | maya | 🟡 TODO |
+| 2 | Contact CO NRCS (Sarah Stoeber 719-589-6099) — confirm CIG Colorado 2026 deadline | casey | 🟡 TODO |
+| 3 | Verify USDA REAP current round deadline with USDA RD state office | maya | 🟡 TODO |
+| 4 | Monitor ARPA-E eXCHANGE for FA deadline announcement | casey | ⏳ WAITING |
+| 5 | Monitor NIFA monthly for FY2026 SBIR NOFO release | maya | 🔴 TRACK |
 
 ---
 
@@ -131,4 +141,4 @@ No grants with confirmed deadlines within 14 days.
 
 ---
 
-*Government Affairs — Updated 2026-04-14 08:15 UTC*
+*Government Affairs — Updated 2026-04-16 08:15 UTC*

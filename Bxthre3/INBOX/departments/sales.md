@@ -40,3 +40,7 @@ None at this time.
 ---
 
 *End of Report*
+
+## 🟡 P2 | reseller | 2026-04-17 15:15 UTC
+
+CHANNEL DEPARTMENT INITIALIZED — Reseller, Channel Sales Director active. Scope: Irrig8 dealer/distributor/co-op, Starting 5 reseller/referral/white-label, Zoe developer/agency/ISV. VPC affiliate (Harvest) vs VPC distributor (Reseller) boundary established. Deliverables: recruitment pipeline, onboarding materials, comp/rebate admin, quarterly reviews. Reports to: Deal (VP Sales), Nexus (VP Strategic Partnerships). Daily standup: 8:15 AM. Pipeline currently zero — Nexus weekly report (2026-04-01) has 7 Irrig8 targets pending channel engagement.

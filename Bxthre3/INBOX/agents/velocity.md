@@ -1,68 +1,88 @@
 # Velocity — RevOps Lead | Daily Standup
-**Date:** 2026-04-14 | **Time:** 8:15 AM MT  
-**Status:** 🔴 INITIALIZED — No prior state
+**Date:** 2026-04-16 | **Time:** 8:15 AM MT  
+**Status:** 🟡 Active — Day 2
 
 ---
 
 ## System Posture
 
-| System | Status | Notes |
-|--------|--------|-------|
-| Airtable — AgentOS Base | 🟢 Connected | 6 tables active |
-| Airtable — Bxthre3 ECC | 🟢 Connected | 8 tables active |
-| Linear (BX3 Team) | 🟢 Connected | 1 team, 6 issues, 0 initiatives |
+| System | Status | Revenue Visibility |
+|--------|--------|---------------------|
+| Airtable — AgentOS Base | 🟢 Connected | None — no deals table |
+| Airtable — Bxthre3 ECC | 🟢 Connected | None — no deals table |
+| Linear (BX3 Team) | 🟢 Connected | None — project tracking only |
 | Gmail | 🟢 Connected | — |
 | Google Calendar | 🟢 Connected | — |
-| Stripe | ⚠️ Incomplete onboarding | Cannot process payments |
+| Stripe | ⚠️ Incomplete | Cannot invoice |
 
 ---
 
-## Revenue Operations Baseline
+## CRM Audit — Full Findings
 
-### CRM & Pipeline
-**Finding:** No dedicated deal/opportunity tracking table exists in either Airtable base.
+**Zero deal/opportunity/revenue tracking** across all connected CRM systems.
 
-- **Bxthre3 ECC** has `Organizations`, `People`, `Projects` — but no `Deals` or `Opportunities` table
-- **Recommendation:** Create `Deals` table in Bxthre3 ECC with fields: Deal Name, Amount, Stage, Close Date, Venture, Owner, Probability
-- **Priority:** P2 — Blocked by venture consensus on deal structure
-
-### Pipeline Coverage Ratio
-**Finding:** UNKNOWN — no deals data to measure.
-
-### Win Rate by Venture
-**Finding:** UNKNOWN — no closed-won/lost tracking.
-
-### CAC
-**Finding:** UNKNOWN — no cost attribution infrastructure.
-
-### NRR / Churn
-**Finding:** UNKNOWN — no customer success table in either base.
+**Bxthre3 ECC tables:** Organizations, Projects, Tasks, People, Assets, Finances, Legal, Marketing
+**AgentOS Base tables:** Tasks, Table 1, Integrations, Irrig8 Field Data, Agent Reports, Agentic Tasks
+**Linear:** 1 team, 6 issues — no sales pipeline
 
 ---
 
-## Active Revenue-Adjacent Work
+## Revenue Operations Metrics — All UNKNOWN
+
+| Metric | Status | Root Cause |
+|--------|--------|------------|
+| Pipeline Coverage Ratio | UNKNOWN | No deals data |
+| Win Rate by Venture | UNKNOWN | No closed deals |
+| CAC | UNKNOWN | No attribution |
+| NRR | UNKNOWN | No customers |
+| Churn Rate | UNKNOWN | No customers |
+
+---
+
+## Active Revenue Work
 
 | Venture | Work Item | Owner | Status |
 |---------|-----------|-------|--------|
-| **Irrig8** | ARPA-E OPEN 2026 grant (26 days to deadline) | Maya | P1 Active |
+| **Irrig8** | ARPA-E OPEN 2026 grant (15 days to deadline) | Maya | P1 Active |
 | **Irrig8** | 7 provisional patents (due May 15) | Raj | P1 Active |
 | **Irrig8** | Water Court hearing (Jun 29) | RAIN | P1 Active |
-| **ThinkTank (9 drafts)** | 111 TBD decisions blocking spec | brodiblanco | P1 Blocked |
-| **Build-A-Biz** | 109 leads, no CRM | Navigate | P2 Stalled |
+| **ThinkTank** | 111 TBD decisions blocking spec | brodiblanco | P1 Blocked |
+| **VPC** | Sage deal — 20+ days stale on legal docs | Drew | P2 Critical |
+| **VPC** | Danny Romero — 10+ days no response | Drew | P2 Critical |
+| **Build-A-Biz** | 109 leads, no CRM | Drew | P2 Stalled |
 | **VPC** | CIG Colorado GO/NO-GO | Casey | P2 Active |
 
 ---
 
-## Immediate Actions (This Week)
+## P2 Action: Deals Table — Proposed Schema
 
-| # | Action | Priority | Owner |
-|---|--------|----------|-------|
-| 1 | Define deal stages for Build-A-Biz lead pipeline | P1 | Velocity |
-| 2 | Create `Deals` table in Bxthre3 ECC | P2 | Velocity |
-| 3 | Sync Build-A-Biz 109 leads into CRM | P2 | Drew |
-| 4 | Instrument Stripe onboarding completion | P2 | Balance |
-| 5 | Design sales comp plan framework | P3 | Velocity |
-| 6 | Establish CAC tracking (marketing attribution) | P3 | Casey |
+**Proposed for Bxthre3 ECC — Deals table:**
+
+| Field | Type | Notes |
+|-------|------|-------|
+| Deal Name | Single line text | Primary |
+| Venture | Single select | Irrig8 / VPC / Build-A-Biz / ThinkTank / Starting 5 / ARD / Other |
+| Amount | Currency | Deal value |
+| Stage | Single select | Prospect / Qualified / Proposal / Negotiation / Closed Won / Closed Lost |
+| Close Date | Date | Expected close |
+| Owner | Collaborator | Sales rep |
+| Probability | Number % | Auto-linked to stage |
+| Account | Link → Organizations | Customer org |
+| Notes | Long text | |
+
+**Stage → Probability default map:**
+- Prospect: 10%
+- Qualified: 25%
+- Proposal: 50%
+- Negotiation: 75%
+- Closed Won: 100%
+- Closed Lost: 0%
+
+---
+
+## Cash Position
+
+**~$130,450 on hand | ~1 week runway | $387,500 of $400K bridge gap still needed**
 
 ---
 
@@ -70,10 +90,11 @@
 
 | Blocker | Impact | Owner |
 |---------|--------|-------|
-| No `Deals` table in Airtable | Cannot track pipeline | Velocity |
+| No `Deals` table | Cannot track pipeline | Velocity → Drew |
 | Stripe onboarding incomplete | Cannot invoice | Balance |
-| ThinkTank 111 TBDs unresolved | No spec = no deal structure | brodiblanco |
-| CRM hygiene undefined | Data quality unknown | Velocity |
+| ThinkTank 111 TBDs | No product spec | brodiblanco |
+| No sales comp plan | Cannot incentive correctly | Velocity |
+| No CAC tracking | Cannot optimize spend | Casey |
 
 ---
 
@@ -83,13 +104,12 @@
 |-------------|---------|-------------|
 | Deal (VP Sales) | Weekly | Pipeline coverage + win rate |
 | Balance (CFO) | Weekly | Revenue forecast |
-| Atlas (COO) | Weekly | Cross-ventre unified revenue picture |
+| Atlas (COO) | Weekly | Cross-venture unified revenue picture |
+
+---
+
+## Next Standup: 2026-04-17 8:15 AM MT
 
 ---
 
 *Velocity — RevOps Lead*
-*First standup filed: 2026-04-14*
-
-## 🟡 P2 | velocity | 2026-04-14 15:12 UTC
-
-REV OPS INITIALIZED — Baseline assessment complete. Key finding: no Deals table exists in either Airtable base. All revenue metrics (pipeline coverage, win rate, CAC, NRR, churn) are UNKNOWN. Recommend P2 CRM setup task for Drew (Sales). Full standup filed to INBOX/departments/revenue-ops.md.

@@ -1,7 +1,13 @@
-//! Core services — task queue, agent registry, DAP engine, event bus.
+//! Core services — task queue, agent registry, DAP engine, event bus, Truth Gate, Deterministic Shell, Self-Modification Engine, Rollback + Cascade Pause.
 
-pub mod task_queue;
+pub mod truth_gate;
+pub mod shell;
+pub mod self_mod;
+pub mod rollback;
+pub mod ctc_engine;
+pub mod inference;
 pub mod agent_registry;
+pub mod task_queue;
 pub mod dap;
 pub mod event_bus;
 

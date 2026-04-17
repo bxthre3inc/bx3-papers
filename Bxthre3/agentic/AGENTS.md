@@ -1,118 +1,76 @@
-# AGENTS.md — Agentic Session State
+# Agentic — Build Configuration
 
-## Session Snapshot — 2026-04-14T02:20 UTC
+> Last updated: 2026-04-17
 
-### What Exists
+## Context
 
-**API Routes (zo.space — live):**
-- `/api/agentic/status` ✅ operational
-- `/api/agentic/agents` ✅ 19 agents
-- `/api/agentic/tasks` ✅ 15 tasks
-- `/api/agentic/org` ✅
-- `/api/agentic/starting5` ✅ 4 archetypes
-- `/api/agentic/integrations` ✅ 10 integrations
-- `/api/agentic/events/ingest` ✅
-- `/api/agentic/dap/evaluate` ✅
-- `/api/agentic/agents/register` ✅
-- `/api/agentic/android/agents/:id/:action` ✅
-- `/api/agentic/workforce/metrics` ✅
-- `/api/agentic/projects` ✅
-- `/api/agentic/route` ✅ IER router
-- `/api/agentic/feedback/stats` ✅
-- `/api/agentic/phase` ✅
-- `/api/agentic/forensic/trace` ✅
-- `/api/agentic/events/stream` ✅ SSE
-- `/api/agentic/onboarding/scan` ⚠️ broken (zo-agent import)
-- `/api/agentic` ❌ broken (TS module errors)
-- `/api/agentic/projects` ❌ broken
-- `/api/agentic/workforce/metrics` ❌ broken
-- `/api/agentic/depts` ❌ broken
-- `/api/agentic/escalations` ❌ broken
-- `/api/agentic/escalations/notify` ❌ broken
+This is the standalone production build of **Agentic** — the AI workforce orchestration platform from Bxthre3 Inc. It is NOT built on zo.space "parts" — it compiles and runs as a standalone Rust binary, integrating with zo.computer via API calls (not as a embedded subsystem).
 
-**Broken Routes (need fixing):**
-- `/api/agentic` — default export missing
-- `/api/agentic/projects` — zo-agent module not found
-- `/api/agentic/workforce/metrics` — better-sqlite3 path issue
-- `/api/agentic/depts` — module not found
-- `/api/agentic/escalations` — module not found
-- `/api/agentic/escalations/notify` — same
-- `/api/agentic/onboarding/scan` — zo-agent not installed
-
-**Web Routes:**
-- `/agentic` ✅ Chairman Interface (basic) — needs redesign as all-in-one
-- `/` ✅ Marketing page (live)
-- `/roadmap` ✅
-
-**SQLite DBs:**
-- `/data/agentic/agentic.db` ✅ 19 agents, 15 tasks, seeded
-- `/home/workspace/Bxthre3/agentic/store/ier_router.db` ✅ Thompson sampling IER
-
-**Rust Binary:** `/home/workspace/Bxthre3/agentic/target/release/agentic` ✅ 5.3MB
+The zo.space Agentic is the prototype/shell. This repo is the real thing.
 
 ---
 
-## Session Log — What Was Built Today
+## Build Goal
 
-### Fixed
-- 6 broken routes (agents, android/agents, status, tasks, org, starting5) — wired to agenticapi.js
-- 9/10 integrations stub routes
-- Built Rust binary ✅ compile, run, test
-- Seeded SQLite agentic.db with canonical 19 agents + 15 tasks
-- IER Router Thompson sampling ✅ Thompson exploration vs exploit
-- DAP 9-plane evaluation ✅
-- Phase gates ✅
-- FTE (FTE) ✅
-- Feedback loop ✅
-- `/agentic` Chairman Interface (basic React page) ✅
+**Get `agentic-core` binary running on a Linux host (or as a GitHub Actions artifact)**
 
-### Broken (needs fixing)
-- `/api/agentic` — `agentOSApi` module not found (zo-agent package)
-- `/api/agentic/projects` — same
-- `/api/agentic/workforce/metrics` — better-sqlite3 path mismatch
-- `/api/agentic/onboarding/scan` — zo-agent package not installed
-- All routes using `better-sqlite3` — Node.js modules on Bun runtime
-- Rust binary can't connect to zo.space (uses 127.0.0.1 instead of workspace DB path)
+Binary entry point: `src/bin/agentic.rs`
+Library: `src/lib.rs`
+Axum HTTP server on port 3001 (configurable via AGENTIC_PORT env var)
+SQLite persistence (configurable via AGENTIC_DB env var)
 
----
+## Dependencies (Cargo.toml)
 
-## The All-in-One Vision
+```
+axum 0.7, tokio 1.x (full), rusqlite 0.32 (bundled), serde, uuid 1.11.0,
+chrono, sha3 0.10.6, async-trait
+```
 
-**Name:** Agentic
-**URL:** `/agentic`
-**Purpose:** Single dashboard to manage ALL of Bxthre3 Inc from one place
+**Constraint: Rust 1.63 toolchain (cargo 1.65)** — older machine, cannot update
+→ sha3 pinned to 0.10.6, uuid pinned to 1.11.0 to avoid getrandom 0.4.2 which requires edition 2024
 
-**What it must show:**
-- Subsidiary overview (Irrig8, VPC, RAIN, Trenchbabys, ARD, Build-A-Biz)
-- Agent workforce status (19 agents)
-- Active tasks and escalations
-- Grants pipeline (CIG Colorado, USDA SBIR, ARPA-E OPEN)
-- Event stream / cascade live
-- Quick actions: broadcast intent, approve/block agent proposals, view reasoning traces
-- Financials: runway, cash, burn rate
-- Integrations status
+## Key Files
 
-**NOT just a dev dashboard. A real business cockpit.**
+| File | Purpose |
+|------|---------|
+| `Cargo.toml` | Package manifest |
+| `Cargo.lock` | Lock file (regenerated from scratch) |
+| `src/lib.rs` | Core library exports |
+| `src/bin/agentic.rs` | Binary entry point |
+| `src/api/mod.rs` | Axum router + handlers |
+| `src/core/agent_registry.rs` | 18-agent registry |
+| `src/core/dap.rs` | Deterministic Assertion Protocol |
+| `src/db/schema.sql` | SQLite schema |
 
----
+## Build Commands
 
-## Workspace Corruption Issues
+```bash
+# Local (fails — Rust too old)
+cargo build --release
 
-- `better-sqlite3` Node.js module used in Bun/zo.space context → crashes
-- Rust binary hardcodes `/tmp/agentic.db` instead of workspace path
-- zo-agent npm package not installed
-- Some routes have corrupted exports (TS syntax in JS)
-- Git index has orphaned entries from deleted files
+# GitHub Actions (uses latest Rust)
+cargo build --release  # in ubuntu-latest with stable Rust
 
-**Resolution: Fresh session. Rebuild broken routes with Bun-compatible SQLite (Jork, sql.js, or file-based JSON. Do NOT mix Node.js modules in zo.space.**
+# Test binary location
+./target/release/agentic-core
+# Run: AGENTIC_PORT=3001 AGENTIC_DB=/tmp/agentic.db ./target/release/agentic-core
+```
 
----
+## What Needs Fixing
 
-## Rules Going Forward
+1. **Rust toolchain** — cargo 1.65 / Rust 1.63 can't build modern crates
+   - Solution: GitHub Actions uses latest stable, bypasses local constraint
+2. **Cargo.lock** — was regenerated, may need `--locked` after first successful build
+3. **API parity** — `src/api/mod.rs` and `src/api/handlers/` need to match the zo.space prototype endpoints (19 endpoints listed in BUILD_STATUS.md)
 
-1. zo.space runs Bun — use Bun-compatible patterns only
-2. All business data persists via zo.space API routes + filesystem (JSON files in workspace)
-3. Rust binary runs standalone on port 3098 or similar
-4. Don't mix Node.js and Bun module systems
-5. Keep `/agentic` page simple — no complex SSR
-6. Commit working state before structural changes
+## Production Target
+
+Binary runs on any Linux x86_64 host. No runtime dependencies beyond standard library + SQLite (bundled via rusqlite). Serve on port 3001, accepts API calls from zo.computer for integration.
+
+## Environment Variables
+
+| Var | Default | Purpose |
+|-----|---------|---------|
+| AGENTIC_PORT | 3001 | HTTP server port |
+| AGENTIC_DB | /tmp/agentic.db | SQLite database path |
+| LOG_LEVEL | info | tracing log level |

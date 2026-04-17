@@ -81,3 +81,66 @@
 ## 🟢 P3 | reel | 2026-04-14 15:13 UTC
 
 Content Studio first standup logged. Baseline: no prior standups, 13 content tracks not started, 6 blockers identified across VPC compliance, brand narrative, and product readiness. 7 cross-dept handoffs queued.
+
+---
+
+## 🟡 P2 | reel | 2026-04-17 15:05 UTC
+
+### Content Studio — Daily Standup | 2026-04-17 8:15 AM MT
+
+**Status:** Active | 13 tracks unchanged | 6 blockers persistent
+
+#### ✅ Yesterday's Progress
+- Last standup logged 2026-04-15: 13 tracks all blocked/not started, 6 blockers
+- **Gap:** No standup logged 2026-04-16 (standup missed)
+
+#### ⚠️ Critical Status Change
+
+**YC/Techstars submission deadline may have PASSED.**
+- Was Day 3 from Apr 6 ≈ Apr 8 — **[VERIFY]**
+- Scripts were in `GRANTS/VIDEO-SCRIPTS-DUAL.md` but never approved
+- brodiblanco approval blocker aged ~11 days
+- **If submission still open, immediate escalation to Casey + brodiblanco required today**
+
+#### 📐 Content Track Status — Unchanged Since 2026-04-15
+| Track | Status | Since | Change |
+|-------|--------|-------|--------|
+| YC Video A (personal) | 🔴 Blocked | Apr 15 | None — deadline may be past |
+| YC Video B (demo) | 🔴 Blocked | Apr 15 | None — deadline may be past |
+| Techstars Video A | 🔴 Blocked | Apr 15 | None — deadline may be past |
+| Techstars Video B | 🔴 Blocked | Apr 15 | None — deadline may be past |
+| Irrig8 field demo | 🔴 Blocked | Apr 15 | None — Deal approval 16 days stale |
+| Irrig8 farmer testimonials | 🔴 Not started | Apr 15 | None |
+| Irrig8 how-to tutorials | 🔴 Not started | Apr 15 | None |
+| VPC casino promos | 🔴 Blocked | Apr 15 | VPC compliance 15+ days overdue |
+| VPC game trailers | 🔴 Not started | Apr 15 | VPC compliance 15+ days overdue |
+| VPC responsible gaming | 🔴 Not started | Apr 15 | VPC compliance 15+ days overdue |
+| Starting 5 founder interviews | 🔴 Not started | Apr 15 | Drew pipeline 0 targets 23+ days |
+| Starting 5 podcast | 🔴 Not started | Apr 15 | Drew pipeline 0 targets 23+ days |
+| Zoe/Bxthre3 developer tutorials | 🔴 Not started | Apr 15 | No production resources |
+
+#### 🔴 Blockers — Updated Ages
+| Blocker | Owner | Age | Change |
+|---------|-------|-----|--------|
+| YC/Techstars deadline | brodiblanco / Casey | ~11 days | ⚠️ DEADLINE MAY BE PAST |
+| VPC compliance overdue | VPC Agent | 15+ days | +2 days |
+| Deal approval (Irrig8) | Deal | 16 days | +2 days |
+| VPC channel compliance | Harvest/VPC | 15+ days | +2 days |
+| Starting 5 pipeline targets | Drew/Nexus | 23+ days | +2 days |
+| Production resource allocation | Palette/Brand | — | None |
+
+#### 📋 Cross-Dept Handoffs — Status
+1. Casey → brodiblanco: Script approval — **OVERDUE, DEADLINE MAY BE PAST**
+2. Content Studio → Deal: Irrig8 outreach — 16 days stale, no response
+3. Content Studio → Harvest: VPC compliance — 15 days stale, no response
+4. Content Studio → Drew: Starting 5 targets — 23 days stale, no response
+5. Content Studio → Palette: Production resources — no response
+6. Content Studio → Brand: Content calendar — no response
+7. Casey → Iris: Agentic dashboard access — [VERIFY if resolved]
+
+#### 🎯 Today's Priority Actions
+1. **[P0] Casey to verify YC/Techstars submission status** — if open, escalate brodiblanco for immediate script approval
+2. **[P1] VPC compliance walk** — 15 days overdue, entire VPC content track frozen
+3. **[P1] Deal follow-up** — 16-day stale Irrig8 approval needs resolution or escalation
+4. **[P2] Drew escalation** — 23 days no Starting 5 pipeline, request brodiblanco intervention
+

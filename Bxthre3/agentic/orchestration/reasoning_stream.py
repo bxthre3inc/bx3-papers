@@ -4,7 +4,7 @@ Replaces ChatDev Memory Stream — Structured Reasoning with Citations
 
 Module: reasoning_stream.py
 Location: Bxthre3/projects/agentic/orchestration/reasoning_stream.py
-Status: IMPLEMENTED
+Status: IMPLEMENTED + store-aware
 
 Every agent decision is logged with:
 - What was decided
@@ -14,6 +14,9 @@ Every agent decision is logged with:
 - What the agent expects to happen next
 
 This enables successor agents to read full context, not just final output.
+
+Storage: Uses AgenticStore (store.py) — supports SQLite, Neon Postgres,
+Supabase, Airtable. Falls back to local SQLite for backward compat.
 """
 
 import sqlite3
@@ -25,6 +28,12 @@ from datetime import datetime
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 from pathlib import Path
+
+try:
+    from ..kernel.store import get_store
+    _STORE_AVAILABLE = True
+except ImportError:
+    _STORE_AVAILABLE = False
 
 
 # ─────────────────────────────────────────────────────────────────

@@ -21,6 +21,46 @@
 - **Weekly Report:** Fridays → Brand + Optimize
 
 
+## 2026-04-17 Morning Standup Summary
+
+**Lead:** Rank | **Time:** 8:15 AM MT | **Status:** ✅ Filed — `seo-sem-standup-2026-04-17.md`
+
+### Standup Gaps
+- 2026-04-16 (Thu) — retro filed 2026-04-17
+- 2026-04-13 (Sun) — expected weekend gap
+
+### Today's Priorities
+1. Irrig8 GBP claim (Day 18 critical path)
+2. Irrig8 directory batch (Yelp, Bing Places, Irrigation Association)
+3. VPC ASO follow-up (app update window)
+4. Google Ads account escalation (Day 18 — Brand/Optimize)
+5. Zoe GitHub repo audit
+6. Starting 5 content mapping with Casey
+
+### Blockers
+- **Google Ads account** — Brand/Optimize (18 days overdue)
+- **VPC compliance** — Raj gambling policy (15 days)
+- **Conversion tracking** — Optimize ownership
+
+### Accomplishments
+- Starting5 keyword doc created (`starting5-seo/KEYWORDS.md`)
+- Standup retro for 2026-04-16 filed
+
+### Campaign Status
+| Campaign | Status | Notes |
+|---------|--------|-------|
+| Irrig8 Google Ads | 🔴 BLOCKED | No account access (18 days) |
+| Irrig8 SEO + Directories | 🟡 Planning | GBP unclaimed, directory batch pending |
+| Starting 5 Google Ads | 🔴 BLOCKED | No account access |
+| Starting 5 SEO | 🟡 Building | Keyword doc ✅ — Casey alignment pending |
+| VPC Google Ads | 🔴 BLOCKED | Raj compliance review (15 days) |
+| VPC ASO | 🟡 Ready | Metadata ready — awaiting app update window |
+| Zoe Google Ads | 🔴 BLOCKED | No account access |
+| Zoe SEO | 🟡 Building | GitHub seeding + AI/developer content |
+| Bxthre3 Corporate SEO | 🟡 Planning | Investor content + founder brand |
+
+---
+
 ## 2026-04-10 Morning Standup Summary
 
 **Lead:** Rank | **Time:** 8:15 AM MT | **Status:** ✅ Filed — `seo-sem-standup-2026-04-10.md`

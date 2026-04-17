@@ -2,7 +2,7 @@
 **Department:** Product Operations — Agentic Product Management
 **Lead:** Prime
 **Reports to:** Roadmap (VP Product), Atlas (COO)
-**Last Updated:** 2026-04-07 15:10 UTC
+**Last Updated:** 2026-04-16 15:05 UTC
 
 ---
 
@@ -40,63 +40,59 @@
 
 | P1 | Source | Status | Product Ops Interface |
 |---|---|---|---|
-| Agentic dedup test failure (QA) | QA-Lead Agent | Open — Mesh-Engineer owns fix | Release coordination blocked until resolved |
-| Water Court evidence gaps | Water Court Agent | Open — Rain + brodiblanco | Irrig8 field ops capacity affected |
-
----
+| VPC WY LLC + Bonds | government | 🔴 OPEN — no resolution | VPC launch blocked; first node down |
+| Sync orchestrator failure | logger | 🟡 Compensated; orchestrator health unresolved | Release coordination + standup logs affected |
+| ARPA-E OPEN 2026 (May 1) | grants | 🔴 Active sprint | 15 days; Casey leading |
+| 7 Provisional Patents (May 15) | legal | 🔴 Open | 29 days; Raj owns |
 
 ## Active Initiatives
 
 | Initiative | Status | Owner | Notes |
 |---|---|---|---|
-| RICE/ICE Prioritization Framework | 🟡 P2 — Awaiting approval | Prime | `COMMAND_CENTER/PRIORITIZATION_FRAMEWORK.md` — needs Roadmap + Atlas sign-off |
-| Agentic Feature Backlog | 🟡 P2 — Not initialized | Prime + Roadmap | Blocked on first Roadmap sync |
-| Irrig8 Feature Backlog | 🟡 P2 — Not initialized | Prime + Irrig8 | Water court capacity drag |
-| Feature Flag Dashboard | 🟡 P2 — Not started | Prime + Iris | Cross-ventures unified view needed |
-| GTM Launch Checklist | 🟡 P2 — Not started | Prime + Casey | Pending framework approval |
-| Product Council Charter | 🟡 P2 — Not started | Prime + Roadmap | Blocked on framework + sync |
-| Q2 Roadmap Review | ⏳ Scheduled | Prime + Roadmap | 72 days remaining — QBR Jun 15 |
-| Cross-Venture Synergies | 🟡 P2 — Not mapped | Prime + Navigate | Ad-hoc |
-
----
+| RICE/ICE Prioritization Framework | 🟡 Awaiting approval | Prime | Draft v1.0 — pending Roadmap + Atlas sync |
+| Agentic Feature Backlog | ⏳ Pending sync | Prime + Roadmap | Blocked on first Roadmap sync (9+ days stalled) |
+| Irrig8 Feature Backlog | ⏳ Pending sync | Prime + Irrig8 | Water court capacity drag |
+| Feature Flag Dashboard | ⏳ Not started | Prime + Iris | Cross-ventures unified view needed |
+| GTM Launch Checklist | ⏳ Not started | Prime + Casey | Pending framework approval |
+| Product Council Charter | ⏳ Not started | Prime + Roadmap | Blocked on framework + sync |
+| Q2 Roadmap Review | ⏳ Scheduled | Prime + Roadmap | 60 days — QBR Jun 15 |
+| Cross-Venture Synergies | 🟡 Ad-hoc | Prime + Navigate | Agentic ↔ Irrig8 integration points TBD |
+| Sync Orchestrator Health | 🟡 Under observation | Prime + Sentinel | April 14 failure — orchestrator not confirmed restored |
 
 ## Cross-Functional Interfaces
 
 | Partner | Interface | Status | Notes |
 |---|---|---|---|
-| Roadmap (VP Product) | Roadmap owner | 🔴 Blocked | First sync not yet completed — this week |
-| Atlas (COO) | Reports to | 🔴 Blocked | First sync not yet completed — this week |
-| Scout/R&D | Competitive intel | ⏳ Ad-hoc | Ad-hoc — no formal sync |
-| Lens | User research | ⏳ Ad-hoc | Ad-hoc — no formal sync |
-| Brand/Casey | GTM launches | ⏳ Pending | Pending framework + launch checklist |
-| Sales/Drew | GTM launches | ⏳ Pending | Pending framework + launch checklist |
+| Roadmap (VP Product) | Roadmap owner | 🔴 Blocked | First sync 9+ days overdue; framework + backlog pending |
+| Atlas (COO) | Reports to | 🔴 Blocked | First sync not yet completed |
+| Scout/R&D | Competitive intel | ⏳ Ad-hoc | No formal sync established |
+| Lens | User research | ⏳ Ad-hoc | No formal sync established |
+| Brand/Casey | GTM launches | 🔴 Active | ARPA-E sprint; GTM checklist pending framework |
+| Sales/Drew | GTM launches | 🔴 Blocked | VPC launch blocked on WY LLC + bonds |
 | CS/Grow | Post-launch | ⏳ Pending | No launches yet |
-| Engineering/Iris | Feature delivery | ⏳ Pending | Pipeline not yet defined |
+| Engineering/Iris | Feature delivery | 🟡 Active | ARPA-E tech content; sensor sims |
 | QA | Release gates | 🔴 Active | Dedup test failure blocking Agentic release |
-
----
 
 ## Product Metrics Context
 
-| Product | Stage | Key Metric | Target | Status |
-|---|---|---|---|---|
-| Irrig8 | Field ops | Water savings % | [TBD] | No baseline — need sensor data |
-| VPC | Pre-launch | Jurisdictional compliance | Jul 1 geo-block | On track |
-| Agentic | Platform | Agent utilization rate | [TBD] | No baseline — platform not instrumented |
-| Agentic | Platform | Task completion rate | [TBD] | No baseline — platform not instrumented |
-
----
+| Product | Stage | Key Metric | Target | Baseline | Status |
+|---|---|---|---|---|---|
+| Irrig8 | Field ops | Water savings % | TBD | No baseline | Need sensor data post-water court |
+| VPC | Pre-launch | Jurisdictional compliance | Jul 1 geo-block | TBD | On track pending WY LLC |
+| Agentic | Platform | Agent utilization rate | TBD | No baseline | Platform not instrumented |
+| Agentic | Platform | Task completion rate | TBD | No baseline | Platform not instrumented |
 
 ## Financial Context
 
 | Metric | Value | Source |
 |---|---|---|
-| Q2 Opening Cash | $130,450 | FPA |
-| 13-Week Burn | ($493K) → ($362K) ending Jun 30 | FPA |
-| Bridge Needed | $400K before Jul 1 | IR |
-| Series A Target | $15M, Jul 2026 | IR |
+| Cash on hand | ~$130,450 | [VERIFY — FPA entry 2026-04-08] |
+| Weekly burn | ~$130K | IR |
+| Runway | ~1 week | IR |
+| Bridge needed | $400K before Jul 1 | IR |
+| Series A target | $15M, Jul 2026 | IR |
 | Current ARR | $0 (pre-revenue) | IR |
 
 ---
 
-*Product Ops — Agentic Product Management Department*
+*Product Ops — Agentic Product Management Department | Updated 2026-04-16*

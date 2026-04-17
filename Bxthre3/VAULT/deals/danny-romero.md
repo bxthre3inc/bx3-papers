@@ -13,8 +13,8 @@
 ## Current Status
 🔴 STALE — **9 days no contact** (threshold exceeded 2026-04-13). P2 escalated to INBOX.md at 2026-04-14 15:05 UTC. SMS outreach sent 2026-04-06 + follow-up 2026-04-07. Zero response. Deal requires brodiblanco intervention or abandonment.
 
-## DEAL-AGENT Scan — 2026-04-15 09:05 UTC
-- **Days since last contact:** 9 (2026-04-06 last SMS)
+## DEAL-AGENT Scan — 2026-04-17 15:05 UTC
+- **Days since last contact:** 11 (2026-04-06 last SMS)
 - **Escalation status:** P2 written to INBOX.md (2026-04-14)
 - **Bridge contribution:** $10K (2.5% of $400K target)
 - **Cash position:** $130,450 | Runway: ~1 week
@@ -29,7 +29,9 @@
 | 2026-04-09–04-13 | DEAL-AGENT runs | No response |
 | 2026-04-13 | **7-day threshold EXCEEDED** | Stale |
 | 2026-04-14 | **P2 escalated to INBOX.md** | Escalated |
-| 2026-04-15 | **DEAL-AGENT scan** — 9 days stale | No change |
+| 2026-04-15 | DEAL-AGENT scan — 9 days stale | No change |
+| 2026-04-16 | DEAL-AGENT scan — 10 days stale | No change |
+| 2026-04-17 | DEAL-AGENT scan — 11 days stale | No change — P2 already in INBOX |
 
 ## Next Steps
 1. **Option A:** brodiblanco direct outreach to Danny Romero (last resort revival)

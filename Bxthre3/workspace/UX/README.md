@@ -23,7 +23,7 @@ UX/
 ├── usability-tests/       # Per-feature usability test reports
 ├── interviews/            # Interview transcripts, notes, recordings
 ├── journey-maps/          # User journey maps per venture
-├── insights-briefs/        # Weekly research insights briefs
+├── insights-briefs/       # Weekly research insights briefs
 └── research-repository/   # Raw research data, competitive analysis, surveys
 ```
 
@@ -33,18 +33,41 @@ UX/
 
 | Venture | Method | Status | Next Milestone |
 |---------|--------|--------|----------------|
-| Irrig8 | Farmer interviews | 🟡 Script ready | First interviews 2026-04-15 |
-| Agentic | Heuristic evaluation | 🔴 In progress | Dashboard eval 2026-04-08 |
+| Irrig8 | Farmer interviews | 🟡 Script ready, interviews pending candidate introductions | First interviews 2026-04-22 |
+| Agentic | Heuristic evaluation | ✅ Complete | Dashboard fix in progress |
 | Starting 5 | Product definition needed | 🔴 Blocked | Awaiting Roadmap brief |
-| VPC | Player research | 🔴 Not started | Awaiting VPC walkthrough |
+| VPC | Player research | 🔴 Blocked | Awaiting compliance resolution |
+
+---
+
+## Deliverables
+
+| Deliverable | Version | Date | Status |
+|-------------|---------|------|--------|
+| Irrig8 Farmer Persona v1 | 1.0 | 2026-04-16 | ✅ Created |
+| Weekly Research Insights Brief #1 | 001 | 2026-04-16 | ✅ Created |
+| AOS Dashboard Heuristic Evaluation | 1.0 | 2026-04-08 | ✅ Complete — 26/50 (POOR) |
 
 ---
 
 ## Key Assets
 
-- `FARMER_INTERVIEW_SCRIPT.md` (Irrig8 docs) — Pre-existing interview protocol
-- `MASTER_MANUAL.md` (Irrig8 docs) — System documentation for context
+| Asset | Location | Notes |
+|-------|----------|-------|
+| FARMER_INTERVIEW_SCRIPT.md | `the-irrig8-project/docs/` | Pre-existing interview protocol (2026-03-19) |
+| MASTER_MANUAL.md | `the-irrig8-project/docs/md/` | System documentation (2026-03-14) |
+| AOS Dashboard Heuristic Evaluation | `UX/usability-tests/AOS_DASHBOARD_HEURISTIC_EVALUATION.md` | 26/50 — critical findings documented |
 
 ---
 
-*Last Updated: 2026-04-08 by Lens*
+## Blockers
+
+| Blocker | Owner | Days Active | Impact |
+|---------|-------|-------------|--------|
+| Farmer interview introductions | irrig8 / brodiblanco | 9 days | Irrig8 interviews cannot proceed |
+| Starting 5 product definition | Roadmap | 9 days | Founder interviews blocked |
+| VPC compliance resolution | VPC / Rain | 9 days | Player research blocked |
+
+---
+
+*Last Updated: 2026-04-16 by Lens*
