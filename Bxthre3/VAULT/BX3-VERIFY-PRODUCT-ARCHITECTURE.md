@@ -95,41 +95,61 @@ Level 4: Sub-issue
     └── Nested work under an Issue
 ```
 
-### 3.2 Bxthre3 Inc + Subsidiaries Structure
+### 3.2 Entity Structure
 
-**Format: `ENTITY.TIER.SEQUENCE`**
+**Format: `ENTITY.TIER`** (e.g., `01.3` = VPC L3 Initiative)
 
-```
-000 (brodiblanco — Chairman/apex)
-    └── BX3 (holding company + operating business)
-        ├── BX3.DEPT.Legal (shared service)
-        ├── BX3.DEPT.Finance (shared service)
-        ├── BX3.DEPT.Engineering (shared service)
-        └── BX3.DEPT.HR (shared service)
-        ├── BX3.1 (Intent — BX3's own strategic work)
-        ├── BX3.3 (Initiative)
-        ├── BX3.4 (Project)
-        └── BX3.5 (Issue)
+| Digits | Entity | Type |
+|--------|--------|------|
+| `000` | brodiblanco | Apex / Chairman / Human Root |
+| `00` | Bxthre3 Inc | Holding company + operating business |
+| `01` | VPC | Subsidiary |
+| `02` | Irrig8 | Subsidiary |
+| `03` | RAIN | Subsidiary |
+| `04` | ARD | Subsidiary |
+| `05` | Build-A-Biz | Subsidiary |
 
-01 — VPC (subsidiary)
-    ├── 01.1 (Intent — owned by VPC lead)
-    ├── 01.2 (Team)
-    ├── 01.3 (Initiative — cross-team)
-    ├── 01.4 (Project)
-    ├── 01.5 (Issue)
-    └── 01.6 (Sub-issue)
+**Tier levels (same for all entities):**
 
-02 — Irrig8 (subsidiary)
-    ├── 02.1 (Intent)
-    ├── 02.2 (Team)
-    ├── 02.3 (Initiative)
-    ├── 02.4 (Project)
-    ├── 02.5 (Issue)
-    └── 02.6 (Sub-issue)
+| Tier | Name | Description |
+|------|------|-------------|
+| `1` | Intent | Strategic bet — owned by human (Purpose layer) |
+| `2` | Team | Group of people executing work |
+| `3` | Initiative | Cross-team grouping of Projects — the Intent in motion |
+| `4` | Project | Owned by Team Lead — groups related Issues |
+| `5` | Issue | Execution unit — maps to Fact Layer activity |
+| `6` | Sub-issue | Nested work under an Issue |
 
-03 — RAIN
-04 — ARD
-05 — Build-A-Biz
+**BX3 (entity `00`) — holding + operating:**
+
+Bxthre3 Inc is unique: it's both a holding company with shared services AND an operating business with its own work.
+
+Shared departments (shared across all subsidiaries):
+- 00.DEPT.Legal
+- 00.DEPT.Finance  
+- 00.DEPT.Engineering
+- 00.DEPT.HR
+
+BX3's own operational hierarchy (its own strategic work):
+- 00.1 — BX3 Intent
+- 00.2 — BX3 Team
+- 00.3 — BX3 Initiative
+- 00.4 — BX3 Project
+- 00.5 — BX3 Issue
+
+**Subsidiaries (entity `01`-`05`):**
+
+Each subsidiary has its own full L1-L6 hierarchy:
+
+01.1 — VPC Intent #1
+01.2 — VPC Team
+01.3 — VPC Initiative (cross-team)
+01.4 — VPC Project
+01.5 — VPC Issue
+01.6 — VPC Sub-issue
+
+02.1 — Irrig8 Intent #1
+[... same structure ...]
 ```
 
 ### 3.3 Shared Departments vs Subsidiary Departments
