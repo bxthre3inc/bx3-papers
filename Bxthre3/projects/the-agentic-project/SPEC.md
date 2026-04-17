@@ -184,10 +184,160 @@ Zo Prototype (prove it)
 
 ---
 
-## 8. Reference
+## 8. P0 Improvements — Implementation Checklist
 
-- Live endpoints: `https://brodiblanco.zo.space/api/agentic/*`
-- Dashboard: `https://brodiblanco.zo.space/agentic`
-- Source: `Bxthre3/projects/the-agentic-project/`
-- Standalone: `github.com/bxthre3inc/agentic`
-- Full variant audit: `Bxthre3/INBOX/agentic-variant-audit.md`
+### [ ] 8.1 Wire Truth Gate into Inference Path
+
+**Problem:** `/api/agentic/truth-gate/check` is a standalone route. It needs to be in the inference call chain.
+
+**Implementation:**
+```typescript
+// In every agent inference route:
+const verification = await truthGate.verify({
+  data_class: "market_intel",
+  payload: llm_output,
+  source_hash: sha3(data)
+});
+if (verification.killed) {
+  return c.json({ blocked: true, reason: verification.reason }, 400);
+}
+```
+
+**Files to change:** `Bxthre3/projects/the-agentic-project/src/routes/truth-gate.ts`
+
+---
+
+### [ ] 8.2 Persistent IER Q-Table
+
+**Problem:** Q-learning gains lost on Zo restart.
+
+**Implementation:**
+```typescript
+// On every routing decision — save:
+const qtablePath = "/dev/shm/agentic/ier-qtable.json";
+const qtable = JSON.parse(await readFile(qtablePath));
+qtable[stateKey][agentId] = { q_value, visit_count, last_updated };
+await writeFile(qtablePath, JSON.stringify(qtable));
+
+// On startup — load:
+const qtable = JSON.parse(await readFile(qtablePath));
+IERRouter.loadQTable(qtable);
+```
+
+**Files to change:** `Bxthre3/shared/agentic/orchestration/ier_router.py`
+
+---
+
+### [ ] 8.3 Chairman Queue Dashboard Tab
+
+**Problem:** T2 tools route but there's no UI to approve.
+
+**Implementation:** Add 7th tab to `/agentic` dashboard:
+
+```typescript
+// New tab: Queue
+const pending = await db.from("chairman_queue")
+  .where("status", "PENDING")
+  .orderBy("created_at", "asc");
+
+// Each row shows:
+// - Requesting agent
+// - Proposed action + params
+// - Rationale
+// - Risk
+// - Alternatives
+// - [Approve] [Deny] [Request Clarification] buttons
+```
+
+**Files to change:** `Bxthre3/projects/the-agentic-project/client/pages/queue.tsx`
+
+---
+
+### [ ] 8.4 Cascade Checkpoint + Recovery
+
+**Problem:** Cascade failure leaves uncertain state.
+
+**Implementation:**
+```typescript
+// Every cascade step writes checkpoint:
+await db.insert("cascade_checkpoints", {
+  cascade_id,
+  step: currentStep,
+  state_snapshot: JSON.stringify(cascadeState),
+  timestamp: Date.now()
+});
+
+// On crash recovery:
+const lastCheckpoint = await db.where("cascade_id", cascadeId)
+  .orderBy("step", "desc").first();
+restoreFromSnapshot(lastCheckpoint.state_snapshot);
+```
+
+**Files to change:** `Bxthre3/shared/agentic/core/cascade.py`
+
+---
+
+### [ ] 8.5 LinkedIn Auto-Content Generation
+
+**Problem:** OAuth works but content is manual.
+
+**Implementation:**
+```typescript
+// Wire IER router to generate from agent task context:
+const context = await getAgentTaskContext(agentId);
+const draft = await IERRouter.generateLinkedInPost({
+  agent_id: agentId,
+  task_context: context,
+  tone: "professional",
+  max_length: 3000
+});
+// Post to chairman queue for approval before going live
+```
+
+**Files to change:** `Bxthre3/projects/the-agentic-project/src/routes/linkedin.ts`
+
+---
+
+### [ ] 8.6 Peer Bridge: Zo ↔ Standalone MCP Mesh
+
+**Problem:** Standalone and Zo prototype are separate environments.
+
+**Implementation:**
+```yaml
+# In ABE sync_engine/peer_bridge.py — add standalone as peer:
+PEERS = {
+  "zo": "wss://brodiblanco.zo.space/api/mcp",
+  "standalone": "http://localhost:3001/api/mcp"
+}
+
+# On Zo: delegate compute-heavy tasks to standalone:
+if task.complexity > COMPLEXITY_THRESHOLD:
+  await peer_bridge.delegate_task(task, target="standalone")
+```
+
+**Files to change:** `Bxthre3/shared/agentic/sync_engine/peer_bridge.py`
+
+---
+
+## 9. Variant Comparison Summary
+
+| Dimension | Zo Prototype | Standalone v1 |
+|-----------|-------------|---------------|
+| **Hosting** | Zo Computer (managed) | Any machine (self-hosted) |
+| **Language** | TypeScript/Bun | Rust |
+| **Inference** | Zo AI API | External LLM |
+| **Data store** | In-memory JSON | SQLite |
+| **Startup time** | ~2s | ~200ms |
+| **Dependencies** | Zo platform | None (static binary) |
+| **Offline capable** | No | Yes (with cached SEM) |
+| **Docker** | N/A | ✅ |
+| **Multi-arch** | N/A | ✅ amd64 + arm64 |
+
+---
+
+## 10. Reference
+
+- Standalone source: `github.com/bxthre3inc/agentic`
+- Zo prototype code: `Bxthre3/projects/the-agentic-project/`
+- Shared orchestration: `Bxthre3/shared/agentic/`
+- Full gap audit: `Bxthre3/INBOX/agentic-variant-audit.md`
