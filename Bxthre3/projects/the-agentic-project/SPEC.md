@@ -1,309 +1,193 @@
-# AgentOS / Agentic — Product Specification
-## Built on the BX3 Universal Architecture v6.1
-
-| Field | Value |
-|-------|-------|
-| **Spec ID** | AGENTOS-BX3-2026-V1.3 |
-| **Framework** | BX3 Universal Architecture v6.1 |
-| **Date** | April 12, 2026 |
-| **Author** | Jeremy Beebe, Bxthre3 Inc. |
-| **Status** | ACTIVE — Production Deployed |
-| **Supersedes** | All prior AgentOS specs |
-| **Live Endpoints** | 70+ API routes on brodiblanco.zo.space/api/agentic/* |
+# Agentic — Zo-Space Prototype Specification
+**Variant:** Zo-Native | **Status:** Production Deployed
+**Canonical source:** `Bxthre3/projects/the-agentic-project/SPEC.md`
 
 ---
 
-## 1. Product Overview
+## 1. Identity
 
-**AgentOS** (also known as Agentic) is an AI workforce orchestration platform built on the BX3 Universal Architecture. Every agent, every task, every execution is a bounded BX3 Loop. No agent can propose and execute. No agent can act without a human accountability anchor. Every action is on the Ledger.
+The Zo-space prototype is the **running proof-of-concept** for Agentic on Bxthre3's Zo Computer. It demonstrates all core orchestration concepts via live routes at `https://brodiblanco.zo.space/api/agentic/*`.
 
-**Who it's for:** Businesses that need AI workforces they can trust with high-stakes operations. Regulated industries, critical infrastructure, financial operations, legal, healthcare.
-
-**Why it's different:** Every competitor in AI workforce orchestration has agents that reason and act on the same plane. AgentOS enforces the BX3 three-property separation as the runtime architecture — not a policy.
-
-**Current state:** 70+ production routes deployed across /api/agentic/* including workforce management, DAP evaluation, forensic tracing, FTE synthesis, voice command, LinkedIn integration, OTA updates, and Android task management.
+It is NOT a separate product. It is Agentic running on Zo infrastructure.
 
 ---
 
-## 1b. The Chairman Paradigm
+## 2. What Currently Exists
 
-AgentOS operates as a **recursive intelligence mesh** with a single Root Authority.
-
-- **The Chairman** (brodiblanco) sits at the apex — the single decision authority
-- **Orchestrators** (Zoe, Atlas, Vance) decompose intent and route tasks
-- **Workers** execute atomic tasks and return verifiable outputs
-
-**The Trust Invariant:** Every summary provided to the Chairman must be trace-linked back to the raw Leaf-Node data that generated it. This is not a guideline — it is architecturally enforced by the FTE.
-
-**Abstraction Leakage** is the core problem the Chairman Paradigm solves: when a human "logs in" to a sub-node (conventional systems), they lose global context and the audit trail fractures. AgentOS solves this via **Root Tunneling** (Pillar 4) — the Chairman projects authority into any node without collapsing the hierarchy. The node structure is tunneled, not flattened.
-
----
-
-## 2. The BX3 Loop as Runtime Architecture
+### Live API Routes (70+ on brodiblanco.zo.space)
 
 ```
-PURPOSE ────► BOUNDS ENGINE ────► FACT LAYER
-  ("Why")         ("How")             ("Action")
-     ▲               ▲                   ▲
-  Human          Limbless            Deterministic
-  Anchor         Proposer            Physical Firewall
+GET  /api/agentic/status              — version, agents, metrics
+GET  /api/agentic/agents             — all 19 roster entities
+GET  /api/agentic/tasks              — all tasks with status
+POST /api/agentic/tasks              — create task
+GET  /api/agentic/org               — org chart
+GET  /api/agentic/workforce/metrics  — workforce KPIs
+GET  /api/agentic/depts             — departments
+GET  /api/agentic/integrations      — connected services
+GET  /api/agentic/escalations       — active escalations
+GET  /api/agentic/starting5         — Starting 5 co-founders
+GET  /api/agentic/projects          — BX3 project list
+GET  /api/agentic/forensic/trace    — audit trail
+GET  /api/agentic/events/stream     — SSE event stream
+POST /api/agentic/events/ingest     — ingest external event
+POST /api/agentic/agents/register   — register agent
+POST /api/agentic/dap/evaluate      — 9-plane DAP evaluation
+POST /api/agentic/truth-gate/check  — hallucination check
+POST /api/agentic/shell/evaluate    — shell command evaluation
+POST /api/agentic/sem               — SEM worksheet ops
+POST /api/agentic/fte/synthesize    — FTE synthesis
+GET  /api/agentic/bench             — benchmark
+GET  /api/agentic/lifecycle         — lifecycle state
+GET  /api/agentic/cascade           — cascade status
+GET  /api/agentic/coherence         — coherence check
+GET  /api/agentic/subscriptions     — agent subscriptions
+POST /api/agentic/voice/stt         — speech to text
+POST /api/agentic/voice/tts         — text to speech
+POST /api/agentic/voice/command     — voice command
+GET  /api/agentic/linkedin/connect  — LinkedIn OAuth init
+GET  /api/agentic/linkedin/callback — LinkedIn OAuth callback
+POST /api/agentic/linkedin/post     — post to LinkedIn
+GET  /api/agentic/linkedin/status   — connection status
 ```
 
-### Purpose Layer (Owner Interface)
+### Web Dashboard
+**URL:** `https://brodiblanco.zo.space/agentic` (6 tabs: Status, Agents, Tasks, Org, Starting 5, Integrations)
 
-**Actor:** Human owner or designated Human Accountability Anchor.
-
-**What it does:**
-- Sets strategic goals for the agent
-- Defines authorization boundaries (what this agent is NOT permitted to do)
-- Establishes escalation thresholds (when to throw to the Bailout Protocol)
-- Reviews the Ledger for accountability
-
-**Product feature:** Owner Dashboard (web + mobile) — goal-setting, Ledger view, exception monitoring, authorization boundary config.
-
-**Constraint:** Purpose layer MUST remain Human-anchored. Architecturally enforced at the Fact Layer.
-
-### Bounds Engine (Agent Reasoning)
-
-**Actor:** Zo — the heuristic reasoning engine that powers AgentOS agents.
-
-**What it does:**
-- Task decomposition, planning, prioritization, risk assessment
-- Models outcomes in Sandbox before proposing
-- Generates proposals — never executes
-- Operates in a sandboxed cognitive environment with no physical execution permissions
-
-**Product feature:** Agent Reasoning Interface — proposal explanations, simulation results, confidence scores, bounds display.
-
-**Constraint:** Limbless. Cannot directly commit acts to external systems without passing through the Fact Layer.
-
-### Fact Layer (AgentOS Executor)
-
-**Actor:** The AgentOS execution engine — deterministic gate between proposal and action.
-
-**What it does:**
-- Receives proposals from Bounds Engine
-- Validates against: (a) owner's authorization boundaries, (b) hard-coded safety constraints, (c) regulatory rules
-- Executes ONLY approved actions
-- Logs every event to the Ledger with SHA-256 forensic sealing
-- Triggers Bailout Protocol if condition falls outside provisioned bounds
-
-**Product feature:** Execution Firewall — action log, blocked actions with reasons, complete forensic audit trail.
-
-**Constraint:** 100% deterministic. If a proposal violates a constraint, it is blocked. Only override is from Purpose Layer (human owner).
+### Data Stores (in-memory on Zo)
+- Event store: `/dev/shm/agentic/event-store.json` (1500+ events)
+- Agent store: `/dev/shm/agentic/agent-store.json` (19 agents)
+- Thompson Q: `/dev/shm/agentic/thompson-q.json` (18 entries)
+- Task store: `/dev/shm/agentic/task-store.json` (24 tasks)
 
 ---
 
-## 3. The Five Pillars as Product Features
+## 3. Architecture (Zo Prototype)
 
-### Pillar 1: Loop Isolation — Task Isolation Mode
-
-Every task an agent performs is a self-contained BX3 sub-loop. The agent's Bounds Engine works inside the task. The Fact Layer gates task outputs. The Purpose Layer provides task context.
-
-**Product behavior:**
-- Tasks cannot share state without going through the Fact Layer
-- A compromised Bounds Engine in one task cannot bleed into another task's execution
-- Task outputs are gated by the Fact Layer before being passed to the next task
-- Agents that call other agents must route through the Fact Layer — no direct agent-to-agent execution
-
-### Pillar 2: Recursive Spawning — Child Agents
-
-A parent agent births a child agent by provisioning a **Worksheet** — a containerized, self-contained logic set tailored to a specific context.
-
-**Product behavior:**
-- Parent provisions a child agent Worksheet via OTA delivery
-- Child has its own BX3 loop with hard-coded pointer to parent's Purpose
-- Child operates independently during cloud disconnection (Local Survivability)
-- Child's telemetry and execution logs route to parent's Ledger view
-
-**Child Agent properties:**
-- Inherits parent's Purpose boundaries
-- Has independent Bounds Engine and Fact Layer
-- Can be revoked at any time by parent or human owner
-
-### Pillar 3: Spatial Firewall — Tiered Data Access
-
-AgentOS enforces data access through capability tiers. Different tiers get access to different data planes.
-
-| Tier | Label | Data Access | Execution Permissions |
-|------|-------|-------------|----------------------|
-| Tier 1 | Observer | Aggregated summaries only | Read-only |
-| Tier 2 | Analyst | Time-series data, reports | Generate insights, no external calls |
-| Tier 3 | Operator | Full data plane, integrations | Execute within authorization boundaries |
-| Tier 4 | Admin | All planes, all integrations | Execute with HITL approval for high-stakes |
-
-### Pillar 4: Root Tunneling — Owner Override
-
-The human owner can project their Purpose into any agent or task without disrupting the hierarchy. This is NOT a "login" — it is a dedicated I/O pipe.
-
-**Sandbox Gate (Pre-Execution Simulation):**
-- Zo models projected outcome in digital twin environment
-- Owner reviews the projected outcome
-- Explicit HITL approval required before Fact Layer unlocks execution
-
-### Pillar 5: Bailout Protocol — Exception Escalation
-
-If an agent's Bounds Engine encounters a condition it cannot resolve, it fires a **Bailout Trigger** — an async signal that propagates up the agent hierarchy, bypassing all Machine actors, until it reaches a Human Accountability Anchor.
-
-**Three Trigger Conditions:**
-1. **Capability Boundary** — Task falls outside agent's provisioned capability
-2. **Safety Envelope Violation** — Sandbox shows proposed action would violate safety constraints
-3. **Authorization Gap** — Decision implications exceed agent's authorization authority
-
-**Trigger Lifecycle:**
 ```
-TRIGGER_FIRED → ESCALATING_TO_PARENT → PARENT_EVALUATING
-    → [Parent can resolve] → RESOLVED → logged to Ledger
-    → [Parent cannot resolve] → ESCALATING_TO_ROOT → HUMAN_REVIEWING
-    → Human issues directive → DIRECTIVE_EXECUTING → CLOSED
+Zo Computer (host)
+  └── brodiblanco.zo.space
+        ├── /agentic           — React SPA dashboard
+        └── /api/agentic/*    — Hono API routes
+              ├── core/         — Agent registry, task store, event bus
+              ├── workforce/    — 19-agent roster, metrics
+              ├── dap/          — 9-plane evaluation engine
+              ├── truth-gate/   — RAG hallucination check
+              ├── shell/        — command whitelist evaluator
+              ├── sem/          — SEM worksheet ops
+              ├── fte/          — FTE synthesis
+              ├── bench/        — benchmark runner
+              ├── lifecycle/    — agent lifecycle
+              ├── cascade/      — cascade trigger engine
+              ├── coherence/    — 3-layer coherence check
+              ├── subscriptions/ — event subscriptions
+              ├── voice/        — STT/TTS/command
+              └── linkedin/    — OAuth + posting
 ```
-
-**The Ledger:** Every event logged across three simultaneous planes:
-
-| Plane | What it Records |
-|-------|----------------|
-| Purpose | What the owner authorized |
-| Bounds Engine | What the AI proposed and why |
-| Fact Layer | What actually executed and the physical outcome |
-
-SHA-256 sealed per event. Cannot be altered retroactively.
 
 ---
 
-## 4. The 9-Plane DAP as Operational State Model
+## 4. Integrations (Zo Prototype — Already Connected)
 
-AgentOS implements the 9-Plane Data Action Protocol as defined in the BX3 Universal Architecture. Every event is decomposed into 9 discrete, orthogonal planes.
+| Integration | Status | What it gives Agentic |
+|------------|--------|----------------------|
+| Gmail | ✅ Live | Read/write email, send notifications |
+| Google Calendar | ✅ Live | Schedule meetings, read events |
+| Google Tasks | ✅ Live | Task management (4 lists created) |
+| Google Drive | ✅ Live | File storage, document access |
+| Linear | ✅ Live | Issue tracking, project management |
+| Notion | ✅ Live | Wiki, docs, databases |
+| Airtable | ✅ Live | Structured data (Irrig8 base) |
+| Spotify | ✅ Live | Context/mood data |
+| Dropbox | ✅ Live | File sync |
+| GitHub | ✅ Webhook | PR merged → auto-close Linear issue |
+| Stripe | ⚠️ Read-only | Payment visibility |
+| SMS | ✅ Via Zo | Mobile notifications |
+
+---
+
+## 5. Missing Features (Zo Prototype — Priority Order)
+
+### P0 — Must Have
+
+| Feature | Description | Why Missing |
+|---------|-------------|-------------|
+| **Truth Gate enforcement** | RAG must block hallucinations before output | Route exists but enforcement is not wired into the inference path |
+| **Deterministic Shell** | Command whitelist + safety interlocks | Designed but not implemented in routes |
+| **Self-Modification Engine** | Darwin Gödel cycle for self-improvement | Concept in SOUL.md, not wired into runtime |
+
+### P1 — Should Have
+
+| Feature | Description |
+|---------|-------------|
+| **Thompson Q → IER migration** | Bandit-based routing not yet learning from outcomes |
+| **IER Q-table persistence** | Learning gains lost on restart |
+| **Rollback + Cascade Pause** | No state rollback if cascade fails |
+| **CTC Engine wired to inference** | ETA injection not in the inference path |
+
+### P2 — Nice to Have
+
+| Feature | Description |
+|---------|-------------|
+| **MCP Server** | Expose 38 tools to external clients |
+| **Feature Flags UI** | Dashboard toggle for system flags |
+| **Chairman Queue UI** | `/agentic/chairman-queue` for T2 approvals |
+| **LinkedIn full flow** | OAuth working but posting needs content generation |
+
+---
+
+## 6. Improvements for Zo Prototype
+
+### 6.1 Wire Truth Gate into Every Inference Call
+Currently: `/api/agentic/truth-gate/check` is a standalone route.
+**Better:** Every route that generates output runs through truth-gate first.
 
 ```
-              | Purpose       | Bounds Engine   | Fact
---------------|---------------|-----------------|--------------
-Past          | P1: Mandate   | P4: Reason Log  | P7: Outcome Rec
-Present       | P2: Intent    | P5: Decision    | P8: Execution
-Future-Pred   | P3: Plan      | P6: Projection  | P9: Projection Conf
+Any agent output
+  → Truth Gate RAG check
+  → If fails: block + log to forensic/trace
+  → If passes: return output + seal
 ```
 
-**Plane Isolation Rule:** No plane can write to any other plane. Architecturally enforced.
+### 6.2 Persistent IER Q-Table
+Currently: Thompson Q resets on restart.
+**Better:** Save Q-values to `/dev/shm/agentic/ier-qtable.json` on every routing decision. Load on startup.
 
-**Tamper-Evident Ledger:** All 9 planes linked through a cryptographically chained log. Any retrospective modification breaks the chain and is detectable in O(1) verification time.
+### 6.3 Chairman Queue Dashboard Tab
+Currently: T2 tools route but no UI to approve.
+**Better:** Add 7th tab to `/agentic` dashboard: **Queue** — shows pending T2 requests with Approve/Deny.
 
----
+### 6.4 LinkedIn Content Generation
+Currently: OAuth connected, can post, but content is manual.
+**Better:** Wire IER router to generate post content from agent task context. Auto-draft, human approves, then posts.
 
-## 5. Competitive Landscape
+### 6.5 Cascade Failure Recovery
+Currently: Cascade runs, if it fails the state is uncertain.
+**Better:** Every cascade writes a checkpoint. On crash, replay from last checkpoint.
 
-| Capability | AgentOS (BX3) | CrewAI | AutoGen (Microsoft) | n8n |
-|---|---|---|---|---|
-| **Governance architecture** | Three-layer BX3 Loop as architectural primitive | Policy (optional) | Policy (optional) | Workflow (no governance) |
-| **Hard execution firewall** | Fact Layer blocks at architectural level — not RBAC | No architectural firewall | No deterministic enforcement | No hardened external gate |
-| **Bounded proposer** | Bounds Engine is limbless — proposes, cannot execute | Agents execute autonomously within tool permissions | Agents invoke tools directly | Agent nodes call external services directly |
-| **9-plane accountability** | P1-P9 planes from BX3 Universal Architecture | Not documented | Not documented | Not documented |
-| **Upstream accountability** | Exception flows upward bypassing all machine actors to Human Root | No documented cascade-to-human path | No documented escalation path | No documented exception escalation |
-| **Deterministic Ledger** | SHA-256 forensic sealing across Purpose/Bounds/Fact planes | Merkle audit chains proposed but not shipped | Self-reported logs only | Database records, no cryptographic integrity |
-| **Spatial data tiers** | 4-tier resolution gate as architectural constraint | Not applicable | Not applicable | Not applicable |
-| **Human-in-the-loop** | Root-Pipe Protocol for non-collapsing authority projection | AMP monitoring/approval flows | Human feedback as conversation part | HITL node exists but is one node in a workflow |
-| **Recursive spawning** | Worksheet mechanism for OTA child agent provisioning | Hierarchical delegation, no containerized spawning | Flat agent topology | Sub-agent as separate workflow |
-| **Local survivability** | Executes last-known-good Worksheet when cloud disconnected | No edge/offline execution model | No edge execution model | Requires cloud connection |
-| **Formal verification path** | 9-Plane DAP enables formal proof of decision routing | Capability-Based Agent Hierarchy proposed | No formal verification architecture | No formal verification path |
+### 6.6 Peer Bridge to Standalone
+Currently: Zo prototype and standalone are separate.
+**Better:** Both register to same MCP mesh (Antigravity IDE + Zo as peers). Standalone becomes a compute node that Zo routes tasks to.
 
 ---
 
-## 6. Feature Checklist (Sourced from BX3 Universal Architecture v6.1)
+## 7. Zo Prototype → Standalone Migration Path
 
-### Purpose Layer
+The Zo prototype is the **fast iteration environment**. When a feature is proven in Zo, it gets ported to the standalone Rust build.
 
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| P1 | Owner Dashboard — goal-setting, authorization boundaries, Ledger review | BX3 Arch 2 "Purpose Layer" | - |
-| P2 | Human Accountability Anchor — required per agent, cannot be delegated | BX3 Arch 2 "Human Root Mandate" | - |
-| P3 | Authorization boundary configuration per agent | BX3 Arch 2 "Purpose Layer" | - |
-| P4 | Escalation threshold configuration (when Bailout fires) | BX3 Arch 5 "Bailout Protocol" | - |
-
-### Bounds Engine
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| B1 | Sandbox simulation previews before any proposal is executed | BX3 Arch 4 "Sandbox Gate" | - |
-| B2 | Confidence scoring (0.0-1.0) on all proposals | BX3 Arch Glossary | - |
-| B3 | Bounds display — what the agent is NOT permitted to propose | BX3 Arch 2 "Purpose Layer" | - |
-| B4 | Limbless enforcement — Bounds Engine cannot execute directly | BX3 Arch 2 "Limbless" | - |
-
-### Fact Layer
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| F1 | Architectural execution gate — not RBAC, no configurable bypass | BX3 Arch 2 "100% deterministic" | - |
-| F2 | SHA-256 forensic sealing on every event | BX3 Arch 3 "Tamper-Evident Ledger" | - |
-| F3 | Hard block on proposals violating safety, regulatory, or authorization constraints | BX3 Arch 2 "executes only commands that satisfy pre-defined constraints" | - |
-| F4 | Tier gate enforcement (Tiers 1-4) | BX3 Arch 3 "Spatial Resolution Tiers" | - |
-
-### Pillar 1 — Loop Isolation
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| L1 | Task Isolation Mode — every task is a self-contained BX3 sub-loop | BX3 Arch 3 Pillar 1 | - |
-| L2 | No agent-to-agent direct execution — must route through Fact Layer | BX3 Arch 3 Pillar 1 | - |
-| L3 | Task state isolation — compromised Bounds Engine cannot bleed across tasks | BX3 Arch 3 Pillar 1 | - |
-
-### Pillar 2 — Recursive Spawning
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| R1 | Worksheet mechanism — parent agents birth containerized child agents | BX3 Arch 3 Pillar 2 "Worksheet" | - |
-| R2 | Child agent inherits parent's Purpose boundaries | BX3 Arch 3 Pillar 2 "hard-coded pointer to Parent's Purpose" | - |
-| R3 | Child agent has independent Bounds Engine + Fact Layer | BX3 Arch 3 Pillar 2 "complete Bounds Engine + Fact Layer logic" | - |
-| R4 | Local Survivability — child executes last-known-good Worksheet during cloud disconnection | BX3 Arch 3 Pillar 2 "Local Survivability" | - |
-
-### Pillar 3 — Spatial Firewall
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| S1 | 4-tier data access gates (Observer / Analyst / Operator / Admin) | BX3 Arch 3 Pillar 3 "Spatial Resolution Tiers" | - |
-| S2 | Deterministic Funnel — request beyond tier triggers automated commercial upgrade | BX3 Arch 3 "Deterministic Funnel" | - |
-
-### Pillar 4 — Root Tunneling
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| T1 | Owner Root-Pipe override — project into any agent without collapsing hierarchy | BX3 Arch 3 Pillar 4 "Root-Pipe Protocol" | - |
-| T2 | Non-collapsing authority projection | BX3 Arch 3 Pillar 4 "hierarchy remains non-collapsing" | - |
-| T3 | Sandbox Gate pre-execution simulation | BX3 Arch 3 Pillar 4 "Sandbox Gate" | - |
-| T4 | HITL approval for high-stakes actions | BX3 Arch 3 Pillar 4 "Human-in-the-Loop approval" | - |
-
-### Pillar 5 — Bailout Protocol
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| A1 | Exception escalation chain — bypasses all machine actors to Human Root | BX3 Arch 5 "Bailout Protocol" | - |
-| A2 | Three trigger conditions (Capability Boundary / Safety Envelope / Authorization Gap) | BX3 Arch 5 "Three Trigger Conditions" | - |
-| A3 | SHA-256 sealed forensic record across Purpose/Bounds/Fact planes | BX3 Arch 3 "Tamper-Evident Ledger" | - |
-
-### 9-Plane DAP
-
-| # | Feature | Source | Status |
-|---|---------|--------|--------|
-| D1 | 9 discrete planes (P1-P9) as operational state architecture | BX3 Arch 3 "9-Plane DAP" | - |
-| D2 | Plane isolation — no cross-plane writes | BX3 Arch 3 "Plane Isolation Rule" | - |
-| D3 | Tamper-evident cryptographic Ledger chain | BX3 Arch 3 "Tamper-Evident Ledger" | - |
-
----
-
-## 7. Glossary
-
-| Term | Definition |
-|------|-----------|
-| **AgentOS Loop** | A self-contained BX3 Loop inside AgentOS — Purpose + Bounds Engine + Fact Layer for each agent |
-| **Owner** | Human Accountability Anchor — human responsible for an agent's Purpose layer |
-| **Task Loop** | A self-contained BX3 sub-loop for a specific task, isolated per Pillar 1 |
-| **Child Agent** | An agent spawned via Recursive Spawning, with its own BX3 Loop and Worksheet |
-| **Worksheet** | Containerized logic set delivered to a Child Agent — Bounds Engine + Fact Layer configuration |
-| **Tier Gate** | Fact Layer enforcement point checking agent capability tier before serving data or allowing execution |
-| **Root-Pipe** | Owner Override mechanism — human projects into agent context without collapsing hierarchy |
-| **Bailout Trigger** | Exception event fired when a condition exceeds capability, safety envelope, or authorization |
-| **Ledger** | SHA-256 sealed forensic log — records Purpose authorization, Bounds Engine proposal, Fact Layer execution for every event |
+```
+Zo Prototype (prove it)
+  → Rust port ( harden it)
+    → Docker build (deploy it)
+      → Register as mesh node (scale it)
+```
 
 ---
 
 ## 8. Reference
 
-This document is the product implementation of: `file 'Bxthre3/VAULT/BX3-UNIVERSAL-ARCHITECTURE.md'` (BX3-GEN-2026-V6.1)
-
-*BX3 Inc. All rights reserved. Patent pending. Proprietary and Confidential.*
+- Live endpoints: `https://brodiblanco.zo.space/api/agentic/*`
+- Dashboard: `https://brodiblanco.zo.space/agentic`
+- Source: `Bxthre3/projects/the-agentic-project/`
+- Standalone: `github.com/bxthre3inc/agentic`
+- Full variant audit: `Bxthre3/INBOX/agentic-variant-audit.md`
