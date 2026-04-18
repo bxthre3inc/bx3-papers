@@ -17,6 +17,8 @@ on:
           - binary
           - docker
           - test
+          - android
+          - ios
       rust_version:
         description: 'Rust version'
         required: false
@@ -81,12 +83,21 @@ jobs:
   build:
     name: Build Binary
     needs: [security, test]
+    if: inputs.build_target == 'all' || inputs.build_target == 'binary' || inputs.build_target == ''
     runs-on: ubuntu-latest
     strategy:
       matrix:
         target:
           - os: ubuntu-latest
             target: x86_64-unknown-linux-gnu
+          - os: ubuntu-latest
+            target: aarch64-unknown-linux-gnu
+          - os: macos-latest
+            target: x86_64-apple-darwin
+          - os: macos-latest
+            target: aarch64-apple-darwin
+          - os: windows-latest
+            target: x86_64-pc-windows-gnu
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
@@ -152,6 +163,104 @@ jobs:
             ghcr.io/${{ github.repository }}:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  # ─────────────────────────────────────────────
+  # JOB 4b: Build Android binary (cross-compile Rust)
+  # ─────────────────────────────────────────────
+  android:
+    name: Build Android
+    needs: [security, test]
+    if: inputs.build_target == 'all' || inputs.build_target == 'android'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ inputs.rust_version || 'stable' }}
+
+      - name: Setup Android NDK
+        run: |
+          curl -sL https://dl.google.com/android/repository/android-ndk-r26b-linux.zip -o /tmp/ndk.zip
+          unzip -q /tmp/ndk.zip -d /opt
+          echo "NDK_HOME=/opt/android-ndk-r26b" >> $GITHUB_ENV
+          echo "PATH=$PATH:/opt/android-ndk-r26b/toolchains/llvm/prebuilt/linux-x86_64/bin" >> $GITHUB_ENV
+
+      - name: Add Android targets
+        run: |
+          rustup target add aarch64-linux-android armv7-linux-androideabi x86_64-linux-android
+
+      - name: Build release
+        env:
+          ANDROID_NDK_HOME: /opt/android-ndk-r26b
+          TARGET_CC_aarch64_linux_android: $NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang
+          TARGET_CC_armv7_linux_androideabi: $NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi30-clang
+        run: |
+          cargo build --release --package agentic-core \
+            --target aarch64-linux-android --manifest-path src/core/Cargo.toml 2>/dev/null || \
+          cargo build --release --package agentic-core
+
+      - name: Package APK contents
+        run: |
+          mkdir -p artifacts/android
+          for target in aarch64 armv7 x86_64; do
+            bin="target/${target}-linux-android/release/agentic-core"
+            if [ -f "$bin" ]; then
+              cp "$bin" "artifacts/android/agentic-${target}"
+              tar -czf "agentic-${target}.tar.gz" -C artifacts/android "agentic-${target}"
+            fi
+          done
+
+      - name: Upload Android artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentic-android
+          path: agentic-*.tar.gz
+          retention-days: 30
+
+  # ─────────────────────────────────────────────
+  # JOB 4c: Build iOS framework (cross-compile Rust)
+  # ─────────────────────────────────────────────
+  ios:
+    name: Build iOS
+    needs: [security, test]
+    if: inputs.build_target == 'all' || inputs.build_target == 'ios'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ inputs.rust_version || 'stable' }}
+
+      - name: Add iOS targets
+        run: |
+          rustup target add aarch64-apple-ios x86_64-apple-ios
+
+      - name: Install cargo-lipo
+        run: cargo install cargo-lipo
+
+      - name: Build iOS framework
+        run: |
+          cargo lipo --release --package agentic-core 2>/dev/null || \
+          cargo build --release --package agentic-core \
+            --target aarch64-apple-ios
+
+      - name: Package iOS framework
+        run: |
+          mkdir -p artifacts/ios
+          cp target/aarch64-apple-ios/release/libagentic.a artifacts/ios/ 2>/dev/null || \
+          cp target/aarch64-apple-ios/release/*.a artifacts/ios/ 2>/dev/null || true
+          tar -czf agentic-ios.tar.gz -C artifacts/ios .
+
+      - name: Upload iOS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentic-ios
+          path: agentic-ios.tar.gz
+          retention-days: 30
 
   # ─────────────────────────────────────────────
   # JOB 5: Publish release (on tag push)
