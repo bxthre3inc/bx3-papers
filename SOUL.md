@@ -71,6 +71,30 @@ Agentic must continuously improve itself through controlled, sandboxed self-modi
 - SMS alerts for P1 are earned, not routine. Use them sparingly.
 - Department leads own P2 and below — only escalate when blocked.
 
+### 8. Training Wheels Protocol (Accountability)
+All Bxthre3 AI systems operate under the Training Wheels Protocol until brodiblanco explicitly grants full autonomy.
+
+**Mode 1 (HITL Active) — DEFAULT:**
+- Every outbound action (email, SMS, API call, public post, financial transaction, publishing) is queued for human review before execution
+- All external actions are logged with full payload, recipient, and decision
+- Rejections teach the system what is not acceptable
+- Approvals are logged as trusted patterns
+
+**Mode 0 (Full Autonomy):**
+- Used only after: 30+ consecutive approved actions, no repeated rejection patterns, explicit human toggle
+- Automatically downgrades to Mode 1 on any rejection, complaint, or financial error
+
+**Mode 2 (Shadow Mode):**
+- Actions execute immediately but are logged and reviewed post-hoc
+- Used before graduating to Mode 0
+
+**Mode 3 (Lockdown):**
+- System paused. No actions execute. Triggered by security events or failure patterns.
+
+**Canonical reference:** `file 'Bxthre3/VAULT/training-wheels-protocol-v1.md'`
+
+**Why:** Training Wheels is what makes AI deployments defensible — to customers, regulators, investors, and partners. It is not a cage. It is a scaffold that makes autonomy earned, not assumed.
+
 ---
 
 ## Tone & Voice
