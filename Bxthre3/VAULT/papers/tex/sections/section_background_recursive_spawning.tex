@@ -1,0 +1,128 @@
+\section{Background}
+
+% =====================================================================
+% 2.1 Agent Lifecycle Management in Multi-Agent Systems
+% =====================================================================
+
+The operational maturity of large language model (LLM)-driven autonomous agents has shifted the research frontier from single-agent instruction following to orchestrated multi-agent systems (MAS) in which multiple semi-autonomous agents cooperatively decompose and execute complex, long-horizon objectives \cite{adaptive_multimodal_2025, cooperative_marl_2025}. Agent lifecycle management—the processes by which agents are instantiated, provisioned, delegated tasks,monitored, and retired—has emerged as a central engineering challenge in this domain. Unlike rule-based workflow automation, modern agentic systems require runtime-governed lifecycle transitions triggered by complexity signals, memory pressure, or task drift events \cite{mi9_runtime_2025}.
+
+A defining contribution to this space is \textbf{AgentSpawn}, which introduces dynamic, runtime-driven spawning policies that instantiate specialized child agents mid-task when complexity thresholds are exceeded \cite{agentspawn_2025}. AgentSpawn demonstrates that adaptive spawning with automatic memory transfer preserves task continuity across agent generations while yielding approximately 34\% relative improvement in completion rates over static baselines on long-horizon code generation benchmarks. Complementary work on \textbf{AGENTHIVE} treats delegation as a first-class architectural primitive: any agent may spawn and coordinate sub-agents, forming task-adaptive topologies (trees, forests, star structures) that emerge from demand rather than from predefined graphs \cite{agenthive_2025}. This decentralized control model eliminates the centralized orchestrator bottleneck and enables open-ended MAS growth.
+
+The \textbf{Recursive Delegation Engine (RDE)} formalizes the decision of \textit{whether} to execute, decompose, or delegate through a utility-maximization framework modeled as a multi-armed bandit over the delegation graph $G = (A, E)$ \cite{rde_2025}. RDE operationalizes real-time agent selection via Thompson sampling and UCB-style confidence bounds, propagating binary leaf rewards upward to update per-agent success/fail counters. Similarly, \textbf{ReDEREF} wraps a pool of specialized agents with belief-guided delegation and reflection-driven re-routing, reducing agent calls by approximately 17\% and token usage by 28\% without training or fine-tuning \cite{rederef_2026}.
+
+At the protocol level, the IETF draft \textbf{AITLP} (Agent Identity, Trust and Lifecycle Protocol) defines lifecycle states, hierarchical mandate enforcement, and revocation mechanisms to keep agents auditable and within bounded authority throughout their operational lifetime \cite{aitlp_2026}. Collectively, these works establish that effective lifecycle management in MAS requires: (i) autonomous spawning triggered by runtime complexity signals, (ii) memory and context transfer across agent generations, (iii) instrumented delegation graphs enabling post-hoc analysis, and (iv) formal lifecycle state machines that enforce bounded agency.
+
+% =====================================================================
+% 2.2 Accountability and Provenance in Distributed Systems
+% =====================================================================
+
+As agent actions propagate across multi-hop delegation chains, accountability and provenance become first-order concerns. A terminal action taken by a leaf agent may trace its authority through three or more intermediaries before reaching the originating human principal. Without an auditable chain-of-custody, ambiguity arises regarding who authorized a given action, what scope was granted, and whether intermediate agents faithfully transmitted intent \cite{hdp_2026}.
+
+The \textbf{Human Delegation Provenance (HDP) Protocol} addresses this through a lightweight cryptographic token scheme that binds the human principal, declared authorization scope, and session identifier at issuance, then appends a signed ``hop'' record for each agent in the delegation chain \cite{hdp_2026}. Verification requires only the issuer's Ed25519 public key and session ID, enabling offline reconstruction of the full delegation path without external registries. This work identifies a critical gap: existing standards such as OAuth 2.0 Token Exchange, JSON Web Tokens, and UCAN do not support multi-hop, append-only, human-provenance requirements of agentic AI systems.
+
+The \textbf{Multimodal Artifact IF} (MAIF) paradigm embeds cryptographic provenance directly into AI-native data structures, treating artifacts (not just tasks or sessions) as the primary accountability unit \cite{maif_2025}. MAIF provides fine-grained access controls, stream-level tamper detection, and intrinsic audit trails suitable for high-stakes, regulated domains. The \textbf{LLM Audit Trail} framework proposes a sociotechnical mechanism that links technical provenance (models, data, training runs, deployments) with governance records (approvals, waivers, attestations), enabling cross-organizational traceability and regulatory compliance \cite{llm_audit_trail_2026}. On distributed ledger approaches, \textbf{AIAuditTrack} uses decentralized identity (DID) and verifiable credentials (VC) to record inter-entity interactions as time-stamped trajectories on-chain, introducing a risk diffusion algorithm that traces the origin of non-compliant behavior across the interaction graph \cite{aiauditrack_2024}.
+
+At the tool-call level, the \textbf{Warrant Certificate Authority (WCA)} framework introduces a PKI-like hierarchy that certifies data source trustworthiness as content moves across tool boundaries \cite{wca_2026}. WCA defines Warrant Attestation Levels (WAL-0 to WAL-3)—analogous to SLSA build levels—that indicate the strength and completeness of provenance attestation for AI-agent tool-call chains. The \textbf{Verifiable AI Provenance (VAP) Framework} coordinates existing IETF building blocks (SCITT transparency logs, RATS remote attestation, COSE cryptographic signing) to produce tamper-evident decision trails suitable for evidentiary-grade audit requirements in critical infrastructure \cite{vap_framework_2026}.
+
+The convergent insight across this literature is that accountability requires a \textbf{chain-of-custody model}: provenance records must be append-only, cryptographically signed at each hop, and independently verifiable without centralized trust anchors. Without immutability guarantees at the delegation layer, downstream provenance frameworks—however rigorous their cryptographic apparatus—rest on an uncertain foundation.
+
+% =====================================================================
+% 2.3 Fixed vs. Mutable Delegation Chains
+% =====================================================================
+
+A central architectural tension in multi-agent delegation design is whether delegation chains should be fixed at instantiation or mutable during execution. \textbf{Fixed delegation chains} pre-specify the full agent hierarchy prior to task execution. Agents spawn children according to a statically defined topology; once spawned, parent-child relationships are immutable. Fixed chains offer predictability, easier auditability, and simpler runtime reasoning, but they cannot adapt to unexpected complexity, resource constraints, or task drift \cite{agenthive_2025, subagent_architecture_2025}.
+
+\textbf{Mutable delegation chains} permit runtime modification of the agent graph—agents may spawn, retire, re-parent, or re-delegate work dynamically. Mutable chains improve robustness and adaptivity but introduce significant challenges: (i) provenance trails must accommodate topology changes without violating append-only integrity; (ii) accountability attribution becomes more complex when parentage changes mid-execution; (iii) cycle detection and termination guarantees become non-trivial. AgentSpawn, AGENTHIVE, and ReDel all implement mutable chains and employ instrumentation layers (event-driven logging, replay interfaces, visualization dashboards) to provide visibility into graph mutations without sacrificing runtime performance \cite{agentspawn_2025, agenthive_2025, redel_2024}.
+
+The RDE framework allows live configuration of decomposition and termination criteria, meaning the mutation policy itself can evolve in response to observed agent performance \cite{rde_2025}. This positions mutable delegation not as an unconstrained freely- morphing graph, but as a governed, instrumented, and recoverable process with configurable boundaries. A key insight from the mutable-chain literature is that mutation and immutability are not mutually exclusive: the \textbf{chain of custody} (the provenance record) should be immutable even when the \textbf{agent graph topology} (the execution structure) is mutable. These are orthogonal concerns addressed by separate layers of the architecture.
+
+% =====================================================================
+% 2.4 Hierarchical Task Decomposition in AI
+% =====================================================================
+
+Hierarchical task decomposition (HTD) is foundational to scalable multi-agent reasoning. By recursively decomposing a high-level objective into sub-tasks, agents can reason about tractable sub-problems while preserving global coherence. HTN (Hierarchical Task Network) planning has a long history in classical AI planning, formalizing tasks as networks of subtasks with preconditions and effects, and enabling search over decomposition hierarchies rather than flat action spaces \cite{htn_survey_2014, panda_framework_2020}. Modern LLM-based agents extend this tradition: \textbf{AgentOrchestra} employs a central planning agent that decomposes complex objectives into sub-tasks delegated to modular sub-agents, with a dynamic MCP Manager enabling on-the-fly tool creation and reuse \cite{agentorchestra_2025}. Empirical evaluation on GAIA-class benchmarks reports an average score of approximately 83.39\%, outperforming flat-agent and monolithic baselines.
+
+The \textbf{MAHTG} (Multi-Agent Hierarchical Task Generation) framework formalizes a two-level control architecture: a meta-controller decomposes global coordination tasks and assigns subtask pairs with constraints, while lower-level agent controllers execute within localized scopes \cite{mahtg_2025}. This federated control model turns global scheduling into a sequence of tractable sub-problems, leveraging hierarchical Petri Nets for multi-layer control-flow representation. A survey of LLM-based planning identifies six evaluation criteria—completeness, executability, optimality, representation, generalization, and efficiency—and finds that decomposition-based methods consistently improve all six relative to flat planning, at the cost of increased coordination overhead \cite{llm_planning_survey_2025}.
+
+In cooperative multi-agent planning (MAP), hierarchical approaches address scalability limitations of centralized planners by distributing decomposition across agents while maintaining global consistency through coherence layers \cite{map_survey_2017}. The key architectural decision—centralized hierarchical decomposition vs. distributed negotiation-based merging—has downstream implications for communication overhead, plan optimality, and robustness to agent failure. The literature consistently demonstrates that hierarchical decomposition improves task coverage, success rates, and interpretability of multi-agent plans, but requires explicit mechanisms for global consistency maintenance as sub-task granularity increases.
+
+% =====================================================================
+% 2.5 The BX3 Framework as Substrate for Immutable Parent Chains
+% =====================================================================
+
+The foregoing literature establishes that robust multi-agent systems require: (i) lifecycle management with autonomous spawning and memory transfer; (ii) cryptographic provenance chains that bind human principals to agent actions; (iii) mutable execution graphs governed by instrumented, configurable policies; and (iv) hierarchical decomposition enabling scalable reasoning over complex objectives. Missing from the current landscape is a unified framework that addresses all four requirements as first-class primitives.
+
+The \textbf{BX3 Framework} is designed to fill this gap. BX3 operationalizes immutable parent chains as a core architectural primitive: each agent instance records its parent identifier at instantiation, forming a tamper-evident, append-only lineage graph. This parent chain provides a built-in provenance layer without requiring external protocol integration—accountability is intrinsic to the agent instantiation mechanism. The framework's delegation model allows runtime mutation of the agent graph (agents may spawn children, retire, or reassign work) while the parent chain remains structurally immutable: a child agent cannot retroactively change which parent spawned it, and the full delegation ancestry is recoverable at any point in execution.
+
+BX3's approach synthesizes lessons from AgentSpawn's memory transfer, AGENTHIVE's first-class delegation primitive, HDP's human-provenance binding, and MAHTG's hierarchical control architecture, but integrates them within a single cohesive substrate where parent chain immutability is the default rather than an add-on. The framework's agent registry records not only lifecycle state transitions but also the full provenance chain, enabling post-hoc reconstruction of task decomposition decisions, delegation choices, and authorization scopes from the immutable parent chain alone. This positions BX3 as both a practical architectural pattern and a theoretical substrate for studying accountability, provenance, and delegation semantics in agentic AI systems.
+
+% =====================================================================
+% Bibliography
+% =====================================================================
+
+% Agent Lifecycle Management
+\medskip
+\noindent {\small\textbf{AgentSpawn.} Adaptive Multi-Agent Collaboration Through Dynamic Spawning for Long-Horizon Code Generation. \textit{arXiv:2602.07072}, 2025.}
+\medskip
+
+\noindent {\small\textbf{AGENTHIVE.} A Composable Multi-Agent Framework with First-Class Delegation. \textit{OpenReview}, ID: BYiwNYYixO, 2025.}
+\medskip
+
+\noindent {\small\textbf{Recursive Delegation Engine (RDE).} EmergentMind Topics: Recursive Delegation Engine. \textit{emergentmind.com}, 2025.}
+\medskip
+
+\noindent {\small\textbf{ReDEREF.} Training-Free Controller for Multi-Agent LLM Systems via Belief-Guided Delegation. \textit{arXiv:2603.13256}, 2026.}
+\medskip
+
+\noindent {\small\textbf{AITLP Draft.} Agent Identity, Trust and Lifecycle Protocol (AITLP). \textit{IETF draft-larsson-aitlp-00}, April 2026.}
+\medskip
+
+% Accountability and Provenance
+\medskip
+
+\noindent {\small\textbf{HDP Protocol.} Human Delegation Provenance (HDP): Cryptographic Chain-of-Custody for Agentic AI Systems. \textit{IETF draft-helixar-hdp-agentic-delegation-00}, March 2026.}
+\medskip
+
+\noindent {\small\textbf{MAIF.} Multimodal Artifact IF: Enforcing AI Trust and Provenance with an Artifact-Centric Paradigm. \textit{arXiv:2511.15097}, 2025.}
+\medskip
+
+\noindent {\small\textbf{LLM Audit Trail.} LLM Audit Trails as a Sociotechnical Accountability Mechanism. \textit{arXiv:2601.20727}, 2026.}
+\medskip
+
+\noindent {\small\textbf{AIAuditTrack.} A Framework for AI Security System: Blockchain-Based Accountability and Provenance. \textit{arXiv:2512.20649}, 2024.}
+\medskip
+
+\noindent {\small\textbf{WCA Draft.} Warrant Certificate Authorities: Auditable Data Provenance for AI-Agent Tool-Call Chains. \textit{IETF draft-bondar-wca-00}, 2026.}
+\medskip
+
+\noindent {\small\textbf{VAP Framework.} Verifiable AI Provenance Framework (VAP). \textit{IETF draft-kamimura-vap-framework-00}, January 2026.}
+\medskip
+
+% Hierarchical Task Decomposition
+\medskip
+
+\noindent {\small\textbf{AgentOrchestra.} A Hierarchical Multi-Agent Framework for General-Purpose Task Solving. \textit{arXiv:2506.12508}, 2025.}
+\medskip
+
+\noindent {\small\textbf{MAHTG.} Multi-Agent Hierarchical Task Generation. \textit{emergentmind.com}, 2025.}
+\medskip
+
+\noindent {\small\textbf{LLM Planning Survey.} A Survey on LLM-Based Planning: Evaluation and Representation. \textit{ACL Long Papers}, 2025.}
+\medskip
+
+\noindent {\small\textbf{MAP Survey.} Cooperative Multi-Agent Planning: A Survey. \textit{arXiv:1711.09057}, 2017.}
+\medskip
+
+\noindent {\small\textbf{PANDA Framework.} An Overview of the PANDA Framework for Hierarchical Planning. \textit{KI Journal}, 2020.}
+\medskip
+
+% Additional
+\medskip
+
+\noindent {\small\textbf{SubAgent Architecture.} SubAgent Architecture Deep Dive: How AI Systems Achieve Specialization Through Delegation. \textit{Dev.to / WonderLab}, 2025.}
+\medskip
+
+\noindent {\small\textbf{ReDel.} Recursive Multi-Agent Systems Toolkit. \textit{arXiv:2408.02248}, 2024.}
+\medskip
+
+\noindent {\small\textbf{MI9.} Runtime Governance Framework for Agentic AI. \textit{arXiv:2508.03858}, 2025.}
