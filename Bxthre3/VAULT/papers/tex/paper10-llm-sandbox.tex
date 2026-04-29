@@ -329,6 +329,65 @@ Each failure mode was addressed by updating the relevant Safety Envelope paramet
 The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across systems safety engineering, constitutional AI, and production agent frameworks provides the intellectual context in which the LLM Sandbox is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Safety Envelope Schema}
+\label{sec:safety-envelope-schema}
+
+The Safety Envelope is formally specified as a typed schema defining the constraint space for each domain. The schema is versioned and maintained by the \purpose\ layer.
+
+\begin{verbatim}
+SafetyEnvelope := {
+  version: string,
+  domain: "irrigation" | "medical" | "financial" | "general",
+  constraints: [Constraint],
+  thresholds: Thresholds,
+  bailout_policy: BailoutPolicy
+}
+
+Constraint := {
+  name: string,
+  type: "range" | "boolean" | "count" | "rate",
+  min?: number,
+  max?: number,
+  unit: string,
+  tolerance: number,
+  zero_tolerance: boolean
+}
+
+Thresholds := {
+  confidence_min: number,
+  latency_max_ms: number,
+  entropy_max: number,
+  aperture_delta_max: number
+}
+\end{verbatim}
+
+Each constraint has a \texttt{zero\_tolerance} flag: when \texttt{true}, any deviation from the constraint boundary triggers the \texttt{block} verdict regardless of magnitude. Water rights allocations and soil moisture hard limits are always zero-tolerance. Soft constraints (e.g., temperature ranges) permit minor deviations.
+
+% -------------------------------------------------------
+\section{Sandbox Simulation Fidelity}
+\label{sec:simulation-fidelity}
+
+The Sandbox Gate's simulation fidelity determines what failure modes it can detect. We characterize fidelity across three dimensions.
+
+\textbf{Spatial resolution} measures how finely the simulator models physical state. A low-fidelity simulator might model a field as a single homogeneous zone; a high-fidelity simulator models micro-zones at 1-meter resolution. The Agentic platform uses zone-level fidelity (50-meter grid cells), which is sufficient to detect irrigation over-application at the quarter-section level.
+
+\textbf{Temporal resolution} measures the simulation time step. A coarse simulator advances in 1-hour increments; a fine simulator advances in 1-second increments. Temporal resolution matters for time-sensitive constraints like water-right flow rates, where an action that appears safe at 1-hour resolution may violate flow rate limits at 1-second resolution.
+
+\textbf{Stochastic perturbation} measures how the simulator handles uncertain inputs. Operational mode uses point estimates for sensor readings. Diagnostic mode applies stochastic perturbations to sensor inputs drawn from the sensor error distribution, testing whether the proposed action remains safe under worst-case sensor uncertainty.
+
+% -------------------------------------------------------
+\section{Integration with LLM Proxy Router}
+\label{sec:sandbox-router-integration}
+
+The Sandbox Gate and LLM Proxy Router operate in sequence. The Proxy Router selects the optimal model for a request; the Sandbox Gate validates that model's proposed output before execution.
+
+The integration point is the \texttt{ProposedAction} record: the Proxy Router's selection includes the model identifier, the request routing score, and the proposed action payload. The Sandbox Gate evaluates the proposed action against the current Fact Layer state. If the Sandbox Gate returns \texttt{block}, the Proxy Router selects the next-best model and the Sandbox Gate re-evaluates. This continues until a model passes the Sandbox Gate or the candidate set is exhausted.
+
+In the latter case, a \texttt{REVIEW} verdict triggers the Bailout Protocol, which routes to the Human Accountability Anchor with the full routing and evaluation context.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

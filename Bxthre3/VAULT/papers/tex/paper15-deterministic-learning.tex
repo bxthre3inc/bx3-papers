@@ -270,6 +270,60 @@ The knowledge store grows indefinitely: as more encodings are accumulated, the s
 The author acknowledges the researchers cited herein, whose work across case-based reasoning, event sourcing, and online learning provides the intellectual context in which Deterministic Learning is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Knowledge Encoding: Complete Schema}
+\label{sec:knowledge-encoding-schema}
+
+A knowledge encoding $K$ is a first-class record in the knowledge store with the following complete schema:
+
+\begin{verbatim}
+KnowledgeEncoding := {
+  encoding_id: string,
+  I: InputCondition,           # when this encoding applies
+  O_before: OutputValue,        # system output before encoding
+  O_after: OutputValue,        # system output after encoding
+  delta: PerformanceDelta,      # measured improvement
+  sigma: Scope,                # what this supersedes
+  sandbox_result: SandboxResult,
+  committed_at: ISO8601,
+  committed_by: PurposeLayerPrincipal,
+  encoding_hash: string         # SHA-256(content)
+}
+
+InputCondition := {
+  condition_type: "task_category" | "context_pattern" | "sensor_range",
+  threshold: any,
+  negated: boolean
+}
+
+PerformanceDelta := {
+  metric: string,
+  before_value: number,
+  after_value: number,
+  improvement_fraction: number  # (after - before) / before
+}
+\end{verbatim}
+
+The \texttt{encoding\_hash} is computed over all fields. It serves as the unique identifier and tamper-evident seal for the encoding. The knowledge store is append-only: once committed, an encoding cannot be modified, only superseded by a new encoding with an updated \texttt{O\_after} value.
+
+% -------------------------------------------------------
+\section{Behavioral Verification Suite}
+\label{sec:verification-suite}
+
+After commitment, the Fact Layer runs a behavioral verification suite to confirm the encoding produces expected changes without side effects. The suite has four test categories.
+
+\textbf{Correctness tests:} Verify that for all inputs matching condition $I$, the system output matches $O_{after}$. Run against a held-out evaluation set not used during sandbox testing.
+
+\textbf{Specificity tests:} Verify that for inputs not matching $I$, the system output is unchanged from pre-encoding behavior. Any unexpected modification triggers a flag.
+
+\textbf{Interaction tests:} Verify that the encoding does not interfere with other committed encodings. Run all pairs of encodings committed within 30 days against a cross-encoding evaluation set.
+
+\textbf{Safety envelope tests:} Verify that the encoding does not cause any Safety Envelope parameter to approach its boundary. Run against the full Safety Envelope challenge set.
+
+The suite passes only if all four categories report clean results. A failed suite triggers automatic rollback and flags the encoding for Purpose Layer review.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

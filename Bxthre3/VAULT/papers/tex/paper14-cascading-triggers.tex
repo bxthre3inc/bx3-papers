@@ -273,6 +273,50 @@ The cascade resolution time depends on human availability for bailout determinat
 The author acknowledges the researchers cited herein, whose work across systems safety, cascading failure analysis, and multi-agent fault tolerance provides the intellectual context in which Cascading Triggers is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Trigger Propagation Matrix: Full Specification}
+\label{sec:matrix-spec}
+
+The trigger propagation matrix $M$ is a 5-by-5 matrix where rows are source layers and columns are trigger types. Entry $M[L_i, \tau_j]$ specifies the set of dependent layers that receive correlative triggers when trigger type $\tau_j$ fires at layer $L_i$.
+
+The full matrix for the Agentic platform deployment:
+
+\begin{center}
+\begin{tabular}{l|ccccc}
+  & \textbf{SENSOR} & \textbf{PLANNING} & \textbf{EXECUTION} & \textbf{ACCOUNTABILITY} & \textbf{INTEGRITY} \\
+\hline
+\textbf{Purpose} & \{PLANNING, ACCT\} & \{ACCT\} & \{ACCT\} & \{INTEGRITY\} & all \\
+\textbf{Bounds} & \{SENSOR, ACCT\} & \{EXEC, ACCT\} & \{ACCT\} & \{INTEGRITY\} & all \\
+\textbf{Fact} & \{PLANNING, INTEGRITY\} & \{INTEGRITY\} & \{ACCT, INTEGRITY\} & \{INTEGRITY\} & all \\
+\textbf{Agent} & \{BOUNDS, ACCT\} & \{BOUNDS, INTEGRITY\} & \{BOUNDS, ACCT\} & \{INTEGRITY\} & all \\
+\textbf{Human} & $\emptyset$ & $\emptyset$ & $\emptyset$ & $\emptyset$ & \{INTEGRITY\} \\
+\end{tabular}
+\end{center}
+
+The matrix is maintained by the \purpose\ layer and versioned in the forensic ledger. Changes to the matrix require \purpose\ layer authorization and are committed as immutable records.
+
+% -------------------------------------------------------
+\section{Cascade Context Package: Schema}
+\label{sec:cascade-package-schema}
+
+When a cascade reaches severity $\delta = 5$ or depth $d_{\max}$, the Fact Layer assembles a Cascade Context Package for human review:
+
+\begin{verbatim}
+CascadeContextPackage := {
+  package_id: string,
+  root_trigger: TriggerEvent,
+  trigger_tree: [TriggerEvent],
+  propagation_history: [PropagationHop],
+  system_state_snapshot: SystemState,
+  matrix_entries: MatrixEntry[],
+  human_determination: HumanDetermination | null
+}
+\end{verbatim}
+
+The package is presented to the Human Accountability Anchor as a structured decision interface. The human reviews the root cause, the full propagation path, and the current system state, then issues one of three directives: \texttt{RESOLVE} (approve system to continue), \texttt{MODIFY\_MATRIX} (update propagation rules), or \texttt{TERMINATE} (halt affected subsystem).
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

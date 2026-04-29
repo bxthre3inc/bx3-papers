@@ -280,6 +280,80 @@ The 847 Tier 4 attestations covered: water allocation volume confirmations (412)
 The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across data quality frameworks, event sourcing, and scientific data integrity provides the intellectual context in which the 4-Tier EAN is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{4-Tier EAN Schema Specification}
+\label{sec:ean-schema}
+
+The 4-Tier Event Alert Network is formally specified as a data pipeline with typed inputs and outputs at each tier.
+
+\begin{verbatim}
+Tier1Input := {
+  event_id: string,
+  timestamp: ISO8601,
+  source: string,
+  payload: Record<string, any>,
+  schema_version: string
+}
+
+Tier1Output := {
+  event_id: string,
+  tier1_passed: boolean,
+  validation_errors: string[],
+  quarantine_reason?: string
+}
+
+Tier2Input := Tier1Output + {
+  sensor_snapshot: Record<string, number>,
+  environmental_model_state: EnvModel
+}
+
+Tier2Output := {
+  tier2_passed: boolean,
+  inconsistency_flags: string[],
+  hold_reason?: string
+}
+
+Tier3Input := Tier2Output + {
+  forensic_ledger_pointer: string,
+  source_record_hash: string
+}
+
+Tier3Output := {
+  tier3_passed: boolean,
+  tamper_detected: boolean,
+  hold_reason?: string
+}
+
+Tier4Input := Tier3Output + {
+  risk_score: number,
+  data_category: string,
+  stake_level: "low" | "medium" | "high" | "critical"
+}
+
+Tier4Output := {
+  tier4_passed: boolean,
+  attestation_status: "pending" | "approved" | "rejected",
+  attestor_id?: string,
+  attestation_timestamp?: ISO8601
+}
+\end{verbatim}
+
+The pipeline aborts on any tier failure. Each tier writes its output to the forensic ledger before passing to the next tier, creating an immutable record of the verification chain.
+
+% -------------------------------------------------------
+\section{Human Attestation Workflow}
+\label{sec:attestation-workflow}
+
+Tier-4 human attestation is implemented as a queued workflow. Data items flagged for Tier-4 review enter the \texttt{attestation\_queue} with full context: the Tier-1 payload, the Tier-2 inconsistency report, the Tier-3 tamper check, and the risk score computation.
+
+Attestors are assigned based on data category and stake level. Water allocation data requires sign-off from an authorized water manager. Financial commitment data requires sign-off from the CFO. The \purpose\ layer maintains the attestation authorization registry.
+
+Attestors review the full verification chain and issue one of three determinations: \texttt{approved} (data confirmed valid, proceed), \texttt{rejected} (data confirmed invalid, quarantine), or \texttt{modified} (data corrected in place, with the correction itself recorded in the forensic ledger).
+
+Mean time-to-attestation on the Agentic platform is 3.1 minutes. High-urgency items (flagged with \texttt{stake\_level: critical}) are routed to a priority queue with a 30-second SLA.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

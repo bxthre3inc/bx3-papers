@@ -285,6 +285,60 @@ The trust score thresholds ($T_{lockdown}$, $T_{hitl}$, $T_{autonomy}$) are set 
 The author acknowledges the researchers cited herein, whose work across human-in-the-loop design, capability-based security, and AI safety provides the intellectual context in which the Training Wheels Protocol is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Training Wheels Protocol: State Machine Specification}
+\label{sec:twp-state-machine-spec}
+
+The Training Wheels Protocol is formally specified as a finite state machine with four states and deterministic transitions.
+
+\begin{verbatim}
+TrainingWheelsSM := {
+  states: ["MODE_1_HITL", "MODE_2_SHADOW",
+            "MODE_0_AUTONOMY", "MODE_3_LOCKDOWN"],
+  current_state: State,
+  trust_score: number,          # [0, 1]
+  review_queue: [PendingReview],
+  mode_transition_log: [TransitionRecord]
+}
+
+Transition := (
+  current_state: State,
+  event: Event,
+  guard: (SM) -> boolean,
+  next_state: State,
+  action: (SM) -> void
+)
+\end{verbatim}
+
+Key transition rules:
+
+\begin{itemize}
+  \item \texttt{MODE\_1\_HITL $\to$ MODE\_2\_SHADOW}: when $T > T_{autonomy}$ for $N_{\text{consecutive}}$ consecutive windows. Default: $T_{\text{autonomy}} = 0.85$, $N_{\text{consecutive}} = 30$.
+  \item \texttt{MODE\_2\_SHADOW $\to$ MODE\_0\_AUTONOMY}: when $T > T_{\text{autonomy}}$ for $N_{\text{consecutive}}$ consecutive windows and zero safety incidents in the window.
+  \item \texttt{MODE\_0\_AUTONOMY $\to$ MODE\_3\_LOCKDOWN}: when a Safety Envelope violation is detected. Automatic, no guard.
+  \item \texttt{MODE\_3\_LOCKDOWN $\to$ MODE\_1\_HITL}: when human administrator explicitly authorizes reset. Manual, no automatic transition.
+\end{itemize}
+
+The state machine is enforced by the Fact Layer. No agent, including the \bounds\ engine, can trigger state transitions. The mode transition log is append-only and hash-chained in the forensic ledger.
+
+% -------------------------------------------------------
+\section{Trust Score Computation: Production Implementation}
+\label{sec:trust-score-impl}
+
+The trust score $T$ is computed as a rolling average over a configurable window (default: 7 days). Four component scores are computed daily:
+
+$T_A = \text{approval\_rate}$: fraction of human-reviewed actions approved without modification.
+
+$T_R = 1 - \text{rejection\_rate}$: fraction of actions not requiring modification.
+
+$T_C = \max(0, 1 - \text{variance\_score})$: consistency score where variance is measured as the coefficient of variation in approval rate across the window.
+
+$T_V = \max(0, 1 - \text{violation\_rate} / \text{violation\_threshold})$: inverse of the Safety Envelope violation rate normalized to the threshold.
+
+The composite score is $T = w_1 T_A + w_2 T_R + w_3 T_C + w_4 T_V$ where weights sum to 1.0 and are set by the \purpose\ layer. Defaults: $(w_1, w_2, w_3, w_4) = (0.35, 0.25, 0.20, 0.20)$.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

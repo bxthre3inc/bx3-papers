@@ -271,6 +271,38 @@ The countermeasures also assume the cryptographic primitives (HMAC, SHA-256) are
 The author acknowledges the researchers cited herein, whose work across adversarial machine learning, multi-agent security, and cryptographic attestation provides the intellectual context in which adversarial deception detection and countermeasures are situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Detection Algorithm Details}
+\label{sec:detection-algorithms}
+
+\subsection{Input Validation: Source Provenance Verification}
+Every input carrying source provenance is verified in three steps. First, HMAC verification: the \bounds\ layer recomputes the HMAC-SHA256 of the input payload using the shared secret with the source and compares against the attached tag. Second, freshness check: the timestamp in the provenance record must be within the acceptable clock-skew window (default: 5 minutes). Third, chain-of-custody check: for inputs derived from prior agent outputs, the chain of intermediate agent signatures is verified recursively to the root source.
+
+An input fails provenance verification if any step fails. Failed inputs are quarantined with a structured rejection record: step failed, expected value, observed value, source identity.
+
+\subsection{Reasoning Trace Attestation}
+The attestation mechanism computes a commitment chain across reasoning steps. Let $C_0 = \text{SHA256}(\text{seed})$ be the genesis commitment for a reasoning session. At each step $i$, the agent computes:
+$$C_i = \text{SHA256}(C_{i-1} \parallel \text{reasoning\_trace}_i \parallel \tau_i)$$
+where $\tau_i$ is the current timestamp. The chain is append-only: $C_i$ cannot be recomputed after $C_{i+1}$ is computed without breaking the chain.
+
+The Fact Layer maintains a commitment ledger recording $C_i$ at each step. Verification at any time $t$ recomputes the chain forward from $C_0$ and compares against the ledger. Any divergence indicates tampering.
+
+% -------------------------------------------------------
+\section{Deployment Architecture}
+\label{sec:deployment-arch}
+
+The three countermeasures are deployed as independent middleware components in the Agentic platform, each enforced by the Fact Layer.
+
+\texttt{SourceProvenanceFilter} runs as a pre-processing hook in the Fact Layer's input validation stage. It is invoked before any agent processes an input.
+
+\texttt{ReasoningAttester} runs as a post-processing hook after each agent inference step. It computes and records the attestation commitment for that step.
+
+\texttt{OutputBindingVerifier} runs as a pre-commit hook before any agent output enters the Fact Layer or is transmitted externally. It computes the semantic hash and compares against the recorded binding.
+
+All three components write to the forensic ledger. The ledger is append-only and hash-chained, making all verification events independently auditable.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

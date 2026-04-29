@@ -328,6 +328,55 @@ The defense's architectural property — enforcement by the \fact\ layer before 
 The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across capability-based resource management, operating systems memory management, and LLM security provides the intellectual context in which the Token Bomb defense is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Defense Implementation: ContextMeter Module}
+\label{sec:context-meter-impl}
+
+The Context Meter is implemented at \texttt{agentic/src/security/} as a pre-processing middleware that runs before every model inference call.
+
+\begin{verbatim}
+class ContextMeter:
+  def __init__(self, memory_budget_frac=0.70,
+               growth_rate_max=2.0):
+    self.alpha = memory_budget_frac
+    self.G_max = growth_rate_max
+    self.gpu_memory_total = self._query_gpu_memory()
+    self.M_max = self.alpha * self.gpu_memory_total
+    self.W_max_eff = self._compute_W_max_eff()
+
+  def pre_inference_check(self, session_state) -> CheckResult:
+    C = session_state.current_context_tokens
+    if C > self.W_max_eff:
+      return CheckResult(reject=True, reason="MEMORY_BUDGET_EXCEEDED")
+    g = session_state.context_growth_rate()
+    if g > self.G_max:
+      return CheckResult(reject=False, throttle=True,
+                        reason=f"GROWTH_RATE_EXCEEDED: {g:.2f}")
+    return CheckResult(reject=False, throttle=False)
+
+  def _compute_W_max_eff(self):
+    S = self.gpu_memory_total
+    M_overhead = self._estimate_overhead()
+    M_avail = self.alpha * S - M_overhead
+    return self._memory_to_tokens(M_avail)
+\end{verbatim}
+
+The Context Meter is architecturally isolated from the model serving process. It runs in the Fact Layer pre-processor, not in the model inference path. This separation ensures the model's system prompt cannot disable or override the meter.
+
+% -------------------------------------------------------
+\section{Experimental Methodology}
+\label{sec:experimental-methodology}
+
+All experiments were conducted on a GPT-4-class serving infrastructure with 40GB GPU memory (NVIDIA A100). The defense was implemented as a Fact Layer pre-processor with no modifications to the model serving stack or the model weights.
+
+\textbf{Baseline:} Unprotected serving infrastructure running the same model on the same GPU. The Token Bomb attack was launched against the baseline to establish OOM thresholds.
+
+\textbf{Attack variants:} We tested three attack classes: (1) explicit nested prompts with $k=3,4,5$ and $r=10$; (2) implicit nested prompts via agentic loop with growth rate $g=3.1$; (3) context extension service attack where the attacker exploits the RAG retrieval to expand context beyond the submitted prompt length.
+
+\textbf{Metrics:} Peak GPU memory consumption (measured via \texttt{nvidia-smi}), inference success rate, mean per-request latency, and rejection latency.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

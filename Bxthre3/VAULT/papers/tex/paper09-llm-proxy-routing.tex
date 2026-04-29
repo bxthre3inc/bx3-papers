@@ -268,6 +268,43 @@ Over 90 days of operation on the Agentic platform, the LLM Proxy Router processe
 The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across model cascades, multi-criteria decision analysis, and capability-based routing provides the intellectual context in which the LLM Proxy Router is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Router Implementation: AgentOS ProxyRouter Module}
+\label{sec:router-implementation}
+
+The LLM Proxy Router is implemented at \texttt{agentic/src/routing/} as three components: \texttt{ModelRegistry}, \texttt{RoutingEngine}, and \texttt{ComplianceFilter}.
+
+\subsection{ModelRegistry}
+The \texttt{ModelRegistry} maintains the live Model Capability Registry. Each model entry is a structured record updated every 60 seconds by telemetry from the model serving infrastructure. The registry exposes a \texttt{get\_candidate\_models(request\_context)} method returning the compliance-filtered candidate set $\mathcal{M}_r$.
+
+\subsection{RoutingEngine}
+The \texttt{RoutingEngine} computes the scoring function (Equation~\ref{eq:scoring}) for each candidate model. It retrieves capability scores from the registry, retrieves weight configuration from the \purpose\ layer, and applies the scoring function. The \texttt{select\_model()} method returns $\arg\max_{m \in \mathcal{M}_r} S_m$.
+
+The routing engine supports per-request-type weight overrides. When a request includes an explicit \texttt{routing\_profile} field, the engine substitutes the request-type-specific weights for the default organizational weights.
+
+\subsection{ComplianceFilter}
+The \texttt{ComplianceFilter} implements the \fact\ layer's compliance enforcement as a hard gate. It evaluates data residency, audit logging level, context window, and regulatory category constraints. Any candidate model failing a compliance check is excluded from $\mathcal{M}_r$ before scoring. The filter is implemented as a deterministic boolean function: the same request always produces the same filtered set.
+
+% -------------------------------------------------------
+\section{Routing Weight Calibration}
+\label{sec:weight-calibration}
+
+The routing weights $w_1, w_2, w_3, w_4$ are not fixed at deployment. The \purpose\ layer calibrates weights based on organizational priorities and refines them based on operational data.
+
+Initial weight configuration reflects the organization's stated priorities. An organization prioritizing cost efficiency sets $w_2$ high (e.g., $w_2 = 0.5$); an organization prioritizing accuracy sets $w_1$ high (e.g., $w_1 = 0.6$). The default configuration on the Agentic platform is $(w_1, w_2, w_3, w_4) = (0.40, 0.25, 0.20, 0.15)$.
+
+Over 90 days of operation, the Observe phase of the Self-Modification Engine monitors routing outcomes and identifies systematic misalignments: tasks consistently receiving low fit scores, requests routinely escalating to expensive models despite low-complexity task classification, latency-sensitive requests routinely exceeding $L_{\max}$. These observations generate weight adjustment proposals evaluated through sandbox simulation before commitment.
+
+% -------------------------------------------------------
+\section{Generalization Beyond LLM Routing}
+\label{sec:generalization}
+
+While this paper focuses on LLM model selection, the proxy routing architecture generalizes to any heterogeneous compute resource pool. The scoring function's four factors -- capability, cost, latency, compliance -- apply equally to GPU cluster job scheduling, distributed database query routing, and multi-cloud resource allocation.
+
+The \purpose\ layer weight-setting interface is domain-agnostic: it defines scoring weights as real numbers constrained to $[0, 1]$ summing to $1.0$. The specific capability metrics, cost models, and latency distributions are domain-specific, but the routing architecture is universal.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 

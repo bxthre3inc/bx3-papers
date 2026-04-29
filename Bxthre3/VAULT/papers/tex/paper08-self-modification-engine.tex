@@ -298,6 +298,114 @@ The most impactful modification class was routing policy refinement (12 of 34 co
 The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across capability-based security, formal verification, and AI safety engineering provides the intellectual context in which the Self-Modification Engine is situated.
 
 % -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Concrete Modification Classes}
+\label{sec:mod-classes}
+
+To illustrate the SME's operation in practice, we describe four modification classes implemented on the Agentic platform.
+
+\subsection{Class 1: Skill Library Updates}
+A skill is a packaged prompt-and-response template encoding domain-specific reasoning patterns. When the Observe phase detects a recurring failure mode attributable to a skill's prompt, Hypothesize generates a candidate modification rewriting the failing prompt segments. The modification targets the skill's \texttt{prompt\_template} field --- a modifiable component --- and leaves the \texttt{response\_validator} field untouched. The Sandbox phase runs the modified skill against the challenge set and compares pass rates on the target task category. Only modifications improving pass rate by at least $\Delta_{min} = 0.05$ without degrading response validation accuracy advance to Commit.
+
+Of the 34 committed modifications on the Agentic platform, 9 were skill library updates. The most impactful skill update improved agricultural Spanish-language irrigation instruction accuracy from $0.71$ to $0.94$ on the held-out evaluation set.
+
+\subsection{Class 2: Routing Policy Refinement}
+The LLM Proxy Router's scoring weights ($w_1, w_2, w_3, w_4$) are modifiable components. When the Observe phase detects sustained degradation in task-model fit scores for a specific task category, it generates a routing policy refinement proposal. The modification targets the \texttt{routing\_weights} configuration map. Sandbox simulation against 90 days of historical request traces computes the projected task-model fit improvement. Only modifications improving fit scores by $\Delta_{min}$ without increasing per-request cost by more than $5\%$ advance.
+
+Of the 34 committed modifications, 12 were routing policy refinements. The most impactful reduced per-request cost by $18\%$ on routine classification tasks without degrading fit scores.
+
+\subsection{Class 3: Threshold Calibration}
+Safety Envelope threshold parameters --- confidence thresholds for Dynamic Aperture expansion, latency caps for Tier-4 human attestation --- are modifiable components. When the Observe phase detects elevated bailout rate attributable to a miscalibrated threshold, it generates a calibration proposal. Sandbox evaluation tests the modified threshold against the challenge set, measuring false-positive rate (benign conditions flagged) and false-negative rate (harmful conditions missed). Modifications reducing false-negative rate by $\Delta_{min}$ without increasing false-positive rate by more than $0.01$ advance.
+
+\subsection{Class 4: Condensation Ratio Adjustment}
+The condensation algorithm's compression ratio is a modifiable component. When the Observe phase detects degraded L1 summary quality --- measured by downstream task accuracy on condensed-context decisions --- it generates a ratio adjustment proposal. Sandbox evaluation tests ratios from $0.50$ to $0.95$ in $0.05$ increments, selecting the ratio maximizing downstream task accuracy. Four of the 34 committed modifications were condensation ratio adjustments, with optimal ratio varying by deployment context.
+
+% -------------------------------------------------------
+\section{Component Interaction Matrix}
+\label{sec:interaction-matrix}
+
+As the modifiable component population grows, understanding cross-component interactions becomes critical. The SME maintains a Component Interaction Matrix (CIM): a directed graph $G = (V, E)$ where each vertex $v \in V$ represents a modifiable component and each edge represents a dependency or conflict relationship.
+
+When Hypothesize generates a modification proposal targeting component $v$, the CIM is consulted. Components with a \texttt{DEPENDS\_ON} edge to $v$ are flagged as \textit{direct dependents}. Components with a path of length $\leq 2$ to $v$ are flagged as \textit{second-order dependents}. Any component with a \texttt{CONFLICTS\_WITH} edge to $v$ triggers an automatic safety review before sandbox evaluation.
+
+The CIM is maintained by the \bounds\ layer and updated whenever a new modifiable component is introduced or a dependency is discovered through operational observation. The \purpose\ layer reviews CIM updates before they take effect.
+
+% -------------------------------------------------------
+\section{Implementation: AgentOS SME Module}
+\label{sec:implementation}
+
+The SME is implemented at \texttt{agentic/src/sme/} as four PhaseHandlers and an SMEOrchestrator.
+
+\medskip
+\noindent
+\texttt{ObserveHandler} runs continuously, polling the forensic ledger for new operational events. It implements statistical change detection (CUSUM test) with configurable drift sensitivity and emits \texttt{PerformanceGap} events when drift exceeds the detection threshold.
+
+\medskip
+\noindent
+\texttt{HypothesizeHandler} receives \texttt{PerformanceGap} events and generates modification proposals using a template-based generator. Each proposal is a structured record containing target component, change content, predicted metrics, and failure mode analysis.
+
+\medskip
+\noindent
+\texttt{SandboxHandler} manages read-only shadow instances initialized from forensic ledger state snapshots. It executes proposed modifications, runs the challenge set, and returns a \texttt{SandboxResult} containing metric deltas and safety check results.
+
+\medskip
+\noindent
+\texttt{CommitHandler} applies accepted modifications to the live system. It records full modification provenance in the forensic ledger: the original gap, the proposal, the sandbox result, and the human review determination. When rollback is required, it reverts to pre-modification state using forensic ledger state snapshots.
+
+The \texttt{SMEOrchestrator} maintains a three-state machine (\texttt{RUNNING}, \texttt{PAUSED}, \texttt{TERMINATED}) and coordinates phase transitions. It holds references to all PhaseHandlers, the immutable core registry, the CIM, and the Purpose Layer authorization interface.
+
+
+
+% -------------------------------------------------------
+\section{Concrete Modification Classes}
+\label{sec:mod-classes}
+
+To illustrate the SME's operation in practice, we describe four modification classes implemented on the Agentic platform.
+
+\subsection{Class 1: Skill Library Updates}
+A skill is a packaged prompt-and-response template encoding domain-specific reasoning patterns. When the Observe phase detects a recurring failure mode attributable to a skill's prompt, Hypothesize generates a candidate modification rewriting the failing prompt segments. The modification targets the skill's \texttt{prompt\_template} field -- a modifiable component -- and leaves the \texttt{response\_validator} field untouched. The Sandbox phase runs the modified skill against the challenge set and compares pass rates on the target task category. Only modifications improving pass rate by at least $\Delta_{min} = 0.05$ without degrading response validation accuracy advance to Commit.
+
+Of the 34 committed modifications on the Agentic platform, 9 were skill library updates. The most impactful skill update improved agricultural Spanish-language irrigation instruction accuracy from $0.71$ to $0.94$ on the held-out evaluation set.
+
+\subsection{Class 2: Routing Policy Refinement}
+The LLM Proxy Router's scoring weights ($w_1, w_2, w_3, w_4$) are modifiable components. When the Observe phase detects sustained degradation in task-model fit scores for a specific task category, it generates a routing policy refinement proposal. The modification targets the \texttt{routing\_weights} configuration map. Sandbox simulation against 90 days of historical request traces computes the projected task-model fit improvement. Only modifications improving fit scores by $\Delta_{min}$ without increasing per-request cost by more than $5\%$ advance.
+
+Of the 34 committed modifications, 12 were routing policy refinements. The most impactful reduced per-request cost by $18\%$ on routine classification tasks without degrading fit scores.
+
+\subsection{Class 3: Threshold Calibration}
+Safety Envelope threshold parameters -- confidence thresholds for Dynamic Aperture expansion, latency caps for Tier-4 human attestation -- are modifiable components. When the Observe phase detects elevated bailout rate attributable to a miscalibrated threshold, it generates a calibration proposal. Sandbox evaluation tests the modified threshold against the challenge set, measuring false-positive rate and false-negative rate. Modifications reducing false-negative rate by $\Delta_{min}$ without increasing false-positive rate by more than $0.01$ advance.
+
+\subsection{Class 4: Condensation Ratio Adjustment}
+The condensation algorithm's compression ratio is a modifiable component. When the Observe phase detects degraded L1 summary quality -- measured by downstream task accuracy on condensed-context decisions -- it generates a ratio adjustment proposal. Sandbox evaluation tests ratios from $0.50$ to $0.95$ in $0.05$ increments. Four of the 34 committed modifications were condensation ratio adjustments.
+
+% -------------------------------------------------------
+\section{Component Interaction Matrix}
+\label{sec:interaction-matrix}
+
+As the modifiable component population grows, understanding cross-component interactions becomes critical. The SME maintains a Component Interaction Matrix (CIM): a directed graph $G = (V, E)$ where each vertex $v \in V$ represents a modifiable component and each edge represents a dependency or conflict relationship.
+
+When Hypothesize generates a modification proposal targeting component $v$, the CIM is consulted. Components with a \texttt{DEPENDS\_ON} edge to $v$ are flagged as \textit{direct dependents}. Any component with a \texttt{CONFLICTS\_WITH} edge to $v$ triggers an automatic safety review before sandbox evaluation.
+
+The CIM is maintained by the \bounds\ layer and updated whenever a new modifiable component is introduced. The \purpose\ layer reviews CIM updates.
+
+% -------------------------------------------------------
+\section{Implementation: AgentOS SME Module}
+\label{sec:implementation}
+
+The SME is implemented at \texttt{agentic/src/sme/} as four PhaseHandlers and an SMEOrchestrator.
+
+\texttt{ObserveHandler} runs continuously, polling the forensic ledger for new operational events. It implements statistical change detection (CUSUM test) and emits \texttt{PerformanceGap} events when drift exceeds the detection threshold.
+
+\texttt{HypothesizeHandler} receives \texttt{PerformanceGap} events and generates modification proposals. Each proposal is a structured record containing target component, change content, predicted metrics, and failure mode analysis.
+
+\texttt{SandboxHandler} manages read-only shadow instances initialized from forensic ledger state snapshots. It executes proposed modifications, runs the challenge set, and returns a \texttt{SandboxResult} containing metric deltas and safety check results.
+
+\texttt{CommitHandler} applies accepted modifications to the live system, recording full modification provenance in the forensic ledger.
+
+\texttt{SMEOrchestrator} maintains a three-state machine (\texttt{RUNNING}, \texttt{PAUSED}, \texttt{TERMINATED}) and coordinates phase transitions.
+
+
 \bibliographystyle{plainnat}
 \bibliography{bx3framework}
 
