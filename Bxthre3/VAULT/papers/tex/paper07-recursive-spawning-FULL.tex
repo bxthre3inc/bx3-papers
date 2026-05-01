@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,enumitem}
+\usepackage{graphicx,float}
+\usepackage{textcomp}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\def\bxthree{BX3}
+\def\purpose{\textit{Purpose Layer}}
+\def\bounds{\textit{Bounds Engine}}
+\def\fact{\textit{Fact Layer}}
+
+\title{Recursive Spawning with Immutable Parent Pointers: Preventing Autonomous Drift in Multi-Agent Systems}
+\author{Jeremy Blaine Thompson Beebe\\ \textit{Bxthre3 Inc. --- bxthre3inc@gmail.com --- ORCID: 0009-0009-2394-9714}}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The deployment of autonomous multi-agent systems has exposed a fundamental accountability gap: conventional architectures cannot guarantee that every agent's authority traces to a human principal. As agents spawn recursively and make decisions with real-world consequences, the question of authorization provenance becomes critical. We introduce the Recursive Spawning Protocol (RSP): a structural mechanism built on the BX3 three-layer architecture that makes delegation chains immutable runtime artifacts rather than forensic reconstructions. RSP prevents autonomous drift—the condition where agents operate without traceable human authorization—through three constraints: immutable parent pointers established at provisioning, Purpose Layer authorization for all spawns, and Fact Layer enforcement of scope refinement invariants. Deployed in the Agentic platform, RSP has processed 2,500+ spawn events with zero drift incidents. This paper formalizes the drift problem, proves RSP's sufficiency conditions, and demonstrates its deployment in production multi-agent systems.
+\end{abstract}
+
+\input{../paper07-section1-introduction.tex}
+
+\input{section2_background.tex}
+
+\input{../paper07-section3-autonomous-drift.tex}
+
+\input{../paper07-section4-immutable-parent-pointers.tex}
+
+\input{../paper07-Section5-v4.tex}
+
+\input{../paper07-section6-integration.tex}
+
+\input{../paper07-section7-correctness.tex}
+
+\input{../paper07-section8-limitations.tex}
+
+\input{../paper07-section9-conclusion.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\end{document}

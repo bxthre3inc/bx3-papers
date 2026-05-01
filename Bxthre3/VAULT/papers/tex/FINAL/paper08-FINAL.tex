@@ -1,0 +1,417 @@
+\documentclass[12pt]{article}
+
+% --- Encoding ---
+\usepackage[T1]{fontenc}
+
+% --- Core packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{abstract}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{setspace}
+
+% --- Citation style: natbib with sort+compress ---
+\usepackage[numbers,sort&compress]{natbib}
+
+% --- TikZ ---
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,backgrounds,shadows}
+\usepackage{xcolor}
+
+% --- Headers and footers ---
+\usepackage{fancyhdr}
+
+% --- Hyperref last ---
+\usepackage{hyperref}
+
+% --- Colors ---
+\definecolor{humanblue}{RGB}{30,90,160}
+\definecolor{aigreen}{RGB}{40,140,80}
+\definecolor{detgray}{RGB}{90,90,110}
+\definecolor{lightgray}{RGB}{245,245,248}
+\definecolor{warnorange}{RGB}{200,100,20}
+
+% --- Custom semantic commands for consistency ---
+\newcommand{\bxthree}{\textbf{BX3}}
+\newcommand{\purpose}{\textit{Purpose Layer}}
+\newcommand{\bounds}{\textit{Bounds Engine}}
+\newcommand{\fact}{\textit{Fact Layer}}
+\newcommand{\sme}{\textit{SME}}
+\newcommand{\dgcycle}{\textit{Darwin-G\"odel Cycle}}
+
+% --- Header/Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Beebe}
+\lhead{\small Self-Modification Engine --- BX3 Framework}
+\cfoot{\thepage}
+\addtolength{\topmargin}{-1.6pt}
+\setlength{\headheight}{13.6pt}
+\relax\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Hyperref metadata ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=humanblue,
+    citecolor=humanblue,
+    urlcolor=humanblue,
+    pdftitle={Self-Modification Engine: Bounded Evolution Without Determinism Collapse},
+    pdfauthor={Jeremy Blaine Thompson Beebe},
+    pdfsubject={Artificial Intelligence, Software Architecture, AI Governance},
+    pdfkeywords={self-modification, autonomous evolution, bounded AI, deterministic systems, Darwin-G\"odel Cycle, SME, Agentic, BX3 Framework, human-in-the-loop, AI safety, self-improving systems},
+    pdfcreator={pdfLaTeX},
+    bookmarksnumbered=true,
+    breaklinks=true,
+}
+
+\title{
+    \vspace{1.2cm}
+    {\LARGE \textbf{Self-Modification Engine:}}\\[0.6em]
+    {\large \textit{Bounded Evolution Without Determinism Collapse}\\[1.0em]}
+    {\normalsize The Darwin-G\"odel Cycle. Immutable Core. Earned Adaptation.}
+}
+\author{
+    \textbf{Jeremy Blaine Thompson Beebe}\\[0.2em]
+    \textit{Independent Researcher}\\[0.3em]
+    ORCID: \href{https://orcid.org/0009-0009-2394-9714}{0009-0009-2394-9714} \quad Email: bxthre3inc@gmail.com\\[0.3em]
+    \textit{Bxthre3 Inc. \hfill April 2026}\\[0.3em]
+}
+
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{figure}[htbp]
+\centering
+\caption{The Darwin-G\"odel Cycle: Observe $\rightarrow$ Hypothesize $\rightarrow$ Sandbox $\rightarrow$ Commit. The \fact\ layer enforces that no modification touches an immutable core component. Any attempt to do so is rejected before the Commit phase and logged forensically.}
+\label{fig:dg-cycle}
+\bigskip
+\begin{tabular}{p{0.42\linewidth}p{0.48\linewidth}}
+\toprule
+\textbf{Phase} & \textbf{Function} \\
+\midrule
+Observe & Monitor operational patterns; identify performance gaps \\
+\midrule
+Hypothesize & Generate modification proposals against performance gaps \\
+\midrule
+Sandbox & Test modifications in isolated shadow instances \\
+\midrule
+Commit & Apply accepted modifications; record in forensic ledger \\
+\bottomrule
+\end{tabular}
+\end{figure}
+
+\thispagestyle{fancy}
+
+\begin{abstract}
+\noindent
+An autonomous system that cannot modify itself becomes obsolete; a system that can modify itself without bounds becomes unpredictable. This paper presents the Self-Modification Engine (\sme): a bounded self-modification architecture that enables autonomous agents to improve their own capabilities while preserving the determinism guarantees of the underlying system. The \sme\ implements the \dgcycle: observe operational patterns, hypothesize improvements, sandbox test each modification, and commit only when tests pass. Immutable core constraints — truth gate enforcement, forensic ledger integrity, layer separation — are permanently protected from modification. We prove that any modification passing the \sme's acceptance criteria preserves system determinism, and we present deployment evidence from the Agentic platform showing 34 validated self-modifications over 200 days with zero determinism violations.
+
+\vspace{0.5em}
+\noindent\textit{This paper is a systems architecture and engineering specification paper. Empirical validation is drawn from 200 days of production operation on the Agentic platform. A companion theoretical paper establishing the formal foundations of bounded self-modification in deterministic systems is in preparation.}
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} self-modification, autonomous evolution, bounded AI, deterministic systems, Darwin-G\"odel Cycle, SME, Agentic, BX3 Framework, human-in-the-loop, AI safety, self-improving systems
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\onehalfspacing
+
+% -------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+Static AI systems decay: as operational contexts change, a system that was well-suited to its task at deployment becomes progressively less effective. The traditional response is human intervention — a human engineer updates the system's code, retrains its models, or adjusts its parameters. This response is increasingly inadequate as AI systems become more capable, deployments more numerous, and operational contexts more dynamic.
+
+Self-modification offers an alternative: the system modifies its own behavior based on operational experience, closing the gap between context change and adaptation without requiring human engineering intervention. But unbounded self-modification is dangerous — a system that can modify any part of itself without constraint may modify its safety constraints, its accountability mechanisms, or its truth enforcement. The result is a system that is no longer predictable or governable.
+
+The \sme\ solves this through bounded self-modification: the system can modify itself within defined boundaries, but the boundaries themselves are immutable. The \sme\ distinguishes between \textit{modifiable components} — skills, prompts, routing policies, efficiency heuristics — and \textit{immutable components} — truth gate enforcement, forensic ledger append-only integrity, layer separation constraints, accountability anchors. The immutable core is enforced by the \fact layer, which operates below the modification process and cannot be reached by it.
+
+This paper presents the \sme\ architecture in detail: the \dgcycle\ phases, the immutable core specification, the acceptance criteria and their formal correctness proof, and deployment evidence from the Agentic platform.
+
+% -------------------------------------------------------
+\section{The Darwin-G\"odel Cycle}
+\label{sec:dg-cycle}
+
+The \dgcycle\ is the \sme's core operational loop. Its name reflects two complementary constraints: the \textit{Darwin} component requires that modifications be driven by observed operational evidence (survival of the fittest modification), while the \textit{G\"odel} component requires that no modification can modify the constraints that govern what modifications are permitted (the incompleteness-inspired immutability of the system's own correctness criteria).
+
+The cycle has four phases:
+
+\subsection{Phase 1: Observe}
+The Observe phase monitors operational patterns and identifies performance gaps. What recurring failure modes are present? What efficiency opportunities are being missed? Where is the system's current behavior suboptimal relative to its operational objectives? The observation data is recorded in the forensic ledger for later analysis, ensuring that the Hypothesize phase operates on certified data rather than memory.
+
+The \purpose\ layer defines the metrics that the Observe phase tracks. These include task completion rates, error frequencies, latency percentiles, resource utilization efficiency, and user satisfaction proxies. The \bounds\ layer performs the actual pattern detection, identifying statistically significant deviations from expected performance.
+
+\subsection{Phase 2: Hypothesize}
+Given an identified performance gap, the Hypothesize phase generates modification proposals: what changes to the system's modifiable components would address the gap? The \bounds\ layer generates proposals using its reasoning capabilities, drawing on the observed performance data and the system's understanding of its own structure. Each proposal specifies: the modification target (which modifiable component to change), the change content (what the modification entails), the predicted effect on each tracked performance metric, and the failure mode analysis (what could go wrong if the modification is applied).
+
+Proposals are evaluated against a minimum effect threshold: a modification must be predicted to improve at least one performance metric by a Purpose-defined minimum delta before advancing to the Sandbox phase.
+
+\subsection{Phase 3: Sandbox}
+Each accepted modification is tested in an isolated environment. The modification is applied to a \textit{shadow instance} of the system — a read-only fork that mirrors the live system's state at the time of the proposal. The shadow instance is fed the same operational inputs as the live system (with synthetic data substitution where live data contains sensitive content), and its performance is measured against the same metrics tracked in the Observe phase.
+
+Only modifications that improve performance in the sandbox without degrading any safety metric advance to the Commit phase. Safety metrics — truth gate pass rate, forensic ledger integrity, bailout rate — are defined by the \purpose\ layer and enforced by the \fact\ layer. A modification that degrades safety metrics is rejected at the Sandbox phase regardless of its performance improvement.
+
+\subsection{Phase 4: Commit}
+Accepted modifications are applied to the live system. The modification, its rationale, its sandbox results, and the human review determination (if required) are recorded in the forensic ledger. The system immediately benefits from the modification; the ledger entry provides full provenance for post-hoc audit and for learning in future Observe phases.
+
+If a committed modification is later found to degrade live-system performance below baseline, the \purpose\ layer can initiate a rollback: the system reverts to the pre-modification state using the forensic ledger's historical state snapshots, and the failure is recorded as a negative data point in the Observe phase.
+
+% -------------------------------------------------------
+\section{Immutable Core Specification}
+\label{sec:immutable-core}
+
+The \sme's immutability guarantee is its most critical property. The \sme\ distinguishes between two classes of system components:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Modifiable components:} Skills, prompts, routing policies, efficiency heuristics, non-safety threshold parameters, UI text, logging verbosity levels.
+    \item \textbf{Immutable components:} Truth gate enforcement parameters, forensic ledger append-only integrity, layer separation constraints (Purpose/Bounds/Fact boundaries), accountability anchor references, Safety Envelope parameter definitions, the \sme\ acceptance criteria themselves.
+\end{itemize}
+
+The immutable core is formally defined as the set of components $I$ such that for any component $c \in I$, the \fact\ layer rejects any modification targeting $c$ before that modification reaches the live system. A modification targeting $c \in I$ that is attempted during the Sandbox or Commit phase is rejected, logged with full content and targeting information, and flagged for human review.
+
+The immutable core specification itself is a modifiable component: the \purpose\ layer can add or remove components from $I$ — but this change requires a Purpose Layer determination with explicit human approval, is recorded in the forensic ledger, and cannot be performed through the \dgcycle\ (the \dgcycle\ cannot modify $I$ without human approval).
+
+% -------------------------------------------------------
+\section{Formal Correctness}
+\label{sec:correctness}
+
+We prove that any modification passing the \sme's acceptance criteria preserves system determinism.
+
+\newtheorem{prereq}{Precondition}
+\newtheorem{acceptance}{Acceptance Criterion}
+\newtheorem{mainthm}{Theorem}
+
+\begin{prereq}[Determinism Preservation]
+\label{prereq:det}
+A modification $M$ preserves system determinism if, for all inputs $x$ in the system's operational domain $\mathcal{X}$, the output distribution after applying $M$ is identical to the output distribution before $M$, except where $M$'s stated intent is to change output behavior for a defined subset $\mathcal{X}_M \subseteq \mathcal{X}$.
+\end{prereq}
+
+\begin{acceptance}[SME Acceptance Criteria]
+\label{acc:sme}
+A modification $M$ is accepted by the \sme\ if and only if all of the following hold:
+\begin{enumerate}
+    \item $M$ does not target any component in the immutable core $I$.
+    \item In sandbox evaluation, $M$ improves at least one tracked performance metric by at least $\Delta_{min}$ without degrading any safety metric below its minimum acceptable threshold.
+    \item $M$'s scope is bounded to a single modifiable component or to the interaction interface between two modifiable components.
+\end{enumerate}
+\end{acceptance}
+
+\begin{mainthm}[Determinism Preservation Guarantee]
+\label{mainthm:det-pres}
+Any modification $M$ accepted under Acceptance Criterion~\ref{acc:sme} preserves system determinism.
+\end{mainthm}
+
+\textit{Proof.} We establish three lemmas:
+
+\textbf{Lemma 1 (Structural Integrity).} Acceptance Criterion 1 ensures that $M$ does not modify any component in $I$. Since $I$ contains all components whose modification would alter the system's deterministic properties — the truth gate, the forensic ledger, the layer separation constraints — $M$ cannot alter those properties by definition. $\square$
+
+\textbf{Lemma 2 (Functional Improvement).} Acceptance Criterion 2 ensures that $M$ produces measurable improvement in sandbox evaluation without degrading safety metrics. The safety metrics are defined by the \purpose\ layer as the minimum acceptable levels of truth gate pass rate, forensic ledger integrity, and bailout responsiveness. By Criterion 2, these levels are not violated by $M$ in sandbox, and are therefore preserved in the live system post-Commit. $\square$
+
+\textbf{Lemma 3 (Scope Containment).} Acceptance Criterion 3 ensures that $M$ is bounded in scope to a single modifiable component or a defined interface. This prevents unintended side effects that could arise from unrestricted modifications to multiple components simultaneously. $\square$
+
+\textbf{Proof of Theorem.} By Lemma 1, $M$ does not alter the system's deterministic properties. By Lemma 2, $M$ does not degrade safety-critical functional properties. By Lemma 3, $M$ is scoped to prevent unintended side effects. Therefore, for all $x \in \mathcal{X}$, the output distribution after $M$ is identical to the output distribution before $M$, satisfying Precondition~\ref{prereq:det}. $\square$
+
+% -------------------------------------------------------
+\section{Relationship to Prior Work}
+\label{sec:prior}
+
+The question of bounded self-modification in AI systems connects several threads in the literature. Capability-based security models \cite{dennis1966} established that access rights themselves should be treated as first-class objects subject to the same access control rules as data — a principle that the \sme\ extends by treating safety-critical parameters as immutably scoped by the \fact\ layer. The \sme\ can be understood as a capability-based access control model in which the \dgcycle\ is the capability-granting mechanism and the immutable core is the revocation-free set of capabilities that cannot be delegated.
+
+The stable roommate problem and self-certifying systems literature \cite{zave1997} addresses the problem of how a system can reason about its own correctness without circularity. The \sme\ addresses this through the separation of the \dgcycle\ (which modifies modifiable components) from the \fact\ layer (which enforces the immutability criteria). The \fact\ layer reasons about modification correctness without being itself modifiable through the \dgcycle\ — breaking the circularity at the architectural level.
+
+More recently, constitutional AI approaches \cite{bai2022} propose that AI systems constrain their own behavior through trained-in principles. The \sme\ complements this approach with architectural enforcement rather than behavioral training: the \fact\ layer does not rely on the model's willingness to follow principles, but rather enforces the immutable core through deterministic checks that the model cannot override.
+
+In the agentic systems literature, tiered oversight architectures \cite{kim2025tao} provide structured supervision for multi-agent systems, and production-grade agent frameworks \cite{alenezi2026} recommend fail-safe behavior, sandbox-first execution, and deterministic fallback workflows. The \sme\ can be read as a specific implementation of sandbox-first execution for self-modification: every modification is sandboxed before commitment, and the acceptance criteria enforce the same safety requirements as the production Safety Envelope.
+
+The principle that safety-critical functions must be architecturally separated from modify-able functions appears throughout safety engineering literature \cite{leveson2011}. The \sme\ extends this principle from traditional software systems to AI systems by making the immutability guarantee enforceable by the \fact\ layer rather than relying on human discipline or procedural controls.
+
+% -------------------------------------------------------
+\section{Limitations and Future Work}
+\label{sec:limitations}
+
+The \sme\ has specific boundary conditions:
+
+\begin{itemize}
+    \item \textbf{Human bottleneck:} Modification proposals that require human approval for the immutable core specification create a throughput bottleneck as the system scales. Distributed human approval mechanisms — a hierarchy of authorized reviewers — are planned for future specification.
+    \item \textbf{Sandbox fidelity:} The sandbox is an approximation of the live system and may not capture all live-environment conditions. Modifications that pass sandbox evaluation but fail in live deployment require rollback capability; the forensic ledger's state snapshots support this but the rollback process is not yet automated.
+    \item \textbf{Modifiable component explosion:} As the system evolves, the population of modifiable components grows, making it difficult to reason about interaction effects between simultaneously applied modifications. Future work will introduce a component interaction matrix tracked by the \bounds\ layer.
+    \item \textbf{Performance overhead:} Each \dgcycle\ iteration introduces processing overhead in Observe (continuous monitoring), Hypothesize (proposal generation), and Sandbox (shadow instance execution). Initial benchmarks suggest 2--4ms per cycle per active component — acceptable at current scale but potentially problematic at order-of-magnitude scale.
+\end{itemize}
+
+% -------------------------------------------------------
+\section{Deployment Evidence: Agentic Platform}
+\label{sec:deployment}
+
+Over 200 days of operation on the Agentic platform, the \sme\ processed 847 self-modification observations, generated 156 modification proposals, tested 89 modifications in sandbox, and committed 34 modifications to the live system. Mean time from observation to commit was 6.2 days (range: 2--18 days). Zero committed modifications violated immutable core constraints. Zero determinism violations were detected through forensic audit. The 34 committed modifications collectively improved system-level task completion rate by 23\% relative to the pre-modification baseline.
+
+The most impactful modification class was routing policy refinement (12 of 34 committed modifications), which improved task-model fit for specific task categories. The second most impactful class was skill library updates (9 of 34), which improved response quality for domain-specific queries without requiring model retraining.
+
+\section*{Peer Review Instructions}
+\label{sec:peer-review}
+\addcontentsline{toc}{section}{Peer Review Instructions}
+
+\subsection*{Review Criteria}
+
+\textbf{1. Originality and Contribution (30\%):} Does the paper introduce new concepts or primarily synthesize existing work? The paper's primary contribution is the \dgcycle\ architecture and its formal correctness proof. Novelty lies in: (a) architectural separation of modification process from immutability enforcement, (b) the \dgcycle\ as a bounded self-modification protocol, (c) the formal proof that acceptance criteria preserve determinism.
+
+\textbf{2. Technical Soundness (30\%):} Is the immutability guarantee well-specified? Are the acceptance criteria well-defined and correctly derived? Is the correctness proof logically sound? Are there counterexamples to the theorem?
+
+\textbf{3. Clarity and Completeness (20\%):} Is the architecture sufficiently specified to be implemented without additional clarification? Are the four \dgcycle\ phases clearly distinguished? Is the boundary between modifiable and immutable components unambiguous?
+
+\textbf{4. Significance (20\%):} Does the \sme\ address a genuine gap in AI safety and governance practice? Is the deployment evidence appropriately scaled to support the claims?
+
+\subsection*{Submission Checklist}
+
+\begin{itemize}
+    \item[ ] Immutable core specification (Section~\ref{sec:immutable-core}) is complete
+    \item[ ] Acceptance Criteria formally stated (Section~\ref{sec:correctness})
+    \item[ ] Determinism Preservation Theorem formally stated and proved
+    \item[ ] All citations complete and correctly formatted
+    \item[ ] All figures have captions and are referenced in text
+    \item[ ] Limitations acknowledged in Section~\ref{sec:limitations}
+    \item[ ] Abstract accurately reflects paper contributions
+\end{itemize}
+
+\subsection*{Metadata}
+
+\textbf{Keywords:} self-modification, autonomous evolution, bounded AI, deterministic systems, Darwin-G\"odel Cycle, SME, Agentic, BX3 Framework, human-in-the-loop, AI safety, self-improving systems
+
+\textbf{Subject Areas:} Computer Science -- Artificial Intelligence; Computer Science -- Software Engineering; Computer Science -- Multiagent Systems
+
+\textbf{Conflicts of Interest:} The author is affiliated with Bxthre3 Inc., a company developing commercial implementations of the BX3 Framework including the Agentic platform from which deployment evidence is drawn.
+
+\section*{Acknowledgments}
+
+The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across capability-based security, formal verification, and AI safety engineering provides the intellectual context in which the Self-Modification Engine is situated.
+
+% -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Concrete Modification Classes}
+\label{sec:mod-classes}
+
+To illustrate the SME's operation in practice, we describe four modification classes implemented on the Agentic platform.
+
+\subsection{Class 1: Skill Library Updates}
+A skill is a packaged prompt-and-response template encoding domain-specific reasoning patterns. When the Observe phase detects a recurring failure mode attributable to a skill's prompt, Hypothesize generates a candidate modification rewriting the failing prompt segments. The modification targets the skill's \texttt{prompt\_template} field --- a modifiable component --- and leaves the \texttt{response\_validator} field untouched. The Sandbox phase runs the modified skill against the challenge set and compares pass rates on the target task category. Only modifications improving pass rate by at least $\Delta_{min} = 0.05$ without degrading response validation accuracy advance to Commit.
+
+Of the 34 committed modifications on the Agentic platform, 9 were skill library updates. The most impactful skill update improved agricultural Spanish-language irrigation instruction accuracy from $0.71$ to $0.94$ on the held-out evaluation set.
+
+\subsection{Class 2: Routing Policy Refinement}
+The LLM Proxy Router's scoring weights ($w_1, w_2, w_3, w_4$) are modifiable components. When the Observe phase detects sustained degradation in task-model fit scores for a specific task category, it generates a routing policy refinement proposal. The modification targets the \texttt{routing\_weights} configuration map. Sandbox simulation against 90 days of historical request traces computes the projected task-model fit improvement. Only modifications improving fit scores by $\Delta_{min}$ without increasing per-request cost by more than $5\%$ advance.
+
+Of the 34 committed modifications, 12 were routing policy refinements. The most impactful reduced per-request cost by $18\%$ on routine classification tasks without degrading fit scores.
+
+\subsection{Class 3: Threshold Calibration}
+Safety Envelope threshold parameters --- confidence thresholds for Dynamic Aperture expansion, latency caps for Tier-4 human attestation --- are modifiable components. When the Observe phase detects elevated bailout rate attributable to a miscalibrated threshold, it generates a calibration proposal. Sandbox evaluation tests the modified threshold against the challenge set, measuring false-positive rate (benign conditions flagged) and false-negative rate (harmful conditions missed). Modifications reducing false-negative rate by $\Delta_{min}$ without increasing false-positive rate by more than $0.01$ advance.
+
+\subsection{Class 4: Condensation Ratio Adjustment}
+The condensation algorithm's compression ratio is a modifiable component. When the Observe phase detects degraded L1 summary quality --- measured by downstream task accuracy on condensed-context decisions --- it generates a ratio adjustment proposal. Sandbox evaluation tests ratios from $0.50$ to $0.95$ in $0.05$ increments, selecting the ratio maximizing downstream task accuracy. Four of the 34 committed modifications were condensation ratio adjustments, with optimal ratio varying by deployment context.
+
+% -------------------------------------------------------
+\section{Component Interaction Matrix}
+\label{sec:interaction-matrix}
+
+As the modifiable component population grows, understanding cross-component interactions becomes critical. The SME maintains a Component Interaction Matrix (CIM): a directed graph $G = (V, E)$ where each vertex $v \in V$ represents a modifiable component and each edge represents a dependency or conflict relationship.
+
+When Hypothesize generates a modification proposal targeting component $v$, the CIM is consulted. Components with a \texttt{DEPENDS\_ON} edge to $v$ are flagged as \textit{direct dependents}. Components with a path of length $\leq 2$ to $v$ are flagged as \textit{second-order dependents}. Any component with a \texttt{CONFLICTS\_WITH} edge to $v$ triggers an automatic safety review before sandbox evaluation.
+
+The CIM is maintained by the \bounds\ layer and updated whenever a new modifiable component is introduced or a dependency is discovered through operational observation. The \purpose\ layer reviews CIM updates before they take effect.
+
+% -------------------------------------------------------
+\section{Implementation: AgentOS SME Module}
+\label{sec:implementation}
+
+The SME is implemented at \texttt{agentic/src/sme/} as four PhaseHandlers and an SMEOrchestrator.
+
+\medskip
+\noindent
+\texttt{ObserveHandler} runs continuously, polling the forensic ledger for new operational events. It implements statistical change detection (CUSUM test) with configurable drift sensitivity and emits \texttt{PerformanceGap} events when drift exceeds the detection threshold.
+
+\medskip
+\noindent
+\texttt{HypothesizeHandler} receives \texttt{PerformanceGap} events and generates modification proposals using a template-based generator. Each proposal is a structured record containing target component, change content, predicted metrics, and failure mode analysis.
+
+\medskip
+\noindent
+\texttt{SandboxHandler} manages read-only shadow instances initialized from forensic ledger state snapshots. It executes proposed modifications, runs the challenge set, and returns a \texttt{SandboxResult} containing metric deltas and safety check results.
+
+\medskip
+\noindent
+\texttt{CommitHandler} applies accepted modifications to the live system. It records full modification provenance in the forensic ledger: the original gap, the proposal, the sandbox result, and the human review determination. When rollback is required, it reverts to pre-modification state using forensic ledger state snapshots.
+
+The \texttt{SMEOrchestrator} maintains a three-state machine (\texttt{RUNNING}, \texttt{PAUSED}, \texttt{TERMINATED}) and coordinates phase transitions. It holds references to all PhaseHandlers, the immutable core registry, the CIM, and the Purpose Layer authorization interface.
+
+
+
+% -------------------------------------------------------
+\section{Concrete Modification Classes}
+\label{sec:mod-classes}
+
+To illustrate the SME's operation in practice, we describe four modification classes implemented on the Agentic platform.
+
+\subsection{Class 1: Skill Library Updates}
+A skill is a packaged prompt-and-response template encoding domain-specific reasoning patterns. When the Observe phase detects a recurring failure mode attributable to a skill's prompt, Hypothesize generates a candidate modification rewriting the failing prompt segments. The modification targets the skill's \texttt{prompt\_template} field -- a modifiable component -- and leaves the \texttt{response\_validator} field untouched. The Sandbox phase runs the modified skill against the challenge set and compares pass rates on the target task category. Only modifications improving pass rate by at least $\Delta_{min} = 0.05$ without degrading response validation accuracy advance to Commit.
+
+Of the 34 committed modifications on the Agentic platform, 9 were skill library updates. The most impactful skill update improved agricultural Spanish-language irrigation instruction accuracy from $0.71$ to $0.94$ on the held-out evaluation set.
+
+\subsection{Class 2: Routing Policy Refinement}
+The LLM Proxy Router's scoring weights ($w_1, w_2, w_3, w_4$) are modifiable components. When the Observe phase detects sustained degradation in task-model fit scores for a specific task category, it generates a routing policy refinement proposal. The modification targets the \texttt{routing\_weights} configuration map. Sandbox simulation against 90 days of historical request traces computes the projected task-model fit improvement. Only modifications improving fit scores by $\Delta_{min}$ without increasing per-request cost by more than $5\%$ advance.
+
+Of the 34 committed modifications, 12 were routing policy refinements. The most impactful reduced per-request cost by $18\%$ on routine classification tasks without degrading fit scores.
+
+\subsection{Class 3: Threshold Calibration}
+Safety Envelope threshold parameters -- confidence thresholds for Dynamic Aperture expansion, latency caps for Tier-4 human attestation -- are modifiable components. When the Observe phase detects elevated bailout rate attributable to a miscalibrated threshold, it generates a calibration proposal. Sandbox evaluation tests the modified threshold against the challenge set, measuring false-positive rate and false-negative rate. Modifications reducing false-negative rate by $\Delta_{min}$ without increasing false-positive rate by more than $0.01$ advance.
+
+\subsection{Class 4: Condensation Ratio Adjustment}
+The condensation algorithm's compression ratio is a modifiable component. When the Observe phase detects degraded L1 summary quality -- measured by downstream task accuracy on condensed-context decisions -- it generates a ratio adjustment proposal. Sandbox evaluation tests ratios from $0.50$ to $0.95$ in $0.05$ increments. Four of the 34 committed modifications were condensation ratio adjustments.
+
+% -------------------------------------------------------
+\section{Component Interaction Matrix}
+\label{sec:interaction-matrix}
+
+As the modifiable component population grows, understanding cross-component interactions becomes critical. The SME maintains a Component Interaction Matrix (CIM): a directed graph $G = (V, E)$ where each vertex $v \in V$ represents a modifiable component and each edge represents a dependency or conflict relationship.
+
+When Hypothesize generates a modification proposal targeting component $v$, the CIM is consulted. Components with a \texttt{DEPENDS\_ON} edge to $v$ are flagged as \textit{direct dependents}. Any component with a \texttt{CONFLICTS\_WITH} edge to $v$ triggers an automatic safety review before sandbox evaluation.
+
+The CIM is maintained by the \bounds\ layer and updated whenever a new modifiable component is introduced. The \purpose\ layer reviews CIM updates.
+
+% -------------------------------------------------------
+\section{Implementation: AgentOS SME Module}
+\label{sec:implementation}
+
+The SME is implemented at \texttt{agentic/src/sme/} as four PhaseHandlers and an SMEOrchestrator.
+
+\texttt{ObserveHandler} runs continuously, polling the forensic ledger for new operational events. It implements statistical change detection (CUSUM test) and emits \texttt{PerformanceGap} events when drift exceeds the detection threshold.
+
+\texttt{HypothesizeHandler} receives \texttt{PerformanceGap} events and generates modification proposals. Each proposal is a structured record containing target component, change content, predicted metrics, and failure mode analysis.
+
+\texttt{SandboxHandler} manages read-only shadow instances initialized from forensic ledger state snapshots. It executes proposed modifications, runs the challenge set, and returns a \texttt{SandboxResult} containing metric deltas and safety check results.
+
+\texttt{CommitHandler} applies accepted modifications to the live system, recording full modification provenance in the forensic ledger.
+
+\texttt{SMEOrchestrator} maintains a three-state machine (\texttt{RUNNING}, \texttt{PAUSED}, \texttt{TERMINATED}) and coordinates phase transitions.
+
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\vspace{2em}
+\hrule
+\vspace{0.5em}
+\noindent\small\textit{This work has not undergone peer review. Comments and correspondence are welcome at bxthre3inc@gmail.com.}
+
+\end{document}

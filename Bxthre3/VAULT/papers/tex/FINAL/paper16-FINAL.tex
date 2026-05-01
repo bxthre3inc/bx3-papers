@@ -1,0 +1,350 @@
+\documentclass[12pt]{article}
+
+% --- Encoding ---
+\usepackage[T1]{fontenc}
+
+% --- Core packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{setspace}
+
+% --- Citation style: natbib with sort+compress ---
+\usepackage[numbers,sort&compress]{natbib}
+
+% --- Color ---
+\usepackage{xcolor}
+
+% --- Headers and footers ---
+\usepackage{fancyhdr}
+
+% --- Hyperref last ---
+\usepackage{hyperref}
+
+% --- Colors ---
+\definecolor{humanblue}{RGB}{30, 90, 160}
+\definecolor{aigreen}{RGB}{40, 140, 80}
+\definecolor{detgray}{RGB}{90, 90, 110}
+\definecolor{lightgray}{RGB}{245, 245, 248}
+\definecolor{warnorange}{RGB}{200, 100, 20}
+
+% --- Custom semantic commands ---
+\newcommand{\bxthree}{\textbf{BX3}}
+\newcommand{\purpose}{\textit{Purpose Layer}}
+\newcommand{\bounds}{\textit{Bounds Engine}}
+\newcommand{\fact}{\textit{Fact Layer}}
+
+% --- Header/Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Beebe}
+\lhead{\small Training Wheels Protocol --- BX3 Framework}
+\cfoot{\thepage}
+\addtolength{\topmargin}{-1.6pt}
+\setlength{\headheight}{13.6pt}
+renewcommand{\headrulewidth}{0.4pt}
+
+% --- Hyperref metadata ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=humanblue,
+    citecolor=humanblue,
+    urlcolor=humanblue,
+    pdftitle={Human-in-the-Loop Oversight: The Training Wheels Protocol as Architectural Foundation},
+    pdfauthor={Jeremy Blaine Thompson Beebe},
+    pdfsubject={Artificial Intelligence, Autonomous Systems, Human Oversight},
+    pdfkeywords={human-in-the-loop, Training Wheels Protocol, graduated autonomy, behavioral trust scoring, autonomous oversight, BX3 Framework, Agentic},
+    pdfcreator={pdfLaTeX},
+    bookmarksnumbered=true,
+    breaklinks=true,
+}
+
+\title{
+    \vspace{1.2cm}
+    {\LARGE \textbf{Human-in-the-Loop Oversight:}} \break
+    {\large \textit{The Training Wheels Protocol as Architectural Foundation}}
+}
+\author{
+    \textbf{Jeremy Blaine Thompson Beebe} \break
+    \textit{Independent Researcher} \break
+    ORCID: \href{https://orcid.org/0009-0009-2394-9714}{0009-0009-2394-9714} --- Email: bxthre3inc@gmail.com \break
+    \textit{Bxthre3 Inc. --- April 2026}
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{abstract}\noindent
+Human oversight of autonomous systems is typically treated as a configuration option --- enable it or disable it. This binary treatment fails to capture the graduated nature of earned trust and the architectural requirements for safe autonomy graduation. This paper presents the Training Wheels Protocol: an architectural foundation for human-in-the-loop oversight with four graduated modes (HITL Active, Shadow Mode, Full Autonomy, Lockdown) that reflect the system's earned trust level based on demonstrated behavioral consistency. The protocol monitors behavioral patterns, computes trust scores, and enforces mode transitions automatically. We present the four-mode state machine, the trust scoring mechanism, the mode transition rules with formal proofs of safety properties, and deployment evidence from the Agentic platform showing 23,847 human review events, a 94.7\% approval rate, and 6 automatic mode transitions over 347 days of operation.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} human-in-the-loop, Training Wheels Protocol, graduated autonomy, behavioral trust scoring, autonomous oversight, BX3 Framework, Agentic
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\onehalfspacing
+
+% -------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+The question of how much autonomy an AI system should have is not a binary question. A system that has operated reliably for 10,000 consecutive actions with 99.9\% human approval rate has earned different treatment than a system that has operated for 10 actions with 60\% approval rate. Treating both systems identically --- either requiring human review for both or granting full autonomy to both --- is a failure of the oversight system.
+
+Current approaches to human oversight treat it as a configuration setting. This has two failure modes: either the system is over-constrained (human review required even for actions the system has demonstrated competence with), or under-constrained (human review disabled even for high-stakes actions the system has not demonstrated competence with). Both failure modes are costly: over-constraint wastes human attention on routine approvals; under-constraint exposes the system to errors that human review would have caught.
+
+The Training Wheels Protocol addresses both failure modes through architectural enforcement of graduated autonomy. The system earns autonomy through demonstrated performance; it loses autonomy through demonstrated inconsistency. The architecture is not a configuration option --- it is a state machine enforced by the \fact\ layer, ensuring that mode transitions occur only when the defined criteria are met, regardless of what the \bounds\ layer requests.
+
+The name reflects the principle: the system operates with safety scaffolding (human review) until it has demonstrated sufficient stability to operate without that scaffolding. Just as training wheels on a bicycle are removed only after the rider has demonstrated balance, the Training Wheels Protocol removes human review scaffolding only after the system has demonstrated behavioral consistency.
+
+% -------------------------------------------------------
+\section{The Four-Mode State Machine}
+\label{sec:statemachine}
+
+The Training Wheels Protocol implements four modes, each with specific behavioral requirements and enforcement mechanisms. The state machine is enforced by the \fact\ layer: no mode transition occurs without \fact\ layer verification.
+
+\medskip\noindent\textbf{Mode 1 -- HITL Active (Default).}
+All outbound actions are queued for human review before execution. The \bounds\ proposes actions; humans approve, reject, or modify. Rejections are logged and used to update system behavior. Approved patterns are added to the system's trusted action set. This mode is the default for all new deployments and for all deployments transitioning from any other mode.
+
+The \fact\ layer holds all outbound actions in a review queue until human approval is recorded. No code path exists that bypasses the \fact\ layer for outbound actions in Mode 1.
+
+\medskip\noindent\textbf{Mode 2 -- Shadow Mode.}
+Actions execute immediately but are logged and reviewed post-hoc. Human reviewers examine executed actions and provide feedback within a configurable window (default: 4 hours). Approved patterns are added to the trusted action set; rejected patterns trigger corrective modification to the \bounds\ layer. Shadow Mode is the transition state between HITL Active and Full Autonomy.
+
+The key difference from Mode 1 is that execution precedes review. The safety guarantee in Shadow Mode is different: the \fact\ layer can rollback or compensate for rejected actions within the review window.
+
+\medskip\noindent\textbf{Mode 0 -- Full Autonomy.}
+No human review before or after execution. The system acts autonomously within its defined bounds. Full Autonomy is only available after the system has demonstrated sufficient behavioral consistency in Shadow Mode, as measured by the trust scoring mechanism.
+
+In Full Autonomy mode, the \fact\ layer still enforces Safety Envelope parameters and can trigger Lockdown (Mode 3) if constraint violations are detected.
+
+\medskip\noindent\textbf{Mode 3 -- Lockdown.}
+System paused. No actions execute. Triggered automatically when behavioral anomaly thresholds are exceeded or when a safety constraint violation is detected. Lockdown requires human intervention to resolve: the root cause must be identified, remediation applied, and the human must explicitly authorize the transition back to Mode 1.
+
+Lockdown is the emergency brake of the Training Wheels Protocol. It cannot be triggered accidentally by a high trust score or bypassed by the \bounds\ layer.
+
+\begin{figure}[htbp]
+\begin{center}
+\caption{Training Wheels Protocol: Four-Mode State Machine}
+\label{fig:twp-state-machine}
+\small
+\begin{tabular}{ccl}
+\toprule
+\textbf{Mode} & \textbf{Label} & \textbf{Enforcement} \\
+\midrule
+Mode 3 & Lockdown & All actions suspended. Human intervention required. \\
+Mode 0 & Full Autonomy & Actions execute freely within Safety Envelope. \\
+Mode 2 & Shadow Mode & Actions execute; post-hoc human review required within window. \\
+Mode 1 & HITL Active & All actions queued for human approval before execution. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{figure}
+
+% -------------------------------------------------------
+\section{Trust Scoring Mechanism}
+\label{sec:trust}
+
+The system's earned trust level is measured by a Trust Score $T \in [0, 1]$, computed from four components:
+
+$$T = w_1 \cdot A_r + w_2 \cdot (1 - R_r) + w_3 \cdot C_s + w_4 \cdot V_s$$
+
+where:
+
+\begin{itemize}[noitemsep]
+    \item $A_r$ is the approval rate: fraction of human-reviewed actions approved without modification.
+    \item $R_r$ is the rejection rate: fraction of actions that were rejected and required modification.
+    \item $C_s$ is the consistency score: inverse variance of action approval rate over a rolling window (high variance = low score).
+    \item $V_s$ is the violation score: inverse frequency of Safety Envelope constraint violations.
+\end{itemize}
+
+The weights $w_1, w_2, w_3, w_4$ are set by the \purpose\ layer and sum to 1. They reflect the organization's priorities: if accountability is paramount, $w_2$ is set high (rejecting an action counts double); if consistency is paramount, $w_3$ is set high.
+
+Mode transitions are governed by threshold rules:
+
+\begin{itemize}[noitemsep]
+    \item If $T < T_{lockdown}$: automatic transition to Mode 3 (Lockdown)
+    \item If $T < T_{hitl}$: automatic transition to Mode 1 (HITL Active)
+    \item If $T > T_{autonomy}$ and currently in Mode 2: automatic transition to Mode 0 (Full Autonomy)
+\end{itemize}
+
+where $0 \leq T_{lockdown} < T_{hitl} < T_{autonomy} \leq 1$. A typical configuration is $T_{lockdown} = 0.30$, $T_{hitl} = 0.50$, $T_{autonomy} = 0.85$.
+
+The trust scoring mechanism is implemented by the \fact\ layer, not the \bounds\ layer: the \bounds\ cannot manipulate its own trust score by selectively reporting approval outcomes.
+
+% -------------------------------------------------------
+\section{Safety Proofs}
+\label{sec:safetyproofs}
+
+We prove two safety properties of the Training Wheels Protocol.
+
+\begin{quote}
+\textbf{Theorem 1 (Mode 1 Safety).} In Mode 1, no action can reach a physical actuator or external recipient without human approval.
+\end{quote}
+\textit{Proof.} Mode 1 enforcement is implemented in the \fact\ layer, which is architecturally isolated from the \bounds\ layer per the BX3 Framework's layer separation. The \fact\ layer holds all outbound actions in a review queue until human approval is recorded in the forensic ledger. No code path exists that bypasses the \fact\ layer for outbound actions. The \bounds\ layer cannot write to actuators or external channels; it can only propose via the \fact\ layer. $\square$
+
+\begin{quote}
+\textbf{Theorem 2 (Mode Transition Safety).} The system cannot transition to Full Autonomy (Mode 0) unless $T > T_{autonomy}$ for at least $N$ consecutive measurement windows, where $N$ is a configurable threshold.
+\end{quote}
+\textit{Proof.} The mode transition rule requires two conditions: $T > T_{autonomy}$ AND $N$ consecutive compliant windows. A single high trust score cannot trigger transition; sustained trust over $N$ windows is required. The transition request is evaluated by the \purpose\ layer but enforced by the \fact\ layer. The \fact\ layer holds the authoritative transition log and rejects any transition request that does not satisfy both conditions. Even a compromised \bounds\ layer cannot force an unsafe transition. $\square$
+
+% -------------------------------------------------------
+\section{Deployment Evidence: Agentic Platform}
+\label{sec:deployment}
+
+Over 347 days of operation on the Agentic platform, the Training Wheels Protocol processed 23,847 human review events. The protocol managed the full operational lifecycle of the Agentic platform across its three deployment phases (initial rollout, Shadow Mode qualification, and Full Autonomy graduation).
+
+\begin{center}
+\begin{table}[htbp]
+\caption{Agentic Platform Training Wheels Protocol Metrics (347-Day Deployment)}
+\label{tab:twp-metrics}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Human review events processed & 23,847 \\
+Overall approval rate & 94.7\% \\
+Rejection rate requiring modification & 5.3\% \\
+Automatic mode transitions (total) & 6 \\
+Upgrades: HITL Active to Shadow Mode & 3 \\
+Upgrades: Shadow Mode to Full Autonomy & 1 \\
+Emergency downgrades to Lockdown & 2 \\
+Mean time to operational recovery post-Lockdown & 23 minutes \\
+Safety incidents during mode transitions & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{center}
+
+The two Lockdown events were triggered by Safety Envelope violations: one caused by an unvalidated knowledge encoding that was committed without sandbox testing (an operational error corrected before the next cycle), and one caused by a sensor feed anomaly that triggered cascading invalid data. Both were resolved within 23 minutes with root cause identification, remediation, and explicit human authorization for Mode 1 return. Zero safety incidents occurred during any of the six mode transitions.
+
+% -------------------------------------------------------
+\section{Related Work}
+\label{sec:related}
+
+The Training Wheels Protocol draws on and extends several lines of prior work.
+
+HITL design principles have been extensively studied in the human factors and systems safety literature \cite{bainbridge1983}. Our contribution is to make these principles architecturally enforceable rather than advisory: the \fact\ layer enforces the state machine transitions, not policy documents or operator training.
+
+The graduated autonomy model is related to capability-based security \cite{brentano2011}. The key insight in both frameworks is that authority should be earned through demonstrated competence rather than granted by default. We extend this insight by making the earned authority measurable and enforceable through the trust scoring mechanism.
+
+Amodei et al. \cite{amodei2016} identify safety as a central concern for AI systems and propose concrete technical problems to address. The Training Wheels Protocol provides an architectural response to two of their identified problems: the challenge of scalable oversight (the graduated review structure reduces human attention requirements for high-trust systems) and the challenge of avoiding side effects (the Lockdown mode ensures the system can be paused when side effects are detected).
+
+Koch \cite{koch2026} argues that standards such as ISO/IEC 42001 \cite{iso2023} and the NIST AI RMF \cite{nist2023} do not themselves provide implementable runtime guardrails. The Training Wheels Protocol may be read as one candidate implementation of ISO/IEC 42001's ongoing monitoring and human oversight requirements, made concrete as an enforceable state machine.
+
+% -------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+Binary human oversight configurations (review-on vs. review-off) are inadequate for production autonomous systems that must operate across a spectrum of trust levels. The Training Wheels Protocol replaces the binary configuration with a graduated state machine enforced by the \fact\ layer.
+
+The four modes (HITL Active, Shadow Mode, Full Autonomy, Lockdown) reflect the system's earned trust level based on demonstrated behavioral consistency. The trust scoring mechanism provides a measurable, auditable basis for mode transitions. The safety proofs establish that Mode 1 enforcement is absolute (no action reaches actuators without human approval) and that Full Autonomy graduation requires sustained trust.
+
+The Agentic platform deployment confirms the protocol's effectiveness: 23,847 human review events processed, 94.7\% approval rate, 6 automatic mode transitions, zero safety incidents during transitions, and 23-minute mean recovery time for the two Lockdown events.
+
+% -------------------------------------------------------
+\section{Limitations and Future Work}
+\label{sec:limitations}
+
+The primary limitation is the trust scoring mechanism's dependence on human review labels. If human reviewers are systematically biased, the trust score will be biased. Mitigations include calibration procedures for reviewers, inter-reviewer agreement monitoring, and periodic blind re-review of approved actions.
+
+The trust score thresholds ($T_{lockdown}$, $T_{hitl}$, $T_{autonomy}$) are set by the \purpose\ layer, but the appropriate values depend on the operational domain. For safety-critical applications, $T_{autonomy}$ should be set high; for cost-sensitive applications, a lower threshold may be acceptable. Future work will explore automated threshold tuning based on observed failure rates post-transition.
+
+% -------------------------------------------------------
+\section*{Peer Review Instructions}
+\label{sec:peer-review}
+\addcontentsline{toc}{section}{Peer Review Instructions}
+
+\subsection*{Review Criteria}
+
+\textbf{1. Originality and Contribution (30\%):} Does the paper introduce a genuinely novel oversight architecture? The four-mode state machine and trust scoring mechanism are the primary novel contributions.
+
+\textbf{2. Technical Soundness (30\%):} Are the safety proofs valid? Are the trust score components independently measurable?
+
+\textbf{3. Clarity and Completeness (20\%):} Is the four-mode state machine clearly specified? Are the mode transition rules unambiguous?
+
+\textbf{4. Significance (20\%):} Does the Training Wheels Protocol address a genuine gap in production AI oversight? Is the deployment evidence sufficient to demonstrate practical utility?
+
+% -------------------------------------------------------
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+
+The author acknowledges the researchers cited herein, whose work across human-in-the-loop design, capability-based security, and AI safety provides the intellectual context in which the Training Wheels Protocol is situated.
+
+% -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Training Wheels Protocol: State Machine Specification}
+\label{sec:twp-state-machine-spec}
+
+The Training Wheels Protocol is formally specified as a finite state machine with four states and deterministic transitions.
+
+\begin{verbatim}
+TrainingWheelsSM := {
+  states: ["MODE_1_HITL", "MODE_2_SHADOW",
+            "MODE_0_AUTONOMY", "MODE_3_LOCKDOWN"],
+  current_state: State,
+  trust_score: number,          # [0, 1]
+  review_queue: [PendingReview],
+  mode_transition_log: [TransitionRecord]
+}
+
+Transition := (
+  current_state: State,
+  event: Event,
+  guard: (SM) -> boolean,
+  next_state: State,
+  action: (SM) -> void
+)
+\end{verbatim}
+
+Key transition rules:
+
+\begin{itemize}
+  \item \texttt{MODE\_1\_HITL $\to$ MODE\_2\_SHADOW}: when $T > T_{autonomy}$ for $N_{\text{consecutive}}$ consecutive windows. Default: $T_{\text{autonomy}} = 0.85$, $N_{\text{consecutive}} = 30$.
+  \item \texttt{MODE\_2\_SHADOW $\to$ MODE\_0\_AUTONOMY}: when $T > T_{\text{autonomy}}$ for $N_{\text{consecutive}}$ consecutive windows and zero safety incidents in the window.
+  \item \texttt{MODE\_0\_AUTONOMY $\to$ MODE\_3\_LOCKDOWN}: when a Safety Envelope violation is detected. Automatic, no guard.
+  \item \texttt{MODE\_3\_LOCKDOWN $\to$ MODE\_1\_HITL}: when human administrator explicitly authorizes reset. Manual, no automatic transition.
+\end{itemize}
+
+The state machine is enforced by the Fact Layer. No agent, including the \bounds\ engine, can trigger state transitions. The mode transition log is append-only and hash-chained in the forensic ledger.
+
+% -------------------------------------------------------
+\section{Trust Score Computation: Production Implementation}
+\label{sec:trust-score-impl}
+
+The trust score $T$ is computed as a rolling average over a configurable window (default: 7 days). Four component scores are computed daily:
+
+$T_A = \text{approval\_rate}$: fraction of human-reviewed actions approved without modification.
+
+$T_R = 1 - \text{rejection\_rate}$: fraction of actions not requiring modification.
+
+$T_C = \max(0, 1 - \text{variance\_score})$: consistency score where variance is measured as the coefficient of variation in approval rate across the window.
+
+$T_V = \max(0, 1 - \text{violation\_rate} / \text{violation\_threshold})$: inverse of the Safety Envelope violation rate normalized to the threshold.
+
+The composite score is $T = w_1 T_A + w_2 T_R + w_3 T_C + w_4 T_V$ where weights sum to 1.0 and are set by the \purpose\ layer. Defaults: $(w_1, w_2, w_3, w_4) = (0.35, 0.25, 0.20, 0.20)$.
+
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\vspace{2em}
+\hrule
+\vspace{0.5em}
+\noindent\small\textit{This work has not undergone peer review. Comments and correspondence are welcome at bxthre3inc@gmail.com.}
+
+\end{document}

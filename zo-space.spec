@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['/home/workspace/Bxthre3/projects/zo-space-linux/src/zo-space.py'],
+    ['/home/workspace/Bxthre3/projects/zo-computer-linux/src/zo-computer.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='zo-space',
+    name='zo-computer',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

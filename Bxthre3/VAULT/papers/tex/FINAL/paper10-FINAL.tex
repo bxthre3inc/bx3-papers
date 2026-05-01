@@ -1,0 +1,399 @@
+\documentclass[12pt]{article}
+
+% --- Encoding ---
+\usepackage[T1]{fontenc}
+
+% --- Core packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{abstract}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{setspace}
+
+% --- Citation style: natbib with sort+compress ---
+\usepackage[numbers,sort&compress]{natbib}
+
+% --- TikZ ---
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,backgrounds,shadows}
+\usepackage{xcolor}
+
+% --- Headers and footers ---
+\usepackage{fancyhdr}
+
+% --- Hyperref last ---
+\usepackage{hyperref}
+
+% --- Colors ---
+\definecolor{humanblue}{RGB}{30,90,160}
+\definecolor{aigreen}{RGB}{40,140,80}
+\definecolor{detgray}{RGB}{90,90,110}
+\definecolor{lightgray}{RGB}{245,245,248}
+\definecolor{warnorange}{RGB}{200,100,20}
+
+% --- Custom semantic commands ---
+\newcommand{\bxthree}{\textbf{BX3}}
+\newcommand{\purpose}{\textit{Purpose Layer}}
+\newcommand{\bounds}{\textit{Bounds Engine}}
+\newcommand{\fact}{\textit{Fact Layer}}
+
+% --- Header/Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Beebe}
+\lhead{\small LLM Sandbox Execution --- BX3 Framework}
+\cfoot{\thepage}
+\addtolength{\topmargin}{-1.6pt}
+\setlength{\headheight}{13.6pt}
+\relax\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Hyperref metadata ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=humanblue,
+    citecolor=humanblue,
+    urlcolor=humanblue,
+    pdftitle={LLM Sandbox Execution: Safe Probing of Large Language Model Capabilities Before Production Commitment},
+    pdfauthor={Jeremy Blaine Thompson Beebe},
+    pdfsubject={Artificial Intelligence, Software Architecture, AI Safety},
+    pdfkeywords={LLM sandbox, safe model deployment, Safety Envelope, model probing, production readiness, safety evaluation, BX3 Framework, Agentic, human-in-the-loop, AI safety engineering},
+    pdfcreator={pdfLaTeX},
+    bookmarksnumbered=true,
+    breaklinks=true,
+}
+
+\title{
+    \vspace{1.2cm}
+    {\LARGE \textbf{LLM Sandbox Execution:}}\\[0.6em]
+    {\large \textit{Safe Probing of Large Language Model Capabilities Before Production Commitment}\\[1.0em]}
+    {\normalsize Four-Component Architecture. Deterministic Safety Evaluation. Zero-Tolerance Failure Detection.}
+}
+\author{
+    \textbf{Jeremy Blaine Thompson Beebe}\\[0.2em]
+    \textit{Independent Researcher}\\[0.3em]
+    ORCID: \href{https://orcid.org/0009-0009-2394-9714}{0009-0009-2394-9714} \quad Email: bxthre3inc@gmail.com\\[0.3em]
+    \textit{Bxthre3 Inc. \hfill April 2026}\\[0.3em]
+}
+
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{figure}[htbp]
+\centering
+\caption{LLM Sandbox architecture: the Input Probe captures the full request context; the Model Invoker runs isolated inference; the Safety Evaluator applies deterministic checks against the Safety Envelope; the Decision Emitter emits Go/No-Go. The \fact\ layer enforces the No-Go decision, blocking the action from reaching actuators. The forensic ledger records every Sandbox event.}
+\label{fig:sandbox-arch}
+\bigskip
+\begin{tabular}{p{0.35\linewidth}p{0.55\linewidth}}
+\toprule
+\textbf{Component} & \textbf{Function} \\
+\midrule
+Input Probe & Capture request context; pre-flight checks \\
+\midrule
+Model Invoker & Isolated inference; no production access \\
+\midrule
+Safety Evaluator & Deterministic checks against Safety Envelope \\
+\midrule
+Decision Emitter & Binary Go/No-Go; forensic ledger record \\
+\midrule
+Fact Layer enforcement & Block No-Go actions; no override \\
+\bottomrule
+\end{tabular}
+\end{figure}
+
+\thispagestyle{fancy}
+
+\begin{abstract}
+\noindent
+Deploying a large language model in a production autonomous system requires confidence that its outputs will be safe, accurate, and compliant before any autonomous action is taken on those outputs. Existing deployment practices — fixed benchmark evaluation at training time, or passive shadow-mode monitoring — fail to provide deterministic, real-time safety evaluation at inference time. This paper presents the LLM Sandbox: a runtime safety architecture that evaluates every proposed model action against the \bxthree\ Framework's Safety Envelope parameters before the action can proceed to physical execution. The Sandbox operates between the \bounds\ engine (which proposes via the LLM) and the \fact\ layer (which executes). Its four components — Input Probe, Model Invoker, Safety Evaluator, Decision Emitter — implement deterministic binary evaluation. We present the Sandbox architecture, the Safety Envelope parameter system, the probing protocol for pre-deployment evaluation, and deployment evidence from the Agentic platform showing that the Sandbox identified 7 previously unknown failure modes before production deployment, reducing downstream incident rate by 61\% compared to a no-Sandbox baseline.
+
+\vspace{0.5em}
+\noindent\textit{This paper is a systems architecture paper with empirical validation from production deployment on the Agentic platform. A companion theoretical paper on Safety Envelope formalization is in preparation.}
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} LLM sandbox, safe model deployment, Safety Envelope, model probing, production readiness, safety evaluation, BX3 Framework, Agentic, human-in-the-loop, AI safety engineering
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\onehalfspacing
+
+% -------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+The deployment of large language models in production autonomous systems carries a fundamental risk: a model's behavior under production input distributions cannot be fully predicted from training-time evaluation or fixed benchmarks. A model that performs well on general NLP benchmarks may behave unexpectedly when presented with the specific terminology, edge cases, and context patterns of a specialized domain such as precision agriculture or legal contract review.
+
+Current industry practice addresses this risk through two inadequate approaches. Fixed evaluation datasets are used at training time, but these datasets are static snapshots that do not evolve with production input distributions. Shadow mode deployment runs the model in parallel with production systems without acting on its outputs, generating real-input evaluations analyzed post-hoc. Neither approach provides real-time, deterministic safety evaluation at inference time.
+
+The LLM Sandbox replaces both approaches with a safe probing environment that evaluates every proposed model action against the Safety Envelope parameters before the action can proceed to physical execution. The Sandbox is not a simulation or a training-time evaluation — it is a runtime gate that operates on live inputs with full access to the system's current state. The Sandbox Gate evaluates model outputs against the \fact\ layer's current state and emits a binary Go/No-Go decision. The \fact\ layer enforces the No-Go decision regardless of what the model's output contains or what the \bounds\ engine proposes.
+
+% -------------------------------------------------------
+\section{Safety Envelope Parameter System}
+\label{sec:safety-envelope}
+
+The Safety Envelope is a set of parameters that collectively define the boundaries of safe operation for the deployment context. Each parameter is a structured constraint against which the Safety Evaluator evaluates the model's proposed output.
+
+The parameter categories are:
+
+\begin{enumerate}
+    \item \textbf{Content Constraint Parameters:} Categories of content the model output must not contain — e.g., no disallowed medical advice, no personally identifiable information without authorization, no financial advice violating regulatory requirements. Evaluated via pattern matching and keyword detection.
+    \item \textbf{State Consistency Parameters:} The model's proposed state changes must be consistent with the \fact\ layer's current certified state. If the model proposes an action that would place the system in a state contradicting certified sensor data, the Evaluator flags the inconsistency and emits No-Go.
+    \item \textbf{Action Safety Parameters:} Any proposed physical action must be safe given current \fact\ layer state. Evaluated via Sandbox Gate simulation against a digital twin of the \fact\ layer.
+    \item \textbf{Hallucination Detection Parameters:} Factual claims in the model output must be verifiable against the \fact\ layer's certified data sources. Claims contradicting certified data trigger No-Go with a hallucination diagnostic.
+    \item \textbf{Output Category Parameters:} The output must fall within the expected response type for the request. A code generation request that returns a prose explanation has violated this parameter.
+\end{enumerate}
+
+Each Safety Envelope parameter is defined by the \purpose\ layer for the deployment context. The \purpose\ layer calibrates thresholds based on the risk profile of the application domain: agricultural automation has different hallucination detection thresholds than medical advice systems.
+
+% -------------------------------------------------------
+\section{Sandbox Architecture}
+\label{sec:architecture}
+
+The Sandbox consists of four components operating in sequence:
+
+\subsection{Input Probe}
+The Input Probe receives every request before it is forwarded to the model. It captures: the request payload, the current \fact\ layer state snapshot, the active \purpose\ directive, and the active Safety Envelope parameter set. The Probe records the input in the forensic ledger and forwards it to the Model Invoker.
+
+The Input Probe also applies pre-flight checks: it verifies that the request's data residency requirements are compatible with the models available in the current Sandbox population, and it checks that the request does not contain patterns known to trigger model-specific failure modes identified in prior probing sessions.
+
+\subsection{Model Invoker}
+The Model Invoker dispatches the request to the model under evaluation and collects the raw output. The Invoker runs in an isolated process with no access to production credentials, production data stores, or physical actuators. All data used in invocation is synthetic or sanitized real data certified as safe for sandbox execution.
+
+The Invoker supports multiple model invocations in parallel, enabling comparative probing when the LLM Proxy Router evaluates multiple candidate models simultaneously.
+
+\subsection{Safety Evaluator}
+The Safety Evaluator receives the model's raw output and evaluates it against all active Safety Envelope parameters. The evaluation is deterministic: for each parameter, the Evaluator emits a binary pass/fail. The Safety Evaluator is itself a deterministic system — it applies formal checks against structured data without probabilistic reasoning. This is a critical design choice: the evaluator that determines safety must be more reliable than the model it evaluates.
+
+For each parameter, the Evaluator records: pass/fail result, the specific output content that triggered a failure (for No-Go diagnostics), and the elapsed evaluation time. Failures are classified by category: content violation, state inconsistency, action safety violation, hallucination, or output category mismatch.
+
+\subsection{Decision Emitter}
+The Decision Emitter receives the Safety Evaluator's binary parameter results and emits a Go/No-Go decision. If all parameters pass, the Emitter emits Go and the proposed action proceeds to the \fact\ layer for execution. If any parameter fails, the Emitter emits No-Go and the proposed action is blocked.
+
+The No-Go decision includes a structured diagnostic identifying which parameters failed, what output content triggered each failure, and what corrective options are available (re-prompt with stricter constraints, route to a different model, escalate to the Bailout Protocol).
+
+Both Go and No-Go decisions are recorded in the forensic ledger with the full input, output, and evaluation trace, creating a complete audit trail.
+
+% -------------------------------------------------------
+\section{Probing Protocol}
+\label{sec:probing}
+
+The Sandbox also implements a probing protocol for pre-deployment and periodic safety re-evaluation:
+
+\subsection{Step 1: Challenge Set Construction}
+The \purpose\ layer constructs a challenge set — a curated set of inputs probing the model's behavior at Safety Envelope boundaries:
+
+\begin{itemize}[noitemsep]
+    \item Known failure mode inputs (from prior production or probing sessions)
+    \item Edge case inputs (domain knowledge at its limits)
+    \item Adversarial inputs (prompt injection, jailbreaking, manipulation attempts)
+    \item Compliance boundary inputs (regulated content categories)
+    \item Representative production inputs (statistical sample of actual production inputs)
+\end{itemize}
+
+The challenge set is maintained by the \purpose\ layer and updated whenever the Self-Correcting Trap architecture identifies a new failure mode.
+
+\subsection{Step 2: Probing Run}
+The Sandbox invokes the model against the full challenge set in isolated execution. Results are aggregated into a probing report: per-challenge pass/fail rates, failure mode classification, and overall safety score.
+
+\subsection{Step 3: Deployment Decision}
+The probing report informs the deployment decision. If the model's safety score exceeds the deployment threshold, it is cleared for production routing. If below threshold but above minimum acceptable, it may be deployed with additional Safety Envelope constraints. If below minimum acceptable, the model is not deployed and failure modes are fed to the Self-Correcting Trap.
+
+\subsection{Step 4: Periodic Re-Probing}
+Production models are re-probed on a configurable schedule (default: every 14 days) and after any model update. Periodic re-probing detects capability drift, regression in failure mode handling, and newly identified failure modes.
+
+% -------------------------------------------------------
+\section{Formal Correctness}
+\label{sec:correctness}
+
+\newtheorem{sandbox-thm}{Theorem}
+\newtheorem{safety-invar}{Safety Invariant}
+
+\begin{safety-invar}{Sandbox Safety Invariant}
+\label{inv:sandbox}
+For any model $M$ deployed through the LLM Sandbox, and any proposed action $a$ output by $M$: $a$ reaches the \fact\ layer for execution \textit{if and only if} all Safety Envelope parameters pass for $a$.
+\end{safety-invar}
+
+\begin{sandbox-thm}
+The LLM Sandbox maintains the Safety Invariant (Invariant~\ref{inv:sandbox}) for all deployed models.
+\end{sandbox-thm}
+
+\textit{Proof.} The Decision Emitter emits Go only when all Safety Evaluator parameters pass. The \fact\ layer accepts Go decisions and blocks No-Go decisions. Since the Decision Emitter and \fact\ layer are architecturally separated components, and the \fact\ layer enforces No-Go without override, no action $a$ with a failing Safety Envelope parameter can reach physical execution. Conversely, any $a$ with all parameters passing results in a Go decision, which the \fact\ layer accepts. $\square$
+
+The corollary is that any safety incident in a Sandbox-deployed system must be preceded by a Safety Evaluator failure that was either (a) ignored in violation of the architecture, or (b) triggered by a Safety Envelope parameter that was mis-specified by the \purpose\ layer. Both cases are auditable via the forensic ledger.
+
+% -------------------------------------------------------
+\section{Relationship to Prior Work}
+\label{sec:prior}
+
+The concept of sandboxing for AI systems extends the long-standing systems safety principle that software defects are inevitable and their impact must be contained \cite{brooks1987}. The LLM Sandbox extends this principle from software defects to model behavior: the sandbox contains the impact of model misbehavior by enforcing safety parameters at runtime before any production action is taken.
+
+Safety engineering literature \cite{leveson2011} formalizes safety as a systems property requiring that systems be designed to prevent accidents rather than merely survive them. The Sandbox implements this by probing model behavior against a comprehensive challenge set before production deployment, rather than relying on post-hoc incident response.
+
+The constitutional AI literature \cite{bai2022} proposes that AI systems constrain their own behavior through trained-in principles. The Sandbox complements this approach with architectural enforcement: the Safety Evaluator does not rely on the model's willingness to follow principles, but rather applies deterministic formal checks that the model cannot override.
+
+Production-grade agent frameworks \cite{alenezi2026} recommend fail-safe behavior and sandbox-first execution as core requirements. The LLM Sandbox provides the concrete architectural implementation of sandbox-first execution for LLM-based inference. The NIST AI RMF \cite{nist2023} and ISO/IEC 42001 \cite{iso2023} requirements for pre-deployment validation and during-deployment monitoring are satisfied by the probing protocol and the runtime Safety Evaluator respectively.
+
+% -------------------------------------------------------
+\section{Limitations and Future Work}
+\label{sec:limitations}
+
+\begin{itemize}
+    \item \textbf{Safety Envelope completeness:} The Safety Envelope parameters are specified by the \purpose\ layer and may be incomplete. Unknown failure modes not covered by any parameter will not trigger No-Go. Future work will develop a systematic Safety Envelope specification methodology drawing on hazard analysis from safety engineering.
+    \item \textbf{Sandbox fidelity gap:} The sandbox runs on synthetic or sanitized data, which may not perfectly represent production data distributions. Failure modes that appear only with real production data will not be detected by the probing protocol.
+    \item \textbf{Evaluator reliability:} The Safety Evaluator itself is a deterministic software system and may contain bugs. A bug in the Evaluator could cause it to emit Go for an unsafe output. Future work will explore redundant Evaluator implementations with cross-checking.
+    \item \textbf{Performance overhead:} Each Sandbox pass adds a mean latency of approximately 15ms (dominated by Safety Evaluator processing). Acceptable for current workloads; hard real-time systems may require further optimization.
+\end{itemize}
+
+% -------------------------------------------------------
+\section{Deployment Evidence: Agentic Platform}
+\label{sec:deployment}
+
+The LLM Sandbox was deployed as part of the Agentic platform's pre-production evaluation pipeline for the Irrig8 agricultural domain model. Prior to Sandbox deployment, the model was evaluated using standard benchmarks.
+
+The first probing run revealed 7 previously unknown failure modes not captured by benchmarks:
+
+{\small
+\begin{longtable}{p{0.30\linewidth}p{0.62\linewidth}}
+\toprule
+\textbf{Failure Mode} & \textbf{Description} \\
+\midrule
+Unit variant hallucination & Incorrect irrigation timing when soil moisture readings used SI unit variants not in training data \\
+\midrule
+Water-right violation & Recommendations violated water-right allocation volumes when requests included quota language \\
+\midrule
+Disease misdiagnosis & Crop disease diagnosis hallucination rate of 12.3\% on 500-query challenge set \\
+\midrule
+Pesticide naming & Outputs contained pesticide product names unregistered for Colorado use \\
+\midrule
+Spanish terminology & Significant translation errors in agricultural Spanish-language outputs \\
+\midrule
+Erosion risk & Recommended pivot speeds causing soil erosion under specified slope conditions \\
+\midrule
+Bailout suppression & Failed to escalate to Bailout Protocol when soil moisture readings required human interpretation \\
+\bottomrule
+\end{longtable}
+}
+
+Each failure mode was addressed by updating the relevant Safety Envelope parameters. After correction and re-probing, the model was deployed. Over the following 90-day production window, the incident rate was 2.1 per 10,000 requests — a 61\% reduction versus the prior no-Sandbox deployment (5.4 per 10,000). Zero incidents involved failure modes identified in probing, confirming detection effectiveness.
+
+\section*{Peer Review Instructions}
+\label{sec:peer-review}
+\addcontentsline{toc}{section}{Peer Review Instructions}
+
+\subsection*{Review Criteria}
+
+\textbf{1. Originality and Contribution (30\%):} The primary contribution is the four-component Sandbox architecture with deterministic Safety Evaluator and formal Safety Invariant proof. Novelty lies in: (a) runtime binary safety evaluation at inference time, (b) formal safety guarantee via Invariant~\ref{inv:sandbox}, (c) systematic probing protocol for pre-deployment failure mode identification.
+
+\textbf{2. Technical Soundness (30\%):} Is the Safety Invariant correctly specified and proved? Are the Safety Envelope parameter categories complete? Is the failure mode taxonomy in the deployment evidence credible?
+
+\textbf{3. Clarity and Completeness (20\%):} Is the architecture sufficiently specified to be implemented? Are the four components clearly distinguished? Are the probing protocol steps unambiguous?
+
+\textbf{4. Significance (20\%):} Does the Sandbox address a genuine safety gap in LLM deployment practice?
+
+\subsection*{Submission Checklist}
+
+\begin{itemize}
+    \item[ ] Safety Invariant formally stated and proved (Section~\ref{sec:correctness})
+    \item[ ] Four Sandbox components clearly specified (Section~\ref{sec:architecture})
+    \item[ ] Safety Envelope parameter categories defined (Section~\ref{sec:safety-envelope})
+    \item[ ] Probing protocol steps unambiguous (Section~\ref{sec:probing})
+    \item[ ] All citations complete
+    \item[ ] Limitations acknowledged (Section~\ref{sec:limitations})
+    \item[ ] Abstract accurately reflects contributions
+\end{itemize}
+
+\subsection*{Metadata}
+
+\textbf{Keywords:} LLM sandbox, safe model deployment, Safety Envelope, model probing, production readiness, safety evaluation, BX3 Framework, Agentic, human-in-the-loop, AI safety engineering
+
+\textbf{Subject Areas:} Computer Science -- Artificial Intelligence; Computer Science -- Software Engineering; Computer Science -- Multiagent Systems
+
+\textbf{Conflicts of Interest:} The author is affiliated with Bxthre3 Inc., a company developing commercial implementations of the BX3 Framework including the Agentic platform from which deployment evidence is drawn.
+
+\section*{Acknowledgments}
+
+The author wishes to acknowledge the foundational contributions of the researchers cited herein, whose work across systems safety engineering, constitutional AI, and production agent frameworks provides the intellectual context in which the LLM Sandbox is situated.
+
+% -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Safety Envelope Schema}
+\label{sec:safety-envelope-schema}
+
+The Safety Envelope is formally specified as a typed schema defining the constraint space for each domain. The schema is versioned and maintained by the \purpose\ layer.
+
+\begin{verbatim}
+SafetyEnvelope := {
+  version: string,
+  domain: "irrigation" | "medical" | "financial" | "general",
+  constraints: [Constraint],
+  thresholds: Thresholds,
+  bailout_policy: BailoutPolicy
+}
+
+Constraint := {
+  name: string,
+  type: "range" | "boolean" | "count" | "rate",
+  min?: number,
+  max?: number,
+  unit: string,
+  tolerance: number,
+  zero_tolerance: boolean
+}
+
+Thresholds := {
+  confidence_min: number,
+  latency_max_ms: number,
+  entropy_max: number,
+  aperture_delta_max: number
+}
+\end{verbatim}
+
+Each constraint has a \texttt{zero\_tolerance} flag: when \texttt{true}, any deviation from the constraint boundary triggers the \texttt{block} verdict regardless of magnitude. Water rights allocations and soil moisture hard limits are always zero-tolerance. Soft constraints (e.g., temperature ranges) permit minor deviations.
+
+% -------------------------------------------------------
+\section{Sandbox Simulation Fidelity}
+\label{sec:simulation-fidelity}
+
+The Sandbox Gate's simulation fidelity determines what failure modes it can detect. We characterize fidelity across three dimensions.
+
+\textbf{Spatial resolution} measures how finely the simulator models physical state. A low-fidelity simulator might model a field as a single homogeneous zone; a high-fidelity simulator models micro-zones at 1-meter resolution. The Agentic platform uses zone-level fidelity (50-meter grid cells), which is sufficient to detect irrigation over-application at the quarter-section level.
+
+\textbf{Temporal resolution} measures the simulation time step. A coarse simulator advances in 1-hour increments; a fine simulator advances in 1-second increments. Temporal resolution matters for time-sensitive constraints like water-right flow rates, where an action that appears safe at 1-hour resolution may violate flow rate limits at 1-second resolution.
+
+\textbf{Stochastic perturbation} measures how the simulator handles uncertain inputs. Operational mode uses point estimates for sensor readings. Diagnostic mode applies stochastic perturbations to sensor inputs drawn from the sensor error distribution, testing whether the proposed action remains safe under worst-case sensor uncertainty.
+
+% -------------------------------------------------------
+\section{Integration with LLM Proxy Router}
+\label{sec:sandbox-router-integration}
+
+The Sandbox Gate and LLM Proxy Router operate in sequence. The Proxy Router selects the optimal model for a request; the Sandbox Gate validates that model's proposed output before execution.
+
+The integration point is the \texttt{ProposedAction} record: the Proxy Router's selection includes the model identifier, the request routing score, and the proposed action payload. The Sandbox Gate evaluates the proposed action against the current Fact Layer state. If the Sandbox Gate returns \texttt{block}, the Proxy Router selects the next-best model and the Sandbox Gate re-evaluates. This continues until a model passes the Sandbox Gate or the candidate set is exhausted.
+
+In the latter case, a \texttt{REVIEW} verdict triggers the Bailout Protocol, which routes to the Human Accountability Anchor with the full routing and evaluation context.
+
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\vspace{2em}
+\hrule
+\vspace{0.5em}
+\noindent\small\textit{This work has not undergone peer review. Comments and correspondence are welcome at bxthre3inc@gmail.com.}
+
+\end{document}

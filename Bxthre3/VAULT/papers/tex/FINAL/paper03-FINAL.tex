@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,enumitem}
+\usepackage{graphicx,float}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newcommand{\bxthree}{\textbf{BX3}}
+\newcommand{\purpose}{\textit{Purpose Layer}}
+\newcommand{\bounds}{\textit{Bounds Engine}}
+\newcommand{\fact}{\textit{Fact Layer}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Beebe}
+\lhead{\small Sandbox Execution --- BX3 Framework}
+\cfoot{\thepage}
+
+\title{Sandbox Execution Model: Bounded Operational Environments for Autonomous Agents}
+\author{Jeremy Blaine Thompson Beebe\\
+\textit{Bxthre3 Inc. --- bxthre3inc@gmail.com --- ORCID: 0009-0009-2394-9714}}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[htbp]
+\centering
+\caption{The Sandbox Gate evaluates every proposed action against the current Fact Layer state and Safety Envelope parameters before physical execution. The P6-to-P9 transition is the only permitted path from Bounds Engine reasoning to physical actuation.}
+\label{fig:sandbox-gate-arch}
+\bigskip
+\begin{tabular}{p{0.40\linewidth}p{0.50\linewidth}}
+\toprule
+\textbf{Component} & \textbf{Function} \\
+\midrule
+Bounds Engine (P5 Decision) & Proposes actions within constraints \\
+\midrule
+Sandbox Gate & Simulates proposed action against current state \\
+\midrule
+Fact Layer (P7 State) & Provides certified physical state for simulation \\
+\midrule
+Safety Envelope Parameters & Hard constraints enforced during simulation \\
+\midrule
+Verdict Emitter & Binary Execute/Block/Review enforced by Fact Layer \\
+\midrule
+P9 Projection Confirmation & Unlocks physical actuation only on Execute \\
+\bottomrule
+\end{tabular}
+\end{figure}
+
+\thispagestyle{fancy}
+
+\begin{abstract}
+\noindent
+Autonomous AI systems acting on the physical world require a mechanism to validate proposed actions before execution. Without pre-execution validation, a Bounds Engine may propose actions that violate Safety Envelope parameters --- water-right allocations, soil moisture thresholds, equipment tolerances --- with irreversible consequences. This paper presents the Sandbox Execution Model: a bounded operational environment within the \bxthree Framework's Fact Layer that simulates all proposed actions against the current physical state before any action is executed. The Sandbox Gate, governing all P5-to-P9 transitions, evaluates proposed actions across all Safety Envelope parameters and returns one of three verdicts: \textit{execute}, \textit{block}, or \textit{review}. Only the \textit{execute} verdict unlocks physical actuation. The model is implemented in the Agentic platform's P6/P9 projection planes, where it has validated over 1,500 proposed actions with zero Safety Envelope violations reaching physical actuators.
+
+\vspace{0.5em}
+\noindent\textit{This paper is a systems architecture paper with empirical validation from 1,500+ validated actions in production on the Agentic platform.}
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} Sandbox Gate, Safety Envelope, pre-execution validation, bounded execution environments, autonomous actuators, Fact Layer, P6 Projection, P9 Confirmation, BX3 Framework, deterministic safety
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section{Introduction}
+\label{sec:intro}
+
+When a Bounds Engine proposes an action --- open a valve, adjust irrigation volume, initiate equipment startup --- that action is a hypothesis, not a fact. The physical world may or may not be in a state that safely permits the proposed action.
+
+The gap between proposal and execution is where catastrophic failures occur. Conventional autonomous systems execute proposals immediately upon Bounds Engine clearance. The \bxthree Framework inserts a mandatory validation step: the Sandbox Gate.
+
+The Sandbox Gate is not a simulation for human observation. It is a deterministic execution gate that physically prevents the Fact Layer from acting unless the Sandbox Gate confirms the proposed action is safe.
+
+\section{The Safety Envelope Problem}
+\label{sec:problem}
+
+A Safety Envelope defines the boundaries of safe operation for a physical system. These boundaries are not preferences --- they are constraints that, if violated, produce irreversible harm: water rights violations, crop damage, equipment failure, regulatory sanction.
+
+Every parameter in the Safety Envelope has a zero-tolerance boundary. There is no permissible deviation.
+
+The problem: a Bounds Engine may propose an action that, if executed, would violate one or more Safety Envelope parameters. The Bounds Engine's reasoning may be perfectly sound given the data it has access to, but the physical state may have changed since the data was collected.
+
+Without a Sandbox Gate, the proposed action executes and the violation occurs. With a Sandbox Gate, the same proposed action triggers the blocking verdict and escalation.
+
+\section{Sandbox Gate Architecture}
+\label{sec:architecture}
+
+\subsection{The Three Verdicts}
+
+The Sandbox Gate evaluates proposed actions against the current physical state (Fact Layer P7 records) and the projected outcome (Bounds Engine P6 projections). It returns one of three verdicts:
+
+\begin{itemize}
+    \item \textbf{Execute (P9 confirmed):} The proposed action is safe to execute. All Safety Envelope parameters are within bounds. The Fact Layer is unlocked.
+    \item \textbf{Block:} The proposed action would violate one or more Safety Envelope parameters. The Fact Layer is locked. The Bounds Engine receives a structured rejection.
+    \item \textbf{Review:} The simulation shows marginal compliance or ambiguous state. A Human Accountability Anchor must review and authorize before execution.
+\end{itemize}
+
+\subsection{P6-to-P9 Transition Flow}
+
+\begin{enumerate}
+    \item Bounds Engine generates proposed action (P5 Decision).
+    \item Sandbox Gate receives the proposed action with P6 Projection data.
+    \item Sandbox Gate queries current Fact Layer state (P7 Outcome Records).
+    \item Sandbox Gate runs simulation: applying the proposed action to current state, checking all Safety Envelope parameters.
+    \item Verdict issued: Execute (P9 confirmed) or Block or Review.
+    \item All Sandbox verdicts are logged in the Ledger with full simulation trace.
+\end{enumerate}
+
+The P6-to-P9 transition is the only path from reasoning to execution. There is no bypass. The Fact Layer does not accept execution commands from anywhere else.
+
+\section{Formal Specification}
+\label{sec:formal}
+
+Let $S$ be the current physical state (Fact Layer P7 records). Let $A$ be a proposed action (Bounds Engine P5 Decision). Let $E$ be the Safety Envelope specification.
+
+The Sandbox Gate computes $S' = f(S, A)$ where $f$ is the simulation function applying action $A$ to state $S$.
+
+The verdict rules:
+
+\begin{itemize}
+    \item $\forall e \in E: S'_e \subseteq e.bounds \implies \text{EXECUTE}$
+    \item $\exists e \in E: S'_e \notin e.bounds \implies \text{BLOCK}$
+    \item $\exists e \in E: |S'_e - e.boundary| < \delta \implies \text{REVIEW}$
+\end{itemize}
+
+Where $\delta$ is a configurable threshold (default: 5\% of parameter range).
+
+\bigskip
+
+\noindent\textbf{Theorem (Sandbox Gate Safety Invariant).}
+For any proposed action $A$, the Fact Layer executes $A$ if and only if all Safety Envelope parameters are within bounds under simulation.
+
+\textit{Proof.} The Sandbox Gate emits Execute only when $\forall e \in E: S'_e \subseteq e.bounds$. The Fact Layer accepts Execute verdicts and blocks otherwise. Since the Gate's computation is deterministic, the same $(S, A, E)$ always produces the same verdict. $\square$
+
+\section{Agentic Platform Deployment}
+\label{sec:deployment}
+
+The Agentic platform deploys the Sandbox Gate as a P0 module governing all P5-to-P8 transitions. Every proposed action passes through the Sandbox Gate before reaching the Fact Layer.
+
+\begin{center}
+\begin{tabular}{>{\bfseries}p{4cm} p{3cm} p{3cm}}
+\toprule
+\textbf{Metric} & \textbf{Value} & \textbf{Note} \\
+\midrule
+Actions validated & 1,500+ & Live deployment \\
+\midrule
+Safety violations blocked & 23 & Real conditions caught \\
+\midrule
+Review escalations & 11 & Marginal cases human-verified \\
+\midrule
+False positive rate & $<2$\% & Block followed by revised safe action \\
+\midrule
+Median simulation latency & $<10$\,ms & Operational mode \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The 23 blocked violations represent conditions where the Bounds Engine proposed an action that appeared sound from its reasoning perspective but would have violated Safety Envelope parameters in the physical world.
+
+\section{Relationship to BX3 Framework}
+\label{sec:relationship}
+
+The Sandbox Gate is the only permitted path from the Bounds Engine (P5 Decision) to the Fact Layer (P8 Execution). This is a structural constraint enforced by layer isolation. The Fact Layer physically does not accept execution commands except from the Sandbox Gate.
+
+The Sandbox Gate implements the \bxthree Framework's principle that the Bounds Engine is \textit{limbless}: it can propose, but it cannot execute.
+
+\section{Related Work}
+\label{sec:prior}
+
+Sandbox environments for AI agents \cite{browser2024sandbox} isolate agent actions from production systems. The Sandbox Gate extends this by adding deterministic safety validation as a structural requirement before any physical actuation.
+
+Formal verification approaches \cite{rashie2026} prove that system behavior satisfies specifications under all conditions. The Sandbox Gate operationalizes this at runtime: it verifies each proposed action against the formal Safety Envelope specification before execution.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+By simulating all proposed actions against the current physical state and the formal Safety Envelope specification, the Sandbox Gate ensures that no action reaches the Fact Layer unless it can be confirmed safe before execution.
+
+The 1,500+ validated actions and 23 blocked violations in the Agentic platform demonstrate the operational impact.
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\end{document}

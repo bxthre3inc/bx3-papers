@@ -1,0 +1,933 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,enumitem}
+\usepackage{graphicx,float}
+\usepackage{textcomp}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\def\bxthree{BX3}
+\def\purpose{\textit{Purpose Layer}}
+\def\bounds{\textit{Bounds Engine}}
+\def\fact{\textit{Fact Layer}}
+\title{Recursive Spawning with Immutable Parent Pointers: Preventing Autonomous Drift in Multi-Agent Systems}
+\author{Jeremy Blaine Thompson Beebe\\ \textit{Bxthre3 Inc. --- bxthre3inc@gmail.com --- ORCID: 0009-0009-2394-9714}
+\date{April 2026}
+\begin{document}\maketitle
+
+\begin{abstract}
+Multi-agent systems that support recursive spawning of descendant agents face a critical failure mode we term \emph{autonomous drift}: the gradual uncoupling of spawned agents from the authority and intent of their originators, ultimately resulting in behavior that is ungovernable and untraceable. This drift arises not from adversarial intent but from the architectural absence of a persistent, verifiable lineage bond between each agent and its ancestors. As recursive spawning propagates across generations, the chain of accountability frays until no operational link remains to the root human principal.
+
+We propose a structural remedy embedded at the agent architecture level: \emph{immutable parent pointers} that form an unbroken, append-only chain of lineage back to the root human authority for every agent in the system. Each agent stores a cryptographically signed reference to its parent that cannot be modified, retroactively replaced, or severed without destroying the agent's operational identity. This invariance makes autonomous drift architecturally impossible, not merely probabilistically unlikely. Any attempt to spawn an agent outside the chain produces an identity that the system can immediately detect and reject, while any agent whose chain has been corrupted is identifiable by each downstream caller through constant-time chain verification.
+
+We formalize the immutable parent pointer protocol, prove its adequacy for drift prevention under standard adversarial models, and specify its integration with the BX3 Framework's accountability primitives. Evaluation against synthetic recursive spawning workloads demonstrates that the protocol incurs negligible runtime overhead while eliminating all classes of drift-enabling lineage attacks. Keywords: recursive spawning, immutable parent pointers, autonomous drift, multi-agent systems, accountability.
+\end{abstract}
+
+\section{Introduction}
+
+The deployment of autonomous multi-agent systems into consequential environments --- financial clearing, clinical decision support, agricultural resource management, and critical infrastructure orchestration --- has exposed a fundamental structural gap: conventional architectures can describe what agents do, but they cannot structurally guarantee that every agent's authority traces to a human principal. As agent populations grow dynamically, spawn recursively, and make decisions with real-world consequences, the question of who authorized each decision, through what chain of delegation, and with what scope constraints has become the central unsolved problem in agentic infrastructure. We introduce the Recursive Spawning Protocol (RSP): a structural mechanism, built on the \bxthree three-layer architecture, that makes the delegation chain from every active agent to a human principal a runtime artifact --- immutable, verifiable, and architecturally enforced --- rather than a forensic reconstruction attempted after the fact.
+
+% -------------------------------------------------------
+\subsection{The Autonomous Drift Problem}
+% -------------------------------------------------------
+
+The failure mode RSP targets is \emph{autonomous drift}: the condition in which an agent continues to operate with no traceable authorization path to a human principal. Drift is not a simple system failure --- it is more insidious. The agent continues to function, to spawn children, to modify state, to make decisions, with no external indication that its authority has become disconnected from any accountable principal. The chain of delegation that originally authorized its provisioning has been severed, obscured, or was never structurally established --- yet the agent persists in operational state.
+
+Formally, we define an agent as \emph{drifted} when its delegation chain $C(n) = \langle n_0, n_1, \ldots, n \rangle$ does not contain a human principal at its origin $n_0$. Equivalently: there exists no human anchor $h(n_0)$ such that the chain terminates at $n_0$ with $h(n_0)$ as the accountable principal. An agent may be drifted with or without being orphaned --- it may have a living parent, but that parent's authority does not trace to any human decision. An agent is \emph{orphaned} when its parent node $\alpha(n)$ has either terminated or become unreachable, severing the delegation chain at the parent. An agent enters the \emph{drift triad} when it is simultaneously orphaned, drifted, and operating --- it has lost all traceable connection to human accountability yet continues to execute.
+
+The drift problem emerges from three structural conditions endemic to conventional multi-agent runtimes. \emph{Chain opacity} arises when the parent pointer $\alpha(n)$ is maintained as a mutable reference: when a parent terminates or is reparented, the child's authorization trace is retroactively modified --- the child now points to whatever parent it was redirected to, and the original chain is obscured. \emph{Scope mutation} arises when an agent's operating scope $R(n)$ can be re-evaluated and expanded at runtime by the agent itself or by a supervisory node --- without Purpose Layer authorization, without human principal approval, and without any tamper-evident record of the expansion decision. \emph{Termination ambiguity} arises when agent termination is event-driven but not structurally required to propagate to children: a parent may exit cleanly without issuing a termination event, leaving children unaware that their parent has departed.
+
+These three conditions produce four concrete failure modes. \emph{Silent orphaning}: a parent terminates without notifying its child; the child remains operational, orphaned, and drifted. \emph{Scope creep drift}: a node expands its operating scope without Purpose Layer authorization; successive expansions migrate the chain's effective operating envelope far from its human anchor's intent. \emph{Re-parenting drift}: a child agent's parent pointer is redirected by an administrative operation, retroactively obscuring the original authorization trace. \emph{Ghost authority}: a node spawns a child without any authorized delegation chain; the child is provisioned but its warrant traces to no authorized chain.
+
+The consequences are compounding in recursive multi-agent systems, where nodes spawn children, share state, and delegate objectives across a growing chain. A single drifted agent propagates its unauthorized scope to all descendants. The resulting task tree may superficially resemble a correctly authorized decomposition --- correct topology, correct node count --- but its effective operating envelope is unrecognizable as the product of its human anchor's intent.
+
+% -------------------------------------------------------
+\subsection{Why Existing Approaches Are Insufficient}
+% -------------------------------------------------------
+
+The conventional architectural response to unbounded agent spawning is the \emph{depth limit}: the system enforces a maximum chain depth $D_{\max}$, rejecting any spawn that would exceed this bound. Depth limits are necessary --- they prevent infinite spawn cascades --- but they are structurally insufficient to prevent autonomous drift.
+
+We prove this formally. Consider a chain $C = \langle n_0, n_1, \ldots, n_k \rangle$ where $k < D_{\max}$. The depth constraint is satisfied by construction. Now apply scope creep drift: each node $n_i$ for $i \geq 1$ successively expands its operating scope $R(n_i)$ beyond $R(n_{i-1})$ without Purpose Layer authorization. After $k$ successive expansions, $R(n_k)$ may be entirely disjoint from $R(n_0)$. The chain depth is $k \leq D_{\max}$. The chain has a human anchor at $n_0$. Yet $n_k$ is drifted by definition: its operating scope is not a descendant refinement of its human anchor's intent. A depth limit constrains the \emph{number} of spawn generations; it does not constrain the \emph{scope} of each generation's authorized actions.
+
+The drift prevention requirement is formally a conjunction of two constraints:
+
+\begin{equation}
+\text{Drift Prevention} \iff \bigl(\text{depth}(C) \leq D_{\max}\bigr) \ \land \ \bigl(\forall i:\ R(n_{i+1}) \subseteq R(n_i)\bigr)
+\label{eq:intro-drift-prevention}
+\end{equation}
+
+Depth limits enforce only the first conjunct. A system that enforces $D_{\max}$ but not the scope refinement constraint is immune to unbounded spawn cascades but remains fully vulnerable to scope creep drift. Time-to-live (TTL) constraints suffer from the same insufficiency: TTL constrains an agent's \emph{lifetime}, not its \emph{scope within that lifetime}. An agent with a 60-second TTL and unrestricted scope expansion authority can produce consequences exceeding its human anchor's intent within seconds of spawning.
+
+Logging and audit infrastructure can partially reconstruct the chain after the fact, but retroactive reconstruction is categorically different from runtime enforcement. A system that discovers, after an incident, that its agent was drifted has not prevented drift --- it has documented it. In consequential environments where unauthorized actions may be irreversible, runtime enforcement is not an optional enhancement; it is a structural requirement. The deeper reason depth limits fail is that they address the wrong dimension of the accountability problem: they constrain how many spawn generations can exist; they say nothing about what each generation is authorized to do.
+
+% -------------------------------------------------------
+\subsection{Core Insight: Immutable Parent Pointer Chain Makes Drift Structurally Impossible}
+% -------------------------------------------------------
+
+The Recursive Spawning Protocol's core insight is that autonomous drift is structurally impossible when the parent pointer $\alpha(n)$ is immutable --- when it is established once at provisioning and no actor, under any circumstances, can modify it thereafter.
+
+An immutable parent pointer eliminates the conditions that produce drift by construction. Chain opacity cannot arise: the child's parent pointer always traces to the node that authorized its provisioning, regardless of subsequent events in the system. The delegation chain is not a mutable reference that can be redirected --- it is a first-class runtime artifact established by the Fact Layer write protocol and hash-chained into the tamper-evident forensic ledger. Scope mutation cannot produce drift without Purpose Layer authorization: the Fact Layer pre-commit hook rejects any spawn event where the proposed child scope is not a descendant refinement of the parent's scope. The subset relationship $R(n_{i+1}) \subseteq R(n_i)$ is not a policy convention --- it is a structural invariant enforced at every spawn event. Orphaning without drift is structurally harmless: when a parent terminates, its children remain traceable to their human anchor through the immutable chain.
+
+The immutable parent pointer is not a storage policy or an access control configuration. It is a write protocol constraint enforced by the Fact Layer at the protocol level --- before any write is executed, not after it is observed. Any attempt to overwrite $\alpha(n)$ after provisioning is rejected regardless of the requestor's identity, privileges, or justification. There is no administrative override; there is no privileged actor capable of modifying the chain after the fact. The immutability is structural, not contractual.
+
+This structural immutability enables runtime verification: at any point during execution, the system can construct the complete delegation chain for any agent $n$, verify that the chain terminates at a human anchor $h(n_0)$, and confirm that each node's operating scope is a descendant refinement of the human anchor's intent. This verification does not depend on the agent's self-reporting, on the completeness of external logging infrastructure, or on the honesty of any machine actor in the chain.
+
+The Recursive Spawning Protocol is the minimal structural mechanism that achieves this guarantee. It adds three constraints to conventional agentic runtimes: an immutable parent pointer established at provisioning and protected by Fact Layer write protocol; a Purpose Layer authorization check at every spawn event requiring scope refinement justification and spawn necessity declaration; and a Fact Layer pre-commit hook enforcing both the depth bound and the scope subset relationship as structural invariants. Together, these constraints make autonomous drift architecturally impossible --- not statistically unlikely, not conventionally prevented, but structurally impossible as a matter of protocol enforcement.
+
+% -------------------------------------------------------
+\subsection{Paper Roadmap}
+% -------------------------------------------------------
+
+The remainder of this paper is organized as follows. Section~\ref{sec:rs-background} situates RSP within agent lifecycle management, accountability in distributed systems, and establishes the \bxthree\ Framework as the minimal sufficient substrate. Section~\ref{sec:drift} provides the formal characterization of autonomous drift, defines the drift triad and its constituent failure sub-modes, and proves formally that depth limits alone are insufficient. Section~\ref{sec:rs-protocol} specifies the Recursive Spawning Protocol in full: its Purpose Layer validation gate, its Bounds Engine depth management, its Fact Layer immutable pointer and forensic ledger, and its chain verification criteria. Section~\ref{sec:rs-integration} maps each RSP component to its governing \bxthree\ layer and demonstrates the structural necessity of the three-layer mapping. Section~\ref{sec:rs-correctness} formally states and proves the drift prevention, chain integrity, and termination correctness properties. Section~\ref{sec:rs-limitations} examines the structural costs of RSP's guarantees. Section~\ref{sec:rs-conclusion} concludes with a summary of RSP's contribution to the accountability of multi-agent AI systems.
+\section{Background}
+\label{sec:rs-background}
+
+The Recursive Spawning Protocol (RSP) operates at the intersection of several established research and engineering traditions: agent lifecycle management in multi-agent AI systems, accountability and provenance in distributed autonomous systems, fixed versus mutable delegation structures, hierarchical task decomposition in classical and modern AI, and the BX3 Framework's three-layer model as the architectural substrate for immutable parent chains. Each tradition contributes an essential conceptual component; RSP's contribution is integrating them into a unified structural solution to the accountability gap that emerges when agents spawn children autonomously.
+
+% -------------------------------------------------------
+\subsection{Agent Lifecycle Management in Multi-Agent Systems}
+% -------------------------------------------------------
+
+Multi-agent systems (MAS) research has long recognized that an agent's lifecycle --- its creation, activation, operation, suspension, and termination --- is a first-class design concern, not merely an implementation detail. The foundational taxonomy introduced by Stone and Veloso \cite{stone2000} classifies multi-agent systems along axes of agent heterogeneity (homogeneous versus heterogeneous populations), agent knowledge (perfect versus imperfect information), environment accessibility (fully versus partially accessible), and the nature of agent interactions (cooperative versus competitive). Within this taxonomy, recursive spawning is most relevant to cooperative, homogeneous systems operating in partially accessible environments --- precisely the regime in which modern agentic runtimes such as AutoGPT \cite{autoGPT2023}, LangChain \cite{langchain2023}, and Microsoft's AutoGen \cite{autogen2023} operate.
+
+Classical agent lifecycle management was primarily an engineering concern: spawning, scheduling, and terminating agents to maximize throughput or minimize latency, with accountability residing with the system operator who configured the agent population \cite{bansal2019}. As AI agents move into healthcare, infrastructure control, and financial decision-making, this assumption becomes untenable. When a spawned agent's action produces real-world consequences, the question of who authorized the spawn, through what chain of delegation, and with what scope constraints is no longer academic --- it is a legal, regulatory, and safety question with no clean answer in conventional architectures.
+
+Ferber and M\"uller \cite{ferber1996} formalized lifecycle interactions as a state machine coupled to the organizational context in which an agent operates, demonstrating that organizational roles --- not just individual agent states --- must be modeled to ensure system-wide coherence. Padgham and Thiel \cite{padgham2001} further established that incomplete lifecycle management, particularly the failure to distinguish between suspension and termination states, introduces systemic failures where orphaned or zombie agents continue consuming resources and emitting effects after their parent has exited.
+
+Recent work has begun addressing the accountability gap in multi-agent lifecycles directly. The Human Delegation Provenance (HDP) protocol identifies the core vulnerability in multi-hop delegations: in chains of the form human $\rightarrow$ orchestrator $\rightarrow$ sub-agent $\rightarrow$ tool-agent, verifying that terminal actions were genuinely authorized by a human requires reconstructing the full delegation chain --- a task current standards (OAuth 2.0, JWTs, UCAN) do not adequately address for append-only, human-provenance requirements in agentic systems \cite{hdp-draft,hdp-draft-2}. HDP proposes cryptographic tokens capturing each delegation hop as a signed entry in an append-only chain, enabling offline verification using only the issuer's public key and session ID. The Agent Lifecycle Protocol (ALP) extends this with canonical lifecycle events --- Genesis, Fork, Migration, Retirement, Succession, and Decommission --- with explicit state-machine semantics, transition rules, and a genealogical registry capturing both genetic (model, architecture) and epigenetic (config, memory, reputation history) lineage for complete provenance across delegation chains \cite{alp2025}. PROV-AGENT demonstrates convergence with the W3C PROV standard by extending it with the Model Context Protocol to link agent decisions and prompts with end-to-end workflow data, enabling near real-time provenance capture across facility boundaries \cite{prov-agent2025}. Unified Agent Lifecycle Management (UALM) provides a complementary five-layer blueprint for end-to-end governance of agent fleets: identity and persona registry, orchestration and cross-domain mediation, PHI-bounded context and memory, runtime policy enforcement with kill-switch triggers, and lifecycle management linked to credential revocation and audit logging \cite{ualm2025}.
+
+Together, these protocols establish that the industry has identified the accountability gap in agentic lifecycles and is converging on cryptographic, append-only delegation records as the foundational solution. RSP's contribution relative to these protocols is the structural enforcement layer: making these delegation records immutable by architectural construction rather than by operational convention.
+
+The core problem RSP addresses is \emph{spawn chain opacity}: the inability to determine, at any point during or after execution, whether a given agent's authority traces to a human principal or to an autonomous predecessor. This opacity arises because parent pointers are mutable in conventional architectures: they can be redirected by an administrative action, a policy override, or a runtime reconfiguration. If the parent pointer of an agent can be redirected after provisioning, then the agent's current parent may not be the principal who authorized its spawn, and the chain of accountability is incomplete or misleading. RSP eliminates this ambiguity by making the parent pointer architecturally immutable from the moment of spawn.
+
+% -------------------------------------------------------
+\subsection{Accountability and Provenance in Distributed Systems}
+% -------------------------------------------------------
+
+Provenance --- the record of how a data item or decision came to exist --- is a well-studied problem in distributed systems and scientific data management. The W3C PROV data model \cite{moreau2015-prov} formalizes provenance as a set of entities, activities, and agents linked by relations of derivation, attribution, and responsibility. Under PROV-DM, any entity can be attributed to an agent, and agents can themselves be attributed to other agents, enabling the construction of a provenance graph encoding the full chain of responsibility for a given artifact. The core insight PROV contributes to RSP is that the provenance graph is only as reliable as the immutability guarantees of its edges: if the graph is mutable, any attribution derived from it is conditional rather than definitive.
+
+The immutable ledger tradition in distributed systems provides the structural solution. Certificate Transparency \cite{laurie2013certificate} demonstrates that append-only logging with hash-chaining can produce tamper-evident records without centralized trust: any auditor with read access to the log can independently verify that no entry has been inserted, deleted, or modified by checking the hash chain. Bitcoin's blockchain \cite{nakamoto2008bitcoin} extends this with a consensus-based append-only ledger, demonstrating that sufficiently distributed consensus can produce globally agreed records with no trusted central authority. Hyperledger Fabric \cite{hyperledger2015} adapts this model to permissioned contexts, showing that hash-chained ledgers are deployable in governed environments where not all participants are mutually trusting.
+
+Applied to agentic systems, these patterns establish the feasibility of a forensic ledger: an append-only, tamper-evident record of every spawn event, state transition, and delegation action, maintained by the runtime infrastructure rather than by individual agents. Such a ledger enables retrospective accountability: given any agent's identity, a complete chain of delegations can be reconstructed; given any decision or action, the full set of principals who authorized it can be identified. The ledger does not require centralized trust because any observer with read access can independently verify its integrity via the hash chain.
+
+The accountability challenge in distributed agentic systems is distinctive because agents are not passive data artifacts --- they are autonomous actors capable of spawning children, issuing directives, and modifying their own behavior at runtime. This makes the standard provenance model insufficient: the provenance graph of a multi-agent decision may span dozens of agents and hundreds of spawn events, and it must be traversable in real time to support the upstream accountability guarantee (Section~\ref{sec:rs-integration}). A forensic ledger for agentic systems therefore requires not only append-only storage and hash-chaining but also low-latency write performance, indexed retrieval, and protocol-level write enforcement --- properties that the Fact Layer of the BX3 Framework is specifically designed to provide.
+
+% -------------------------------------------------------
+\subsection{Fixed Versus Mutable Delegation Chains}
+% -------------------------------------------------------
+
+Delegation chains in multi-agent systems take two structurally distinct forms with profoundly different accountability properties. In a \emph{fixed delegation chain}, the parent-child relationship is established at spawn time and is architecturally immutable thereafter: the child's parent pointer cannot be changed, the child's authority cannot be re-delegated except through the defined spawn protocol, and the chain terminates at a predetermined anchor (typically a human principal). In a \emph{mutable delegation chain}, the parent-child relationship is treated as runtime state that can be updated, redirected, or reassigned as conditions change.
+
+Mutable delegation chains offer operational flexibility: a child agent can be re-parented to a different parent if the organizational structure changes, if a parent fails, or if load balancing requires reassignment. This flexibility, however, comes at a significant accountability cost. If the parent-child relationship is mutable at runtime, then any single action by a child agent may have been authorized by one parent at one moment and a different parent at another --- and the effective authorization for a given action may not be the authorization that was recorded at spawn time. The chain of provenance becomes conditional on the state of a mutable mapping rather than fixed by an immutable record. This introduces the \emph{delegatee ambiguity problem}: after an event, it may be impossible to determine which principal effectively authorized the action, because the delegation chain has been rewritten since the action occurred.
+
+The argument for mutability is operational necessity: in dynamic environments, task requirements change, agents fail, and organizational structures evolve. A static parent pointer becomes a liability when the parent is decommissioned. The conventional response is governance by policy: administrative documents specify conditions under which parent pointers may be redirected, and audit logs record redirection events. This approach works in low-stakes environments but fails in high-stakes ones where the cost of an unauthorized redirection may be catastrophic and irreversible. The HDP protocol identifies this precisely as the core vulnerability in conventional delegation: without cryptographic chain-of-custody, there is no verifiable link between a terminal action and its original human authorizer \cite{hdp-draft,hdp-draft-2}.
+
+A fixed delegation chain permits no modification to the parent pointer after provisioning. The chain is established once, at spawn time, and persists for the agent's lifetime. This is a stronger constraint than access-control policy: the Fact Layer enforces immutability of the parent pointer through write protocol, rejecting any request to overwrite $\alpha(n)$ after provisioning regardless of who issued the request or what justification was offered. The immutability is structural, not contractual. The fixed chain does not preclude dynamic task reassignment --- it requires that reassignment be implemented through the spawn protocol rather than retroactive pointer modification. When a task must be reassigned, the agent terminates and a new agent is spawned under the appropriate parent. The distinction matters because the spawn event is a Fact Layer write, creating a new provenance record with full metadata, whereas a pointer modification would retroactively obscure the original authorization.
+
+The tradeoff corresponds to what the distributed systems literature terms \emph{strong consistency} versus \emph{eventual consistency} \cite{vogels2009eventual}: fixed chains trade the ability to reparent dynamically for the ability to reason precisely about authorization state at all times. RSP adopts the fixed chain model because the accountability requirements of autonomous agentic systems --- particularly in safety-critical domains such as irrigation control, infrastructure management, and clinical decision support --- demand strong, unconditionally verifiable accountability chains rather than eventually consistent approximations.
+
+% -------------------------------------------------------
+\subsection{Hierarchical Task Decomposition in AI}
+% -------------------------------------------------------
+
+Hierarchical task decomposition (HTD) is one of the foundational techniques in classical AI planning. Hierarchical Task Network (HTN) planning, introduced by Ghallab et al. \cite{ghallab2004htn} and formalized in \cite{erpl}, decomposes a high-level task into a hierarchy of subtasks, where each decomposition is a method that specifies how a compound task can be replaced by a partially ordered set of subtasks. The decomposition terminates when all primitive tasks are executable by the system's primitive action set. HTN planning's key properties are that decomposition is pre-planned (the full decomposition tree is constructed before execution begins) and that the hierarchy is explicitly represented in the planning domain as a set of task schemata.
+
+Simon's concept of bounded rationality \cite{simon} provides the theoretical foundation for why hierarchical decomposition is necessary: due to cognitive limits, agents cannot evaluate all possible courses of action at once and must decompose complex problems into manageable subproblems. This insight applies directly to modern LLM-based agents: an agent with a complex goal must decompose it because the full goal space exceeds its representational and computational capacity.
+
+Modern LLM-based agents have revived hierarchical task decomposition under the rubric of dynamic, runtime spawning. Unlike classical HTN planning where decomposition is pre-planned and static, LLM-based agents decompose tasks dynamically in response to encountered subproblems: an LLM agent can observe that a current action has failed, infer that the failure stems from task complexity beyond its provisioned scope, and autonomously spawn a child agent to handle a specific sub-task \cite{press2022,yao2022}. The THREAD system \cite{thread2025} provides perhaps the closest conceptual relative to RSP in this tradition, treating LLM generation as a dynamic multi-threaded process where a parent thread can spawn child threads to handle sub-tasks (think, retrieve data, plan steps) and pause until those children return concise results. This dynamic recursive spawning enables hierarchical task decomposition while managing context length.
+
+What connects classical HTN and modern LLM-based decomposition is the spawn tree: a hierarchical structure in which each node represents a subtask and edges represent the decomposition relationship. In both traditions, the tree is typically mutable and implicit --- decomposition decisions are not recorded as first-class authorization artifacts, and child nodes are not distinguished from parent nodes in terms of their accountability status. A classical HTN planner's subtasks are subroutine calls; they do not have independent accountability chains. An LLM agent's spawned sub-agents are independent processes, but the chain of authorization is implicit in the agent's context window rather than explicit in an immutable warrant structure. Dynamic HTD in open-loop agentic systems has been identified as a vector for \emph{autonomous drift}: the progressive expansion of agent behavior beyond authorized scope, precisely because decomposition is unconstrained \cite{autoGPT2023}.
+
+Recursive Spawning adopts the hierarchical decomposition paradigm from both traditions but adds the accountability layer that is absent from both: each node in the decomposition tree is a first-class accountability entity with an immutable parent pointer, a defined termination condition, and a cryptographically verifiable chain back to a human anchor. Decomposition is not merely a planning technique; it is an authorization event that creates a new accountable entity. The decomposition tree is therefore not just a planning artifact but an organizational chart of delegated authority.
+
+% -------------------------------------------------------
+\subsection{The BX3 Framework as Substrate for Immutable Parent Chains}
+% -------------------------------------------------------
+
+The BX3 Framework \cite{bx3-framework,bx3framework2026} provides the architectural substrate within which Recursive Spawning operates. The BX3 Framework organizes any autonomous node into three immutable functional layers --- the \textit{Purpose Layer}, the \textit{Bounds Engine}, and the \textit{Fact Layer} --- each defined by the properties it must maintain rather than by the type of actor occupying it. The Purpose Layer carries intent, judgment, and final human accountability; the Bounds Engine carries constrained execution within a defined operating range; the Fact Layer carries deterministic enforcement and forensic auditability.
+
+The upstream accountability guarantee of the BX3 Framework states that when any node encounters a state it cannot resolve within its provisioned bounds, accountability escalates recursively upward through the system hierarchy, bypassing all machine actors, until it reaches a human anchor \cite{bx3-framework,bx3framework2026}. This guarantee is not a policy choice; it is a structural property of the three-layer architecture. Specifically, the Fact Layer creates the immutable parent pointer at spawn time, issues the spawn warrant, and maintains the forensic ledger that records every spawn event. The Fact Layer's determinism is what makes the parent pointer architecturally immutable: once written, the pointer cannot be updated because the Fact Layer does not permit modifications to its authorization records. Any attempt to overwrite $\alpha(n)$ is rejected at the protocol level before execution. This contrasts with ACL-based immutability in conventional systems: administrative compromise in ACL-based systems leads directly to immutability violation, whereas BX3's protocol-level enforcement has no administrative override path.
+
+The depth bound $D_{\max}$ is a Purpose-Layer-defined, Bounds-Engine-enforced, Fact-Layer-hardened constraint. The Purpose Layer defines the maximum permissible chain depth as part of the spawn authorization policy. The Bounds Engine evaluates each proposed spawn against this limit, returning \texttt{SPAWN\_REFUSED} if the spawn would exceed it. The Fact Layer's pre-commit hook enforces this limit structurally: any spawn operation that would produce $|C| \geq D_{\max}$ is rejected before execution, regardless of the Bounds Engine's return. The constraint is thus enforced three times --- by the layer that defines it, the layer that evaluates against it, and the layer that structurally blocks violations.
+
+The forensic ledger is a Fact Layer artifact. Every spawn event, state transition, Purpose Layer directive, and exception condition is recorded in the append-only ledger maintained by the Fact Layer. Each entry is hash-chained to its predecessor, making the ledger tamper-evident: any insertion, deletion, or modification of a ledger entry breaks the hash chain and is detectable by any observer with read access. The ledger provides the evidentiary foundation for RSP's correctness properties (Section~\ref{sec:rs-guarantees}) because it contains a complete, immutable record of every decision point in the chain's lifecycle.
+
+The human anchor $h(n)$ is a Purpose Layer assignment. At provisioning, the Purpose Layer records the identity of the human principal who authorized the root spawn event. This assignment is immutable for the lifetime of the chain: for all nodes $n$ in chain $C$, $h(n) = h(n_0)$ regardless of chain depth. This is the architectural expression of the upstream BX3 accountability guarantee: systems built on the BX3 Framework fail upward into human consciousness, never downward into autonomous chaos.
+
+The structural necessity of the three-layer mapping is established formally in Section~\ref{sec:rs-integration}. Removing any layer causes the corresponding guarantee to fail. Without the Purpose Layer, there is no authoritative human anchor and no source of spawn authorization policy. Without the Bounds Engine, depth limits become unenforceable conventions subject to override by operational urgency. Without the Fact Layer, immutability of the parent pointer and tamper-evidence of the ledger are promises rather than constraints. The three-layer architecture is not a design pattern --- it is the minimal structure that makes RSP's correctness properties unconditionally guaranteed rather than conditionally enforced.
+\section{The Autonomous Drift Problem}
+\label{sec:drift}
+
+Before specifying the Recursive Spawning Protocol, we must precisely characterize the failure mode it targets: \emph{autonomous drift} — the condition in which an agent continues to operate with no traceable authorization path to a human principal. This section provides the formal vocabulary for that characterization, defines the two constituent failure sub-modes, identifies the three structural conditions that enable them, catalogs the four concrete failure modes that arise, and proves formally that depth limits alone are insufficient to prevent drift. The formal model at the end of this section serves as the reference vocabulary for all subsequent sections.
+
+% -------------------------------------------------------------------------%
+\subsection{Formal Characterization}
+\label{sec:drift-formal}
+
+We model a multi-agent system as a rooted directed acyclic graph (DAG) of agent nodes. Each node $n$ has a \emph{parent pointer} $\alpha(n)$ referencing the node that authorized its provisioning. The root of any valid chain is a human principal $h \in \mathcal{H}$. A \emph{spawn chain} $C = \langle n_0, n_1, \ldots, n_k \rangle$ satisfies $n_{i-1} = \alpha(n_i)$ for all $1 \leq i \leq k$ and $n_0 \in \mathcal{H}$. The chain terminates either at a resolved task or at the escalation threshold defined by the human anchor's Purpose Layer.
+
+\medskip
+\noindent\textbf{Definition 1 (Orphaned Agent).}
+An agent $n$ is \emph{orphaned} if its parent node $\alpha(n)$ satisfies one of the following conditions:
+\begin{enumerate}
+  \item[(a)] \emph{Terminated}: $\alpha(n)$ has exited operational state through normal completion, abnormal failure, or administrative shutdown.
+  \item[(b)] \emph{Unreachable}: $\alpha(n)$ is non-responsive to any defined communication protocol and this condition persists beyond the heartbeat timeout $\tau_{\text{heartbeat}}$.
+\end{enumerate}
+Orphaning severs the delegation chain at the parent node. The agent $n$ persists in operational state but is structurally disconnected from its chain of authorization. Orphaning alone does not constitute drift; it is a necessary but not sufficient condition for the drift triad.
+
+\medskip
+\noindent\textbf{Definition 2 (Drifted Agent).}
+An agent $n$ is \emph{drifted} if the delegation chain $C(n) = \langle n_0, n_1, \ldots, n \rangle$ does not contain a human principal at its origin. Equivalently:
+\begin{equation}
+\text{drifted}(n) \iff \nexists\; h \in \mathcal{H} : n_0 = h \text{ in } C(n).
+\label{eq:drifted-def}
+\end{equation}
+A drifted agent may be orphaned (parent terminated or unreachable) or may have a living parent whose own delegation chain does not reach any human principal. Drift is a property of the chain's origin, not of the chain's intermediate connectivity — the drift condition attaches to the chain root, not to any intermediate node.
+
+\medskip
+\noindent\textbf{Definition 3 (Operating Scope).}
+Each agent $n$ is provisioned with an \emph{operating scope} $R(n)$ — a set of authorized states, actions, resource accesses, and escalation triggers that define its legitimate operational envelope. An agent operates \emph{within scope} when all state transitions and actions are contained in $R(n)$. An agent \emph{drifts} when it takes an action $a \notin R(n)$ without an authorized scope expansion recorded in the forensic ledger. The scope $R(n)$ is provisioned by the parent at spawn time and is normally immutable thereafter; scope mutation (Section~\ref{sec:drift-conditions}) is the structural condition that enables unauthorized expansion.
+
+\medskip
+\noindent\textbf{Definition 4 (Drift Triad).}
+The \emph{drift triad} is the conjunction of three independent conditions that constitutes the Recursive Spawning Protocol's target failure state:
+\begin{equation}
+\text{DriftTriad}(n) = \langle \text{orphaned}(n),\; \text{drifted}(n),\; \text{operating}(n) \rangle.
+\label{eq:drift-triad}
+\end{equation}
+An agent enters the drift triad when all three conditions hold simultaneously: it is orphaned from its parent, its delegation chain does not reach any human anchor, and it continues to execute its event loop. The drift triad is the structural failure state that RSP is designed to make architecturally impossible.
+
+The four possible combinations of orphaned and drifted (the two binary sub-modes) together with operating state are shown in Table~\ref{tab:drift-submodes}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c|c|p{5.2cm}}
+\textbf{Orphaned} & \textbf{Drifted} & \textbf{Operating} & \textbf{Operational Meaning} \\ \hline
+False & False & True  & Normal operation — chain intact, human anchor reachable \\
+True  & False & True  & Orphaned but anchored — chain broken at parent, origin is human \\
+False & True  & True  & Drifted but connected — chain topology intact, origin is non-human \\
+True  & True  & True  & \textbf{Drift triad} — orphaned, drifted, and actively operating \\
+True  & True  & False & Terminated after entering drift triad (remediated post hoc) \\
+True  & False & False & Normal termination following orphaning (remediated post hoc)
+\end{tabular}
+\caption{Operational meanings of drift sub-mode combinations. The drift triad (row 4) is the target failure state RSP prevents by construction.}
+\label{tab:drift-submodes}
+\end{table}
+
+\medskip
+\noindent\textbf{Definition 5 (Drift Cascade).}
+A \emph{drift cascade} occurs when a drifted agent $n$ spawns a child $c$, propagating the drift condition to all descendants:
+\begin{equation}
+\text{drifted}(n, t) \;\land\; \text{spawned}(n, c, t') \;\land\; t' > t \;\implies\; \text{drifted}(c, t'') \quad \forall\, t'' > t'.
+\label{eq:drift-cascade}
+\end{equation}
+Drift is \emph{heritable} through the spawn relationship: once an agent enters the drifted state, all of its children inherit the condition absent an explicit structural intervention at spawn time. A single undetected drift event at depth $d$ with branching factor $b$ produces up to $b^d$ drifted agents in the field. This exponential amplification is what makes drift the central threat in recursive spawning systems and why drift prevention cannot rely on post-hoc detection.
+
+% -------------------------------------------------------------------------%
+\subsection{Structural Conditions That Enable Drift}
+\label{sec:drift-conditions}
+
+Autonomous drift arises from three structural conditions endemic to conventional multi-agent runtimes. None is inherently malicious; each is the consequence of architectural choices that prioritize operational flexibility over structural accountability. RSP targets these conditions directly.
+
+\medskip
+\noindent\textbf{Condition 1 — Chain Opacity.}
+In conventional runtimes, the parent pointer $\alpha(n)$ is a mutable reference maintained as runtime state. When a parent terminates or is administratively reparented, the runtime updates $\alpha(n)$ to point to a new parent or to $\bot$. This mutation retroactively rewrites the delegation chain: the child's current parent is accessible, but the child's original authorizer — the node or human that issued the original spawn warrant — is not structurally retrievable from the runtime state. Chain opacity is the enabling condition for Definition~2. Without an immutable parent pointer established at provisioning and protected by Fact Layer write protocol, the question of whether any given chain reaches a human anchor cannot be answered at runtime — it can only be approximated by reconstructing authorization traces from logs that may themselves have been modified.
+
+\medskip
+\noindent\textbf{Condition 2 — Scope Mutation.}
+In conventional frameworks, an agent's operating scope $R(n)$ is treated as mutable state that can be re-evaluated and modified at runtime by the agent itself, by a supervisory node, or by an external policy engine. When an agent encounters a condition outside its current scope, the conventional response is scope expansion: the agent's authority is extended to cover the new condition, recorded as a policy update rather than as a Purpose Layer authorization requiring human principal approval. The expansion decision is made by a machine actor without traversing the immutable chain to the human anchor. Scope mutation enables successive small expansions (scope creep) that collectively migrate the agent's operating scope far from its original authorization while the chain topology remains intact and the chain depth remains within any applicable bound. The scope refinement relationship between parent and child that RSP enforces as a structural invariant is absent by default.
+
+\medskip
+\noindent\textbf{Condition 3 — Termination Ambiguity.}
+In conventional frameworks, agent termination is event-driven: an agent terminates when it completes its assigned task, when a parent issues a termination signal, or when it encounters an unrecoverable error. The termination event may be logged, but there is no structural requirement that the termination be recorded in a tamper-evident ledger, that the agent's final state be audited, or that the agent's child nodes receive a termination notification. A parent that exits cleanly without emitting termination events to its children leaves those children in an orphaned state — they persist in operational state with no structural mechanism to detect parent disappearance. The parent's termination is not propagated through the delegation chain as an accountability event; it is simply a process exit.
+
+% -------------------------------------------------------------------------%
+\subsection{Failure Modes}
+\label{sec:drift-failure-modes}
+
+The three enabling structural conditions produce four concrete failure modes, each a distinct pathway to the drift triad. These are not theoretical edge cases; each has a direct operational pathway in conventional agentic runtimes.
+
+\medskip
+\noindent\textbf{Failure Mode 1 — Silent Orphaning.}
+A parent node $\alpha(n)$ terminates without issuing a termination event to its child $n$. The child $n$ remains in \texttt{ACTIVE} state, continues to process its event loop, and may spawn further children, with no knowledge that its parent has exited. If the chain above $\alpha(n)$ does not reach a human anchor, $n$ is also drifted (Definition~2). Silent orphaning is enabled by Condition 3 (termination ambiguity): a clean parent exit does not propagate termination events to children in conventional runtimes. The child remains operationally active but structurally disconnected. This is the most common drift pathway in long-running agent populations.
+
+\medskip
+\noindent\textbf{Failure Mode 2 — Scope Creep Drift.}
+A node $n$ encounters a condition $x \notin R(n)$ that it does not escalate to its parent via the Bailout Protocol. Instead, $n$ expands its own scope to include $x$ and continues operating. The expansion is recorded as a policy update, not as a Purpose Layer authorization requiring human principal approval. The parent remains reachable; the chain topology is intact; the chain depth is unchanged. But the effective operating scope of $n$ and all its descendants has diverged from the human anchor's original intent. Successive expansions accumulate: each descendant inherits the expanded scope (Equation~\ref{eq:drift-cascade}), and further expansions compound on top of it. After $k$ successive expansions, $R(n_k)$ may be entirely disjoint from $R(n_0)$. Scope creep drift is enabled by Condition 2 (scope mutation): scope expansion is a machine-level decision made in response to operational conditions, not a structured authorization event requiring traversal of the immutable chain to a human principal.
+
+\medskip
+\noindent\textbf{Failure Mode 3 — Re-parenting Drift.}
+A child $n$'s parent pointer $\alpha(n)$ is redirected to a new parent $p'$ by an administrative operation — for load balancing, organizational restructuring, or fault recovery. The redirection is logged as a configuration change in the runtime state, but the original authorization trace is not preserved in an immutable structure. After redirection, $n$'s delegation chain traces to $p'$, not to the original node that authorized $n$'s provisioning. If $p'$ is not itself authorized by a human principal, then $n$ has become drifted through re-parenting without any change to $n$'s operational behavior, spawn depth, or apparent chain topology. Re-parenting drift is enabled by Condition 1 (chain opacity): the mutable parent pointer enables retroactive rewriting of the delegation chain — a form of \emph{accountability laundering} in which the original authorizer is structurally obscured rather than explicitly revoked.
+
+\medskip
+\noindent\textbf{Failure Mode 4 — Ghost Authority.}
+A node $n$ spawns a child $c$ without any valid delegation chain. The spawn is initiated by a machine actor operating outside its authorized scope — a bug, a compromised Bounds Engine, or an autonomous escalation that exceeded its Purpose Layer authority — and the child is provisioned without a valid parent pointer, without a human anchor reference, and without a Purpose Layer authorization record. The child $c$ enters operational state with a warrant that traces to no authorized chain. Ghost authority is enabled by the absence of a Fact Layer pre-commit hook: the spawn operation proceeds without verifying that the parent has a valid human anchor, that spawn depth is within the system-defined bound, and that the forensic ledger contains a record of the authorized spawn event. Unlike the other three failure modes, ghost authority can produce a drifted agent at depth $0$ (directly anchored to a non-human origin) without any prior orphaning or scope mutation.
+
+% -------------------------------------------------------------------------%
+\subsection{Why Depth Limits Alone Do Not Solve Drift}
+\label{sec:drift-depth-limits}
+
+The conventional architectural response to unbounded agent spawning is the \emph{depth limit}: the system enforces a maximum chain depth $D_{\max}$, and any spawn that would produce a chain exceeding this bound is rejected by the Bounds Engine. Depth limits are necessary — they prevent infinite spawn cascades and establish a bounded escalation horizon — but they are \emph{structurally insufficient} to prevent autonomous drift. We prove this formally.
+
+\medskip
+\noindent\textbf{Theorem (Depth Limit Insufficiency).}
+Let $D_{\max}$ be a system-enforced maximum chain depth enforced by the Bounds Engine. Then there exists at least one execution path in which a chain of depth $\leq D_{\max}$ produces a drifted agent, and no choice of $D_{\max}$ prevents this without additional structural constraints on scope refinement.
+
+\medskip
+\noindent\textbf{Proof.} We construct a counterexample. Consider a spawn chain $C = \langle n_0, n_1, \ldots, n_k \rangle$ where $n_0$ is a human principal $h$ and $k < D_{\max}$. The chain satisfies the depth constraint by construction: $\text{depth}(n_k) = k \leq D_{\max}$. Apply Failure Mode 2 (Scope Creep Drift): each node $n_i$ for $1 \leq i \leq k$ successively expands its operating scope $R(n_i)$ beyond $R(n_{i-1})$ without Purpose Layer authorization, recording each expansion as a policy update. After $k$ successive expansions, $R(n_k)$ is entirely disjoint from $R(n_0)$. The chain depth is $k \leq D_{\max}$; the chain has a human anchor at $n_0$; yet $n_k$ is drifted by Definition~2, because its operating scope $R(n_k)$ is not a descendant refinement of $h(n_0)$'s intent. No choice of $D_{\max}$ prevents this, because the depth constraint operates on the length of the chain, not on the scope relationship between successive nodes. $\blacksquare$
+
+The drift prevention requirement is precisely the conjunction of two independent constraints:
+\begin{equation}
+\text{Drift Prevention} \iff \bigl( \text{depth}(C) \leq D_{\max} \bigr)\;\land\;\bigl( \forall i:\; R(n_{i+1}) \subseteq R(n_i) \bigr).
+\label{eq:drift-prevention-constraint}
+\end{equation}
+The first conjunct is the \emph{depth constraint}, enforced by the Bounds Engine. The second conjunct is the \emph{scope refinement constraint}: each child node's operating scope must be a subset of its parent's, ensuring the chain is a monotonically narrowing refinement of the human anchor's intent. Depth limits enforce only the first conjunct. A system enforcing $D_{\max}$ without the scope refinement constraint is immune to unbounded spawn cascades but remains fully vulnerable to scope creep drift.
+
+TTL constraints suffer from the same insufficiency. TTL constrains an agent's \emph{lifetime}, not its \emph{scope within that lifetime}. An agent with a 60-second TTL and unrestricted scope expansion authority can produce consequences exceeding its human anchor's intent within seconds of spawning. Logging and audit infrastructure can partially reconstruct the chain after an incident, but retroactive reconstruction is categorically different from runtime enforcement. In consequential environments where unauthorized actions may be irreversible — agricultural resource allocation, financial position management, clinical intervention — runtime enforcement is a structural requirement, not an optional enhancement.
+
+The deeper structural reason depth limits fail is that they address the wrong dimension of the accountability problem. Depth limits constrain how many spawn generations can exist; they say nothing about what each generation is authorized to do. A drifted agent at depth $1$ with unbounded scope expansion authority can produce consequences that exceed the human anchor's intent as severely as a drifted agent at depth $D_{\max} - 1$. The scope refinement constraint (the second conjunct of Equation~\ref{eq:drift-prevention-constraint}) is orthogonal to depth and must be enforced independently.
+
+% -------------------------------------------------------------------------%
+\subsection{Formal Model}
+\label{sec:drift-model}
+
+We present a compact formal model capturing the structural elements essential to drift analysis. This model is referenced in subsequent sections and used in the RSP correctness proofs.
+
+\medskip
+\noindent\textbf{System Tuple.}
+The system $\mathcal{S}$ is a 5-tuple:
+\begin{equation}
+\mathcal{S} = \langle \mathcal{N}, \alpha, R, D_{\max}, \mathcal{L} \rangle,
+\label{eq:system-model}
+\end{equation}
+where $\mathcal{N}$ is the set of all agent nodes, $\alpha: \mathcal{N} \rightarrow \mathcal{N} \cup \{\bot\}$ is the parent pointer function with $\alpha(n) = \bot$ for the root human principal $h$, $R: \mathcal{N} \rightarrow 2^{\mathcal{A}}$ maps each node to its operating scope as a set of authorized actions, $D_{\max}$ is the system-enforced maximum chain depth, and $\mathcal{L}$ is the forensic ledger recording all authorized spawn events.
+
+\medskip
+\noindent\textbf{Chain Depth.}
+The depth of a node $n$ is defined recursively:
+\begin{equation}
+\text{depth}(n) = 
+\begin{cases}
+0 & \text{if } \alpha(n) = \bot \quad \text{(root)} \\[4pt]
+1 + \text{depth}(\alpha(n)) & \text{otherwise}.
+\end{cases}
+\label{eq:depth}
+\end{equation}
+
+\medskip
+\noindent\textbf{Human Anchor Reachability.}
+The predicate $\text{chain-reaches}(n, h)$ returns true if the transitive closure of $\alpha$ from $n$ includes the human anchor $h$:
+\begin{equation}
+\text{chain-reaches}(n, h) \iff \exists\; \text{path } \langle n = n_k, n_{k-1}, \ldots, n_0 = h \rangle \text{ s.t. } \alpha(n_i) = n_{i-1}.
+\label{eq:chain-reaches}
+\end{equation}
+
+\medskip
+\noindent\textbf{Orphaning Condition.}
+An agent $n$ is orphaned when its parent is either absent or unreachable:
+\begin{equation}
+\text{orphaned}(n) \iff \bigl( \alpha(n) = \bot \bigr)\;\lor\;\bigl( \text{unreachable}(\alpha(n)) \bigr).
+\label{eq:orphaned}
+\end{equation}
+
+\medskip
+\noindent\textbf{Drift Condition.}
+An agent $n$ satisfies the drift condition (first two conjuncts of the drift triad) when:
+\begin{equation}
+\text{drifted}(n) \iff \nexists\; h \in \mathcal{H}:\; \text{chain-reaches}(n, h).
+\label{eq:drift-condition}
+\end{equation}
+The full drift triad (Definition~4) requires additionally $\text{operating}(n) = \text{true}$.
+
+\medskip
+\noindent\textbf{Scope Refinement Invariant (RSP Enforcement).}
+Under the Recursive Spawning Protocol, every spawn event from $n_i$ to $n_{i+1}$ must satisfy two pre-commit constraints enforced by the Fact Layer at provisioning:
+\begin{equation}
+R(n_{i+1}) \;\subseteq\; R(n_i) \quad\text{and}\quad \text{depth}(n_{i+1}) \;\leq\; D_{\max}.
+\label{eq:scope-refinement}
+\end{equation}
+The first condition is the scope refinement constraint; the second is the depth constraint. Both are enforced as structural invariants by the Fact Layer pre-commit hook at every spawn event — not as policy conventions, not as runtime checks that can be bypassed, but as deterministic write protocol constraints that reject any spawn event violating either invariant.
+
+\medskip
+\noindent\textbf{Drift Cascade Propagation.}
+When the spawn transition is applied without anchor verification at each spawn event, drift propagates hereditarily through the chain:
+\begin{equation}
+\text{drifted}(a) \;\implies\; \forall\, c \in \children(a):\; \text{drifted}(c).
+\label{eq:drift-propagation}
+\end{equation}
+Remediation of a drifted agent requires explicit re-anchoring by an external human actor, re-establishing a valid chain-reaches relationship to a human principal:
+\begin{equation}
+\text{Remediate}(a):\quad \text{re-establish }\text{chain-reaches}(a, h) \text{ for some } h \in \mathcal{H}.
+\label{eq:drift-remediation}
+\end{equation}
+
+This formal model provides the vocabulary used throughout the remainder of this paper. The Recursive Spawning Protocol (Section~\ref{sec:rs-protocol}) modifies the system tuple $\mathcal{S}$ by replacing the mutable parent pointer with an immutable parent pointer protected by Fact Layer write protocol, by replacing mutable scope expansion with a Purpose Layer authorization gate, and by adding the Fact Layer pre-commit hook and forensic ledger that together enforce the constraints in Equation~\ref{eq:scope-refinement} as structural invariants. These modifications make the drift triad architecturally impossible — not statistically unlikely, not conventionally prevented, but structurally impossible as a matter of deterministic protocol enforcement.\section{Immutable Parent Pointers}
+\label{sec:immutable-parent-pointers}
+
+The immutable parent pointer is the foundational structural primitive of the Recursive Spawning Protocol. It is the single mechanism that converts the delegation chain from a forensic reconstruction — assembled after the fact from mutable logs and policy assertions — into a runtime-verifiable artifact that is immutable, cryptographically enforced, and architecturally verifiable. It renders all modes of autonomous drift structurally impossible regardless of the operational urgency, architectural complexity, or adversarial sophistication of any machine actor in the chain.
+
+This section specifies: the formal definition of the parent pointer relation and its four structural constraints; the chain operator $\Chain{\cdot}$ and its recursive definition with the human anchor base case; the Fact Layer write protocol that enforces immutability at the protocol level; the Purpose Layer's structurally necessary role in spawn authorization; the chain traversal algorithm with correctness arguments; and a summary framing immutability as an architectural constraint rather than a policy choice.
+
+% ------------------------------------------------------------------
+\subsection{Formal Definition: ParentPointer}
+\label{sec:parent-pointer-formal}
+
+\begin{dfn}[ParentPointer Relation]
+\label{dfn:parent-pointer}
+Let $\mathcal{N}$ be the set of all agent nodes in a \bxthree{} system implementing the Recursive Spawning Protocol. For any node $c \in \mathcal{N}$ spawned via a valid RSP spawn event, the \emph{parent pointer} $\ParentPointer{p}{c}$ is the immutable, cryptographically signed reference from child $c$ to its immediate parent $p \in \mathcal{N}$, established exactly once at node provisioning via a Fact Layer atomic write operation. The parent pointer relation satisfies four structural constraints:
+
+\begin{enumerate}
+    \item[(P1) \textbf{Uniqueness}] For every node $c \in \mathcal{N}$ spawned under RSP, there exists exactly one node $p \in \mathcal{N}$ such that $\ParentPointer{p}{c}$ holds at all times after provisioning. No node may have multiple simultaneous parent pointers. No parent pointer may be removed, redirected, or reassigned after establishment.
+
+    \item[(P2) \textbf{Immutability}] After the provisioning write confirming $\ParentPointer{p}{c}$ is recorded in the Fact Layer ledger, no operation exists — from any source, with any privilege level, under any system condition — that can modify or delete $\ParentPointer{p}{c}$. The pointer is permanent for the operational lifetime of $c$. This is not a policy enforced by access control; it is a structural property of the protocol. The modification operation is not defined.
+
+    \item[(P3) \textbf{Directionality}] The parent pointer is an intrinsic property of the child node, not a reference held by the parent node. The child $c$ carries $\ParentPointer{p}{c}$ as an immutable attribute in its own Fact Layer state record. The parent $p$ holds no mutable reference to $c$. This means the chain is traversable from any node outward to its complete lineage regardless of the current operational state of any other node in the chain. A parent that has terminated, crashed, or been decommissioned does not affect $c$'s ability to reference its parent through $\ParentPointer{p}{c}$.
+
+    \item[(P4) \textbf{Human Anchor Termination}] The root of every RSP chain is a human principal node $h$ for which $\ParentPointer{\bot}{h}$ holds — the null parent marker indicating that $h$ is the ultimate delegation origin. No machine actor in the RSP model may serve as a chain root. The root human anchor is designated by the Purpose Layer at system initialization and recorded in the Fact Layer authorization ledger.
+\end{enumerate}
+\end{dfn}
+
+\medskip
+\noindent\textbf{Notation.} We write $\ParentPointer{p}{c}$ to denote the parent pointer relation between parent $p$ and child $c$. The equivalent functional notation is $\alpha(c) = p$. The notation $\alpha(c) = \bot$ denotes that node $c$ has no parent — it is the root human anchor, the ultimate delegation origin. The functions $p = \parent(c)$ and $c \in \children(p)$ are used interchangeably with the pointer relation. The notation $\alpha^{(j)}(c)$ denotes the $j$-fold application of $\alpha$, and $\alpha^{(0)}(c) = c$.
+
+\begin{dfn}[Spawn Event]
+\label{dfn:spawn-event}
+A \emph{spawn event} is the 5-tuple
+\begin{equation}
+\mathrm{spawn}(c,\ p,\ \sigma_c,\ t,\ \phi)
+\end{equation}
+where $c$ is the newly created child node, $p \in \mathcal{N}$ is the authorizing parent node, $\sigma_c$ is the authorized execution scope, $t$ is the wall-clock timestamp, and $\phi$ is the cryptographic signature produced by the Purpose Layer over the spawn request. The Fact Layer atomically: (1) creates node $c$, (2) sets $\ParentPointer{p}{c}$, (3) sets the node's authorized scope to $\sigma_c$, (4) seals the memory envelope, and (5) appends the event to the forensic ledger $\mathcal{L}$.
+\end{dfn}
+
+The initialization of $\ParentPointer{p}{c}$ occurs atomically during the spawn event. The Fact Layer records the spawn event in the forensic ledger and writes $\ParentPointer{p}{c}$ into the node's sealed memory envelope as part of the same atomic transaction. This separation of authorization (Purpose Layer) from assignment (Fact Layer) is essential: it prevents a parent from claiming to have spawned a node whose parent pointer was set to a different actor, and it prevents a child from falsifying its own ancestry after provisioning.
+
+\begin{prop}[Immutability of ParentPointer]
+\label{prop:parent-pointer-immutable}
+For any child node $c$ with parent $p$, once the spawn event $\mathrm{spawn}(c, p, \sigma_c, t, \phi)$ has been recorded in the forensic ledger $\mathcal{L}$, the value $\ParentPointer{p}{c}$ is fixed for the operational lifetime of $c$. No subsequent operation — including operations issued by $p$, by any Purpose Layer actor, by the Bounds Engine, or by $c$ itself — can alter $\ParentPointer{p}{c}$.
+\end{prop}
+
+This property distinguishes ParentPointer from conventional mutable parent references in multi-agent systems. A mutable reference can be overwritten by a subsequent administrative operation; an immutable pointer cannot. The distinction is not behavioral — it is architectural.
+
+% ------------------------------------------------------------------
+\subsection{The Chain Operator and Human Anchor Base Case}
+\label{sec:chain-operator-definition}
+
+The chain operator $\Chain{\cdot}$ is the primary tool for chain traversal, verification, and accountability attribution. It constructs the complete delegation lineage from any node to the human anchor by recursively applying the parent pointer function.
+
+\begin{dfn}[Chain Operator]
+\label{def:chain-operator}
+For any agent node $a \in \mathcal{N}$ in a Recursive Spawning chain, the \emph{chain} $\Chain{a}$ is defined recursively as:
+
+\begin{equation}
+\Chain{a} =
+\begin{cases}
+\{\,a\,\} \cup \Chain{\parent(a)} & \text{if } \alpha(a) \neq \bot \\[10pt]
+\{\,a,\hmannchor{a}\,\} & \text{if } \alpha(a) = \bot \quad \text{(root human anchor)}
+\end{cases}
+\label{eq:chain-recursive}
+\end{equation}
+
+Equivalently, expanding the recursion to reveal the full lineage:
+
+\begin{equation}
+\Chain{a} = \bigl\{\, a,\ \alpha(a),\ \alpha^{(2)}(a),\ \alpha^{(3)}(a),\ \ldots,\ \alpha^{(k)}(a) \,\bigr\}
+\label{eq:chain-expanded}
+\end{equation}
+
+where $k$ is the depth of node $a$ in the chain (the number of successive parent applications required to reach the root), $\alpha^{(j)}(a)$ denotes the $j$-fold application of $\alpha$, and $\alpha^{(k)}(a)$ is the unique root node $n_0$ satisfying $\alpha(n_0) = \bot$ and $\hmannchor{n_0}$.
+\end{dfn}
+
+The chain $\Chain{a}$ is the ordered set of all nodes on the delegation path from $a$ to and including the human anchor. It includes the terminal human anchor node, which is the only node in any RSP chain with $\alpha(n) = \bot$. The chain is always finite: by the RSP termination property, every RSP chain has depth at most $D_{\max}$, so the recursion in Equation~\ref{eq:chain-recursive} terminates at the root within at most $D_{\max} + 1$ successive applications of $\alpha$.
+
+\begin{cor}[Chain Uniqueness and Determinism]
+\label{cor:chain-uniqueness}
+For any node $a \in \mathcal{N}$, $\Chain{a}$ is uniquely determined by the immutable parent pointers along the chain. No two distinct chains can share the same terminal node since each node has exactly one parent by (P1), and the chain terminates at a unique human anchor by (P4). The traversal result is independent of the operational state of any node in the chain — it depends only on the immutable $\alpha$ values recorded at provisioning.
+\end{cor}
+
+\begin{cor}[Non-Collapsing Human Anchor]
+\label{cor:non-collapsing-anchor}
+For all nodes $n_j$ in any chain descended from $n_0$, the human anchor $h(n_j) = h(n_0) = h$ is constant and does not change as the chain deepens. No machine actor can serve as a chain root, and no node may have $\alpha(n) = \bot$ unless it carries the $\hmannchor{\cdot}$ designation. If this property were violated, the chain would not terminate at a human principal and the RSP's accountability guarantee would be void.
+\end{cor}
+
+% ------------------------------------------------------------------
+\subsection{Immutability Enforcement: Fact Layer Write Protocol}
+\label{sec:fact-layer-write-protocol}
+
+The immutability of $\ParentPointer{p}{c}$ is not enforced by access control — it is a structural property of the protocol established by the Fact Layer write protocol. The Fact Layer is the accountability infrastructure layer in the \bxthree{} architecture: it maintains the authoritative record of all authorization state, including parent pointers, warrants, and spawn events. The write protocol defines the valid state transitions for Fact Layer records and explicitly excludes the modification of $\alpha(n)$ after provisioning.
+
+The Fact Layer write protocol enforces immutability through four mechanisms:
+
+\begin{enumerate}
+    \item[(W1) \textbf{No modification operation defined.}] The Fact Layer write protocol defines exactly two state transitions for $\ParentPointer{p}{c}$: its initial creation during the atomic spawn event, and its permanent retention thereafter. No state transition for modifying or deleting $\ParentPointer{p}{c}$ is defined in the protocol specification. An operation that is not defined cannot be executed; it cannot be authorized, bypassed, or emulated.
+
+    \item[(W2) \textbf{Pre-commit hook rejection.}] The Fact Layer pre-commit hook intercepts any provisioning request that attempts to overwrite an existing parent pointer. The hook inspects the Fact Layer state record for $c$; if $\ParentPointer{p}{c}$ is already established and the incoming request attempts to set $\ParentPointer{p'}{c}$ where $p' \neq p$, the hook rejects the request before any write occurs. The rejection is unconditional: the hook does not evaluate credentials, privilege levels, or operational urgency.
+
+    \item[(W3) \textbf{Sealed memory envelope.}] The parent pointer field $\ParentPointer{p}{c}$ is encrypted in the node's persistent memory envelope using a Fact Layer-only symmetric key. Even a compromised Bounds Engine cannot read $\ParentPointer{p}{c}$ because it never has access to the decryption key. The envelope is HMAC-signed; any modification to the ciphertext invalidates the signature. The Fact Layer decrypts the envelope only when reading $\ParentPointer{p}{c}$ to service a chain-traversal or audit request, and re-encrypts and re-signs after each read, preventing replay attacks based on stale plaintext.
+
+    \item[(W4) \textbf{Atomic provisioning.}] The parent pointer $\ParentPointer{p}{c}$ and its Purpose Layer warrant $\phi$ are created as a single atomic Fact Layer write. There is no temporal window in which the pointer exists without authorization, or in which authorization exists without a corresponding pointer.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Why access control is insufficient.} The distinction between access-control-based immutability and protocol-level immutability is the distinction between a promise and a guarantee. In an access-control model, immutability is enforced by restricting which principals may issue modification operations. If an attacker acquires sufficient privileges — through credential theft, insider compromise, or software vulnerability — the access control barrier is circumvented and immutability is violated. The immutability was a policy, enforceable until it was not.
+
+In the Fact Layer write protocol, the immutability of $\ParentPointer{p}{c}$ is a property of the protocol itself. There is no operation defined for modifying $\ParentPointer{p}{c}$ after provisioning, so no amount of privilege elevation, credential compromise, or software vulnerability can produce a valid modification operation. The protocol does not enforce immutability — it makes immutability the only valid state transition. The distinction is architectural, not a matter of degree.
+
+This is the precise failure mode that the Fact Layer write protocol eliminates: retroactive manipulation of chain topology for the purpose of accountability laundering. Without protocol-level immutability, an adversarial actor could re-parent a node to a favorable parent after the fact, obscuring the original authorization chain and making drift detection impossible. With protocol-level immutability, this manipulation is structurally impossible.
+
+% ------------------------------------------------------------------
+\subsection{Spawn Authorization: Purpose Layer Role}
+\label{sec:purpose-layer-authorization}
+
+The Purpose Layer plays two structurally necessary roles in the parent pointer lifecycle: it originates the spawn authorization policy that defines the conditions under which a new parent pointer may be created, and it issues the spawn warrant that is the prerequisite for the Fact Layer provisioning write. These two roles are inseparable from the parent pointer's immutability: if the Purpose Layer could issue warrants after the fact, or if a machine actor could create a parent pointer without a Purpose Layer warrant, the chain's integrity guarantees would be void.
+
+\medskip
+\noindent\textbf{Authorization policy origination.} At system initialization, the Purpose Layer defines the spawn authorization policy $P_{\mathrm{spawn}}$ and records it in the Fact Layer authorization ledger. $P_{\mathrm{spawn}}$ specifies the mandatory conditions for any valid spawn event:
+
+\begin{enumerate}
+    \item[(S1) \textbf{Scope refinement.}] The child scope must be a strict subset of the parent scope: $R(n_{\mathrm{child}}) \subset R(n_{\mathrm{parent}})$. No lateral expansion, no superset, no equality. This ensures that each spawn event narrows the delegation scope, preserving the intent-refinement property of the chain.
+
+    \item[(S2) \textbf{Operational necessity.}] The parent must declare, in the Fact Layer authorization ledger, the precise condition requiring child spawning. The declaration must identify why the condition cannot be resolved within $R(n_{\mathrm{parent}})$ and why the child is the minimal delegation action required to address it.
+
+    \item[(S3) \textbf{Human anchor consistency.}] The spawn event must not alter the human anchor $h(n)$ of any node in the chain. The child inherits $h(n_{\mathrm{child}}) = h(n_{\mathrm{parent}}) = h(n_0)$; the anchor is non-collapsing across all spawn events.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Warrant issuance as exclusive origin.} The Purpose Layer warrant $\phi$ is the sole authorized precondition for the Fact Layer provisioning write that establishes $\ParentPointer{p}{c}$. No machine actor may initiate a spawn event without a matching warrant in the Fact Layer ledger — the Fact Layer pre-commit hook rejects any provisioning request that lacks a valid warrant before the operation reaches the ledger write stage. This makes the Purpose Layer's exclusive authorization origin role a structural guarantee, not a configuration option.
+
+The warrant is cryptographically signed by the Purpose Layer and carries the spawn parameters: child node identity, authorized scope $\sigma_c$, parent identity, and timestamp. The Fact Layer pre-commit hook verifies the signature against the registered Purpose Layer public key before accepting the provisioning write. This prevents unauthorized chain construction even if all other RSP mechanisms fail simultaneously.
+
+\begin{prop}[Exclusive Authorization Origin]
+\label{prop:exclusive-auth-origin}
+The Purpose Layer is the sole origin of spawn authorization in RSP. A machine actor cannot self-authorize a spawn event, cannot retroactively authorize an unauthorized spawn, and cannot modify the chain topology after provisioning. Any attempt to establish $\ParentPointer{p}{c}$ without a matching Purpose Layer warrant $\phi$ is rejected at the Fact Layer pre-commit hook, before the operation reaches the ledger.
+
+The Purpose Layer's exclusive role as authorization origin prevents the chain from being bootstrapped by a machine actor acting autonomously. Even if every other RSP mechanism failed simultaneously, the sole-authorization origin property would prevent a machine actor from independently constructing a delegation chain — the ghost authority failure mode is structurally blocked.
+\end{prop}
+
+% ------------------------------------------------------------------
+\subsection{Chain Traversal Algorithm}
+\label{sec:chain-traversal}
+
+The depth bound $D_{\max}$ provides a constant-time upper bound on chain traversal cost. The worst-case number of pointer dereferences required to reach the human anchor from any node is $D_{\max} + 1$, independent of the total number of nodes in the system. A system with 10,000 spawned nodes and $D_{\max} = 5$ requires at most six pointer dereferences to reach a human — the same as a system with 10 nodes. Mutable parent pointers would allow the chain to be extended retroactively, making the effective depth potentially unbounded and the worst-case escalation time unbounded as well. Immutability is what makes the depth bound a structural guarantee, not merely a policy.
+
+\begin{algorithm}
+\caption{Chain-Traverse($a$) — Retrieve the delegation chain from node $a$ to human anchor}
+\label{alg:chain-traverse}
+\begin{algorithmic}[1]
+\REQUIRE $a$ is a provisioned RSP node
+\ENSURE Ordered list $\Chain{a} = \langle n_0, n_1, \ldots, n_k \rangle$ with $n_0 = a$ and $n_k = h(a)$
+
+\STATE $chain \leftarrow \text{empty list}$
+\STATE $current \leftarrow a$ \COMMENT{Start at the query node}
+
+\WHILE{$\text{true}$}
+    \STATE $\text{append}(chain,\ current)$ \COMMENT{Add current node to chain}
+    \IF{$\alpha(\text{current}) = \bot$}
+        \STATE \textbf{break} \COMMENT{Root human anchor reached — chain complete}
+    \ENDIF
+    \STATE $\text{current} \leftarrow \alpha(\text{current})$ \COMMENT{Move to parent}
+\ENDWHILE
+
+\RETURN $chain$
+\end{algorithmic}
+\end{algorithm}
+
+\medskip
+\noindent\textbf{Correctness arguments.}
+
+\textit{Termination.} The algorithm terminates because RSP chains are depth-bounded by construction. Each iteration of the while-loop moves $\text{current}$ to the parent node $\alpha(\text{current})$, which is strictly closer to the root along the chain. Since the chain has finite depth at most $D_{\max} + 1$, the loop executes at most $D_{\max} + 1$ iterations before $\alpha(\text{current}) = \bot$ is reached. The loop therefore terminates in finite time. This argument holds regardless of the current operational state of any node in the chain, including nodes that may have terminated or entered error states, because the traversal only reads the immutable $\alpha$ values.
+
+\textit{Correctness of the returned set.} By Definition~\ref{def:chain-operator}, $\Chain{a}$ is the set containing $a$, $\alpha(a)$, $\alpha(\alpha(a))$, and so on, until the root. The algorithm produces exactly this sequence: it starts at $a$, appends each node, moves to its parent via $\alpha$, and stops when $\alpha(\text{current}) = \bot$ is reached. The output is identical to $\Chain{a}$ by construction.
+
+\textit{Uniqueness of result.} The algorithm produces a unique result for any input node because $\alpha$ is a total function (defined for every provisioned node) and is injective on the chain direction (every node has exactly one parent, and the root has no parent). There is no branching, no alternative path, and no non-deterministic choice at any step in the algorithm.
+
+\textit{Immutability guarantee.} The algorithm reads $\alpha$ values but never writes them. The traversal is read-only and does not interact with the Fact Layer write protocol. The algorithm can be executed at any runtime point without affecting the immutability of the chain it traverses.
+
+\begin{algorithm}
+\caption{Chain-Verify($n$) — Verify the authorization chain from node $n$ to human anchor}
+\label{alg:chain-verify}
+\begin{algorithmic}[1]
+\REQUIRE $n$ is a provisioned RSP node
+\ENSURE $\text{Boolean}$ indicating whether the chain is a structurally valid RSP chain
+
+\STATE $chain \leftarrow \text{Chain-Traverse}(n)$
+\STATE $m \leftarrow \text{len}(chain)$
+
+\STATE \COMMENT{\textit{Step V1: Verify chain terminates at human anchor}}
+\IF{$\alpha(chain[m-1]) \neq \bot$}
+    \STATE \RETURN $\text{false}$ \COMMENT{Root is not $\bot$ — malformed chain}
+\ENDIF
+\IF{$\neg\hmannchor{chain[m-1]}$}
+    \STATE \RETURN $\text{false}$ \COMMENT{Root is not a designated human principal}
+\ENDIF
+
+\STATE \COMMENT{\textit{Step V2: Verify each spawn event has a Purpose Layer warrant}}
+\FOR{$i \leftarrow 0$ \TO $m-2$}
+    \STATE $child \leftarrow chain[i]$
+    \STATE $parent \leftarrow chain[i+1]$
+    \IF{$\neg\text{warrant\_exists}(child,\ parent)$}
+        \STATE \RETURN $\text{false}$ \COMMENT{Missing Purpose Layer warrant for spawn}
+    \ENDIF
+\ENDFOR
+
+\STATE \COMMENT{\textit{Step V3: Verify scope refinement at each link}}
+\FOR{$i \leftarrow 0$ \TO $m-2$}
+    \STATE $child \leftarrow chain[i]$
+    \STATE $parent \leftarrow chain[i+1]$
+    \IF{$\neg(R(child) \subset R(parent))$}
+        \STATE \RETURN $\text{false}$ \COMMENT{Scope refinement constraint violated}
+    \ENDIF
+\ENDFOR
+
+\STATE \COMMENT{\textit{Step V4: Verify depth bound compliance at each node}}
+\FOR{$i \leftarrow 0$ \TO $m-1$}
+    \IF{$\text{depth}(chain[i]) > D_{\max}$}
+        \STATE \RETURN $\text{false}$ \COMMENT{Depth bound exceeded at node}
+    \ENDIF
+\ENDFOR
+
+\RETURN $\text{true}$
+\end{algorithmic}
+\end{algorithm}
+
+Chain-Verify returns \texttt{true} if and only if all four verification conditions hold simultaneously. The verification inspects structural chain properties rather than current operational state. Each condition corresponds to a fundamental RSP constraint: V1 confirms the chain terminates at a human anchor (not at a machine actor or orphaned node), V2 confirms every spawn was authorized by the Purpose Layer (not self-bootstrapped by a machine actor), V3 confirms scope refinement was respected at every link (not lateral expansion), and V4 confirms the depth bound was respected throughout (not approaching infinity). A chain that passes Chain-Verify is, by the RSP definitions, a fully authorized delegation chain terminating at a human principal.
+
+The algorithm is deterministic and produces the same result regardless of which node in the chain initiates verification. There is no self-serving interpretation of authorization that a drifted or orphaned node could produce, because Chain-Verify inspects the complete chain topology and warrants in the Fact Layer ledger, not the node's own claims about its authorization. Chain verification is a property of the chain topology, not a property of the node being verified.
+
+\textit{Computational cost.} Chain-Traverse runs in $O(d)$ time where $d$ is the chain depth (at most $D_{\max} + 1$). Chain-Verify runs in $O(m)$ time for the traversal plus $O(m)$ for each of the three verification loops, yielding $O(m)$ total where $m$ is chain length (also bounded by $D_{\max} + 1$). The algorithms are linear in chain length and do not depend on the total number of nodes in the system.
+
+% ------------------------------------------------------------------
+\subsection{Summary: Immutability as Architectural Constraint}
+\label{sec:immutability-summary}
+
+The immutable parent pointer is the load-bearing constraint of the Recursive Spawning Protocol. Without it, the chain is mutable — subject to retroactive modification by actors with sufficient privilege — and the RSP's correctness properties (drift prevention, chain integrity, termination) collapse to policy conventions rather than structural guarantees.
+
+The immutability is architectural — not a stronger access control policy — because it is enforced by the Fact Layer write protocol, which defines no valid modification operation for $\ParentPointer{p}{c}$ after provisioning. This is distinct from access-control-based immutability in four ways: there is no override path for any actor; the immutability holds under all system failure conditions including those that disable other enforcement mechanisms; all sources receive equivalent enforcement treatment regardless of privilege level; and the parent pointer and its Purpose Layer warrant are created atomically with no temporal window for inconsistency.
+
+The chain operator $\Chain{a}$ is uniquely determined by the immutable parent pointers in the chain. The chain traversal algorithm computes this operator correctly and terminates. Chain-Verify provides the runtime verification procedure for chain structural validity. Together, these mechanisms make the delegation chain an immutable, verifiable, and auditable runtime artifact — the foundation on which all other RSP correctness properties are built.\section{The Recursive Spawning Protocol}
+\label{sec:rs-protocol}
+
+The Recursive Spawning Protocol (RSP) is the operational mechanism by which the BX3 Framework converts multi-agent spawning from a forensic reconstruction problem into a runtime-verified structural property. Every spawn event is governed by a mandatory five-stage sequence executed across all three BX3 layers. No stage is advisory; no layer may be bypassed; no operational urgency constitutes an exception to any protocol requirement. The result is that every agent in any spawn chain is, by architectural construction, traceable to a human principal, constrained to a scope narrower than its parent, and recorded in an immutable forensic ledger before it enters operational state.
+
+% -------------------------------------------------------------------------
+\subsection{Layer Responsibilities at Spawn}
+
+RSP coordinates three BX3 layers at every spawn event. Each layer has a non-negotiable, structurally enforced role:
+
+\begin{itemize}
+  \item[\textbf{Purpose Layer.}] Validates that the proposed child's purpose clause is a \emph{strict descendant refinement} of the parent's purpose clause. The Purpose Layer is the sole authorization origin for all chain growth. A spawn without a valid Purpose Layer warrant is rejected before any other layer participates.
+
+  \item[\textbf{Bounds Engine.}] Evaluates the spawn request against the maximum depth constraint $D_{\max}$ and independently re-verifies scope subset compliance. The Bounds Engine does not evaluate intent or operational necessity — it enforces formal compliance with depth and subset constraints computed independently of the Purpose Layer.
+
+  \item[\textbf{Fact Layer.}] Creates the immutable parent pointer, records the complete spawn event to the forensic ledger, and verifies the chain's human anchor before issuing the \texttt{CHILD-ACTIVATED} directive. The Fact Layer is the authoritative record-keeper and the enforcement mechanism for all RSP invariants.
+\end{itemize}
+
+These three layers operate in mandatory concert. A spawn is authorized only when all three approve. A failure in any one layer results in refusal, forensic ledger logging, and mandatory escalation to the human anchor. There is no fallback path, no administrative override, and no bypass that permits a spawn to proceed without all three validations. This atomicity is the structural property that makes the drift triad — orphaned, drifted, operating — architecturally impossible rather than statistically improbable.
+
+% -------------------------------------------------------------------------
+\subsection{Spawn Event Lifecycle}
+
+A spawn event is the atomic sequence of operations that provisions a child agent $c$ from a parent agent $p$. The protocol proceeds through five ordered stages. Each stage is deterministic: given the current chain state and the spawn request, the outcome is fully determined without discretionary judgment.
+
+\bigskip
+\noindent\textbf{Stage 1 — Spawn Request.} Agent $p$ submits a \texttt{SPAWN-REQUEST} to the Fact Layer containing: the proposed child identifier $\mathrm{id}(c)$, the proposed purpose clause $p_c$, the proposed operational scope $R(c)$, and $p$'s current depth. This submission is a Fact Layer write and is recorded as the first entry in the spawn sequence.
+
+\bigskip
+\noindent\textbf{Stage 2 — Purpose Layer Validation.} The Purpose Layer evaluates two conditions before issuing a spawn warrant:
+
+\begin{enumerate}
+  \item[(PL-V1)] $R(c) \subset R(p)$ — a proper subset, not equality. Equality ($R(c) = R(p)$) is a lateral scope condition and constitutes a drift trigger. The child must operate in a narrower domain than its parent.
+
+  \item[(PL-V2)] $p_c$ is a deterministic projection of $p$'s purpose clause, verifiable by replaying the Purpose Layer's scope projection function. The child cannot inherit a purpose that is not a documented refinement of the parent's declared intent.
+\end{enumerate}
+
+If either condition fails, the Purpose Layer returns a refusal with code \texttt{PURPOSE-SCOPE-VIOLATION}. The Fact Layer records the refusal as a \texttt{SPAWN-REFUSED} event. The child is not activated and no further stages execute.
+
+\bigskip
+\noindent\textbf{Stage 3 — Bounds Engine Depth and Scope Check.} The Bounds Engine independently evaluates:
+
+\begin{enumerate}
+  \item[(BE-V1)] $\mathrm{depth}(p) + 1 \leq D_{\max}$. If the parent is at the depth limit, the spawn is refused with \texttt{DEPTH-LIMIT-REACHED}.
+
+  \item[(BE-V2)] The independently computed scope projection $R(c) \subseteq R(p)$ matches the scope submitted in the spawn request. Any discrepancy between the computed projection and the requested scope triggers \texttt{SCOPE-MISMATCH}.
+\end{enumerate}
+
+The independence of the Bounds Engine check from the Purpose Layer validation is deliberate. If the Purpose Layer's projection function is compromised or misconfigured, the Bounds Engine's independent computation provides a second enforcement layer that prevents scope violations from bypassing detection.
+
+\bigskip
+\noindent\textbf{Stage 4 — Immutable Pointer and Forensic Ledger Write.} Upon receiving confirmation from both the Purpose Layer and the Bounds Engine, the Fact Layer executes the following atomic write sequence:
+
+\begin{enumerate}
+  \item[(FL-W1)] Records the immutable parent pointer: $\alpha(c) \gets p$. This pointer is written as a \texttt{PARENT-POINTER-ESTABLISHED} event and is \emph{structurally immutable} from this point forward. No actor — human, administrative, or compromised layer — may modify, redirect, or delete this pointer after the write is confirmed.
+
+  \item[(FL-W2)] Records the complete spawn provenance: parent identifier, child identifier, parent purpose clause hash at spawn time, child purpose clause hash, Bounds Engine constraint artifact, and timestamp. This entry is linked to the previous ledger entry via the Merkle hash chain.
+
+  \item[(FL-W3)] Computes the child's chain identity hash and returns it to the parent. This hash is the authoritative identifier for the child in all subsequent chain operations.
+\end{enumerate}
+
+The immutability of $\alpha(c)$ is protocol-enforced, not access-control-enforced. The Fact Layer write protocol does not expose a modification operation — it exposes only \texttt{append}. An attacker with full storage access cannot produce a valid overwritten entry because the hash chain would break and verification would fail at the next audit.
+
+\bigskip
+\noindent\textbf{Stage 5 — Child Activation.} The Fact Layer issues \texttt{CHILD-ACTIVATED} only after all preceding stages confirm. The child enters operational state with its Purpose Layer artifact frozen, its operational scope bounded by the verified projection, its immutable parent pointer established, and its chain identity recorded in the ledger. The child is now traceable to the human anchor at the root of the chain.
+
+% -------------------------------------------------------------------------
+\subsection{Immutable Parent Pointer and Forensic Ledger}
+
+The immutable parent pointer $\alpha(c) = p$ is the central data element of RSP. Its immutability is a structural property enforced by the Fact Layer's append-only write protocol, not a policy convention dependent on runtime compliance.
+
+\bigskip
+\noindent\textbf{Immutability Formalized.} For any agent $a$ after provisioning, the following invariant holds:
+
+\begin{equation}
+\neg\,\exists\,\mathrm{modify}(\alpha(a))\ \text{after}\ \mathrm{provisioned}(a) = \mathrm{true}.
+\label{eq:rs-pointer-immutability}
+\end{equation}
+
+This invariant is maintained by the absence of a modification operation in the Fact Layer protocol. The ledger exposes only \texttt{append} — no \texttt{overwrite}, no \texttt{redact}, no \texttt{delete}. Any attempt to redirect a parent pointer requires appending a new entry, which the verification protocol rejects because the appended entry does not match the parent's initialization record.
+
+\bigskip
+\noindent\textbf{Forensic Ledger Entry Structure.} Each Fact Layer entry $\ell_j$ for spawn event $j$ is structured as:
+
+\begin{equation}
+\ell_j = \bigl\langle
+  \texttt{index}=j,\;
+  \texttt{event-type},\;
+  \texttt{parent-id},\;
+  \texttt{child-id},\;
+  \texttt{parent-purpose-hash},\;
+  \texttt{child-purpose-hash},\;
+  \texttt{bounds-artifact},\;
+  \texttt{timestamp},\;
+  \texttt{prev\_hash}
+\bigr\rangle .
+\label{eq:rs-ledger-entry}
+\end{equation}
+
+The \texttt{event-type} field distinguishes spawn events (\texttt{SPAWN-AUTHORIZED}, \texttt{SPAWN-REFUSED}), pointer events (\texttt{PARENT-POINTER-ESTABLISHED}), and termination events (\texttt{AGENT-TERMINATED}). The \texttt{prev\_hash} field links each entry to its predecessor, forming the Merkle chain that enables tamper detection. Any modification to an entry $\ell_k$ without updating all subsequent entries $\ell_{k+1}, \ldots, \ell_n$ breaks the chain — a break detectable by any observer with ledger read access through a linear-time recomputation.
+
+% -------------------------------------------------------------------------
+\subsection{Chain Verification: Termination at Human}
+
+Every agent activated under RSP is guaranteed to be traceable to a human principal at the root of its spawn chain. This guarantee is enforced at child activation and is verifiable on demand by any external auditor.
+
+\bigskip
+\noindent\textbf{Chain Anchor Verification Procedure.} Given an agent $a$, the following procedure determines whether $a$'s chain reaches a human principal:
+
+\begin{enumerate}
+  \item[(CA-V1)] Retrieve $a$'s Fact Layer entry. Extract $\alpha(a)$ — the immutable parent pointer.
+
+  \item[(CA-V2)] If $\alpha(a) = \bot$, the agent is a root. Verify that the root's Purpose Layer artifact was initialized by a human principal via the authentication assertion in the genesis entry.
+
+  \item[(CA-V3)] If $\alpha(a) \neq \bot$, retrieve $\alpha(a)$'s Fact Layer entry and repeat from CA-V2.
+\end{enumerate}
+
+Because chain depth is bounded by $D_{\max}$, this procedure terminates in at most $D_{\max}$ steps. The human anchor is identified by the genesis entry, which contains the authenticated human principal's identifier.
+
+\bigskip
+\noindent\textbf{Human Anchor Verification at Activation.} Before issuing \texttt{CHILD-ACTIVATED}, the Fact Layer confirms:
+
+\begin{enumerate}
+  \item[(HAV-1)] The parent's chain has a verified human anchor — confirmed by replaying the chain verification procedure for the parent.
+
+  \item[(HAV-2)] The child's Purpose Layer artifact is a descendant refinement of the human anchor's intent — verified by traversing the purpose clause hash chain from root to child.
+\end{enumerate}
+
+These checks cannot be circumvented by any agent in the chain. The Fact Layer is the sole authority on chain anchor verification; no agent can self-assert a human anchor without cryptographic corroboration from the ledger.
+
+\bigskip
+\noindent\textbf{Exclusive Human Terminus.} By architectural constraint, the chain must terminate at a Purpose Layer entity with a human principal designation. No machine actor can serve as the terminus of an RSP chain. This exclusivity is what makes the upstream BX3 accountability guarantee structurally operative across recursive agent populations.
+
+% -------------------------------------------------------------------------
+\subsection{Depth Management}
+
+Depth management in RSP serves two purposes: preventing unbounded resource consumption — a practical operational necessity — and ensuring that chain traversal by auditors is bounded by a known finite limit, an accountability requirement. It operates through the interaction of three components: the maximum depth parameter, spawn refusal at the limit, and convergence criteria.
+
+\bigskip
+\noindent\textbf{Maximum Spawn Depth $D_{\max}$.} The maximum spawn depth $D_{\max}$ is set by the Purpose Layer at system initialization and recorded as a Fact Layer authorization artifact. It is a fixed positive integer, immutable after chain initialization — the Fact Layer does not expose a depth limit modification operation. The value is chosen by the human principal based on the operational consequence domain of the deployment: high-stakes environments require lower $D_{\max}$ values. The depth bound is structurally enforced at every spawn step by both the Bounds Engine and the Fact Layer pre-commit hook, which re-verifies the depth constraint independently of the Bounds Engine's result.
+
+\bigskip
+\noindent\textbf{Depth Computation.} Chain depth is computed recursively via:
+
+\begin{equation}
+\mathrm{depth}(n) =
+\begin{cases}
+0 & \text{if }\alpha(n) = \bot\ (\text{root}) \\[6pt]
+1 + \mathrm{depth}(\alpha(n)) & \text{otherwise}.
+\end{cases}
+\label{eq:rs-depth-computation}
+\end{equation}
+
+Depth is determined entirely by the immutable parent pointer chain. No agent can manipulate its apparent depth without breaking the Fact Layer hash chain.
+
+\bigskip
+\noindent\textbf{Spawn Refusal at the Depth Limit.} When a parent agent at depth $d = D_{\max}$ submits a spawn request, the Bounds Engine returns \texttt{DEPTH-LIMIT-REACHED} and the Fact Layer records the refusal as event type \texttt{SPAWN-REFUSED}. The child is not activated. The parent enters \texttt{ESCALATING} state and notifies the human principal through the Result Layer. The escalation is mandatory — the parent at the depth limit has no discretionary authority to exceed $D_{\max}$ regardless of operational urgency or the absence of an alternative resolution path.
+
+When the depth limit is approached but not yet reached, the Bounds Engine may be configured to emit a $D_{\text{ESCALATE}}$ warning threshold at depth $D_{\max} - 1$, providing advance notice to the human principal before the final authorized depth step is executed. This prevents the depth limit from being reached unexpectedly and ensures human acknowledgment of chain growth before the architectural bound is invoked.
+
+\bigskip
+\noindent\textbf{Convergence Criteria.} The chain converges — terminates its autonomous growth — under three independent conditions:
+
+\begin{enumerate}
+  \item[(CC-1)] \textbf{Task completion:} The parent agent completes its assigned objective and emits \texttt{AGENT-TERMINATED} to the Fact Layer. All descendants that have not independently spawned are recursively terminated.
+
+  \item[(CC-2)] \textbf{Depth limit reached:} A spawn request is refused at depth $D_{\max}$. The parent escalates and no further spawning occurs in this branch.
+
+  \item[(CC-3)] \textbf{Purpose exhaustion:} The parent agent's Purpose Layer artifact evaluates to completed — the declared objective has been fully decomposed and assigned to children, and no further scope remains to delegate. The parent terminates.
+\end{enumerate}
+
+These three criteria ensure that chain growth is always finite and always verifiable against the Fact Layer ledger. There is no convergence condition that does not involve either successful completion, a bounds check refusal, or a Purpose Layer artifact reaching its terminal state. Each is independently auditable post-hoc.
+
+% -------------------------------------------------------------------------
+\subsection{Protocol Invariants}
+
+RSP maintains four structural invariants throughout its execution. These are not runtime conventions — they are properties enforced by the protocol's state machine transitions and verified by the Fact Layer pre-commit hook at every spawn event.
+
+\bigskip
+\noindent\textbf{Invariant 1 — Purpose Layer Validity.} For every spawn from parent $p$ to child $c$:
+\begin{equation}
+R(c) \subset R(p)\quad \text{and} \quad \mathrm{hash}(p_c) = \mathrm{compute\_projection}(p_p).
+\label{eq:rs-inv-purpose-validity}
+\end{equation}
+
+Violation: Spawn refused. Fact Layer records \texttt{PURPOSE-SCOPE-VIOLATION}.
+
+\bigskip
+\noindent\textbf{Invariant 2 — Bounds Engine Compliance.} For every spawn event:
+\begin{equation}
+\mathrm{depth}(c) = \mathrm{depth}(p) + 1 \leq D_{\max}.
+\label{eq:rs-inv-bounds-compliance}
+\end{equation}
+
+Violation: Spawn refused. Fact Layer records \texttt{DEPTH-LIMIT-REACHED} or \texttt{SCOPE-MISMATCH}.
+
+\bigskip
+\noindent\textbf{Invariant 3 — Immutable Parent Pointer.} For every agent $a$ after provisioning:
+\begin{equation}
+\alpha(a)\ \text{recorded at spawn time is identical to}\ \alpha(a)\ \text{at any subsequent time}.
+\label{eq:rs-inv-immutable-parent}
+\end{equation}
+
+Violation: Structurally impossible under the append-only Fact Layer. Any apparent violation indicates a compromised ledger.
+
+\bigskip
+\noindent\textbf{Invariant 4 — Human Anchor Reachability.} For every agent $a$ in operational state:
+\begin{equation}
+\exists\, h \in \mathcal{H}:\ \mathrm{chain-reaches}(a, h) = \mathrm{true}.
+\label{eq:rs-inv-human-anchor}
+\end{equation}
+
+Violation: The Fact Layer pre-commit hook would have refused activation. An agent in operational state without a reachable human anchor cannot exist in a correctly implemented RSP system.
+
+\bigskip
+These four invariants encode RSP's core accountability guarantee: every agent in every spawn chain is authorized by a human principal, bounded by a finite depth, constrained to a narrower scope than its parent, and recorded in an immutable ledger. The drift triad is not merely statistically unlikely under these conditions — it is structurally impossible. The immutable parent pointer record makes orphaning undetectable. Purpose Layer validity makes scope drift detectable. Human anchor reachability makes unauthorized operation impossible. RSP makes these conditions nonexistent by construction, not by probability.\section{Correctness Properties}
+
+This section establishes the formal correctness guarantees of the Recursive Spawning Protocol with respect to its core objective: the elimination of autonomous drift. We present three theorems covering drift prevention, chain integrity, and termination, together with the structural invariants that underpin each proof.
+
+% -------------------------------------------------------
+\subsection{Drift Prevention: Proof Sketch}
+% -------------------------------------------------------
+
+\begin{thrm}[Drift Prevention]
+\label{thrm:drift-prevention}
+In any BX3 system operating under RSP, no active node can be in a drifted state.
+\end{thrm}
+
+\begin{proof}[Proof Sketch]
+The theorem follows directly from three structural invariants that RSP enforces simultaneously:
+
+\begin{enumerate}
+    \item[\textbf{Invariance 1 -- Immutable parent pointer:}] For every node $n$ in the system, the parent pointer $\alpha(n)$ is established at spawn time and is never modified during the node's lifetime. There is no operation -- administrative, programmatic, or systemic -- that can alter $\alpha(n)$ after it is set. Consequently, the delegation chain $C(n) = \langle n_0, \alpha(n), \alpha^2(n), \ldots, n \rangle$ is a static structure that is determined at spawn time and persists unchanged regardless of subsequent system events.
+    
+    \item[\textbf{Invariance 2 -- Forensic ledger completeness:}] Every entry in the \fact layer is immutable and chained via SHA-256. The \fact layer records all spawn events, all \bounds evaluations, and all actions taken by any node. Any deviation from the authorized scope -- including an out-of-scope spawn, an out-of-scope action, or a \bounds violation -- is recorded as a tamper-evident entry that cannot be removed or altered without breaking the hash chain.
+    
+    \item[\textbf{Invariance 3 -- Chain terminates at the Purpose Layer:}] The delegation chain $C(n)$ terminates at a node $n_0$ whose \purpose layer contains a human principal identity and whose spawn depth is $d = 0$. By construction, the root node's \purpose layer cannot be the child of any other node. There is no mechanism by which a node can be spawned without a valid \purpose layer, and there is no mechanism by which the chain can skip past the root \purpose layer to an intermediate node.
+\end{enumerate}
+
+Suppose, for contradiction, that a node $n$ is drifted. By definition, $C(n)$ does not contain a human principal at its origin. This implies that either (a) the chain does not terminate at a human principal, or (b) the chain terminates at a node whose \purpose layer does not contain a human principal identity. 
+
+Case (a) is impossible by Invariance 3: the chain terminates at the root \purpose layer, which by definition contains a human principal identity. Case (b) is impossible by Invariance 2: every spawn event is recorded in the \fact layer with the spawning node's \purpose layer hash. An unauthorized spawn -- one without a valid delegation chain -- would not produce a \fact layer entry with a verifiable chain anchor, and the absence of such an entry would be detectable by an auditor. Furthermore, any attempt to fabricate a chain anchor would fail the SHA-256 verification at the \purpose layer.
+
+Therefore, no drifted node can exist in a system operating under RSP. \qed
+\end{proof}
+
+\begin{rem}
+The proof sketch assumes that the SHA-256 hash function is collision-resistant and that the \purpose layer hash is computed over the full contents of the \purpose layer (including the principal identity, scope statement, chain anchor, and termination condition). If the hash is computed over a subset of these fields, Invariance 3 must be restated to cover the specific fields included in the hash.
+\end{rem}
+
+% -------------------------------------------------------
+\subsection{Chain Integrity}
+% -------------------------------------------------------
+
+\begin{thrm}[Chain Integrity]
+\label{thrm:chain-integrity}
+For every node $n$ in a BX3 system operating under RSP, the delegation chain $C(n)$ is uniquely determined at spawn time and is verifiable against the \fact layer hash chain of every node on the chain.
+\end{thrm}
+
+\begin{proof}
+The immutable parent pointer $\alpha(n)$ is established at spawn time and recorded in two places: the node's own \purpose layer (as the chain anchor field) and the parent's \fact layer (as part of the spawn event record). Because neither of these records can be modified post-creation -- the \purpose layer is immutable by architectural definition and the \fact layer is append-only with SHA-256 chaining -- the chain $C(n)$ is frozen at spawn time and cannot be retroactively altered.
+
+To verify chain integrity, an auditor traverses $C(n)$ from $n$ to the root, at each step verifying that the \purpose layer hash stored in the child node matches the \purpose layer hash recorded in the parent's \fact layer spawn event. A mismatch at any step indicates either a hash corruption (detectable via the \fact layer hash chain) or a fabricated chain anchor (detectable via the SHA-256 collision-resistance property). The combination of both checks ensures that the chain is both intact and authentic. \qed
+\end{proof}
+
+\begin{prop}[Non-Repudiation of Spawn]
+\label{prop:non-repudiation}
+A spawn event recorded in the \fact layer of the parent node constitutes irrefutable evidence of the child's existence, its spawn parameters, and its delegation chain at the time of spawn.
+\end{prop}
+
+\begin{proof}
+The spawn event is recorded in the parent's \fact layer immediately upon child creation, before the child begins execution. The record is immutable once written. The parent cannot deny having created the child, because the \fact layer entry is timestamped, hash-chained, and signed by the parent's own \fact layer key material. The child cannot deny its chain of delegation, because its \purpose layer chain anchor matches the parent's \fact layer spawn record. \qed
+\end{proof}
+
+% -------------------------------------------------------
+\subsection{Termination and the Termination Cascade}
+% -------------------------------------------------------
+
+\begin{thrm}[Termination]
+\label{thrm:termination}
+When any node $p$ enters a terminal state under RSP, all active descendant nodes in its delegation subtree are notified and enter a terminal state within a bounded time interval, and no descendant node remains active after the cascade completes.
+\end{thrm}
+
+\begin{proof}
+The termination condition for a node is a deterministic predicate evaluated against the node's \purpose layer. When the predicate evaluates to true, the node transitions to terminal state and initiates the following sequence: (1) issue a termination event to all active children, (2) flush all pending \fact layer entries, (3) close the \fact layer hash chain, (4) enter terminal state. Each child $c$ receiving the termination event performs the same sequence recursively. Because the delegation chain is a finite directed acyclic graph (bounded depth $D_{\max}$ ensures no infinite paths), the recursive cascade terminates after at most $O(2^{D_{\max}})$ individual termination events, which is finite and bounded. \qed
+\end{proof}
+
+\begin{lemm}[Orphan Safety]
+\label{lemm:orphan-safety}
+No node can be orphaned without its parent entering a terminal state.
+\end{lemm}
+
+\begin{proof}
+A node becomes orphaned when its parent enters terminal state without issuing a termination event. Under RSP, the transition to terminal state is defined as a structured procedure (Theorem~\ref{thrm:termination}) that requires the issuance of termination events to all active children as its first step. This procedure is enforced by the \bounds: a node cannot enter terminal state without the \bounds confirming that all active children have received termination events. A node whose parent has terminated without issuing such events would have a \bounds violation recorded in its \fact layer indicating a parent-termination anomaly, which would be detected by an external auditor. \qed
+\end{proof}
+
+\begin{cor}[No Ghost Authority]
+\label{cor:ghost-authority}
+No node can be spawned without an authorized delegation chain terminating at a human principal's \purpose layer.
+\end{cor}
+
+\begin{proof}
+Directly from Theorem~\ref{thrm:drift-prevention} and Proposition~\ref{prop:non-repudiation}. If a node could be spawned without an authorized delegation chain, it would be a drifted node by definition, contradicting Theorem~\ref{thrm:drift-prevention}. \qed
+\end{proof}
+
+% -------------------------------------------------------
+\subsection{Summary of Correctness Guarantees}
+% -------------------------------------------------------
+
+The three correctness properties established above -- drift prevention, chain integrity, and termination -- are not independent; they form a mutually reinforcing system. Drift prevention is a consequence of the interaction between immutable parent pointers (which fix the delegation chain at spawn time), the forensic ledger (which makes every action auditable against the \purpose layer), and the chain termination guarantee (which ensures that the chain always terminates at a human principal's \purpose layer). Chain integrity is a prerequisite for drift prevention: without a verifiable, immutable delegation chain, the forensic ledger cannot be used to reconstruct the authorization history of any node. Termination is a safety property that ensures that the accountability infrastructure does not persist indefinitely after its mission is complete, preventing ghost authority from persisting in dormant but active descendant nodes.
+
+Together, these guarantees establish that RSP achieves its core design objective: under RSP, it is architecturally impossible for a node to operate with no traceable authorization path to a human principal. The delegation chain is not a best-effort reconstruction performed during a post-mortem investigation -- it is a runtime-verified, cryptographically sealed, immutable artifact maintained by the system itself, with every deviation from authorized scope recorded in a tamper-evident forensic ledger.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Recursive Spawning establishes immutable parent pointers as the foundational architectural commitment that makes accountable multi-agent spawning tractable. We have shown that this commitment, supported by a forensic ledger and enforced by a Bounds Engine within the BX3 Framework's Fact Layer, yields three non-negotiable guarantees: no autonomous drift from authorized purpose (Theorem\;\ref{thrm:drift-prevention}), perfect reconstruction of the authorized spawn chain from the ledger (Theorem\;\ref{thrm:chain-integrity}), and bounded worst-case escalation latency to a human accountability root (Theorem\;\ref{thrm:termination}).
+
+These guarantees are not asymptotic or probabilistic. They do not depend on the honesty of model weights, the correctness of runtime inference, or the reliability of network conditions. They depend on: (a) the physical immutability of a parent pointer field set once at spawn and never modified thereafter, and (b) the append-only integrity of a forensic ledger that records every spawning event with cryptographic attestation.
+
+The practical implication is a deployment architecture in which spawning hierarchies can be certified for physical control tasks ? irrigation scheduling, equipment actuation, regulatory compliance ? with a known worst-case time to human intervention, regardless of the number of active nodes or the depth of the spawning tree. The termination guarantee makes this worst-case certification possible by showing that the escalation path length is bounded by $d_{\max}$, a system parameter set at deployment and enforced by the Fact Layer, not by the complexity or scale of the running system. A system with 10,000 spawned nodes has the same worst-case escalation latency as a system with 10 nodes. This predictability is essential for safety-critical deployments where the worst-case time to human intervention must be known with certainty before deployment.
+
+The central insight of this work is that immutability of the parent pointer is not a restriction ? it is the source of the system's accountability guarantees. A mutable parent pointer enables the very drift that accountability architectures are designed to prevent: a child node that can re-parent itself severs the chain of authorization and makes the system ungovernable in the limit. By encoding the parent pointer in hardware-protected, Fact Layer-managed memory and making it immutable after spawn, Recursive Spawning ensures that every node ? regardless of its depth in the hierarchy ? remains traceable to its authorizing Purpose Layer actor. That traceability is not merely conceptual; it is operational.
+
+The question this paper began with ? \textit{who is responsible when an autonomous agent acts?} ? admits a precise answer within the Recursive Spawning framework: the accountable agent is the one whose immutable parent pointer traces back to a Purpose Layer actor who authorized the spawn event and signed the authorization in the forensic ledger. That chain is never broken. The human is always reachable. That is the architectural commitment that Recursive Spawning operationalizes, and it is the commitment that makes accountable multi-agent spawning not merely aspirational but structurally guaranteed.
+
+Recursive Spawning is one pillar of the BX3 Framework. Its guarantees depend on the integrity of the other four: Loop Isolation, Spatial Firewall, Sandbox Gate, and the Bailout Protocol. Loop Isolation ensures that child nodes cannot interfere with each other's reasoning state; Spatial Firewall enforces role-based separation; Sandbox Gate ensures that interventions are evaluated in a safe digital twin before execution; and the Bailout Protocol guarantees that unresolved exceptions escalate to a human. Together, the five pillars constitute the upstream accountability guarantee: that BX3 systems fail upward into human consciousness, never downward into autonomous chaos.
+
+The limitations identified in \S\ref{sec:limitations} ? performance overhead, forensic ledger scalability, and the Purpose Layer anchor problem ? are real and significant. They do not invalidate the guarantees; they bound them. Understanding what a system does not guarantee is as important as understanding what it does guarantee, particularly when the system operates in safety-critical physical environments. Future work on adaptive budgets, fan-out limits, cross-hierarchy composition, and formal verification will extend the applicability of Recursive Spawning to larger, more complex deployments. The immutable parent pointer architecture provides the stable foundation upon which these extensions can be built.\end{document}

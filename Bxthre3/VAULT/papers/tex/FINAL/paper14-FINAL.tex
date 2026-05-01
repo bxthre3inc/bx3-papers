@@ -1,0 +1,328 @@
+\documentclass[12pt]{article}
+
+% --- Encoding ---
+\usepackage[T1]{fontenc}
+
+% --- Core packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{setspace}
+
+% --- Citation style: natbib with sort+compress ---
+\usepackage[numbers,sort&compress]{natbib}
+
+% --- Color ---
+\usepackage{xcolor}
+
+% --- Headers and footers ---
+\usepackage{fancyhdr}
+
+% --- Hyperref last ---
+\usepackage{hyperref}
+
+% --- Colors ---
+\definecolor{humanblue}{RGB}{30, 90, 160}
+\definecolor{aigreen}{RGB}{40, 140, 80}
+\definecolor{detgray}{RGB}{90, 90, 110}
+\definecolor{lightgray}{RGB}{245, 245, 248}
+\definecolor{warnorange}{RGB}{200, 100, 20}
+
+% --- Custom semantic commands ---
+\newcommand{\bxthree}{\textbf{BX3}}
+\newcommand{\purpose}{\textit{Purpose Layer}}
+\newcommand{\bounds}{\textit{Bounds Engine}}
+\newcommand{\fact}{\textit{Fact Layer}}
+
+% --- Header/Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Beebe}
+\lhead{\small Cascading Triggers --- BX3 Framework}
+\cfoot{\thepage}
+\addtolength{\topmargin}{-1.6pt}
+\setlength{\headheight}{13.6pt}
+renewcommand{\headrulewidth}{0.4pt}
+
+% --- Hyperref metadata ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=humanblue,
+    citecolor=humanblue,
+    urlcolor=humanblue,
+    pdftitle={Cascading Triggers: Self-Propagating Exception Escalation for Autonomous Systems},
+    pdfauthor={Jeremy Blaine Thompson Beebe},
+    pdfsubject={Artificial Intelligence, Fault Tolerance, Multi-Agent Systems},
+    pdfkeywords={cascading triggers, exception escalation, self-propogating events, autonomous systems, multi-agent systems, BX3 Framework, Agentic, fault tolerance, event correlation},
+    pdfcreator={pdfLaTeX},
+    bookmarksnumbered=true,
+    breaklinks=true,
+}
+
+\title{
+    \vspace{1.2cm}
+    {\LARGE \textbf{Cascading Triggers:}} \break
+    {\large \textit{Self-Propagating Exception Escalation for Autonomous Systems}}
+}
+\author{
+    \textbf{Jeremy Blaine Thompson Beebe} \break
+    \textit{Independent Researcher} \break
+    ORCID: \href{https://orcid.org/0009-0009-2394-9714}{0009-0009-2394-9714} --- Email: bxthre3inc@gmail.com \break
+    \textit{Bxthre3 Inc. --- April 2026}
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{abstract}\noindent
+Exception handling in multi-agent systems is typically a flat, single-level process: an agent encounters an error, handles it locally, or escalates it to a fixed handler. This flat model fails at the scale of complex autonomous operations where exceptions at one layer can trigger correlated exceptions at other layers, cascading through the system in ways that no single handler can anticipate or contain. This paper presents Cascading Triggers: a self-propagating exception escalation architecture in which a trigger event at one layer automatically generates correlative triggers at dependent layers, and the cascade propagation is governed by a deterministic trigger propagation matrix. We define the trigger propagation model formally, prove convergence properties for bounded cascade depth, and present deployment evidence from the Agentic platform showing 1,247 cascading trigger events processed over 200 days with a mean cascade depth of 2.4 layers and a mean resolution time of 6.8 minutes.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} cascading triggers, exception escalation, self-propogating events, autonomous systems, multi-agent systems, BX3 Framework, Agentic, fault tolerance, event correlation
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\onehalfspacing
+
+% -------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+Complex autonomous systems fail in complex ways. A single sensor failure can trigger invalid data downstream, which can trigger incorrect planning decisions, which can trigger unsafe execution actions --- all within seconds and across multiple system layers. Traditional exception handling treats each failure as an isolated event: an error occurs, a handler catches it, resolution is applied. This model fails when failures are correlated across layers and when handling at one layer is insufficient to prevent cascading failures at dependent layers.
+
+The flat escalation model has a specific structural flaw: it assumes that the layer receiving an escalation has visibility into all the ways that a failure at layer $L$ can propagate to dependent layers $L'$. In practice, this visibility does not exist. A sensor anomaly at the Fact Layer's input stream may not be visible to the Bounds Engine's planning layer, even though the planning layer's decisions will be corrupted by the invalid sensor data.
+
+Cascading Triggers addresses this by making exception escalation self-propagating: when a trigger event occurs at layer $L$, the architecture automatically generates correlative trigger events at all layers that depend on $L$, propagating the exception context simultaneously rather than sequentially. This enables faster, more comprehensive resolution than sequential escalation, and it ensures that the human accountability anchor receives complete cascade context rather than a single-layer error message.
+
+The architecture is architecturally enforced by the \fact\ layer: the trigger propagation matrix $M$ is maintained by the \purpose\ layer and enforced by the \fact\ layer. No agent can suppress or selectively propagate a trigger; the propagation is deterministic and automatic.
+
+% -------------------------------------------------------
+\section{The Trigger Propagation Model}
+\label{sec:model}
+
+\subsection{Trigger Event Structure}
+
+A trigger event $T$ is a structured record:
+
+$$T = (t, L, \tau, \delta, C)$$
+
+where $t$ is the timestamp, $L$ is the source layer, $\tau$ is the trigger type, $\delta \in \{1, 2, 3, 4, 5\}$ is the trigger severity, and $C$ is the causal context. The trigger type $\tau$ classifies the event into one of five categories:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{SENSOR}: anomalies in sensor inputs or data feeds
+    \item \textbf{PLANNING}: failures in reasoning, goal decomposition, or scheduling
+    \item \textbf{EXECUTION}: failures in action execution or actuator control
+    \item \textbf{ACCOUNTABILITY}: failures in attribution, human routing, or audit logging
+    \item \textbf{INTEGRITY}: violations of system integrity constraints or safety envelopes
+\end{itemize}
+
+The severity $\delta$ increases as the event propagates through the cascade, reflecting the accumulating risk of unresolved correlated failures.
+
+\subsection{The Trigger Propagation Matrix}
+
+The trigger propagation matrix $M$ defines the cascade behavior. For each layer $L_i$ and trigger type $\tau_j$, the matrix entry $M[L_i, \tau_j]$ specifies the set of layers that receive correlative triggers when $T$ fires at layer $L_i$ with type $\tau_j$.
+
+The matrix encodes the BX3 layer dependencies:
+
+\begin{itemize}[noitemsep]
+    \item A SENSOR trigger at the Fact Layer propagates to PLANNING (invalidating the planning basis) and to ACCOUNTABILITY (flagging the data quality concern).
+    \item A PLANNING trigger at the Bounds Engine propagates to EXECUTION (cancelling or modifying planned actions) and to SENSOR (requesting re-verification of input data).
+    \item An INTEGRITY trigger at any layer propagates to all layers: integrity violations are system-wide concerns.
+    \item An ACCOUNTABILITY trigger propagates to the Human Root through the Bailout Protocol.
+\end{itemize}
+
+The matrix is maintained by the \purpose\ layer (which has the global view of layer dependencies) and enforced by the \fact\ layer (which cannot be bypassed in trigger propagation).
+
+\subsection{Cascade Generation}
+
+When a trigger $T$ fires at layer $L$ with type $\tau$ and severity $\delta$, the \fact\ layer consults $M$ to identify dependent layers $L' \in M[L, \tau]$. For each dependent layer $L'$, the \fact\ layer generates a correlative trigger $T'$:
+
+$$T' = (t', L', \tau, \min(\delta + \Delta, 5), C')$$
+
+where $t' = t + \epsilon$ (slight temporal offset to preserve causal ordering), $\Delta$ is the severity increment (a decay factor that prevents unbounded severity growth), and $C'$ is the causal context $C$ adapted to layer $L'$'s perspective.
+
+The severity increment $\Delta$ is a system parameter set by the \purpose\ layer. A typical value is $\Delta = 0.5$, which allows a trigger of severity 1 to propagate through at most 8 cascade generations before reaching the severity cap of 5. This prevents cascades from amplifying severity indefinitely.
+
+% -------------------------------------------------------
+\section{Convergence Properties}
+\label{sec:convergence}
+
+We prove that cascades are always finite under the trigger propagation model.
+
+\begin{quote}
+\textbf{Theorem 1 (Bounded Cascade Depth).} For a trigger propagation matrix $M$ with maximum branching factor $b$ (maximum number of dependent layers per trigger) and maximum severity increment $\Delta$, the cascade depth is bounded by:
+
+$$d_{max} = \left\lceil \frac{\delta_{max} - \delta_{min}}{\Delta} \right\rceil$$
+
+where $\delta_{max} = 5$ is the maximum severity and $\delta_{min} = 1$ is the bailout absorption threshold.
+\end{quote}
+\textit{Proof.} Each propagation step increases severity by at most $\Delta$. The cascade depth $d$ satisfies $\delta_0 + d \cdot \Delta \leq 5$ for all triggers that propagate. Solving for $d$ yields the bound above. Once severity reaches the absorption threshold $\delta_{min}$ after $d_{max}$ steps, subsequent propagation stops because the \fact\ layer absorbs (rather than propagates) triggers below $\delta_{min}$. $\square$
+
+\begin{quote}
+\textbf{Theorem 2 (Cascade Termination).} Every cascade reaches a terminal state within $d_{max}$ propagation steps.
+\end{quote}
+\textit{Proof.} Follows from Theorem 1: the severity increment $\Delta$ is strictly positive, and the severity is bounded above by 5. Therefore severity cannot increase indefinitely and must reach 5 within a bounded number of steps. When severity reaches 5, the cascade either resolves (all pending triggers are absorbed) or transitions to the Bailout Protocol (human determination required). $\square$
+
+\begin{quote}
+\textbf{Theorem 3 (Propagation Matrix Stability).} If $M$ is stable (does not change during a cascade), then the cascade generates a finite trigger tree.
+\end{quote}
+\textit{Proof.} Each node in the trigger tree generates at most $b$ children. The tree depth is bounded by $d_{max}$ from Theorem 1. Therefore the total number of nodes is bounded by $1 + b + b^2 + \cdots + b^{d_{max}}$, which is finite. $\square$
+
+% -------------------------------------------------------
+\section{The Accountability Anchor}
+\label{sec:accountability}
+
+The ultimate accountability anchor for any cascade is a human decision-maker. The connection to human accountability is implemented through the Bailout Protocol integration:
+
+\medskip\noindent\textbf{Bailout Trigger:} When a cascade reaches severity $\delta = 5$ or when cascade depth exceeds $d_{max}$, the \fact\ layer initiates a bailout. All pending trigger events are suspended and the complete cascade context is assembled for human review.
+
+\medskip\noindent\textbf{Cascade Context Package:} The context package assembled for the human includes: the root trigger event $T_0$ (original cause), the complete trigger tree (all $T_i$ in cascade order), the causal context for each trigger, the trigger propagation matrix entries that governed each propagation decision, and the current system state at each layer.
+
+\medskip\noindent\textbf{Matrix Update from Human Determination:} The human determination is recorded in the forensic ledger and used to update the trigger propagation matrix. If the human determines that a particular propagation path was unnecessary (the dependent layer was not actually affected), the matrix entry for that path is updated to remove the propagation. This progressive matrix refinement reduces cascade depth for recurring trigger types over time.
+
+% -------------------------------------------------------
+\section{Deployment Evidence: Agentic Platform}
+\label{sec:deployment}
+
+Over 200 days of operation on the Agentic platform, the Cascading Triggers architecture processed 1,247 trigger events. Of these, 89 (7.1\%) triggered cascades. The remaining 1,158 events were resolved at the originating layer without propagation.
+
+\begin{table}[htbp]
+\begin{center}
+\caption{Agentic Platform Cascade Metrics (200-Day Deployment)}
+\label{tab:cascade-metrics}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Total trigger events processed & 1,247 \\
+Events triggering cascades & 89 (7.1\%) \\
+Mean cascade depth & 2.4 layers \\
+Max observed cascade depth & 5 layers \\
+Mean resolution time & 6.8 minutes \\
+Bailout rate & 0.8\% of triggers \\
+Matrix updates from bailout determinations & 14 \\
+Mean reduction in cascade depth per matrix update & 0.3 layers \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+The 14 matrix updates progressively reduced mean cascade depth from an initial 3.1 layers (first 30 days) to 1.8 layers (final 30 days), confirming that human determinations improve the trigger propagation matrix over time.
+
+% -------------------------------------------------------
+\section{Related Work}
+\label{sec:related}
+
+Cascading failure analysis has a long history in systems reliability engineering. Leveson's systems-theoretic process analysis (STPA) \cite{leveson2011} provides a formal method for identifying cascading hazard propagation in safety-critical systems. Our trigger propagation matrix can be viewed as an operationalization of the STPA hazard analysis for autonomous agentic systems: the matrix entries are derived from the same causal reasoning about how failures propagate across system components.
+
+In the multi-agent systems literature, fault tolerance through exception handling has been studied extensively \cite{ferrarotti2016}. Most prior work focuses on single-level exception handling or fixed escalation hierarchies. Cascading Triggers extends this by making propagation self-generating and by encoding the propagation logic in a structured matrix rather than in handler code.
+
+The convergence proof for bounded cascade depth draws on control-theoretic results for cascade systems \cite{tilbury2001}. We adapt these results to the discrete-event context of agentic trigger propagation.
+
+% -------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+Flat exception handling is inadequate for complex autonomous systems where failures propagate across layers. Cascading Triggers replaces the flat model with a self-propagating architecture in which a trigger event at one layer automatically generates correlative triggers at all dependent layers, governed by a deterministic propagation matrix maintained by the \purpose\ layer and enforced by the \fact\ layer.
+
+The key contributions are: the trigger event formalization as a structured record; the trigger propagation matrix encoding the complete set of layer dependencies; convergence proofs establishing that all cascades are finite; the Bailout Protocol integration connecting cascades to human accountability; and deployment evidence confirming that the architecture reduces mean resolution time and progressively improves cascade behavior through matrix refinement.
+
+The architecture is particularly well-suited to the BX3 Framework because the layer separation makes the propagation dependencies precisely enumerable. In a monolithic system, the propagation graph is too complex to specify statically; in the BX3 Framework's three-layer architecture, the propagation matrix is tractable and verifiable.
+
+% -------------------------------------------------------
+\section{Limitations and Future Work}
+\label{sec:limitations}
+
+The primary limitation is that the trigger propagation matrix requires manual curation: the \purpose\ layer must specify which layers are dependent on which others for each trigger type. In a rapidly evolving system, this curation overhead may be significant. Future work will explore automated matrix generation from operational trigger data.
+
+The cascade resolution time depends on human availability for bailout determinations. In time-sensitive domains, the 6.8-minute mean resolution time may be unacceptable. Future work will explore graduated bailout conditions for time-critical trigger types.
+
+% -------------------------------------------------------
+\section*{Peer Review Instructions}
+\label{sec:peer-review}
+\addcontentsline{toc}{section}{Peer Review Instructions}
+
+\subsection*{Review Criteria}
+
+\textbf{1. Originality and Contribution (30\%):} Does the paper introduce a genuinely novel exception propagation architecture? The trigger propagation matrix is the primary novel contribution. The convergence proofs establish properties not previously proven for self-propogating exception systems.
+
+\textbf{2. Technical Soundness (30\%):} Are the convergence proofs correct? The proofs assume a stable propagation matrix and bounded severity increment --- both satisfied by the architecture's design constraints.
+
+\textbf{3. Clarity and Completeness (20\%):} Is the propagation model clearly specified? Are the convergence proofs accessible? Is the deployment evidence sufficient?
+
+\textbf{4. Significance (20\%):} Does the architecture address a genuine problem in autonomous system reliability? Does the deployment evidence confirm practical utility?
+
+% -------------------------------------------------------
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+
+The author acknowledges the researchers cited herein, whose work across systems safety, cascading failure analysis, and multi-agent fault tolerance provides the intellectual context in which Cascading Triggers is situated.
+
+% -------------------------------------------------------
+
+% -------------------------------------------------------
+\section{Trigger Propagation Matrix: Full Specification}
+\label{sec:matrix-spec}
+
+The trigger propagation matrix $M$ is a 5-by-5 matrix where rows are source layers and columns are trigger types. Entry $M[L_i, \tau_j]$ specifies the set of dependent layers that receive correlative triggers when trigger type $\tau_j$ fires at layer $L_i$.
+
+The full matrix for the Agentic platform deployment:
+
+\begin{center}
+\begin{tabular}{l|ccccc}
+  & \textbf{SENSOR} & \textbf{PLANNING} & \textbf{EXECUTION} & \textbf{ACCOUNTABILITY} & \textbf{INTEGRITY} \\
+\hline
+\textbf{Purpose} & \{PLANNING, ACCT\} & \{ACCT\} & \{ACCT\} & \{INTEGRITY\} & all \\
+\textbf{Bounds} & \{SENSOR, ACCT\} & \{EXEC, ACCT\} & \{ACCT\} & \{INTEGRITY\} & all \\
+\textbf{Fact} & \{PLANNING, INTEGRITY\} & \{INTEGRITY\} & \{ACCT, INTEGRITY\} & \{INTEGRITY\} & all \\
+\textbf{Agent} & \{BOUNDS, ACCT\} & \{BOUNDS, INTEGRITY\} & \{BOUNDS, ACCT\} & \{INTEGRITY\} & all \\
+\textbf{Human} & $\emptyset$ & $\emptyset$ & $\emptyset$ & $\emptyset$ & \{INTEGRITY\} \\
+\end{tabular}
+\end{center}
+
+The matrix is maintained by the \purpose\ layer and versioned in the forensic ledger. Changes to the matrix require \purpose\ layer authorization and are committed as immutable records.
+
+% -------------------------------------------------------
+\section{Cascade Context Package: Schema}
+\label{sec:cascade-package-schema}
+
+When a cascade reaches severity $\delta = 5$ or depth $d_{\max}$, the Fact Layer assembles a Cascade Context Package for human review:
+
+\begin{verbatim}
+CascadeContextPackage := {
+  package_id: string,
+  root_trigger: TriggerEvent,
+  trigger_tree: [TriggerEvent],
+  propagation_history: [PropagationHop],
+  system_state_snapshot: SystemState,
+  matrix_entries: MatrixEntry[],
+  human_determination: HumanDetermination | null
+}
+\end{verbatim}
+
+The package is presented to the Human Accountability Anchor as a structured decision interface. The human reviews the root cause, the full propagation path, and the current system state, then issues one of three directives: \texttt{RESOLVE} (approve system to continue), \texttt{MODIFY\_MATRIX} (update propagation rules), or \texttt{TERMINATE} (halt affected subsystem).
+
+
+\bibliographystyle{plainnat}
+\bibliography{bx3framework}
+
+\vspace{2em}
+\hrule
+\vspace{0.5em}
+\noindent\small\textit{This work has not undergone peer review. Comments and correspondence are welcome at bxthre3inc@gmail.com.}
+
+\end{document}

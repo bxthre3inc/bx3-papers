@@ -6,8 +6,8 @@
 | # | Title | arXiv / Zenodo | DOI | Status |
 |---|-------|---------------|-----|--------|
 | P01 | The BX3 Framework | Zenodo | `10.5281/zenodo.19857102` | ✅ Draft — metadata complete |
-| P02 | Truth Gate | — | — | ⬜ Stub only |
-| P03 | Sandbox Execution Model | — | — | ⬜ Stub only |
+| P02 | Truth Gate | Zenodo | `10.5281/zenodo.19857104` | ✅ Draft — metadata complete |
+| P03 | Sandbox Execution Model | Zenodo | `10.5281/zenodo.19857106` | ✅ Draft — metadata complete |
 | P04 | The Bailout Protocol | Zenodo | `10.5281/zenodo.19858747` | ✅ Draft — metadata complete |
 | P05 | The Forensic Ledger | Zenodo | `10.5281/zenodo.19858749` | ✅ Draft — metadata complete |
 | P06 | Reality Vector | Zenodo | `10.5281/zenodo.19858751` | ✅ Draft — metadata complete |
